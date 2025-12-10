@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --primary-text: #253238;
+  /* --font-sans: var(--font-inter); */
+}
+
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 50px;
+  }
+}
+
+body {
+  color: var(--primary-text);
+}
+input,
+textarea,
+select {
+  font-size: 16px ;
+  color: #6C6C6C;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  font-size: 16px ;
+  color: #6C6C6C;
+  opacity: 1 !important;
+}

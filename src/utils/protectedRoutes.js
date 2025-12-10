@@ -1,0 +1,35 @@
+'use client'
+const protectedRoutes = [
+  "/buyers/create",
+  "/user/settings",
+  "/user/notification",
+  "sellers/dashboard",
+  "sellers/leads",
+  "/leads",
+  "/settings",
+  "/settings/profile/my-profile",
+  "/settings/profile/account-details",
+  "/settings/leads/my-services",
+  "/bids-list/:requestId",
+  "/bids-list/reply/:requestId",
+  "/feedback/questions",
+  "/feedback/questions/new",
+  "/feedback/questions/edit",
+  "/feedback/questions/remove",
+  "/lead/profile-view/:profileId",
+  "/sellers/leads/my-responses",
+  "sellers/leads/save-for-later",
+  "/pending/view-profile/:profileId",
+  "/mycredit",
+  "/settings/billing/my-credits",
+  "/settings/billing/invoice-billing-details",
+  "/settings/billing/payment-details",
+  "/settings/notifications/e-mail-notification",
+  "/settings/notifications/browser-notification",
+  "/inprogress",
+  "/buyer-close/:id",
+  "/buyer-second-step",
+  "/whats-service"
+];
+
+export default protectedRoutes;
