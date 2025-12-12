@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import H2 from "../../UI/Typography/H2";
 import Button from "../../UI/Typography/Button";
@@ -15,24 +15,53 @@ const JobButton = ({ title }) => (
 );
 
 export default function HireRelatedToService() {
-  const jobLinks = [
-    "Electricians in London",
-    "Roofers in Edinburgh",
-    "Maths Tutor in Manchester",
-    "Plumbers in Birmingham",
-    "Gardeners in Wolverhampton",
-    "Plumbers in Birmingham",
-    "Roofers in Norwich",
-    "Garden Designers Cardiff",
-    "Electricians in London",
-    "Roofers in Edinburgh",
-    "Patio Layers in Manchester",
-    "Plumbers in Birmingham"
-  ];
-const [currentTab, setcurrentTab ] = useState('professionals')
-  const handleClick =(activtab)=>{
-setcurrentTab(activtab)
-  }
+  const tabData = {
+    professionals: [
+      "Electricians in London",
+      "Roofers in Edinburgh",
+      "Maths Tutor in Manchester",
+      "Plumbers in Birmingham",
+      "Gardeners in Wolverhampton",
+      "Plumbers in Birmingham",
+      "Roofers in Norwich",
+      "Garden Designers Cardiff",
+      "Electricians in London",
+      "Roofers in Edinburgh",
+      "Patio Layers in Manchester",
+      "Plumbers in Birmingham",
+    ],
+    popular: [
+      "Painters in London",
+      "Carpenters in Manchester",
+      "Electricians in Birmingham",
+      "Roofers in Cardiff",
+      "Garden Designers in Edinburgh",
+      "Maths Tutor in London",
+      "Plumbers in Norwich",
+      "Patio Layers in London",
+      "Roofers in Manchester",
+      "Gardeners in London",
+      "Electricians in Cardiff",
+    ],
+    insight: [
+      "Hiring Tips for Plumbers",
+      "Roofing Safety Advice",
+      "Electrician Rates Guide",
+      "Garden Design Trends",
+      "Math Tutoring Techniques",
+      "Best Patio Materials",
+      "Interior Design Insights",
+      "Home Renovation Tips",
+      "Top Carpenters to Hire",
+      "Painting Techniques",
+      "DIY Gardening Hacks",
+      "Hiring Local Professionals",
+    ],
+  };
+  const [currentTab, setcurrentTab] = useState("professionals");
+  const handleClick = (activtab) => {
+    setcurrentTab(activtab);
+  };
   return (
     <div className="bg-[#00AFE3] md:px-[46px] px-2.5 py-10 md:py-[38px] lg:px-[120px] lg:py-[72px] w-full h-full">
       <header className="mb-12">
@@ -41,20 +70,43 @@ setcurrentTab(activtab)
             Hire with <span className="text-[#023047]">confidence.</span>
           </H2>
           <nav className="flex gap-[17px] sm:gap-4 xl:gap-7 items-center flex-wrap">
-            <Button onClick={()=>handleClick('popular')} className={`${currentTab ==='popular'?'bg-[#253238] px-4 rounded-full transition-all duration-700 ease-in-out':''} text-white px-0 py-[11px] cursor-pointer`}>Popular Jobs</Button>
+            <Button
+              onClick={() => handleClick("popular")}
+              className={`${
+                currentTab === "popular"
+                  ? "bg-[#253238] px-4 rounded-full transition-all duration-700 ease-in-out"
+                  : ""
+              } text-white px-0 py-[11px] cursor-pointer`}
+            >
+              Popular Jobs
+            </Button>
 
-            <Button onClick={()=>handleClick('professionals')} className={`${currentTab ==='professionals'?'bg-[#253238] px-4 rounded-full transition-all duration-700 ease-in-out':''} text-white py-[11px] cursor-pointer`}>
+            <Button
+              onClick={() => handleClick("professionals")}
+              className={`${
+                currentTab === "professionals"
+                  ? "bg-[#253238] px-4 rounded-full transition-all duration-700 ease-in-out"
+                  : ""
+              } text-white py-[11px] cursor-pointer`}
+            >
               Find Professionals
             </Button>
 
-            <Button onClick={()=>handleClick('insight')} className={`${currentTab ==='insight'?'bg-[#253238] px-4 rounded-full transition-all duration-700 ease-in-out':''} text-white px-0 py-[11px] cursor-pointer`}>
+            <Button
+              onClick={() => handleClick("insight")}
+              className={`${
+                currentTab === "insight"
+                  ? "bg-[#253238] px-4 rounded-full transition-all duration-700 ease-in-out"
+                  : ""
+              } text-white px-0 py-[11px] cursor-pointer`}
+            >
               Advice & Insight
             </Button>
           </nav>
         </div>
       </header>
       <div className="flex flex-wrap gap-4 lg:gap-[23px] max-w-[90%] md:max-w-full">
-        {jobLinks.map((title, i) => (
+        {tabData[currentTab].map((title, i) => (
           <JobButton key={i} title={title} />
         ))}
       </div>
