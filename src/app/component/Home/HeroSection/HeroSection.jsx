@@ -36,16 +36,16 @@ const HeroSection = memo(function HeroSection() {
       aria-label="Hero section"
     >
       <div className="w-full md:w-1/2 flex flex-col xl:ml-[43px]">
-        <Image
+        {/* <Image
           src="/icons/trustpoilet.svg"
           alt="Localists - Local Service Provider Directory"
           width={330}
           height={49}
-          className="h-[49px] w-[330px] mb-[27px]"
+          className="h-[49px] w-[330px] mb-[27px] hidden md:block"
           priority
           fetchPriority="high"
           loading="eager"
-        />
+        /> */}
         <H1 className="text-white">
           Find Local <span className="block">Services.</span>
           <span className="text-black block">Fast.</span>
