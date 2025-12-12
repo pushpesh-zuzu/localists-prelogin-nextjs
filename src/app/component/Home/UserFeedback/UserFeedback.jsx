@@ -32,51 +32,50 @@ function UserFeedback() {
 
   return (
     <div className="h-auto min-h-[400px] lg:min-h-[687px] px-2.5 py-10 sm:px-10 xl:px-[120px] lg:py-[72px] bg-[#EDFCF8]">
-      {/* <h2 className="font-bold pb-14 text-2xl md:text-[40px] lg:text-[75px] text-[#00afe3]">
-        Rated <span className="text-black">excellent.</span>
-      </h2> */}
       <H2 className="text-[#00afe3] pb-10">
         Rated <span className="text-black">excellent.</span>
       </H2>
-        <div className="hidden sm:flex flex-wrap sm:gap-5 xl:gap-6">
-          {feedbackData.map((item) => (
-            <div
-              key={item.id}
-              className=" w-[120px]
+      <div className="hidden sm:flex flex-wrap justify-between">
+        {feedbackData.map((item) => (
+          <div
+            key={item.id}
+            className=" w-[120px]
               sm:w-[158px] h-[233px] 
               lg:w-[238px] lg:h-[352px]
-              xl:w-[282px] xl:h-[366px] 
+              xl:w-[282px] xl:h-[366px]
               px-[10.5px] py-4 
               lg:px-4.5 lg:py-6
               xl:px-[18px] xl:py-7 
               lg:rounded-4xl xl:rounded-[40px] 
               bg-[#D0F7EB80]"
-            >
-              <div className="flex flex-col justify-between h-full">
-                <div className="flex flex-col gap-2.5">
-                  <Image
-                    src="/icons/stars.svg"
-                    alt="five star rating"
-                    width={159}
-                    height={31}
-                    loading="lazy"
-                    className="h-[31px]"
-                  />
-                  {/* <p className="font-bold text-[12px] leading-[14.93px] lg:text-[17px] lg:leading-[22px] xl:text-[22px] xl:leading-7">
-                    {item.text}
-                  </p> */}
-                  <Paragraph className="leading-5 xl:leading-7">{item.text}</Paragraph>
-                </div>
-                <p className="self-end mt-2 font-bold text-black text-[14px]  tracking-[-0.03em] lg:text-[20px] xl:text-[28px]">
-                  {item.name}
-                </p>
+          >
+            <div className="flex flex-col justify-between h-full">
+              <div className="flex flex-col gap-2.5">
+                <Image
+                  src="/icons/stars.svg"
+                  alt="five star rating"
+                  width={159}
+                  height={31}
+                  loading="lazy"
+                  className="h-[31px]"
+                />
+
+                <Paragraph className="leading-5 xl:leading-7">
+                  {item.text}
+                </Paragraph>
               </div>
+              <p className="self-end mt-2 font-bold text-black text-[14px]  tracking-[-0.03em] lg:text-[20px] xl:text-[28px]">
+                {item.name}
+              </p>
             </div>
-          ))}
-        </div>
-          <div className="hidden md:flex justify-center">
-            <Button className="py-[15px] px-7 mt-12 rounded-full bg-[#253238] text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">Get your Quote</Button>
           </div>
+        ))}
+      </div>
+      <div className="hidden md:flex justify-center">
+        <Button className="py-[15px] px-7 mt-12 rounded-full bg-[#253238] text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+          Get your Quote
+        </Button>
+      </div>
       <div className="sm:hidden">
         <CarouselForHowItWork
           visibleItems={1}

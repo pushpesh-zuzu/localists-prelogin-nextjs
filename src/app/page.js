@@ -7,10 +7,12 @@ import Footer from "./component/Footer/Footer";
 import DiscoverServices from "./component/Home/DiscoverServices/DiscoverServices";
 import Member from "./component/Home/Member/Member";
 import AdviceInsight from "./component/Home/AdviceInsight/AdviceInsight";
+import HomeGardenCarousel from "./component/Carousel/HomeCarousel";
+import { carouselData } from "@/constants/homepageData";
 
 export const metadata = {
-  title: "Find Local Services Fast | Get Instant Quotes",
-  description: "Get instant quotes from local professionals",
+  title: "Localists.com: Find Trusted Local Services and Professionals",
+  description: "Connect with verified local experts through Localists.com. Find trusted professionals, compare quotes, and hire the best for your project—quick, easy, and free.",
 };
 
 export default function Home() {

@@ -1,9 +1,8 @@
 "use client";
-
 import Image from "next/image";
 import { memo, useState } from "react";
 import { searchService } from "@/lib/store/searchSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import dynamic from "next/dynamic";
 import H1 from "../../UI/Typography/H1";
 import Paragraph from "../../UI/Typography/Paragraph";
@@ -32,12 +31,12 @@ const HeroSection = memo(function HeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
   return (
     <section
-      className="flex flex-col sm:flex-row gap-5 md:gap-40 min-h-[543px] sm:min-h-[376px] xl:min-h-[458px] bg-[#00AEEF] px-[31px] pt-10 pb-5 md:px-[46px] md:py-[25px] xl:px-[163px] xl:py-[72px]"
+      className="flex flex-col sm:flex-row gap-5 md:gap-[116px] min-h-[543px] sm:min-h-[376px] xl:min-h-[670px] bg-[#00AEEF] px-[31px] pt-10 pb-5 md:px-[46px] md:py-[25px] xl:px-[163px] xl:py-[72px]"
       role="banner"
       aria-label="Hero section"
     >
-      <div className="w-full md:w-1/2 flex flex-col">
-        {/* <Image
+      <div className="w-full md:w-1/2 flex flex-col xl:ml-[43px]">
+        <Image
           src="/icons/trustpoilet.svg"
           alt="Localists - Local Service Provider Directory"
           width={330}
@@ -46,7 +45,7 @@ const HeroSection = memo(function HeroSection() {
           priority
           fetchPriority="high"
           loading="eager"
-        /> */}
+        />
         <H1 className="text-white">
           Find Local <span className="block">Services.</span>
           <span className="text-black block">Fast.</span>
@@ -57,12 +56,12 @@ const HeroSection = memo(function HeroSection() {
         <Paragraph className="text-white pt-[18px]">
           Get instant quotes from local professionals.
         </Paragraph>
-        <div className="relative ">
+        <div className="relative  max-w-[404px]">
           <input
             type="text"
             placeholder="Search for a services"
             id="search Attribute"
-            className="text-[#B3B3B3] font-bold px-4 py-2.5 md:px-[30px] md:py-[15px] xl:px-[43px] xl:py-[22px] mt-5 xl:mt-[46px] text-base xl:text-[25px]!  xl:placeholder:text-[25px]! bg-white border-[1.5px] border-gray-300 rounded-[100px] w-full focus:outline-none"
+            className="text-[#B3B3B3] font-bold px-4 py-2.5 shadow-[0px_20px_40px_0px_rgba(0,0,0,0.5)] md:px-[30px] md:py-[15px] xl:px-[43px] xl:py-4 mt-5 xl:mt-[46px] text-base xl:text-[25px]!  xl:placeholder:text-[25px]! bg-white border-[1.5px] border-gray-300 rounded-[100px] w-full focus:outline-none"
             aria-label="Search for a services"
             value={searchQuery || ""}
             onChange={(e) => {

@@ -34,10 +34,6 @@ function AdviceInsight() {
 
   return (
     <section className="h-auto min-h-[336px] lg:min-h-[687px] px-2.5 py-10 sm:px-10 xl:px-[120px] lg:pt-[72px] lg:pb-[86px]">
-      {/* <h2 className="font-bold pb-14 text-2xl md:text-[40px] lg:text-[75px]">
-        <span className="text-[#00afe3]">Advice &</span>
-        <span className="text-[#1a1a1a]"> insight.</span>
-      </h2> */}
       <H2 className="text-[#00afe3] pb-[53px]">
         Advice & <span className="text-black">insight.</span>
       </H2>

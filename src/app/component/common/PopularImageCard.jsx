@@ -4,8 +4,9 @@ import Image from "next/image";
 import Paragraph from "../UI/Typography/Paragraph";
 
 export default function PopularImageCard({
-  path = "/tree-surgeon.webp",
-  title,
+  // path = "/tree-surgeon.webp",
+  // title,
+  card
 }) {
   return (
     <div
@@ -15,7 +16,7 @@ export default function PopularImageCard({
       }}
     >
       <div
-        className="absolute top-10 left-4 md:top-[50px] md:left-9 lg:top-[65px] lg:left-6 xl:top-[80px] xl:left-[38px] h-[120px] w-[90px] md:h-[177px] md:w-[133px] lg:h-[260px] lg:w-[195px] xl:h-[332px] xl:w-[250px]"
+        className="absolute top-10 left-4 md:top-[50px] md:left-9 lg:top-[65px] lg:left-6 xl:top-20 xl:left-[38px] h-[120px] w-[90px] md:h-[177px] md:w-[133px] lg:h-[260px] lg:w-[195px] xl:h-[332px] xl:w-[250px]"
         style={{
           borderTopLeftRadius: "20px",
           borderBottomRightRadius: "20px",
@@ -23,8 +24,8 @@ export default function PopularImageCard({
       >
         <div className="relative w-full h-full overflow-hidden rounded-3xl">
           <Image
-            src={path}
-            alt="Service image"
+            src={card.image}
+          alt={card.title}
             fill
             className="object-cover"
             priority
@@ -34,7 +35,7 @@ export default function PopularImageCard({
       </div>
 
       <Paragraph className="leading-4 pt-3 xl:pt-8 text-white pl-6 xl:pl-[35px]">
-        {title}
+        {card.title}
       </Paragraph>
 
       <button

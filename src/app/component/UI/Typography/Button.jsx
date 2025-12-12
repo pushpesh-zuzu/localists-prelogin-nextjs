@@ -1,4 +1,4 @@
-export default function Button({ children, className = "", ...props }) {
+export default function Button({ children, onClick, className = "", ...props }) {
   return (
     <button
       {...props}
@@ -9,6 +9,7 @@ export default function Button({ children, className = "", ...props }) {
         lg:text-[18px]
         ${className}
       `}
+      onClick={onClick}
     >
       {children}
     </button>

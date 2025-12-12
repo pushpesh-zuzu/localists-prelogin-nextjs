@@ -8,11 +8,10 @@ import Button from "../../UI/Typography/Button";
 function Member() {
   return (
     <div className="w-full max-w-[300px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto py-[63px]">
-      <div className="hidden md:flex rounded-[36px] overflow-hidden h-[512px]">
-        <div className="w-[670px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-center px-[63px] py-[37px]">
-          <div className="flex flex-col gap-3">
-           
-            <H3 className="hidden md:block text-white font-bold font-[Arial] leading-7 xl:leading-[42px] xl:pr-21">
+      <div className="hidden md:flex rounded-[36px] overflow-hidden ">
+        <div className="w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[63px] py-[37px]">
+          <>
+            <H3 className="hidden md:block text-white font-bold font-[Arial] leading-7 xl:leading-[42px] pr-8">
               " What I like about Localists is the quality of leads I get. I
               spend less money on Localists than I have done on other platforms,
               and I get far more business. It's a win-win"
@@ -24,10 +23,10 @@ function Member() {
               </p>
               <p className=" text-white text-[16px] font-normal">CH Joinery</p>
             </div>
-            <Button className="hidden md:inline-flex bg-[#253238] py-[13px] px-[21px] text-white rounded-full max-w-fit">
+            <Button className="hidden md:inline-flex bg-[#253238] mt-2.5 py-[13px] px-[21px] text-white rounded-full max-w-fit">
               Become a member
             </Button>
-          </div>
+          </>
         </div>
 
         <div className=" relative rounded-r-[36px] overflow-hidden">
