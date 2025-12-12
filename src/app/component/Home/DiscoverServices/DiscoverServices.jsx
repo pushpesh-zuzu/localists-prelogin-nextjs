@@ -25,7 +25,7 @@ function DiscoverServices() {
             showSpecial={true}
           />
         </div>
-        <div className="mt-[18px]">
+        <div className="mt-[30px]">
           <div className="flex md:hidden justify-between py-5 xl:pb-10">
             <h2 className="text-[#00AFE3] font-bold text-2xl leading-[18px]">
               Weddings & Events
@@ -38,7 +38,7 @@ function DiscoverServices() {
             showSpecial={true}
           />
         </div>
-        <div className="mt-[18px]">
+        <div className="mt-[30px]">
           <div className="flex md:hidden justify-between py-5 xl:pb-10">
             <h2 className="text-[#00AFE3] font-bold text-2xl leading-[18px]">
               Weddings & Events

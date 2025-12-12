@@ -62,6 +62,11 @@ export default function HireRelatedToService() {
   const handleClick = (activtab) => {
     setcurrentTab(activtab);
   };
+  const tabs = [
+    { lable: "Popular Jobs", activtab: "popular" },
+    { lable: "Find Professionals", activtab: "professionals" },
+    { lable: "Advice & Insight", activtab: "insight" },
+  ];
   return (
     <div className="bg-[#00AFE3] md:px-[46px] px-2.5 py-10 md:py-[38px] lg:px-[120px] lg:py-[72px] w-full h-full">
       <header className="mb-12">
@@ -69,39 +74,20 @@ export default function HireRelatedToService() {
           <H2 className="text-white ">
             Hire with <span className="text-[#023047]">confidence.</span>
           </H2>
-          <nav className="flex gap-[17px] sm:gap-4 xl:gap-7 items-center flex-wrap">
-            <Button
-              onClick={() => handleClick("popular")}
-              className={`${
-                currentTab === "popular"
-                  ? "bg-[#253238] px-4 rounded-full transition-all duration-700 ease-in-out"
-                  : ""
-              } text-white px-0 py-[11px] cursor-pointer`}
-            >
-              Popular Jobs
-            </Button>
-
-            <Button
-              onClick={() => handleClick("professionals")}
-              className={`${
-                currentTab === "professionals"
-                  ? "bg-[#253238] px-4 rounded-full transition-all duration-700 ease-in-out"
-                  : ""
-              } text-white py-[11px] cursor-pointer`}
-            >
-              Find Professionals
-            </Button>
-
-            <Button
-              onClick={() => handleClick("insight")}
-              className={`${
-                currentTab === "insight"
-                  ? "bg-[#253238] px-4 rounded-full transition-all duration-700 ease-in-out"
-                  : ""
-              } text-white px-0 py-[11px] cursor-pointer`}
-            >
-              Advice & Insight
-            </Button>
+          <nav className="flex gap-2 sm:gap-4 xl:gap-7 items-center flex-wrap">
+            {tabs.map((tab, index) => (
+              <Button
+                key={tab.activtab}
+                onClick={() => handleClick(tab.activtab)}
+                className={`${
+                  currentTab === tab.activtab
+                    ? "bg-[#253238] rounded-full transition-all duration-700 ease-in-out"
+                    : ""
+                } text-white px-[5px] text-[12px] py-2 md:text-[18px] md:px-4 md:py-[11px] cursor-pointer`}
+              >
+                {tab.lable}
+              </Button>
+            ))}
           </nav>
         </div>
       </header>

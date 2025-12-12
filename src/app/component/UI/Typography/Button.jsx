@@ -5,7 +5,8 @@ export default function Button({ children, onClick, className = "", ...props }) 
       className={`
         font-[Arial] font-bold
         tracking-[-0.03em]
-        text-[16px]
+        text-xs
+        md:text-[16px]
         lg:text-[18px]
         ${className}
       `}

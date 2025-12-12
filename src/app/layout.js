@@ -8,6 +8,9 @@ import StoreProvider from "./StoreProvider";
 export const metadata = {
   title: "Localists",
   description: "Localist.com",
+  icons: {
+    icon: "/favicon.ico",
+  },
   robots: {
     index: false,
     follow: false,
