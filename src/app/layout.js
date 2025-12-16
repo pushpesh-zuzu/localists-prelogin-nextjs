@@ -26,14 +26,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
         <StoreProvider>
-          <div className="w-full">
-            <div className="mx-auto w-full max-w-[1536px]">
-              <Header />
-              {children}
-              {/* <TrackingScripts />
+          <Header />
+          {children}
+          {/* <TrackingScripts />
               <NoscriptTags /> */}
-            </div>
-          </div>
         </StoreProvider>
       </body>
     </html>
