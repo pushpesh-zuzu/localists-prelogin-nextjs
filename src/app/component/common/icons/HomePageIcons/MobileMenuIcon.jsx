@@ -1,0 +1,20 @@
+import React from "react";
+
+function MobileMenuIcon({ className = "" }) {
+  return (
+    <svg
+      width="22"
+      height="15"
+      viewBox="0 0 22 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <rect width="18" height="3" rx="1.5" fill="#00AFE3" />
+      <rect y="12" width="15" height="3" rx="1.5" fill="#00AFE3" />
+      <rect y="6" width="22" height="3" rx="1.5" fill="#00AFE3" />
+    </svg>
+  );
+}
+
+export default MobileMenuIcon;

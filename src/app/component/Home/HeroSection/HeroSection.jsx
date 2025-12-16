@@ -7,6 +7,8 @@ import dynamic from "next/dynamic";
 import H1 from "../../UI/Typography/H1";
 import Paragraph from "../../UI/Typography/Paragraph";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
+import SearchIcon from "../../common/icons/HomePageIcons/SearchIcon";
+import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 const SearchResults = dynamic(() => import("../../common/SearchResult"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -83,14 +85,15 @@ const HeroSection = memo(function HeroSection() {
               ""
             )}
             <div className="absolute inset-y-0 top-0 xl:-top-4 right-[19px] xl:right-10 flex items-center pointer-events-none">
-              <Image
+              {/* <Image
                 src="/icons/searchiconherosection.svg"
                 alt="search"
                 width={22}
                 height={22}
                 className="w-[22px] h-[22px] mt-5 xl:mt-16"
                 priority
-              />
+              /> */}
+              <SearchIcon className="w-[22px] h-[22px] mt-5 xl:mt-16" />
             </div>
           </div>
         </div>
@@ -136,14 +139,15 @@ const HeroSection = memo(function HeroSection() {
                       : "Show more services"
                   }
                 >
-                  <Image
+                  {/* <Image
                     src="/chevron-right-double.webp"
                     width={52}
                     height={52}
                     alt="expand services"
                     priority={true}
                     className="w-[52px] h-[52px]"
-                  />
+                  /> */}
+                  <ChevroliteDoubleDownIcon/>
                 </button>
               </div>
             )}

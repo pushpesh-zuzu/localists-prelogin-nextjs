@@ -7,6 +7,10 @@ import { searchService } from "@/lib/store/searchSlice";
 import dynamic from "next/dynamic";
 import MegaMenu from "../common/MegaMenu";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
+import { ArrowDown } from "lucide-react";
+import ArrowDownBlue from "../common/icons/HomePageIcons/ArrowDownBlue";
+import SearchIcon from "../common/icons/HomePageIcons/SearchIcon";
+import MobileMenuIcon from "../common/icons/HomePageIcons/MobileMenuIcon";
 const SearchResults = dynamic(() => import("../common/SearchResult"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -44,7 +48,7 @@ export default function Header() {
               <MegaMenu>
                 <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap">
                   Explore Our Services
-                  <Image
+                  {/* <Image
                     src="/icons/downarrowblue.svg"
                     alt="down-arrow"
                     width={18}
@@ -53,13 +57,14 @@ export default function Header() {
                     priority
                     fetchPriority="high"
                     loading="eager"
-                  />
+                  /> */}
+                  <ArrowDownBlue />
                 </button>
               </MegaMenu>
 
               <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap">
                 Advice
-                <Image
+                {/* <Image
                   src="/icons/downarrowblue.svg"
                   alt="down-arrow"
                   width={18}
@@ -68,7 +73,8 @@ export default function Header() {
                   priority
                   fetchPriority="high"
                   loading="eager"
-                />
+                /> */}
+                <ArrowDownBlue />
               </button>
             </div>
           </div>
@@ -101,14 +107,15 @@ export default function Header() {
                 ""
               )}
               <div className="absolute inset-y-0 right-2 flex items-center pointer-events-none">
-                <Image
+                {/* <Image
                   src="/icons/searchicon.svg"
                   alt="search"
                   width={16}
                   height={16}
                   className="w-4 h-4"
                   priority
-                />
+                /> */}
+                <SearchIcon className="h-4 w-4" />
               </div>
             </div>
 
@@ -146,7 +153,7 @@ export default function Header() {
         <div className="flex md:hidden items-center justify-between px-2.5 py-2.5">
           <MegaMenu>
             <button type="button" aria-label="Open mobile menu">
-              <Image
+              {/* <Image
                 src="/mobilemenu.webp"
                 alt="Mobile menu"
                 width={20}
@@ -156,7 +163,8 @@ export default function Header() {
                 fetchPriority="high"
                 loading="eager"
                 layout="intrinsic"
-              />
+              /> */}
+              <MobileMenuIcon className="" />
             </button>
           </MegaMenu>
           <div className="flex justify-center flex-1 max-w-[103px] max-h-[25px]">
@@ -179,9 +187,9 @@ export default function Header() {
             </a>
           </div>
 
-          <div className="family-55 flex items-center space-x-[4.34px]">
+          <div className="flex items-center space-x-[4.34px]">
             <button type="button" aria-label="Search services">
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-[18px] h-[18px] text-[#00afe3]"
                 fill="none"
@@ -195,7 +203,8 @@ export default function Header() {
                   strokeWidth="2"
                   d="M21 21l-4.35-4.35m1.77-5.4a7 7 0 11-14 0 7 7 0 0114 0z"
                 />
-              </svg>
+              </svg> */}
+              <SearchIcon className="h-4 w-4" />
             </button>
 
             <button

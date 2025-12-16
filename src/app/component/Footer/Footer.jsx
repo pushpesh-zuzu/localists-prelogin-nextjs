@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import CountryDropdown from "./CountryDropdown";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
+import EmailIcon from "../common/icons/HomePageIcons/EmailIcon";
+import DownArrowSolidBlue from "../common/icons/HomePageIcons/DownArrowSolidBlue";
 
 const Footer = () => {
   const [openSections, setOpenSections] = useState({
@@ -207,7 +209,7 @@ const Footer = () => {
                 >
                   For Customers
                   <span className="text-[#00afe3] text-xs">
-                    {openSections.customers ? "▲" : "▼"}
+                    {openSections.customers ? "▲" : <DownArrowSolidBlue />}
                   </span>
                 </button>
                 {openSections.customers && (
@@ -241,7 +243,7 @@ const Footer = () => {
                 >
                   For Professionals
                   <span className="text-[#00afe3] text-xs">
-                    {openSections.customers ? "▲" : "▼"}
+                    {openSections.customers ? "▲" : <DownArrowSolidBlue />}
                   </span>
                 </button>
                 {openSections.professionals && (
@@ -275,7 +277,7 @@ const Footer = () => {
                 >
                   About
                   <span className="text-[#00afe3] text-xs">
-                    {openSections.customers ? "▲" : "▼"}
+                    {openSections.customers ? "▲" : <DownArrowSolidBlue />}
                   </span>
                 </button>
                 {openSections.about && (
@@ -295,7 +297,7 @@ const Footer = () => {
           <div className="mt-12 w-full border-t border-gray-300">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
               <div className="flex mx-auto items-center gap-2 text-[rgba(37, 50, 56, 1)] text-sm lg:text-base py-[11px]">
-                <Image
+                {/* <Image
                   src="/icons/emailIcon.svg"
                   alt="email icon"
                   width={16}
@@ -304,7 +306,8 @@ const Footer = () => {
                   priority
                   fetchPriority="high"
                   loading="eager"
-                />
+                /> */}
+                <EmailIcon className="w-4 h-4" />
                 <span>contact@localists.com</span>
               </div>
             </div>

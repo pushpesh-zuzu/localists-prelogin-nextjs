@@ -1,4 +1,7 @@
 import HowItWorksCard from "../common/HowItWorkCard";
+import HowItWorkCompareIcon from "../common/icons/HomePageIcons/HowItWorkCompareIcon";
+import HowItWorkIconPencingIcon from "../common/icons/HomePageIcons/HowItWorkIconPencingIcon";
+import HowItWorkUserIcon from "../common/icons/HomePageIcons/HowItWorkUserIcon";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import Button from "../UI/Typography/Button";
 import H2 from "../UI/Typography/H2";
@@ -12,21 +15,23 @@ function HowItWork() {
         </H2>
         <div className="flex flex-col md:flex-row justify-items-start  gap-[50px]">
           <HowItWorksCard
-            iconSrc={"/icons/Howitworks1.svg"}
+            iconSrc={<HowItWorkIconPencingIcon />}
             title="Search"
             description="Fill in your details for your project"
             mw={"xs:w-full lg:w-[250px] xl:w-[310px]"}
           />
 
           <HowItWorksCard
-            iconSrc={"/icons/Howitworks2.svg"}
+            iconSrc={<HowItWorkUserIcon />}
             title="Connect"
             description="Receive quotes from Professionals"
             mw={"xs:w-full lg:w-[250x] xl:w-[275px]"}
           />
 
           <HowItWorksCard
-            iconSrc={"/icons/Howitworks3.svg"}
+            iconSrc={
+              <HowItWorkCompareIcon/>
+            }
             title="Hire"
             description="Compare your quotes and enjoy great savings"
             mw={"xs:w-full"}

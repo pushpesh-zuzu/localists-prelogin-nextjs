@@ -1,15 +1,20 @@
 import React from "react";
 import Image from "next/image";
+import TreeIcon from "../../common/icons/HomePageIcons/TreeIcon";
+import RoofingIcon from "../../common/icons/HomePageIcons/RoofingIcon";
+import PainterIcon from "../../common/icons/HomePageIcons/PainterIcon";
+import AccountantIcon from "../../common/icons/HomePageIcons/AccountantIcon";
+import ArchitectIcon from "../../common/icons/HomePageIcons/ArchitectIcon";
 
 export default function PopularJobs() {
   const jobs = [
-    { id: 1, image: "/fence.png", title: "Fence & Gate Installation" },
-    { id: 2, image: "/roofing.png", title: "Patio Layer" },
-    { id: 3, image: "/painter.png", title: "Landscaping" },
-    { id: 4, image: "/accountant.png", title: "Roofing" },
-    { id: 5, image: "/architect.png", title: "Driveway Installation" },
-    { id: 6, image: "/architect.png", title: "Artificial Grass Installation" },
-    { id: 7, image: "/tree.png", title: "Tree Surgery" },
+    { id: 1, image: <TreeIcon />, title: "Fence & Gate Installation" },
+    { id: 2, image: <RoofingIcon />, title: "Patio Layer" },
+    { id: 3, image: <PainterIcon />, title: "Landscaping" },
+    { id: 4, image: <AccountantIcon />, title: "Roofing" },
+    { id: 5, image: <ArchitectIcon />, title: "Driveway Installation" },
+    { id: 6, image: <PainterIcon />, title: "Artificial Grass Installation" },
+    { id: 7, image: <TreeIcon />, title: "Tree Surgery" },
   ];
 
   return (
@@ -18,15 +23,16 @@ export default function PopularJobs() {
         {jobs.map((job, index) => (
           <button
             key={index}
-            className="bg-[#00AFE3] py-2.5 px-0.5 text-white rounded-3xl flex flex-col items-center justify-center hover:bg-cyan-500 transition-colors active:scale-95"
+            className="bg-[#00AFE3] min-h-[130px] py-2.5 px-0.5 text-white rounded-3xl flex flex-col items-center justify-center hover:bg-cyan-500 transition-colors active:scale-95"
           >
-            <div className="w-[42px] h-[42px] mb-4 relative">
-              <Image
+            <div className=" h-[42px] mb-4 relative">
+              {/* <Image
                 src={job.image}
                 alt={job.title}
                 fill
                 className="object-contain"
-              />
+              /> */}
+              {job.image}
             </div>
             <span className="text-base font-medium text-center leading-tight">
               {job.title}

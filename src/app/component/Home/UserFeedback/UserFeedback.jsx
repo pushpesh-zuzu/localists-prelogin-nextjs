@@ -6,6 +6,7 @@ import H2 from "../../UI/Typography/H2";
 import Paragraph from "../../UI/Typography/Paragraph";
 import Button from "../../UI/Typography/Button";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
+import FiveStarYelloIcon from "../../common/icons/HomePageIcons/FiveStarYelloIcon";
 
 function UserFeedback() {
   const feedbackData = [
@@ -53,14 +54,15 @@ function UserFeedback() {
             >
               <div className="flex flex-col justify-between h-full">
                 <div className="flex flex-col gap-2.5">
-                  <Image
+                  {/* <Image
                     src="/icons/stars.svg"
                     alt="five star rating"
                     width={159}
                     height={31}
                     loading="lazy"
                     className="h-[31px]"
-                  />
+                  /> */}
+                  <FiveStarYelloIcon className="sm:h-6 xl:h-[31px] sm:w-[100px] lg:w-[159px] "/>
 
                   <Paragraph className="leading-5 xl:leading-7">
                     {item.text}

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import ArrowSolidBalckSelect from "../common/icons/HomePageIcons/ArrowSolidBalckSelect";
 
 export default function CountryDropdown() {
   return (
@@ -29,13 +30,14 @@ export default function CountryDropdown() {
 
       {/* Custom Arrow */}
       <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-black">
-         <Image
+         {/* <Image
           width={15}
           height={15}
           src={"/icons/arrowblackSelect.svg"}
           alt="UK Flag"
           className="h-[15px] w-[15px]"
-        />
+        /> */}
+        <ArrowSolidBalckSelect className="h-[15px] w-[15px]" />
       </div>
     </div>
   );
