@@ -7,7 +7,6 @@ import { searchService } from "@/lib/store/searchSlice";
 import dynamic from "next/dynamic";
 import MegaMenu from "../common/MegaMenu";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
-import { ArrowDown } from "lucide-react";
 import ArrowDownBlue from "../common/icons/HomePageIcons/ArrowDownBlue";
 import SearchIcon from "../common/icons/HomePageIcons/SearchIcon";
 import MobileMenuIcon from "../common/icons/HomePageIcons/MobileMenuIcon";
@@ -178,7 +177,7 @@ export default function Header() {
                 alt="Localists - Local Service Provider Directory"
                 width={103}
                 height={25}
-                className="w-[103px] h-[25px]"
+                className="w-[103px] h-[25px] ml-[15%]"
                 priority
                 fetchPriority="high"
                 loading="eager"

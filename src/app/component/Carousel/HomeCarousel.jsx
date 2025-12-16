@@ -9,8 +9,8 @@ export default function HomeGardenCarousel({
   renderCard,
   showSpecial = true,
   specialCard = null,
-  mobileImageWidth = 70,
-  mobileArrowSpacing = 16,
+  mobileImageWidth = 72,
+  mobileArrowSpacing = 8,
 }) {
   const scrollableCards = data.filter((card) => !card.isSpecial);
   const specialCardData = data.find((card) => card.isSpecial);
@@ -175,7 +175,7 @@ export default function HomeGardenCarousel({
             {scrollableCards.map((card, index) => (
               <div
                 key={card.id || index}
-                className="flex-[0_0_100%] flex justify-center px-2"
+                className="flex-[0_0_100%] flex justify-center"
               >
                 <div style={{ width: `${mobileImageWidth}%` }}>
                   {renderCard(card, index)}
@@ -189,12 +189,12 @@ export default function HomeGardenCarousel({
         <button
           onClick={scrollPrevMobile}
           style={{ left: `${mobileArrowSpacing}px` }}
-          className="absolute top-1/2 -translate-y-1/2 bg-transparent text-gray-800 p-3 rounded-full z-10 hover:bg-gray-100"
+          className="absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 rounded-full z-10 hover:bg-gray-100"
         >
           <svg
             width="20"
-            height="20"
-            viewBox="0 0 24 24"
+            height="32"
+            viewBox="0 0 16 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             aria-label="Previous slide"
@@ -211,12 +211,12 @@ export default function HomeGardenCarousel({
         <button
           onClick={scrollNextMobile}
           style={{ right: `${mobileArrowSpacing}px` }}
-          className="absolute top-1/2 -translate-y-1/2 bg-transparent text-gray-800 p-3 rounded-full z-10 hover:bg-gray-100"
+          className="absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 pr-3 rounded-full z-10 hover:bg-gray-100"
         >
           <svg
             width="20"
-            height="20"
-            viewBox="0 0 24 24"
+            height="32"
+            viewBox="0 0 16 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             aria-label="Next slide"

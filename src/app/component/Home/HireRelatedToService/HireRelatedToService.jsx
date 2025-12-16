@@ -32,31 +32,30 @@ export default function HireRelatedToService() {
       "Plumbers in Birmingham",
     ],
     popular: [
-      "Painters in London",
-      "Carpenters in Manchester",
-      "Electricians in Birmingham",
-      "Roofers in Cardiff",
-      "Garden Designers in Edinburgh",
-      "Maths Tutor in London",
-      "Plumbers in Norwich",
-      "Patio Layers in London",
-      "Roofers in Manchester",
-      "Gardeners in London",
-      "Electricians in Cardiff",
+      "Landscapers",
+      "Patio Layers",
+      "Private Tutors",
+      "Roofers",
+      "Garden Designers",
+      "Maths Tutor",
+      "Plumbers",
+      "Patio Layers",
+      "Roofers",
+      "Gardeners",
+      "Electricians",
     ],
     insight: [
-      "Hiring Tips for Plumbers",
-      "Roofing Safety Advice",
-      "Electrician Rates Guide",
-      "Garden Design Trends",
-      "Math Tutoring Techniques",
+      "Hiring Tips",
+      "Roofing Safety",
+      "Electrician Rates",
+      "Garden Design",
+      "Math Tutoring",
       "Best Patio Materials",
-      "Interior Design Insights",
-      "Home Renovation Tips",
-      "Top Carpenters to Hire",
+      "Interior Design",
+      "Home Renovation",
+      "Top Carpenters",
       "Painting Techniques",
       "DIY Gardening Hacks",
-      "Hiring Local Professionals",
     ],
   };
   const [currentTab, setcurrentTab] = useState("professionals");
@@ -71,12 +70,15 @@ export default function HireRelatedToService() {
   return (
     <WrapperBGWidth background={"#00AFE3"}>
       <div className="bg-[#00AFE3] md:px-[46px] px-2.5 py-10 md:py-[38px] lg:px-[120px] lg:py-[72px] w-full h-full">
-        <header className="mb-12">
-          <div className="flex flex-wrap sm:flex-nowrap justify-between  items-center gap-12">
-            <H2 className="text-white ">
+        <header className="mb-5 xl:mb-12">
+          <div className="flex flex-wrap sm:flex-nowrap justify-between  items-center gap-7.5 xl:gap-12">
+            <h2 className="font-Inter font-black
+                          tracking-[-0.03em]
+                          text-[24px] leading-7
+                          lg:text-[50px] lg:leading-[55px] text-white ">
               Hire with <span className="text-[#023047]">confidence.</span>
-            </H2>
-            <nav className="flex gap-2 sm:gap-4 xl:gap-7 items-center flex-wrap">
+            </h2>
+            <nav className="flex gap-1 sm:gap-4 xl:gap-7 items-center flex-wrap">
               {tabs.map((tab, index) => (
                 <Button
                   key={tab.activtab}
@@ -93,7 +95,7 @@ export default function HireRelatedToService() {
             </nav>
           </div>
         </header>
-        <div className="flex flex-wrap gap-4 lg:gap-[23px] max-w-[90%] md:max-w-full">
+        <div className="flex flex-wrap gap-y-2 xl:gap-y-[23px] gap-3.5 lg:gap-[23px] w-full xl:max-w-[90%] md:max-w-full">
           {tabData[currentTab].map((title, i) => (
             <JobButton key={i} title={title} />
           ))}

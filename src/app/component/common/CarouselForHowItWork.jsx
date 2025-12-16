@@ -60,8 +60,7 @@ const CarouselForHowItWork = memo(function Carousel({
             <>
               <button
                 onClick={prevSlide}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-transparent rounded-full p-3 transition-all duration-200"
-                style={{ left: "0px" }} // 50px from left edge
+                className="absolute left-[5%] top-1/2 transform -translate-y-1/2 z-10 bg-transparent rounded-full p-3 transition-all duration-200"
                 aria-label="Previous slide"
               >
                 <svg
@@ -73,7 +72,7 @@ const CarouselForHowItWork = memo(function Carousel({
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    strokeWidth="2.5"
                     d="M15 19l-7-7 7-7"
                   />
                 </svg>
@@ -81,8 +80,7 @@ const CarouselForHowItWork = memo(function Carousel({
 
               <button
                 onClick={nextSlide}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10  rounded-full p-3 transition-all duration-200"
-                style={{ right: "0px" }} // 50px from right edge
+                className="absolute right-[5%] top-1/2 transform -translate-y-1/2 z-10  rounded-full p-3 transition-all duration-200"
                 aria-label="Next slide"
               >
                 <svg
@@ -94,7 +92,7 @@ const CarouselForHowItWork = memo(function Carousel({
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    strokeWidth="2.5"
                     d="M9 5l7 7-7 7"
                   />
                 </svg>

@@ -201,11 +201,11 @@ const Footer = () => {
             </div>
 
             {/* Mobile Accordion */}
-            <div className="block md:hidden col-span-full space-y-4 px-2">
+            <div className="block md:hidden col-span-full space-y-4">
               <div className="border-b border-gray-200 pb-4">
                 <button
                   onClick={() => toggleSection("customers")}
-                  className="px-4 flex justify-between items-center w-full text-left font-bold text-gray-900 text-lg"
+                  className="px-5 flex justify-between items-center w-full text-left font-black text-[20px]"
                 >
                   For Customers
                   <span className="text-[#00afe3] text-xs">
@@ -236,10 +236,10 @@ const Footer = () => {
                 )}
               </div>
 
-              <div className="px-4 border-b border-gray-200 pb-4">
+              <div className=" border-b border-gray-200 pb-4">
                 <button
                   onClick={() => toggleSection("professionals")}
-                  className="flex justify-between items-center w-full text-left font-bold text-gray-900 text-lg"
+                  className="px-5 flex justify-between items-center w-full text-left font-black text-[20px]"
                 >
                   For Professionals
                   <span className="text-[#00afe3] text-xs">
@@ -273,7 +273,7 @@ const Footer = () => {
               <div className="border-b border-gray-200 pb-4">
                 <button
                   onClick={() => toggleSection("about")}
-                  className="px-4 flex justify-between items-center w-full text-left font-bold text-gray-900 text-lg"
+                  className="px-5 flex justify-between items-center w-full text-left font-black text-[20px]"
                 >
                   About
                   <span className="text-[#00afe3] text-xs">
@@ -294,7 +294,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-12 w-full border-t border-gray-300">
+          <div className="mt-6 xl:mt-12 w-full border-t border-gray-300">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
               <div className="flex mx-auto items-center gap-2 text-[rgba(37, 50, 56, 1)] text-sm lg:text-base py-[11px]">
                 {/* <Image

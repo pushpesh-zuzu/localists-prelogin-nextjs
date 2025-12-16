@@ -15,14 +15,14 @@ function ChevroliteDoubleDownIcon({className=""}) {
         stroke="white"
         strokeWidth="3.5"
         strokeLinecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
       <path
         d="M15.7552 16.9766L26.5885 27.8099L37.4219 16.9766"
         stroke="white"
         strokeWidth="3.5"
         strokeLinecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

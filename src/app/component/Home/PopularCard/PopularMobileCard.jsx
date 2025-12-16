@@ -14,7 +14,6 @@ export default function PopularJobs() {
     { id: 4, image: <AccountantIcon />, title: "Roofing" },
     { id: 5, image: <ArchitectIcon />, title: "Driveway Installation" },
     { id: 6, image: <PainterIcon />, title: "Artificial Grass Installation" },
-    { id: 7, image: <TreeIcon />, title: "Tree Surgery" },
   ];
 
   return (
@@ -23,7 +22,7 @@ export default function PopularJobs() {
         {jobs.map((job, index) => (
           <button
             key={index}
-            className="bg-[#00AFE3] min-h-[130px] py-2.5 px-0.5 text-white rounded-3xl flex flex-col items-center justify-center hover:bg-cyan-500 transition-colors active:scale-95"
+            className="bg-[#00AFE3] min-h-[110px] py-2.5 px-0.5 text-white rounded-3xl flex flex-col items-center justify-center hover:bg-cyan-500 transition-colors active:scale-95"
           >
             <div className=" h-[42px] mb-4 relative">
               {/* <Image

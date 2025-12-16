@@ -9,6 +9,7 @@ import Paragraph from "../../UI/Typography/Paragraph";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import SearchIcon from "../../common/icons/HomePageIcons/SearchIcon";
 import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
+import Paragraph1 from "../../UI/Typography/Paragraph1";
 const SearchResults = dynamic(() => import("../../common/SearchResult"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -19,8 +20,8 @@ const HeroSection = memo(function HeroSection() {
     "Landscapers",
     "Patio Layers",
     "Private Tutors",
-    "Fence & Gate Installers",
     "Personal Trainers",
+    "Fence & Gate Installers",
     "Tree Surgeons",
     "Architects",
     "Painter Decorators",
@@ -35,7 +36,7 @@ const HeroSection = memo(function HeroSection() {
   return (
     <WrapperBGWidth background={"#00aeef"}>
       <section
-        className="flex flex-col sm:flex-row gap-5 md:gap-[116px] min-h-[543px] sm:min-h-[376px] xl:min-h-[670px] bg-[#00AEEF] px-[31px] pt-10 pb-5 md:px-[46px] md:py-[25px] xl:px-[163px] xl:py-[72px]"
+        className="flex flex-col sm:flex-row gap-[30px] md:gap-[116px] min-h-[543px] sm:min-h-[376px] xl:min-h-[670px] bg-[#00AEEF] px-[31px] pt-10 pb-5 md:px-[46px] md:py-[25px] xl:px-[163px] xl:py-[72px]"
         role="banner"
         aria-label="Hero section"
       >
@@ -57,10 +58,10 @@ const HeroSection = memo(function HeroSection() {
           {/* <p className="family-55 max-w-[80%] md:max-w-full md:w-full text-white text-14px md:text-[17px] xl:text-[26px] pt-5">
           Get instant quotes from local professionals.
         </p> */}
-          <Paragraph className="text-white pt-[18px]">
+          <Paragraph1 className="max-w-[204px] sm:max-w-full text-white pt-[18px]">
             Get instant quotes from local professionals.
-          </Paragraph>
-          <div className="relative  max-w-[404px]">
+          </Paragraph1>
+          <div className="relative max-w-[254px]  sm:max-w-[404px]">
             <input
               type="text"
               placeholder="Search for a services"
@@ -99,9 +100,9 @@ const HeroSection = memo(function HeroSection() {
         </div>
 
         <div className="w-full md:w-1/2 flex flex-col justify-center items-start">
-          <Paragraph className="text-white -tracking-[3%] pb-[30px]">
+          <Paragraph1 className="text-white -tracking-[3%] pb-4 sm:pb-[30px]">
             Popular Services
-          </Paragraph>
+          </Paragraph1>
 
           <div className="hidden md:flex flex-wrap gap-2 xl:gap-3">
             {services.map((service) => (
@@ -120,10 +121,12 @@ const HeroSection = memo(function HeroSection() {
               {displayedServices.map((service) => (
                 <button
                   key={service}
-                  className="border border-white font-bold text-[12px] px-1.5 py-[5px] rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
+                  className="border border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
                   aria-label={`Search for ${service}`}
                 >
-                  <Paragraph>{service}</Paragraph>
+                  <p className="text-base sm:text-[18px] font-[Arial] font-bold tracking-[-0.03em] ">
+                    {service}
+                  </p>
                 </button>
               ))}
             </div>
@@ -147,7 +150,7 @@ const HeroSection = memo(function HeroSection() {
                     priority={true}
                     className="w-[52px] h-[52px]"
                   /> */}
-                  <ChevroliteDoubleDownIcon/>
+                  <ChevroliteDoubleDownIcon />
                 </button>
               </div>
             )}

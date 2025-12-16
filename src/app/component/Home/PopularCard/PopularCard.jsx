@@ -5,6 +5,7 @@ import PopularJobs from "./PopularMobileCard";
 import H2 from "../../UI/Typography/H2";
 import HomeGardenCarousel from "../../Carousel/HomeCarousel";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
+import PaddingWrapper from "../../common/WrapperBGWidth/PaddingWrapper";
 
 function PopularCard() {
   const PopularData = [
@@ -29,7 +30,7 @@ function PopularCard() {
   ];
   return (
     <WrapperBGWidth>
-      <div className="h-full lg:min-h-[587px] xl:min-h-[657px] px-7.5 md:px-10 xl:px-[120px] pt-12 pb-[68px]">
+      <PaddingWrapper className="h-full lg:min-h-[587px] xl:min-h-[657px] pt-10 pb-[73px] xl:pt-12 xl:pb-[68px]">
         <H2 className="text-[#00afe3] pb-7">
           Popular <span className="text-black">jobs.</span>
         </H2>
@@ -44,7 +45,7 @@ function PopularCard() {
         <div className="block md:hidden">
           <PopularJobs />
         </div>
-      </div>
+      </PaddingWrapper>
     </WrapperBGWidth>
   );
 }

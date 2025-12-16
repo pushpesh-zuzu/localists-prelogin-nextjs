@@ -34,7 +34,7 @@ function UserFeedback() {
 
   return (
     <WrapperBGWidth background={"#edfcf8"}>
-      <div className="h-auto min-h-[400px] lg:min-h-[687px] px-2.5 py-10 sm:px-10 xl:px-[120px] lg:py-[72px] bg-[#EDFCF8]">
+      <div className="h-auto min-h-[400px] lg:min-h-[687px] px-2.5 py-12 sm:px-10 xl:px-[120px] lg:py-[72px] bg-[#EDFCF8]">
         <H2 className="text-[#00afe3] pb-10">
           Rated <span className="text-black">excellent.</span>
         </H2>
@@ -75,11 +75,7 @@ function UserFeedback() {
             </div>
           ))}
         </div>
-        <div className="hidden md:flex justify-center">
-          <Button className="py-[15px] px-7 mt-12 rounded-full bg-[#253238] text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
-            Get your Quote
-          </Button>
-        </div>
+       
         <div className="sm:hidden">
           <CarouselForHowItWork
             visibleItems={1}
@@ -92,13 +88,14 @@ function UserFeedback() {
                 <div className="w-[198px] h-[287px] px-[13.32px] py-5 bg-[#D0F7EB80] rounded-[20px]">
                   <div className="flex flex-col justify-between h-full">
                     <div className="flex flex-col gap-2.5">
-                      <Image
+                      {/* <Image
                         src="/fivestar.webp"
                         alt="five star rating"
                         width={89}
                         height={17}
                         loading="lazy"
-                      />
+                      /> */}
+                      <FiveStarYelloIcon className="w-[89px] xl:h-4 "/>
                       <p className="font-bold text-[15px] leading-5">
                         {item.text}
                       </p>
@@ -111,6 +108,11 @@ function UserFeedback() {
               </div>
             ))}
           </CarouselForHowItWork>
+        </div>
+         <div className="flex justify-center">
+          <Button className="px-4 py-2 xl:py-[15px] xl:px-7 mt-8 xl:mt-12 rounded-full bg-[#253238] text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+            Get your Quote
+          </Button>
         </div>
       </div>
     </WrapperBGWidth>

@@ -35,8 +35,8 @@ function AdviceInsight() {
 
   return (
     <WrapperBGWidth>
-      <section className="h-auto min-h-[336px] lg:min-h-[687px] px-2.5 py-10 sm:px-10 xl:px-[120px] lg:pt-[72px] lg:pb-[86px]">
-        <H2 className="text-[#00afe3] pb-[53px]">
+      <section className="h-auto min-h-[336px] lg:min-h-[687px] px-7.5 py-12 sm:px-10 xl:px-[120px] lg:pt-[72px] lg:pb-[86px]">
+        <H2 className="text-[#00afe3] pb-7.5 xl:pb-[53px]">
           Advice & <span className="text-black">insight.</span>
         </H2>
 
@@ -103,8 +103,8 @@ function AdviceInsight() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="md:hidden space-y-6">
-          <article className="relative rounded-3xl overflow-hidden h-[336px] group cursor-pointer">
+        <div className="md:hidden space-y-1.5">
+          <article className="relative rounded-3xl overflow-hidden h-[297px] group cursor-pointer">
             <Image
               src={articles[1].image}
               alt={articles[1].title}
@@ -121,8 +121,8 @@ function AdviceInsight() {
           </article>
 
           {/* Second Row - 2 Small Cards */}
-          <div className="grid grid-cols-2 gap-4">
-            <article className="relative rounded-2xl overflow-hidden h-[200px] group cursor-pointer">
+          <div className="grid grid-cols-2 gap-1.5">
+            <article className="relative rounded-2xl overflow-hidden h-[120px] group cursor-pointer">
               <Image
                 src={articles[0].image}
                 alt={articles[0].title}
@@ -139,7 +139,7 @@ function AdviceInsight() {
               </h3>
             </article>
 
-            <article className="relative rounded-2xl overflow-hidden h-[200px] group cursor-pointer">
+            <article className="relative rounded-2xl overflow-hidden h-[120px] group cursor-pointer">
               <Image
                 src={articles[2].image}
                 alt={articles[2].title}
@@ -158,8 +158,8 @@ function AdviceInsight() {
           </div>
         </div>
 
-        <div className="flex justify-center mt-12">
-          <Button className="bg-[#253238] py-3.5 px-[66px] text-white rounded-full">
+        <div className="flex justify-center mt-7.5 xl:mt-12">
+          <Button className="bg-[#253238] px-3 py-1.5 xl:py-3.5 xl:px-[66px] text-white rounded-full">
             Read More
           </Button>
         </div>
