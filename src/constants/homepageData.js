@@ -66,7 +66,7 @@ export const carouselData1 = [
   // Below data from your new list (converted to same format)
   {
     id: 2,
-    title: "Web Desing",
+    title: "Web Design",
     image: "/homepage/image5.webp",
     isSpecial: false
   },
