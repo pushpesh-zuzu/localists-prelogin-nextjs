@@ -5,15 +5,26 @@ import RoofingIcon from "../../common/icons/HomePageIcons/RoofingIcon";
 import PainterIcon from "../../common/icons/HomePageIcons/PainterIcon";
 import AccountantIcon from "../../common/icons/HomePageIcons/AccountantIcon";
 import ArchitectIcon from "../../common/icons/HomePageIcons/ArchitectIcon";
+import FenceAndGateInstallationIcon from "../../common/icons/HomePageIcons/FenceAndGateInstallationIcon";
 
 export default function PopularJobs() {
   const jobs = [
-    { id: 1, image: <TreeIcon />, title: "Fence & Gate Installation" },
-    { id: 2, image: <RoofingIcon />, title: "Patio Layer" },
-    { id: 3, image: <PainterIcon />, title: "Landscaping" },
-    { id: 4, image: <AccountantIcon />, title: "Roofing" },
-    { id: 5, image: <ArchitectIcon />, title: "Driveway Installation" },
-    { id: 6, image: <PainterIcon />, title: "Artificial Grass Installation" },
+    { id: 1, image: <PainterIcon />, title: "Tree surgeon near me" },
+
+    { id: 4, image: <PainterIcon />, title: "Landscaping near me" },
+    { id: 6, image: <ArchitectIcon />, title: "Personal Trainer near me" },
+    {
+      id: 2,
+      image: <FenceAndGateInstallationIcon />,
+      title: "Fence & Gate Installation near me",
+    },
+    { id: 3, image: <AccountantIcon />, title: "Driveways near me" },
+    {
+      id: 5,
+      image: <RoofingIcon />,
+      title: "Artificial Grass Installation near me",
+    },
+    // { id: 7, image: <PainterIcon />, title: "Artificial Grass Installation near me" },
   ];
 
   return (
@@ -22,7 +33,7 @@ export default function PopularJobs() {
         {jobs.map((job, index) => (
           <button
             key={index}
-            className="bg-[#00AFE3] min-h-[110px] py-2.5 px-0.5 text-white rounded-3xl flex flex-col items-center justify-center hover:bg-cyan-500 transition-colors active:scale-95"
+            className="bg-[#00AFE3] min-h-[130px] sm:min-h-[110px] py-2.5 px-0.5 text-white rounded-3xl flex flex-col items-center justify-center hover:bg-cyan-500 transition-colors active:scale-95"
           >
             <div className=" h-[42px] mb-4 relative">
               {/* <Image

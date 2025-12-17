@@ -7,6 +7,7 @@ import CountryDropdown from "./CountryDropdown";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import EmailIcon from "../common/icons/HomePageIcons/EmailIcon";
 import DownArrowSolidBlue from "../common/icons/HomePageIcons/DownArrowSolidBlue";
+import UpArrowSolidBlue from "../common/icons/HomePageIcons/UpArrowSolidBlue";
 
 const Footer = () => {
   const [openSections, setOpenSections] = useState({
@@ -23,7 +24,7 @@ const Footer = () => {
   };
 
   return (
-    <WrapperBGWidth>
+    <WrapperBGWidth background="#f7f7f7">
       <footer className="family-55 md:block w-full pt-[26px] sm:px-[46px] xl:px-[120px] md:pt-[70.29px] bg-[#f7f7f7] text-gray-800">
         <div className=" mx-auto ">
           <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-[1.25fr_1fr_1fr_1fr_1fr] gap-8 lg:gap-12">
@@ -209,7 +210,11 @@ const Footer = () => {
                 >
                   For Customers
                   <span className="text-[#00afe3] text-xs">
-                    {openSections.customers ? "▲" : <DownArrowSolidBlue />}
+                    {openSections.customers ? (
+                      <UpArrowSolidBlue />
+                    ) : (
+                      <DownArrowSolidBlue />
+                    )}
                   </span>
                 </button>
                 {openSections.customers && (
@@ -243,7 +248,11 @@ const Footer = () => {
                 >
                   For Professionals
                   <span className="text-[#00afe3] text-xs">
-                    {openSections.customers ? "▲" : <DownArrowSolidBlue />}
+                    {openSections.customers ? (
+                      <UpArrowSolidBlue />
+                    ) : (
+                      <DownArrowSolidBlue />
+                    )}
                   </span>
                 </button>
                 {openSections.professionals && (
@@ -277,7 +286,11 @@ const Footer = () => {
                 >
                   About
                   <span className="text-[#00afe3] text-xs">
-                    {openSections.customers ? "▲" : <DownArrowSolidBlue />}
+                    {openSections.customers ? (
+                      <UpArrowSolidBlue />
+                    ) : (
+                      <DownArrowSolidBlue />
+                    )}
                   </span>
                 </button>
                 {openSections.about && (

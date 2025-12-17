@@ -1,12 +1,10 @@
 "use client";
-import Image from "next/image";
 import React from "react";
-import CarouselForHowItWork from "../../common/CarouselForHowItWork";
 import H2 from "../../UI/Typography/H2";
-import Paragraph from "../../UI/Typography/Paragraph";
 import Button from "../../UI/Typography/Button";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
-import FiveStarYelloIcon from "../../common/icons/HomePageIcons/FiveStarYelloIcon";
+import UserFeedbackCard from "./UserFeedbackCard";
+import WithoutSpecialCardCarousel from "../../Carousel/WithoutSpecialCardCarousel";
 
 function UserFeedback() {
   const feedbackData = [
@@ -38,78 +36,14 @@ function UserFeedback() {
         <H2 className="text-[#00afe3] pb-10">
           Rated <span className="text-black">excellent.</span>
         </H2>
-        <div className="hidden sm:flex flex-wrap justify-between">
-          {feedbackData.map((item) => (
-            <div
-              key={item.id}
-              className=" w-[120px]
-              sm:w-[158px] h-[233px] 
-              lg:w-[238px] lg:h-[352px]
-              xl:w-[282px] xl:h-[366px]
-              px-[10.5px] py-4 
-              lg:px-4.5 lg:py-6
-              xl:px-[18px] xl:py-7 
-              lg:rounded-4xl xl:rounded-[40px] 
-              bg-[#D0F7EB80]"
-            >
-              <div className="flex flex-col justify-between h-full">
-                <div className="flex flex-col gap-2.5">
-                  {/* <Image
-                    src="/icons/stars.svg"
-                    alt="five star rating"
-                    width={159}
-                    height={31}
-                    loading="lazy"
-                    className="h-[31px]"
-                  /> */}
-                  <FiveStarYelloIcon className="sm:h-6 xl:h-[31px] sm:w-[100px] lg:w-[159px] "/>
-
-                  <Paragraph className="leading-5 xl:leading-7">
-                    {item.text}
-                  </Paragraph>
-                </div>
-                <p className="self-end mt-2 font-bold text-black text-[14px]  tracking-[-0.03em] lg:text-[20px] xl:text-[28px]">
-                  {item.name}
-                </p>
-              </div>
-            </div>
-          ))}
+        <div className="flex flex-wrap justify-between select-none">
+          <WithoutSpecialCardCarousel
+            data={feedbackData}
+            renderCard={(card) => <UserFeedbackCard item={card} />}
+            showArrowAndDots={false}
+          />
         </div>
-       
-        <div className="sm:hidden">
-          <CarouselForHowItWork
-            visibleItems={1}
-            autoSlideInterval={5000}
-            showControls={true}
-            showDots={false}
-          >
-            {feedbackData.map((item) => (
-              <div key={item.id} className="w-full flex justify-center">
-                <div className="w-[198px] h-[287px] px-[13.32px] py-5 bg-[#D0F7EB80] rounded-[20px]">
-                  <div className="flex flex-col justify-between h-full">
-                    <div className="flex flex-col gap-2.5">
-                      {/* <Image
-                        src="/fivestar.webp"
-                        alt="five star rating"
-                        width={89}
-                        height={17}
-                        loading="lazy"
-                      /> */}
-                      <FiveStarYelloIcon className="w-[89px] xl:h-4 "/>
-                      <p className="font-bold text-[15px] leading-5">
-                        {item.text}
-                      </p>
-                    </div>
-                    <p className="self-end mt-2 font-bold text-black text-[21px]">
-                      {item.name}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </CarouselForHowItWork>
-        </div>
-         <div className="flex justify-center">
+        <div className="flex justify-center">
           <Button className="px-4 py-2 xl:py-[15px] xl:px-7 mt-8 xl:mt-12 rounded-full bg-[#253238] text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
             Get your Quote
           </Button>

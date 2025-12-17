@@ -20,10 +20,10 @@ function DiscoverServices() {
         <div>
           <div>
             <div className="flex md:hidden justify-between pt-5 pb-12 xl:pb-10">
-              <H2 className="text-[#00AFE3]">
-                Home & Garden
-              </H2>{" "}
-              <button className="font-bold text-xs tracking-[0.03em] leading-[18px] "><span className="underline">See all</span></button>
+              <H2 className="text-[#00AFE3]">Home & Garden</H2>{" "}
+              <button className="font-bold text-xs tracking-[0.03em] leading-[18px] ">
+                <span className="underline">See all</span>
+              </button>
             </div>
             <HomeGardenCarousel
               data={carouselData}
@@ -33,10 +33,10 @@ function DiscoverServices() {
           </div>
           <div className="mt-[30px]">
             <div className="flex md:hidden justify-between pt-5 pb-12 xl:pb-10">
-              <H2 className="text-[#00AFE3]">
-                Weddings & Events
-              </H2>{" "}
-              <button className="font-bold">See All</button>
+              <H2 className="text-[#00AFE3]">Business Services</H2>{" "}
+              <button className="font-bold text-xs tracking-[0.03em] leading-[18px] ">
+                <span className="underline">See all</span>
+              </button>
             </div>
             <HomeGardenCarousel
               data={carouselData1}
@@ -46,10 +46,10 @@ function DiscoverServices() {
           </div>
           <div className="mt-[30px]">
             <div className="flex md:hidden justify-between pt-5 pb-12 xl:pb-10">
-             <H2 className="text-[#00AFE3]">
-                Weddings & Events
-              </H2>{" "}
-              <button className="font-bold">See All</button>
+              <H2 className="text-[#00AFE3]">Weddings & Events</H2>{" "}
+              <button className="font-bold text-xs tracking-[0.03em] leading-[18px] ">
+                <span className="underline">See all</span>
+              </button>
             </div>
             <HomeGardenCarousel
               data={carouselData3}

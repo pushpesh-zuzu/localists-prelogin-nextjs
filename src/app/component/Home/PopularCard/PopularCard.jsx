@@ -14,18 +14,22 @@ function PopularCard() {
       image: "/homepage/image16.webp",
       title: "Tree surgeon",
     },
-    { id: 2, image: "/homepage/image17.webp", title: "Landscaping" },
-    { id: 3, image: "/homepage/image18.webp", title: "Personal Trainer" },
-    { id: 4, image: "/homepage/image19.webp", title: "Driveways" },
+    { id: 2, image: "/homepage/image17.webp", title: "Landscaping near me" },
+    {
+      id: 3,
+      image: "/homepage/image18.webp",
+      title: "Personal Trainer near me",
+    },
+    { id: 4, image: "/homepage/image19.webp", title: "Driveways near me" },
     {
       id: 5,
       image: "/fenceinstallation.webp",
-      title: "Fence & Gate Installation",
+      title: "Fence & Gate Installation near me",
     },
     {
       id: 6,
       image: "/artificialinstallation.webp",
-      title: "Artificial Grass Installation",
+      title: "Artificial Grass Installation near me",
     },
   ];
   return (
@@ -35,14 +39,14 @@ function PopularCard() {
           Popular <span className="text-black">jobs.</span>
         </H2>
 
-        <div className="hidden md:block ">
+        <div className="hidden md:block select-none">
           <HomeGardenCarousel
             data={PopularData}
             renderCard={(card) => <PopularImageCard card={card} />}
             showSpecial={false}
           />
         </div>
-        <div className="block md:hidden">
+        <div className="block md:hidden select-none">
           <PopularJobs />
         </div>
       </PaddingWrapper>

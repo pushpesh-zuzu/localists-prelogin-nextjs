@@ -12,7 +12,7 @@ function Member() {
         <div className="w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[63px] py-[37px]">
           <>
             <H3 className="hidden md:block text-white font-bold font-[Arial] leading-7 xl:leading-[42px] pr-8">
-              " What I like about Localists is the quality of leads I get. I
+              "What I like about Localists is the quality of leads I get. I
               spend less money on Localists than I have done on other platforms,
               and I get far more business. It's a win-win"
             </H3>
@@ -66,7 +66,7 @@ function Member() {
                 fontSize: "20px",
               }}
             >
-              " What I like about Localists is the quality of leads I get. I
+              "What I like about Localists is the quality of leads I get. I
               spend less money on Localists than I have done on other platforms,
               and I get far more business. It's a win-win"
             </p>

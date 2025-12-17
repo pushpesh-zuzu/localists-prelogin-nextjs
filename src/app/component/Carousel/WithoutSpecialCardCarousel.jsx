@@ -4,27 +4,23 @@ import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import NavigationArrows from "../common/CarouselLeftRightIcon";
 
-export default function HomeGardenCarousel({
+export default function WithoutSpecialCardCarousel({
   data,
   renderCard,
-  showSpecial = true,
-  specialCard = null,
   mobileImageWidth = 72,
-  mobileArrowSpacing = 8,
+  mobileArrowSpacing = 12,
+  showArrowAndDots = true,
 }) {
-  const scrollableCards = data.filter((card) => !card.isSpecial);
   const MIN_SLIDES_FOR_LOOP = 6;
 
   const loopableCards =
-    scrollableCards.length === 0
+    data.length === 0
       ? []
-      : scrollableCards.length >= MIN_SLIDES_FOR_LOOP
-      ? scrollableCards
+      : data.length >= MIN_SLIDES_FOR_LOOP
+      ? data
       : Array.from({
-          length: Math.ceil(MIN_SLIDES_FOR_LOOP / scrollableCards.length),
-        }).flatMap(() => scrollableCards);
-
-  const specialCardData = data.find((card) => card.isSpecial);
+          length: Math.ceil(MIN_SLIDES_FOR_LOOP / data.length),
+        }).flatMap(() => data);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
@@ -46,7 +42,7 @@ export default function HomeGardenCarousel({
 
   const [scrollSnaps, setScrollSnaps] = useState([]);
   const [scrollSnapsMobile, setScrollSnapsMobile] = useState([]);
-  const originalSlideCount = scrollableCards.length;
+  const originalSlideCount = data.length;
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -83,7 +79,6 @@ export default function HomeGardenCarousel({
     setScrollSnaps(emblaApi.scrollSnapList());
   }, [emblaApi]);
 
-  // ✅ New: Initialize scroll snaps - Mobile
   const onInitMobile = useCallback(() => {
     if (!emblaApiMobile) return;
     setScrollSnapsMobile(emblaApiMobile.scrollSnapList());
@@ -112,73 +107,66 @@ export default function HomeGardenCarousel({
       emblaApiMobile.off("select", onSelectMobile);
     };
   }, [emblaApiMobile, onInitMobile, onSelectMobile]);
+
   return (
     <div className="w-full">
       {/* Desktop/Tablet View */}
       <div className="hidden sm:block">
         <div className="relative">
           {/* Navigation Arrows */}
-          <div className="flex justify-end items-end mb-3.5 mr-[1%]">
-            <NavigationArrows
-              onPrev={scrollPrev}
-              onNext={scrollNext}
-              canScrollPrev={canScrollPrev}
-              canScrollNext={canScrollNext}
-            />
-          </div>
-
-          {/* Conditional Layout based on showSpecial */}
-          {showSpecial && specialCardData ? (
-            <div className="grid grid-cols-3 lg:grid-cols-4 gap-6">
-              <div>{specialCard || renderCard(specialCardData, -1)}</div>
-
-              <div className="col-span-2 lg:col-span-3 overflow-hidden">
-                <div ref={emblaRef} className="overflow-hidden">
-                  <div className="flex gap-6">
-                    {loopableCards.map((card, index) => (
-                      <div
-                        key={`${card.id}-${index}`}
-                        className="shrink-0 w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)]"
-                      >
-                        {renderCard(card, index)}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+          {showArrowAndDots ? (
+            <div className="flex justify-end items-end mb-3.5 mr-[1%]">
+              <NavigationArrows
+                onPrev={scrollPrev}
+                onNext={scrollNext}
+                canScrollPrev={canScrollPrev}
+                canScrollNext={canScrollNext}
+              />
             </div>
           ) : (
-            <div className="overflow-hidden">
-              <div ref={emblaRef} className="overflow-hidden">
-                <div className="flex gap-6">
-                  {loopableCards.map((card, index) => (
-                    <div
-                      key={`${card.id}-${index}`}
-                      className="shrink-0 w-[calc((100%-48px)/3)] lg:w-[calc((100%-52px)/4)] 2xl:w-[calc((100%-32px)/4)]"
-                    >
-                      {renderCard(card, index)}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            ""
           )}
 
-          {/* Dot Indicators */}
-          <div className="flex justify-center gap-2 mt-6">
-            {Array.from({ length: originalSlideCount }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => emblaApi?.scrollTo(index)}
-                className={`${
-                  index === selectedIndex
-                    ? "w-3 md:w-[47px] xl:w-[89px]"
-                    : "w-3 md:w-3 xl:w-[22px]"
-                } h-3 md:h-3 xl:h-[22px] rounded-full transition-all duration-700 ease-in-out bg-black`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
+          {/* Carousel - Maximum 4 cards, no cut-off */}
+          <div className="overflow-hidden">
+            <div ref={emblaRef} className="overflow-hidden">
+              <div className="flex gap-4 sm:gap-5 lg:gap-6">
+                {loopableCards.map((card, index) => (
+                  <div
+                    key={`${card.id}-${index}`}
+                    className="flex-[0_0_calc(50%-10px)] 
+                               sm:flex-[0_0_calc(50%-12.5px)]
+                               md:flex-[0_0_calc(33.333%-13.33px)]
+                               lg:flex-[0_0_calc(25%-18px)]
+                               xl:flex-[0_0_calc(25%-18px)]
+                               min-w-0"
+                  >
+                    {renderCard(card, index)}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
+
+          {/* Dot Indicators */}
+          {showArrowAndDots ? (
+            <div className="flex justify-center gap-2 mt-6">
+              {Array.from({ length: originalSlideCount }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => emblaApi?.scrollTo(index)}
+                  className={`${
+                    index === selectedIndex
+                      ? "w-3 md:w-[47px] xl:w-[89px]"
+                      : "w-3 md:w-3 xl:w-[22px]"
+                  } h-3 md:h-3 xl:h-[22px] rounded-full transition-all duration-700 ease-in-out bg-black`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
 
@@ -202,8 +190,9 @@ export default function HomeGardenCarousel({
         {/* Mobile Arrows */}
         <button
           onClick={scrollPrevMobile}
-          style={{ left: `${mobileArrowSpacing-1}px` }}
+          style={{ left: `${mobileArrowSpacing}px` }}
           className="absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 rounded-full z-10 hover:bg-gray-100"
+          aria-label="Previous slide"
         >
           <svg
             width="20"
@@ -211,7 +200,6 @@ export default function HomeGardenCarousel({
             viewBox="0 0 16 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            aria-label="Previous slide"
           >
             <path
               d="M15 18L9 12L15 6"
@@ -226,6 +214,7 @@ export default function HomeGardenCarousel({
           onClick={scrollNextMobile}
           style={{ right: `${mobileArrowSpacing}px` }}
           className="absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 pr-3 rounded-full z-10 hover:bg-gray-100"
+          aria-label="Next slide"
         >
           <svg
             width="20"
@@ -233,7 +222,6 @@ export default function HomeGardenCarousel({
             viewBox="0 0 16 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            aria-label="Next slide"
           >
             <path
               d="M9 18L15 12L9 6"
@@ -246,18 +234,22 @@ export default function HomeGardenCarousel({
         </button>
 
         {/* Dot Indicators */}
-        <div className="flex justify-center gap-2 mt-6">
-          {Array.from({ length: originalSlideCount }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => emblaApiMobile?.scrollTo(index)}
-              className={`${
-                index === selectedIndexMobile ? "w-[51px]" : "w-[11px]"
-              } h-[11px] rounded-full transition-all duration-700 ease-in-out bg-black`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+        {showArrowAndDots ? (
+          <div className="flex justify-center gap-2 mt-6">
+            {Array.from({ length: originalSlideCount }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => emblaApiMobile?.scrollTo(index)}
+                className={`${
+                  index === selectedIndexMobile ? "w-[51px]" : "w-[11px]"
+                } h-[11px] rounded-full transition-all duration-700 ease-in-out bg-black`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ export default function CarouselCard({ card }) {
       //       View All
       //     </button>
       //   </div>
-      <div className="flex flex-col gap-6 text-center px-3 py-[22px] rounded-2xl xl:px-[51px] xl:py-[43px] max-w-[281px]   h-[132px]  sm:h-[235px] bg-[#7CD6F0] xl:rounded-[28px] font-bold">
+      <div className="select-none flex flex-col gap-6 text-center px-3 py-[22px] rounded-2xl xl:px-[51px] xl:py-[43px] max-w-[281px]   h-[132px]  sm:h-[235px] bg-[#7CD6F0] xl:rounded-[28px] font-bold">
         <H3>{card.title}</H3>
         <div className="flex justify-center">
           <button className="rounded-full mb- bg-black text-white px-[18px] xl:px-[35px] text-base xl:text-[20px] -tracking-[3%] mx-auto py-[3px] lg:py-[5px]">
@@ -41,7 +41,7 @@ export default function CarouselCard({ card }) {
     //     <h3 className="text-white text-2xl font-bold">{card.title}</h3>
     //   </div>
     // </div>
-    <div className="h-[213px] sm:h-[235px] relative flex justify-center">
+    <div className="select-none h-[213px] sm:h-[235px] relative flex justify-center">
       <div className="relative w-full h-full max-w-[281px] rounded-[20px] xl:rounded-[28px] overflow-hidden">
         <Image
           src={card.image}
