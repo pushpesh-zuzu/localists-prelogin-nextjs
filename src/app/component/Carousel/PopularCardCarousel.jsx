@@ -6,7 +6,7 @@ import NavigationArrows from "../common/CarouselLeftRightIcon";
 import LeftArrowBlack from "../common/icons/HomePageIcons/LeftArrowBlack";
 import RightArrowBlack from "../common/icons/HomePageIcons/RightArrowBlack";
 
-export default function HomeGardenCarousel({
+export default function PopularCardCarousel({
   data,
   renderCard,
   showSpecial = true,
@@ -153,7 +153,7 @@ export default function HomeGardenCarousel({
     <div className="w-full">
       {/* Desktop/Tablet View */}
       <div className="hidden sm:block">
-        <div className="relative max-w-full md:max-w-[90%] lg:max-w-full mx-auto">
+        <div className="relative mx-auto">
           {/* Navigation Arrows */}
           <div className="hidden lg:flex justify-end items-end mb-3.5 mr-[1%]">
             <NavigationArrows
@@ -222,7 +222,7 @@ export default function HomeGardenCarousel({
                     strokeLinejoin="round"
                   />
                 </svg> */}
-                <LeftArrowBlack className="h-5 w-2.5"/>
+                <LeftArrowBlack />
               </button>
               <button
                 onClick={scrollNextMd}
@@ -245,7 +245,7 @@ export default function HomeGardenCarousel({
                     strokeLinejoin="round"
                   />
                 </svg> */}
-                <RightArrowBlack className="h-5 w-2.5"/>
+                <RightArrowBlack />
               </button>
             </>
           ) : (
@@ -333,7 +333,7 @@ export default function HomeGardenCarousel({
               strokeLinejoin="round"
             />
           </svg> */}
-          <LeftArrowBlack className="h-5 w-2.5"/>
+          <LeftArrowBlack />
         </button>
         <button
           onClick={scrollNextMobile}
@@ -356,7 +356,7 @@ export default function HomeGardenCarousel({
               strokeLinejoin="round"
             />
           </svg> */}
-          <RightArrowBlack className="h-5 w-2.5"/>
+          <RightArrowBlack />
         </button>
 
         {/* Dot Indicators */}
@@ -366,7 +366,9 @@ export default function HomeGardenCarousel({
               key={index}
               onClick={() => emblaApiMobile?.scrollTo(index)}
               className={`${
-                index === selectedIndexMobile ? "w-[51px] h-[13px]" : "w-[11.59px] h-[11.59px]"
+                index === selectedIndexMobile
+                  ? "w-[51px] h-[13px]"
+                  : "w-[11.59px] h-[11.59px]"
               } rounded-full transition-all duration-700 ease-in-out bg-black`}
               aria-label={`Go to slide ${index + 1}`}
             />

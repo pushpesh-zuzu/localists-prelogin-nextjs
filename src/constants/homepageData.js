@@ -26,16 +26,16 @@ export const carouselData = [
   },
   {
     id: 5,
-    title: "patio Layer",
+    title: "Patio Layer",
     image: "/patiolayer.webp", // Aapki image path
     isSpecial: false
   },
-   {
-    id: 6,
-    title: "Roofing",
-    image: "/roofing.webp", // Aapki image path
-    isSpecial: false
-  }
+  //  {
+  //   id: 6,
+  //   title: "Roofing",
+  //   image: "/roofing.webp", // Aapki image path
+  //   isSpecial: false
+  // }
 ];
 const servicesImages = [
   { id: 1, path: "/fenceandgate.webp", title: "Fence & Gate Installation" },

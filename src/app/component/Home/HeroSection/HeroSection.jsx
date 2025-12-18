@@ -23,17 +23,19 @@ const HeroSection = memo(function HeroSection() {
     "Landscapers",
     "Patio Layers",
     "Private Tutors",
-    "Personal Trainers",
     "Fence & Gate Installers",
+    "Personal Trainers",
+    "Painter Decorators",
     "Tree Surgeons",
     "Architects",
-    "Painter Decorators",
     "Airport Transfers",
     "Physics and Maths Tutors",
   ];
 
   const [showAllServices, setShowAllServices] = useState(false);
-  const displayedServices = showAllServices ? services : services.slice(0, 6);
+  const displayedServices = showAllServices ? services : services.slice(0, 5);
+    const displayedServicesMediusScreen = showAllServices ? services : services.slice(0, 10);
+
   const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState("");
   return (
@@ -60,18 +62,18 @@ const HeroSection = memo(function HeroSection() {
           </div> */}
           <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] lg:mb-7 max-h-12" />
 
-          <H1 className="text-white block md:hidden lg:block">
+          <H1 className="text-white block md:hidden lg:block text-shadow-[0_2.03px_2.03px_0_#0000001A]">
             Find Local <span className="block">Services.</span>
             <span className="text-black block">Fast.</span>
           </H1>
-          <H1 className="hidden md:block lg:hidden  text-white">
+          <H1 className="hidden md:block lg:hidden  text-white text-shadow-[0_2.03px_2.03px_0_#0000001A]">
             Find Local{" "}
             <div className="flex">
               <span className="block">Services.</span>
               <span className="text-black block">Fast.</span>
             </div>
           </H1>
-          <Paragraph1 className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px]">
+          <Paragraph1 className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
             Get instant quotes from local professionals.
           </Paragraph1>
           <div className="relative max-w-[254px] md:max-w-[246px]  lg:max-w-[404px]">
@@ -99,13 +101,13 @@ const HeroSection = memo(function HeroSection() {
               ""
             )}
             <div className="absolute inset-y-0 top-0 xl:-top-4 right-[19px] xl:right-10 flex items-center pointer-events-none">
-              <SearchIcon className="w-4 h-4 lg:w-[22px] lg:h-[22px] mt-5 xl:mt-16" />
+              <SearchIcon className="w-6 h-6 md:w-5 md:h-5 lg:w-8 lg:h-8 mt-5 xl:mt-16" />
             </div>
           </div>
         </div>
 
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
-          <Paragraph1 className="text-white -tracking-[3%] pb-4 md:pb-4 sm:pb-[30px]">
+          <Paragraph1 className="text-white -tracking-[3%] pb-4 md:pb-4 sm:pb-[30px] text-shadow-[0px_0px_4px_0px_#00000040]">
             Popular Services
           </Paragraph1>
 
@@ -123,10 +125,10 @@ const HeroSection = memo(function HeroSection() {
 
           <div className="lg:hidden w-full">
             <div className="flex flex-wrap gap-2">
-              {displayedServices.map((service) => (
+              {displayedServicesMediusScreen.map((service) => (
                 <button
                   key={service}
-                  className="border-[1.5px] border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
+                  className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
                   aria-label={`Search for ${service}`}
                 >
                   <p className="text-base md:text-sm sm:text-[18px] font-[Arial] font-bold tracking-[-0.03em] ">

@@ -40,8 +40,8 @@ function AdviceInsight() {
           Advice & <span className="text-black">insight.</span>
         </H2>
 
-        <div className="hidden md:block space-y-6 mb-8">
-          <div className="grid grid-cols-3 gap-[17px]">
+        <div className="hidden md:block space-y-2 xl:space-y-6 xl:mb-8">
+          <div className="grid grid-cols-3 sm:gap-2 lg:gap-[17px]">
             <article className="col-span-1 relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer">
               <Image
                 src={articles[0].image}
@@ -52,8 +52,8 @@ function AdviceInsight() {
                 quality={85}
                 priority={false}
               />
-              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
-              <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm font-black xl:text-[25px] -tracking-[3%]">
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
+              <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base sm:leading-4 xl:leading-7 font-black xl:text-[25px] -tracking-[3%]">
                 {articles[0].title}
               </h3>
             </article>
@@ -68,14 +68,14 @@ function AdviceInsight() {
                 quality={85}
                 priority
               />
-              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
-              <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm font-black xl:text-[25px] -tracking-[3%] xl:max-w-[80%]">
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
+              <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base sm:leading-4 xl:leading-7 font-black xl:text-[25px] -tracking-[3%] xl:max-w-[80%]">
                 {articles[1].title}
               </h3>
             </article>
           </div>
 
-          <div className="grid grid-cols-3 gap-[17px]">
+          <div className="grid grid-cols-3 sm:gap-2 lg:gap-[17px]">
             {articles.slice(2).map((article, index) => (
               <article
                 key={article.id}
@@ -91,9 +91,9 @@ function AdviceInsight() {
                   priority={false}
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
                 <h3
-                  className={`absolute bottom-4 left-4 right-4 text-white text-sm font-black xl:text-[25px] -tracking-[3%] xl:max-w-[80%]`}
+                  className={`absolute bottom-4 left-4 right-4 text-white text-sm md:text-base sm:leading-4 xl:leading-7 font-black xl:text-[25px] -tracking-[3%] xl:max-w-[80%]`}
                 >
                   {article.title}
                 </h3>
@@ -114,10 +114,10 @@ function AdviceInsight() {
               quality={85}
               priority
             />
-            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
             <h3
               className="absolute bottom-4 left-4 right-4 text-white leading-4 text-[12px]
-    [@media(min-width:360px)]:text-[15px] font-black xl:text-[25px] -tracking-[3%]"
+              [@media(min-width:360px)]:text-[15px] font-black xl:text-[25px] -tracking-[3%]"
             >
               {articles[1].title}
             </h3>
@@ -136,7 +136,7 @@ function AdviceInsight() {
                 priority={false}
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
               <h3
                 className="absolute bottom-4 leading-4 left-4 right-4 text-white text-[12px]
                             [@media(min-width:360px)]:text-[15px] font-black xl:text-[25px] -tracking-[3%] "
@@ -156,10 +156,10 @@ function AdviceInsight() {
                 priority={false}
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
               <h3
                 className="absolute bottom-4 left-4 right-4 text-white leading-4 text-[12px]
-    [@media(min-width:360px)]:text-[15px] font-black xl:text-[25px] -tracking-[3%] xl:max-w-[70%]"
+                [@media(min-width:360px)]:text-[15px] font-black xl:text-[25px] -tracking-[3%] xl:max-w-[70%]"
               >
                 {articles[2].title}
               </h3>
@@ -168,7 +168,7 @@ function AdviceInsight() {
         </div>
 
         <div className="flex justify-center mt-7.5 xl:mt-12">
-          <Button className="bg-[#253238] px-3 py-1.5 xl:py-3.5 xl:px-[66px] text-white rounded-full">
+          <Button className="bg-[#253238] px-3 py-1.5 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] text-white rounded-full">
             Read More
           </Button>
         </div>

@@ -3,12 +3,14 @@
 import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import NavigationArrows from "../common/CarouselLeftRightIcon";
+import LeftArrowBlack from "../common/icons/HomePageIcons/LeftArrowBlack";
+import RightArrowBlack from "../common/icons/HomePageIcons/RightArrowBlack";
 
 export default function WithoutSpecialCardCarousel({
   data,
   renderCard,
   mobileImageWidth = 72,
-  mobileArrowSpacing = 12,
+  mobileArrowSpacing = 15,
   showArrowAndDots = true,
 }) {
   const MIN_SLIDES_FOR_LOOP = 6;
@@ -134,19 +136,18 @@ export default function WithoutSpecialCardCarousel({
                 {loopableCards.map((card, index) => (
                   <div
                     key={`${card.id}-${index}`}
-                    // className="flex-[0_0_calc(50%-10px)] 
+                    // className="flex-[0_0_calc(50%-10px)]
                     //            sm:flex-[0_0_calc(50%-12.5px)]
                     //            md:flex-[0_0_calc(33.333%-13.33px)]
                     //            lg:flex-[0_0_calc(25%-18px)]
                     //            xl:flex-[0_0_calc(25%-18px)]
                     //            min-w-0"
-                      className="flex-[0_0_calc(50%-10px)] 
+                    className="flex-[0_0_calc(50%-10px)] 
                                   sm:flex-[0_0_calc(50%-12.5px)]
                                   md:flex-[0_0_calc(25%-15px)]
                                   lg:flex-[0_0_calc(25%-18px)]
                                   xl:flex-[0_0_calc(25%-18px)]
                                   min-w-0"
-
                   >
                     {renderCard(card, index)}
                   </div>
@@ -201,7 +202,7 @@ export default function WithoutSpecialCardCarousel({
           className="absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 rounded-full z-10 hover:bg-gray-100"
           aria-label="Previous slide"
         >
-          <svg
+          {/* <svg
             width="20"
             height="32"
             viewBox="0 0 16 16"
@@ -215,15 +216,16 @@ export default function WithoutSpecialCardCarousel({
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-          </svg>
+          </svg> */}
+          <LeftArrowBlack className="h-5 w-2.5" />
         </button>
         <button
           onClick={scrollNextMobile}
           style={{ right: `${mobileArrowSpacing}px` }}
-          className="absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 pr-3 rounded-full z-10 hover:bg-gray-100"
+          className="absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 rounded-full z-10 hover:bg-gray-100"
           aria-label="Next slide"
         >
-          <svg
+          {/* <svg
             width="20"
             height="32"
             viewBox="0 0 16 16"
@@ -237,7 +239,8 @@ export default function WithoutSpecialCardCarousel({
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-          </svg>
+          </svg> */}
+          <RightArrowBlack className="h-5 w-2.5" />
         </button>
 
         {/* Dot Indicators */}
@@ -248,8 +251,10 @@ export default function WithoutSpecialCardCarousel({
                 key={index}
                 onClick={() => emblaApiMobile?.scrollTo(index)}
                 className={`${
-                  index === selectedIndexMobile ? "w-[51px]" : "w-[11px]"
-                } h-[11px] rounded-full transition-all duration-700 ease-in-out bg-black`}
+                  index === selectedIndexMobile
+                    ? "w-[51px] h-[13px]"
+                    : "w-[11.59px] h-[11.59px]"
+                }  rounded-full transition-all duration-700 ease-in-out bg-black`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}

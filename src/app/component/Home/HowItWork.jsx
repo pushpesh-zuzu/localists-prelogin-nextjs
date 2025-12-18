@@ -15,14 +15,14 @@ function HowItWork() {
         </H2>
         <div className="flex flex-col md:flex-row justify-items-start gap-5 xl:gap-[50px]">
           <HowItWorksCard
-            iconSrc={<HowItWorkIconPencingIcon className="h-20 md:h-12 xl:h-24 " />}
+            iconSrc={<HowItWorkIconPencingIcon className="h-15 w-15 md:h-13 md:w-20 lg:h-24 lg:w-24" />}
             title="Search"
             description="Fill in your details for your project"
             mw={"xs:w-full md:w-[175px]  lg:w-[250px] xl:w-[310px]"}
           />
 
           <HowItWorksCard
-            iconSrc={<HowItWorkUserIcon className="h-20 md:h-12 xl:h-24" />}
+            iconSrc={<HowItWorkUserIcon className="h-15 w-15 md:h-13 md:w-20 lg:h-24 lg:w-24" />}
             title="Connect"
             description="Receive quotes from Professionals"
             mw={"xs:w-full md:w-[140px] lg:w-[250x] xl:w-[275px]"}
@@ -30,7 +30,7 @@ function HowItWork() {
 
           <HowItWorksCard
             iconSrc={
-              <HowItWorkCompareIcon className="h-20 md:h-12 xl:h-24 " />
+              <HowItWorkCompareIcon className="h-15 w-15 md:h-13 md:w-20 lg:h-24 lg:w-24 " />
             }
             title="Hire"
             description="Compare your quotes and enjoy great savings"
@@ -38,7 +38,7 @@ function HowItWork() {
           />
         </div>
         <div className="hidden sm:flex justify-center">
-          <Button className="rounded-[94px] bg-[#10C87B] text-white mt-6 lg:mt-12 md:py-1 lg:py-2 px-4">
+          <Button className="rounded-[94px] bg-[#10C87B] text-white mt-6 px-8 lg:mt-12 md:py-1 md:px-4 lg:py-2 ">
             Get Started
           </Button>
         </div>

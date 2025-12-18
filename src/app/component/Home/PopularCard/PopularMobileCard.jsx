@@ -13,51 +13,46 @@ export default function PopularJobs() {
   const jobs = [
     { id: 1, image: <TreeIcon />, title: "Tree surgeon" },
 
-    { id: 4, image: <LandscapingIcon />, title: "Landscaping" },
-    { id: 6, image: <ArchitectIcon />, title: "Personal Trainer" },
+    { id: 4, image: <RoofingIcon />, title: "Roofing" },
+    { id: 6, image: <PainterIcon />, title: "Painter & Decorator" },
     {
       id: 2,
-      image: <FenceAndGateInstallationIcon />,
-      title: "Fence & Gate Installation",
+      image: <AccountantIcon />,
+      title: "Accountants",
     },
-    { id: 3, image: <RoofingIcon />, title: "Driveways" },
+    { id: 3, image: <ArchitectIcon />, title: "Architects & Planning" },
     {
       id: 5,
-      image: <ArtificialGrassInstallationIcon />,
-      title: "Artificial Grass Installation",
+      image: <FenceAndGateInstallationIcon />,
+      title: "Fence & Gates",
     },
     // { id: 7, image: <PainterIcon />, title: "Artificial Grass Installation" },
   ];
 
   return (
-    <div className="w-full max-w-[430px] mx-auto  bg-white">
-      <div className="grid grid-cols-2 gap-4 mb-8">
+    <div className="w-full max-w-[430px] mx-auto bg-white">
+      <div className="grid grid-cols-2 gap-5 mb-5">
         {jobs.map((job, index) => (
-          <button
+          <div
             key={index}
-            className="bg-[#00AFE3] min-h-[130px] sm:min-h-[110px] py-2.5 px-0.5 text-white rounded-3xl flex flex-col items-center justify-center hover:bg-cyan-500 transition-colors active:scale-95"
+            className="bg-[#00AFE3] max-w-[130px] min-h-[114px] py-2.5 flex flex-col justify-around text-center text-white rounded-3xl  hover:bg-cyan-500 transition-colors active:scale-95"
           >
-            <div className=" h-[42px] mb-4 relative">
-              {/* <Image
-                src={job.image}
-                alt={job.title}
-                fill
-                className="object-contain"
-              /> */}
-              {job.image}
-            </div>
-            <span className="text-base font-medium text-center leading-tight">
+            <div className="flex justify-center pb-0.5">{job.image}</div>
+            <span
+              style={{ textShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)" }}
+              className=" mx-2.5 flex justify-center text-[18px] leading-[18px] font-medium"
+            >
               {job.title}
             </span>
-          </button>
+          </div>
         ))}
       </div>
 
       <div className="flex justify-center gap-2">
-        <div className="w-8 h-2 bg-gray-800 rounded-full"></div>
-        <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-        <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-        <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+        <div className="w-[51px] h-[13px] bg-gray-800 rounded-full"></div>
+        <div className="w-[11px] h-[11px] bg-gray-300 rounded-full"></div>
+        <div className="w-[11px] h-[11px] bg-gray-300 rounded-full"></div>
+        <div className="w-[11px] h-[11px] bg-gray-300 rounded-full"></div>
       </div>
     </div>
   );

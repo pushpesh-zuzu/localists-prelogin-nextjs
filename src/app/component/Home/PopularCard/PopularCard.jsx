@@ -6,6 +6,7 @@ import H2 from "../../UI/Typography/H2";
 import HomeGardenCarousel from "../../Carousel/HomeCarousel";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import PaddingWrapper from "../../common/WrapperBGWidth/PaddingWrapper";
+import PopularCardCarousel from "../../Carousel/PopularCardCarousel";
 
 function PopularCard() {
   const PopularData = [
@@ -14,7 +15,7 @@ function PopularCard() {
       image: "/homepage/image16.webp",
       title: "Tree surgeon",
     },
-    { id: 2, image: "/homepage/image17.webp", title: "Landscaping" },
+    { id: 2, image: "/homepage/image17.webp", title: "Landscapers" },
     {
       id: 3,
       image: "/homepage/image18.webp",
@@ -34,13 +35,13 @@ function PopularCard() {
   ];
   return (
     <WrapperBGWidth>
-      <PaddingWrapper className="h-full lg:min-h-[587px] xl:min-h-[657px] pt-10 md:pt-6 md:pb-6 pb-[73px] xl:pt-12 xl:pb-[68px]">
+      <PaddingWrapper className="h-full lg:min-h-[587px] xl:min-h-[657px] py-10 md:pt-6 md:pb-6 xl:pt-12 xl:pb-[68px]">
         <H2 className="text-[#00afe3] pb-10 lg:pb-7">
           Popular <span className="text-black">jobs.</span>
         </H2>
 
         <div className="hidden md:block select-none">
-          <HomeGardenCarousel
+          <PopularCardCarousel
             data={PopularData}
             renderCard={(card) => <PopularImageCard card={card} />}
             showSpecial={false}

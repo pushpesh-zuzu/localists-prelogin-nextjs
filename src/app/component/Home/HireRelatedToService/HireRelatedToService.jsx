@@ -6,7 +6,7 @@ import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 
 const JobButton = ({ title }) => (
   <button
-    className="font-[Arial] border xl:border-2 border-white font-bold text-[12px] -tracking-[3%] lg:text-[20px] 
+    className="font-[Arial] border-2 xl:border-2 border-white font-bold text-[12px] -tracking-[3%] lg:text-[20px] 
                px-1.5 py-[5px] xl:px-5 xl:py-1 rounded-full text-white 
                whitespace-nowrap focus:outline-none"
     aria-label={`Search for ${title}`}
@@ -35,14 +35,11 @@ export default function HireRelatedToService() {
       "Landscapers near me",
       "Patio Layers near me",
       "Private Tutors near me",
-      "Roofers near me",
-      "Garden Designers near me",
-      "Maths Tutor near me",
-      "Plumbers near me",
+      "Personal Trainers near me",
+      "Landscapers near me",
       "Patio Layers near me",
-      "Roofers near me",
-      "Gardeners near me",
-      "Electricians near me",
+      "Private Tutors near me",
+      "Fence & Gate Installers near me",
     ],
     insight: [
       "Hiring Tips",
@@ -69,9 +66,9 @@ export default function HireRelatedToService() {
   ];
   return (
     <WrapperBGWidth background={"#00AFE3"}>
-      <div className="bg-[#00AFE3] md:px-[46px] px-2.5 py-10 md:py-[50px] md:pl-16 md:pr-6 lg:px-[120px] lg:py-[72px] w-full h-full">
+      <div className="bg-[#00AFE3]  px-2.5 py-10 md:py-[50px] md:pl-16  lg:px-[120px] lg:py-[72px] w-full h-full">
         <header className="mb-5 xl:mb-12">
-          <div className="flex flex-wrap sm:flex-nowrap justify-between  items-center gap-7.5 md:gap-2 xl:gap-12">
+          <div className="flex flex-wrap md:flex-col lg:flex-row xl:justify-between items-left gap-7.5 md:gap-6 xl:gap-12">
             <h2
               className="font-Inter font-black
                           tracking-[-0.03em]
@@ -80,7 +77,7 @@ export default function HireRelatedToService() {
             >
               Hire with <span className="text-[#023047]">confidence.</span>
             </h2>
-            <nav className="flex gap-1 sm:gap-4 md:gap-1 xl:gap-7 items-center flex-wrap">
+            <nav className="flex gap-1 sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap">
               {tabs.map((tab, index) => (
                 <button
                   key={tab.activtab}
@@ -89,10 +86,9 @@ export default function HireRelatedToService() {
                     currentTab === tab.activtab
                       ? "bg-[#253238] rounded-full transition-all duration-700 ease-in-out"
                       : ""
-                  }  font-[Arial] font-bold text-white px-[5px] tracking-[-0.03em]
+                  }  font-[Arial] font-bold text-white px-2 tracking-[-0.03em]
                       text-base
-                      text-[12px]
-                      xl:text-[18px] py-[3px] sm:px-2 sm:py-1.5 xl:px-4 xl:py-[11px] cursor-pointer`}
+                      xl:text-[18px] py-[3px] sm:px-3 sm:py-1.5 xl:px-4 xl:py-[11px] cursor-pointer`}
                 >
                   {tab.lable}
                 </button>
