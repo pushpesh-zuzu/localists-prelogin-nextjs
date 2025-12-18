@@ -6,22 +6,24 @@ import PainterIcon from "../../common/icons/HomePageIcons/PainterIcon";
 import AccountantIcon from "../../common/icons/HomePageIcons/AccountantIcon";
 import ArchitectIcon from "../../common/icons/HomePageIcons/ArchitectIcon";
 import FenceAndGateInstallationIcon from "../../common/icons/HomePageIcons/FenceAndGateInstallationIcon";
+import LandscapingIcon from "../../common/icons/HomePageIcons/LandscapingIcon";
+import ArtificialGrassInstallationIcon from "../../common/icons/HomePageIcons/ArtificialGrassInstallationIcon";
 
 export default function PopularJobs() {
   const jobs = [
-    { id: 1, image: <PainterIcon />, title: "Tree surgeon" },
+    { id: 1, image: <TreeIcon />, title: "Tree surgeon" },
 
-    { id: 4, image: <PainterIcon />, title: "Landscaping" },
+    { id: 4, image: <LandscapingIcon />, title: "Landscaping" },
     { id: 6, image: <ArchitectIcon />, title: "Personal Trainer" },
     {
       id: 2,
       image: <FenceAndGateInstallationIcon />,
       title: "Fence & Gate Installation",
     },
-    { id: 3, image: <AccountantIcon />, title: "Driveways" },
+    { id: 3, image: <RoofingIcon />, title: "Driveways" },
     {
       id: 5,
-      image: <RoofingIcon />,
+      image: <ArtificialGrassInstallationIcon />,
       title: "Artificial Grass Installation",
     },
     // { id: 7, image: <PainterIcon />, title: "Artificial Grass Installation" },

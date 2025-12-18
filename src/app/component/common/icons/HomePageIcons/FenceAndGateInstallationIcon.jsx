@@ -12,8 +12,8 @@ function FenceAndGateInstallationIcon() {
       <path
         d="M5 25V33H13V25M13 17V5L9 1L5 5V17M21 25V33H29V25M29 17V5L25 1L21 5V17M1 17V25H33V17H1Z"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
     </svg>
