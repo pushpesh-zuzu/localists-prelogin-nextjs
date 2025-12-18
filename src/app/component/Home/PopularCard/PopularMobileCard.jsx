@@ -9,22 +9,22 @@ import FenceAndGateInstallationIcon from "../../common/icons/HomePageIcons/Fence
 
 export default function PopularJobs() {
   const jobs = [
-    { id: 1, image: <PainterIcon />, title: "Tree surgeon near me" },
+    { id: 1, image: <PainterIcon />, title: "Tree surgeon" },
 
-    { id: 4, image: <PainterIcon />, title: "Landscaping near me" },
-    { id: 6, image: <ArchitectIcon />, title: "Personal Trainer near me" },
+    { id: 4, image: <PainterIcon />, title: "Landscaping" },
+    { id: 6, image: <ArchitectIcon />, title: "Personal Trainer" },
     {
       id: 2,
       image: <FenceAndGateInstallationIcon />,
-      title: "Fence & Gate Installation near me",
+      title: "Fence & Gate Installation",
     },
-    { id: 3, image: <AccountantIcon />, title: "Driveways near me" },
+    { id: 3, image: <AccountantIcon />, title: "Driveways" },
     {
       id: 5,
       image: <RoofingIcon />,
-      title: "Artificial Grass Installation near me",
+      title: "Artificial Grass Installation",
     },
-    // { id: 7, image: <PainterIcon />, title: "Artificial Grass Installation near me" },
+    // { id: 7, image: <PainterIcon />, title: "Artificial Grass Installation" },
   ];
 
   return (

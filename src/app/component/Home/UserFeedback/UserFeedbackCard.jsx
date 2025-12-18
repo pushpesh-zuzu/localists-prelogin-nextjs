@@ -2,7 +2,6 @@ import React from "react";
 import FiveStarYelloIcon from "../../common/icons/HomePageIcons/FiveStarYelloIcon";
 
 function UserFeedbackCard({ item }) {
-  console.log(item, "iii");
   return (
     <div className="w-full flex justify-center">
       <div

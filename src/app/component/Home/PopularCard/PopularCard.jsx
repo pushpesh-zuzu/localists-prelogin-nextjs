@@ -14,22 +14,22 @@ function PopularCard() {
       image: "/homepage/image16.webp",
       title: "Tree surgeon",
     },
-    { id: 2, image: "/homepage/image17.webp", title: "Landscaping near me" },
+    { id: 2, image: "/homepage/image17.webp", title: "Landscaping" },
     {
       id: 3,
       image: "/homepage/image18.webp",
-      title: "Personal Trainer near me",
+      title: "Personal Trainer",
     },
-    { id: 4, image: "/homepage/image19.webp", title: "Driveways near me" },
+    { id: 4, image: "/homepage/image19.webp", title: "Driveways" },
     {
       id: 5,
       image: "/fenceinstallation.webp",
-      title: "Fence & Gate Installation near me",
+      title: "Fence & Gate Installation",
     },
     {
       id: 6,
       image: "/artificialinstallation.webp",
-      title: "Artificial Grass Installation near me",
+      title: "Artificial Grass Installation",
     },
   ];
   return (
