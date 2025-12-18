@@ -107,7 +107,7 @@ const HeroSection = memo(function HeroSection() {
         </div>
 
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
-          <Paragraph1 className="text-white -tracking-[3%] pb-4 md:pb-4 sm:pb-[30px] text-shadow-[0px_0px_4px_0px_#00000040]">
+          <Paragraph1 className="text-white -tracking-[3%] pb-4 md:pb-4 lg:pb-[30px] text-shadow-[0px_0px_4px_0px_#00000040]">
             Popular Services
           </Paragraph1>
 
