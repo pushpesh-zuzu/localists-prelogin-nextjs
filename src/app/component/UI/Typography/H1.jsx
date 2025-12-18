@@ -4,7 +4,7 @@ export default function H1({ children, className = "" }) {
       className={`
         font-Inter font-black
         tracking-[-0.03em]
-        text-[50px] leading-12
+        text-[50px] leading-12 md:text-6xl md:leading-[55px] 
         lg:text-[81px] lg:leading-[75px]
         ${className}
       `}

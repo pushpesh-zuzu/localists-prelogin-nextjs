@@ -35,14 +35,14 @@ function AdviceInsight() {
 
   return (
     <WrapperBGWidth>
-      <section className="h-auto min-h-[336px] lg:min-h-[687px] px-7.5 py-12 sm:px-10 xl:px-[120px] lg:pt-[72px] lg:pb-[86px]">
+      <section className="h-auto min-h-[336px] lg:min-h-[687px] px-7.5 py-12 sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:pt-[72px] lg:pb-[86px]">
         <H2 className="text-[#00afe3] pb-7.5 xl:pb-[53px]">
           Advice & <span className="text-black">insight.</span>
         </H2>
 
         <div className="hidden md:block space-y-6 mb-8">
           <div className="grid grid-cols-3 gap-[17px]">
-            <article className="col-span-1 relative rounded-3xl overflow-hidden h-[336px] group cursor-pointer">
+            <article className="col-span-1 relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer">
               <Image
                 src={articles[0].image}
                 alt={articles[0].title}
@@ -58,7 +58,7 @@ function AdviceInsight() {
               </h3>
             </article>
 
-            <article className="col-span-2 relative rounded-3xl overflow-hidden h-[336px] group cursor-pointer">
+            <article className="col-span-2 relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer">
               <Image
                 src={articles[1].image}
                 alt={articles[1].title}
@@ -79,7 +79,7 @@ function AdviceInsight() {
             {articles.slice(2).map((article, index) => (
               <article
                 key={article.id}
-                className="relative rounded-3xl overflow-hidden h-[336px] group cursor-pointer"
+                className="relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer"
               >
                 <Image
                   src={article.image}
@@ -115,7 +115,10 @@ function AdviceInsight() {
               priority
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
-            <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm font-black xl:text-[25px] -tracking-[3%]">
+            <h3
+              className="absolute bottom-4 left-4 right-4 text-white leading-4 text-[12px]
+    [@media(min-width:360px)]:text-[15px] font-black xl:text-[25px] -tracking-[3%]"
+            >
               {articles[1].title}
             </h3>
           </article>
@@ -134,7 +137,10 @@ function AdviceInsight() {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
-              <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm font-black xl:text-[25px] -tracking-[3%] ">
+              <h3
+                className="absolute bottom-4 leading-4 left-4 right-4 text-white text-[12px]
+                            [@media(min-width:360px)]:text-[15px] font-black xl:text-[25px] -tracking-[3%] "
+              >
                 {articles[0].title}
               </h3>
             </article>
@@ -151,7 +157,10 @@ function AdviceInsight() {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
-              <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm font-black xl:text-[25px] -tracking-[3%] xl:max-w-[70%]">
+              <h3
+                className="absolute bottom-4 left-4 right-4 text-white leading-4 text-[12px]
+    [@media(min-width:360px)]:text-[15px] font-black xl:text-[25px] -tracking-[3%] xl:max-w-[70%]"
+              >
                 {articles[2].title}
               </h3>
             </article>

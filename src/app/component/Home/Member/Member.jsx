@@ -8,8 +8,8 @@ import Button from "../../UI/Typography/Button";
 function Member() {
   return (
     <div className="w-full max-w-[300px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto py-10 xl:py-[63px]">
-      <div className="hidden md:flex rounded-[36px] overflow-hidden ">
-        <div className="w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[63px] py-[37px]">
+      <div className="hidden md:flex w-fit rounded-[36px] overflow-hidden mx-auto ">
+        <div className=" w-[400] md:h-[340px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] lg:px-[63px] py-[37px]">
           <>
             <H3 className="hidden md:block text-white font-bold font-[Arial] leading-7 xl:leading-[42px] pr-8">
               "What I like about Localists is the quality of leads I get. I
@@ -18,7 +18,7 @@ function Member() {
             </H3>
 
             <div className="hidden md:block mt-4">
-              <p className="  text-white font-bold text[20px] mt-[18px]">
+              <p className="  text-white font-bold text[20px] lg:mt-[18px]">
                 Localists Professional, Chris
               </p>
               <p className=" text-white text-[16px] font-normal">CH Joinery</p>
@@ -38,7 +38,7 @@ function Member() {
             loading="eager"
             height={512}
             width={521}
-            className="w-[521px] h-[512px]"
+            className="w-[273px] h-[340px] lg:w-[521px] lg:h-[512px]"
           />
         </div>
       </div>

@@ -10,6 +10,9 @@ import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import SearchIcon from "../../common/icons/HomePageIcons/SearchIcon";
 import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 import Paragraph1 from "../../UI/Typography/Paragraph1";
+import FiveStarGreenIcon from "../../common/icons/HomePageIcons/FiveStarGreenIcon";
+import StarGreen from "../../common/icons/HomePageIcons/StarGreen";
+import TrustpioletIcon from "../../common/icons/HomePageIcons/TrustpioletIcon";
 const SearchResults = dynamic(() => import("../../common/SearchResult"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -30,43 +33,53 @@ const HeroSection = memo(function HeroSection() {
   ];
 
   const [showAllServices, setShowAllServices] = useState(false);
-  const displayedServices = showAllServices ? services : services.slice(0, 5);
+  const displayedServices = showAllServices ? services : services.slice(0, 6);
   const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState("");
   return (
     <WrapperBGWidth background={"#00aeef"}>
       <section
-        className="flex flex-col sm:flex-row gap-[30px] md:gap-[116px] min-h-[543px] sm:min-h-[376px] xl:min-h-[670px] bg-[#00AEEF] px-[31px] pt-10 pb-5 md:px-[46px] md:py-[25px] xl:px-[163px] xl:py-[72px]"
+        className="flex flex-col lg:flex-row gap-[30px] lg:gap-[116px] min-h-[543px] sm:min-h-[376px] xl:min-h-[670px] bg-[#00AEEF] px-[31px] pt-10 pb-5 md:px-[87px] md:pt-[38px] md:pb-6 xl:px-[163px] xl:py-[72px]"
         role="banner"
         aria-label="Hero section"
       >
-        <div className="w-full md:w-1/2 flex flex-col xl:ml-[43px]">
-          <Image
-            src="/icons/trustpoilet.svg"
-            alt="Localists - Local Service Provider Directory"
-            width={330}
-            height={49}
-            className="h-[49px] w-[330px] mb-[27px] hidden md:block"
-            priority
-            fetchPriority="high"
-            loading="eager"
-          />
-          <H1 className="text-white">
+        <div className="w-full lg:w-1/2 flex flex-col xl:ml-[43px]">
+          {/* <div className="rounded-[71.08px] bg-[#A8E4F6] py-2 px-2 lg:py-2 lg:px-4 w-fit flex items-center gap-1 lg:gap-2 mb-4 xl:mb-7">
+            <p
+              className="font-[Arial] font-bold tracking-[-0.03em]  leading-[18px]
+                      text-sm sm:leading-[18px]
+                      lg:text-[24px] lg:leading-6 "
+            >
+              Excellent
+            </p>
+            <FiveStarGreenIcon className="h-6 w-16 lg:h-8 lg:w-28" />
+            <span className="flex font-semibold items-center gap-0 text-sm leading-none">
+              <StarGreen className=" w-4 lg:h-8 lg:w-5.5" />
+              <span className="lg:mt-1 text-xs">Trustpilot</span>
+            </span>
+          </div> */}
+          <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] lg:mb-7 max-h-12" />
+
+          <H1 className="text-white block md:hidden lg:block">
             Find Local <span className="block">Services.</span>
             <span className="text-black block">Fast.</span>
           </H1>
-          {/* <p className="family-55 max-w-[80%] md:max-w-full md:w-full text-white text-14px md:text-[17px] xl:text-[26px] pt-5">
-          Get instant quotes from local professionals.
-        </p> */}
-          <Paragraph1 className="max-w-[204px] sm:max-w-full text-white pt-[18px]">
+          <H1 className="hidden md:block lg:hidden  text-white">
+            Find Local{" "}
+            <div className="flex">
+              <span className="block">Services.</span>
+              <span className="text-black block">Fast.</span>
+            </div>
+          </H1>
+          <Paragraph1 className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px]">
             Get instant quotes from local professionals.
           </Paragraph1>
-          <div className="relative max-w-[254px]  sm:max-w-[404px]">
+          <div className="relative max-w-[254px] md:max-w-[246px]  lg:max-w-[404px]">
             <input
               type="text"
               placeholder="Search for a services"
               id="search Attribute"
-              className="text-[#B3B3B3] font-bold px-4 py-2.5 shadow-[0px_20px_40px_0px_rgba(0,0,0,0.5)] md:px-[30px] md:py-[15px] xl:px-[43px] xl:py-4 mt-5 xl:mt-[46px] text-base xl:text-[25px]!  xl:placeholder:text-[25px]! bg-white border-[1.5px] border-gray-300 rounded-[100px] w-full focus:outline-none"
+              className="text-[#B3B3B3] font-bold px-4 py-2.5  shadow-[0px_20px_40px_0px_rgba(0,0,0,0.5)] md:px-6 md:py-2.5 xl:px-[43px] xl:py-4 mt-5 md:mt-6 xl:mt-[46px] text-base xl:text-[25px]! placeholder:text-base xl:placeholder:text-[25px]! bg-white border-[1.5px] border-gray-300 rounded-[100px] w-full focus:outline-none"
               aria-label="Search for a services"
               value={searchQuery || ""}
               onChange={(e) => {
@@ -86,25 +99,17 @@ const HeroSection = memo(function HeroSection() {
               ""
             )}
             <div className="absolute inset-y-0 top-0 xl:-top-4 right-[19px] xl:right-10 flex items-center pointer-events-none">
-              {/* <Image
-                src="/icons/searchiconherosection.svg"
-                alt="search"
-                width={22}
-                height={22}
-                className="w-[22px] h-[22px] mt-5 xl:mt-16"
-                priority
-              /> */}
-              <SearchIcon className="w-[22px] h-[22px] mt-5 xl:mt-16" />
+              <SearchIcon className="w-4 h-4 lg:w-[22px] lg:h-[22px] mt-5 xl:mt-16" />
             </div>
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-start">
-          <Paragraph1 className="text-white -tracking-[3%] pb-4 sm:pb-[30px]">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
+          <Paragraph1 className="text-white -tracking-[3%] pb-4 md:pb-4 sm:pb-[30px]">
             Popular Services
           </Paragraph1>
 
-          <div className="hidden md:flex flex-wrap gap-2 xl:gap-3">
+          <div className="hidden lg:flex flex-wrap gap-2 xl:gap-3">
             {services.map((service) => (
               <button
                 key={service}
@@ -116,15 +121,15 @@ const HeroSection = memo(function HeroSection() {
             ))}
           </div>
 
-          <div className="md:hidden w-full">
+          <div className="lg:hidden w-full">
             <div className="flex flex-wrap gap-2">
               {displayedServices.map((service) => (
                 <button
                   key={service}
-                  className="border border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
+                  className="border-[1.5px] border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
                   aria-label={`Search for ${service}`}
                 >
-                  <p className="text-base sm:text-[18px] font-[Arial] font-bold tracking-[-0.03em] ">
+                  <p className="text-base md:text-sm sm:text-[18px] font-[Arial] font-bold tracking-[-0.03em] ">
                     {service}
                   </p>
                 </button>
@@ -142,14 +147,6 @@ const HeroSection = memo(function HeroSection() {
                       : "Show more services"
                   }
                 >
-                  {/* <Image
-                    src="/chevron-right-double.webp"
-                    width={52}
-                    height={52}
-                    alt="expand services"
-                    priority={true}
-                    className="w-[52px] h-[52px]"
-                  /> */}
                   <ChevroliteDoubleDownIcon />
                 </button>
               </div>

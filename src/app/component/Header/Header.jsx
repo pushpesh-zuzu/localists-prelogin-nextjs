@@ -24,7 +24,7 @@ export default function Header() {
         className="w-full sticky top-0 left-0 border-b border-[#DEDEDE] bg-white z-50"
         role="banner"
       >
-        <div className="hidden md:flex justify-between items-center px-[11px] sm:pb-4 sm:pt-5 sm:px-6 md:px-[46.93] lg:px-12 xl:px-30 xl:pb-6 xl:pt-[18px] ">
+        <div className="hidden lg:flex justify-between items-center px-[11px] sm:pb-4 sm:pt-5 sm:px-6 md:px-[46.93] lg:px-12 xl:px-30 xl:pb-6 xl:pt-[18px] ">
           <div className="flex items-center space-x-4  md:space-x-[11px] lg:space-x-[21px] ">
             <a
               href="/"
@@ -149,20 +149,9 @@ export default function Header() {
           </nav>
         </div>
 
-        <div className="flex md:hidden items-center justify-between px-2.5 py-2.5">
+        <div className="flex lg:hidden items-center justify-between px-2.5 py-2.5 md:py-2 md:px-16">
           <MegaMenu>
             <button type="button" aria-label="Open mobile menu">
-              {/* <Image
-                src="/mobilemenu.webp"
-                alt="Mobile menu"
-                width={20}
-                height={20}
-                className="w-5.5 h-3.5 text-[#00afe3]"
-                priority
-                fetchPriority="high"
-                loading="eager"
-                layout="intrinsic"
-              /> */}
               <MobileMenuIcon className="" />
             </button>
           </MegaMenu>
@@ -188,26 +177,10 @@ export default function Header() {
 
           <div className="flex items-center space-x-[4.34px]">
             <button type="button" aria-label="Search services">
-              {/* <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-[18px] h-[18px] text-[#00afe3]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M21 21l-4.35-4.35m1.77-5.4a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg> */}
-              <SearchIcon className="h-4 w-4" />
+              <SearchIcon className="h-4 w-4 mr-0.5 md:mr-1" />
             </button>
-
             <button
-              className="family-55 px-2.5 py-[5.66px] text-[16px] font-medium text-white bg-[#00AEEF] rounded-full transition-colors duration-200"
+              className="px-2.5 md:px-4 leading-4 py-[5.66px] text-[16px] font-medium text-white bg-[#00AEEF] rounded-full transition-colors duration-200"
               aria-label="Login to your account"
             >
               Login

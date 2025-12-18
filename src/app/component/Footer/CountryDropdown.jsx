@@ -4,7 +4,7 @@ import ArrowSolidBalckSelect from "../common/icons/HomePageIcons/ArrowSolidBalck
 
 export default function CountryDropdown() {
   return (
-    <div className="w-[210px] relative flex justify-end">
+    <div className="w-[130px] xl:w-[210px] relative flex justify-end">
       <div className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center">
         <Image
           width={22}
@@ -37,7 +37,7 @@ export default function CountryDropdown() {
           alt="UK Flag"
           className="h-[15px] w-[15px]"
         /> */}
-        <ArrowSolidBalckSelect className="h-[15px] w-[15px]" />
+        <ArrowSolidBalckSelect className="h-[8px] w-[8px] xl:h-[15px] xl:w-[15px]" />
       </div>
     </div>
   );

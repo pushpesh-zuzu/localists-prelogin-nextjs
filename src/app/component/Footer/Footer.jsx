@@ -47,11 +47,11 @@ const Footer = () => {
               </p>
 
               <div className="space-y-2">
-                <p className="font-bold text-gray-900 text-[20px] md:text-[10px] xl:text-lg">
+                <p className="font-bold text-gray-900 text-[20px] md:text-sm xl:text-lg">
                   Need Help?
                 </p>
                 <Link href="/contact-us">
-                  <button className="bg-[#00afe3] hover:bg-[#0096c4] text-white px-6 py-2 rounded-sm shadow-[0px_0px_3.96px_0px_#0000001A] text-base font-bold md:text-xs xl:text-sm  transition-colors duration-200 shadow-sm">
+                  <button className="bg-[#00afe3] hover:bg-[#0096c4] text-white px-6 py-2 rounded-sm shadow-[0px_0px_3.96px_0px_#0000001A] text-base font-bold md:text-sm whitespace-nowrap xl:text-sm  transition-colors duration-200 shadow-sm">
                     Contact Us
                   </button>
                 </Link>
@@ -60,14 +60,14 @@ const Footer = () => {
 
             {/* Desktop Links */}
             <div className="hidden md:block">
-              <h4 className="font-bold text-[rgba(37, 50, 56, 1)] mb-3.5 sm:text-[10px] xl:text-[20px]">
+              <h4 className="font-bold text-[rgba(37, 50, 56, 1)] mb-3.5 sm:text-[10px] md:text-sm xl:text-[20px]">
                 For Customers
               </h4>
               <ul className="space-y-3 sm:text-[9px] xl:text-[17px]">
                 <li>
                   <Link
                     href="/"
-                    className="text-[rgba(37, 50, 56, 1)] font-normal text-[18px] hover:text-[#00afe3]  transition-colors duration-200 block "
+                    className="text-[rgba(37, 50, 56, 1)] font-normal  text-sm  xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
                     Find a Professional
                   </Link>
@@ -75,7 +75,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/how-it-works-for-customers"
-                    className="text-[rgba(37, 50, 56, 1)] font-normal text-[18px] hover:text-[#00afe3]  transition-colors duration-200 block "
+                    className="text-[rgba(37, 50, 56, 1)] font-normal text-sm  xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
                     How it works
                   </Link>
@@ -83,7 +83,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/login"
-                    className="text-[rgba(37, 50, 56, 1)] font-normal text-[18px] hover:text-[#00afe3]  transition-colors duration-200 block"
+                    className="text-[rgba(37, 50, 56, 1)] font-normal text-sm  xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block"
                   >
                     Login
                   </Link>
@@ -92,14 +92,14 @@ const Footer = () => {
             </div>
 
             <div className="hidden md:block">
-              <h4 className="font-bold text-[rgba(37, 50, 56, 1)] mb-3.5 sm:text-[10px] xl:text-[20px]">
+              <h4 className="font-bold text-[rgba(37, 50, 56, 1)] mb-3.5 sm:text-[10px] md:text-sm xl:text-[20px]">
                 For Professionals
               </h4>
               <ul className="space-y-3 sm:text-[9px] xl:text-[17px]">
                 <li>
                   <Link
                     href="/how-it-works-for-sellers"
-                    className="text-[rgba(37, 50, 56, 1)] font-normal text-[18px] hover:text-[#00afe3]  transition-colors duration-200 block "
+                    className="text-[rgba(37, 50, 56, 1)] font-normal text-sm  xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
                     How it works
                   </Link>
@@ -107,7 +107,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/sellers/pricing"
-                    className="text-[rgba(37, 50, 56, 1)] font-normal text-[18px] hover:text-[#00afe3]  transition-colors duration-200 block "
+                    className="text-[rgba(37, 50, 56, 1)] font-normal text-sm  xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
                     Pricing
                   </Link>
@@ -115,7 +115,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/sellers/create"
-                    className="text-[rgba(37, 50, 56, 1)] font-normal text-[18px] hover:text-[#00afe3]  transition-colors duration-200 block "
+                    className="text-[rgba(37, 50, 56, 1)] font-normal text-sm  xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
                     Join as a Professional
                   </Link>
@@ -124,14 +124,14 @@ const Footer = () => {
             </div>
 
             <div className="hidden md:block">
-              <h4 className="font-bold text-[rgba(37, 50, 56, 1)] mb-3.5 sm:text-[10px] xl:text-[20px]">
+              <h4 className="font-bold text-[rgba(37, 50, 56, 1)] mb-3.5 sm:text-[10px] md:text-sm xl:text-[20px]">
                 About
               </h4>
               <ul className="space-y-3 sm:text-[9px] xl:text-[17px]">
                 <li>
                   <Link
                     href="/about-us"
-                    className="text-[rgba(37, 50, 56, 1)] font-normal text-[18px] hover:text-[#00afe3]  transition-colors duration-200 block "
+                    className="text-[rgba(37, 50, 56, 1)] font-normal text-sm  xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
                     About Localists
                   </Link>

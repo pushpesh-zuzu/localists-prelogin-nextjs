@@ -69,28 +69,33 @@ export default function HireRelatedToService() {
   ];
   return (
     <WrapperBGWidth background={"#00AFE3"}>
-      <div className="bg-[#00AFE3] md:px-[46px] px-2.5 py-10 md:py-[38px] lg:px-[120px] lg:py-[72px] w-full h-full">
+      <div className="bg-[#00AFE3] md:px-[46px] px-2.5 py-10 md:py-[50px] md:pl-16 md:pr-6 lg:px-[120px] lg:py-[72px] w-full h-full">
         <header className="mb-5 xl:mb-12">
-          <div className="flex flex-wrap sm:flex-nowrap justify-between  items-center gap-7.5 xl:gap-12">
-            <h2 className="font-Inter font-black
+          <div className="flex flex-wrap sm:flex-nowrap justify-between  items-center gap-7.5 md:gap-2 xl:gap-12">
+            <h2
+              className="font-Inter font-black
                           tracking-[-0.03em]
-                          text-[24px] leading-7
-                          lg:text-[50px] lg:leading-[55px] text-white ">
+                          text-[24px] md:text-[35px] leading-7
+                          lg:text-[50px] lg:leading-[55px] text-white whitespace-nowrap "
+            >
               Hire with <span className="text-[#023047]">confidence.</span>
             </h2>
-            <nav className="flex gap-1 sm:gap-4 xl:gap-7 items-center flex-wrap">
+            <nav className="flex gap-1 sm:gap-4 md:gap-1 xl:gap-7 items-center flex-wrap">
               {tabs.map((tab, index) => (
-                <Button
+                <button
                   key={tab.activtab}
                   onClick={() => handleClick(tab.activtab)}
                   className={`${
                     currentTab === tab.activtab
                       ? "bg-[#253238] rounded-full transition-all duration-700 ease-in-out"
                       : ""
-                  } text-white px-[5px] text-[12px] py-2 md:text-[18px] md:px-4 md:py-[11px] cursor-pointer`}
+                  }  font-[Arial] font-bold text-white px-[5px] tracking-[-0.03em]
+                      text-base
+                      text-[12px]
+                      xl:text-[18px] py-[3px] sm:px-2 sm:py-1.5 xl:px-4 xl:py-[11px] cursor-pointer`}
                 >
                   {tab.lable}
-                </Button>
+                </button>
               ))}
             </nav>
           </div>

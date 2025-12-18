@@ -134,12 +134,19 @@ export default function WithoutSpecialCardCarousel({
                 {loopableCards.map((card, index) => (
                   <div
                     key={`${card.id}-${index}`}
-                    className="flex-[0_0_calc(50%-10px)] 
-                               sm:flex-[0_0_calc(50%-12.5px)]
-                               md:flex-[0_0_calc(33.333%-13.33px)]
-                               lg:flex-[0_0_calc(25%-18px)]
-                               xl:flex-[0_0_calc(25%-18px)]
-                               min-w-0"
+                    // className="flex-[0_0_calc(50%-10px)] 
+                    //            sm:flex-[0_0_calc(50%-12.5px)]
+                    //            md:flex-[0_0_calc(33.333%-13.33px)]
+                    //            lg:flex-[0_0_calc(25%-18px)]
+                    //            xl:flex-[0_0_calc(25%-18px)]
+                    //            min-w-0"
+                      className="flex-[0_0_calc(50%-10px)] 
+                                  sm:flex-[0_0_calc(50%-12.5px)]
+                                  md:flex-[0_0_calc(25%-15px)]
+                                  lg:flex-[0_0_calc(25%-18px)]
+                                  xl:flex-[0_0_calc(25%-18px)]
+                                  min-w-0"
+
                   >
                     {renderCard(card, index)}
                   </div>

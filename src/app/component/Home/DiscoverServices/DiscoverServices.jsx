@@ -13,15 +13,15 @@ import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 function DiscoverServices() {
   return (
     <WrapperBGWidth>
-      <div className="md:block px-2.5 py-5 sm:px-10 xl:px-[120px] pt-10 xl:pt-12 pb-[72px]">
-        <H2 className="hidden sm:block text-[#00afe3] pb-4 xl:pb-10 text-center">
+      <div className="md:block px-2.5 py-5 sm:px-10 md:px-16 md:py-10 xl:px-[120px] pt-10 xl:pt-12 pb-[72px]">
+        <H2 className="hidden lg:block text-[#00afe3] pb-4 xl:pb-10 text-center">
           Discover <span className="text-black">services.</span>{" "}
         </H2>
         <div>
           <div>
-            <div className="flex md:hidden justify-between pt-5 pb-12 xl:pb-10">
+            <div className="flex lg:hidden justify-between pt-5 md:pt-0 pb-12 md:pb-10 xl:pb-10">
               <H2 className="text-[#00AFE3]">Home & Garden</H2>{" "}
-              <button className="font-bold text-xs tracking-[0.03em] leading-[18px] ">
+              <button className="font-bold text-xs sm:text-base tracking-[0.03em] leading-[18px] whitespace-nowrap">
                 <span className="underline">See all</span>
               </button>
             </div>
@@ -32,9 +32,9 @@ function DiscoverServices() {
             />
           </div>
           <div className="mt-[30px]">
-            <div className="flex md:hidden justify-between pt-5 pb-12 xl:pb-10">
+            <div className="flex lg:hidden justify-between pt-5 pb-12 xl:pb-10">
               <H2 className="text-[#00AFE3]">Business Services</H2>{" "}
-              <button className="font-bold text-xs tracking-[0.03em] leading-[18px] ">
+              <button className="font-bold text-xs sm:text-base tracking-[0.03em] leading-[18px] whitespace-nowrap">
                 <span className="underline">See all</span>
               </button>
             </div>
@@ -45,9 +45,9 @@ function DiscoverServices() {
             />
           </div>
           <div className="mt-[30px]">
-            <div className="flex md:hidden justify-between pt-5 pb-12 xl:pb-10">
+            <div className="flex lg:hidden justify-between pt-5 pb-12 xl:pb-10">
               <H2 className="text-[#00AFE3]">Weddings & Events</H2>{" "}
-              <button className="font-bold text-xs tracking-[0.03em] leading-[18px] ">
+              <button className="font-bold text-xs sm:text-base tracking-[0.03em] leading-[18px] whitespace-nowrap ">
                 <span className="underline">See all</span>
               </button>
             </div>
