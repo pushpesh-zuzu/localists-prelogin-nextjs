@@ -69,7 +69,7 @@ function AdviceInsight() {
                 priority
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
-              <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base sm:leading-4 xl:leading-7 font-black xl:text-[25px] -tracking-[3%] xl:max-w-[80%]">
+              <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base sm:leading-4 xl:leading-7 font-black xl:text-[25px] -tracking-[3%] xl:max-w-[79%]">
                 {articles[1].title}
               </h3>
             </article>

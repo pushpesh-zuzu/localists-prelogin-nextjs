@@ -115,7 +115,7 @@ const HeroSection = memo(function HeroSection() {
             {services.map((service) => (
               <button
                 key={service}
-                className="border xl:border-[2.5px] border-white family-55  px-1.5 py-[5px] xl:px-3.5 xl:py-[7px] rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none"
+                className="border xl:border-2 border-white family-55  px-1.5 py-[5px] xl:px-3.5 xl:py-[7px] rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none"
                 aria-label={`Search for ${service}`}
               >
                 <Paragraph>{service}</Paragraph>

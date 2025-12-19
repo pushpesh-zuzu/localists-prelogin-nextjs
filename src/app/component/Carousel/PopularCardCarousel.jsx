@@ -284,8 +284,8 @@ export default function PopularCardCarousel({
                   className={`${
                     index === activeIndex
                       ? "w-3 md:w-[47px] xl:w-[89px]"
-                      : "w-3 md:w-3 xl:w-[22px]"
-                  } h-3 md:h-3 xl:h-[22px] rounded-full transition-all duration-700 ease-in-out bg-black`}
+                      : "w-3 md:w-3 xl:w-6"
+                  } h-3 md:h-3 xl:h-6 rounded-full transition-all duration-700 ease-in-out bg-black`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               );

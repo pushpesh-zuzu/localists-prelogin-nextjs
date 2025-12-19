@@ -13,7 +13,7 @@ function RightArrowBlack({ className = "" }) {
       <path
         d="M1.75 23.4167L12.5833 12.5833L1.75 1.75"
         stroke="#253238"
-        strokeWidth="3.5"
+        strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
