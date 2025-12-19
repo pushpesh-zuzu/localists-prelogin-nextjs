@@ -34,7 +34,7 @@ const HeroSection = memo(function HeroSection() {
 
   const [showAllServices, setShowAllServices] = useState(false);
   const displayedServices = showAllServices ? services : services.slice(0, 5);
-    const displayedServicesMediusScreen = showAllServices ? services : services.slice(0, 10);
+    const displayedServicesMediusScreen = showAllServices ? services : services.slice(0, 9);
 
   const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState("");
@@ -123,9 +123,40 @@ const HeroSection = memo(function HeroSection() {
             ))}
           </div>
 
-          <div className="lg:hidden w-full">
+          <div className="md:hidden w-full">
             <div className="flex flex-wrap gap-2">
               {displayedServices.map((service) => (
+                <button
+                  key={service}
+                  className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
+                  aria-label={`Search for ${service}`}
+                >
+                  <p className="text-base md:text-sm sm:text-[18px] font-[Arial] font-bold tracking-[-0.03em] ">
+                    {service}
+                  </p>
+                </button>
+              ))}
+            </div>
+
+            {services.length > 5 && (
+              <div className="flex justify-center mt-5">
+                <button
+                  className=" font-bold text-[12px] rounded-full transition-all duration-200 flex items-center justify-center"
+                  onClick={() => setShowAllServices(!showAllServices)}
+                  aria-label={
+                    showAllServices
+                      ? "Show less services"
+                      : "Show more services"
+                  }
+                >
+                  <ChevroliteDoubleDownIcon />
+                </button>
+              </div>
+            )}
+          </div>
+          <div className="hidden md:block lg:hidden w-full">
+            <div className="flex flex-wrap gap-2">
+              {displayedServicesMediusScreen.map((service) => (
                 <button
                   key={service}
                   className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
