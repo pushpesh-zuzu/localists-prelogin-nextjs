@@ -9,9 +9,12 @@ function Member() {
   return (
     <div className="w-full max-w-[300px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto py-10 xl:py-[63px]">
       <div className="hidden md:flex w-fit rounded-[36px] overflow-hidden mx-auto ">
-        <div className=" w-[340] md:h-[280px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] pb-8 lg:px-[63px] ">
+        <div className=" w-[340] md:h-[280px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
           <>
-            <H3 className="hidden md:block text-white font-bold font-[Arial] leading-7 xl:leading-[42px] lg:pr-8">
+            <H3
+              style={{ textShadow: "0px 1.95px 1.95px #0000000D",  }}
+              className="hidden md:block text-white font-bold font-[Arial] leading-7 xl:leading-[42px] lg:pr-8"
+            >
               “What I like about Localists is the quality of leads I get. I
               spend less money on Localists than I have done on other platforms,
               and I get far more business. It's a win-win”
@@ -21,7 +24,9 @@ function Member() {
               <p className="  text-white font-bold text-xs lg:mt-[18px]">
                 Localists Professional, Chris
               </p>
-              <p className=" text-white text-xs lg:text-[16px] font-normal">CH Joinery</p>
+              <p className=" text-white text-xs lg:text-[16px] font-normal">
+                CH Joinery
+              </p>
             </div>
             <Button className="hidden md:inline-flex bg-[#253238] mt-2.75 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
               Become a member
@@ -62,6 +67,7 @@ function Member() {
             <h3
               className="font-[Arial] text-[20px] 
             tracking-[-0.03em] text-white font-bold leading-[22px]"
+              style={{ textShadow: "0px 1.95px 1.95px #0000000D",  }}
             >
               “What I like about Localists is the quality of leads I get. I
               spend less money on Localists than I have done on other platforms,
@@ -79,7 +85,7 @@ function Member() {
 
             <button className="text-base font-bold py-1.5 px-4 max-w-fit mx-auto bg-[#253238] hover:bg-[#1a2328] text-white rounded-full transition-all duration-300 mt-4 w-full">
               Become a member
-            </button> 
+            </button>
           </div>
         </div>
       </div>

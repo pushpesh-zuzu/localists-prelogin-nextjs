@@ -1,4 +1,4 @@
-export default function H3({ children, className = "" }) {
+export default function H3({ children, className = "",style={} }) {
   return (
     <h3
       className={`
@@ -8,6 +8,7 @@ export default function H3({ children, className = "" }) {
         lg:text-[38px] lg:leading-[38px]
         ${className}
       `}
+      style={style}
     >
       {children}
     </h3>

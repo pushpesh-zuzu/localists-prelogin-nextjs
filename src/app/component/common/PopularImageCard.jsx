@@ -16,7 +16,7 @@ export default function PopularImageCard({
       }}
     >
       <div
-        className="absolute top-10 left-4 md:top-[50px] md:left-[28px] lg:top-[65px] lg:left-6 xl:top-20 xl:left-[38px] h-[120px] w-[90px] md:h-[197px] md:w-[170px] lg:h-[260px] lg:w-[195px] xl:h-[332px] xl:w-[250px]"
+        className="absolute top-10 left-4 md:top-[47px] md:left-[28px] lg:top-[65px] lg:left-6 xl:top-20 xl:left-[38px] h-[120px] w-[90px] md:h-[197px] md:w-[170px] lg:h-[260px] lg:w-[195px] xl:h-[332px] xl:w-[250px]"
         style={{
           borderTopLeftRadius: "20px",
           borderBottomRightRadius: "20px",
@@ -34,7 +34,7 @@ export default function PopularImageCard({
         </div>
       </div>
 
-      <Paragraph className="leading-4 pl-7 pt-3 xl:pt-8 text-white xl:pl-[35px]">
+      <Paragraph className="leading-4 pl-7 pt-5 xl:pt-8 text-white xl:pl-[35px]">
         {card.title}
       </Paragraph>
 
