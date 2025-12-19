@@ -72,7 +72,7 @@ export default function HireRelatedToService() {
             <h2
               className="font-Inter font-black
                           tracking-[-0.03em]
-                          text-[24px] md:text-[35px] leading-7
+                          text-[30px] md:text-[35px] leading-7 md:leading-6
                           lg:text-[50px] lg:leading-[55px] text-white whitespace-nowrap "
             >
               Hire with <span className="text-[#023047]">confidence.</span>

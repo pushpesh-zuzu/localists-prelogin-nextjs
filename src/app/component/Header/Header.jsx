@@ -86,7 +86,7 @@ export default function Header() {
             <div className="relative flex gap-1.5">
               <input
                 type="text"
-                placeholder="Search for a services"
+                placeholder="Search for a service"
                 className="text-base w-[207px] h-[34px]  px-2.5 py-2 font-bold bg-white border-[1.5px] border-[#CACACA] rounded-[100px] focus:outline-none"
                 value={searchQuery || ""}
                 onChange={(e) => {
