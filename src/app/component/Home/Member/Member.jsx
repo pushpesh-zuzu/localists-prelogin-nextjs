@@ -9,7 +9,7 @@ function Member() {
   return (
     <div className="w-full max-w-[300px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto py-10 xl:py-[63px]">
       <div className="hidden md:flex w-fit rounded-[36px] overflow-hidden mx-auto ">
-        <div className=" w-[340] md:h-[340px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] lg:px-[63px] py-[37px]">
+        <div className=" w-[340] md:h-[280px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] pb-8 lg:px-[63px] ">
           <>
             <H3 className="hidden md:block text-white font-bold font-[Arial] leading-7 xl:leading-[42px] lg:pr-8">
               “What I like about Localists is the quality of leads I get. I
@@ -18,12 +18,12 @@ function Member() {
             </H3>
 
             <div className="hidden md:block mt-4">
-              <p className="  text-white font-bold text[20px] lg:mt-[18px]">
+              <p className="  text-white font-bold text-xs lg:mt-[18px]">
                 Localists Professional, Chris
               </p>
-              <p className=" text-white text-[16px] font-normal">CH Joinery</p>
+              <p className=" text-white text-xs lg:text-[16px] font-normal">CH Joinery</p>
             </div>
-            <Button className="hidden md:inline-flex bg-[#253238] mt-2.5 md:py-[7px] md:px-4 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
+            <Button className="hidden md:inline-flex bg-[#253238] mt-2.75 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
               Become a member
             </Button>
           </>
@@ -31,14 +31,14 @@ function Member() {
 
         <div className=" relative rounded-r-[36px] overflow-hidden">
           <Image
-            src="/member.webp"
+            src="/homepage/member.webp"
             alt="Professional using phone"
             priority
             fetchPriority="high"
             loading="eager"
             height={512}
             width={521}
-            className="w-[273px] h-[340px] lg:w-[521px] lg:h-[512px]"
+            className="w-[273px] h-[280px] lg:w-[521px] lg:h-[512px]"
           />
         </div>
       </div>
@@ -46,12 +46,12 @@ function Member() {
       <div className="md:hidden rounded-[36px] overflow-hidden shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
         <div className="w-full  relative">
           <Image
-            src="/member.webp"
+            src="/homepage/membermobile.webp"
             alt="Professional using phone"
             height={300}
             width={250}
             priority
-            className="h-[300] w-xl"
+            className="h-[220] w-xl"
             fetchPriority="high"
             loading="eager"
           />
@@ -68,7 +68,7 @@ function Member() {
               and I get far more business. It's a win-win”
             </h3>
 
-            <div className="mt-3">
+            <div className="mt-1">
               <p className="  text-white font-bold text-[12px] leading-4">
                 Localists Professional, Chris
               </p>
