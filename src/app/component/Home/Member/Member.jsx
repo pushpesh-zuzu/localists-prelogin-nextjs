@@ -9,9 +9,9 @@ function Member() {
   return (
     <div className="w-full max-w-[300px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto py-10 xl:py-[63px]">
       <div className="hidden md:flex w-fit rounded-[36px] overflow-hidden mx-auto ">
-        <div className=" w-[400] md:h-[340px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] lg:px-[63px] py-[37px]">
+        <div className=" w-[340] md:h-[340px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] lg:px-[63px] py-[37px]">
           <>
-            <H3 className="hidden md:block text-white font-bold font-[Arial] leading-7 xl:leading-[42px] pr-8">
+            <H3 className="hidden md:block text-white font-bold font-[Arial] leading-7 xl:leading-[42px] lg:pr-8">
               “What I like about Localists is the quality of leads I get. I
               spend less money on Localists than I have done on other platforms,
               and I get far more business. It's a win-win”
@@ -57,7 +57,7 @@ function Member() {
           />
         </div>
 
-        <div className="bg-[#00AFE3] p-5">
+        <div className="bg-[#00AFE3] p-6">
           <div className="flex flex-col gap-3">
             <h3
               className="font-[Arial] text-[20px] 
