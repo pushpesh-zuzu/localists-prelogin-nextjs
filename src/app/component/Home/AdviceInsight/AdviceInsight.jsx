@@ -167,8 +167,8 @@ function AdviceInsight() {
           </div>
         </div>
 
-        <div className="flex justify-center mt-7.5 xl:mt-12">
-          <Button className="bg-[#253238] px-3 py-1.5 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] text-white rounded-full">
+        <div className="flex justify-center mt-6 xl:mt-12">
+          <Button className="bg-[#253238] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] text-white rounded-full">
             Read More
           </Button>
         </div>

@@ -40,7 +40,7 @@ export default function PopularJobs() {
             <div className="flex justify-center pb-0.5">{job.image}</div>
             <span
               style={{ textShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)" }}
-              className=" mx-2.5 flex justify-center text-[18px] leading-[18px] font-medium"
+              className=" mx-2.5 flex justify-center font-bold text-[18px] leading-[18px]"
             >
               {job.title}
             </span>
@@ -48,11 +48,11 @@ export default function PopularJobs() {
         ))}
       </div>
 
-      <div className="flex justify-center gap-2">
-        <div className="w-[51px] h-[13px] bg-gray-800 rounded-full"></div>
-        <div className="w-[11px] h-[11px] bg-gray-300 rounded-full"></div>
-        <div className="w-[11px] h-[11px] bg-gray-300 rounded-full"></div>
-        <div className="w-[11px] h-[11px] bg-gray-300 rounded-full"></div>
+      <div className="flex justify-center gap-1">
+        <div className="w-[51px] h-[13px] bg-[#253238] rounded-full"></div>
+        <div className="w-[11.59px] h-[11.59px] bg-[#253238] rounded-full"></div>
+        <div className="w-[11.59px] h-[11.59px] bg-[#253238] rounded-full"></div>
+        <div className="w-[11.59px] h-[11.59px] bg-[#253238] rounded-full"></div>
       </div>
     </div>
   );

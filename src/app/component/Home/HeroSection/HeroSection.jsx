@@ -70,10 +70,10 @@ const HeroSection = memo(function HeroSection() {
             Find Local{" "}
             <div className="flex">
               <span className="block">Services.</span>
-              <span className="text-black block">Fast.</span>
+              &nbsp;<span className="text-black block">Fast.</span>
             </div>
           </H1>
-          <Paragraph1 className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
+          <Paragraph1 style={{ textShadow: '0px 3.65px 3.65px #00000026' }} className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
             Get instant quotes from local professionals.
           </Paragraph1>
           <div className="relative max-w-[254px] md:max-w-[246px]  lg:max-w-[404px]">
@@ -125,7 +125,7 @@ const HeroSection = memo(function HeroSection() {
 
           <div className="lg:hidden w-full">
             <div className="flex flex-wrap gap-2">
-              {displayedServicesMediusScreen.map((service) => (
+              {displayedServices.map((service) => (
                 <button
                   key={service}
                   className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "

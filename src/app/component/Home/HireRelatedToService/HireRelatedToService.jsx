@@ -86,8 +86,8 @@ export default function HireRelatedToService() {
                     currentTab === tab.activtab
                       ? "bg-[#253238] rounded-full transition-all duration-700 ease-in-out"
                       : ""
-                  }  font-[Arial] font-bold text-white px-2 tracking-[-0.03em]
-                      text-base
+                  }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em]
+                      text-[12px] md:text-[14px]
                       xl:text-[18px] py-[3px] sm:px-3 sm:py-1.5 xl:px-4 xl:py-[11px] cursor-pointer`}
                 >
                   {tab.lable}

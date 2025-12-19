@@ -23,7 +23,7 @@ function Member() {
               </p>
               <p className=" text-white text-[16px] font-normal">CH Joinery</p>
             </div>
-            <Button className="hidden md:inline-flex bg-[#253238] mt-2.5 py-[13px] px-[21px] text-white rounded-full max-w-fit">
+            <Button className="hidden md:inline-flex bg-[#253238] mt-2.5 md:py-[7px] md:px-4 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
               Become a member
             </Button>
           </>
@@ -81,14 +81,7 @@ function Member() {
             </div>
 
             <button
-              className="family-65 max-w-fit mx-auto bg-[#253238] hover:bg-[#1a2328] text-white font-semibold rounded-full transition-all duration-300 mt-4 w-full"
-              style={{
-                fontSize: "12.46px",
-                paddingTop: "6.23px",
-                paddingRight: "12.24px",
-                paddingBottom: "6.23px",
-                paddingLeft: "12.24px",
-              }}
+              className="text-base font-bold py-1.5 px-4 max-w-fit mx-auto bg-[#253238] hover:bg-[#1a2328] text-white rounded-full transition-all duration-300 mt-4 w-full"
             >
               Become a member
             </button>

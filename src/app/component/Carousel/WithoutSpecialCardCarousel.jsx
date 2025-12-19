@@ -217,7 +217,7 @@ export default function WithoutSpecialCardCarousel({
               strokeLinejoin="round"
             />
           </svg> */}
-          <LeftArrowBlack className="h-5 w-2.5" />
+          <LeftArrowBlack className="h-7 w-5" />
         </button>
         <button
           onClick={scrollNextMobile}
@@ -240,7 +240,7 @@ export default function WithoutSpecialCardCarousel({
               strokeLinejoin="round"
             />
           </svg> */}
-          <RightArrowBlack className="h-5 w-2.5" />
+          <RightArrowBlack className="h-7 w-5" />
         </button>
 
         {/* Dot Indicators */}

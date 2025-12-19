@@ -222,7 +222,7 @@ export default function HomeGardenCarousel({
                     strokeLinejoin="round"
                   />
                 </svg> */}
-                <LeftArrowBlack className="h-5 w-2.5"/>
+                <LeftArrowBlack className="h-7 w-5"/>
               </button>
               <button
                 onClick={scrollNextMd}
@@ -245,7 +245,7 @@ export default function HomeGardenCarousel({
                     strokeLinejoin="round"
                   />
                 </svg> */}
-                <RightArrowBlack className="h-5 w-2.5"/>
+                <RightArrowBlack className="h-7 w-5"/>
               </button>
             </>
           ) : (
@@ -266,7 +266,7 @@ export default function HomeGardenCarousel({
           )}
 
           {/* Dot Indicators */}
-          <div className="flex justify-center gap-2 lg:gap-[11px] mt-6">
+          <div className="flex justify-center gap-1.5 lg:gap-[11px] mt-6">
             {Array.from({ length: originalSlideCount }).map((_, index) => {
               const isMd =
                 typeof window !== "undefined" && window.innerWidth < 1024;
@@ -333,7 +333,7 @@ export default function HomeGardenCarousel({
               strokeLinejoin="round"
             />
           </svg> */}
-          <LeftArrowBlack className="h-5 w-2.5"/>
+          <LeftArrowBlack className="h-7 w-5"/>
         </button>
         <button
           onClick={scrollNextMobile}
@@ -356,11 +356,11 @@ export default function HomeGardenCarousel({
               strokeLinejoin="round"
             />
           </svg> */}
-          <RightArrowBlack className="h-5 w-2.5"/>
+          <RightArrowBlack className="h-7 w-5"/>
         </button>
 
         {/* Dot Indicators */}
-        <div className="flex justify-center gap-2 mt-6">
+        <div className="flex justify-center gap-1 mt-6">
           {Array.from({ length: originalSlideCount }).map((_, index) => (
             <button
               key={index}

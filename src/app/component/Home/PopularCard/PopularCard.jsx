@@ -22,20 +22,20 @@ function PopularCard() {
       title: "Personal Trainer",
     },
     { id: 4, image: "/homepage/image19.webp", title: "Driveways" },
-    {
-      id: 5,
-      image: "/fenceinstallation.webp",
-      title: "Fence & Gate Installation",
-    },
-    {
-      id: 6,
-      image: "/artificialinstallation.webp",
-      title: "Artificial Grass Installation",
-    },
+    // {
+    //   id: 5,
+    //   image: "/fenceinstallation.webp",
+    //   title: "Fence & Gate Installation",
+    // },
+    // {
+    //   id: 6,
+    //   image: "/artificialinstallation.webp",
+    //   title: "Artificial Grass Installation",
+    // },
   ];
   return (
     <WrapperBGWidth>
-      <PaddingWrapper className="h-full lg:min-h-[587px] xl:min-h-[657px] py-10 md:pt-6 md:pb-6 xl:pt-12 xl:pb-[68px]">
+      <PaddingWrapper className="h-full lg:min-h-[587px] xl:min-h-[657px] py-10 md:pt-6 md:pb-6 xl:pt-12 xl:pb-[78px]">
         <H2 className="text-[#00afe3] pb-10 lg:pb-7">
           Popular <span className="text-black">jobs.</span>
         </H2>
