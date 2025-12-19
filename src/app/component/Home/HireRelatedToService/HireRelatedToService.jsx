@@ -55,7 +55,7 @@ export default function HireRelatedToService() {
       "DIY Gardening Hacks",
     ],
   };
-  const [currentTab, setcurrentTab] = useState("professionals");
+  const [currentTab, setcurrentTab] = useState("popular");
   const handleClick = (activtab) => {
     setcurrentTab(activtab);
   };

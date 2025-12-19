@@ -309,7 +309,7 @@ const Footer = () => {
 
           <div className="mt-6 xl:mt-12 w-full border-t border-gray-300">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
-              <div className="flex mx-auto items-center gap-2 text-[rgba(37, 50, 56, 1)] text-sm lg:text-base py-[11px]">
+              <div className="flex mx-auto items-center gap-1 text-[rgba(37, 50, 56, 1)] text-sm lg:text-base py-[11px]">
                 {/* <Image
                   src="/icons/emailIcon.svg"
                   alt="email icon"
@@ -320,7 +320,7 @@ const Footer = () => {
                   fetchPriority="high"
                   loading="eager"
                 /> */}
-                <EmailIcon className="w-4 h-4" />
+                <EmailIcon className="w-4 h-4 mt-1" />
                 <span>contact@localists.com</span>
               </div>
             </div>

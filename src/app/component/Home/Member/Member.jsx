@@ -57,34 +57,29 @@ function Member() {
           />
         </div>
 
-        <div className="bg-[#00AFE3] p-8">
+        <div className="bg-[#00AFE3] p-5">
           <div className="flex flex-col gap-3">
-            <p
-              className="text-white font-bold leading-5"
-              style={{
-                fontFamily: "Helvetica Now Text, Helvetica, Arial, sans-serif",
-                fontSize: "20px",
-              }}
+            <h3
+              className="font-[Arial] text-[20px] 
+            tracking-[-0.03em] text-white font-bold leading-[22px]"
             >
               “What I like about Localists is the quality of leads I get. I
               spend less money on Localists than I have done on other platforms,
               and I get far more business. It's a win-win”
-            </p>
+            </h3>
 
             <div className="mt-3">
-              <p className="family-65 text-white font-bold text-[14px] leading-4">
+              <p className="  text-white font-bold text-[12px] leading-4">
                 Localists Professional, Chris
               </p>
-              <p className="family-65 text-white text-[13px] leading-[15px]">
+              <p className="text-white text-[12px] leading-[15px]">
                 CH Joinery
               </p>
             </div>
 
-            <button
-              className="text-base font-bold py-1.5 px-4 max-w-fit mx-auto bg-[#253238] hover:bg-[#1a2328] text-white rounded-full transition-all duration-300 mt-4 w-full"
-            >
+            <button className="text-base font-bold py-1.5 px-4 max-w-fit mx-auto bg-[#253238] hover:bg-[#1a2328] text-white rounded-full transition-all duration-300 mt-4 w-full">
               Become a member
-            </button>
+            </button> 
           </div>
         </div>
       </div>
