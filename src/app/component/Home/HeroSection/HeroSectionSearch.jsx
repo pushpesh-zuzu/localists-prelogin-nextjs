@@ -58,10 +58,10 @@ function HeroSectionSearch() {
           aria-label="Search for a service"
           value={searchQuery || ""}
           onChange={(e) => {
-            const query = e.target.value;
-            setSearchQuery(query);
-            if (query.trim() !== "") {
-              dispatch(searchService({ query }));
+            const search = e.target.value;
+            setSearchQuery(search);
+            if (search.trim() !== "") {
+              dispatch(searchService({ search }));
             }
           }}
         />
