@@ -46,7 +46,7 @@ export default function Header() {
 
             <div className="flex items-center space-x-4 md:space-x-2 lg:space-x-2.5 lg:py-3">
               <MegaMenu>
-                <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap">
+                <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-black">
                   Explore Our Services
                   {/* <Image
                     src="/icons/downarrowblue.svg"
@@ -62,7 +62,7 @@ export default function Header() {
                 </button>
               </MegaMenu>
 
-              <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap">
+              <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-black">
                 Advice
                 {/* <Image
                   src="/icons/downarrowblue.svg"
@@ -79,67 +79,71 @@ export default function Header() {
             </div>
           </div>
 
-          {getBarkToken() ? 'User Logged In':<nav
-            className="flex items-center space-x-4  md:space-x-2 lg:space-x-8"
-            role="navigation"
-            aria-label="User account navigation"
-          >
-            <div className="relative flex gap-1.5">
-              <input
-                type="text"
-                placeholder="Search for a service"
-                className="text-base w-[207px] h-[34px]  px-2.5 py-2 font-bold bg-white border-[1.5px] border-[#CACACA] rounded-[100px] focus:outline-none"
-                value={searchQuery || ""}
-                onChange={(e) => {
-                  const query = e.target.value;
-                  setSearchQuery(query); // State update
-                  if (query.trim() !== "") {
-                    dispatch(searchService({ query }));
-                  }
-                }}
-              />
-              {searchQuery.length ? (
-                <SearchResults
-                  searchQuery={searchQuery}
-                  setSearchQuery={setSearchQuery}
-                />
-              ) : (
-                ""
-              )}
-              <div className="absolute inset-y-0 right-2 flex items-center pointer-events-none">
-                <SearchIcon className="h-4 w-4" />
-              </div>
-            </div>
-
-            <div
-              className="flex items-center space-x-1 lg:space-x-4"
-              role="group"
-              aria-label="User authentication"
+          {getBarkToken() ? (
+            <p className="text-black">User Logged In</p>
+          ) : (
+            <nav
+              className="flex items-center space-x-4  md:space-x-2 lg:space-x-8"
+              role="navigation"
+              aria-label="User account navigation"
             >
-              <button
-                className="text-[14px] lg:text-base font-normal text-[#1E2A2E] lg:py-[12.5px] md:px-1 lg:px-4 whitespace-nowrap"
-                aria-label="Login to your account"
-              >
-                Login
-              </button>
-              <button
-                className="flex items-center gap-2 px-2.5 py-1.5 lg:px-5 lg:py-3 text-[14px] lg:text-base text-white bg-[#00AEEF] rounded-full whitespace-nowrap"
-                aria-label="Sign up for new account"
-              >
-                <Image
-                  src="/icons/signup.webp"
-                  alt="signup icon"
-                  width={16.71}
-                  height={18}
-                  className="w-2 h-2  lg:w-[16.71px] lg:h-[18px]"
-                  priority
-                  fetchPriority="high"
-                  loading="eager"
+              <div className="relative flex gap-1.5">
+                <input
+                  type="text"
+                  placeholder="Search for a service"
+                  className="text-base w-[207px] h-[34px]  px-2.5 py-2 font-bold bg-white border-[1.5px] border-[#CACACA] rounded-[100px] focus:outline-none"
+                  value={searchQuery || ""}
+                  onChange={(e) => {
+                    const query = e.target.value;
+                    setSearchQuery(query); // State update
+                    if (query.trim() !== "") {
+                      dispatch(searchService({ query }));
+                    }
+                  }}
                 />
-                Sign Up
-              </button>
-            </div>
-          </nav>}
+                {searchQuery.length ? (
+                  <SearchResults
+                    searchQuery={searchQuery}
+                    setSearchQuery={setSearchQuery}
+                  />
+                ) : (
+                  ""
+                )}
+                <div className="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+                  <SearchIcon className="h-4 w-4" />
+                </div>
+              </div>
+
+              <div
+                className="flex items-center space-x-1 lg:space-x-4"
+                role="group"
+                aria-label="User authentication"
+              >
+                <button
+                  className="text-[14px] lg:text-base font-normal text-[#1E2A2E] lg:py-[12.5px] md:px-1 lg:px-4 whitespace-nowrap"
+                  aria-label="Login to your account"
+                >
+                  Login
+                </button>
+                <button
+                  className="flex items-center gap-2 px-2.5 py-1.5 lg:px-5 lg:py-3 text-[14px] lg:text-base text-white bg-[#00AEEF] rounded-full whitespace-nowrap"
+                  aria-label="Sign up for new account"
+                >
+                  <Image
+                    src="/icons/signup.webp"
+                    alt="signup icon"
+                    width={16.71}
+                    height={18}
+                    className="w-2 h-2  lg:w-[16.71px] lg:h-[18px]"
+                    priority
+                    fetchPriority="high"
+                    loading="eager"
+                  />
+                  Sign Up
+                </button>
+              </div>
+            </nav>
+          )}
         </div>
 
         <div className="flex lg:hidden items-center justify-between px-2.5 py-2.5 md:py-[9.5px] md:px-16">
@@ -149,7 +153,7 @@ export default function Header() {
             </button>
           </MegaMenu>
           {getBarkToken() ? (
-            "User Logged In"
+            <p className="text-black">User Logged In</p>
           ) : (
             <>
               <div className="flex justify-center flex-1 max-w-[103px] max-h-[25px]">
