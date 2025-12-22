@@ -263,7 +263,7 @@ const QuestionModal = ({
         {/* Close Button */}
         <button
           onClick={() => handleCloseClick()}
-          className="absolute top-4 right-4 z-10 p-2 font-bold text-black cursor-pointer hover:bg-gray-100 rounded-full transition-all"
+          className="absolute top-0 right-1 z-10 p-2 font-bold text-black cursor-pointer hover:bg-gray-100 rounded-full transition-all"
           aria-label="Close modal"
         >
           <X size={18} />
