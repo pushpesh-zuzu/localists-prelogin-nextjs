@@ -79,7 +79,7 @@ export default function Header() {
             </div>
           </div>
 
-          <nav
+          {getBarkToken() ? 'User Logged In':<nav
             className="flex items-center space-x-4  md:space-x-2 lg:space-x-8"
             role="navigation"
             aria-label="User account navigation"
@@ -139,7 +139,7 @@ export default function Header() {
                 Sign Up
               </button>
             </div>
-          </nav>
+          </nav>}
         </div>
 
         <div className="flex lg:hidden items-center justify-between px-2.5 py-2.5 md:py-[9.5px] md:px-16">
@@ -149,7 +149,7 @@ export default function Header() {
             </button>
           </MegaMenu>
           {getBarkToken() ? (
-            "User Logged"
+            "User Logged In"
           ) : (
             <>
               <div className="flex justify-center flex-1 max-w-[103px] max-h-[25px]">
