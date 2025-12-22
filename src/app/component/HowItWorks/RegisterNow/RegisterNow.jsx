@@ -16,7 +16,7 @@ const RegisterNow = () => {
                 Register now
             </button>
 
-            <div className='max-w-[320px] md:max-w-[400px] lg:max-w-[100%]  flex flex-col items-start lg:flex-row lg:items-center gap-[20px] w-full lg:w-auto px-[30px] lg:px-auto'>
+            <div className='max-w-[320px] md:max-w-[350px] lg:max-w-[100%]  flex flex-col items-start lg:flex-row lg:items-center gap-[20px] w-full lg:w-auto px-[30px] lg:px-auto'>
                 <div className='flex justify-center items-center gap-[7px]'>
                     <div className='flex justify-center items-center rounded-full bg-[#00AFE3] w-[35px] h-[35px]'>
                         <UserCircleIcon />
