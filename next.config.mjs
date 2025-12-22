@@ -7,8 +7,8 @@ const nextConfig = {
     const ENV_COOKIE_DOMAIN =
       typeof process !== "undefined" &&
       process.env &&
-      process.env.NEXT_PUBLIC_COOKIE_DOMAIN
-        ? process.env.NEXT_PUBLIC_COOKIE_DOMAIN
+      process.env.NEXT_PUBLIC_POST_LOGIN_URL
+        ? process.env.NEXT_PUBLIC_POST_LOGIN_URL
         : null;
     // Map all protected routes to localhost:3001
     const redirects = protectedRoutes.map((route) => {
