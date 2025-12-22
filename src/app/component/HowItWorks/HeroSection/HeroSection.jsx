@@ -106,12 +106,12 @@ export default function HeroSection() {
         style={{ backgroundImage: "url('/images/HowItWorks/HowLocalistsWorksBg.webp')" }}>
         <div className="flex flex-col items-center w-full">
 
-          <h1 className="font-black text-[32px] xl:text-[81px] xl:leading-[75px] tracking-[-0.03em] font-inter text-white text-center">
+          <h1 className="font-black text-[46px] leading-[48px] lg:text-[81px] lg:leading-[75px] tracking-[-0.03em] font-inter text-white text-center">
             How <span className="text-[#00AFE3]">localists.com</span> Works
           </h1>
-          <div className="w-full xl:w-[1024px] lg:h-[342px] bg-white/90 rounded-[10px] px-[33px] py-[32px] flex flex-col justify-center items-center mt-10px lg:mt-[22px]">
+          <div className="w-full xl:w-[1024px] bg-white/90 rounded-[10px] px-[33px] py-[32px] flex flex-col justify-center items-center mt-[20px] lg:mt-10px lg:mt-[22px]">
 
-            <h2 className="font-black text-[22px] lg:text-[32px] lg:text-[38px] leading-[38px] tracking-[-0.03em] font-inter text-black text-center">
+            <h2 className="font-black text-[24px] leading-[22x] lg:text-[32px] lg:text-[38px]  tracking-[-0.03em] font-inter text-black text-center">
               Now you know how it works, start looking for a professional.
             </h2>
 
@@ -187,7 +187,7 @@ export default function HeroSection() {
                   </div>
                 </div>
 
-                <button type="button" aria-haspopup="dialog" className="py-[13px] px-[33px] gap-[9.49px] rounded-[94.94px] bg-[#253238] border-2 border-white border-[1.9px] text-white text-[18px] font-[Arial] font-bold tracking-[-0.03em] shadow-[0px_1.9px_1.9px_rgba(0,0,0,0.1)] mt-[30px] cursor-pointer"
+                <button type="button" aria-haspopup="dialog" className="py-[13px] px-[33px] gap-[9.49px] rounded-[94.94px] bg-[#253238] text-white text-[18px] font-[Arial] font-bold tracking-[-0.03em] shadow-[0px_1.9px_1.9px_rgba(0,0,0,0.1)] mt-[30px] cursor-pointer"
                   onClick={handleSubmit}
                 >
                   Continue

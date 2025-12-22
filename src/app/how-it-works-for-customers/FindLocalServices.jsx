@@ -1,7 +1,7 @@
 export default function FindLocalServices() {
     return (
         <div className="text-center px-5 py-[44px]">
-            <h2 className="font-black text-[32px] xl:text-[55px] xl:leading-[55px] tracking-[-0.03em] font-inter text-black text-center mb-[13px]">
+            <h2 className="font-black text-[30px] leading-[28px] xl:text-[55px] xl:leading-[55px] tracking-[-0.03em] font-inter text-black text-center mb-[13px]">
                 Find Local <span className="text-[#00AFE3]">Services</span> - Fast
             </h2>
 
