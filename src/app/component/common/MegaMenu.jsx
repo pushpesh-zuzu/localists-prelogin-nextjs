@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Mega Menu Data
-const megaMenu = [
+export const megaMenu = [
   {
     name: "Home & Garden",
     path: "home",

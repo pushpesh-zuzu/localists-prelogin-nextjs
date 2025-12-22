@@ -3,11 +3,15 @@
 import { useSelector, useDispatch } from "react-redux";
 import { clearSearch, setSelectedSearchService } from "@/lib/store/searchSlice";
 import { useEffect } from "react";
+import { questionAnswerData } from "@/lib/store/buyerslice/buyerSlice";
 
-export default function SearchResults({ searchQuery, setSearchQuery }) {
-  const { services, loading, error } = useSelector(
-    (state) => state.search
-  );
+export default function SearchResults({
+  setShow,
+  searchQuery,
+  setSearchQuery,
+  setSelectedServiceId
+}) {
+  const { services, loading, error } = useSelector((state) => state.search);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,9 +27,13 @@ export default function SearchResults({ searchQuery, setSearchQuery }) {
         id: service?.id || null,
       })
     );
-    setSearchQuery(service?.name);
-
+    setSearchQuery('');
+    setShow(true);
     dispatch(clearSearch());
+  
+
+    service?.id && dispatch(questionAnswerData({ service_id: service?.id }));
+
   };
 
   if (loading) {
@@ -65,6 +73,5 @@ export default function SearchResults({ searchQuery, setSearchQuery }) {
     );
   }
 
-  // Agar kuch bhi nahi hai
   return null;
 }

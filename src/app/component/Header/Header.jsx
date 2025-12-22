@@ -10,6 +10,7 @@ import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import ArrowDownBlue from "../common/icons/HomePageIcons/ArrowDownBlue";
 import SearchIcon from "../common/icons/HomePageIcons/SearchIcon";
 import MobileMenuIcon from "../common/icons/HomePageIcons/MobileMenuIcon";
+import { getBarkToken } from "@/utils/CookiesHelper";
 const SearchResults = dynamic(() => import("../common/SearchResult"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -106,14 +107,6 @@ export default function Header() {
                 ""
               )}
               <div className="absolute inset-y-0 right-2 flex items-center pointer-events-none">
-                {/* <Image
-                  src="/icons/searchicon.svg"
-                  alt="search"
-                  width={16}
-                  height={16}
-                  className="w-4 h-4"
-                  priority
-                /> */}
                 <SearchIcon className="h-4 w-4" />
               </div>
             </div>
@@ -155,37 +148,42 @@ export default function Header() {
               <MobileMenuIcon className="" />
             </button>
           </MegaMenu>
-          <div className="flex justify-center flex-1 max-w-[103px] max-h-[25px]">
-            <a
-              href="/"
-              aria-label="Go to Localists homepage"
-              className="shrink-0"
-            >
-              <Image
-                src="/logo.webp"
-                alt="Localists - Local Service Provider Directory"
-                width={103}
-                height={25}
-                className="w-[103px] h-[25px] md:w-[133px] md:w-8 ml-[15%]"
-                priority
-                fetchPriority="high"
-                loading="eager"
-                layout="intrinsic"
-              />
-            </a>
-          </div>
-
-          <div className="flex items-center space-x-[4.34px]">
-            <button type="button" aria-label="Search services">
-              <SearchIcon className="h-4 w-4 md:h-[18px] md:w-[18px] mr-0.5 md:mr-1" />
-            </button>
-            <button
-              className="px-2.5 md:px-4 leading-4 py-[5.66px] text-[16px] font-medium text-white bg-[#00AEEF] rounded-full transition-colors duration-200"
-              aria-label="Login to your account"
-            >
-              Login
-            </button>
-          </div>
+          {getBarkToken() ? (
+            "User Logged"
+          ) : (
+            <>
+              <div className="flex justify-center flex-1 max-w-[103px] max-h-[25px]">
+                <a
+                  href="/"
+                  aria-label="Go to Localists homepage"
+                  className="shrink-0"
+                >
+                  <Image
+                    src="/logo.webp"
+                    alt="Localists - Local Service Provider Directory"
+                    width={103}
+                    height={25}
+                    className="w-[103px] h-[25px] md:w-[133px] md:w-8 ml-[15%]"
+                    priority
+                    fetchPriority="high"
+                    loading="eager"
+                    layout="intrinsic"
+                  />
+                </a>
+              </div>
+              <div className="flex items-center space-x-[4.34px]">
+                <button type="button" aria-label="Search services">
+                  <SearchIcon className="h-4 w-4 md:h-[18px] md:w-[18px] mr-0.5 md:mr-1" />
+                </button>
+                <button
+                  className="px-2.5 md:px-4 leading-4 py-[5.66px] text-[16px] font-medium text-white bg-[#00AEEF] rounded-full transition-colors duration-200"
+                  aria-label="Login to your account"
+                >
+                  Login
+                </button>
+              </div>
+            </>
+          )}
         </div>
       </header>
     </WrapperBGWidth>
