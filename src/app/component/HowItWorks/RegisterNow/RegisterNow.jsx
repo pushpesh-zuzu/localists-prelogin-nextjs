@@ -16,7 +16,7 @@ const RegisterNow = () => {
                 Register now
             </button>
 
-            <div className="max-w-[320px] w-full md:max-w-full lg:w-[1094px] px-[15px] md:px-[80px] lg:px-0 flex flex-col gap-[20px] justify-around md:flex-row md:flex-wrap md:justify-between lg:flex-nowrap lg:items-center lg:px-[40px]"
+            <div className="max-w-[320px] w-full md:max-w-full lg:w-[1094px] px-[15px] md:px-[100px] lg:px-0 flex flex-col gap-[20px] justify-around md:flex-row md:flex-wrap md:justify-between lg:flex-nowrap lg:items-center lg:px-[40px]"
             >
                 {/* Item 1 */}
                 <div className="flex items-center gap-[7px] lg:w-auto">
