@@ -165,7 +165,7 @@ export default function HeroSection() {
                   </div>
 
                   <div className="flex flex-col flex-1 text-left relative">
-                    <label htmlFor="postcode" className="font-bold text-[20px] tracking-[-0.03em] text-black font-[Arial] mb-[7px]">
+                    <label htmlFor="postcode" className="font-bold text-[20px] leading-[22px] tracking-[-0.03em] text-black font-[Arial] mb-[7px]">
                       Where do you need it?
                     </label>
                     <input
