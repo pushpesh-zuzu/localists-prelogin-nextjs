@@ -263,7 +263,7 @@ const QuestionModal = ({
         {/* Close Button */}
         <button
           onClick={() => handleCloseClick()}
-          className="absolute top-[5%] right-[10%] sm:top-[6%] sm:right-[6%] z-10 p-1 font-bold bg-white cursor-pointer rounded-full transition-all"
+          className="absolute top-[5%] right-[7%] max-[360px]:right-[10%] sm:top-[6%] sm:right-[6%] z-10 p-1 font-bold bg-white cursor-pointer rounded-full transition-all"
           aria-label="Close modal"
         >
           <X size={18} strokeWidth={5} className="font-black"  color="#0aaeff"/>
