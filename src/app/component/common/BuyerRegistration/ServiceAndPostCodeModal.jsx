@@ -361,11 +361,12 @@ const ServiceAndPostCodeModal = ({
             error={errors.pincode}
           />
           {checkingPostcode ? (
-            <div className="absolute top-[50%]  right-2 h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-[#00aeef]"></div>
+            <div className="absolute top-[55%] right-2 h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-[#00aeef]"></div>
           ) : postalCodeValidate && city ? (
             <CheckIcon
+              size={24}
               color="white"
-              className="absolute bg-green-600 rounded-full top-[50%] right-2"
+              className="absolute p-1 bg-green-500 rounded-full top-[55%] right-2"
             />
           ) : (
             ""

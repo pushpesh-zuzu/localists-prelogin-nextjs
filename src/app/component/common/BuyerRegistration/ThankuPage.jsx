@@ -114,7 +114,7 @@ const ThankuPage = () => {
             <div className="flex justify-center mb-8">
               <button
                 onClick={handleSubmit}
-                className="cursor-pointer bg-[#00afe3] text-white px-8 py-3 rounded flex items-center gap-3 font-medium text-sm md:text-base transition-colors duration-200"
+                className="cursor-pointer bg-[#00afe3] text-white px-8 py-3 rounded flex items-center gap-1 font-medium text-sm md:text-base transition-colors duration-200"
               >
                 {/* Checkbox icon image */}
                 <div className="w-5 h-5 bg-[#00afe3] rounded flex items-center justify-center ">
