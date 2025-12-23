@@ -113,7 +113,6 @@ function BuyerRegistration({
     if (typeof setFromImageModal === "function") setFromImageModal(false);
     if (typeof closeModal === "function") closeModal();
   };
-  console.log(showConfirmModal, "showConfirmModalshowConfirmModal");
   return (
     <>
       {buyerStep === 1 && (

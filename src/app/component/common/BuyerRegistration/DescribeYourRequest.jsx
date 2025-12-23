@@ -148,7 +148,7 @@ const DescribeYourRequest = ({
     //   >
     //     &times;
     //   </button>
-    <Modal isOpen={true} maxWidth="max-w-[540px] mt-[5%]">
+    <Modal isOpen={true} maxWidth="max-w-[90%] md:max-w-[540px] mt-[5%]">
       {/* Success Message */}
       <div className="mb-[10px] flex items-center justify-center gap-[6.18px] text-base font-medium text-[#00afe3] max-[480px]:items-start max-[480px]:text-left max-[480px]:text-[13px] max-[480px]:font-semibold">
         <svg

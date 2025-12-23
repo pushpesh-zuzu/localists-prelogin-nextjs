@@ -308,7 +308,7 @@ const ServiceAndPostCodeModal = ({
         onNext={handleContinue}
         nextButtonText={loading ? "Validating..." : "Continue"}
         disableNext={loading || !selectedService || !postalCodeValidate}
-        maxWidth="max-w-[550px]"
+        maxWidth="max-w-[90%] md:max-w-[550px]"
         onClose={()=>{handleCloseClick()}}
       >
         {/* Service Input */}
@@ -340,7 +340,7 @@ const ServiceAndPostCodeModal = ({
                     <div className="flex items-center">
                       <span className="text-sm text-gray-700">{item.name}</span>
                       {selectedService?.id === item.id && (
-                        <CheckIcon className="ml-auto w-4 h-4 text-green-500" />
+                        <CheckIcon className="ml-auto w-4 h-4 text-[green]" />
                       )}
                     </div>
                   </div>
@@ -354,7 +354,7 @@ const ServiceAndPostCodeModal = ({
         <div className="mt-4 relative">
           <InputField
             label="Where do you need it?"
-            placeholder="Enter Postcode"
+            placeholder="Enter Postcode (No Spaces)"
             value={pincode}
             onChange={handlePincodeChange}
             error={errors.pincode}

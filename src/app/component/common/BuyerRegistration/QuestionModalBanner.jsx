@@ -5,18 +5,17 @@ function QuestionModalBanner({
   progressPercent = 0,
   question,
 }) {
-  console.log(serviceName, "serviceNameserviceNameserviceName");
   const getHeaderImageClass = () => {
     const baseClasses =
       "bg-cover bg-center px-5 text-white text-lg font-bold min-h-[158px] flex justify-center items-center flex-col max-[768px]:text-base max-[768px]:py-10 max-[768px]:px-[15px] max-[480px]:min-h-[120px]";
 
     const imageMap = {
-      "Patio Services": "bg-[url('/questions/PatioServices.webp')]",
+      "Patio Laying": "bg-[url('/questions/PatioServices.webp')]",
       "Artificial Grass Installation":
         "bg-[url('/questions/ArtificialGrass.webp')]",
       "Driveway Installation":
         "bg-[url('/questions/Driveways.webp')]",
-      "Fence & Gate Installation": "bg-[url('/questions/fenceandgate')]",
+      "Fence & Gate Installation": "bg-[url('/questions/fenceandgate.webp')]",
       Gardening: "bg-[url('/images/banners/Gardening.jpg')]",
       "Home and Garden":
         "bg-[url('/images/banners/landscapingandgardening.webp')]",

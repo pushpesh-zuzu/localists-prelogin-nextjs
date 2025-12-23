@@ -15,7 +15,7 @@ const Modal = ({
   onNext,
   onBack,
   showButtons = true,
-  padding = "px-7.5 py-6",
+  padding = "p-3 md:px-7.5 md:py-6",
   zIndex = "z-50",
   showClosIcon = true,
 }) => {
@@ -34,7 +34,7 @@ const Modal = ({
         {showClosIcon && (
           <button
             onClick={onClose}
-            className="absolute top-0 right-1 z-10 p-2 font-bold text-black cursor-pointer rounded-full transition-all"
+            className="absolute top-[1%] right-1 z-10  font-bold text-black cursor-pointer rounded-full transition-all"
             aria-label="Close modal"
           >
             <X size={18} />
@@ -43,8 +43,8 @@ const Modal = ({
 
         {/* Title - Fixed */}
         {title && (
-          <div className={`${padding} pb-0 flex-shrink-0`}>
-            <h2 className="text-2xl font-bold text-center text-black mb-4">
+          <div className={` pt-6 px-3 pb-0 flex-shrink-0`}>
+            <h2 className="text-[20px] xl:text-2xl font-bold text-center text-black mb-0 lg:mb-4">
               {title}
             </h2>
           </div>

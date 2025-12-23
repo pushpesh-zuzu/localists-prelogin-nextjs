@@ -107,7 +107,6 @@ function NameEmailPhoneModal({
 
     try {
       const res = await dispatch(checkEmailIdApi({ email }));
-      console.log(res, "rrrrrrrr handle blur");
       if (res?.success) {
         setErrors((prev) => ({ ...prev, email: false }));
         setIsEmailValid(true);
@@ -198,7 +197,6 @@ function NameEmailPhoneModal({
     }
   };
 
-  console.log(errors, "errors");
   useEffect(() => {
     dispatch(setbuyerRequestData({ name, email, phone }));
   }, []);
@@ -209,8 +207,8 @@ function NameEmailPhoneModal({
         isOpen={true}
         title="YOU ARE ONLY ONE STEP FROM COMPARING FREE QUOTES!"
         onNext={handleSubmit}
-        maxWidth="max-w-[800px]"
-        maxHeight="max-h-[70vh] lg:max-h-[90vh]"
+        maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[800px]"
+        maxHeight="max-h-[80vh] lg:max-h-[90vh]"
         padding="px-3 py-4 md:px-7.5 md:py-6"
       >
         <p className=" text-center text-base font-normal  text-black">

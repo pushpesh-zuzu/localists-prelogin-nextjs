@@ -18,9 +18,9 @@ const Button1 = ({
   `;
 
   const variants = {
-    primary: "bg-[#00afe3] text-white hover:bg-[#0096c4]",
-    secondary: "bg-black text-white hover:bg-black/90",
-    danger: "bg-red-600 text-white hover:bg-red-700",
+    primary: "bg-[#00afe3] text-white hover:bg-[#0096c4] text-[20px] max-[480px]:text-[14px] px-[9px] py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50",
+    secondary: "bg-black text-white hover:bg-black/90 text-[20px] max-[480px]:text-[14px] px-[9px] py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50",
+    danger: "bg-red-600 text-white hover:bg-red-700 text-[20px] max-[480px]:text-[14px] px-[9px] py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50",
   };
 
   return (

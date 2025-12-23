@@ -137,8 +137,8 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
       title="YOU ARE ONLY ONE STEP FROM COMPARING FREE QUOTES!"
       onNext={handleSubmit}
       nextButtonText={requestLoader ? "Updating..." : "Continue"}
-      maxWidth="max-w-[800px]"
-      maxHeight="max-h-[70vh] lg:max-h-[90vh]"
+      maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[800px]"
+      maxHeight="max-h-[80vh] lg:max-h-[90vh]"
       zIndex="z-200"
       padding="px-3 py-4 md:px-7.5 md:py-6"
     >

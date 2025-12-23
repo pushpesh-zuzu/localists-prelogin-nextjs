@@ -26,7 +26,7 @@ const QuestionModal = ({
   isStartWithQuestionModal = false,
 }) => {
   const dispatch = useDispatch();
-  const searchParams = useSearchParams();
+    const searchParams = useSearchParams();
   const { buyerRequest, requestLoader, citySerach, questionanswerData } =
     useSelector((state) => state.buyer);
   const { service, registerData } = useSelector((state) => state.findJobs);
@@ -263,10 +263,10 @@ const QuestionModal = ({
         {/* Close Button */}
         <button
           onClick={() => handleCloseClick()}
-          className="absolute top-0 right-1 z-10 p-2 font-bold text-black cursor-pointer hover:bg-gray-100 rounded-full transition-all"
+          className="absolute top-[5%] right-[5%] z-10 p-1 font-bold bg-white cursor-pointer rounded-full transition-all"
           aria-label="Close modal"
         >
-          <X size={18} />
+          <X size={18} strokeWidth={5} className="font-black"  color="#0aaeff"/>
         </button>
 
         {/* Modal Content */}
@@ -346,7 +346,7 @@ const QuestionModal = ({
                 {currentQuestion > 0 ? (
                   <button
                     onClick={handleBack}
-                    className="cursor-pointer rounded-[3px] border-none bg-black px-6 py-3 text-base font-medium text-white hover:bg-black/80 transition-colors"
+                    className="cursor-pointer rounded-[3px] border-none bg-black text-[20px] max-[480px]:text-[14px] text-white px-[9px] py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50"
                   >
                     Back
                   </button>
@@ -357,7 +357,7 @@ const QuestionModal = ({
                 <button
                   onClick={handleNext}
                   disabled={requestLoader}
-                  className="ml-auto cursor-pointer rounded-[3px] border-none bg-[#00ADD8] px-6 py-3 text-base font-medium text-white hover:bg-[#0096c4] transition-colors disabled:opacity-50"
+                  className="ml-auto cursor-pointer rounded-[3px] border-none bg-[#00ADD8] text-[20px] text-white max-[480px]:text-[14px] px-[9px] py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50"
                 >
                   {requestLoader ? (
                     <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></span>

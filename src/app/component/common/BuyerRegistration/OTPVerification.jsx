@@ -182,7 +182,7 @@ const OtpVerification = ({
       padding="p-0"
       showButtons={false}
       isOpen={true}
-      maxWidth="max-w-[500px] mt-[5%]"
+      maxWidth="max-w-[90%] md:max-w-[500px] mt-[5%]"
       showClosIcon={false}
     >
       <div className="w-full max-w-[500px] bg-white px-2  md:px-8 py-11 text-center shadow-sm sm:px-[31px] sm:py-[45px]">
@@ -200,7 +200,7 @@ const OtpVerification = ({
         </p>
 
         {/* Phone verification notice */}
-        <p className="mx-auto mb-5 w-fit bg-[#F5F5F5] px-[7px] py-[6px] text-base font-medium text-black sm:text-base">
+        <p className="mx-auto mb-5 w-fit bg-[#F5F5F5] px-[7px] py-[6px] text-xs font-medium text-black sm:text-base">
           **Please check the above number is correct**
         </p>
 
