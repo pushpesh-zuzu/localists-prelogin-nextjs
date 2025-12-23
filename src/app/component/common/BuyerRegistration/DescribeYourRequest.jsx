@@ -247,7 +247,7 @@ const DescribeYourRequest = ({
       )}
 
       {/* Progress Container */}
-      <div className="mt-4 text-left max-[480px]:mt-[2px]">
+      <div className="mt-4 text-left ">
         <Paragraph className="text-base  text-[#828282]">
           Request quality
         </Paragraph>
@@ -272,7 +272,7 @@ const DescribeYourRequest = ({
           type="checkbox"
           checked={professionalContact}
           onChange={handleCheckboxChange}
-          className="relative mr-[10px] h-5 w-5 cursor-pointer appearance-none rounded border-2 border-white bg-white shadow-sm transition-all duration-200 ease-in-out checked:border-[#00afe3] checked:bg-[#00afe3] after:absolute after:left-[7px] after:top-[3px] after:hidden after:h-[10px] after:w-[5px] after:border-white after:border-r-2 after:border-b-2 after:rotate-45 after:border-solid checked:after:block max-[400px]:h-6 max-[350px]:h-[22px] max-[350px]:w-9"
+          className="relative mr-[10px] h-5 w-5 cursor-pointer appearance-none rounded border-2 border-white bg-white shadow-sm transition-all duration-200 ease-in-out checked:border-[#00afe3] checked:bg-[#00afe3] after:absolute after:left-[7px] after:top-[3px] after:hidden after:h-[10px] after:w-[5px] after:border-white after:border-r-2 after:border-b-2 after:rotate-45 after:border-solid checked:after:block"
         />
         <div className="-ml-1 flex-col">
           <span className="mt-1 font-[Arial] inline-block font-semibold text-white">
