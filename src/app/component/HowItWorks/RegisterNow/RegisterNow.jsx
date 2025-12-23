@@ -16,32 +16,37 @@ const RegisterNow = () => {
                 Register now
             </button>
 
-            <div className='max-w-[320px] md:max-w-[350px] lg:max-w-[100%]  flex flex-col items-start lg:flex-row lg:items-center gap-[20px] w-full lg:w-auto px-[30px] lg:px-auto'>
-                <div className='flex justify-center items-center gap-[7px]'>
-                    <div className='flex justify-center items-center rounded-full bg-[#00AFE3] w-[35px] h-[35px]'>
+            <div className="max-w-[320px] w-full md:max-w-full lg:w-[1094px] px-[30px] lg:px-0 flex flex-col gap-[20px] justify-around md:flex-row md:flex-wrap md:justify-between lg:flex-nowrap lg:items-center lg:px-[40px]"
+            >
+                {/* Item 1 */}
+                <div className="flex items-center gap-[7px] lg:w-auto">
+                    <div className="flex justify-center items-center rounded-full bg-[#00AFE3] w-[35px] h-[35px]">
                         <UserCircleIcon />
                     </div>
-
-                    <p className='font-[Arial] font-bold text-[14px]  md:text-[16px] xl:text-[20px]'>Create your account in minutes</p>
+                    <p className="font-[Arial] font-bold text-[14px] md:text-[16px] xl:text-[20px]">
+                        Create your account in minutes
+                    </p>
                 </div>
 
-                <div className='flex justify-center items-center gap-[7px]'>
-                    <div className='flex justify-center items-center rounded-full bg-[#00AFE3] w-[35px] h-[35px]'>
+                {/* Item 2 */}
+                <div className="flex items-center gap-[7px] lg:w-auto">
+                    <div className="flex justify-center items-center rounded-full bg-[#00AFE3] w-[35px] h-[35px]">
                         <BadgeIcon />
                     </div>
-
-                    <p className='font-[Arial] font-bold text-[14px] md:text-[16px] xl:text-[20px]'>Start receiving leads today</p>
+                    <p className="font-[Arial] font-bold text-[14px] md:text-[16px] xl:text-[20px]">
+                        Start receiving leads today
+                    </p>
                 </div>
 
-
-                <div className='flex justify-center items-center gap-[7px]'>
-                    <div className='flex justify-center items-center rounded-full bg-[#00AFE3] w-[35px] h-[35px]'>
-                        <CancelIcon  />
+                {/* Item 3 – centered on tablet */}
+                <div className="flex items-center gap-[7px] md:w-full md:justify-center lg:w-auto">
+                    <div className="flex justify-center items-center rounded-full bg-[#00AFE3] w-[35px] h-[35px]">
+                        <CancelIcon />
                     </div>
-
-                    <p className='font-[Arial] font-bold text-[14px] md:text-[16px] xl:text-[20px]'>No commission or hidden fees</p>
+                    <p className="font-[Arial] font-bold text-[14px] md:text-[16px] xl:text-[20px]">
+                        No commission or hidden fees
+                    </p>
                 </div>
-
             </div>
         </section>
     )
