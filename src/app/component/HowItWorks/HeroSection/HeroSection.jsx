@@ -145,7 +145,7 @@ export default function HeroSection() {
                     />
 
                     {isDropdownOpen && service?.length > 0 && (
-                      <div className="absolute top-full mt-1 w-[420px] bg-white border border-[#ddd] rounded-[4px] max-h-[200px] overflow-y-auto z-10">
+                      <div className="absolute top-full mt-1 w-[420px] max-w-[240px] md:max-w-[420px] bg-white border border-[#ddd] rounded-[4px] max-h-[200px] overflow-y-auto z-10">
                         {loading ? (
                           <div className="flex items-center gap-2 p-2 text-sm text-gray-500">
                             <span className="h-4 w-4 animate-spin rounded-full border-2 border-[#00AFE3] border-t-transparent" />
