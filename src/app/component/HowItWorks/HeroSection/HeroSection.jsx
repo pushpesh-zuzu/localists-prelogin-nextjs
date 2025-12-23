@@ -136,7 +136,7 @@ export default function HeroSection() {
                       id="service"
                       type="text"
                       className="font-[Arial] font-bold !text-black border border-[#D9D9D9] rounded-[5px] pl-[16px] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)]"
-                      placeholder="Patio Service"
+                      placeholder="Architects, Landscaping"
                       value={service}
                       onChange={(e) => {
                         setService(e.target.value);
