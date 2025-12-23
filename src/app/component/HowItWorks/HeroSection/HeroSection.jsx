@@ -185,7 +185,7 @@ export default function HeroSection() {
                         className="absolute right-[10px] top-[70%] -translate-y-1/2 inline-block h-4 w-4 animate-spin rounded-full border-2 border-[#00AFE3] border-t-transparent"
                       />
                     ) : postalCodeValidate ? (
-                      <div aria-hidden="true" className="absolute right-[10px] top-[56%]">
+                      <div aria-hidden="true" className="absolute right-[10px] top-[51%]">
                         <GreenCheckIcon />
                       </div>
                     ) : (
