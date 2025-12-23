@@ -185,17 +185,17 @@ const OtpVerification = ({
       padding="p-0"
       showButtons={false}
       isOpen={true}
-      maxWidth="max-w-[90%] md:max-w-[500px] mt-[5%]"
+      maxWidth="max-w-[90%] sm:max-w-[500px] mt-[5%]"
       showClosIcon={false}
     >
-      <div className="w-full max-w-[500px] bg-white px-2  md:px-8 py-11 text-center shadow-sm sm:px-[31px] sm:py-[45px]">
+      <div className="w-full max-w-[500px] bg-white px-2  md:px-8 py-[35px] text-center shadow-sm sm:px-[31px] sm:py-[35px]">
         {/* Title */}
         <H5 className="mb-5 text-black">
           OTP Verification
         </H5>
 
         {/* Instruction */}
-        <Paragraph className="mb-6 text-[#828282]">
+        <Paragraph className="mb-6 text-[#828282] font-black">
           Enter the OTP sent to{" "}
           <span className="text-black">
             {formatUKPhoneNumber(requestUserPhone)}
@@ -204,14 +204,14 @@ const OtpVerification = ({
 
         {/* Phone verification notice */}
         <span className="tracking-[-0.03em]
-        text-[14px] leading-[18px] font-[Arial] font-bold
-        md:text-[16px] md:leading-[16px]
-        lg:text-[20px] lg:leading-[24px] mx-auto mb-5 w-fit bg-[#F5F5F5] px-[7px] py-[6px]">
+        text-[12px] leading-[18px] font-[Arial] font-bold
+        md:text-[14px] md:leading-[16px]
+        lg:text-[16px] lg:leading-[24px] mx-auto mb-5 w-fit bg-[#F5F5F5] px-[7px] py-[6px]">
           **Please check the above number is correct**
         </span>
 
         {/* OTP Inputs */}
-        <div className="mb-5 flex justify-center gap-6">
+        <div className="mb-5 flex justify-center gap-6 mt-4">
           {[0, 1, 2, 3].map((index) => (
             <input
               key={index}
@@ -257,9 +257,12 @@ const OtpVerification = ({
         </button>
 
         {/* Go Back */}
-        <Paragraph className="mb-[5px] mt-[26px] text-[#969696]">
+        <p className="mb-[5px] mt-[26px] text-[#969696] tracking-[-0.03em]
+        text-[12px] leading-[18px] font-[Arial] font-bold
+        md:text-[14px] md:leading-4
+        lg:text-[16px] lg:leading-6">
           Want to update your above number?
-        </Paragraph>
+        </p>
         <div
           className="flex items-center mx-auto mb-4 w-fit cursor-pointer"
           onClick={() => {
@@ -275,15 +278,18 @@ const OtpVerification = ({
         </div>
 
         {/* Mobile number notice */}
-        <div className="mx-auto rounded-[3px] bg-[#F5F5F5] px-1.5 py-[5px]">
+        <div className="mx-auto rounded-[3px] bg-[#F5F5F5] py px-1.5 py-5">
           <Paragraph className="mx-auto text-black">
             WE CAN ONLY SEND A PASSCODE TO A MOBILE NUMBER NOT TO A LANDLINE.
           </Paragraph>
         </div>
 
-        <Paragraph className="mx-auto mb-0 mt-4 text-[#A3A3A3]">
+        <p className="tracking-[-0.03em]
+        text-[12px] leading-[18px] font-[Arial] font-bold
+        md:text-[14px] md:leading-[16px]
+        lg:text-[16px] lg:leading-[24px] mx-auto mb-0 mt-4 text-[#A3A3A3]">
           We cannot verify your account without a mobile number
-        </Paragraph>
+        </p>
       </div>
     </Modal>
   );

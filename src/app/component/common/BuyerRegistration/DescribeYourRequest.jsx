@@ -150,7 +150,7 @@ const DescribeYourRequest = ({
     //   >
     //     &times;
     //   </button>
-    <Modal showButtons={false} isOpen={true} maxWidth="max-w-[90%] md:max-w-[540px] mt-[5%] " maxHeight="max-h-[90vh]">
+    <Modal showButtons={false} padding="p-3 md:px-7.5" isOpen={true} maxWidth="max-w-[90%] md:max-w-[540px] mt-[5%] " maxHeight="max-h-[90vh]">
       {/* Success Message */}
       <div className="mb-[10px] flex items-center justify-center gap-[6.18px] text-base font-medium text-[#00afe3] max-[480px]:items-start max-[480px]:text-left max-[480px]:text-[13px] max-[480px]:font-semibold">
         <svg
@@ -175,7 +175,7 @@ const DescribeYourRequest = ({
       </div>
 
       {/* Textarea Label */}
-      <Paragraph className="text-center my-1  text-[#828282] ">
+      <Paragraph className="text-center my-3  text-[#828282] ">
         The more information you provide, the quicker and more accurately
         professionals can respond
       </Paragraph>

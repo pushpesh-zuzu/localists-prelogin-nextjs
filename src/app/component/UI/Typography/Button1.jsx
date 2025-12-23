@@ -22,7 +22,7 @@ const Button1 = ({
       px-[15px] py-[8px]      
       lg:px-[28px] lg:py-[15px]
       md:text-[18px] md:leading-[100%]
-      md:px-[8px] md:py-[15px]
+      md:px-[15px] md:py-[8px]
       rounded-full
     `,
     secondary: `
