@@ -33,9 +33,18 @@ function QuestionModalBanner({
   };
   return (
     <div className={`${getHeaderImageClass()} `}>
-      <H5 className="mb-0 max-w-[95%] text-center bg-black/50 px-2 py-1 text-xl max-[480px]:w-full">
+      <h5 className="font-Inter font-black
+        tracking-[-0.03em]
+        text-[25px] leading-7
+        md:text-[25px] 
+        lg:text-[25px] 
+        mb-0 max-w-[95%] 
+        text-center 
+        bg-black/50 
+        px-2 py-1 text-xl 
+        max-[480px]:w-full">
         {question}
-      </H5>
+      </h5>
 
       <div className="mt-2 h-[3px] w-full overflow-hidden bg-[#EDEDED]">
         <div
