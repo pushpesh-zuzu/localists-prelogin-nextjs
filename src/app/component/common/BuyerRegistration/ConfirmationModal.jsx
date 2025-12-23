@@ -122,12 +122,12 @@ const ConfirmationModal = ({
     >
       <div className="bg-white w-full px-6 py-9 text-center md:px-12 md:py-12">
         {/* Header */}
-        <h2 className="mb-6 text-2xl font-bold text-black md:text-2xl">
+        <h2 className="mb-6 text-2xl font-bold text-[#253238] md:text-2xl">
           {cancelHeading}
         </h2>
 
         {/* Description */}
-        <p className="mb-9 text-base font-medium text-black">{cancelPara}</p>
+        <p className="mb-9 text-base font-medium text-[#253238]">{cancelPara}</p>
 
         {/* Button Group */}
         <div className="flex justify-between gap-[12px] max-[480px]:flex-row">

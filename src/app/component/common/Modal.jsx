@@ -35,7 +35,7 @@ const Modal = ({
         {showClosIcon && (
           <button
             onClick={onClose}
-            className="absolute top-[3%] right-3 z-10  font-bold text-black cursor-pointer rounded-full transition-all"
+            className="absolute top-[3%] right-3 z-10  font-bold text-[#253238] cursor-pointer rounded-full transition-all"
             aria-label="Close modal"
           >
             <X size={18} />

@@ -190,14 +190,14 @@ const OtpVerification = ({
     >
       <div className="w-full max-w-[500px] bg-white px-2  md:px-8 py-[35px] text-center shadow-sm sm:px-[31px] sm:py-[35px]">
         {/* Title */}
-        <H5 className="mb-5 text-black">
+        <H5 className="mb-5 text-[#253238]">
           OTP Verification
         </H5>
 
         {/* Instruction */}
         <Paragraph className="mb-6 text-[#828282] font-black">
           Enter the OTP sent to{" "}
-          <span className="text-black">
+          <span className="text-[#253238]">
             {formatUKPhoneNumber(requestUserPhone)}
           </span>
         </Paragraph>
@@ -279,7 +279,7 @@ const OtpVerification = ({
 
         {/* Mobile number notice */}
         <div className="mx-auto rounded-[3px] bg-[#F5F5F5] py px-1.5 py-5">
-          <Paragraph className="mx-auto text-black">
+          <Paragraph className="mx-auto text-[#253238]">
             WE CAN ONLY SEND A PASSCODE TO A MOBILE NUMBER NOT TO A LANDLINE.
           </Paragraph>
         </div>

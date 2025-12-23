@@ -46,7 +46,7 @@ export default function Header() {
 
             <div className="flex items-center space-x-4 md:space-x-2 lg:space-x-2.5 lg:py-3">
               <MegaMenu>
-                <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-black">
+                <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
                   Explore Our Services
                   {/* <Image
                     src="/icons/downarrowblue.svg"
@@ -62,7 +62,7 @@ export default function Header() {
                 </button>
               </MegaMenu>
 
-              <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-black">
+              <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
                 Advice
                 {/* <Image
                   src="/icons/downarrowblue.svg"
@@ -80,7 +80,7 @@ export default function Header() {
           </div>
 
           {getBarkToken() ? (
-            <p className="text-black">User Logged In</p>
+            <p className="text-[#253238]">User Logged In</p>
           ) : (
             <nav
               className="flex items-center space-x-4  md:space-x-2 lg:space-x-8"
@@ -153,7 +153,7 @@ export default function Header() {
             </button>
           </MegaMenu>
           {getBarkToken() ? (
-            <p className="text-black">User Logged In</p>
+            <p className="text-[#253238]">User Logged In</p>
           ) : (
             <>
               <div className="flex justify-center flex-1 max-w-[103px] max-h-[25px]">

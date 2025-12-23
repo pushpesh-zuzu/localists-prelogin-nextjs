@@ -142,10 +142,10 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
       zIndex="z-200"
     >
       {/* EXACTLY SAME AS NameEmailPhoneModal - No extra content */}
-      <p className=" text-center text-base font-normal  text-black">
+      <p className=" text-center text-base font-normal  text-[#253238]">
         Your phone number and email are safe with us.
       </p>
-      <p className=" text-center text-base font-normal text-black">
+      <p className=" text-center text-base font-normal text-[#253238]">
         We'll only use them to help you connect with trusted, verified
         professionals.
       </p>

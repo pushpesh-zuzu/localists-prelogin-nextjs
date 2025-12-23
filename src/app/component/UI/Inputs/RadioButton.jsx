@@ -16,7 +16,7 @@ const RadioButton = ({
         p-[10px]
         rounded-[3px]
         cursor-pointer
-        text-[14px] font-medium text-black
+        text-[14px] font-medium text-[#253238]
         text-left
       "
     >

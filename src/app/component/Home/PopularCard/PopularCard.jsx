@@ -37,7 +37,7 @@ function PopularCard() {
     <WrapperBGWidth>
       <PaddingWrapper className="h-full lg:min-h-[587px] xl:min-h-[657px] py-10 md:pt-6 md:pb-6 xl:pt-12 xl:pb-[78px]">
         <H2 className="text-[#00afe3] pb-10 lg:pb-7">
-          Popular <span className="text-black">jobs.</span>
+          Popular <span className="text-[#253238]">jobs.</span>
         </H2>
 
         <div className="hidden md:block select-none">

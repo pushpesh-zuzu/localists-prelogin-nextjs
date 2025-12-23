@@ -42,7 +42,7 @@ function UserFeedbackCard({ item }) {
             </p>
           </div>
           <p
-            className="self-end mt-2 font-bold text-black text-[21px]
+            className="self-end mt-2 font-bold text-[#253238] text-[21px]
                         md:text-[16px] md:tracking-[-0.03em]
                         md:lg:text-[20px]
                         md:xl:text-[28px]"

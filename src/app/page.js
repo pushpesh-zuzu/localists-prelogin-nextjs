@@ -9,6 +9,7 @@ import Member from "./component/Home/Member/Member";
 import AdviceInsight from "./component/Home/AdviceInsight/AdviceInsight";
 import HomeGardenCarousel from "./component/Carousel/HomeCarousel";
 import { carouselData } from "@/constants/homepageData";
+import CloseBrowserAbandon from "./component/common/CloseBrowserAbandon/CloseBrowserAbandon";
 
 export const metadata = {
   title: "Localists.com: Find Trusted Local Services and Professionals",
@@ -18,6 +19,7 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="bg-white">
+      <CloseBrowserAbandon/>
       <HeroSection />
       <PopularCard />
       <HowItWork />

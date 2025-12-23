@@ -105,7 +105,7 @@ const ThankuPage = () => {
               <CheckIcon className="w-8 h-8 md:w-10 md:h-10 text-white" />
             </div>
             
-            <H4 className="text-black mt-4 md:mt-6">
+            <H4 className="text-[#253238] mt-4 md:mt-6">
               Thank You! Your number has been verified.
             </H4>
           </div>

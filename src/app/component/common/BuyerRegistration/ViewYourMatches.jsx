@@ -68,7 +68,7 @@ const ViewYourMatches = ({
       >
         {/* Close Button */}
         <button
-          className="absolute right-[10px] top-0 cursor-pointer border-none bg-transparent text-2xl text-black max-[768px]:top-[5px] max-[480px]:right-[5px] max-[480px]:top-0 max-[350px]:right-[5px] max-[350px]:top-0"
+          className="absolute right-[10px] top-0 cursor-pointer border-none bg-transparent text-2xl text-[#253238] max-[768px]:top-[5px] max-[480px]:right-[5px] max-[480px]:top-0 max-[350px]:right-[5px] max-[350px]:top-0"
           onClick={onClose}
           disabled={isLoading}
         >
@@ -77,7 +77,7 @@ const ViewYourMatches = ({
 
         {/* Header */}
         <div className="mb-[38px] max-[480px]:mb-5">
-          <h2 className="text-center align-middle text-2xl font-bold text-black max-[768px]:text-xl max-[350px]:text-lg">
+          <h2 className="text-center align-middle text-2xl font-bold text-[#253238] max-[768px]:text-xl max-[350px]:text-lg">
             View your matches now!
           </h2>
         </div>

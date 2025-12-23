@@ -33,13 +33,15 @@ const HeroSection = memo(function HeroSection() {
 
   const [showAllServices, setShowAllServices] = useState(false);
   const displayedServices = showAllServices ? services : services.slice(0, 5);
-    const displayedServicesMediusScreen = showAllServices ? services : services.slice(0, 9);
+  const displayedServicesMediusScreen = showAllServices
+    ? services
+    : services.slice(0, 9);
 
   const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState("");
-  
-  const [Show, setShow] = useState(false)
-  
+
+  const [Show, setShow] = useState(false);
+
   return (
     <WrapperBGWidth background={"#00aeef"}>
       <section
@@ -48,21 +50,25 @@ const HeroSection = memo(function HeroSection() {
         aria-label="Hero section"
       >
         <div className="w-full lg:w-1/2 flex flex-col xl:ml-[43px]">
-
           <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] lg:mb-7 max-h-12" />
 
-          <H1 className="text-white block md:hidden lg:block text-shadow-[0_2.03px_2.03px_0_#0000001A]">
-            Find Local <span className="block">Services.</span>
-            <span className="text-black block">Fast.</span>
-          </H1>
-          <H1 className="hidden md:block lg:hidden  text-white text-shadow-[0_2.03px_2.03px_0_#0000001A]">
-            Find Local{" "}
-            <div className="flex">
-              <span className="block">Services.</span>
-              &nbsp;<span className="text-black block">Fast.</span>
+          <H1 className="text-white block  text-shadow-[0_2.03px_2.03px_0_#0000001A]">
+            <p className="md:hidden lg:block">
+              Find Local <span className="block">Services.</span>
+              <span className="text-[#253238] block">Fast.</span>
+            </p>
+            <div className="hidden md:block lg:hidden ">
+              Find Local{" "}
+              <div className="flex">
+                <span className="block">Services.</span>
+                &nbsp;<span className="text-[#253238] block">Fast.</span>
+              </div>
             </div>
           </H1>
-          <Paragraph1 style={{ textShadow: '0px 3.65px 3.65px #00000026' }} className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
+          <Paragraph1
+            style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
+            className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
+          >
             Get instant quotes from local professionals.
           </Paragraph1>
           {/* <div className="relative max-w-[254px] md:max-w-[246px]  lg:max-w-[404px]">
@@ -93,7 +99,7 @@ const HeroSection = memo(function HeroSection() {
               <SearchIcon className="w-6 h-6 md:w-5 md:h-5 lg:w-8 lg:h-8 mt-5 xl:mt-16" />
             </div>
           </div> */}
-          <HeroSectionSearch/>
+          <HeroSectionSearch />
         </div>
 
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">

@@ -98,27 +98,30 @@ const DescribeYourRequest = ({
     };
 
     // Dispatch to Redux
-    dispatch(addDetailsRequestData(detailsData,router, requestId)).then((result) => {
-      if (result?.success) {
-        const successMessage = result?.payload?.message || result?.message || "Create Request successfully!";
-        showToast("success", successMessage);
-        
-        // Clear states
-        dispatch(clearSetbuyerRequestData());
-        dispatch(clearBuyerRegisterFormData());
-        dispatch(setQualityData());
+    dispatch(addDetailsRequestData(detailsData, router, requestId)).then(
+      (result) => {
+        if (result?.success) {
+          const successMessage =
+            result?.payload?.message ||
+            result?.message ||
+            "Create Request successfully!";
+          showToast("success", successMessage);
 
-        // Close modal if exists
-        if (setShowConfirmModal) {
-          setShowConfirmModal(false);
+          // Clear states
+          dispatch(clearSetbuyerRequestData());
+          dispatch(clearBuyerRegisterFormData());
+          dispatch(setQualityData());
+
+          // Close modal if exists
+          if (setShowConfirmModal) {
+            setShowConfirmModal(false);
+          }
+
+          // Navigate to step 10
+          dispatch(setBuyerStep(10));
         }
-
-        // Navigate to step 10
-        dispatch(setBuyerStep(10));
-        
-        // You might want to navigate or perform other actions here
       }
-    });
+    );
   };
 
   const handleCloseClick = () => {
@@ -141,16 +144,13 @@ const DescribeYourRequest = ({
   }
 
   return (
-    // <div className="fixed z-50 left-1/2 top-[50%] flex w-[90%] max-w-[500px] -translate-x-1/2 -translate-y-1/2 flex-col overflow-auto bg-white px-5 py-4 text-center max-[480px]:h-[80vh] max-[350px]:w-[80%] max-[350px]:px-4 max-[350px]:py-3">
-    //   {/* Close Button */}
-    //   <button
-    //     className="absolute right-[10px] top-0 cursor-pointer border-none bg-transparent text-2xl text-black max-[768px]:right-[10px] max-[768px]:top-[5px] max-[480px]:right-2 max-[480px]:top-0 max-[400px]:right-[5px] max-[400px]:top-0 max-[350px]:right-[5px] max-[350px]:top-[-2px]"
-    //     onClick={handleCloseClick}
-    //     disabled={isLoading}
-    //   >
-    //     &times;
-    //   </button>
-    <Modal showButtons={false} padding="p-3 md:px-7.5" isOpen={true} maxWidth="max-w-[90%] md:max-w-[540px] mt-[5%] " maxHeight="max-h-[90vh]">
+    <Modal
+      showButtons={false}
+      padding="p-3 md:px-7.5"
+      isOpen={true}
+      maxWidth="max-w-[90%] md:max-w-[540px] mt-[5%] "
+      maxHeight="max-h-[90vh]"
+    >
       {/* Success Message */}
       <div className="mb-[10px] flex items-center justify-center gap-[6.18px] text-base font-medium text-[#00afe3] max-[480px]:items-start max-[480px]:text-left max-[480px]:text-[13px] max-[480px]:font-semibold">
         <svg
@@ -169,7 +169,7 @@ const DescribeYourRequest = ({
 
       {/* Header */}
       <div className="max-[480px]:text-lg">
-        <H4 className="mb-0 text-center align-middle text-2xl font-bold text-black max-[480px]:mb-2 max-[480px]:text-xl">
+        <H4 className="mb-0 text-center align-middle text-2xl font-bold text-[#253238] max-[480px]:mb-2 max-[480px]:text-xl">
           Tell us more about what you need for better responses
         </H4>
       </div>
@@ -311,10 +311,8 @@ const DescribeYourRequest = ({
             privacy policy
           </Link>
         </p>
-    
       </div>
-    
-</Modal>    
+    </Modal>
   );
 };
 

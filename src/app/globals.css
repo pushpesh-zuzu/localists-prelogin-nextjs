@@ -14,6 +14,7 @@
 
 body {
   color: var(--primary-text);
+  letter-spacing: -0.03em;
 }
 input,
 textarea,

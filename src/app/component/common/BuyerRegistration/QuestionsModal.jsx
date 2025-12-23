@@ -300,7 +300,7 @@ const QuestionModal = ({
                     (opt, index) => (
                       <label
                         key={index}
-                        className="flex cursor-pointer items-center gap-2 rounded-[3px] border border-[#dedede] px-[10px] py-[10px] text-left text-sm font-medium text-black hover:bg-gray-50 transition-colors"
+                        className="flex cursor-pointer items-center gap-2 rounded-[3px] border border-[#dedede] px-[10px] py-[10px] text-left text-sm font-medium text-[#253238] hover:bg-gray-50 transition-colors"
                       >
                         <input
                           type={
@@ -315,7 +315,7 @@ const QuestionModal = ({
                           onChange={handleOptionChange}
                           className="flex-shrink-0"
                         />
-                        <span className="font-[Arial] font-medium tracking-[-0.03em] inline-block wrap-break-word text-black">
+                        <span className="font-[Arial] font-medium tracking-[-0.03em] inline-block wrap-break-word text-[#253238]">
                           {opt.option}
                         </span>
                       </label>
@@ -369,7 +369,7 @@ const QuestionModal = ({
               </div>
             </>
           ) : (
-            <div className="flex-1 flex items-center justify-center text-base text-black">
+            <div className="flex-1 flex items-center justify-center text-base text-[#253238]">
               <h2>No questions available</h2>
             </div>
           )}

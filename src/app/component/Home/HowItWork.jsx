@@ -11,7 +11,7 @@ function HowItWork() {
     <WrapperBGWidth background={"#F7F7F7"}>
       <section className="bg-[#F7F7F7] h-auto px-2.5 py-12 sm:px-10 md:px-16 md:py-10 xl:px-[145px] xl:py-12">
         <H2 className="text-[#00afe3] pb-10 md:pb-6 xl:pb-12">
-          How It <span className="text-black">Works.</span>{" "}
+          How It <span className="text-[#253238]">Works.</span>{" "}
         </H2>
         <div className="flex flex-col md:flex-row justify-items-start gap-5 xl:gap-[50px]">
           <HowItWorksCard
