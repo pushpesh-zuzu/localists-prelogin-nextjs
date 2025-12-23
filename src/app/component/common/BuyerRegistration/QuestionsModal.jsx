@@ -14,6 +14,7 @@ import InputField from "../../UI/Inputs/InputField";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import { X } from "lucide-react";
+import Button1 from "../../UI/Typography/Button1";
 
 const QuestionModal = ({
   questions = [],
@@ -314,7 +315,7 @@ const QuestionModal = ({
                           onChange={handleOptionChange}
                           className="flex-shrink-0"
                         />
-                        <span className="inline-block wrap-break-word text-black">
+                        <span className="font-[Arial] font-medium tracking-[-0.03em] inline-block wrap-break-word text-black">
                           {opt.option}
                         </span>
                       </label>
@@ -344,27 +345,27 @@ const QuestionModal = ({
               {/* Fixed Buttons - Always visible */}
               <div className="flex-shrink-0 mt-6 flex justify-between">
                 {currentQuestion > 0 ? (
-                  <button
+                  <Button1 variant="secondary"
                     onClick={handleBack}
-                    className="cursor-pointer rounded-[3px] border-none bg-black text-[20px] max-[480px]:text-[14px] text-white px-6 py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50"
+                    className="cursor-pointer  border-none disabled:opacity-50"
                   >
                     Back
-                  </button>
+                  </Button1>
                 ) : (
                   <div className="w-20"></div>
                 )}
 
-                <button
+                 <Button1 variant="primary"
                   onClick={handleNext}
                   disabled={requestLoader}
-                  className="ml-auto cursor-pointer rounded-[3px] border-none bg-[#00ADD8] text-[20px] text-white max-[480px]:text-[14px] px-6 py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50"
+                  className="cursor-pointer  border-none disabled:opacity-50"
                 >
                   {requestLoader ? (
                     <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
                   ) : (
                     "Next"
                   )}
-                </button>
+                </Button1>
               </div>
             </>
           ) : (

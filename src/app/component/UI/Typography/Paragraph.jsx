@@ -1,12 +1,12 @@
-export default function Paragraph({ children, className = "" }) {
+export default function Paragraph({ children, className = "", bold = false }) {
   return (
     <p
       className={`
-        font-[Arial] font-bold
-        tracking-[-0.03em] 
-        text-[18px] md:text-[14px] leading-[18px]
-        sm:text-base sm:leading-[18px]
-        lg:text-[20px] lg:leading-6
+        font-[Arial] ${bold ? bold : "font-bold"}
+        tracking-[-0.03em]
+        text-[18px] leading-[18px]
+        md:text-[16px] md:leading-[16px]
+        lg:text-[20px] lg:leading-[24px]
         ${className}
       `}
     >

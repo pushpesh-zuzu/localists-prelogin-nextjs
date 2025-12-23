@@ -12,6 +12,7 @@ import {
 } from "@/lib/store/buyerslice/buyerSlice";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
+import Button1 from "../../UI/Typography/Button1";
 
 const ConfirmationModal = ({
   isOpen,
@@ -131,7 +132,9 @@ const ConfirmationModal = ({
         {/* Button Group */}
         <div className="flex justify-between gap-[12px] max-[480px]:flex-row">
           {/* Back Button */}
-          <button
+          <Button1
+            variant="secondary"
+            onClick={onClose}
             className="
                       bg-black text-white
                       text-[20px] max-[480px]:text-[14px]
@@ -142,10 +145,11 @@ const ConfirmationModal = ({
                     "
           >
             Back
-          </button>
+          </Button1>
 
           {/* Leave Button */}
-          <button
+          <Button1
+            variant="primary"
             onClick={handleSubmit}
             disabled={loading}
             className="bg-[#00ADD8] text-white
@@ -185,7 +189,7 @@ const ConfirmationModal = ({
             ) : (
               "Leave"
             )}
-          </button>
+          </Button1>
         </div>
       </div>
     </Modal>

@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 // import Script from "next/script";
 import { CheckCircle, CheckIcon } from "lucide-react"; // या आप कोई और icon library use कर सकते हैं
+import H4 from "../../UI/Typography/H4";
 
 const ThankuPage = () => {
   const router = useRouter();
@@ -99,17 +100,17 @@ const ThankuPage = () => {
 
       <div className="min-h-screen bg-gray-50 flex items-start justify-center p-5 md:p-10">
         <div className="w-full max-w-[500px] bg-white shadow-xl rounded-lg overflow-hidden">
-          <div className="bg-[#e3f6fc] p-8 md:p-14 pt-12 md:pt-14 text-center">
+          <div className="bg-[#e3f6fc] p-4 md:p-8 text-center">
             <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-[#00afe3] rounded-full flex items-center justify-center">
               <CheckIcon className="w-8 h-8 md:w-10 md:h-10 text-white" />
             </div>
             
-            <h1 className="text-xl md:text-2xl font-black text-black mt-4 md:mt-6">
+            <H4 className="text-black mt-4 md:mt-6">
               Thank You! Your number has been verified.
-            </h1>
+            </H4>
           </div>
 
-          <div className="p-6 md:p-8">
+          <div className="p-4 md:p-8">
             <div className="flex justify-center mb-8">
               <button
                 onClick={handleSubmit}
@@ -121,12 +122,12 @@ const ThankuPage = () => {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <span>View your matches now.</span>
+                <span className="font-[Arial]">View your matches now.</span>
               </button>
             </div>
 
             <div className="mt-6">
-              <p className="text-[10px] md:text-[11px] text-gray-500 leading-relaxed text-left">
+              <p className="font-[Arial] text-[10px] md:text-[11px] text-gray-500 leading-relaxed text-left">
                 Localists may share your information with up to five relevant
                 service providers, who may contact you by phone, text or email to
                 discuss your request. By submitting this form, you agree that

@@ -14,6 +14,7 @@ import { validateUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
 import { useEmailCheck } from "@/hooks/emailExist";
 import useUserInfo from "@/utils/getUserIp";
 import { getBarkToken } from "@/utils/CookiesHelper";
+import Paragraph from "../../UI/Typography/Paragraph";
 
 function NameEmailPhoneModal({
   onClose,
@@ -24,6 +25,7 @@ function NameEmailPhoneModal({
   isStartWithQuestionModal = false,
   isPPCPages = false,
   hideCloseButton = false,
+  
 }) {
   const dispatch = useDispatch();
   const { buyerRequest, citySerach, requestLoader } = useSelector(
@@ -207,17 +209,17 @@ function NameEmailPhoneModal({
         isOpen={true}
         title="YOU ARE ONLY ONE STEP FROM COMPARING FREE QUOTES!"
         onNext={handleSubmit}
-        maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[800px]"
+        maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
         maxHeight="max-h-[80vh] lg:max-h-[90vh]"
-        padding="px-3 py-4 md:px-7.5 md:py-6"
+        padding="px-3 py-4 md:px-7.5 md:pt-3 pb-6"
       >
-        <p className=" text-center text-base font-normal  text-black">
+          <Paragraph className="text-center">
           Your phone number and email are safe with us.
-        </p>
-        <p className=" text-center text-base font-normal text-black">
+        </Paragraph>
+        <Paragraph bold={'font-medium'} className="text-center mt-1 sm:mt-0">
           We'll only use them to help you connect with trusted, verified
           professionals.
-        </p>
+        </Paragraph>
         <InputField
           label="Name"
           value={name}

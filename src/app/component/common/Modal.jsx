@@ -2,6 +2,7 @@
 import React from "react";
 import { X } from "lucide-react";
 import Button1 from "../UI/Typography/Button1";
+import H4 from "../UI/Typography/H4";
 
 const Modal = ({
   isOpen,
@@ -27,14 +28,14 @@ const Modal = ({
       // onClick={onClose}
     >
       <div
-        className={`relative w-full ${maxWidth} ${maxHeight} bg-white shadow-2xl flex flex-col`}
+        className={`relative w-full ${maxWidth} ${maxHeight} py-4 bg-white shadow-2xl flex flex-col`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         {showClosIcon && (
           <button
             onClick={onClose}
-            className="absolute top-[1%] right-1 z-10  font-bold text-black cursor-pointer rounded-full transition-all"
+            className="absolute top-[3%] right-3 z-10  font-bold text-black cursor-pointer rounded-full transition-all"
             aria-label="Close modal"
           >
             <X size={18} />
@@ -44,9 +45,9 @@ const Modal = ({
         {/* Title - Fixed */}
         {title && (
           <div className={` pt-6 px-3 pb-0 flex-shrink-0`}>
-            <h2 className="text-[20px] xl:text-2xl font-bold text-center text-black mb-0 lg:mb-4">
+             <H4 className="text-center max-w-[90%] mx-auto">
               {title}
-            </h2>
+              </H4> 
           </div>
         )}
 

@@ -12,6 +12,9 @@ import {
 import { showToast } from "@/utils/toaster";
 import { formatUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
 import BackButtonOTP from "../icons/Registration/BackButtonOTP";
+import H4 from "../../UI/Typography/H4";
+import H5 from "../../UI/Typography/H5";
+import Paragraph from "../../UI/Typography/Paragraph";
 
 const OtpVerification = ({
   open,
@@ -187,22 +190,25 @@ const OtpVerification = ({
     >
       <div className="w-full max-w-[500px] bg-white px-2  md:px-8 py-11 text-center shadow-sm sm:px-[31px] sm:py-[45px]">
         {/* Title */}
-        <h2 className="mb-5 text-lg font-bold leading-none text-black">
+        <H5 className="mb-5 text-black">
           OTP Verification
-        </h2>
+        </H5>
 
         {/* Instruction */}
-        <p className="mb-6 text-base font-medium leading-6 text-[#828282] sm:text-base">
+        <Paragraph className="mb-6 text-[#828282]">
           Enter the OTP sent to{" "}
           <span className="text-black">
             {formatUKPhoneNumber(requestUserPhone)}
           </span>
-        </p>
+        </Paragraph>
 
         {/* Phone verification notice */}
-        <p className="mx-auto mb-5 w-fit bg-[#F5F5F5] px-[7px] py-[6px] text-xs font-medium text-black sm:text-base">
+        <span className="tracking-[-0.03em]
+        text-[14px] leading-[18px] font-[Arial] font-bold
+        md:text-[16px] md:leading-[16px]
+        lg:text-[20px] lg:leading-[24px] mx-auto mb-5 w-fit bg-[#F5F5F5] px-[7px] py-[6px]">
           **Please check the above number is correct**
-        </p>
+        </span>
 
         {/* OTP Inputs */}
         <div className="mb-5 flex justify-center gap-6">
@@ -225,15 +231,15 @@ const OtpVerification = ({
         </div>
 
         {/* Resend OTP */}
-        <div className="mb-4 text-sm font-medium leading-[14px] text-[#969696]">
+        <div className="mb-4 text-sm font-bold leading-[14px] text-[#969696] font-[Arial] tracking-[-0.03em]">
           Didn't you receive the OTP?{" "}
           {timer > 0 ? (
-            <p className="mt-4 text-sm font-medium text-[#828282]">
+            <span className="font-[Arial] tracking-[-0.03em] mt-4 text-sm font-bold text-[#828282]">
               Resend OTP in <strong>{timer}</strong>s
-            </p>
+            </span>
           ) : (
             <span
-              className="ml-0.5 inline-block cursor-pointer text-sm font-medium text-[#00ADD8] hover:underline"
+              className="ml-0.5 inline-block font-[Arial] tracking-[-0.03em] cursor-pointer text-sm font-bold text-[#00ADD8] hover:underline"
               onClick={handleResendOtp}
             >
               {resendOtpLoader ? "Resending..." : "Resend OTP"}
@@ -251,9 +257,9 @@ const OtpVerification = ({
         </button>
 
         {/* Go Back */}
-        <p className="mb-[5px] mt-[26px] text-sm font-medium leading-[14px] text-[#969696]">
+        <Paragraph className="mb-[5px] mt-[26px] text-[#969696]">
           Want to update your above number?
-        </p>
+        </Paragraph>
         <div
           className="flex items-center mx-auto mb-4 w-fit cursor-pointer"
           onClick={() => {
@@ -262,7 +268,7 @@ const OtpVerification = ({
             }
           }}
         >
-          <span className="mr-[5px] text-sm font-medium text-[#00ADD8]">
+          <span className="mr-[5px] text-sm font-bold font-[Arial] tracking-[-0.03em] text-[#00ADD8]">
             Go Back
           </span>
           <BackButtonOTP/>
@@ -270,14 +276,14 @@ const OtpVerification = ({
 
         {/* Mobile number notice */}
         <div className="mx-auto rounded-[3px] bg-[#F5F5F5] px-1.5 py-[5px]">
-          <p className="mx-auto text-base font-semibold text-black sm:text-base">
+          <Paragraph className="mx-auto text-black">
             WE CAN ONLY SEND A PASSCODE TO A MOBILE NUMBER NOT TO A LANDLINE.
-          </p>
+          </Paragraph>
         </div>
 
-        <p className="mx-auto mb-0 mt-4 text-base font-semibold text-[#A3A3A3]">
+        <Paragraph className="mx-auto mb-0 mt-4 text-[#A3A3A3]">
           We cannot verify your account without a mobile number
-        </p>
+        </Paragraph>
       </div>
     </Modal>
   );

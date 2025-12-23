@@ -15,6 +15,8 @@ import {
 import { showToast } from "@/utils/toaster"; // Adjust path as needed
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import Modal from "../Modal";
+import H4 from "../../UI/Typography/H4";
+import Paragraph from "../../UI/Typography/Paragraph";
 
 const DescribeYourRequest = ({
   onClose,
@@ -148,7 +150,7 @@ const DescribeYourRequest = ({
     //   >
     //     &times;
     //   </button>
-    <Modal isOpen={true} maxWidth="max-w-[90%] md:max-w-[540px] mt-[5%]">
+    <Modal showButtons={false} isOpen={true} maxWidth="max-w-[90%] md:max-w-[540px] mt-[5%] " maxHeight="max-h-[90vh]">
       {/* Success Message */}
       <div className="mb-[10px] flex items-center justify-center gap-[6.18px] text-base font-medium text-[#00afe3] max-[480px]:items-start max-[480px]:text-left max-[480px]:text-[13px] max-[480px]:font-semibold">
         <svg
@@ -162,21 +164,21 @@ const DescribeYourRequest = ({
             clipRule="evenodd"
           />
         </svg>
-        <span>Your request has been submitted</span>
+        <Paragraph>Your request has been submitted</Paragraph>
       </div>
 
       {/* Header */}
       <div className="max-[480px]:text-lg">
-        <h2 className="mb-0 text-center align-middle text-2xl font-bold text-black max-[480px]:mb-2 max-[480px]:text-xl">
+        <H4 className="mb-0 text-center align-middle text-2xl font-bold text-black max-[480px]:mb-2 max-[480px]:text-xl">
           Tell us more about what you need for better responses
-        </h2>
+        </H4>
       </div>
 
       {/* Textarea Label */}
-      <p className="text-center text-base font-medium text-[#828282] max-[480px]:text-sm">
+      <Paragraph className="text-center my-1  text-[#828282] ">
         The more information you provide, the quicker and more accurately
         professionals can respond
-      </p>
+      </Paragraph>
 
       {/* Textarea */}
       <span className="max-[480px]:h-fit">
@@ -190,7 +192,7 @@ const DescribeYourRequest = ({
           rows={2}
         />
         {textError && (
-          <span className="mb-[10px] block text-left text-sm text-red-500">
+          <span className="font-[Arial] mb-[10px] block text-left text-sm text-red-500">
             Please fill this input field.
           </span>
         )}
@@ -246,9 +248,9 @@ const DescribeYourRequest = ({
 
       {/* Progress Container */}
       <div className="mt-4 text-left max-[480px]:mt-[2px]">
-        <span className="text-base font-medium text-[#828282] max-[768px]:text-sm max-[480px]:text-xs">
+        <Paragraph className="text-base  text-[#828282]">
           Request quality
-        </span>
+        </Paragraph>
         <div className="mt-[5px] h-[6px] w-full overflow-hidden rounded-[3px] bg-[#eee]">
           <div
             className="h-full bg-[#00afe3] transition-all duration-300 ease-in-out"
@@ -259,9 +261,9 @@ const DescribeYourRequest = ({
 
       {/* Add More Detail */}
       <div>
-        <p className="mt-[16.5px] text-left text-base font-medium text-[#828282]">
+        <Paragraph className="mt-[16.5px] text-left text-[#828282]">
           Quality score increases as you add more detail
-        </p>
+        </Paragraph>
       </div>
 
       {/* Checkbox Container */}
@@ -270,14 +272,14 @@ const DescribeYourRequest = ({
           type="checkbox"
           checked={professionalContact}
           onChange={handleCheckboxChange}
-          className="relative mr-[10px] h-6 w-6 cursor-pointer appearance-none rounded border-2 border-white bg-white shadow-sm transition-all duration-200 ease-in-out checked:border-[#00afe3] checked:bg-[#00afe3] after:absolute after:left-[7px] after:top-[3px] after:hidden after:h-[10px] after:w-[5px] after:border-white after:border-r-2 after:border-b-2 after:rotate-45 after:border-solid checked:after:block max-[400px]:h-6 max-[350px]:h-[22px] max-[350px]:w-9"
+          className="relative mr-[10px] h-5 w-5 cursor-pointer appearance-none rounded border-2 border-white bg-white shadow-sm transition-all duration-200 ease-in-out checked:border-[#00afe3] checked:bg-[#00afe3] after:absolute after:left-[7px] after:top-[3px] after:hidden after:h-[10px] after:w-[5px] after:border-white after:border-r-2 after:border-b-2 after:rotate-45 after:border-solid checked:after:block max-[400px]:h-6 max-[350px]:h-[22px] max-[350px]:w-9"
         />
         <div className="-ml-1 flex-col">
-          <span className="mt-1 inline-block font-semibold text-white">
+          <span className="mt-1 font-[Arial] inline-block font-semibold text-white">
             Tick if you'd like to hear back quickly
           </span>
           <br />
-          <span className="mt-[2px] inline-block text-sm text-white max-[480px]:text-xs">
+          <span className="mt-[2px] font-[Arial] inline-block text-sm text-white max-[480px]:text-xs">
             I'm happy to be contacted as soon as possible
           </span>
         </div>
@@ -300,7 +302,7 @@ const DescribeYourRequest = ({
 
       {/* Privacy Wrapper */}
       <div className="flex justify-center text-left">
-        <p className="mt-[10px] text-[10px] font-medium text-[#838383] max-[768px]:text-xs max-[480px]:text-[10px]">
+        <p className="font-[Arial] mt-[10px] text-[10px] font-medium text-[#838383] max-[768px]:text-xs max-[480px]:text-[10px]">
           Your information is protected by our{" "}
           <Link
             href="/en/gb/privacy-policy"

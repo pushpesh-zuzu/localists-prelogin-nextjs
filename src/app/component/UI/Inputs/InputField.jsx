@@ -26,7 +26,7 @@ const InputField = ({
       {label && (
         <label
           htmlFor={inputId}
-          className="block text-base font-bold text-black mt-3 mb1.5"
+          className="block text-base font-bold text-black mt-3 mb-1.5"
         >
           {label}
           {required && <span className="text-red-500 ml-1">*</span>}
@@ -46,7 +46,7 @@ const InputField = ({
           onBlur={onBlur}
           style={{ boxShadow: "0 0 2px .5px #0000001a" }}
           className={`
-             relative w-full px-3 py-3 
+             relative w-full px-3 py-3 rounded-sm
             text-gray-900 text-base
             border border-[#ccc]
             transition-all duration-200

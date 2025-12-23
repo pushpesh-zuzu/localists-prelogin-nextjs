@@ -4,11 +4,12 @@ export default function H1({ children, className = "" }) {
       className={`
         font-Inter font-black
         tracking-[-0.03em]
-        text-[50px] leading-12 md:text-6xl md:leading-[55px] 
+        text-[50px] leading-[48px]
+        md:text-[60px] md:leading-[55px]
         lg:text-[81px] lg:leading-[75px]
         ${className}
       `}
-      style={{ textShadow: '0px 3.65px 3.65px #0000001A' }}
+      style={{ textShadow: "0px 3.65px 3.65px #0000001A" }}
     >
       {children}
     </h1>

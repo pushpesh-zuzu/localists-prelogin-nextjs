@@ -1,4 +1,6 @@
 import React from "react";
+import H4 from "../../UI/Typography/H4";
+import H5 from "../../UI/Typography/H5";
 
 function QuestionModalBanner({
   serviceName = "",
@@ -31,9 +33,9 @@ function QuestionModalBanner({
   };
   return (
     <div className={`${getHeaderImageClass()} `}>
-      <h2 className="mb-0 max-w-[95%] text-center bg-black/50 px-2 py-1 text-xl font-bold max-[480px]:w-full">
+      <H5 className="mb-0 max-w-[95%] text-center bg-black/50 px-2 py-1 text-xl max-[480px]:w-full">
         {question}
-      </h2>
+      </H5>
 
       <div className="mt-2 h-[3px] w-full overflow-hidden bg-[#EDEDED]">
         <div

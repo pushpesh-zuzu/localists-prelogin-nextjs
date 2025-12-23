@@ -1,26 +1,48 @@
 const Button1 = ({
   children,
   onClick,
-  variant = "primary", // primary | secondary | danger (future ready)
+  variant = "primary", // primary | secondary | danger
   type = "button",
   disabled = false,
   className = "",
 }) => {
   const baseClasses = `
     inline-flex items-center justify-center
-    rounded-sm
-    font-semibold
-    text-[20px]
-    py-2.5 px-6
-    max-w-fit
-    transition
+    rounded-full
+    font-[Arial] font-bold
+    tracking-[-0.03em]
+    text-center align-middle
     disabled:opacity-50 disabled:cursor-not-allowed
   `;
 
   const variants = {
-    primary: "bg-[#00afe3] text-white hover:bg-[#0096c4] text-[20px] max-[480px]:text-[14px] px-[9px] py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50",
-    secondary: "bg-black text-white hover:bg-black/90 text-[20px] max-[480px]:text-[14px] px-[9px] py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50",
-    danger: "bg-red-600 text-white hover:bg-red-700 text-[20px] max-[480px]:text-[14px] px-[9px] py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50",
+    primary: `
+      bg-[#00afe3] text-white
+      text-[16px] leading-[100%] 
+      px-[15px] py-[8px]      
+      lg:px-[28px] lg:py-[15px]
+      md:text-[18px] md:leading-[100%]
+      md:px-[8px] md:py-[15px]
+      rounded-full
+    `,
+    secondary: `
+      bg-black text-white
+      text-[16px] leading-[100%]
+      px-[15px] py-[8px]
+      lg:px-[28px] lg:py-[15px]
+      md:text-[18px] md:leading-[100%]
+      md:px-[8px] md:py-[15px]
+      rounded-full
+    `,
+    danger: `
+      bg-red-600 text-white
+      px-[15px] py-[8px]
+      text-[16px] leading-[100%]
+      lg:px-[28px] lg:py-[15px]
+      md:text-[18px] md:leading-[100%]
+      md:px-[8px] md:py-[15px]
+      rounded-full
+    `,
   };
 
   return (

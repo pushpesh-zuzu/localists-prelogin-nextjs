@@ -310,6 +310,7 @@ const ServiceAndPostCodeModal = ({
         disableNext={loading || !selectedService || !postalCodeValidate}
         maxWidth="max-w-[90%] md:max-w-[550px]"
         onClose={()=>{handleCloseClick()}}
+        padding="px-3 py-4 md:px-7.5 md:pt-3 pb-6"
       >
         {/* Service Input */}
         <div className="relative" ref={dropdownRef}>

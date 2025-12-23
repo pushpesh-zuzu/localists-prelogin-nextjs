@@ -10,6 +10,7 @@ import {
 } from "@/lib/store/buyerslice/buyerSlice";
 import { validateUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
 import { showToast } from "@/utils/toaster";
+import Paragraph from "@/app/component/UI/Typography/Paragraph";
 
 function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
   const [name, setName] = useState(buyerRequest?.name || "");
   const [email, setEmail] = useState(buyerRequest?.email || "");
   const [phone, setPhone] = useState(buyerRequest?.phone || "");
-  
+
   const [inputType, setInputType] = useState("text");
   const [errors, setErrors] = useState({
     email: false,
@@ -136,21 +137,18 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
       isOpen={true}
       title="YOU ARE ONLY ONE STEP FROM COMPARING FREE QUOTES!"
       onNext={handleSubmit}
-      nextButtonText={requestLoader ? "Updating..." : "Continue"}
-      maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[800px]"
+      maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
       maxHeight="max-h-[80vh] lg:max-h-[90vh]"
-      zIndex="z-200"
-      padding="px-3 py-4 md:px-7.5 md:py-6"
+      padding="px-3 py-4 md:px-7.5 md:pt-3 pb-6"
     >
-      {/* EXACTLY SAME AS NameEmailPhoneModal - No extra content */}
-      <p className=" text-center text-base font-normal  text-black">
+      <Paragraph bold={"font-black"} className="text-center">
         Your phone number and email are safe with us.
-      </p>
-      <p className=" text-center text-base font-normal text-black">
+      </Paragraph>
+      <Paragraph className="text-center">
         We'll only use them to help you connect with trusted, verified
         professionals.
-      </p>
-      
+      </Paragraph>
+
       {/* EXACTLY SAME Input Fields */}
       <InputField
         label="Name"
@@ -161,7 +159,7 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
         type={inputType}
         disabled={true}
       />
-      
+
       <InputField
         label="Email"
         type={inputType}
@@ -171,7 +169,7 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
         placeholder="Your Email"
         disabled={true}
       />
-      
+
       <InputField
         label="Phone"
         type={inputType}
@@ -180,7 +178,7 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
         error={errors.phone && "Please enter a valid 11-digit phone number."}
         placeholder="Phone Number"
       />
-      
+
       {/* NO EXTRA CONTENT - Exactly like NameEmailPhoneModal */}
     </Modal>
   );
