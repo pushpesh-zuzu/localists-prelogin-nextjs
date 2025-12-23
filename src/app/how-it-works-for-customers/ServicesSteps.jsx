@@ -61,26 +61,26 @@ export default function ServicesSteps() {
 
                             {/* Text */}
                             <div className="flex-1 max-[1220px]:pl-0">
-                                <p className="relative inline-block font-[Arial] font-bold text-[#00AFE3] text-[18px] md:text-[16px] lg:text-[20px] mb-[3.04px] lg:after:block md:after:w-[0.88px] lg:after:h-[52.11px] lg:after:bg-[#D9D9D9] lg:after:mt-[5px] lg:after:h-[42.11px] lg:after:mt-[3px]">
+                                <p className="relative inline-block font-[Arial] font-bold text-[#00AFE3] text-[16px] md:text-[16px] lg:text-[20px] mb-[3.04px] lg:after:block md:after:w-[0.88px] lg:after:h-[52.11px] lg:after:bg-[#D9D9D9] lg:after:mt-[5px] lg:after:h-[42.11px] lg:after:mt-[3px]">
                                     {step.title}
                                 </p>
 
-                                <h2 className="text-[30px] md:text-[35px] lg:text-[50px] leading-[30px]  md:leading-[35px] lg:leading-[55px] font-black text-black tracking-[-0.01em] md:tracking-[-0.03em] max-w-[460px] w-full max-[1020px]:max-w-full">
+                                <h3 className="text-[24px] md:text-[22px] lg:text-[38px] leading-[26px] md:leading-[24px] lg:leading-[45px] font-black text-black tracking-[-0.01em] md:tracking-[-0.03em] max-w-[460px] w-full max-[1020px]:max-w-full">
                                     {step.heading}
-                                </h2>
+                                </h3>
                             </div>
                         </>
                     ) : (
                         <>
                             {/* Text */}
                             <div className="flex-1 lg:pl-[10%]">
-                                <p className="relative inline-block font-[Arial] font-bold text-[#00AFE3] text-[18px] md:text-[16px] lg:text-[20px] mb-[3.04px] lg:after:block md:after:w-[0.88px] lg:after:h-[52.11px] lg:after:bg-[#D9D9D9] lg:after:mt-[5px] lg:after:h-[42.11px] lg:after:mt-[3px]">
+                                <p className="relative inline-block font-[Arial] font-bold text-[#00AFE3] text-[16px] md:text-[16px] lg:text-[20px] mb-[3.04px] lg:after:block md:after:w-[0.88px] lg:after:h-[52.11px] lg:after:bg-[#D9D9D9] lg:after:mt-[5px] lg:after:h-[42.11px] lg:after:mt-[3px]">
                                     {step.title}
                                 </p>
 
-                                <h2 className="text-[30px] md:text-[35px] lg:text-[50px] leading-[30px]  md:leading-[35px] lg:leading-[55px] font-black text-black tracking-[-0.01em] md:tracking-[-0.03em] max-w-[460px] w-full max-[1020px]:max-w-full">
+                                <h3 className="text-[24px] md:text-[22px] lg:text-[38px] leading-[26px] md:leading-[24px] lg:leading-[45px] font-black text-black tracking-[-0.01em] md:tracking-[-0.03em] max-w-[460px] w-full max-[1020px]:max-w-full">
                                     {step.heading}
-                                </h2>
+                                </h3>
                             </div>
 
                             {/* Image */}

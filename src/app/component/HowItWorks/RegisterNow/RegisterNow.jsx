@@ -16,14 +16,14 @@ const RegisterNow = () => {
                 Register now
             </button>
 
-            <div className="max-w-[320px] w-full md:max-w-full lg:w-[1094px] px-[15px] md:px-[100px] lg:px-0 flex flex-col gap-[20px] justify-around md:flex-row md:flex-wrap md:justify-between lg:flex-nowrap lg:items-center lg:px-[40px]"
+            <div className="max-w-[320px] w-full md:max-w-full lg:w-[1094px] px-[15px] md:px-[70px] lg:px-0 flex flex-col gap-[20px] justify-around md:flex-row md:flex-wrap md:justify-between lg:flex-nowrap lg:items-center lg:px-[40px]"
             >
                 {/* Item 1 */}
                 <div className="flex items-center gap-[7px] lg:w-auto">
                     <div className="flex justify-center items-center rounded-full bg-[#00AFE3] w-[35px] h-[35px]">
                         <UserCircleIcon />
                     </div>
-                    <p className="font-[Arial] font-bold text-[16px] xl:text-[20px]">
+                    <p className="font-[Arial] font-bold text-[16px] md:text-[18px] xl:text-[20px]">
                         Create your account in minutes
                     </p>
                 </div>
@@ -33,7 +33,7 @@ const RegisterNow = () => {
                     <div className="flex justify-center items-center rounded-full bg-[#00AFE3] w-[35px] h-[35px]">
                         <BadgeIcon />
                     </div>
-                    <p className="font-[Arial] font-bold text-[16px] xl:text-[20px]">
+                    <p className="font-[Arial] font-bold text-[16px] md:text-[18px] xl:text-[20px]">
                         Start receiving leads today
                     </p>
                 </div>
@@ -43,7 +43,7 @@ const RegisterNow = () => {
                     <div className="flex justify-center items-center rounded-full bg-[#00AFE3] w-[35px] h-[35px]">
                         <CancelIcon />
                     </div>
-                    <p className="font-[Arial] font-bold text-[16px] xl:text-[20px]">
+                    <p className="font-[Arial] font-bold text-[16px] md:text-[18px] xl:text-[20px]">
                         No commission or hidden fees
                     </p>
                 </div>

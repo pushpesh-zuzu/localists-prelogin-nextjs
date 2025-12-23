@@ -120,7 +120,7 @@ export default function HeroSection() {
           </h1>
           <div className="w-full xl:w-[1024px] bg-white/90 rounded-[10px] px-[30px] py-[32px] flex flex-col justify-center items-center mt-[20px] lg:mt-10px lg:mt-[22px]">
 
-            <h2 className="font-black text-[30px] md:text-[35px] lg:text-[50px] leading-[30px] md:leading-[35px] lg:leading-[55px] tracking-[-0.01em] md:tracking-[-0.03em] font-inter text-black text-center">
+            <h2 className="font-black text-[30px] md:text-[35px] lg:text-[50px] leading-[34px] md:leading-[38px] lg:leading-[55px] tracking-[-0.01em] md:tracking-[-0.03em] font-inter text-black text-center">
               Now you know how it works, start looking for a professional.
             </h2>
 
@@ -128,7 +128,7 @@ export default function HeroSection() {
               <div className="flex flex-col items-center">
                 <div className="flex flex-col lg:flex-row gap-[18px] w-full">
                   <div className="flex flex-col flex-1 text-left relative">
-                    <label htmlFor="service" className="font-bold text-[20px] tracking-[-0.03em] text-black font-[Arial] mb-[7px]">
+                    <label htmlFor="service" className="font-bold text-[20px] leading-[22px] tracking-[-0.03em] text-black font-[Arial] mb-[7px]">
                       What service do you need?
                     </label>
 
