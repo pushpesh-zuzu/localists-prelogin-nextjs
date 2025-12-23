@@ -5,7 +5,7 @@ export default function FindLocalServices() {
                 Find Local <span className="text-[#00AFE3]">Services</span> - Fast
             </h2>
 
-            <p className="font-bold font-[Arial] text-black text-[18px] md:text-[16px] lg:text-[20px] leading-[18px]  md:leading-[16px] lg:leading-[24px] tracking-[-0.03em]">
+            <p className="font-bold font-[Arial] text-black text-[18px] md:text-[16px] lg:text-[20px] leading-[20px]  md:leading-[16px] lg:leading-[24px] tracking-[-0.03em]">
                  Get competitive quotations from local suppliers in <span className="text-[#00AFE3]">3 Simple Steps!</span>
             </p>
         </div>
