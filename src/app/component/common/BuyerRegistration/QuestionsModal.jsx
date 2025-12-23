@@ -263,7 +263,7 @@ const QuestionModal = ({
         {/* Close Button */}
         <button
           onClick={() => handleCloseClick()}
-          className="absolute top-[5%] right-[5%] z-10 p-1 font-bold bg-white cursor-pointer rounded-full transition-all"
+          className="absolute top-[5%] right-[10%] sm:top-[6%] sm:right-[6%] z-10 p-1 font-bold bg-white cursor-pointer rounded-full transition-all"
           aria-label="Close modal"
         >
           <X size={18} strokeWidth={5} className="font-black"  color="#0aaeff"/>
@@ -294,7 +294,7 @@ const QuestionModal = ({
                   minHeight: "200px",
                 }}
               >
-                <div className="flex flex-col gap-[7px] pr-2">
+                <div className="flex flex-col gap-[7px]">
                   {formattedQuestions[currentQuestion]?.parsedAnswers.map(
                     (opt, index) => (
                       <label
@@ -346,7 +346,7 @@ const QuestionModal = ({
                 {currentQuestion > 0 ? (
                   <button
                     onClick={handleBack}
-                    className="cursor-pointer rounded-[3px] border-none bg-black text-[20px] max-[480px]:text-[14px] text-white px-[9px] py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50"
+                    className="cursor-pointer rounded-[3px] border-none bg-black text-[20px] max-[480px]:text-[14px] text-white px-6 py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50"
                   >
                     Back
                   </button>
@@ -357,7 +357,7 @@ const QuestionModal = ({
                 <button
                   onClick={handleNext}
                   disabled={requestLoader}
-                  className="ml-auto cursor-pointer rounded-[3px] border-none bg-[#00ADD8] text-[20px] text-white max-[480px]:text-[14px] px-[9px] py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50"
+                  className="ml-auto cursor-pointer rounded-[3px] border-none bg-[#00ADD8] text-[20px] text-white max-[480px]:text-[14px] px-6 py-[8px] min-w-[98px rounded-[3px] font-medium hover:bg-[#0096c4] disabled:opacity-50"
                 >
                   {requestLoader ? (
                     <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
