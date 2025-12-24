@@ -29,7 +29,7 @@ const HeroSectionSellers = () => {
         <section className="relative flex flex-col items-center justify-center h-auto px-[208px] py-[65.5px] max-[1280px]:px-[100px] max-[980px]:px-[50px] max-[480px]:px-[10px] max-[480px]:py-[20px] lg:min-h-[633px]">
             <Image
                 src="/images/HowItWorks/howitworkseller.webp"
-                alt="How It Works – Localists for Professionals"
+                alt="How it works for sellers"
                 fill
                 priority
                 sizes="100vw"

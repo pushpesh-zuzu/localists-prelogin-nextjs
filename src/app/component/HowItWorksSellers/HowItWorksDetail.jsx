@@ -27,7 +27,7 @@ const serviceStepsData = [
         images: [
             {
                 src: "/images/HowItWorks/howitworkyouprofessionseller.webp",
-                alt: "Customer submitting service request",
+                alt: "Customers come to us with their need - Image 1",
                 width: 601,
                 height: 356,
             },
@@ -51,7 +51,7 @@ const serviceStepsData = [
         images: [
             {
                 src: "/images/HowItWorks/howitworkdigitalmanseller.webp",
-                alt: "Professional receiving leads",
+                alt: "We match them with you - Image 1",
                 width: 601,
                 height: 356,
             },
@@ -69,7 +69,7 @@ const serviceStepsData = [
         images: [
             {
                 src: "/images/HowItWorks/howitworkwommenseller.webp",
-                alt: "Professional growing business",
+                alt: "You win the work and grow your business - Image 1",
                 width: 601,
                 height: 356,
             },
@@ -88,14 +88,14 @@ const serviceStepsData = [
         images: [
             {
                 src: "/images/HowItWorks/smileyman.webp",
-                alt: "Why professionals love localists - Image 1",
+                alt: "Why professionals love localists - Image 2",
                 width: 601,
                 height: 356,
                 className: "xl:ml-[-45px] xl:mt-[20px]"
             },
             {
                 src: "/images/HowItWorks/plumber.webp",
-                alt: "Why professionals love localists - Image 2",
+                alt: "Why professionals love localists - Image 1",
                 width: 601,
                 height: 356,
             },
