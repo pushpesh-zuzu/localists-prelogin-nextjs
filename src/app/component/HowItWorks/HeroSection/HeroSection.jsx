@@ -121,7 +121,7 @@ export default function HeroSection() {
           </h1>
           <div className="w-full xl:w-[1024px] bg-white/90 rounded-[10px] px-[30px] py-[32px] flex flex-col justify-center items-center mt-[20px] lg:mt-10px lg:mt-[22px]">
 
-            <p className="font-[Arial] font-bold text-[18px] md:text-[16px] lg:text-[20px] leading-[22px] md:leading-[16px] lg:leading-[24px] text-[#000] text-center">
+            <p className="font-[Arial] font-bold text-[24px] leading-[24px] text-[#000] text-center">
               Now you know how it works, start looking for a professional.
             </p>
 
