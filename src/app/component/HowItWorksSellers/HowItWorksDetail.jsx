@@ -10,17 +10,13 @@ const serviceStepsData = [
         description: (
             <>
                 <p>
-                    At Localists, we make it easy for local professionals and businesses like
-                    you to win more work. Every day, we connect thousands of service providers
-                    with high-quality clients who are ready to hire.
+                    At Localists, we make it easy for local professionals and businesses like you to win more work. Every day, we connect thousands of service providers from builders and gardeners to accountants and business consultants, with high-quality clients who are ready to hire.At Localists, we make it easy for local professionals and businesses like you to win more work. Every day, we connect thousands of service providers from builders and gardeners to accountants and business consultants, with high-quality clients who are ready to hire
                 </p>
                 <p>
-                    When customers post a request, we match them with the right service
-                    provider in their area.
+                    When customers post a request, telling us exactly what they’re after and where they need it done. We match them with the right service provider in their area.
                 </p>
                 <p>
-                    We ask the right questions so you get proper, detailed leads that actually
-                    fit your skills.
+                   We don’t just take a vague request; we ask the right questions so you get proper, detailed leads that actually fit your skills.
                 </p>
             </>
         ),
@@ -30,6 +26,7 @@ const serviceStepsData = [
                 alt: "Customers come to us with their need - Image 1",
                 width: 601,
                 height: 356,
+                className: "w-full h-full object-cover rounded-[20px]"
             },
         ],
     },
@@ -39,12 +36,10 @@ const serviceStepsData = [
         description: (
             <>
                 <p>
-                    When a request matches your services, customers can see your profile and
-                    reach out directly.
+                    When a request matches your services, customers can see your profile and reach out directly. You’ll also get the lead straight to your inbox, so you never miss a chance.
                 </p>
                 <p>
-                    You only pay a small fee per introduction and receive full contact
-                    details.
+                    You only pay a small fee for each introduction, and in return, you’ll get the customer contact details (phone number and email), so you can make contact or provide a quote right away.
                 </p>
             </>
         ),
@@ -54,6 +49,7 @@ const serviceStepsData = [
                 alt: "We match them with you - Image 1",
                 width: 601,
                 height: 356,
+                className: "w-full h-full object-cover rounded-[20px]"
             },
         ],
     },
@@ -62,8 +58,7 @@ const serviceStepsData = [
         heading: "You win the work and grow your business",
         description: (
             <p>
-                We bring the opportunities to you - fresh, relevant, and local. Respond
-                quickly and win more work, with full support whenever you need it.
+                We make it simple for you to win new work without the stress of marketing. We bring the opportunities to you - fresh, relevant, and local. The quicker you respond, the more work you’ll win. And we’ll be right here with support if you ever need it.
             </p>
         ),
         images: [
@@ -72,6 +67,7 @@ const serviceStepsData = [
                 alt: "You win the work and grow your business - Image 1",
                 width: 601,
                 height: 356,
+                className: "w-full h-full object-cover rounded-[20px]"
             },
         ],
     },
@@ -81,23 +77,24 @@ const serviceStepsData = [
         description: <p>When you join Localists as a seller you’ll get:</p>,
         points: [
             "High visibility profile that shows off your work and builds your reputation.",
-            "Steady flow of quality leads from genuine customers.",
+            "Steady flow of quality leads that aren’t just clicks, but genuine customers looking to book your services.",
             "Full control over the jobs you accept.",
-            "Friendly support from our customer success team.",
+            "Friendly support from our customer success team whenever you need it.",
         ],
         images: [
             {
-                src: "/images/HowItWorks/smileyman.webp",
-                alt: "Why professionals love localists - Image 2",
-                width: 601,
-                height: 356,
-                className: "xl:ml-[-45px] xl:mt-[20px]"
-            },
-            {
                 src: "/images/HowItWorks/plumber.webp",
                 alt: "Why professionals love localists - Image 1",
-                width: 601,
+                width: 420,
                 height: 356,
+                className: "rounded-[20px] md:w-[354px] lg:w-[420px] lg:h-[356px]"
+            },
+            {
+                src: "/images/HowItWorks/smileyman.webp",
+                alt: "Why professionals love localists - Image 2",
+                width: 420,
+                height: 356,
+                className: "rounded-[20px] md:mt-[50px] xl:mt-[20px] md:w-[354px] lg:w-[420px] lg:h-[356px]"
             },
         ],
     },
@@ -118,19 +115,14 @@ export default function HowItWorksDetail() {
                     >
                         {/* Images */}
                         <StepImages images={step.images} grow={!isEven} />
-                        {/* <div className={`${isEven ? "order-1" : "order-2"}`}>
-                            <StepImages images={step.images} grow={!isEven} />
-                        </div> */}
 
                         {/* Content */}
-                        {/* <div className={`${isEven ? "order-2" : "order-1"}`}> */}
-                            <StepContent
-                                heading={step.heading}
-                                description={step.description}
-                                points={step.points}
-                                align={!isEven ? "right" : "left"}
-                            />
-                        {/* </div> */}
+                        <StepContent
+                            heading={step.heading}
+                            description={step.description}
+                            points={step.points}
+                            align={!isEven ? "right" : "left"}
+                        />
                     </article>
                 );
             })}
@@ -145,22 +137,37 @@ const StepImages = ({ images, grow = false }) => {
 
     return (
         <>
-            {images.map((img, index) => (
-                <div key={index} className={`flex-1 ${index > 0 ? "hidden xl:block" : ""}`}>
-                    <Image
-                        src={img.src}
-                        alt={img.alt}
-                        width={img.width}
-                        height={img.height}
-                        loading="lazy"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        // className="w-full h-full object-cover rounded-[20px]"
-                        className={`w-full h-full object-cover rounded-[20px] ${img.className}`}
-                    />
-                </div>
-            ))}
+            {
+                images.length === 1 ?
+                    <div className="flex-1">
+                        <Image
+                            src={images[0].src}
+                            alt={images[0].alt}
+                            width={images[0].width}
+                            height={images[0].height}
+                            loading="lazy"
+                            sizes="(max-width: 768px) 50vw, 50vw"
+                            className={`${images[0].className}`}
+                        />
+                    </div>
+                    :
+                    <div className="flex">
+                        {images.map((img, index) => (
+                            <div key={index} className={`${index > 0 ? "" : "hidden md:block lg:hidden xl:block"}`}>
+                                <Image
+                                    src={img.src}
+                                    alt={img.alt}
+                                    width={img.width}
+                                    height={img.height}
+                                    loading="lazy"
+                                    sizes="(max-width: 768px) 50vw, 50vw"
+                                    className={`${img.className}`}
+                                />
+                            </div>
+                        ))}
+                    </div>
+            }
         </>
-
     );
 };
 

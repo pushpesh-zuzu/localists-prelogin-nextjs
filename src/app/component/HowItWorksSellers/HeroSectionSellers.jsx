@@ -60,61 +60,8 @@ const HeroSectionSellers = () => {
                                             type="text"
                                             className="font-[Arial] font-bold !text-black border border-[#D9D9D9] rounded-[5px] pl-[12px] md:pl-[16px] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)]"
                                             placeholder="Architects, Landscaping, ..."
-                                        // value={service}
-                                        // onChange={(e) => {
-                                        //     setService(e.target.value);
-                                        //     setIsDropdownOpen(!!e.target.value);
-                                        // }}
                                         />
-
-                                        {/* {isDropdownOpen && service?.length > 0 && (
-                                            <div className="absolute top-full mt-1 w-[420px] max-w-[240px] md:max-w-[420px] bg-white border border-[#ddd] rounded-[4px] max-h-[200px] overflow-y-auto z-10">
-                                                {loading ? (
-                                                    <div className="flex items-center gap-2 p-2 text-sm text-gray-500">
-                                                        <span className="h-4 w-4 animate-spin rounded-full border-2 border-[#00AFE3] border-t-transparent" />
-                                                    </div>
-                                                ) : (
-                                                    services.map((item) => (
-                                                        <p
-                                                            key={item.id}
-                                                            onClick={() => handleSelectService(item)}
-                                                            className="text-black font-bold text-center px-2 py-2 text-[18px] cursor-pointer border-b border-[#eee] hover:bg-[#f0f0f0]">
-                                                            {item.name}
-                                                        </p>
-                                                    ))
-                                                )}
-                                            </div>
-                                        )} */}
                                     </div>
-
-                                    {/* <div className="flex flex-col flex-1 text-left relative">
-                                        <label htmlFor="postcode" className="font-bold text-[20px] leading-[22px] tracking-[-0.03em] text-black font-[Arial] mb-[7px]">
-                                            Where do you need it?
-                                        </label>
-                                        <input
-                                            id="postcode"
-                                            type="text"
-                                            className="font-[Arial] font-bold !text-black border border-[#D9D9D9] rounded-[5px] pl-[12px] md:pl-[16px] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)]"
-                                            placeholder="Enter Postcode (No Spaces)"
-                                            ref={inputRef}
-                                            name="postcode"
-                                            value={postcode}
-                                            onChange={handlePostcodeChange}
-
-                                        />
-                                        {isCheckingPostcode ? (
-                                            <span
-                                                aria-hidden="true"
-                                                className="absolute right-[10px] top-[70%] -translate-y-1/2 inline-block h-4 w-4 animate-spin rounded-full border-2 border-[#00AFE3] border-t-transparent"
-                                            />
-                                        ) : postalCodeValidate ? (
-                                            <div aria-hidden="true" className="absolute right-[10px] top-[51%]">
-                                                <GreenCheckIcon />
-                                            </div>
-                                        ) : (
-                                            ""
-                                        )}
-                                    </div> */}
                                 </div>
 
                                 <button type="button" aria-haspopup="dialog" className="py-[13px] px-[33px] gap-[9.49px] rounded-[94.94px] bg-[#253238] text-white text-[16px] lg:text-[18px] font-[Arial] font-bold tracking-[-0.03em] shadow-[0px_1.9px_1.9px_rgba(0,0,0,0.1)] mt-[30px] cursor-pointer"
