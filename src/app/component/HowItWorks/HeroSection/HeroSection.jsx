@@ -103,12 +103,13 @@ export default function HeroSection() {
 
   return (
     <section className="relative flex flex-col items-center justify-center h-auto px-[208px] py-[65.5px] max-[1280px]:px-[100px] max-[980px]:px-[50px] max-[480px]:px-[10px] max-[480px]:py-[20px] lg:min-h-[633px]">
-      
+
       <Image
         src="/images/HowItWorks/HowLocalistsWorksBg.webp"
         alt="Local service search form on localists.com"
         fill
         priority
+        quality={95}
         sizes="100vw"
         className="object-cover object-[80%_center] sm:object-center"
       />
@@ -120,9 +121,9 @@ export default function HeroSection() {
           </h1>
           <div className="w-full xl:w-[1024px] bg-white/90 rounded-[10px] px-[30px] py-[32px] flex flex-col justify-center items-center mt-[20px] lg:mt-10px lg:mt-[22px]">
 
-            <h2 className="font-black text-[30px] md:text-[35px] lg:text-[50px] leading-[34px] md:leading-[38px] lg:leading-[55px] tracking-[-0.01em] md:tracking-[-0.03em] font-inter text-black text-center">
+            <p className="font-[Arial] font-bold text-[18px] md:text-[16px] lg:text-[20px] leading-[22px] md:leading-[16px] lg:leading-[24px] text-[#000] text-center">
               Now you know how it works, start looking for a professional.
-            </h2>
+            </p>
 
             <form role="search" className="flex flex-col justify-between  mt-[30px] w-full">
               <div className="flex flex-col items-center">

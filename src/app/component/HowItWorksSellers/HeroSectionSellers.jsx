@@ -32,6 +32,7 @@ const HeroSectionSellers = () => {
                 alt="How it works for sellers"
                 fill
                 priority
+                quality={95}
                 sizes="100vw"
                 className="object-cover object-[80%_center] sm:object-center"
             />
@@ -43,14 +44,14 @@ const HeroSectionSellers = () => {
                     </h1>
                     <div className="w-full xl:w-[1024px] bg-white/90 rounded-[10px] px-[30px] py-[32px] flex flex-col justify-center items-center mt-[20px] lg:mt-10px lg:mt-[22px]">
 
-                        <h2 className="font-black text-[30px] md:text-[35px] lg:text-[50px] leading-[34px] md:leading-[38px] lg:leading-[55px] tracking-[-0.01em] md:tracking-[-0.03em] font-inter text-black text-center">
+                        <p className="font-[Arial] font-bold text-[18px] md:text-[16px] lg:text-[20px] leading-[22px] md:leading-[16px] lg:leading-[24px] text-[#00afe3] text-center">
                             5,000+ UK professionals trust Localists to grow. Get new jobs every day, select only the ones you want, and connect instantly with clients.
-                        </h2>
+                        </p>
 
                         <form role="search" className="flex flex-col justify-between  mt-[30px] w-full">
                             <div className="flex flex-col items-center">
                                 <div className="flex flex-col lg:flex-row gap-[18px] w-full">
-                                    <div className="flex flex-col flex-1 text-left relative">
+                                    <div className="flex flex-col items-center flex-1 text-left relative">
                                         <label htmlFor="service" className="font-bold text-[20px] leading-[22px] tracking-[-0.03em] text-black font-[Arial] mb-[7px] text-center">
                                             What service do you provide?
                                         </label>
@@ -58,7 +59,7 @@ const HeroSectionSellers = () => {
                                         <input
                                             id="service"
                                             type="text"
-                                            className="font-[Arial] font-bold !text-black border border-[#D9D9D9] rounded-[5px] pl-[12px] md:pl-[16px] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)]"
+                                            className="font-[Arial] font-bold !text-black border border-[#D9D9D9] rounded-[5px] pl-[12px] md:pl-[16px] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)] max-w-[690px]"
                                             placeholder="Architects, Landscaping, ..."
                                         />
                                     </div>
