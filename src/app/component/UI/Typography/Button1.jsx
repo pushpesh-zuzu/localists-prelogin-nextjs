@@ -42,6 +42,25 @@ const Button1 = ({
       px-6 py-2 xl:py-2 xl:px-7 h-fit rounded-full
       shadow-[0_0_4px_rgba(0,0,0,0.1)
     `,
+    primary2: `
+        bg-[#00afe3] text-white
+        text-base
+        md:text-[16px]
+        lg:text-[18px]
+        leading-7
+        px-4 py-2 lg:py-2 lg:px-5 h-fit  rounded-full
+        shadow-[0_0_4px_rgba(0,0,0,0.1)
+    `,
+    outlined: `
+        text-[#828282]
+        text-base
+        md:text-[16px]
+        lg:text-[18px]
+        leading-7
+        outline-1
+       px-4 py-2 lg:py-2 lg:px-5 h-fit  rounded-full
+        shadow-[0_0_4px_rgba(0,0,0,0.1)
+    `,
   };
 
   return (

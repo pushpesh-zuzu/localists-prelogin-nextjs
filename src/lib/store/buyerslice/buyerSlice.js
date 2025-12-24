@@ -516,7 +516,7 @@ export const getCityName = (postcodeData) => {
     } catch (error) {
       // showToast("error", error?.response?.data?.message);
       console.log("Error getting city name:", error?.response?.data);
-      // throw error;
+      throw error;
     } finally {
       dispatch(setPostCodeLoader(false));
     }
