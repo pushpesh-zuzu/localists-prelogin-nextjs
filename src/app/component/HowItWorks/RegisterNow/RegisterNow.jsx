@@ -10,7 +10,7 @@ import BadgeIcon from '../../common/icons/HomItWorksIcons/BadgeIcon';
 
 const RegisterNow = () => {
     return (
-        <section aria-label="Register now benefits" className='flex flex-col gap-[30px] items-center py-25px mt-[30px] md:mt-[40px] lg:mt-[62px] mb-[60px] md:mb-[70px] lg:mb-[94px]'>
+        <section aria-label="Register now" className='flex flex-col gap-[30px] items-center py-25px md:mt-[40px] lg:mt-[62px] mb-[60px] md:mb-[70px] lg:mb-[94px]'>
             <button type="button" aria-label="Register now" onClick={() => handleScrollToBottom()} className="text-[22px] md:text-[38px] py-[13px] px-[23px] gap-[9.49px] rounded-[10px] bg-[#00AFE3] text-white font-black tracking-[-0.03em] mt-[30px] cursor-pointer"
             >
                 Register now
