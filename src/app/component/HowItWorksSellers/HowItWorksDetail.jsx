@@ -10,7 +10,7 @@ const serviceStepsData = [
         description: (
             <>
                 <p>
-                    At Localists, we make it easy for local professionals and businesses like you to win more work. Every day, we connect thousands of service providers from builders and gardeners to accountants and business consultants, with high-quality clients who are ready to hire.At Localists, we make it easy for local professionals and businesses like you to win more work. Every day, we connect thousands of service providers from builders and gardeners to accountants and business consultants, with high-quality clients who are ready to hire
+                    At Localists, we make it easy for local professionals and businesses like you to win more work. Every day, we connect thousands of service providers from builders and gardeners to accountants and business consultants, with high-quality clients who are ready to hire.At Localists, we make it easy for local professionals and businesses like you to win more work. Every day, we connect thousands of service providers from builders and gardeners to accountants and business consultants, with high-quality clients who are ready to hire.
                 </p>
                 <p>
                     When customers post a request, telling us exactly what they’re after and where they need it done. We match them with the right service provider in their area.
