@@ -12,6 +12,7 @@ import { showToast } from "@/utils/toaster";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import dynamic from "next/dynamic";
+import { handleScrollToBottom } from "@/utils/handleScrollToBottom";
 const ServiceLocationStep = dynamic(() => import("./ServiceLocationStep"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -286,6 +287,10 @@ const ServiceCreateAccount = ({ serviceTitle }) => {
     };
   }, []);
 
+  useEffect(() => {
+    handleScrollToBottom()
+  }, [registerStep])
+  
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center">
       <div className="w-full max-w-4xl">

@@ -28,7 +28,7 @@ export default function SearchResults({
       })
     );
     setSearchQuery('');
-    setShow(true);
+    setShow && setShow(true);
     dispatch(clearSearch());
   
 

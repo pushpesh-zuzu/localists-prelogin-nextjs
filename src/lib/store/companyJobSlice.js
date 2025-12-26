@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { checkAddressApi, setSelectedServiceFormData } from "./findjobslice";
 import axiosInstance from "./axios";
+import { showToast } from "@/utils/toaster";
 
 const initialState = {
   companyData: {},
@@ -62,8 +63,11 @@ export const fetchCompanyDetails = (regNumber, user_id = null) => {
         return false;
       }
     } catch (error) {
+            console.log(error,'eroor mess')
+
       let message =
         "Your account is already registered with this Company Name. Please contact us if this is not correct.";
+      showToast('error',message)
 
       const body = error?.response?.data?.body;
       if (body) {
