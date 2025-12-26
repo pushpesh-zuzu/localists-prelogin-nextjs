@@ -1,22 +1,21 @@
 "use client";
 
-import React from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import { useState } from "react";
 import { showToast } from "@/utils/toastify";
 import Image from "next/image";
+import { searchService, setService } from '@/lib/store/searchSlice';
+import { useDispatch, useSelector } from "react-redux";
 
 const HeroSectionSellers = () => {
-    const [selectedService, setSelectedService] = useState(null);
+    const [selectedService, setSelectedService] = useState(null)
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+    const [input, setInput] = useState("")
 
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         if (service) {
-    //             dispatch(searchService({ search: service }));
-    //         }
-    //     }, 500);
+    const dispatch = useDispatch();
+    const { services, loading } = useSelector((state) => state.search)
 
-    //     return () => clearTimeout(timer);
-    // }, [service, dispatch])
+    const divRef = useRef(null)
 
     const handleContinue = () => {
         if (!selectedService) {
@@ -24,6 +23,35 @@ const HeroSectionSellers = () => {
             return;
         }
     }
+
+    const handleSelectService = useCallback(
+        (item) => {
+            setInput(item.name);
+            setSelectedService(item);
+            setIsDropdownOpen(false);
+            setTimeout(() => dispatch(setService([])), 100);
+        },
+        [dispatch]
+    )
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (divRef.current && !divRef.current.contains(event.target)) {
+                setIsDropdownOpen(false);
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
+    useEffect(() => {
+        const delayDebounce = setTimeout(() => {
+            if (isDropdownOpen && input.trim()) {
+                dispatch(searchService({ search: input }));
+            }
+        }, 500);
+        return () => clearTimeout(delayDebounce);
+    }, [input, dispatch, isDropdownOpen]);
 
     return (
         <section className="relative flex flex-col items-center justify-center h-auto px-[208px] py-[65.5px] max-[1280px]:px-[100px] max-[980px]:px-[50px] max-[480px]:px-[10px] max-[480px]:py-[20px] lg:min-h-[633px]">
@@ -51,7 +79,7 @@ const HeroSectionSellers = () => {
                         <form role="search" className="flex flex-col justify-between  mt-[30px] w-full">
                             <div className="flex flex-col items-center">
                                 <div className="flex flex-col lg:flex-row gap-[18px] w-full">
-                                    <div className="flex flex-col items-center flex-1 text-left relative">
+                                    <div className="flex flex-col items-center flex-1 text-left relative" ref={divRef}>
                                         <label htmlFor="service" className="font-bold text-[20px] leading-[22px] tracking-[-0.03em] text-black font-[Arial] mb-[7px] text-center">
                                             What service do you provide?
                                         </label>
@@ -61,7 +89,38 @@ const HeroSectionSellers = () => {
                                             type="text"
                                             className="font-[Arial] font-bold !text-black border border-[#D9D9D9] rounded-[5px] pl-[12px] md:pl-[16px] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)] max-w-[690px]"
                                             placeholder="Architects, Landscaping, ..."
+                                            value={input}
+                                            onFocus={() => {
+                                                setIsDropdownOpen(true);
+                                                if (input.trim() === "") {
+                                                    dispatch(searchService({ search: "" }));
+                                                }
+                                            }}
+                                            onChange={(e) => {
+                                                setInput(e.target.value);
+                                                setIsDropdownOpen(true);
+                                                setSelectedService(null);
+                                            }}
                                         />
+                                        {isDropdownOpen && services?.length > 0 && (
+                                            <div className="absolute top-full mt-1 w-full sm:w-[375px] md:w-[100%] lg:w-[690px] bg-white border border-[#ddd] rounded-[4px] max-h-[200px] overflow-y-auto z-10">
+                                                {loading ? (
+                                                    <div className="flex items-center gap-2 p-2 text-sm text-gray-500">
+                                                        <span className="h-4 w-4 animate-spin rounded-full border-2 border-[#00AFE3] border-t-transparent" />
+                                                    </div>
+                                                ) : (
+                                                    services.map((item) => (
+                                                        <p
+                                                            key={item.id}
+                                                            className="text-black font-bold text-center px-2 py-2 text-[16px] cursor-pointer border-b border-[#eee] hover:bg-[#f0f0f0] text-left lg:text-center"
+                                                            onClick={() => handleSelectService(item)}
+                                                        >
+                                                            {item.name}
+                                                        </p>
+                                                    ))
+                                                )}
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
 
@@ -80,3 +139,4 @@ const HeroSectionSellers = () => {
 }
 
 export default HeroSectionSellers
+ 

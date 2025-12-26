@@ -146,7 +146,7 @@ export default function HeroSection() {
                     />
 
                     {isDropdownOpen && service?.length > 0 && (
-                      <div className="absolute top-full mt-1 w-[420px] max-w-[240px] md:max-w-[420px] bg-white border border-[#ddd] rounded-[4px] max-h-[200px] overflow-y-auto z-10">
+                      <div className="absolute top-full mt-1 w-full md:w-[100%] lg:max-w-[410px] bg-white border border-[#ddd] rounded-[4px] max-h-[200px] overflow-y-auto z-10">
                         {loading ? (
                           <div className="flex items-center gap-2 p-2 text-sm text-gray-500">
                             <span className="h-4 w-4 animate-spin rounded-full border-2 border-[#00AFE3] border-t-transparent" />
@@ -156,7 +156,7 @@ export default function HeroSection() {
                             <p
                               key={item.id}
                               onClick={() => handleSelectService(item)}
-                              className="text-black font-bold text-center px-2 py-2 text-[18px] cursor-pointer border-b border-[#eee] hover:bg-[#f0f0f0]">
+                              className="text-black font-bold text-center px-2 py-2 text-[16px] cursor-pointer border-b border-[#eee] hover:bg-[#f0f0f0]">
                               {item.name}
                             </p>
                           ))
@@ -166,7 +166,7 @@ export default function HeroSection() {
                   </div>
 
                   <div className="flex flex-col flex-1 text-left relative">
-                    <label htmlFor="postcode" className="font-bold text-[20px] leading-[22px] tracking-[-0.03em] text-black font-[Arial] mb-[7px]">
+                    <label htmlFor="postcode" className="font-bold text-[18px] md:text-[16px] lg:text-[20px] leading-[18px] md:leading-[16px] lg:leading-[24px] tracking-[-0.03em] text-black font-[Arial] mb-[7px]">
                       Where do you need it?
                     </label>
                     <input
