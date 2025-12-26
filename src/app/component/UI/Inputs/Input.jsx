@@ -15,6 +15,7 @@ const Input = ({
   id,
   className = "",
   onBlur,
+  ...rest 
 }) => {
   const [showPassword, setShowPassword] = useState(false);
   const inputId = id || name || label?.toLowerCase().replace(/\s+/g, "-");
@@ -39,6 +40,7 @@ const Input = ({
             placeholder={placeholder}
             disabled={disabled}
             onBlur={onBlur}
+            {...rest}
             style={{ boxShadow: "0 0 2px .5px #0000001a" }}
             className={`
              relative w-full px-3 py-2 rounded-sm

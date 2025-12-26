@@ -1,4 +1,3 @@
-// ServiceCreateAccount/components/ServiceLocationStep/ServiceLocationStep.jsx
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -26,9 +25,9 @@ import IIconSVG from "../common/icons/SellerRegistration/IIconSVG";
 const ServiceLocationStep = ({
   nextStep,
   handleInputChange,
-  formData = {}, 
+  formData = {},
   setFormData,
-  errors = {}, 
+  errors = {},
 }) => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
@@ -90,7 +89,6 @@ const ServiceLocationStep = ({
         dispatch(setCountry({ country: newResponse.data?.country }));
       }
     } catch (error) {
-      console.log('jddddddddddddddddd')
       console.error("Error fetching city:", error);
       // 🔥 setCity function call fix किया
       dispatch(
@@ -213,15 +211,15 @@ const ServiceLocationStep = ({
               />
 
               {isLoading && (
-            <div className="absolute top-[25%] right-2 h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-[#00aeef]"></div>
+                <div className="absolute top-[25%] right-2 h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-[#00aeef]"></div>
               )}
 
               {!isLoading && isValidPostCode && (
                 <CheckIcon
-              size={24}
-              color="white"
-              className="absolute p-1 bg-green-500 rounded-full top-[20%] right-2"
-            />
+                  size={24}
+                  color="white"
+                  className="absolute p-1 bg-green-500 rounded-full top-[20%] right-2"
+                />
               )}
             </div>
           </InputLabel>
@@ -245,18 +243,18 @@ const ServiceLocationStep = ({
         </label>
 
         {/* Online/Remote Toggle */}
-       <div className="flex items-center space-x-2">
-  <label className="relative inline-flex items-center cursor-pointer">
-    <input
-      type="checkbox"
-      name="is_online"
-      checked={formData?.is_online === 1}
-      onChange={handleInputChange}
-      className="sr-only peer"
-    />
+        <div className="flex items-center space-x-2">
+          <label className="relative inline-flex items-center cursor-pointer">
+            <input
+              type="checkbox"
+              name="is_online"
+              checked={formData?.is_online === 1}
+              onChange={handleInputChange}
+              className="sr-only peer"
+            />
 
-    <div
-      className="
+            <div
+              className="
         relative
         w-[36px] h-[18px]
         bg-gray-300
@@ -275,14 +273,13 @@ const ServiceLocationStep = ({
         after:transition-transform
         peer-checked:after:translate-x-[18px]
       "
-    ></div>
-  </label>
+            ></div>
+          </label>
 
-  <span className="text-sm font-semibold text-gray-700">
-    Online/Remote Lead
-  </span>
-</div>
-
+          <span className="text-sm font-semibold text-gray-700">
+            Online/Remote Lead
+          </span>
+        </div>
       </div>
 
       {/* Footer Section */}
@@ -299,8 +296,7 @@ const ServiceLocationStep = ({
           className="max-w-fit max-[640]:mx-auto md:ml-auto"
           disabled={isLoading}
           variant="secondary"
-          // onClick={validateAndProceed}
-          onClick={nextStep}
+          onClick={validateAndProceed}
         >
           Next
         </Button1>
