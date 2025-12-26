@@ -47,8 +47,8 @@ export default function Page() {
         <FindLocalServices />
         <ServicesSteps />
         <RegisterNow />
-        <Footer />
       </WrapperBGWidth>
+      <Footer />
     </main>
   );
 }

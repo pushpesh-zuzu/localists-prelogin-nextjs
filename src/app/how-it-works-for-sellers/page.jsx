@@ -45,8 +45,9 @@ const page = () => {
       <WrapperBGWidth>
         <HowItWorksDetail />
         <RegisterNow />
-        <Footer />
       </WrapperBGWidth>
+      <Footer />
+
     </main>
   )
 }
