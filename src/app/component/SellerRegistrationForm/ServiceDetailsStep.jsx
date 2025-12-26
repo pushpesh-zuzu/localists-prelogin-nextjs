@@ -220,7 +220,7 @@ function ServiceDetailsStep({
 
             <Input
               label="Company name"
-              value={formData.company_name || ""}
+              value={companyData?.company_name || ""}
               readOnly
             />
           </>

@@ -10,7 +10,7 @@ export const store = configureStore({
     search: searchReducer,
     buyer: buyerReducer,
     findJobs: findJobsReducer,
-    company: companyReducer,
+    companyLook: companyReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

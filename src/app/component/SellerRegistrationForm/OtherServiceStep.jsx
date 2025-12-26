@@ -30,6 +30,8 @@ function OtherServiceStep({
 }) {
   const [isPostcodeFromSuggestion, setIsPostcodeFromSuggestion] =
     useState(false);
+    const dropdownRef = useRef(null);
+    const inputRef = useRef(null);
   const [Input, setInput] = useState("");
   const [isFocused, setIsFocused] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
@@ -327,6 +329,25 @@ function OtherServiceStep({
     setShow(false);
   };
 
+  useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target) && 
+      inputRef.current &&
+      !inputRef.current.contains(event.target)
+    ) {
+      setIsDropdownOpen(false);
+      setIsFocused(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
   return (
     <>
       <SellerFormCardWrappper
@@ -334,7 +355,6 @@ function OtherServiceStep({
         description="Get even more great leads."
         maxWidth="max-w-2xl"
       >
-        {/* ✅ Main Service Display */}
         <div className="flex flex-col sm:flex-row gap-3 items-center mb-10">
           <Paragraph variant="primary">You've asked for leads for:</Paragraph>
           <span className="px-5 py-2 text-[18px] font-medium bg-[#e3f6fc] text-[#00afe3] rounded-[3px]">
@@ -344,7 +364,6 @@ function OtherServiceStep({
           </span>
         </div>
 
-        {/* ✅ Secondary Services Label */}
         <Paragraph variant="primary" className="mb-2.5">
           We will also show you leads from
         </Paragraph>
@@ -368,9 +387,9 @@ function OtherServiceStep({
             ))}
         </div>
 
-        {/* ✅ Service Search Input */}
         <div className="relative mb-4">
           <input
+            ref={inputRef}
             type="text"
             placeholder="Search for more services..."
             className="w-full px-4 py-2 border border-[#ccc] rounded-sm focus:outline-1 focus:ring-1"
@@ -403,9 +422,8 @@ function OtherServiceStep({
             value={Input}
           />
 
-          {/* ✅ Search Results Dropdown */}
-          {service?.length > 0 && (
-            <div className="absolute z-10 w-full bg-white border border-gray-300 rounded-sm mt-1 max-h-60 overflow-y-auto shadow-lg">
+          {isDropdownOpen && service?.length > 0 && (
+            <div ref={dropdownRef} className="absolute z-10 w-full bg-white border border-gray-300 rounded-sm mt-1 max-h-60 overflow-y-auto shadow-lg">
               {searchServiceLoader ? (
                 <div className="p-4 text-center">Loading...</div>
               ) : (
