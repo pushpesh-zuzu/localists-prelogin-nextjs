@@ -4,8 +4,7 @@ import { Inter } from "next/font/google";
 import Header from "./component/Header/Header";
 import "./globals.css";
 import StoreProvider from "./StoreProvider";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { ToastProvider } from "@/utils/toaster";
 
 export const metadata = {
   title: "Localists",
@@ -32,7 +31,7 @@ export default function RootLayout({ children }) {
           {children}
           {/* <TrackingScripts />
               <NoscriptTags /> */}
-          <ToastContainer />
+              <ToastProvider />
         </StoreProvider>
       </body>
     </html>

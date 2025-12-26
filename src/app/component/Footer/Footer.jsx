@@ -334,7 +334,7 @@ const Footer = () => {
                 © 2025 Localists. Terms & Conditions / Cookie policy /{" "}
                 <Link
                   href="/privacy-policy"
-                  className="text-black hover:underline"
+                  className="text-[#253238] hover:underline"
                 >
                   Privacy policy
                 </Link>

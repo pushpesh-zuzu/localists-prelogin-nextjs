@@ -1,3 +1,4 @@
+import WrapperBGWidth from "../component/common/WrapperBGWidth/WrapperBGWidth";
 import Footer from "../component/Footer/Footer";
 import HeroSection from "../component/HowItWorks/HeroSection/HeroSection";
 import RegisterNow from "../component/HowItWorks/RegisterNow/RegisterNow";
@@ -42,10 +43,12 @@ export default function Page() {
   return (
     <main>
       <HeroSection />
-      <FindLocalServices />
-      <ServicesSteps />
-      <RegisterNow />
-      <Footer />
+      <WrapperBGWidth>
+        <FindLocalServices />
+        <ServicesSteps />
+        <RegisterNow />
+        <Footer />
+      </WrapperBGWidth>
     </main>
   );
 }

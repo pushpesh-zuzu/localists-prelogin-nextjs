@@ -3,6 +3,7 @@ import HeroSectionSellers from '../component/HowItWorksSellers/HeroSectionSeller
 import HowItWorksDetail from '../component/HowItWorksSellers/HowItWorksDetail';
 import RegisterNow from '../component/HowItWorks/RegisterNow/RegisterNow';
 import Footer from '../component/Footer/Footer';
+import WrapperBGWidth from '../component/common/WrapperBGWidth/WrapperBGWidth';
 
 export const metadata = {
   title: "How It Works for Professionals & Businesses - Localists",
@@ -41,9 +42,11 @@ const page = () => {
   return (
     <main>
       <HeroSectionSellers />
-      <HowItWorksDetail />
-      <RegisterNow />
-      <Footer />
+      <WrapperBGWidth>
+        <HowItWorksDetail />
+        <RegisterNow />
+        <Footer />
+      </WrapperBGWidth>
     </main>
   )
 }

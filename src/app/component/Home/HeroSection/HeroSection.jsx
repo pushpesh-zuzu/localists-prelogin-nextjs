@@ -10,9 +10,8 @@ import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import SearchIcon from "../../common/icons/HomePageIcons/SearchIcon";
 import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 import Paragraph1 from "../../UI/Typography/Paragraph1";
-import FiveStarGreenIcon from "../../common/icons/HomePageIcons/FiveStarGreenIcon";
-import StarGreen from "../../common/icons/HomePageIcons/StarGreen";
 import TrustpioletIcon from "../../common/icons/HomePageIcons/TrustpioletIcon";
+import HeroSectionSearch from "./HeroSectionSearch";
 const SearchResults = dynamic(() => import("../../common/SearchResult"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -34,10 +33,15 @@ const HeroSection = memo(function HeroSection() {
 
   const [showAllServices, setShowAllServices] = useState(false);
   const displayedServices = showAllServices ? services : services.slice(0, 5);
-    const displayedServicesMediusScreen = showAllServices ? services : services.slice(0, 9);
+  const displayedServicesMediusScreen = showAllServices
+    ? services
+    : services.slice(0, 9);
 
   const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState("");
+
+  const [Show, setShow] = useState(false);
+
   return (
     <WrapperBGWidth background={"#00aeef"}>
       <section
@@ -46,37 +50,28 @@ const HeroSection = memo(function HeroSection() {
         aria-label="Hero section"
       >
         <div className="w-full lg:w-1/2 flex flex-col xl:ml-[43px]">
-          {/* <div className="rounded-[71.08px] bg-[#A8E4F6] py-2 px-2 lg:py-2 lg:px-4 w-fit flex items-center gap-1 lg:gap-2 mb-4 xl:mb-7">
-            <p
-              className="font-[Arial] font-bold tracking-[-0.03em]  leading-[18px]
-                      text-sm sm:leading-[18px]
-                      lg:text-[24px] lg:leading-6 "
-            >
-              Excellent
-            </p>
-            <FiveStarGreenIcon className="h-6 w-16 lg:h-8 lg:w-28" />
-            <span className="flex font-semibold items-center gap-0 text-sm leading-none">
-              <StarGreen className=" w-4 lg:h-8 lg:w-5.5" />
-              <span className="lg:mt-1 text-xs">Trustpilot</span>
-            </span>
-          </div> */}
           <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] lg:mb-7 max-h-12" />
 
-          <H1 className="text-white block md:hidden lg:block text-shadow-[0_2.03px_2.03px_0_#0000001A]">
-            Find Local <span className="block">Services.</span>
-            <span className="text-black block">Fast.</span>
-          </H1>
-          <H1 className="hidden md:block lg:hidden  text-white text-shadow-[0_2.03px_2.03px_0_#0000001A]">
-            Find Local{" "}
-            <div className="flex">
-              <span className="block">Services.</span>
-              &nbsp;<span className="text-black block">Fast.</span>
+          <H1 className="text-white block  text-shadow-[0_2.03px_2.03px_0_#0000001A]">
+            <p className="md:hidden lg:block">
+              Find Local <span className="block">Services.</span>
+              <span className="text-[#253238] block">Fast.</span>
+            </p>
+            <div className="hidden md:block lg:hidden ">
+              Find Local{" "}
+              <div className="flex">
+                <span className="block">Services.</span>
+                &nbsp;<span className="text-[#253238] block">Fast.</span>
+              </div>
             </div>
           </H1>
-          <Paragraph1 style={{ textShadow: '0px 3.65px 3.65px #00000026' }} className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
+          <Paragraph1
+            style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
+            className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
+          >
             Get instant quotes from local professionals.
           </Paragraph1>
-          <div className="relative max-w-[254px] md:max-w-[246px]  lg:max-w-[404px]">
+          {/* <div className="relative max-w-[254px] md:max-w-[246px]  lg:max-w-[404px]">
             <input
               type="text"
               placeholder="Search for a service"
@@ -103,7 +98,8 @@ const HeroSection = memo(function HeroSection() {
             <div className="absolute inset-y-0 top-0 xl:-top-4 right-[19px] xl:right-10 flex items-center pointer-events-none">
               <SearchIcon className="w-6 h-6 md:w-5 md:h-5 lg:w-8 lg:h-8 mt-5 xl:mt-16" />
             </div>
-          </div>
+          </div> */}
+          <HeroSectionSearch />
         </div>
 
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">

@@ -37,7 +37,7 @@ function AdviceInsight() {
     <WrapperBGWidth>
       <section className="h-auto min-h-[336px] lg:min-h-[687px] px-7.5 py-12 sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:pt-[72px] lg:pb-[86px]">
         <H2 className="text-[#00afe3] pb-7.5 xl:pb-[53px]">
-          Advice & <span className="text-black">insight.</span>
+          Advice & <span className="text-[#253238]">insight.</span>
         </H2>
 
         <div className="hidden md:block space-y-2 xl:space-y-6 xl:mb-8">

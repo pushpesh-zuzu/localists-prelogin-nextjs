@@ -9,19 +9,19 @@ export const carouselData = [
   {
     id: 2,
     title: "Fence & Gate Installation",
-    image: "/fenceandgate.webp", 
+    image: "/homepage/fenceandgate.webp", 
     isSpecial: false
   },
   {
     id: 3,
     title: "Tree Surgery",
-    image: "/treesurgery.webp", 
+    image: "/homepage/treesurgery.webp", 
     isSpecial: false
   },
   {
     id: 4,
     title: "Artificial Grass Installation",
-    image: "/artificialgrassinstallation.webp", 
+    image: "/homepage/artificialgrassinstallation.webp", 
     isSpecial: false
   },
   {
