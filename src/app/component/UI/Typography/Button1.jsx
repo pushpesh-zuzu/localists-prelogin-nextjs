@@ -12,7 +12,6 @@ const Button1 = ({
     font-[Arial] font-bold
     tracking-[-0.03em]
     text-center align-middle
-    disabled:opacity-50 disabled:cursor-not-allowed
   `;
 
   const variants = {

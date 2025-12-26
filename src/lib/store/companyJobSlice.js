@@ -63,8 +63,6 @@ export const fetchCompanyDetails = (regNumber, user_id = null) => {
         return false;
       }
     } catch (error) {
-            console.log(error,'eroor mess')
-
       let message =
         "Your account is already registered with this Company Name. Please contact us if this is not correct.";
       showToast('error',message)
