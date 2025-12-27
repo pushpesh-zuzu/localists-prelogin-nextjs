@@ -1,9 +1,11 @@
-import WrapperBGWidth from "../component/common/WrapperBGWidth/WrapperBGWidth";
-import Footer from "../component/Footer/Footer";
-import HeroSection from "../component/HowItWorks/HeroSection/HeroSection";
-import RegisterNow from "../component/HowItWorks/RegisterNow/RegisterNow";
+import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
+import Footer from "@/app/component/Footer/Footer";
+import HeroSection from "@/app/component/HowItWorks/HeroSection/HeroSection";
 import FindLocalServices from "./FindLocalServices";
 import ServicesSteps from "./ServicesSteps";
+import RegisterNow from "@/app/component/HowItWorks/RegisterNow/RegisterNow";
+
+
 
 export const metadata = {
   title: "How It Works for Customers - Localists",
@@ -38,14 +40,13 @@ export const metadata = {
   },
 };
 
-
 export default function Page() {
   return (
     <main>
       <HeroSection />
       <WrapperBGWidth>
-        <FindLocalServices />
-        <ServicesSteps />
+        <FindLocalServices/>
+        <ServicesSteps/>
         <RegisterNow />
       </WrapperBGWidth>
       <Footer />

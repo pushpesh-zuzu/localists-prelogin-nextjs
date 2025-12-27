@@ -1,45 +1,88 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { searchService } from "@/lib/store/searchSlice";
 import { showToast } from "@/utils/toaster";
-import { getCityName, setCitySearch } from "@/lib/store/postCodeSlice";
 import GreenCheckIcon from "../../common/icons/GreenCheckIcon";
 import Image from "next/image";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
+import BuyerRegistration from "../../common/BuyerRegistration/BuyerRegistration";
+import { questionAnswerData, setbuyerRequestData, setBuyerStep, getCityName, setcitySerach } from "@/lib/store/buyerslice/buyerSlice";
+import { setSelectedServiceId, setService } from "@/lib/store/findjobslice";
+import { getBarkToken, getBarkUserData } from "@/utils/CookiesHelper";
+import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 
 export default function HeroSection() {
-  const [service, setService] = useState("")
+  const [input, setInput] = useState("");
+  const inputRef = useRef(null);
+  const [selectedService, setSelectedService] = useState("")
   const [postcode, setPostcode] = useState("")
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const [postalCodeValidate, setPostalCodeValidate] = useState(false);
   const [isCheckingPostcode, setIsCheckingPostcode] = useState(false);
 
+  const [showModal, setShowModal] = useState(false);
+
   const dispatch = useDispatch();
-  const router = useRouter();
-  const inputRef = useRef(null);
 
   const { services, loading } = useSelector((state) => state.search)
 
+  // ✅ Destructure multiple states from buyer slice
+  const { buyerStep } =
+    useSelector(
+      (state) => state.buyer || {} // replace 'buyer' with 'buyers' if store key is buyers
+    );
+
+  useEffect(() => {
+    const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
+    if (pendingModal?.shouldOpen) {
+      setSelectedServiceId({
+        id: pendingModal.serviceId,
+        name: pendingModal.serviceName,
+      });
+      dispatch(setbuyerRequestData(pendingModal.buyerRequest));
+      dispatch(setcitySerach(pendingModal.city));
+      setShowModal(true);
+      dispatch(setBuyerStep(7));
+    }
+  }, [dispatch]);
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (service) {
-        dispatch(searchService({ search: service }));
+      if (selectedService) {
+        dispatch(searchService({ search: selectedService }));
       }
     }, 500);
 
     return () => clearTimeout(timer);
-  }, [service, dispatch])
+  }, [selectedService, dispatch])
 
-  const handleSubmit = () => {
-    if (!service || !postcode) {
+
+  const handleContinue = () => {
+    if (!selectedService) {
       showToast("error", "Please select a service from the suggestions.");
       return;
     }
+    if (!postcode) {
+      showToast("error", "Please enter a postcode.");
+      return;
+    }
+    if (!postalCodeValidate) {
+      showToast("error", "Please enter a valid postcode.");
+      return;
+    }
 
-    router.push(`/find?service=${service}&postcode=${postcode}`);
+    if (getBarkUserData()?.active_status === 1) {
+      showToast(
+        "error",
+        "You are already logged in, please switch to buyer to proceed."
+      );
+      return;
+    }
+
+    dispatch(questionAnswerData({ service_id: selectedService.id }));
+    setShowModal(true);
   };
 
   const debounceTimer = useRef(null);
@@ -58,12 +101,15 @@ export default function HeroSection() {
 
       setIsCheckingPostcode(true);
       try {
-        const newResponse = await dispatch(
-          getCityName({ postcode: value })
-        ).unwrap();
+        const response = await dispatch(getCityName({ postcode: value }));
+        const newResponse = response?.unwrap
+          ? await response.unwrap()
+          : response;
+
+        console.log("newResponse:", newResponse)
         if (newResponse?.data?.city) {
           setPostalCodeValidate(true);
-          dispatch(setCitySearch(newResponse.data.city));
+          dispatch(setcitySerach(newResponse.data.city));
           lastInvalidPinRef.current = "";
         } else {
           if (lastInvalidPinRef.current !== value) {
@@ -86,25 +132,34 @@ export default function HeroSection() {
 
   const handleSelectService = useCallback(
     (item) => {
-      setService(item.name);
+      setInput(item.name);
+      setSelectedService(item);
       setIsDropdownOpen(false);
+      setTimeout(() => dispatch(setService([])), 100);
     },
     [dispatch]
   );
 
+  const handleClose = () => {
+    setShowModal(false);
+    setInput("");
+    setPostcode("");
+    setSelectedService(null);
+  };
+
   useEffect(() => {
     const delayDebounce = setTimeout(() => {
-      if (isDropdownOpen && service.trim()) {
-        dispatch(searchService({ search: service }));
+      if (isDropdownOpen && input.trim()) {
+        dispatch(searchService({ search: input }));
       }
     }, 500);
 
     return () => clearTimeout(delayDebounce);
-  }, [service, isDropdownOpen, dispatch]);
+  }, [input, dispatch, isDropdownOpen]);
 
   return (
     <section className="relative flex flex-col items-center justify-center h-auto px-[208px] py-[65.5px] max-[1280px]:px-[100px] max-[980px]:px-[50px] max-[480px]:px-[10px] max-[480px]:py-[20px] lg:min-h-[633px]">
-
+      <CloseBrowserAbandon />
       <Image
         src="/images/HowItWorks/HowLocalistsWorksBg.webp"
         alt="Local service search form on localists.com"
@@ -140,14 +195,15 @@ export default function HeroSection() {
                         type="text"
                         className="font-[Arial] font-bold !text-black border border-[#D9D9D9] rounded-[5px] pl-[12px] md:pl-[16px] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)]"
                         placeholder="Architects, Landscaping, ..."
-                        value={service}
+                        value={input}
                         onChange={(e) => {
-                          setService(e.target.value);
+                          setInput(e.target.value);
+                          setSelectedService(e.target.value);
                           setIsDropdownOpen(!!e.target.value);
                         }}
                       />
 
-                      {isDropdownOpen && service?.length > 0 && (
+                      {isDropdownOpen && services?.length > 0 && (
                         <div className="absolute top-full mt-1 w-full md:w-[100%] lg:max-w-[410px] bg-white border border-[#ddd] rounded-[4px] max-h-[200px] overflow-y-auto z-10">
                           {loading ? (
                             <div className="flex items-center gap-2 p-2 text-sm text-gray-500">
@@ -198,7 +254,7 @@ export default function HeroSection() {
                   </div>
 
                   <button type="button" aria-haspopup="dialog" className="py-[13px] px-[33px] gap-[9.49px] rounded-[94.94px] bg-[#253238] text-white text-[16px] lg:text-[18px] font-[Arial] font-bold tracking-[-0.03em] shadow-[0px_1.9px_1.9px_rgba(0,0,0,0.1)] mt-[30px] cursor-pointer"
-                    onClick={handleSubmit}
+                    onClick={handleContinue}
                   >
                     Continue
                   </button>
@@ -208,6 +264,17 @@ export default function HeroSection() {
           </div>
         </div>
       </WrapperBGWidth>
+      
+      {showModal &&
+        (getBarkUserData()?.active_status === 2 || !getBarkToken()) && (
+          <BuyerRegistration
+            closeModal={handleClose}
+            service_Id={selectedService?.id}
+            service_Name={selectedService?.name}
+            postcode={postcode}
+            postalCodeValidate={postalCodeValidate}
+          />
+        )}
     </section>
   );
 }

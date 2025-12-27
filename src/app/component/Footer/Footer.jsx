@@ -74,7 +74,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/how-it-works-for-customers"
+                    href="/en/gb/how-it-works-for-customers"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px] xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
                     How it works

@@ -30,7 +30,7 @@ const ThankuPage = () => {
       if (pendingModal?.baseRedirectPath && pendingModal.baseRedirectPath !== "root") {
         // Assuming you have a way to get lang and country
         const lang = "en"; // Replace with actual logic
-        const country = "uk"; // Replace with actual logic
+        const country = "gb"; // Replace with actual logic
         redirectPath = `/${lang}/${country}/${pendingModal.baseRedirectPath}`;
       }
       
