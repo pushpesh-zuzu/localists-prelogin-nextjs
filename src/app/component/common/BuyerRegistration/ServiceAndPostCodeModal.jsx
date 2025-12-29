@@ -322,6 +322,7 @@ const ServiceAndPostCodeModal = ({
             onFocus={handleInputFocus}
             error={errors.service}
             icon={<Search className="w-4 h-4 text-gray-400" />}
+            disabled
           />
 
           {isDropdownOpen && service?.length > 0 && (
