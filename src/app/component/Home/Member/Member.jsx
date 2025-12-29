@@ -7,7 +7,7 @@ import Button from "../../UI/Typography/Button";
 
 function Member() {
   return (
-    <div className="w-full max-w-[300px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto py-10 xl:py-[63px]">
+    <div className="w-full max-w-[300px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto py-16 xl:py-[63px]">
       <div className="hidden md:flex w-fit rounded-[36px] overflow-hidden mx-auto ">
         <div className=" w-[340] md:h-[280px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
           <>
