@@ -3,8 +3,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axiosInstance from "./axios";
 import { showToast } from "@/utils/toaster";
-import { getBarkToken, getRegisterTokens, setCookie } from "@/utils/CookiesHelper";
-// import { fetchCompanyDetails } from "./companyLookup";
+import {
+  getBarkToken,
+  getBarkUserData,
+  getRegisterTokens,
+  setCookie,
+} from "@/utils/CookiesHelper";
+import { fetchCompanyDetails } from "./companyJobSlice";
 // import { changeSequenceServices } from "@/utils/allservices";
 // import { safeLocalStorage } from "@/utils/localStorage";
 
@@ -14,7 +19,7 @@ const initialState = {
   hasPopulatedFromCompany: false,
   searchServiceLoader: false,
   service: [],
-  registerData: getBarkToken() || null,
+  registerData: getBarkUserData() || null,
   registerLoader: false,
   registerStep: 0,
   registerToken: getRegisterTokens() || null,
@@ -71,13 +76,8 @@ const initialState = {
     entry_url: "",
     user_ip_address: "",
   },
-  // authToken: JSON.parse(safeLocalStorage.getItem("registerTokens")) || null,
-  authToken: null,
+  authToken: getBarkToken() || null,
 };
-
-// ----------------------------
-// Async Thunks
-// ----------------------------
 
 export const getPopularServiceList = () => {
   return async (dispatch) => {
@@ -162,8 +162,7 @@ export const registerUserData = (registerData) => {
         `users/registration`,
         registerData
       );
-
-      if (response) {
+      if (response?.data?.success) {
         dispatch(setRegisterData(response?.data?.data));
         dispatch(setRegisterToken(response?.data?.data?.remember_tokens));
         dispatch(setAuthToken(response?.data?.data?.remember_tokens));
@@ -290,15 +289,18 @@ export const checkCompanyNameApi = (companyData, isapi = false) => {
     } catch (error) {
       const errorData = error?.response?.data?.message;
       dispatch(setErrorCheckComanyName(error?.response?.data));
-      showToast("error", error?.response?.data?.message?.company_reg_number?.[0]);
-      
+      showToast(
+        "error",
+        error?.response?.data?.message?.company_reg_number?.[0]
+      );
+
       if (errorData && typeof errorData === "object" && !isapi) {
         Object.values(errorData).forEach((messages) => {
           if (Array.isArray(messages)) {
             messages.forEach((msg) => showToast("error", msg));
-            // if (companyData.company_reg_number) {
-            //   dispatch(fetchCompanyDetails(companyData.company_reg_number));
-            // }
+            if (companyData.company_reg_number) {
+              dispatch(fetchCompanyDetails(companyData.company_reg_number));
+            }
           } else {
             showToast("error", messages);
           }
@@ -444,7 +446,7 @@ const findJobSlice = createSlice({
       state.registerToken = action.payload;
       // localStorage will be used later
       // safeLocalStorage.setItem("registerTokens", JSON.stringify(action.payload));
-      
+      setCookie("barkToken", action.payload);
     },
     setSelectedServiceId(state, action) {
       state.selectedServiceId = action.payload;
@@ -463,6 +465,7 @@ const findJobSlice = createSlice({
       state.registerData = action.payload;
       // localStorage will be used later
       // safeLocalStorage.setItem("registerDataToken", JSON.stringify(action.payload));
+      setCookie("barkUserToken", action.payload);
     },
     setErrorMessage(state, action) {
       state.errorMessage = action.payload;
@@ -519,17 +522,16 @@ const findJobSlice = createSlice({
     clearAuthToken(state) {
       state.authToken = null;
     },
-    clearServiceFormData(state) {
+    clearServiceFormData(state, action) {
       state.selectedServiceFormData = {
         miles1: "20",
         postcode: null,
-        cities: "",
+        cities: null,
         coordinates: [],
-        is_online: 0,
         nation_wide: 0,
         name: "",
         email: "",
-        company_reg_number: "",
+        password: "",
         phone: "",
         company_name: "",
         company_size: null,
@@ -539,18 +541,16 @@ const findJobSlice = createSlice({
         new_jobs: null,
         social_media: null,
         address: "",
+        state: "",
         city: "",
-        country: "",
-        apartment: "",
         zipcode: "",
+        is_zipcode: 1,
+        suite: "",
         service_id: [],
         auto_bid: 1,
         miles2: "20",
-        expanded_radius: "",
-        coordinates2: "",
+        company_reg_number: "",
         validPostCode: false,
-        validPostCode2: false,
-        postcode2: null,
         entry_url: "",
         user_ip_address: "",
       };

@@ -1,4 +1,3 @@
-// C:\Users\ANAR SINGH\localists-website\src\app\en\gb\sellers\create-account\[serviceTitle]\ServiceCreateAccount\page.jsx
 "use client";
 
 import {
@@ -12,10 +11,27 @@ import {
 import { showToast } from "@/utils/toaster";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ServiceLocationStep from "./ServiceLocationStep";
-import ServiceDetailsStep from "./ServiceDetailsStep";
-import ServiceBusinessAddressStep from "./ServiceBusinessAddressStep";
-import OtherServiceStep from "./OtherServiceStep";
+import dynamic from "next/dynamic";
+import { handleScrollToBottom } from "@/utils/handleScrollToBottom";
+const ServiceLocationStep = dynamic(() => import("./ServiceLocationStep"), {
+  ssr: false,
+  loading: () => <div className="hidden">Loading...</div>,
+});
+const ServiceDetailsStep = dynamic(() => import("./ServiceDetailsStep"), {
+  ssr: false,
+  loading: () => <div className="hidden">Loading...</div>,
+});
+const ServiceBusinessAddressStep = dynamic(
+  () => import("./ServiceBusinessAddressStep"),
+  {
+    ssr: false,
+    loading: () => <div className="hidden">Loading...</div>,
+  }
+);
+const OtherServiceStep = dynamic(() => import("./OtherServiceStep"), {
+  ssr: false,
+  loading: () => <div className="hidden">Loading...</div>,
+});
 
 const ServiceCreateAccount = ({ serviceTitle }) => {
   const dispatch = useDispatch();
@@ -23,7 +39,6 @@ const ServiceCreateAccount = ({ serviceTitle }) => {
   const { selectedServiceFormData } = useSelector((state) => state.findJobs);
   const { registerStep } = useSelector((state) => state.findJobs);
 
-  // Format title
   const formattedTitle = serviceTitle
     ? serviceTitle
         .split("-")
@@ -258,11 +273,9 @@ const ServiceCreateAccount = ({ serviceTitle }) => {
 
   const nextStep = () => {
     window.scrollTo(0, 0);
-
-    // if (validateStep()) {
-    //   dispatch(setRegisterStep(registerStep + 1)); later we removed this
-    // }
-    dispatch(setRegisterStep(registerStep + 1));
+    if (validateStep()) {
+      dispatch(setRegisterStep(registerStep + 1));
+    }
   };
   const prevStep = () => {
     dispatch(setRegisterStep(registerStep - 1));
@@ -274,58 +287,62 @@ const ServiceCreateAccount = ({ serviceTitle }) => {
     };
   }, []);
 
+  useEffect(() => {
+    handleScrollToBottom()
+  }, [registerStep])
+  
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center">
       <div className="w-full max-w-4xl">
         {registerStep === 1 && (
           <ServiceLocationStep
             nextStep={nextStep}
-            setFormData={setSelectedServiceFormData}
-            formData={selectedServiceFormData}
             handleInputChange={handleInputChange}
+            formData={selectedServiceFormData}
+            setFormData={setSelectedServiceFormData}
             errors={errors}
           />
-          // 'hello step 1 '
         )}
 
         {registerStep === 2 && (
           <ServiceDetailsStep
             nextStep={nextStep}
-            setFormData={setSelectedServiceFormData}
-            formData={selectedServiceFormData}
             prevStep={prevStep}
             handleInputChange={handleInputChange}
+            formData={selectedServiceFormData}
+            setFormData={setSelectedServiceFormData}
             errors={errors}
             emailCheck={emailCheck}
             companyCheck={companyCheck}
             phoneCheck={phoneCheck}
             companyValue={companyValue}
+            serviceName={serviceTitle}
           />
         )}
 
         {registerStep === 3 && (
           <ServiceBusinessAddressStep
-            prevStep={prevStep}
-            setFormData={setSelectedServiceFormData}
-            formData={selectedServiceFormData}
             nextStep={nextStep}
+            prevStep={prevStep}
             handleInputChange={handleInputChange}
-            errors={errors}
-            addressCheck={addressCheck}
+            formData={selectedServiceFormData}
+            setFormData={setSelectedServiceFormData}
             setHasPopulatedFromCompany={setHasPopulatedFromCompany}
             addressValue={addressValue}
-            cityvalue={city}
-            countryvalue={country}
+            // errors={errors}
+            // addressCheck={addressCheck}
+            // cityvalue={city}
+            // countryvalue={country}
           />
         )}
 
         {registerStep === 4 && (
           <OtherServiceStep
             prevStep={prevStep}
+            handleInputChange={handleInputChange}
             setFormData={setSelectedServiceFormData}
             formData={selectedServiceFormData}
-            handleInputChange={handleInputChange}
-            errors={errors}
+            // errors={errors}
           />
         )}
       </div>

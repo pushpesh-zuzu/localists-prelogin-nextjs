@@ -28,9 +28,8 @@ const ThankuPage = () => {
       let redirectPath = "/";
       
       if (pendingModal?.baseRedirectPath && pendingModal.baseRedirectPath !== "root") {
-        // Assuming you have a way to get lang and country
-        const lang = "en"; // Replace with actual logic
-        const country = "gb"; // Replace with actual logic
+        const lang = "en"; 
+        const country = "gb";
         redirectPath = `/${lang}/${country}/${pendingModal.baseRedirectPath}`;
       }
       
@@ -114,7 +113,7 @@ const ThankuPage = () => {
             <div className="flex justify-center mb-8">
               <button
                 onClick={handleSubmit}
-                className="cursor-pointer bg-[#00afe3] text-white px-8 py-3 rounded flex items-center gap-1 font-medium text-sm md:text-base transition-colors duration-200"
+                className="cursor-pointer rounded-full bg-[#00afe3] text-white px-8 py-3 rounded flex items-center gap-1 font-medium text-sm md:text-base transition-colors duration-200"
               >
                 {/* Checkbox icon image */}
                 <div className="w-5 h-5 bg-[#00afe3] rounded flex items-center justify-center ">

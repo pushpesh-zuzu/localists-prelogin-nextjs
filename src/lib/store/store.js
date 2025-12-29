@@ -1,19 +1,21 @@
 // src/lib/store/store.js
-import { configureStore } from '@reduxjs/toolkit';
-import searchReducer from './searchSlice.js';
-import buyerReducer from './buyerslice/buyerSlice.js';
-import findJobsReducer from './findjobslice.js';  // name change
+import { configureStore } from "@reduxjs/toolkit";
+import searchReducer from "./searchSlice.js";
+import buyerReducer from "./buyerslice/buyerSlice.js";
+import findJobsReducer from "./findjobslice.js";
+import companyReducer from "./companyJobSlice.js";
 
 export const store = configureStore({
   reducer: {
     search: searchReducer,
-    buyer: buyerReducer, 
-    findJobs: findJobsReducer  // ✅ ye change karo
+    buyer: buyerReducer,
+    findJobs: findJobsReducer,
+    companyLook: companyReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,
       immutableCheck: false,
     }),
-  devTools: process.env.NODE_ENV === 'development',
+  devTools: process.env.NODE_ENV === "development",
 });
