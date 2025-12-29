@@ -288,7 +288,7 @@ const DescribeYourRequest = ({
       {/* Button */}
       <div className="mt-[30.44px] max-[480px]:mt-[10.44px] flex justify-center">
         <button
-          className="cursor-pointer rounded border-none bg-[#00afe3] px-[29px] py-[9px] text-center align-middle text-[15px] font-medium text-white hover:bg-[#007bbd] disabled:opacity-50 max-[768px]:px-6 max-[768px]:py-2 max-[768px]:text-sm max-[480px]:px-5 max-[480px]:py-2 max-[480px]:text-[13px]"
+          className="cursor-pointer rounded-full rounded border-none bg-[#00afe3] px-[29px] py-[9px] text-center align-middle text-[15px] font-medium text-white disabled:opacity-50 max-[768px]:px-6 max-[768px]:py-2 max-[768px]:text-sm max-[480px]:px-5 max-[480px]:py-2 max-[480px]:text-[13px]"
           onClick={handleSubmit}
           disabled={isLoading}
         >

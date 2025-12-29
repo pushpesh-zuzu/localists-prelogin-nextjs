@@ -122,7 +122,6 @@ const QuestionModal = ({
   };
 
   const handleNext = () => {
-    console.log(selectedOption, "selecteoption");
     if (selectedOption.length === 0) {
       setError("Please select at least one option.");
       return;
