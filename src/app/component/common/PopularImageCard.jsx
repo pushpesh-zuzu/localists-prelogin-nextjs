@@ -10,7 +10,7 @@ export default function PopularImageCard({
 }) {
   return (
     <div
-      className="relative h-[180px] w-[126px] md:h-[244px] md:w-48 lg:h-[340px] lg:w-[238px] xl:h-[380px] xl:w-[267px] bg-white rounded-[20px] md:rounded-[22px] lg:rounded-[24px] xl:rounded-[24.93px] overflow-hidden"
+      className="relative h-[180px] w-[126px] md:h-[244px] md:w-48 lg:h-[300px] lg:w-[200px] xl:h-[380px] xl:w-[267px] bg-white rounded-[20px] md:rounded-[22px] lg:rounded-[24px] xl:rounded-[24.93px] overflow-hidden"
       style={{
         background: "#00AFE3",
       }}

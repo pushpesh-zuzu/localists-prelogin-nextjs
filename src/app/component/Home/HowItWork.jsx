@@ -25,7 +25,7 @@ function HowItWork() {
             iconSrc={<HowItWorkUserIcon className="h-15 w-15 md:h-13 md:w-20 lg:h-24 lg:w-[120px]" />}
             title="Connect"
             description="Receive quotes from Professionals"
-            mw={"xs:w-full md:w-[140px] lg:w-[250x] xl:w-[275px]"}
+            mw={"xs:w-full md:w-[140px] lg:w-[239px] xl:w-[275px]"}
           />
 
           <HowItWorksCard
