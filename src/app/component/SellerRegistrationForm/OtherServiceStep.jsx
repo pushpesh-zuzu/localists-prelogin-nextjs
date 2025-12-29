@@ -357,7 +357,7 @@ function OtherServiceStep({
       >
         <div className="flex flex-col sm:flex-row gap-3 items-center mb-10">
           <Paragraph variant="primary">You've asked for leads for:</Paragraph>
-          <span className="px-5 py-2 text-[18px] font-medium bg-[#e3f6fc] text-[#00afe3] rounded-[3px]">
+          <span className="rounded-full px-5 py-2 text-[18px] font-medium bg-[#e3f6fc] text-[#00afe3] rounded-[3px]">
             {params?.serviceTitle // ✅ params instead of item
               ?.replace(/-/g, " ")
               .replace(/\b\w/g, (char) => char.toUpperCase())}
@@ -374,7 +374,7 @@ function OtherServiceStep({
             selectedServices?.map((service) => (
               <span
                 key={service.id}
-                className="py-1.5 px-2.5 leading-6 text-xs font-semibold text-white bg-[#00afe3] rounded-[3px] cursor-pointer"
+                className="rounded-full py-1.5 px-2.5 leading-6 text-xs font-semibold text-white bg-[#00afe3] cursor-pointer"
               >
                 {service.name}
                 <span
@@ -548,7 +548,7 @@ function OtherServiceStep({
 
         {/* ✅ Expand Radius Button */}
         <Button
-          className={`bg-[#00afe3] text-white py-1.5 px-3 rounded-[3px] text-[20px] ${
+          className={`bg-[#00afe3] text-white py-1.5 px-3 rounded-[3px] text-[20px] rounded-full ${
             disableWithService ? "cursor-pointer" : ""
           }`}
           onClick={handleExpandRadius}
