@@ -27,7 +27,7 @@ const QuestionModal = ({
   isStartWithQuestionModal = false,
 }) => {
   const dispatch = useDispatch();
-    const searchParams = useSearchParams();
+  const searchParams = useSearchParams();
   const { buyerRequest, requestLoader, citySerach, questionanswerData } =
     useSelector((state) => state.buyer);
   const { service, registerData } = useSelector((state) => state.findJobs);
@@ -122,6 +122,7 @@ const QuestionModal = ({
   };
 
   const handleNext = () => {
+    console.log(selectedOption, "selecteoption");
     if (selectedOption.length === 0) {
       setError("Please select at least one option.");
       return;
@@ -267,7 +268,7 @@ const QuestionModal = ({
           className="absolute top-[5%] right-[7%] max-[360px]:right-[10%] sm:top-[6%] sm:right-[6%] z-10 p-1 font-bold bg-white cursor-pointer rounded-full transition-all"
           aria-label="Close modal"
         >
-          <X size={18} strokeWidth={5} className="font-black"  color="#0aaeff"/>
+          <X size={18} strokeWidth={5} className="font-black" color="#0aaeff" />
         </button>
 
         {/* Modal Content */}
@@ -300,7 +301,7 @@ const QuestionModal = ({
                     (opt, index) => (
                       <label
                         key={index}
-                        className="flex cursor-pointer items-center gap-2 rounded-[3px] border border-[#dedede] px-[10px] py-[10px] text-left text-sm font-medium text-[#253238] hover:bg-gray-50 transition-colors"
+                        className="flex cursor-pointer items-center gap-2 rounded-[3px] border border-[#dedede] px-[10px] py-[10px] text-left text-sm font-medium text-black hover:bg-gray-50 transition-colors"
                       >
                         <input
                           type={
@@ -315,7 +316,7 @@ const QuestionModal = ({
                           onChange={handleOptionChange}
                           className="flex-shrink-0"
                         />
-                        <span className="font-[Arial] font-medium tracking-[-0.03em] inline-block wrap-break-word text-[#253238]">
+                        <span className="font-[Arial] font-medium tracking-[-0.03em] inline-block wrap-break-word text-black">
                           {opt.option}
                         </span>
                       </label>
@@ -341,11 +342,13 @@ const QuestionModal = ({
                 </div>
               </div>
 
-
+              {!selectedOption.includes("Something else (please describe)") &&
+                error && <p className="text-xs text-red-600 flex items-start mt-1.5">{error}</p>}
               {/* Fixed Buttons - Always visible */}
               <div className="flex-shrink-0 mt-6 flex justify-between">
                 {currentQuestion > 0 ? (
-                  <Button1 variant="secondary"
+                  <Button1
+                    variant="secondary"
                     onClick={handleBack}
                     className="cursor-pointer  border-none disabled:opacity-50"
                   >
@@ -355,7 +358,8 @@ const QuestionModal = ({
                   <div className="w-20"></div>
                 )}
 
-                 <Button1 variant="primary"
+                <Button1
+                  variant="primary"
                   onClick={handleNext}
                   disabled={requestLoader}
                   className="cursor-pointer  border-none disabled:opacity-50"
@@ -369,7 +373,7 @@ const QuestionModal = ({
               </div>
             </>
           ) : (
-            <div className="flex-1 flex items-center justify-center text-base text-[#253238]">
+            <div className="flex-1 flex items-center justify-center text-base text-black">
               <h2>No questions available</h2>
             </div>
           )}
