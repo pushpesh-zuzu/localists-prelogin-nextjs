@@ -15,46 +15,11 @@ const JobButton = ({ title }) => (
   </button>
 );
 
-export default function HireRelatedToService() {
-  const tabData = {
-    professionals: [
-      "Electricians in London",
-      "Roofers in Edinburgh",
-      "Maths Tutor in Manchester",
-      "Plumbers in Birmingham",
-      "Gardeners in Wolverhampton",
-      "Plumbers in Birmingham",
-      "Roofers in Norwich",
-      "Garden Designers Cardiff",
-      "Electricians in London",
-      "Roofers in Edinburgh",
-      "Patio Layers in Manchester",
-      "Plumbers in Birmingham",
-    ],
-    popular: [
-      "Landscapers near me",
-      "Patio Layers near me",
-      "Private Tutors near me",
-      "Personal Trainers near me",
-      "Landscapers near me",
-      "Patio Layers near me",
-      "Private Tutors near me",
-      "Fence & Gate Installers near me",
-    ],
-    insight: [
-      "Hiring Tips",
-      "Roofing Safety",
-      "Electrician Rates",
-      "Garden Design",
-      "Math Tutoring",
-      "Best Patio Materials",
-      "Interior Design",
-      "Home Renovation",
-      "Top Carpenters",
-      "Painting Techniques",
-      "DIY Gardening Hacks",
-    ],
-  };
+export default function HireRelatedToService({
+  heading1 = "Hire with",
+  heading2 = "confidence",
+  tabData = [],
+}) {
   const [currentTab, setcurrentTab] = useState("popular");
   const handleClick = (activtab) => {
     setcurrentTab(activtab);
@@ -75,7 +40,7 @@ export default function HireRelatedToService() {
                           text-[30px] md:text-[35px] leading-7 md:leading-6
                           lg:text-[50px] lg:leading-[55px] text-white whitespace-nowrap "
             >
-              Hire with <span className="text-[#023047]">confidence.</span>
+              {heading1} <span className="text-[#023047]">{heading2}.</span>
             </h2>
             <nav className="flex gap-1 sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap">
               {tabs.map((tab, index) => (

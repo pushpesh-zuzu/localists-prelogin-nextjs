@@ -15,14 +15,18 @@ function HowItWork() {
         </H2>
         <div className="flex flex-col md:flex-row justify-items-start gap-5 xl:gap-[50px]">
           <HowItWorksCard
-            iconSrc={<HowItWorkIconPencingIcon className="h-15 w-15 md:h-13 md:w-20 lg:h-24 lg:w-[120px]" />}
+            iconSrc={
+              <HowItWorkIconPencingIcon className="h-15 w-15 md:h-13 md:w-20 lg:h-24 lg:w-[120px]" />
+            }
             title="Search"
             description="Fill in your details for your project"
             mw={"xs:w-full md:w-[175px]  lg:w-[250px] xl:w-[310px]"}
           />
 
           <HowItWorksCard
-            iconSrc={<HowItWorkUserIcon className="h-15 w-15 md:h-13 md:w-20 lg:h-24 lg:w-[120px]" />}
+            iconSrc={
+              <HowItWorkUserIcon className="h-15 w-15 md:h-13 md:w-20 lg:h-24 lg:w-[120px]" />
+            }
             title="Connect"
             description="Receive quotes from Professionals"
             mw={"xs:w-full md:w-[140px] lg:w-[239px] xl:w-[275px]"}
@@ -38,7 +42,7 @@ function HowItWork() {
           />
         </div>
         <div className="hidden sm:flex justify-center">
-          <Button className="rounded-[94px] bg-[#10C87B] text-white mt-6 px-8 lg:mt-12 md:py-1.5 md:px-4.5 lg:py-2 lg:px-8 ">
+          <Button className="rounded-[94px]  bg-[#10C87B] text-white mt-6 px-8 lg:mt-12 md:py-1.5 md:px-4.5 lg:py-2 lg:px-8 ">
             Get Started
           </Button>
         </div>
