@@ -5,6 +5,7 @@ export default function Page() {
     return (
         <main>
             <HeroSection />
+            Hello World
         </main>
     );
 }
