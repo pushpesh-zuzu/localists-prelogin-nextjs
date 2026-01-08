@@ -1,0 +1,32 @@
+"use client";
+import Image from "next/image";
+
+export default function BlogCards({ title, image, priority = false }) {
+  return (
+    <article className="relative rounded-[23px] overflow-hidden h-[300px] group cursor-pointer">
+      <Image
+        src={image}
+        alt={title}
+        fill
+        sizes="(max-width: 1024px) 100vw, 33vw"
+        className="object-cover transition-transform duration-300 group-hover:scale-105"
+        quality={85}
+        priority={priority}
+      />
+
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]" />
+
+      <h3
+        className="
+          absolute bottom-4 left-4 right-4
+          text-white font-black -tracking-[0.03em]
+          text-[12px] leading-[14px]
+          sm:text-[15px] sm:leading-[18px]
+          xl:text-[25px] xl:leading-[25px]
+        "
+      >
+        {title}
+      </h3>
+    </article>
+  );
+}

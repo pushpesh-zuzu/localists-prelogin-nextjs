@@ -3,13 +3,13 @@ import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import SearchIcon from "../../common/icons/HomePageIcons/SearchIcon";
-// import { searchService } from "@/lib/store/searchSlice";
-// import {
-//   setbuyerRequestData,
-//   setBuyerStep,
-//   setcitySerach,
-// } from "@/lib/store/buyerslice/buyerSlice";
-// import { setSelectedServiceId } from "@/lib/store/findjobslice";
+import { searchService } from "@/lib/store/searchSlice";
+import {
+  setbuyerRequestData,
+  setBuyerStep,
+  setcitySerach,
+} from "@/lib/store/buyerslice/buyerSlice";
+import { setSelectedServiceId } from "@/lib/store/findjobslice";
 const SearchResults = dynamic(() => import("../../common/SearchResult"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -34,19 +34,19 @@ function HeroSectionSearch() {
   };
   const { selectedSearchService } = useSelector((state) => state.search);
 
-  // useEffect(() => {
-  //   const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
-  //   if (pendingModal?.shouldOpen) {
-  //     setSelectedServiceId({
-  //       id: pendingModal.serviceId,
-  //       name: pendingModal.serviceName,
-  //     });
-  //     dispatch(setbuyerRequestData(pendingModal.buyerRequest));
-  //     dispatch(setcitySerach(pendingModal.city));
-  //     setShow(true);
-  //     dispatch(setBuyerStep(7));
-  //   }
-  // }, [dispatch]);
+  useEffect(() => {
+    const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
+    if (pendingModal?.shouldOpen) {
+      setSelectedServiceId({
+        id: pendingModal.serviceId,
+        name: pendingModal.serviceName,
+      });
+      dispatch(setbuyerRequestData(pendingModal.buyerRequest));
+      dispatch(setcitySerach(pendingModal.city));
+      setShow(true);
+      dispatch(setBuyerStep(7));
+    }
+  }, [dispatch]);
   return (
     <>
       <div className="relative max-w-[254px] md:max-w-[246px]  lg:max-w-[404px]">
@@ -61,11 +61,11 @@ function HeroSectionSearch() {
             const search = e.target.value;
             setSearchQuery(search);
             if (search.trim() !== "") {
-              // dispatch(searchService({ search }));
+              dispatch(searchService({ search }));
             }
           }}
         />
-        {/* {searchQuery.length ? (
+        {searchQuery.length ? (
           <SearchResults
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
@@ -74,12 +74,12 @@ function HeroSectionSearch() {
           />
         ) : (
           ""
-        )} */}
+        )}
         <div className="absolute inset-y-0 top-0 xl:-top-4 right-[19px] xl:right-10 flex items-center pointer-events-none">
           <SearchIcon className="w-6 h-6 md:w-5 md:h-5 lg:w-8 lg:h-8 mt-5 xl:mt-16" />
         </div>
       </div>
-      {/* {show && (
+      {show && (
         <BuyerRegistration
           closeModal={handleClose}
           service_Id={selectedSearchService?.id}
@@ -88,7 +88,7 @@ function HeroSectionSearch() {
           // postcode={pincode}
           // postalCodeValidate={postalCodeValidate}
         />
-      )} */}
+      )}
     </>
   );
 }
