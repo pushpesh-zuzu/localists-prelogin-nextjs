@@ -5,10 +5,19 @@ import H5 from "../UI/Typography/H5";
 export default function CarouselCard({ card }) {
   if (card.isSpecial) {
     return (
-      <div className="select-none flex flex-col gap-6 text-center px-3 py-[22px] lg:px-[32px]  rounded-2xl xl:px-[51px] xl:py-[43px] max-w-[281px]   h-[132px]  sm:h-[145px] lg:h-[200px] xl:h-[235px] bg-[#7CD6F0] xl:rounded-[28px] font-bold">
-        <H3>{card.title}</H3>
-        <div className="flex justify-center">
-          <button className="rounded-full mb- bg-black text-white px-[18px] xl:px-[35px] text-base xl:text-[20px] -tracking-[3%] mx-auto py-[3px] lg:py-[5px]">
+      <div
+        className="
+    select-none flex flex-col justify-center items-center gap-6 text-center px-3 py-[22px]
+    lg:px-[32px] xl:px-[51px] xl:py-[43px] max-w-[281px] h-[132px] sm:h-[145px] :h-[200px] xl:h-[235px]
+ bg-[#7CD6F0] rounded-2xl xl:rounded-[28px] font-bold
+  "
+      >
+        <div className="flex flex-col justify-center items-center gap-4">
+          <H3 className="leading-tight break-words">
+            {card.title}
+          </H3>
+
+          <button className="rounded-full bg-black text-white px-[18px] xl:px-[35px] text-base xl:text-[20px] -tracking-[3%] py-[3px] lg:py-[5px]">
             View All
           </button>
         </div>
