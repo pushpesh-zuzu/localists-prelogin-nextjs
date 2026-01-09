@@ -18,7 +18,7 @@ export default function BlogCards({ title, image, priority = false }) {
 
       <h3
         className="
-          absolute bottom-4 left-4 right-4
+          absolute bottom-7 left-7 right-4
           text-white font-black -tracking-[0.03em]
           text-[12px] leading-[14px]
           sm:text-[15px] sm:leading-[18px]
