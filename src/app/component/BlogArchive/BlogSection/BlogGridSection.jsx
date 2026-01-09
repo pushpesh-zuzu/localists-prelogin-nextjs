@@ -41,7 +41,7 @@ export default function BlogGridSection() {
 
                     <BlogHeroCard
                         title="A guide to Tree Preservation Orders"
-                        image="/images/blogPage/guideTree.webp"
+                        image="/images/BlogPage/guideTree.webp"
                     />
 
                     {blogs.map((item, index) => (
