@@ -8,7 +8,7 @@ export default function CarouselCard({ card }) {
       <div
         className="
     select-none flex flex-col justify-center items-center gap-6 text-center px-3 py-[22px]
-    lg:px-[32px] xl:px-[51px] xl:py-[43px] max-w-[281px] h-[132px] sm:h-[145px] :h-[200px] xl:h-[235px]
+    lg:px-[32px] xl:px-[51px] xl:py-[43px] max-w-[281px] h-[132px] sm:h-[202px] :h-[200px] xl:h-[235px]
  bg-[#7CD6F0] rounded-2xl xl:rounded-[28px] font-bold
   "
       >
