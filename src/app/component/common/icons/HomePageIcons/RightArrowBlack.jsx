@@ -1,6 +1,6 @@
 import React from "react";
 
-function RightArrowBlack({ className = "" }) {
+function RightArrowBlack({ className = "", color = "#253238" }) {
   return (
     <svg
       width="15"
@@ -12,7 +12,7 @@ function RightArrowBlack({ className = "" }) {
     >
       <path
         d="M1.75 23.4167L12.5833 12.5833L1.75 1.75"
-        stroke="#253238"
+        stroke={color}
         strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"

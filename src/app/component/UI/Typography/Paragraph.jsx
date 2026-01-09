@@ -1,8 +1,9 @@
 export default function Paragraph({
   children,
   className = "",
-  bold = false,
+  bold = "",
   variant = "primary",
+  dangerouslySetInnerHTML, // Add this prop
 }) {
   const variants = {
     primary: ` text-[18px] leading-[18px]
@@ -22,10 +23,27 @@ export default function Paragraph({
         lg:text-[16px] lg:leading-[20px]
         `,
   };
+
+  // Handle dangerouslySetInnerHTML
+  if (dangerouslySetInnerHTML) {
+    return (
+      <p
+        className={`
+          font-[Arial] ${bold !== "" ? bold : "font-bold"}
+          tracking-[-0.03em]
+          ${variants[variant]}
+          ${className}
+        `}
+        dangerouslySetInnerHTML={dangerouslySetInnerHTML}
+      />
+    );
+  }
+
+  // Default: render children
   return (
     <p
       className={`
-        font-[Arial] ${bold ? bold : "font-bold"}
+        font-[Arial] ${bold !== "" ? bold : "font-bold"}
         tracking-[-0.03em]
         ${variants[variant]}
         ${className}

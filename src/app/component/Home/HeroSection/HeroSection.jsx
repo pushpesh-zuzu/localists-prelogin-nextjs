@@ -71,34 +71,6 @@ const HeroSection = memo(function HeroSection() {
           >
             Get instant quotes from local professionals.
           </Paragraph1>
-          {/* <div className="relative max-w-[254px] md:max-w-[246px]  lg:max-w-[404px]">
-            <input
-              type="text"
-              placeholder="Search for a service"
-              id="search Attribute"
-              className="text-[#B3B3B3] font-bold px-4 py-2.5  shadow-[0px_20px_40px_0px_rgba(0,0,0,0.5)] md:px-6 md:py-2.5 xl:px-[43px] xl:py-4 mt-5 md:mt-6 xl:mt-[46px] text-base xl:text-[25px]! placeholder:text-base xl:placeholder:text-[25px]! bg-white border-[1.5px] border-gray-300 rounded-[100px] w-full focus:outline-none"
-              aria-label="Search for a service"
-              value={searchQuery || ""}
-              onChange={(e) => {
-                const query = e.target.value;
-                setSearchQuery(query);
-                if (query.trim() !== "") {
-                  dispatch(searchService({ query }));
-                }
-              }}
-            />
-            {searchQuery.length ? (
-              <SearchResults
-                searchQuery={searchQuery}
-                setSearchQuery={setSearchQuery}
-              />
-            ) : (
-              ""
-            )}
-            <div className="absolute inset-y-0 top-0 xl:-top-4 right-[19px] xl:right-10 flex items-center pointer-events-none">
-              <SearchIcon className="w-6 h-6 md:w-5 md:h-5 lg:w-8 lg:h-8 mt-5 xl:mt-16" />
-            </div>
-          </div> */}
           <HeroSectionSearch />
         </div>
 

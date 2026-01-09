@@ -60,6 +60,29 @@ const Button1 = ({
        px-4 py-2 lg:py-2 lg:px-5 h-fit  rounded-full
         shadow-[0_0_4px_rgba(0,0,0,0.1)
     `,
+    darkoutlined: `
+        text-[#253238]
+        text-base
+        md:text-[16px]
+        lg:text-[18px]
+        leading-7
+        outline-4
+        outline-[#000]
+       px-4 py-2 lg:py-2 lg:px-5 h-fit  rounded-full
+        shadow-[0_0_4px_rgba(0,0,0,0.1)
+    `,
+    darkoutlinedPrimary: `
+        text-[#00afe3]
+        text-base
+        md:text-[16px]
+        lg:text-[18px]
+        leading-7
+        outline-[3.5px]
+        outline-[#00afe3]
+       px-4 py-2 lg:py-2 lg:px-5 h-fit  rounded-full
+        shadow-[0_0_4px_rgba(0,0,0,0.1)
+    `
+    ,
   };
 
   return (
