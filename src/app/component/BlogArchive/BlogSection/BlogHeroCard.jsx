@@ -5,7 +5,7 @@ export default function BlogHeroCard({ title, image }) {
   return (
     <article className="lg:col-span-3 relative h-[600px] rounded-[24px] overflow-hidden group cursor-pointer">
       <Image
-        src={image || "/images/blogPage/guideTree.webp"}
+        src={image || "/images/BlogPage/guideTree.webp"}
         alt={title || "Tree Preservation Orders"}
         fill
         sizes="100vw"
