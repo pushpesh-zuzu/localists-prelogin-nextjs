@@ -10,8 +10,7 @@ export default function CarouselCard({ card }) {
     select-none flex flex-col justify-center items-center gap-6 text-center px-3 py-[22px]
     lg:px-[32px] xl:px-[51px] xl:py-[43px] max-w-[281px] h-[132px] sm:h-[202px] :h-[200px] xl:h-[235px]
  bg-[#7CD6F0] rounded-2xl xl:rounded-[28px] font-bold
-  "
-      >
+  " >
         <div className="flex flex-col justify-center items-center gap-4">
           <H3 className="leading-tight break-words">
             {card.title}
@@ -40,7 +39,8 @@ export default function CarouselCard({ card }) {
           priority
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
-        <H5 className="text-white text-start w-[80%] absolute bottom-5 left-1/2 -translate-x-1/2">
+        <H5 className="text-white text-start w-[80%] absolute bottom-5 left-1/2 -translate-x-1/2
+        leading-[28px]!">
           {card.title}
         </H5>
       </div>

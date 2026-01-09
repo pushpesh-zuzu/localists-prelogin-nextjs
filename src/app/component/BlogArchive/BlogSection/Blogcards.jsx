@@ -22,7 +22,7 @@ export default function BlogCards({ title, image, priority = false }) {
           text-white font-black -tracking-[0.03em]
           text-[12px] leading-[14px]
           sm:text-[15px] sm:leading-[18px]
-          xl:text-[25px] xl:leading-[25px]
+          xl:text-[25px] xl:leading-[28px]
         "
       >
         {title}
