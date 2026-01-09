@@ -40,7 +40,7 @@ export default function CarouselCard({ card }) {
           priority
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
-        <H5 className="text-white text-start w-[89%] absolute bottom-3 left-1/2 -translate-x-1/2">
+        <H5 className="text-white text-start w-[80%] absolute bottom-5 left-1/2 -translate-x-1/2">
           {card.title}
         </H5>
       </div>
