@@ -169,12 +169,12 @@ function DiscoverServices() {
         text-white font-extrabold
         tracking-[-0.03em]
         text-left
-        text-[50px] leading-[55px]
+        text-[50px] leading-[55px] -mt-[20px] lg:mt-0
       "
                     >
                         Free quotes, with zero
                         <p className="block">obligation.</p>
-                        <div className="flex justify-start lg:justify-end">
+                        <div className="flex justify-start lg:justify-end mt-[15px] lg:mt-0">
                             <LocationIcon />
                         </div>
                     </div>

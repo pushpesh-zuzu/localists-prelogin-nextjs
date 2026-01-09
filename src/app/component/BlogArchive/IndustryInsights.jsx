@@ -46,7 +46,7 @@ export default function IndustryInsights() {
 
 
     return (
-        <section className="bg-[#05ACE3] py-16">
+        <section className="bg-[#05ACE3] py-12">
             <div className="max-w-[1320px] mx-auto px-4 md:px-8 xl:px-0">
 
                 {/* TITLE – START POSITION */}
@@ -113,7 +113,7 @@ export default function IndustryInsights() {
 
 
                 {/* MOBILE */}
-                <div className="md:hidden w-full mt-10">
+                <div className="md:hidden w-full mt-5">
                     <div className="flex flex-wrap gap-x-2 gap-y-3">
                         {mobileItems.map((item) => (
                             <button
@@ -149,7 +149,7 @@ export default function IndustryInsights() {
                 </div>
 
                 {/* TABLET */}
-                <div className="hidden md:block lg:hidden w-full mt-10">
+                <div className="hidden md:block lg:hidden w-full mt-7">
                     <div className="flex flex-wrap gap-x-2 gap-y-4">
                         {tabletItems.map((item) => (
                             <button
