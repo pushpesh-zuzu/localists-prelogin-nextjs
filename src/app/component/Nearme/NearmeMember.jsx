@@ -2,22 +2,20 @@
 
 import Image from "next/image";
 import React from "react";
-import H3 from "../../UI/Typography/H3";
-import Button from "../../UI/Typography/Button";
+import H3 from "../UI/Typography/H3";
+import Button from "../UI/Typography/Button";
 
-function Member() {
+function NearmeMember({ description = "" }) {
   return (
     <div className="w-full max-w-[300px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto py-[75px] xl:py-[63px]">
       <div className="hidden md:flex w-fit rounded-[36px] overflow-hidden mx-auto ">
-        <div className=" w-[340] md:h-[280px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
+        <div className=" w-[340] md:h-[280px] lg:h-[570px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
           <>
             <H3
-              style={{ textShadow: "0px 1.95px 1.95px #0000000D",  }}
+              style={{ textShadow: "0px 1.95px 1.95px #0000000D" }}
               className="hidden md:block text-white font-bold font-[Arial] leading-7 xl:leading-[42px] lg:pr-8"
             >
-              “What I like about Localists is the quality of leads I get. I
-              spend less money on Localists than I have done on other platforms,
-              and I get far more business. It's a win-win”
+              {description}
             </H3>
 
             <div className="hidden md:block mt-4">
@@ -36,14 +34,14 @@ function Member() {
 
         <div className=" relative rounded-r-[36px] overflow-hidden">
           <Image
-            src="/homepage/member.webp"
+            src="/nearme/treeSurgeonMember.webp"
             alt="Professional using phone"
             priority
             fetchPriority="high"
             loading="eager"
-            height={512}
+            height={570}
             width={521}
-            className="w-[273px] h-[280px] lg:w-[521px] lg:h-[512px]"
+            className="w-[273px] h-[280px] lg:w-[521px] lg:h-[570px]"
           />
         </div>
       </div>
@@ -51,7 +49,7 @@ function Member() {
       <div className="md:hidden rounded-[36px] overflow-hidden shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
         <div className="w-full  relative">
           <Image
-            src="/homepage/membermobile.webp"
+            src="/nearme/treeSurgeonMember.webp"
             alt="Professional using phone"
             height={300}
             width={250}
@@ -66,12 +64,10 @@ function Member() {
           <div className="flex flex-col gap-3">
             <h3
               className="font-[Arial] text-[20px] 
-            tracking-[-0.03em] text-white font-bold leading-[22px]"
-              style={{ textShadow: "0px 1.95px 1.95px #0000000D",  }}
+                tracking-[-0.03em] text-white font-bold leading-[22px]"
+              style={{ textShadow: "0px 1.95px 1.95px #0000000D" }}
             >
-              “What I like about Localists is the quality of leads I get. I
-              spend less money on Localists than I have done on other platforms,
-              and I get far more business. It's a win-win”
+              {description}
             </h3>
 
             <div className="mt-1">
@@ -93,4 +89,4 @@ function Member() {
   );
 }
 
-export default Member;
+export default NearmeMember;

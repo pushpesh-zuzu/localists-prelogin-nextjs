@@ -31,11 +31,11 @@ export default function PopularJobs() {
 
   return (
     <div className="w-full max-w-[430px] mx-auto bg-white">
-      <div className="grid grid-cols-2 gap-5 mb-5">
+      <div className="grid grid-cols-2 gap-5 mb-5 place-items-center">
         {jobs.map((job, index) => (
           <div
             key={index}
-            className="bg-[#00AFE3] max-w-[130px] min-h-[114px] py-2.5 flex flex-col justify-around text-center text-white rounded-3xl  hover:bg-cyan-500 transition-colors active:scale-95"
+            className="bg-[#00AFE3] w-full max-w-[130px] min-h-[114px] py-2.5 flex flex-col justify-around text-center text-white rounded-3xl  hover:bg-cyan-500 transition-colors active:scale-95"
           >
             <div className="flex justify-center pb-0.5">{job.image}</div>
             <span

@@ -4,35 +4,7 @@ import H2 from "../../UI/Typography/H2";
 import Button from "../../UI/Typography/Button";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 
-function AdviceInsight() {
-  const articles = [
-    {
-      id: 1,
-      title: "Top 10 Interior Design Trends in 2025",
-      image: "/homepage/image10.webp",
-    },
-    {
-      id: 2,
-      title: "How much does a painter and decorator cost in 2025?",
-      image: "/homepage/image14.webp",
-    },
-    {
-      id: 3,
-      title: "Top tips to create your own allotment",
-      image: "/homepage/image11.webp",
-    },
-    {
-      id: 4,
-      title: "The 2025 House Improvement Index",
-      image: "/homepage/image12.webp",
-    },
-    {
-      id: 5,
-      title: "The best place to book your wedding in 2025",
-      image: "/homepage/image13.webp",
-    },
-  ];
-
+function AdviceInsight({ articles = [] }) {
   return (
     <WrapperBGWidth>
       <section className="h-auto min-h-[336px] lg:min-h-[687px] px-7.5 py-12 sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:pt-[72px] lg:pb-[86px]">
