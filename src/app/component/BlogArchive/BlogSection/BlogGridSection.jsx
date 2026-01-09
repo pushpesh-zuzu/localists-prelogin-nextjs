@@ -9,27 +9,27 @@ import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 const blogs = [
     {
         title: "How much does a plumber cost in 2026?",
-        image: "/images/blogPage/plumber.webp",
+        image: "/images/BlogPage/plumber.webp",
     },
     {
         title: "How much does an electrician cost in 2026?",
-        image: "/images/blogPage/electrician.webp",
+        image: "/images/BlogPage/electrician.webp",
     },
     {
         title: "How much does a tree surgeon cost in 2026?",
-        image: "/images/blogPage/surgeon.webp",
+        image: "/images/BlogPage/surgeon.webp",
     },
     {
         title: "How much does a plumber cost in 2026?",
-        image: "/images/blogPage/plumber.webp",
+        image: "/images/BlogPage/plumber.webp",
     },
     {
         title: "How much does an electrician cost in 2026?",
-        image: "/images/blogPage/electrician.webp",
+        image: "/images/BlogPage/electrician.webp",
     },
     {
         title: "How much does a tree surgeon cost in 2026?",
-        image: "/images/blogPage/surgeon.webp",
+        image: "/images/BlogPage/surgeon.webp",
     },
 ];
 
