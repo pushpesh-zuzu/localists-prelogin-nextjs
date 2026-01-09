@@ -20,10 +20,9 @@ export default function BlogCards({ title, image, priority = false }) {
         className="
           absolute bottom-7 left-7 right-4
           text-white font-black -tracking-[0.03em]
-          text-[12px] leading-[14px]
-          sm:text-[15px] sm:leading-[18px]
-          xl:text-[25px] xl:leading-[28px]
-        "
+          text-[20px] leading-[25px]
+           md:text-[25px] md:leading-[25px]
+          lg:text-[25px] lg:leading-[28px]"
       >
         {title}
       </h3>

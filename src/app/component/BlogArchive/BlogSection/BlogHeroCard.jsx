@@ -18,11 +18,11 @@ export default function BlogHeroCard({ title, image }) {
 
       <h2
         className="
-          absolute bottom-7 left-7 max-w-[650px]
+          absolute bottom-8 left-7 max-w-[650px]
           text-white font-black -tracking-[0.03em]
-          text-[16px] leading-[18px]
-          sm:text-[20px] sm:leading-[22px]
-          xl:text-[38px] xl:leading-[25px]
+          text-[30px] leading-[32px]
+        md:text-[38px] md:leading-[25px]
+        lg:text-[38px] lg:leading-[28px]
         "
       >
         {title || "A guide to Tree Preservation Orders"}
