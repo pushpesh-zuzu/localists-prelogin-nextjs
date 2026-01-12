@@ -98,12 +98,11 @@ export default function Page() {
                     { name: "Gutter Cleaning", path: "/gutter-cleaning-near-me" },
                 ]}
             />
-            <div className="mt-[5px]">
+            <div className="mt-[5px] mb-3">
                 <div
                     className="py-[50px] max-[768px]:py-[30px] max-[480px]:py-[20px]" >
-                    <GetQuotes size="38px" ctaText="Home & Garden" needSString={false} />
+                    <GetQuotes ctaText="Home & Garden" needSString={false} />
                 </div>
-
             </div>
             <Footer />
         </main>

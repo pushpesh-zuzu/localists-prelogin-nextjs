@@ -14,7 +14,8 @@ function GetQuote({ text = "Get Quotes", ctaText, needSString = true }) {
       {ctaText && (
         <H3
           className="
-        mt-[20px] !leading-[100%]
+        mt-[15px] !leading-[100%]
+              max-[520px]:mt-[8px]
         text-black
         text-center
       "

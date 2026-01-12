@@ -31,11 +31,15 @@ const AccountFindingInfo = ({
       max-w-[1200px] mx-auto
       max-[500px]:gap-[25px] max-[500px]:py-[10px]
     ">
-                <H2 className="text-left">
+                <h2 className="font-Inter font-black
+        tracking-[-0.03em]
+        text-[30px] leading-[33px]
+        md:text-[35px] md:leading-[35px]
+        lg:text-[50px] lg:leading-[55px]">
                     Find the best
                     <span className="text-[#00AFE3]"> {title.toLowerCase()}{isNeedS ? "s" : ""} </span>
                     {findAccountTitle2 || ''} in your area
-                </H2>
+                </h2>
                 <div className="flex flex-col gap-[13px]">
                     <Paragraph2 className="text-black">
                         {para1}

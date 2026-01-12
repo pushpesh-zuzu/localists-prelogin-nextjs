@@ -27,7 +27,7 @@ const ClonePopularCategories = ({ data }) => {
     max-[520px]:pb-[6px]
       "
         >
-            <H2 className="md:mb-2 lg:mb-3">
+            <H2 className="md:mb-2 lg:mb-4">
                 Popular{" "}
                 <span className="text-[#00afe3]">
                     Categories
