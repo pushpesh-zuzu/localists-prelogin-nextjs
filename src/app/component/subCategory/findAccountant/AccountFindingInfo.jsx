@@ -43,8 +43,8 @@ const AccountFindingInfo = ({
                     <Paragraph1 className="text-black">
                         {para2}
                     </Paragraph1>
-                    <Paragraph1>{para3}</Paragraph1>
-                    <Paragraph1>{para4}</Paragraph1>
+                    <Paragraph1 className="text-black">{para3}</Paragraph1>
+                    <Paragraph1 className="text-black">{para4}</Paragraph1>
                 </div>
             </div>
         </div>
