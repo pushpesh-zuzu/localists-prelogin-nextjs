@@ -22,7 +22,7 @@ const AllServiceLevel1 = ({ data }) => {
         max-[480px]:px-[20px] max-[480px]:pb-0
       " >
             <H2
-                className="text-left !leading-[100%] mb-[22.53px]" >
+                className="text-left mb-[22.53px]" >
                 All{" "}
                 <span className="text-[#00afe3]">
                     Services

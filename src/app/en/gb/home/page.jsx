@@ -100,9 +100,8 @@ export default function Page() {
             />
             <div className="mt-[5px]">
                 <div
-                    className="
-                    bg-[#f9fdff] py-[50px] max-[768px]:py-[30px] max-[480px]:py-[20px]" >
-                    <GetQuotes ctaText="Home & Garden" needSString={false} />
+                    className="py-[50px] max-[768px]:py-[30px] max-[480px]:py-[20px]" >
+                    <GetQuotes size="38px" ctaText="Home & Garden" needSString={false} />
                 </div>
 
             </div>

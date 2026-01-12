@@ -16,18 +16,18 @@ const ClonePopularCategories = ({ data }) => {
          flex flex-col items-center justify-center
     text-center
     gap-[10px]
-    px-[5%] pt-[30px] pb-[6px]
+    px-[5%] pt-[40px] pb-[6px]
 
     max-[880px]:px-[40px]
     max-[880px]:pt-[30px]
     max-[880px]:pb-[2px]
 
     max-[520px]:px-[20px]
-    max-[520px]:pt-[16px]
+    max-[520px]:pt-[20px]
     max-[520px]:pb-[6px]
       "
         >
-            <H2 className="md:mb-2 lg:mb-2 !leading-[100%]">
+            <H2 className="md:mb-2 lg:mb-3">
                 Popular{" "}
                 <span className="text-[#00afe3]">
                     Categories
@@ -107,10 +107,10 @@ const ClonePopularCategories = ({ data }) => {
                                     className="
                     w-full text-center
                     text-white
-                    font-bold text-[17px]
+                    font-extrabold text-[20px]
                     py-[10px]
                     rounded-[4.5px]
-                    leading-[20px]
+                    leading-[30px]
                     bg-[#00afe3]
                     hover:bg-[#0096c4]
                     max-[880px]:text-[15px] max-[880px]:py-[8px]

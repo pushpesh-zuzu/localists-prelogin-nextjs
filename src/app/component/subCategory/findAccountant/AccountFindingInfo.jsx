@@ -17,7 +17,7 @@ const AccountFindingInfo = ({
     return (
         <div className="
     bg-cover bg-center bg-no-repeat
-    px-[88px] pt-[20px] pb-[20px]
+    px-[88px] pt-[40px] pb-[40px]
     max-[768px]:px-[30px]
     max-[500px]:px-[20px] max-[500px]:pt-[20px] max-[500px]:pb-[15px]
   "

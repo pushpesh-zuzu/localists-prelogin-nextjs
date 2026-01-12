@@ -5,7 +5,7 @@ export default function Paragraph2({ children, className = "", style = {} }) {
         font-[Arial]
         font-normal
         tracking-[-0.03em]
-        leading-[100%]
+        leading-[24px]
         text-black
         text-[20px]       
         max-[768px]:text-[18px]

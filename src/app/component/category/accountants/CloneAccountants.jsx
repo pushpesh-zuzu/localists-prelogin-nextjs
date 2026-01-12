@@ -212,7 +212,7 @@ const CloneAccountants = ({
             <WrapperBGWidth>
 
                 <div className="relative flex flex-col items-center justify-center">
-                    <div className="text-center">
+                    <div className="text-center ">
                         <H1 className="text-white">
                             Looking For{" "}
                             <span className="text-[#00afe3]">{header}</span> {heading2 || ""} Near
@@ -220,7 +220,7 @@ const CloneAccountants = ({
                         </H1>
                     </div>
 
-                    <div className="w-full xl:w-[1024px] bg-white/90 rounded-[20px] px-[30px] py-[22px] flex flex-col justify-center items-center mt-[20px] lg:mt-10px lg:mt-[22px]">
+                    <div className="w-full xl:w-[1024px] bg-white/90 rounded-[20px] px-[30px] py-[35px] flex flex-col justify-center items-center mt-[20px] lg:mt-10px lg:mt-[22px]">
                         <p
                             className=" font-bold text-[24px] leading-[100%] text-[#000] text-center"
                         >
@@ -231,7 +231,7 @@ const CloneAccountants = ({
                             {doYouNeetTitle[2]}?
                         </p>
 
-                        <form role="search" className="flex flex-col justify-between  mt-[30px] w-full">
+                        <form role="search" className="flex flex-col justify-between  mt-[35px] w-full">
                             <div className="flex flex-col items-center">
                                 <div className="flex flex-col lg:flex-row gap-[18px] w-full">
                                     <div className="flex flex-col flex-1 text-left relative">
@@ -248,7 +248,7 @@ const CloneAccountants = ({
                                                 setIsDropdownOpen(!!e.target.value);
                                                 setSelectedService(null);
                                             }}
-                                            className="font-[Arial] font-bold bg-white !text-black border border-[#D9D9D9] rounded-[10px] pl-[12px] md:pl-[16px] leading-[100%] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)]"
+                                            className="font-[Arial] font-bold bg-white !text-black border border-[#D9D9D9] rounded-[10px] pl-[12px] md:pl-[16px] leading-[100%] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)] placeholder:text-[#959595]"
                                         />
 
                                         {isDropdownOpen && service?.length > 0 && (
@@ -281,7 +281,7 @@ const CloneAccountants = ({
                                             placeholder="Enter Postcode"
                                             value={pincode}
                                             onChange={handlePincodeChange}
-                                            className="font-[Arial] font-bold bg-white !text-black border border-[#D9D9D9] leading-[100%] rounded-[10px] pl-[12px] md:pl-[16px] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)]"
+                                            className="font-[Arial] font-bold bg-white !text-black border border-[#D9D9D9] leading-[100%] rounded-[10px] pl-[12px] md:pl-[16px] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)] placeholder:text-[#959595]"
 
                                         />
                                         {isCheckingPostcode ? (

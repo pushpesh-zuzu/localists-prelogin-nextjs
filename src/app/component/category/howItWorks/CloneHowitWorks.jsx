@@ -13,7 +13,7 @@ const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
         text-center flex flex-col items-center justify-center
         gap-[40px]
         bg-[#00afe3]
-        py-[30px] px-[5%]
+        py-[40px] px-[5%]
         max-[920px]:gap-[30px]
         max-[667px]:gap-[70px]
         max-[480px]:px-[20px] max-[480px]:py-[26px]
@@ -77,15 +77,16 @@ const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
 
             <div>
               <H3
-                className="text-black mb-[20px] max-[520px]:mb-[15px] text-left"
+                className="text-black mb-[20px] max-[520px]:mb-[15px] text-left  leading-[120%]   max-[520px]:leading-[110%]"
               >
                 {item.heading1}
                 <span className="text-[#00afe3]">
                   {" "}
                   {item.heading2}
                 </span>
-                <span> {item?.heading3}</span>
-
+                <span className="block">
+                  {" "}{item?.heading3}
+                </span>
                 {/* <br className="block max-[667px]:hidden" />
                 {item?.break && (
                   <br className="block max-[667px]:hidden" />
@@ -108,7 +109,7 @@ const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
       </div>
 
       <div className="flex justify-center max-[520px]:-mt-[40px]">
-        <Button onClick={handleScrollToBottom} className="bg-[#253238] hover:bg-[#1e272b] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] cursor-pointer text-white rounded-full">
+        <Button onClick={handleScrollToBottom} className="bg-[#253238] hover:bg-[#1e272b] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[30px] cursor-pointer text-white rounded-full">
           Get Quotes From {ctaText} Near You
         </Button>
       </div>
