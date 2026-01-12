@@ -20,7 +20,7 @@ const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
       "
     >
       <H2
-        className="text-white !leading-[100%] text-center">
+        className="text-white text-center">
         How
         <span className="text-black"> Localists </span>
         Works

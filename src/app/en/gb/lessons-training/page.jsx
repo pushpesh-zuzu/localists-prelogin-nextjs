@@ -50,7 +50,7 @@ export default function Page() {
                 ]}
             />
 
-             <div className="mt-[5px]">
+            <div className="mt-[5px]">
                 <div
                     className="py-[50px] max-[768px]:py-[30px] max-[480px]:py-[20px]" >
                     <GetQuotes size="38px" ctaText="Lessons & Training" needSString={false} />

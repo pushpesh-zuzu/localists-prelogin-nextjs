@@ -235,7 +235,7 @@ const CloneAccountants = ({
                             <div className="flex flex-col items-center">
                                 <div className="flex flex-col lg:flex-row gap-[18px] w-full">
                                     <div className="flex flex-col flex-1 text-left relative">
-                                        <label htmlFor="service" className="font-bold text-[20px] leading-[100%] tracking-[-0.03em] text-black font-[Arial] mb-[7px]">
+                                        <label htmlFor="service" className="font-bold text-[19px] leading-[100%] tracking-[-0.03em] text-black font-[Arial] mb-[7px]">
                                             {inputLable1}
                                         </label>
 
@@ -248,7 +248,7 @@ const CloneAccountants = ({
                                                 setIsDropdownOpen(!!e.target.value);
                                                 setSelectedService(null);
                                             }}
-                                            className="font-[Arial] font-bold bg-white !text-black border border-[#D9D9D9] rounded-[10px] pl-[12px] md:pl-[16px] leading-[100%] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)] placeholder:text-[#959595]"
+                                            className="font-[Arial] font-bold bg-white !text-black border border-[#D9D9D9] rounded-[10px] pl-[12px] md:pl-[16px] leading-[100%] pr-[22px] pt-[13px] pb-[13px] w-full placeholder:text-[#959595]"
                                         />
 
                                         {isDropdownOpen && service?.length > 0 && (
@@ -273,7 +273,7 @@ const CloneAccountants = ({
                                     </div>
 
                                     <div className="flex flex-col flex-1 text-left relative">
-                                        <label htmlFor="postcode" className="font-bold text-[20px]  leading-[100%] tracking-[-0.03em] text-black font-[Arial] mb-[7px]">
+                                        <label htmlFor="postcode" className="font-bold text-[19px]  leading-[100%] tracking-[-0.03em] text-black font-[Arial] mb-[7px]">
                                             {inputLable2}
                                         </label>
                                         <input
