@@ -1,19 +1,59 @@
-"use client";
-
 import BannerWithBreadCrum from "@/app/component/category/ServicesHeroSection/BannerWithBreadCrum";
 import TransportBanner from "../../../component/level1/banner/TransportBanner.webp";
 import {
     TransportHowItWork, TransportPopularCategory
 } from "@/constants/transportData";
+import SEO from "@/app/component/common/seo/SEO";
 import HowItWorks from "@/app/component/category/howItWorks/CloneHowitWorks";
 import PopularCategories from "@/app/component/category/popularCategories/ClonePopularCategories";
 import AllServiceLevel1 from "@/app/component/category/allServices/AllServiceLevel1";
 import GetQuotes from "@/app/component/common/GetQuotes/GetQuote";
 import Footer from "@/app/component/Footer/Footer";
-export default function Page() {
 
+export const metadata = {
+    title: "Lessons & Training From Local Experts | Localists",
+    description:
+        "Develop a skill, and get lessons in anything from driving to academics with trusted local tutors and trainers. Get your free quote now!",
+
+    alternates: {
+        canonical: "https://www.localists.com/en/gb/lessons-training",
+    },
+
+    openGraph: {
+        title: "Lessons & Training From Local Experts | Localists",
+        description:
+            "Develop a skill, and get lessons in anything from driving to academics with trusted local tutors and trainers.",
+        url: "https://www.localists.com/en/gb/lessons-training",
+        images: [
+            {
+                url: "https://www.localists.com/images/Banners/LessonsAndTraining.webp",
+                width: 1200,
+                height: 630,
+                alt: "Lessons & Training From Local Experts",
+            },
+        ],
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        images: [
+            "https://www.localists.com/images/Banners/LessonsAndTraining.webp",
+        ],
+    },
+};
+
+
+
+export default function Page() {
     return (
         <main className="bg-white">
+            <SEO
+                bannerImage={TransportBanner}
+                breadcrumb={[
+                    { title: "Transportation Services", path: "/en/gb/transportation-services" },
+                ]}
+                conversion
+            />
             <BannerWithBreadCrum
                 accountHeader="Transportation Services"
                 level={2}

@@ -1,8 +1,7 @@
 "use client";
 
-// import Script from "next/script";
+import Script from "next/script";
 import { usePathname } from "next/navigation";
-
 import BannerWithBreadCrum from "@/app/component/category/ServicesHeroSection/BannerWithBreadCrum";
 import Home from "../../../../../public/images/Banners/Home.jpg";
 import HowItWorks from "@/app/component/category/howItWorks/CloneHowitWorks";
@@ -10,6 +9,7 @@ import {
     HowItWorksData,
     PopularCategoriesData,
 } from "@/constants/CloneCategory";
+import SEO from "@/app/component/common/seo/SEO";
 import PopularCategories from "@/app/component/category/popularCategories/ClonePopularCategories";
 import AllServiceLevel1 from "@/app/component/category/allServices/AllServiceLevel1";
 import GetQuotes from "@/app/component/common/GetQuotes/GetQuote";
@@ -52,6 +52,13 @@ export default function Page() {
     const howItWorksData = HowItWorksData[endpoint1];
     return (
         <main className="bg-white">
+            <SEO
+                bannerImage={Home}
+                breadcrumb={[
+                    { title: "Home & Garden", path: "/en/gb/home" },
+                ]}
+                conversion
+            />
             <BannerWithBreadCrum
                 header={"Home & Garden"}
                 LevelOneTwoTitle={"Home & Garden"}

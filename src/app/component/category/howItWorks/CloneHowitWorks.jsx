@@ -1,3 +1,5 @@
+"use client";
+
 import { handleScrollToBottom } from "@/utils/scroll";
 import Image from "next/image";
 import H2 from "../../UI/Typography/H2";
@@ -99,8 +101,7 @@ const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
 
               </H3>
               <Paragraph2
-                className="text-black"
-              >
+                className="text-black">
                 {item.description}
               </Paragraph2>
             </div>

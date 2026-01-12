@@ -130,7 +130,7 @@ const Footer = () => {
               <ul className="space-y-3 sm:text-[9px] xl:text-[17px]">
                 <li>
                   <Link
-                    href="/about-us"
+                    href="/en/gb/about-us"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px]  xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
                     About Localists

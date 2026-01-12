@@ -205,12 +205,10 @@ const CloneAccountants = ({
     max-[1280px]:px-[100px]
     max-[980px]:py-[45.5px] max-[980px]:px-[50px]
     max-[480px]:py-[20px] max-[480px]:px-[10px]"
-            style={{ backgroundImage: `url(${panelImage?.src})` }}
-        >
+            style={{ backgroundImage: `url(${panelImage?.src})` }} >
+
             <CloseBrowserAbandon />
-
             <WrapperBGWidth>
-
                 <div className="relative flex flex-col items-center justify-center">
                     <div className="text-center ">
                         <H1 className="text-white">
@@ -230,6 +228,11 @@ const CloneAccountants = ({
                             </span>{" "}
                             {doYouNeetTitle[2]}?
                         </p>
+
+                        <style jsx>{`
+                                input::placeholder {
+                                color: #959595;
+                                opacity: 1; }`}</style>
 
                         <form role="search" className="flex flex-col justify-between  mt-[35px] w-full">
                             <div className="flex flex-col items-center">

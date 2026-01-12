@@ -5,6 +5,7 @@ import LessonsAndTraining from "../../../component/level1/banner/LessonsAndTrain
 import {
     LessionAndTrainingHowItWork, LessionAndTrainingPopularCategory
 } from "@/constants/lessonAndTrainingData";
+import SEO from "@/app/component/common/seo/SEO";
 import HowItWorks from "@/app/component/category/howItWorks/CloneHowitWorks";
 import PopularCategories from "@/app/component/category/popularCategories/ClonePopularCategories";
 import AllServiceLevel1 from "@/app/component/category/allServices/AllServiceLevel1";
@@ -14,6 +15,13 @@ export default function Page() {
 
     return (
         <main className="bg-white">
+            <SEO
+                bannerImage={LessonsAndTraining}
+                breadcrumb={[
+                    { title: "Lessons & Training", path: "/en/gb/lessons-training" },
+                ]}
+                conversion
+            />
             <BannerWithBreadCrum
                 accountHeader=" Lessons & Training Services"
                 level={2}
