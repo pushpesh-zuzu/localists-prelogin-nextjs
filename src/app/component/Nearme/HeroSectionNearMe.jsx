@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import TrustpioletIcon from "../common/icons/HomePageIcons/TrustpioletIcon";
 import Paragraph1 from "../UI/Typography/Paragraph1";
@@ -16,28 +16,43 @@ function HeroSectionNearMe({
   bannerImage = "/nearme/treeSurgeon.webp",
   altText = "Tree Surgeon",
 }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check screen width on client side
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Calculate background style
+  const backgroundStyle = isMobile
+    ? {
+        backgroundImage: `linear-gradient(rgba(0, 175, 227, .8), rgba(176, 229, 245, .8)), url(${bannerImage})`,
+      }
+    : {
+        backgroundColor: "#00AEEF",
+      };
+
   return (
     <>
       <WrapperBGWidth background={"#00aeef"}>
         <section
-          className="flex flex-col md:flex-row px-[25px] pt-10  md:px-[87px] md:pt-[38px] xl:px-[163px] xl:pt-12 bg-cover bg-center bg-no-repeat md:bg-[#00AEEF]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 175, 227, .8), rgba(176, 229, 245, .8)), url(${bannerImage})`,
-          }}
+          className="flex flex-col md:flex-row px-[25px] pt-10 md:px-[87px] md:pt-[38px] xl:px-[163px] xl:pt-12 bg-cover bg-center bg-no-repeat"
+          style={backgroundStyle}
           role="banner"
           aria-label="Hero section"
         >
-          <style jsx>{`
-            @media (min-width: 768px) {
-              section {
-                background-image: none !important;
-              }
-            }
-          `}</style>
-          <div className="w-full md:w-2/3  flex flex-col xl:ml-[43px]">
+          <div className="w-full md:w-2/3 flex flex-col xl:ml-[43px]">
             <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] lg:mb-7 max-h-12" />
-
-            <H1 className="text-white block  text-shadow-[0_2.03px_2.03px_0_#0000001A]">
+            <H1 className="text-white block text-shadow-[0_2.03px_2.03px_0_#0000001A]">
               <p className="">
                 {heading1}
                 <span className="text-[#253238] block">{heading2}</span>
@@ -49,7 +64,6 @@ function HeroSectionNearMe({
             >
               {description}
             </Paragraph1>
-            {/* <HeroSectionSearch /> */}
             <PostCodeSearchField />
           </div>
 

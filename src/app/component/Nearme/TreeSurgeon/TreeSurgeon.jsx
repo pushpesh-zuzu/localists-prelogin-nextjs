@@ -30,8 +30,7 @@ function TreeSurgeon() {
       <HeroSectionNearMe
         heading1="Find Tree Surgeons"
         heading2="Near You."
-        description="Find the best tree surgeons for your job, just enter your postcode
-              and a few details for instant quotes."
+        description="Find the best tree surgeons for your job, just enter your postcode and a few details for instant quotes."
         bannerImage="/nearme/treeSurgeon.webp"
         altText="Tree Surgeon"
       />
