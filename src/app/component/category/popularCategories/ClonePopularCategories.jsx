@@ -27,7 +27,7 @@ const ClonePopularCategories = ({ data }) => {
     max-[520px]:pb-[6px]
       "
         >
-            <H2 className="md:mb-2 lg:mb-2">
+            <H2 className="md:mb-2 lg:mb-2 !leading-[100%]">
                 Popular{" "}
                 <span className="text-[#00afe3]">
                     Categories
@@ -53,9 +53,10 @@ const ClonePopularCategories = ({ data }) => {
                 p-[10px] pb-[42px]
                 transition-all duration-300
                 hover:bg-[#f9f9fa]
+                 rounded-tl-[39.97px] rounded-tr-[39.97px]
+                hover:rounded-tl-[39.97px] hover:rounded-tr-[39.97px]
                 max-[520px]:pb-[22px]
-              "
-                        >
+              " >
                             {row.path ? (
                                 <Link
                                     href={""
@@ -65,7 +66,7 @@ const ClonePopularCategories = ({ data }) => {
                                     <Image
                                         src={row.image}
                                         alt={row.title}
-                                        className="w-full object-cover"
+                                        className="w-full object-cover rounded-tl-[39.97px] rounded-tr-[39.97px]"
                                         width={400}
                                         height={260}
                                     />
@@ -74,7 +75,7 @@ const ClonePopularCategories = ({ data }) => {
                                 <Image
                                     src={row.image}
                                     alt={row.title}
-                                    className="w-full object-cover max-[520px]:h-[230px]"
+                                    className="w-full object-cover rounded-tl-[39.97px] rounded-tr-[39.97px] max-[520px]:h-[230px]"
                                     width={400}
                                     height={260}
                                 />
@@ -89,7 +90,8 @@ const ClonePopularCategories = ({ data }) => {
                     text-[12.72px]
                     rounded-full
                     text-white
-                    bg-[#253238]
+                    bg-[#00afe3]
+                    hover:bg-[#0096c4]
                     max-[880px]:text-[11.72px]
                     max-[880px]:px-[12px] max-[880px]:py-[5px]
                   " >
@@ -107,9 +109,10 @@ const ClonePopularCategories = ({ data }) => {
                     text-white
                     font-bold text-[17px]
                     py-[10px]
-                    rounded-full
+                    rounded-[4.5px]
                     leading-[20px]
-                    bg-[#253238]
+                    bg-[#00afe3]
+                    hover:bg-[#0096c4]
                     max-[880px]:text-[15px] max-[880px]:py-[8px]
                     max-[520px]:text-[14px]
                   "
@@ -117,7 +120,7 @@ const ClonePopularCategories = ({ data }) => {
                                     {row.title}
                                 </Link>
                             ) : (
-                                <Button className="bg-[#253238] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] cursor-pointer text-white rounded-full">
+                                <Button className="bg-[#00afe3] hover:bg-[#0096c4] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] cursor-pointer text-white rounded-[4.5px]">
                                     {row.title}
                                 </Button>
                             )}

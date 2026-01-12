@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import H2 from "../../UI/Typography/H2";
 import Paragraph1 from "../../UI/Typography/Paragraph1";
+import Paragraph2 from "../../UI/Typography/Paragraph2";
 
 
 const AllServiceLevel1 = ({ data }) => {
@@ -21,7 +22,7 @@ const AllServiceLevel1 = ({ data }) => {
         max-[480px]:px-[20px] max-[480px]:pb-0
       " >
             <H2
-                className="text-left mb-[22.53px]" >
+                className="text-left !leading-[100%] mb-[22.53px]" >
                 All{" "}
                 <span className="text-[#00afe3]">
                     Services
@@ -37,6 +38,7 @@ const AllServiceLevel1 = ({ data }) => {
           max-[480px]:mb-[26px]
         "
             >
+                <hr className="border-t border-[#C8C8C8]" />
                 <div
                     className="
             flex flex-wrap
@@ -60,10 +62,10 @@ const AllServiceLevel1 = ({ data }) => {
                   text-black
                   cursor-pointer
                 " >
-                               <Paragraph1>{name}</Paragraph1>
+                               <Paragraph2>{name}</Paragraph2>
                             </Link>
                         ) : (
-                            <Paragraph1
+                            <Paragraph2
                                 key={idx}
                                 className="
                   bg-[#e3f6fc]
@@ -74,7 +76,7 @@ const AllServiceLevel1 = ({ data }) => {
                   cursor-pointer
                 " >
                                 {name}
-                            </Paragraph1>
+                            </Paragraph2>
                         );
                     })}
                 </div>

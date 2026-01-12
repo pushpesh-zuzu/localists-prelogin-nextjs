@@ -98,7 +98,7 @@ export default function Page() {
                     { name: "Gutter Cleaning", path: "/gutter-cleaning-near-me" },
                 ]}
             />
-            <div className="mt-[10px] mb-[30px]">
+            <div className="mt-[5px]">
                 <div
                     className="
                     bg-[#f9fdff] py-[50px] max-[768px]:py-[30px] max-[480px]:py-[20px]" >

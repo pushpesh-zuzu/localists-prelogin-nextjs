@@ -2,8 +2,8 @@ import { handleScrollToBottom } from "@/utils/scroll";
 import Image from "next/image";
 import H2 from "../../UI/Typography/H2";
 import H3 from "../../UI/Typography/H3";
-import Paragraph1 from "../../UI/Typography/Paragraph1";
 import Button from "../../UI/Typography/Button";
+import Paragraph2 from "../../UI/Typography/Paragraph2";
 
 
 const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
@@ -20,7 +20,7 @@ const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
       "
     >
       <H2
-        className="text-white text-center">
+        className="text-white !leading-[100%] text-center">
         How
         <span className="text-black"> Localists </span>
         Works
@@ -29,7 +29,7 @@ const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
       <div
         className="
           flex gap-[20px]
-          mt-[58px] mx-auto
+          mt-[45px] mx-auto
           max-[920px]:mt-[52px]
           max-[768px]:mt-[45px]
           max-[667px]:flex-col max-[667px]:items-center
@@ -42,21 +42,21 @@ const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
             className="
               w-full
               relative
+              rounded-[37.97px]
               bg-white text-left
               px-[28px] pb-[28px]
-              shadow-[0_4px_10px_rgba(0,0,0,0.2)]
               max-[920px]:px-[20px] max-[920px]:pb-[20px]
               max-[667px]:w-[90%]
               max-[667px]:flex max-[667px]:flex-col max-[667px]:items-center
             "
           >
-            
+
             <div
               className="
                 flex items-center justify-center
                 w-[132px] h-[132px]
                 rounded-full bg-black
-                mx-auto mb-[22px]
+                mx-auto mb-[20px]
                 mt-[-58px]
                 max-[920px]:mt-[-52px]
                 max-[768px]:w-[102px] max-[768px]:h-[102px]
@@ -77,7 +77,7 @@ const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
 
             <div>
               <H3
-                className="text-black mb-[20px] text-left"
+                className="text-black mb-[20px] max-[520px]:mb-[15px] text-left"
               >
                 {item.heading1}
                 <span className="text-[#00afe3]">
@@ -86,7 +86,7 @@ const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
                 </span>
                 <span> {item?.heading3}</span>
 
-                <br className="block max-[667px]:hidden" />
+                {/* <br className="block max-[667px]:hidden" />
                 {item?.break && (
                   <br className="block max-[667px]:hidden" />
                 )}
@@ -94,21 +94,21 @@ const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
                   item.break && (
                     <br className="hidden lg:block" />
                   )
-                }
+                } */}
 
               </H3>
-              <Paragraph1
+              <Paragraph2
                 className="text-black"
               >
                 {item.description}
-              </Paragraph1>
+              </Paragraph2>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="flex justify-center">
-        <Button onClick={handleScrollToBottom} className="bg-[#253238] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] cursor-pointer text-white rounded-full">
+      <div className="flex justify-center max-[520px]:-mt-[40px]">
+        <Button onClick={handleScrollToBottom} className="bg-[#253238] hover:bg-[#1e272b] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] cursor-pointer text-white rounded-full">
           Get Quotes From {ctaText} Near You
         </Button>
       </div>

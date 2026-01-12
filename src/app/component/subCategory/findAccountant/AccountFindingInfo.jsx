@@ -1,6 +1,6 @@
 import Breadcrumb from "../../common/BreadCrum/BreadCrum";
 import H2 from "../../UI/Typography/H2";
-import Paragraph1 from "../../UI/Typography/Paragraph1";
+import Paragraph2 from "../../UI/Typography/Paragraph2";
 
 const AccountFindingInfo = ({
     title = "Accountant",
@@ -17,7 +17,7 @@ const AccountFindingInfo = ({
     return (
         <div className="
     bg-cover bg-center bg-no-repeat
-    px-[88px] pt-[27px] pb-[18px]
+    px-[88px] pt-[20px] pb-[20px]
     max-[768px]:px-[30px]
     max-[500px]:px-[20px] max-[500px]:pt-[20px] max-[500px]:pb-[15px]
   "
@@ -27,9 +27,9 @@ const AccountFindingInfo = ({
             /> */}
             <div className="
       flex flex-col gap-[20px]
-      py-[30px]
+      py-[0px]
       max-w-[1200px] mx-auto
-      max-[500px]:gap-[25px] max-[500px]:py-[20px]
+      max-[500px]:gap-[25px] max-[500px]:py-[10px]
     ">
                 <H2 className="text-left">
                     Find the best
@@ -37,14 +37,18 @@ const AccountFindingInfo = ({
                     {findAccountTitle2 || ''} in your area
                 </H2>
                 <div className="flex flex-col gap-[13px]">
-                    <Paragraph1 className="text-black">
+                    <Paragraph2 className="text-black">
                         {para1}
-                    </Paragraph1>
-                    <Paragraph1 className="text-black">
+                    </Paragraph2>
+                    <Paragraph2 className="text-black">
                         {para2}
-                    </Paragraph1>
-                    <Paragraph1 className="text-black">{para3}</Paragraph1>
-                    <Paragraph1 className="text-black">{para4}</Paragraph1>
+                    </Paragraph2>
+                    <Paragraph2 className="text-black">
+                        {para3}
+                    </Paragraph2>
+                    <Paragraph2 className="text-black">
+                        {para4}
+                    </Paragraph2>
                 </div>
             </div>
         </div>
