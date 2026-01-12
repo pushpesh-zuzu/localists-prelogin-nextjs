@@ -29,6 +29,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     src: "/nearme/sergeondo.webp",
     alt: "Tree sergeon do",
     marginBottom: true,
+    // marginTop:true
   },
   {
     type: "h2",
@@ -45,9 +46,9 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "pbold",
     text: "Here are some of the key things a tree surgeon does:",
-    className: "my-[25px]",
+    className: "my-[15px]",
   },
-  { type: "pbold", text: "2. Pruning, crown work & structural trimming " },
+  { type: "pbold", text: "1. Tree health and safety checks" },
   {
     type: "p",
     text: "Before any work begins, a tree surgeon assesses the overall health and stability of your trees. They’re trained to spot early signs of disease, pest infestations, cracks, or hidden rot that most of us would overlook.",
@@ -108,6 +109,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "For planning applications, insurance, or legal compliance, a tree surgeon (or arborist) can provide formal surveys and written reports to assess safety, preservation needs, or risks.",
+    notMarginBottom:true
   },
   {
     type: "image",
@@ -123,26 +125,32 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "pbold",
     text: "When choosing a tree surgeon, it’s important to look beyond price and focus on their training, safety standards, and experience. You can look out for one or more of the following:",
+    className:"mr-5"
   },
   {
     type: "li",
     text: "Insurance - This is also non-negotiable as it protects you and your property if something goes wrong.",
+    className:"mr-5"
   },
   {
     type: "li",
     text: "Reviews - Check reviews and recommendations from past clients to see how reliable they are in practice.",
+    className:"mr-5"
   },
   {
     type: "li",
     text: "Transparency - A good tree surgeon will be transparent: they’ll explain the work clearly, provide a written quote, and answer your questions before starting.",
+    className:"mr-5"
   },
   {
     type: "li",
     text: "Relevant experience - Having hands-on experience with the type of job you need is also a plus. Whether that’s caring for ornamental trees in your garden, managing large oaks on a commercial site, or maintaining multiple trees in public spaces.",
+    className:"mr-5"
   },
   {
     type: "li",
     text: "Professional bodies membership - Having a membership to organisations such as the Arboricultural Association often means they have to adhere to strict regulations and protocols.",
+    className:"mr-5"
   },
 ];
 export const FREQUENTLY_DATA_TREE_SURGEON = {
@@ -232,6 +240,7 @@ export const TREE_SURGEON_TABDATA = {
     "Tree Surgeons Chester",
     "Tree Surgeons Liverpool",
     "Tree Surgeons Leeds",
+    "Tree Surgeons York",
     "Tree Surgeons Wolverhampton",
     "Tree Surgeons Hull",
     "Tree Surgeons Wrexham",

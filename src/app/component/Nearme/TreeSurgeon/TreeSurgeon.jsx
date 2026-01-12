@@ -14,19 +14,25 @@ import {
   VETTED_DATA_TREE_SURGEON,
 } from "./TreeSurgeonData";
 import DiscoverServices from "../../Home/DiscoverServices/DiscoverServices";
-import AdviceInsight from "../../Home/AdviceInsight/AdviceInsight";
-import HireRelatedToService from "../../Home/HireRelatedToService/HireRelatedToService";
-import UserFeedback from "../../Home/UserFeedback/UserFeedback";
 // import Feature from "../Feature";
 import { FAQ } from "../FAQ";
 import PopularJobNearMe from "../PopularJobNearMe";
 import NearmeMember from "../NearmeMember";
 import Footer from "../../Footer/Footer";
 import HowItWorkNearMe from "../HowItWorkNearMe";
-
+import HireRelatedToServiceNearMe from "../HireRelatedToServiceNearMe";
+import UserFeedbackNearMe from "../UserFeedbackNearMe";
+import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+import AdviceInsightNearMe from "../AdviceInsightNearMe";
+export const metadata = {
+  title: "Find Quality Tree Surgeons Near Me | Localists",
+  description: "Find fully qualified tree surgeons near me. Certified and skilled arborists. Safe tree removal & pruning. Get free quotes from local experts in your area.",
+  
+}
 function TreeSurgeon() {
   return (
     <>
+      <CloseBrowserAbandon />
       <HeroSectionNearMe
         heading1="Find Tree Surgeons"
         heading2="Near You."
@@ -43,13 +49,13 @@ function TreeSurgeon() {
       <PopularJobNearMe services={POPULAR_SERVICES} />
       <HowItWorkNearMe />
       {/* <Feature /> */}
-      <HireRelatedToService tabData={TREE_SURGEON_TABDATA} />
-      <UserFeedback feedbackData={TREE_SUREON_FEEDBACK} />
+      <HireRelatedToServiceNearMe tabData={TREE_SURGEON_TABDATA} />
+      <UserFeedbackNearMe feedbackData={TREE_SUREON_FEEDBACK} />
       <PaddingWrapper>
         <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
       </PaddingWrapper>
       <FAQ data={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]} />
-      <AdviceInsight maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} />
+      <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} />
       <DiscoverServices />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

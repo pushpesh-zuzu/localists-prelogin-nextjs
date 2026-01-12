@@ -35,7 +35,7 @@ function HeroSectionNearMe({
   // Calculate background style
   const backgroundStyle = isMobile
     ? {
-        backgroundImage: `linear-gradient(rgba(0, 175, 227, .8), rgba(176, 229, 245, .8)), url(${bannerImage})`,
+        backgroundImage: `linear-gradient(rgba(0, 175, 227, 95%), rgba(176, 229, 245, 95%)), url(${bannerImage})`,
       }
     : {
         backgroundColor: "#00AEEF",
@@ -45,7 +45,7 @@ function HeroSectionNearMe({
     <>
       <WrapperBGWidth background={"#00aeef"}>
         <section
-          className="flex flex-col md:flex-row px-[25px] pt-10 md:px-[87px] md:pt-[38px] xl:px-[163px] xl:pt-12 bg-cover bg-center bg-no-repeat"
+          className="flex flex-col md:flex-row px-[34px] pt-10 md:px-[87px] md:pt-[38px] xl:px-[163px] xl:pt-12 bg-cover bg-center bg-no-repeat"
           style={backgroundStyle}
           role="banner"
           aria-label="Hero section"
@@ -79,7 +79,7 @@ function HeroSectionNearMe({
               className="object-cover object-center max-w-[95%]"
             />
           </div>
-          <div className="flex justify-center mt-[30px] md:hidden">
+          <div className="flex justify-center mb-3.5 mt-[30px] md:hidden">
             <ChevroliteDoubleDownIcon />
           </div>
         </section>

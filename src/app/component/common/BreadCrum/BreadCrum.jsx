@@ -28,7 +28,7 @@ export default function Breadcrumb({ items = [] }) {
               // ACTIVE / CURRENT PAGE
               <span
                 className="
-                  font-inter font-[900] text-base sm:text-[18px]
+                  font-inter font-[900] text-[14px] sm:text-[18px]
                   md:text-[25px] leading-[26px]
                   tracking-[-0.03em]
                   text-[#00AFE3]
@@ -40,7 +40,7 @@ export default function Breadcrumb({ items = [] }) {
               <Link
                 href={item.path}
                 className="
-                  font-inter font-[900] text-base sm:text-[18px]
+                  font-inter font-[900] text-[14px] sm:text-[18px]
                   md:text-[25px] leading-[26px]
                   tracking-[-0.03em]
                   text-[#959B9E]

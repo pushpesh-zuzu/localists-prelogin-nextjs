@@ -7,7 +7,7 @@ function NearmeH2Heading({
   className = "",
 }) {
   return (
-    <H2 className={`text-[#00AFE3] ${className}`}>
+    <H2 variant="secondary" className={`text-[#00AFE3] ${className}`}>
       {headdingblue}{" "}
       {headingblack && <span className="text-[#253238]">{headingblack}</span>}
     </H2>

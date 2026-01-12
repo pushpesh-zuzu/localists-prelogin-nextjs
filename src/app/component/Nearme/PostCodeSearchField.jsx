@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { CheckCircle, CheckIcon, Loader2 } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
-import { getCityName, setcitySerach } from "@/lib/store/buyerslice/buyerSlice";
+import { getCityName, setbuyerRequestData, setBuyerStep, setcitySerach } from "@/lib/store/buyerslice/buyerSlice";
+import BuyerRegistration from "../common/BuyerRegistration/BuyerRegistration";
+import { setSelectedServiceId } from "@/lib/store/findjobslice";
 
 function PostCodeSearchField({
   placeholder = "Enter Postcode",
@@ -13,17 +15,16 @@ function PostCodeSearchField({
   onValidationSuccess,
   onValidationError,
   onSubmit,
-  margin=true,
-  buttonBg='bg-[#7DD5F1]'
+  margin = true,
+  buttonBg = "bg-[#7DD5F1]",
 }) {
   const [postcode, setPostcode] = useState("");
   const [isValidating, setIsValidating] = useState(false);
   const [isValid, setIsValid] = useState(false);
   const [city, setCity] = useState("");
   const [error, setError] = useState("");
-
+  const [show, setShow] = useState(false);
   const dispatch = useDispatch();
-
   // Debounced API validation
   useEffect(() => {
     if (!postcode.trim() || postcode.length < 3) {
@@ -45,6 +46,7 @@ function PostCodeSearchField({
           setCity(newResponse.data.city);
           dispatch(setcitySerach(newResponse.data.city));
           setError("");
+          setShow(true);
 
           // Notify parent component - validation success
           if (onValidationSuccess) {
@@ -88,6 +90,7 @@ function PostCodeSearchField({
   };
 
   const handleSubmit = () => {
+    debugger
     if (!postcode.trim()) {
       setError("Please enter a postcode");
       return;
@@ -113,9 +116,31 @@ function PostCodeSearchField({
       handleSubmit();
     }
   };
+    const handleClose = () => {
+    setShow(false);
+    setPostcode("")
+  };
+
+   useEffect(() => {
+      const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
+      if (pendingModal?.shouldOpen) {
+        setSelectedServiceId({
+          id: pendingModal.serviceId,
+          name: pendingModal.serviceName,
+        });
+        dispatch(setbuyerRequestData(pendingModal.buyerRequest));
+        dispatch(setcitySerach(pendingModal.city));
+        setShow(true);
+        dispatch(setBuyerStep(7));
+      }
+    }, [dispatch]);
   return (
     <>
-      <div className={`relative max-w-[254px] md:max-w-[246px] lg:max-w-[404px] ${margin ?'mt-5 md:mt-6 xl:mt-[46px]': ''}`}>
+      <div
+        className={`relative max-w-[254px] md:max-w-[246px] lg:max-w-[404px] ${
+          margin ? "mt-5 md:mt-6 xl:mt-[46px]" : ""
+        }`}
+      >
         <div
           className="flex items-center bg-white rounded-full overflow-hidden "
           style={{
@@ -123,7 +148,7 @@ function PostCodeSearchField({
           }}
         >
           {/* Input Field */}
-          <div className="flex-1 relative">
+          <div className="flex-1 flex-col relative">
             <input
               type="text"
               value={postcode}
@@ -156,18 +181,27 @@ function PostCodeSearchField({
           <button
             type="button"
             onClick={handleSubmit}
-            disabled={disabled || !isValid || isValidating}
-            className={` ${buttonBg} font-bold px-4 py-2.5 md:px-6 md:py-2.5 xl:px-[23px] xl:py-4 text-white focus:outline-none text-base xl:text-[25px]!`}
+            
+            className={` ${buttonBg} min-w-[62px] font-bold pl-3.5 pr-5 py-[11px]  xl:pl-[22px] xl:pr-6 xl:py-4 text-white focus:outline-none text-base xl:text-[25px]!`}
           >
             {buttonText}
           </button>
         </div>
-      </div>
 
       {error && (
         <p className="text-left text-red-500 text-sm mt-2 max-w-[254px] md:max-w-[246px] lg:max-w-[404px]">
           {error}
         </p>
+      )}
+      </div>
+      {show && (
+        <BuyerRegistration
+        closeModal={handleClose}
+          service_Id={112}
+          postcode={postcode}
+          serviceName="Tree Surgery"
+          service_Name="Tree Surgery"
+        />
       )}
     </>
   );

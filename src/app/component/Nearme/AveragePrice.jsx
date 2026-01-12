@@ -4,7 +4,7 @@ import Paragraph from "../UI/Typography/Paragraph";
 
 export default function AveragePrice() {
   return (
-    <div className="flex items-center justify-center lg:pb-[72px] pt-12 ">
+    <div className="flex items-center justify-center lg:pb-[72px] pt-2 ">
       <div className="w-full max-w-[1000px]">
         <div
           className="w-full rounded-[25px]"
@@ -17,7 +17,7 @@ export default function AveragePrice() {
                 Average cost of tree surgery UK
               </H2>
 
-              <div className="mt-6 lg:mt-0 flex justify-center lg:justify-start">
+              <div className="hidden md:flex mt-6 lg:mt-0 justify-center lg:justify-start">
                 <GetQuote text=" Get a real quote" />
               </div>
             </div>
@@ -80,6 +80,9 @@ export default function AveragePrice() {
                   £115
                 </p>
               </div>
+              <div className="flex md:hidden col-span-2 mt-0 justify-center">
+                <GetQuote text=" Get a real quote" />
+              </div>
             </div>
           </div>
         </div>
@@ -87,16 +90,17 @@ export default function AveragePrice() {
         {/* Disclaimer Text */}
         <div className="mt-2.5 text-left lg:text-left px-0 lg:px-4">
           <p
-            className="text-[12px] leading-[18px]
+            className="text-[13.5px] leading-[18px]
         lg:text-[16px] lg:leading-[16px]
         lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[-0.03em]font-normal lg:font-bold"
           >
             *Costs are estimates only, to get a more specific estimate, try our{" "}
-            <a href="#" className="underline font-semibold text-[#00AFE3]">
+            <a href="#" className="underline font-normal text-[#00AFE3]">
               Tree Surgery Calculator
             </a>
           </p>
         </div>
+        
       </div>
     </div>
   );
