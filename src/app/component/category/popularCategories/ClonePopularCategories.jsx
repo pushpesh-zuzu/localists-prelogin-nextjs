@@ -66,7 +66,7 @@ const ClonePopularCategories = ({ data }) => {
                                     <Image
                                         src={row.image}
                                         alt={row.title}
-                                        className="w-full object-cover rounded-tl-[39.97px] rounded-tr-[39.97px]"
+                                        className="w-full object-cover rounded-tl-[20px] rounded-tr-[20px]"
                                         width={400}
                                         height={260}
                                     />
@@ -75,7 +75,7 @@ const ClonePopularCategories = ({ data }) => {
                                 <Image
                                     src={row.image}
                                     alt={row.title}
-                                    className="w-full object-cover rounded-tl-[39.97px] rounded-tr-[39.97px] max-[520px]:h-[230px]"
+                                    className="w-full object-cover rounded-tl-[20px] rounded-tr-[20px] max-[520px]:h-[230px]"
                                     width={400}
                                     height={260}
                                 />

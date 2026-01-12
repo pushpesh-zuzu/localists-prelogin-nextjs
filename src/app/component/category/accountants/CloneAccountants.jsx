@@ -281,7 +281,7 @@ const CloneAccountants = ({
                                             placeholder="Enter Postcode"
                                             value={pincode}
                                             onChange={handlePincodeChange}
-                                            className="font-[Arial] font-bold bg-white !text-black border border-[#D9D9D9] leading-[100%] rounded-[10px] pl-[12px] md:pl-[16px] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)] placeholder:text-[#959595]"
+                                            className="font-[Arial] font-bold bg-white !text-black border border-[#D9D9D9] leading-[100%] rounded-[10px] pl-[12px] md:pl-[16px] pr-[22px] pt-[13px] pb-[13px] w-full shadow-[0_0_2px_0.5px_rgba(0,0,0,0.10)]  [&::placeholder]:text-[#959595] [&::placeholder]:opacity-100"
 
                                         />
                                         {isCheckingPostcode ? (
