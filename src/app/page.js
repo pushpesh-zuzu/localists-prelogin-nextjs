@@ -7,7 +7,7 @@ import Footer from "./component/Footer/Footer";
 import DiscoverServices from "./component/Home/DiscoverServices/DiscoverServices";
 import Member from "./component/Home/Member/Member";
 import AdviceInsight from "./component/Home/AdviceInsight/AdviceInsight";
-import { articles, tabData,  } from "@/constants/homepageData";
+import { articles, feedbackData, tabData } from "@/constants/homepageData";
 import CloseBrowserAbandon from "./component/common/CloseBrowserAbandon/CloseBrowserAbandon";
 
 export const metadata = {
@@ -24,7 +24,7 @@ export default function Home() {
       <PopularCard />
       <HowItWork />
       <DiscoverServices />
-      <UserFeedback />
+      <UserFeedback feedbackData={feedbackData} />
       <AdviceInsight articles={articles} />
       <HireRelatedToService tabData={tabData} />
       <Member />

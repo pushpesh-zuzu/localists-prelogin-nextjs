@@ -9,8 +9,10 @@ export default function Paragraph({
     primary: ` text-[18px] leading-[18px]
         md:text-[16px] md:leading-[16px]
         lg:text-[20px] lg:leading-[24px]`,
-
-    secondary: `text-[18px] leading-[22px]
+    primarySmall: ` text-[16px] leading-[18px]
+        md:text-[16px] md:leading-[16px]
+        lg:text-[20px] lg:leading-[24px]`,
+    secondary: `text-[16px] leading-[14px]
         md:text-[16px] md:leading-[16px]
         lg:text-[20px] lg:leading-[24px]`,
 

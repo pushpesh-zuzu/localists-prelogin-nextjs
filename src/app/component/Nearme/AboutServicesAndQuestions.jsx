@@ -3,9 +3,9 @@ import Paragraph from "../UI/Typography/Paragraph";
 import H3 from "../UI/Typography/H3";
 import NearmeH2Heading from "./NearmeH2Heading";
 import Image from "next/image";
-import AveratePrice from "./AveragePrice";
 import PostCodeSection from "./AboutServicesAndQuestions/PostCodeSection";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
+import AveragePrice from "./AveragePrice";
 
 const textBase =
   "font-[Arial] tracking-[-0.03em] text-[18px] leading-[22px] md:text-[16px] md:leading-[16px] lg:text-[20px] lg:leading-[24px]";
@@ -16,21 +16,20 @@ const AboutServicesAndQuestions = ({
   buttonText,
 }) => {
   const renderBlock = (block, index) => {
-    console.log(block, "blocl");
     switch (block.type) {
       case "h2":
         return (
           <NearmeH2Heading
             key={index}
             headdingblue={block.text}
-            className="mb-4"
+            className="mb-4 max-w-[90%] md:max-w-full"
           />
         );
       case "image":
         return (
           <div
             key={index}
-            className={`relative w-full my-8 overflow-hidden ${
+            className={`relative w-full overflow-hidden ${
               block.className || ""
             }`}
           >
@@ -40,13 +39,17 @@ const AboutServicesAndQuestions = ({
               width={block?.width || 1000}
               height={block?.height || 600}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-              className={`w-full h-auto object-cover rounded-lg ${block?.className}`}
+              className={`w-full h-auto object-cover rounded-lg ${
+                block?.className
+              } ${block?.marginTop ? "mt-5 lg:mt-[72px]" : ""} ${
+                block?.marginBottom ? "mb-5 lg:mb-[72px]" : ""
+              }`}
               priority={block?.priority || false}
             />
           </div>
         );
       case "AveratePriceSection":
-        return <AveratePrice key={index} />;
+        return <AveragePrice key={index} />;
       case "h3":
         return (
           <H3 key={index} className={`${textBase} font-bold mb-2 text-black`}>
@@ -65,7 +68,7 @@ const AboutServicesAndQuestions = ({
       case "p":
         return (
           <Paragraph
-            variant="secondary"
+            variant="primarySmall"
             key={index}
             bold="font-normal"
             className={`${textBase} mb-[25px] text-black`}
@@ -77,11 +80,11 @@ const AboutServicesAndQuestions = ({
       case "pbold":
         return (
           <Paragraph
-            variant="secondary"
+            variant="primarySmall"
             key={index}
             className={`${textBase} font-bold ${
               block?.className ? block?.className : "mb-2.5"
-            } text-black`}
+            } text-[#253238]`}
           >
             {block.text}
           </Paragraph>

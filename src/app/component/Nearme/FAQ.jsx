@@ -15,26 +15,38 @@ export const FAQ = ({ data, defaultOpen }) => {
   return (
     <WrapperBGWidth>
       {" "}
-      <div className="w-full px-2.5 lg:px-0 max-w-5xl mx-auto">
+      <div className="w-full px-2.5 lg:px-0 max-w-[1200px] mx-auto">
         <NearmeH2Heading headdingblue="FAQ" className="mb-10" />
 
-        <div className="space-y-0 border-4 border-[#DBDFE4] rounded-[30px] overflow-hidden bg-white shadow-sm">
+        <div className="space-y-0 border-2 md:border-4 border-[#DBDFE4] rounded-[30px] overflow-hidden bg-white shadow-sm">
           {data.map((item, index) => (
             <div
               key={item.key}
-              className={`${index !== 0 ? "border-t-4 border-[#DBDFE4]" : ""}`}
+              className={`${index !== 0 ? "border-t-2 md:border-t-4 border-[#DBDFE4]" : ""}`}
             >
               <button
                 onClick={() => toggleItem(item.key)}
-                className="w-full flex items-center justify-between px-5 pb-[30px] pt-5 hover:bg-gray-50 transition-colors duration-200 text-left"
+                className="w-full flex items-center justify-between px-[30px] pb-[20px] pt-[30px] md:px-5 md:pb-[30px] md:pt-5 hover:bg-gray-50 transition-colors duration-200 text-left"
                 aria-expanded={openItem === item.key}
               >
-                <H5 className=" flex-1">{item.title}</H5>
+                <h5
+                    className={`
+                      flex-1
+                      text-[20px] leading-[25px]
+                      md:text-[25px] md:leading-[25px]
+                      lg:text-[25px] lg:leading-[25px]
+                      font-Inter font-black
+                      tracking-[-0.03em]
+                    `}
+                    >
+                      {item.title}
+                    </h5>
+
                 <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
                   {openItem === item.key ? (
                     <svg
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -45,8 +57,8 @@ export const FAQ = ({ data, defaultOpen }) => {
                     </svg>
                   ) : (
                     <svg
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -67,12 +79,14 @@ export const FAQ = ({ data, defaultOpen }) => {
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="px-[20px] pb-[30px]">
-                  <Paragraph
+                <div className="px-[30px] pb-[30px] md:px-[20px] md:pb-[30px]">
+                  <p
                     bold="font-normal"
                     variant="secondary"
                     dangerouslySetInnerHTML={{ __html: item.description }}
-                    className="faq-content"
+                    className={`font-[Arial] faq-content text-[16px] 
+                            md:text-[16px] md:leading-[16px]
+                            lg:text-[20px] lg:leading-[24px] tracking-[-0.03em] font-normal`}
                   />
                 </div>
               </div>

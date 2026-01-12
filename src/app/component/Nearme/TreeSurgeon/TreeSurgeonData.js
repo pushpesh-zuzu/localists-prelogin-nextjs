@@ -3,6 +3,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     type: "image",
     src: "/nearme/treesurgery.webp",
     alt: "Tree Surgeon",
+    marginBottom: true,
   },
   {
     type: "h2",
@@ -27,6 +28,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     type: "image",
     src: "/nearme/sergeondo.webp",
     alt: "Tree sergeon do",
+    marginBottom: true,
   },
   {
     type: "h2",
@@ -38,7 +40,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   },
   {
     type: "p",
-    text: "rees can become harmful when they’re diseased, unstable, or simply too large for their surroundings. For example, a tree with hidden rot at the base might look fine on the outside but could topple in a storm, damaging property or blocking a road. In other cases, overgrown branches might stretch into power lines, or roots can push up paving slabs and create trip hazards. This is where a tree surgeon’s expertise matters. They can spot these risks early and take action.",
+    text: "Trees can become harmful when they’re diseased, unstable, or simply too large for their surroundings. For example, a tree with hidden rot at the base might look fine on the outside but could topple in a storm, damaging property or blocking a road. In other cases, overgrown branches might stretch into power lines, or roots can push up paving slabs and create trip hazards. This is where a tree surgeon’s expertise matters. They can spot these risks early and take action.",
   },
   {
     type: "pbold",
@@ -111,6 +113,8 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     type: "image",
     src: "/nearme/surgeonPick.webp",
     alt: "surgeonPick",
+    marginTop: true,
+    marginBottom: true,
   },
   {
     type: "h2",
@@ -183,68 +187,113 @@ export const FREQUENTLY_DATA_TREE_SURGEON = {
   ],
 };
 export const TREE_SRUGEON_ADVICEINSIGHT = [
-    {
-      id: 1,
-      title: "How to remove a tree stump",
-      image: "/nearme/tree-remove.webp",
-    },
-    {
-      id: 2,
-      title: " How to tell if a tree is dying",
-      image: "/nearme/trees-removal.webp",
-    },
-    {
-      id: 3,
-      title: "How much does it cost to remove a tree?",
-      image: "/nearme/tree-climb-remov.webp",
-    },
-    {
-      id: 4,
-      title: "What is a tree surgeon?",
-      image: "/nearme/long-tree-remove.webp",
-    },
-    {
-      id: 5,
-      title: " What is an arborist?",
-      image: "/nearme/tree-root-remove.webp",
-    },
-  ];
-export const TREE_SURGEON_TABDATA ={
- professionals: [
-      "Tree Surgeons London",
-      "Tree Surgeons Burnley",
-      "Tree Surgeons Manchester",
-      "Tree Surgeons Wrexham",
-      "Tree Surgeons Wolverhampton",
-      "Tree Surgeons Birmingham",
-      "Tree Surgeons Rhyl",
-      "Tree Surgeons Snowdonia",
-      "Tree Surgeons Ayr",
-      "Tree Surgeons Bath",
-      "Tree Surgeons Cardiff",
-      "Tree Surgeons Birmingham",
-    ],
-    popular: [
-      "Landscapers near me",
-      "Patio Layers near me",
-      "Private Tutors near me",
-      "Personal Trainers near me",
-      "Landscapers near me",
-      "Patio Layers near me",
-      "Private Tutors near me",
-      "Fence & Gate Installers near me",
-    ],
-    insight: [
-      "Hiring Tips",
-      "Roofing Safety",
-      "Electrician Rates",
-      "Garden Design",
-      "Math Tutoring",
-      "Best Patio Materials",
-      "Interior Design",
-      "Home Renovation",
-      "Top Carpenters",
-      "Painting Techniques",
-      "DIY Gardening Hacks",
-    ],
-}
+  {
+    id: 1,
+    title: "How to remove a tree stump",
+    image: "/nearme/tree-remove.webp",
+  },
+  {
+    id: 2,
+    title: " How to tell if a tree is dying",
+    image: "/nearme/trees-removal.webp",
+  },
+  {
+    id: 3,
+    title: "How much does it cost to remove a tree?",
+    image: "/nearme/tree-climb-remov.webp",
+  },
+  {
+    id: 4,
+    title: "What is a tree surgeon?",
+    image: "/nearme/long-tree-remove.webp",
+  },
+  {
+    id: 5,
+    title: " What is an arborist?",
+    image: "/nearme/tree-root-remove.webp",
+  },
+];
+export const TREE_SURGEON_TABDATA = {
+  professionals: [
+    "Tree Surgeons London",
+    "Tree Surgeons Burnley",
+    "Tree Surgeons Manchester",
+    "Tree Surgeons Wrexham",
+    "Tree Surgeons Wolverhampton",
+    "Tree Surgeons Birmingham",
+    "Tree Surgeons Rhyl",
+    "Tree Surgeons Snowdonia",
+    "Tree Surgeons Ayr",
+    "Tree Surgeons Bath",
+    "Tree Surgeons Cardiff",
+    "Tree Surgeons Birmingham",
+  ],
+  popular: [
+    "Tree Surgeons Chester",
+    "Tree Surgeons Liverpool",
+    "Tree Surgeons Leeds",
+    "Tree Surgeons Wolverhampton",
+    "Tree Surgeons Hull",
+    "Tree Surgeons Wrexham",
+    "Tree Surgeons Creww",
+  ],
+  insight: [
+    "Hiring Tips",
+    "Roofing Safety",
+    "Electrician Rates",
+    "Garden Design",
+    "Math Tutoring",
+    "Best Patio Materials",
+    "Interior Design",
+    "Home Renovation",
+    "Top Carpenters",
+    "Painting Techniques",
+    "DIY Gardening Hacks",
+  ],
+};
+export const VETTED_DATA_TREE_SURGEON = [
+  `Do you have a garden full of misbehaving trees? Whether its oaks leaning
+        like they’ve had too many, or hedges with some boundary issues,
+        Localists can help you find a local tree surgeon that can set things
+        straight.`,
+  `From precise pruning, to safe removals. We’ll connect you with vetted
+        and verified tree surgeons near you, ensuring you have healthy trees,
+        safer spaces and peace of mind - without the hassle`,
+];
+
+export const BREADCRUM_DATA_TREESURGEON = [
+  { title: "Home & Garden", path: "/home" },
+  { title: "Tree Surgeons" },
+];
+
+export const POPULAR_SERVICES = [
+  "Crown Reduction",
+  "Crown Thinking",
+  "Stumb Grindinng",
+  "Tree Felling",
+  "Tree Removal",
+  "Stump Removal",
+  "Tree & Stump Removal",
+];
+export const TREE_SUREON_FEEDBACK = [
+  {
+    id: 1,
+    text: "Within minutes of submitting my request, I heard back from two local companies ready to help. Couldn’t have asked for a quicker service.",
+    name: "Amelia",
+  },
+  {
+    id: 2,
+    text: "Had 3 quotes from local tree surgeons, and got the work done the same day for less than originally quoted! Will definitely use again",
+    name: "Robert",
+  },
+  {
+    id: 3,
+    text: "Got instant quotes for my driveway -  and had the work done 2 weeks later. Can't fault them, will definitely use Localists again. ",
+    name: "Alan",
+  },
+  {
+    id: 4,
+    text: "Couldn't fault the service, saved me shopping around for a cheaper quote. Will definitely use again!",
+    name: "Tracey",
+  },
+];

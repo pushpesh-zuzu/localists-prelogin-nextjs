@@ -6,29 +6,7 @@ import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import UserFeedbackCard from "./UserFeedbackCard";
 import WithoutSpecialCardCarousel from "../../Carousel/WithoutSpecialCardCarousel";
 
-function UserFeedback() {
-  const feedbackData = [
-    {
-      id: 1,
-      text: "Within minutes of submitting my request, I heard back from two local companies ready to help. Couldn't have asked for a quicker service.",
-      name: "Amelia",
-    },
-    {
-      id: 2,
-      text: "Had 3 quotes from local tree surgeons, and got the work done the same day for less than originally quoted! Will definitely use again",
-      name: "Robert",
-    },
-    {
-      id: 3,
-      text: "Got instant quotes for my driveway -  and had the work done 2 weeks later. Can't fault them, will definitely use Localists again.",
-      name: "Alan",
-    },
-    {
-      id: 4,
-      text: "Couldn't fault the service, saved me shopping around for a cheaper quote. Will definitely use again!",
-      name: "Tracey",
-    },
-  ];
+function UserFeedback({feedbackData=[]}) {
 
   return (
     <WrapperBGWidth background={"#edfcf8"}>
