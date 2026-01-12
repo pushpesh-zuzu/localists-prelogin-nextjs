@@ -109,7 +109,7 @@ const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
       </div>
 
       <div className="flex justify-center max-[520px]:-mt-[40px]">
-        <Button onClick={handleScrollToBottom} className="bg-[#253238] hover:bg-[#1e272b] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[30px] cursor-pointer text-white rounded-full">
+        <Button onClick={handleScrollToBottom} className="bg-[#253238] hover:bg-[#1e272b] px-4.5 py-2 md:px-9 md:py-2 xl:py-3.5 xl:px-[30px] cursor-pointer text-white rounded-full">
           Get Quotes From {ctaText} Near You
         </Button>
       </div>
