@@ -23,7 +23,7 @@ const ClonePopularCategories = ({ data }) => {
     max-[880px]:pb-[2px]
 
     max-[520px]:px-[20px]
-    max-[520px]:pt-[6px]
+    max-[520px]:pt-[16px]
     max-[520px]:pb-[6px]
       "
         >
