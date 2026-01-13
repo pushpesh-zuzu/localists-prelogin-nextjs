@@ -5,7 +5,7 @@ import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import PlusIconFaq from "../common/icons/NearMe/PlusIconFaq";
 import MinusIcon from "../common/icons/NearMe/MinusIcon";
 
-export const FAQ = ({ data, defaultOpen }) => {
+export const FAQ = ({ data, defaultOpen="1" }) => {
   const [openItem, setOpenItem] = useState(defaultOpen || null);
 
   const toggleItem = (key) => {
@@ -15,7 +15,7 @@ export const FAQ = ({ data, defaultOpen }) => {
   return (
     <WrapperBGWidth>
       {" "}
-      <div className="w-full px-2.5 lg:px-0 max-w-[1200px] mx-auto">
+      <div className="w-full px-2.5 sm:px-10 md:px-16 xl:px-[0px] lg:max-w-[1200px] mx-auto">
         <NearmeH2Heading headdingblue="FAQ" className="mb-10" />
 
         <div className="space-y-0 border-2 border-[#DBDFE4] rounded-[30px] overflow-hidden bg-white shadow-sm">
@@ -31,7 +31,7 @@ export const FAQ = ({ data, defaultOpen }) => {
               >
                 <h5
                   className={`
-                      flex-1
+                      flex-1 max-w-[90%] md:max-w-full
                       text-[20px] leading-[25px]
                       md:text-[25px] md:leading-[25px]
                       lg:text-[25px] lg:leading-[25px]
