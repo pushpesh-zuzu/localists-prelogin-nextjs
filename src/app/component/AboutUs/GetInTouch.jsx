@@ -1,4 +1,4 @@
-import H2 from "../UI/Typography/H2";
+import H3 from "../UI/Typography/H3";
 
 const contactMethods = [
     {
@@ -23,12 +23,12 @@ const GetInTouchButton = () => {
         max-md:px-[4px]
       "
         >
-            <H2
+            <H3
                 className="font-bold"
             >
                 <span className="text-black">Get </span>
                 <span className="text-[#00AFE3]">in touch</span>
-            </H2>
+            </H3>
 
             <div
                 className="

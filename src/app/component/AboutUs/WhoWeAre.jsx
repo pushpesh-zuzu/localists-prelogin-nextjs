@@ -10,7 +10,7 @@ function WhoWeAre() {
                         max-md:my-[32px] max-sm:my-[16px]">
 
             <div className="max-w-[76.5%] w-full mx-auto px-[20px] max-md:px-0 max-sm:max-w-full mb-5">
-                <H2 className="font-bold font-[Arial]">
+                <H2 className="font-bold">
                     <span className="text-[#00AFE3]">Who </span>
                     <span className="text-black">we are</span>
                 </H2>
@@ -86,7 +86,7 @@ function WhoWeAre() {
                       max-md:text-[16px] max-md:px-0
                       max-sm:max-w-full max-sm:leading-[26px]">
 
-                <H3 className="text-black font-[Arial] font-bold mb-5 max-sm:leading-[26px]">
+                <H3 className="text-black font-bold mb-5 max-sm:leading-[26px]">
                     Setting the Standard
                 </H3>
 

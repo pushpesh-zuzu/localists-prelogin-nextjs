@@ -100,10 +100,13 @@ const ContactUs = () => {
                     Get in touch with our Team
                 </H2>
 
-                {/* <style jsx>{`
-                                input::placeholder {
-                                color: #959595;
-                                opacity: 1; }`}</style> */}
+                <style>{`
+  .custom-placeholder::placeholder {
+    color: #959595;
+    opacity: 1;
+  }
+`}</style>
+
 
                 <form className="w-full flex flex-col gap-4">
 
@@ -120,7 +123,7 @@ const ContactUs = () => {
                                 value={formData.fullName}
                                 onChange={handleChange}
                                 required
-                                className="px-[16px] py-[12px] rounded-[10px] bg-white
+                                className="custom-placeholder px-[16px] py-[12px] rounded-[10px] bg-white
                            text-black outline-none"
                             />
                         </div>
@@ -143,7 +146,7 @@ const ContactUs = () => {
                                     }))
                                 }
                                 required
-                                className="px-[16px] py-[12px] rounded-[10px] bg-white
+                                className="custom-placeholder px-[16px] py-[12px] rounded-[10px] bg-white
                            text-black outline-none"
                             />
                         </div>
@@ -163,7 +166,7 @@ const ContactUs = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                className="px-[16px] py-[12px] rounded-[10px] bg-white
+                                className="custom-placeholder px-[16px] py-[12px] rounded-[10px] bg-white
                            text-black outline-none"
                             />
                         </div>
@@ -190,7 +193,7 @@ const ContactUs = () => {
                                         key={type}
                                         type="button"
                                         onClick={() => setCustomerType(type)}
-                                        className={`relative z-10 cursor-pointer flex-1 text-[19px] leading-[100%] tracking-[-0.03em] font-[500] font-[Arial]
+                                        className={`relative z-10 cursor-pointer flex-1 text-[19px] leading-[100%] tracking-[-0.03em] font-medium font-[Arial]
                                 ${customerType === type
                                                 ? "text-white"
                                                 : "text-black "
@@ -215,7 +218,7 @@ const ContactUs = () => {
                             value={formData.message}
                             onChange={handleChange}
                             required
-                            className="min-h-[120px] px-[16px] py-[12px]
+                            className="custom-placeholder min-h-[120px] px-[16px] py-[12px]
                          rounded-[10px] bg-white text-black
                          outline-none resize-y"
                         />

@@ -2,7 +2,7 @@ export default function H1({ children, className = "" }) {
   return (
     <h1
       className={`
-        font-[Arial] font-black
+        font-Inter font-black
         tracking-[-0.03em]
         text-[46px] leading-[48px]
         md:text-[60px] md:leading-[55px]
