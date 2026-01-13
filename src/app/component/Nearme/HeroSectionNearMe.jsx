@@ -96,7 +96,7 @@ function HeroSectionNearMe({
               className="object-cover object-center max-w-[95%]"
             />
           </div>
-          <div className="flex justify-center mb-3.5 mt-[30px] md:hidden ">
+          <div className="flex justify-center mb-3.5 mt-[30px] md:hidden relative z-1">
             <ChevroliteDoubleDownIcon />
           </div>
         </section>
