@@ -10,19 +10,16 @@ function WhoWeAre() {
                         max-md:my-[32px] max-sm:my-[16px]">
 
             <div className="max-w-[76.5%] w-full mx-auto px-[20px] max-md:px-0 max-sm:max-w-full mb-5">
-                <H2 className="font-bold">
+                <H2>
                     <span className="text-[#00AFE3]">Who </span>
                     <span className="text-black">we are</span>
                 </H2>
             </div>
 
-            <p className="
+            <Paragraph2 className="
                    max-w-[76.5%] w-full mx-auto px-[20px]
     max-md:px-0
     max-sm:max-w-full
-    font-[Arial] font-normal
-    tracking-[-0.03em]
-    text-black
     text-[16px] leading-[20px]
     md:text-[16px] md:leading-[16px]
     lg:text-[20px] lg:leading-[24px]
@@ -32,13 +29,10 @@ function WhoWeAre() {
                 professionals. We make it easier and faster to find verified local
                 service providers across home, business, and lifestyle sectors via one
                 online platform.
-            </p>
+            </Paragraph2>
             <Paragraph2 className="max-w-[76.5%] w-full mx-auto px-[20px]
     max-md:px-0
     max-sm:max-w-full
-    font-[Arial] font-normal
-    tracking-[-0.03em]
-    text-black
     text-[16px] leading-[20px]
     md:text-[16px] md:leading-[16px]
     lg:text-[20px] lg:leading-[24px]
@@ -52,10 +46,7 @@ function WhoWeAre() {
 
             <Paragraph2 className="max-w-[76.5%] w-full mx-auto px-[20px]
     max-md:px-0
-    max-sm:max-w-full
-    font-[Arial] font-normal
-    tracking-[-0.03em]
-    text-black
+    max-sm:max-w-full font-normal
     text-[16px] leading-[20px]
     md:text-[16px] md:leading-[16px]
     lg:text-[20px] lg:leading-[24px]
@@ -68,10 +59,7 @@ function WhoWeAre() {
 
             <Paragraph2 className="max-w-[76.5%] w-full mx-auto px-[20px]
     max-md:px-0
-    max-sm:max-w-full
-    font-[Arial] font-normal
-    tracking-[-0.03em]
-    text-black
+    max-sm:max-w-full font-normal
     text-[16px] leading-[20px]
     md:text-[16px] md:leading-[16px]
     lg:text-[20px] lg:leading-[24px]
@@ -86,16 +74,13 @@ function WhoWeAre() {
                       max-md:text-[16px] max-md:px-0
                       max-sm:max-w-full max-sm:leading-[26px]">
 
-                <H3 className="text-black font-bold mb-5 max-sm:leading-[26px]">
+                <H3 className="text-black mb-5 max-sm:leading-[26px]">
                     Setting the Standard
                 </H3>
 
                 <Paragraph2 className=" w-full mx-auto
     max-md:px-0
-    max-sm:max-w-full
-    font-[Arial] font-normal
-    tracking-[-0.03em]
-    text-black
+    max-sm:max-w-full font-normal
     text-[16px] leading-[20px]
     md:text-[16px] md:leading-[16px]
     lg:text-[20px] lg:leading-[24px]
@@ -106,10 +91,7 @@ function WhoWeAre() {
 
                 <Paragraph2 className="w-full mx-auto
     max-md:px-0
-    max-sm:max-w-full
-    font-[Arial] font-normal
-    tracking-[-0.03em]
-    text-black
+    max-sm:max-w-full font-normal
     text-[16px] leading-[20px]
     md:text-[16px] md:leading-[16px]
     lg:text-[20px] lg:leading-[24px]
@@ -119,10 +101,7 @@ function WhoWeAre() {
 
                 <Paragraph2 className="w-full mx-auto
     max-md:px-0
-    max-sm:max-w-full
-    font-[Arial] font-normal
-    tracking-[-0.03em]
-    text-black
+    max-sm:max-w-full font-normal
     text-[16px] leading-[20px]
     md:text-[16px] md:leading-[16px]
     lg:text-[20px] lg:leading-[24px]
@@ -132,10 +111,7 @@ function WhoWeAre() {
 
                 <Paragraph2 className="w-full mx-auto
     max-md:px-0
-    max-sm:max-w-full
-    font-[Arial] font-normal
-    tracking-[-0.03em]
-    text-black
+    max-sm:max-w-full font-normal
     text-[16px] leading-[20px]
     md:text-[16px] md:leading-[16px]
     lg:text-[20px] lg:leading-[24px]
@@ -146,10 +122,7 @@ function WhoWeAre() {
 
                 <Paragraph2 className="w-full mx-auto
     max-md:px-0
-    max-sm:max-w-full
-    font-[Arial] font-normal
-    tracking-[-0.03em]
-    text-black
+    max-sm:max-w-full font-normal
     text-[16px] leading-[20px]
     md:text-[16px] md:leading-[16px]
     lg:text-[20px] lg:leading-[24px]
@@ -158,16 +131,13 @@ function WhoWeAre() {
                     were turned away because they didn’t meet our standards.
                 </Paragraph2>
 
-                <H3 className="text-black font-bold mb-5 max-sm:leading-[26px]">
+                <H3 className="text-black mb-5 max-sm:leading-[26px]">
                     Ongoing Trust & Transparency
                 </H3>
 
                 <Paragraph2 className="w-full mx-auto
     max-md:px-0
-    max-sm:max-w-full
-    font-[Arial] font-normal
-    tracking-[-0.03em]
-    text-black
+    max-sm:max-w-full font-normal
     text-[16px] leading-[20px]
     md:text-[16px] md:leading-[16px]
     lg:text-[20px] lg:leading-[24px]
@@ -178,16 +148,13 @@ function WhoWeAre() {
                     from real people and reflect real experiences.
                 </Paragraph2>
 
-                <H3 className="text-black font-bold mb-5 max-sm:leading-[26px]">
+                <H3 className="text-black mb-5 max-sm:leading-[26px]">
                     Peace of Mind for Every Customer
                 </H3>
 
                 <Paragraph2 className="w-full mx-auto
     max-md:px-0
-    max-sm:max-w-full
-    font-[Arial] font-normal
-    tracking-[-0.03em]
-    text-black
+    max-sm:max-w-full font-normal
     text-[16px] leading-[20px]
     md:text-[16px] md:leading-[16px]
     lg:text-[20px] lg:leading-[24px]
@@ -199,10 +166,7 @@ function WhoWeAre() {
 
                 <Paragraph2 className="w-full mx-auto
     max-md:px-0
-    max-sm:max-w-full
-    font-[Arial] font-normal
-    tracking-[-0.03em]
-    text-black
+    max-sm:max-w-full font-normal
     text-[16px] leading-[20px]
     md:text-[16px] md:leading-[16px]
     lg:text-[20px] lg:leading-[24px]">

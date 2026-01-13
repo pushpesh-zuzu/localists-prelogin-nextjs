@@ -24,7 +24,6 @@ const GetInTouchButton = () => {
       "
         >
             <H3
-                className="font-bold"
             >
                 <span className="text-black">Get </span>
                 <span className="text-[#00AFE3]">in touch</span>

@@ -3,7 +3,6 @@ export default function Paragraph2({ children, className = "", style = {} }) {
     <p
       className={`
         font-[Arial]
-        font-normal
         tracking-[-0.03em]
         leading-[24px]
         text-black
