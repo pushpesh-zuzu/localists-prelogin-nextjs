@@ -82,7 +82,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/login"
+                    href="/en/gb/login"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px] xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block"
                   >
                     Login

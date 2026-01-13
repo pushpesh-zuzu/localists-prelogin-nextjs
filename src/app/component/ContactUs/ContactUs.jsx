@@ -270,7 +270,7 @@ const ContactUs = () => {
                         type="submit"
                         disabled={loading}
                         className="mx-auto mt-4 w-[92px] h-[50px]
-                       bg-black text-white rounded-[10px]
+                       bg-black text-white rounded-full
                        text-[19px] font-medium cursor-pointer
                        hover:bg-black/80 transition"
                     >
