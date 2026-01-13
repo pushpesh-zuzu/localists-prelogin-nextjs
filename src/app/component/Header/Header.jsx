@@ -11,6 +11,7 @@ import ArrowDownBlue from "../common/icons/HomePageIcons/ArrowDownBlue";
 import SearchIcon from "../common/icons/HomePageIcons/SearchIcon";
 import MobileMenuIcon from "../common/icons/HomePageIcons/MobileMenuIcon";
 import { getBarkToken } from "@/utils/CookiesHelper";
+import { useRouter } from "next/navigation";
 const SearchResults = dynamic(() => import("../common/SearchResult"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -19,6 +20,7 @@ const SearchResults = dynamic(() => import("../common/SearchResult"), {
 export default function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const dispatch = useDispatch();
+  const router = useRouter()
   return (
     <header
     className="w-full sticky top-0 left-0 border-b border-[#DEDEDE] bg-white z-50"
@@ -120,14 +122,15 @@ export default function Header() {
                 aria-label="User authentication"
               >
                 <button
-                  className="text-[14px] lg:text-base font-normal text-[#1E2A2E] lg:py-[12.5px] md:px-1 lg:px-4 whitespace-nowrap"
+                  className="text-[14px] lg:text-base cursor-pointer font-normal text-[#1E2A2E] lg:py-[12.5px] md:px-1 lg:px-4 whitespace-nowrap"
                   aria-label="Login to your account"
                 >
                   Login
                 </button>
                 <button
-                  className="flex items-center font-bold gap-2 px-2.5 py-1.5 lg:px-5 lg:py-3 text-[14px] lg:text-[16px] text-white bg-[#00AEEF] rounded-full whitespace-nowrap"
+                  className="flex items-center cursor-pointer font-bold gap-2 px-2.5 py-1.5 lg:px-5 lg:py-3 text-[14px] lg:text-[16px] text-white bg-[#00AEEF] rounded-full whitespace-nowrap"
                   aria-label="Sign up for new account"
+                  onClick={()=>{router.push('/en/gb/sellers/create')}}
                 >
                   {/* <Image
                     src="/icons/signup.webp"
