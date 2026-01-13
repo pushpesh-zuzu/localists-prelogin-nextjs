@@ -52,7 +52,7 @@ const GetInTouchButton = () => {
               text-[20px] font-semibold text-[var(--text-color)]
               h-[76.14px]
               px-[48px] py-[20px]
-              rounded-[8px]
+              rounded-[10px]
               transition-all duration-300 ease-in-out
               hover:bg-[#C9E9F5]
               hover:-translate-y-[2px]

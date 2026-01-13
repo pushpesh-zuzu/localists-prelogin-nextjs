@@ -11,7 +11,7 @@ export default function H5({ children, className = "", variant = "primary" }) {
   return (
     <h5
       className={`
-        font-Inter font-black
+        font-[Arial] font-black
         tracking-[-0.03em]
         ${variants[variant]}
         ${className}

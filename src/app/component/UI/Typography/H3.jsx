@@ -2,7 +2,7 @@ export default function H3({ children, className = "", style = {} }) {
   return (
     <h3
       className={`
-        font-Inter font-black
+        font-[Arial] font-black
         tracking-[-0.03em]
         text-[24px] leading-[22px]
         md:text-[22px] md:leading-[20px]
