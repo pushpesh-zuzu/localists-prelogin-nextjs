@@ -26,12 +26,18 @@ const InputField = ({
       {label && (
         <label
           htmlFor={inputId}
-          className="block text-base font-bold text-[#253238] mt-3 mb-1.5"
+          className="block text-base text-[20px] leading-[100%] tracking-[-0.03em]  font-[Arial] text-black mt-3 mb-4"
         >
           {label}
           {required && <span className="text-red-500 ml-1">*</span>}
         </label>
       )}
+
+      <style>{`
+                    .custom-placeholder::placeholder {
+                        color: #959595;
+                        opacity: 1; }
+                        `}</style>
 
       {/* Input Container for Password Icon */}
       <div className="relative">
@@ -50,13 +56,13 @@ const InputField = ({
             text-gray-900 text-base
             border border-[#ccc]
             transition-all duration-200
-            placeholder:text-gray-400
+          placeholder:text-[#959595]
             focus:outline-1 focus:ring-1
             disabled:bg-gray-100 
-            ${
-              error
-                ? "border-red-500 focus:ring-red-500 focus:border-red-500"
-                : "focus:ring-black"
+            custom-placeholder
+            ${error
+              ? "border-red-500 focus:ring-red-500 focus:border-red-500"
+              : "focus:ring-black"
             }
             ${isPassword ? "pr-10" : ""}
           `}
