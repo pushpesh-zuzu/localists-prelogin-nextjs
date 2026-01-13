@@ -19,41 +19,53 @@ function HeroSectionNearMe({
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Check screen width on client side
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-
-    // Initial check
     checkMobile();
-
-    // Add resize listener
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
-
-  // Calculate background style
-  const backgroundStyle = isMobile
-    ? {
-        backgroundImage: `linear-gradient(rgba(0, 175, 227, 95%), rgba(176, 229, 245, 95%)), url(${bannerImage})`,
-      }
-    : {
-        backgroundColor: "#00AEEF",
-      };
 
   return (
     <>
       <WrapperBGWidth background={"#00aeef"}>
         <section
-          className="flex flex-col md:flex-row px-[34px] pt-10 md:px-[87px] md:pt-[38px] xl:px-[163px] xl:pt-12 bg-cover bg-center bg-no-repeat"
-          style={backgroundStyle}
+          className="flex flex-col md:flex-row px-[34px] pt-10 md:px-[87px] md:pt-[38px] xl:px-[163px] xl:pt-12 relative"
           role="banner"
           aria-label="Hero section"
         >
-          <div className="w-full md:w-2/3 flex flex-col xl:ml-[43px]">
+          {/* Mobile background image - preloaded */}
+          {isMobile && (
+            <div className="absolute inset-0 z-0 md:hidden">
+              <Image
+                src={bannerImage}
+                alt=""
+                fill
+                priority
+                fetchPriority="high"
+                quality={55}
+                sizes="100vw"
+                className="object-cover"
+                style={{
+                  mixBlendMode: "multiply",
+                  opacity: 0.95,
+                }}
+              />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(rgba(0, 175, 227, 0.95), rgba(176, 229, 245, 0.95))",
+                }}
+              />
+            </div>
+          )}
+
+          <div className="w-full md:w-2/3 flex flex-col xl:ml-[43px] relative z-10">
             <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] lg:mb-7 max-h-12" />
             <H1 className="text-white block text-shadow-[0_2.03px_2.03px_0_#0000001A]">
-              <p className="">
+              <p>
                 {heading1}
                 <span className="text-[#253238] block">{heading2}</span>
               </p>
@@ -74,12 +86,12 @@ function HeroSectionNearMe({
               fill
               priority
               fetchPriority="high"
-              decoding="async"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              quality={55}
+              sizes="(max-width: 1200px) 50vw, 33vw"
               className="object-cover object-center max-w-[95%]"
             />
           </div>
-          <div className="flex justify-center mb-3.5 mt-[30px] md:hidden">
+          <div className="flex justify-center mb-3.5 mt-[30px] md:hidden relative z-10">
             <ChevroliteDoubleDownIcon />
           </div>
         </section>

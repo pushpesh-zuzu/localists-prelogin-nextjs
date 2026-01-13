@@ -9,7 +9,7 @@ function AdviceInsightNearMe({ articles = [], maxWidth = false }) {
       <section
         className={`${
           maxWidth ? "max-w-[95%]" : ""
-        } mx-auto h-auto min-h-[336px] lg:min-h-[687px] px-7.5 py-12 sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:pt-[72px] lg:pb-[86px]`}
+        } mx-auto h-auto min-h-[336px] lg:min-h-[687px] px-7.5 py-12 sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:pt-[72px] lg:pb-1`}
       >
         <H2 className="text-[#00afe3] pb-7.5 xl:pb-[53px]">
           Advice & <span className="text-[#253238]">insight.</span>

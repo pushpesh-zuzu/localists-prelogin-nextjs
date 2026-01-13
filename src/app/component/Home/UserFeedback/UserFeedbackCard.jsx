@@ -1,12 +1,12 @@
 import React from "react";
 import FiveStarYelloIcon from "../../common/icons/HomePageIcons/FiveStarYelloIcon";
 
-function UserFeedbackCard({ item }) {
+function UserFeedbackCard({ item ,mobileWidth='w-[198px]' }) {
   return (
     <div className="w-full flex justify-center">
       <div
         key={item.id}
-        className="  w-[198px] h-[287px]
+        className={` ${mobileWidth} h-[287px]
                     rounded-[20px]
                     px-[13.32px] py-5
                     bg-[#D0F7EB]
@@ -17,7 +17,7 @@ function UserFeedbackCard({ item }) {
 
                     lg:w-[282px] lg:h-[366px]
                     lg:rounded-[40px]
-                    lg:px-[18px] lg:py-7"
+                    lg:px-[18px] lg:py-7`}
       >
         <div className="flex flex-col justify-between h-full">
           <div className="flex flex-col gap-2.5">

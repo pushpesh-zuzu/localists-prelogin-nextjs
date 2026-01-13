@@ -28,10 +28,10 @@ export default function PopularJobNearMe({ services = [] }) {
 
           {/* 2️⃣ Normal content layer */}
           <div className="relative z-10 h-full pt-[30px] md:px-8 xl:px-15 flex flex-col md:justify-center md:max-w-[70%]">
-            <H2 className="text-white mb-4 md:pb-4 xl:pb-9">Popular Jobs.</H2>
+            <H2 className="text-white mb-4 md:mb-0 md:pb-4 xl:pb-[35px]">Popular Jobs.</H2>
             <Paragraph variant="secondary"
               style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
-              className=" sm:max-w-full text-white mb-5 pb-4 xl:pb-[42px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
+              className=" sm:max-w-full mb-5 md:mb-0 text-white  pb-4 xl:pb-[43px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
             >
               Click below to get a quote for the specific job you want
             </Paragraph>
@@ -48,6 +48,7 @@ export default function PopularJobNearMe({ services = [] }) {
             alt="tree surgeon near me"
             width={400}
             height={600}
+            fetchPriority="high"
             className="hidden md:block w-auto h-[285px] lg:h-[360px] xl:h-[472px] xl:w-[400px] absolute md:-right-11 xl:-right-14 bottom-0 z-20 pointer-events-none"
           />
           <LogoIcon className="hidden md:block absolute bottom-0 -right-12 w-[120px] h-6 lg:w-[140px] lg:h-8 xl:w-[180px] xl:h-11" />

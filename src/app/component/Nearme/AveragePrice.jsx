@@ -4,13 +4,13 @@ import Paragraph from "../UI/Typography/Paragraph";
 
 export default function AveragePrice() {
   return (
-    <div className="flex items-center justify-center lg:pb-[72px] pt-2 md:pt-[50px] ">
+    <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] md:pb-0 pt-2 md:pt-[50px] ">
       <div className="w-full max-w-[1000px]">
         <div
           className="w-full rounded-[25px]"
           style={{ backgroundColor: "#8BFFCF" }}
         >
-          <div className="flex flex-col lg:flex-row lg:gap-8 xl:gap-12">
+          <div className="flex flex-col lg:flex-row lg:gap-4">
             {/* Left Section - H2 and GetQuote */}
             <div className="flex flex-col justify-between px-4  pt-7 lg:pl-9  lg:py-14 lg:min-w-[386px]">
               <H2 className="text-center lg:text-left px-2">
@@ -88,7 +88,7 @@ export default function AveragePrice() {
         </div>
 
         {/* Disclaimer Text */}
-        <div className="mt-2.5 text-left lg:text-left px-0 lg:px-4">
+        <div className="mt-2.5 text-left lg:text-left px-0 lg:px-4 ">
           <p
             className="text-[13.5px] leading-[18px]
         lg:text-[16px] lg:leading-[16px]

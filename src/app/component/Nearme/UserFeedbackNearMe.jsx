@@ -17,7 +17,7 @@ function UserFeedbackNearMe({feedbackData=[]}) {
         <div className="flex flex-wrap justify-between select-none">
           <WithoutSpecialCardCarousel
             data={feedbackData}
-            renderCard={(card) => <UserFeedbackCard item={card} />}
+            renderCard={(card) => <UserFeedbackCard mobileWidth="w-[217px]" item={card} />}
             showArrowAndDots={false}
           />
         </div>

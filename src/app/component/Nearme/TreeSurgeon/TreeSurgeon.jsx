@@ -49,7 +49,7 @@ function TreeSurgeon() {
       <PopularJobNearMe services={POPULAR_SERVICES} />
       <HowItWorkNearMe />
       {/* <Feature /> */}
-      <HireRelatedToServiceNearMe tabData={TREE_SURGEON_TABDATA} />
+      <HireRelatedToServiceNearMe heading1="Tree surgeons" heading2="in your area" tabData={TREE_SURGEON_TABDATA} />
       <UserFeedbackNearMe feedbackData={TREE_SUREON_FEEDBACK} />
       {/* <PaddingWrapper> */}
         <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} />

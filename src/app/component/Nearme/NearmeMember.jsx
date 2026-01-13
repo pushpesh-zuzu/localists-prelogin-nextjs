@@ -7,9 +7,9 @@ import Button from "../UI/Typography/Button";
 
 function NearmeMember({ description = "" }) {
   return (
-    <div className="w-full max-w-[300px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto py-[75px] xl:pt-0 xl:pb-[72px]">
+    <div className="w-full max-w-[300px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto pt-5 pb-[30px]  md:py-[75px] xl:pt-0 xl:pb-[72px]">
       <div className="hidden md:flex w-fit rounded-[36px] overflow-hidden mx-auto ">
-        <div className=" w-[340] md:h-[280px] lg:h-[570px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
+        <div className=" w-[340] md:h-[280px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
           <>
             <H3
               style={{ textShadow: "0px 1.95px 1.95px #0000000D" }}
@@ -18,15 +18,15 @@ function NearmeMember({ description = "" }) {
               {description}
             </H3>
 
-            <div className="hidden md:block mt-4">
+            <div className="hidden md:block mt-3">
               <p className="  text-white font-bold text-xs lg:mt-[18px]">
                 Localists Professional, Chris
               </p>
-              <p className=" text-white text-xs lg:text-[16px] font-normal">
+              {/* <p className=" text-white text-xs lg:text-[16px] font-normal">
                 CH Joinery
-              </p>
+              </p> */}
             </div>
-            <Button className="hidden md:inline-flex bg-[#253238] mt-2.75 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
+            <Button className="hidden md:inline-flex bg-[#253238] mt-9 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
               Become a member
             </Button>
           </>
@@ -39,9 +39,9 @@ function NearmeMember({ description = "" }) {
             priority
             fetchPriority="high"
             loading="eager"
-            height={570}
+            height={512}
             width={521}
-            className="w-[273px] h-[280px] lg:w-[521px] lg:h-[570px]"
+            className="w-[273px] h-[280px] lg:w-[521px] lg:h-[512px]"
           />
         </div>
       </div>
@@ -70,13 +70,13 @@ function NearmeMember({ description = "" }) {
               {description}
             </h3>
 
-            <div className="mt-1">
+            <div className="mt-2">
               <p className="  text-white font-bold text-[12px] leading-4">
                 Localists Professional, Chris
               </p>
-              <p className="text-white text-[12px] leading-[15px]">
+              {/* <p className="text-white text-[12px] leading-[15px]">
                 CH Joinery
-              </p>
+              </p> */}
             </div>
 
             <button className="text-base font-bold py-1.5 px-4 max-w-fit mx-auto bg-[#253238] hover:bg-[#1a2328] text-white rounded-full transition-all duration-300 mt-4 w-full">

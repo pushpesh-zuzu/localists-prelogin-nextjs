@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import NearmeH2Heading from "./NearmeH2Heading";
-import Paragraph from "../UI/Typography/Paragraph";
-import H5 from "../UI/Typography/H5";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
+import PlusIconFaq from "../common/icons/NearMe/PlusIconFaq";
+import MinusIcon from "../common/icons/NearMe/MinusIcon";
 
 export const FAQ = ({ data, defaultOpen }) => {
   const [openItem, setOpenItem] = useState(defaultOpen || null);
@@ -18,19 +18,19 @@ export const FAQ = ({ data, defaultOpen }) => {
       <div className="w-full px-2.5 lg:px-0 max-w-[1200px] mx-auto">
         <NearmeH2Heading headdingblue="FAQ" className="mb-10" />
 
-        <div className="space-y-0 border-2 md:border-4 border-[#DBDFE4] rounded-[30px] overflow-hidden bg-white shadow-sm">
+        <div className="space-y-0 border-2 border-[#DBDFE4] rounded-[30px] overflow-hidden bg-white shadow-sm">
           {data.map((item, index) => (
             <div
               key={item.key}
-              className={`${index !== 0 ? "border-t-2 md:border-t-4 border-[#DBDFE4]" : ""}`}
+              className={`${index !== 0 ? "border-t-2 border-[#DBDFE4]" : ""}`}
             >
               <button
                 onClick={() => toggleItem(item.key)}
-                className="w-full flex items-center justify-between px-[30px] pb-[20px] pt-[30px] md:px-5 md:pb-[30px] md:pt-5 hover:bg-gray-50 transition-colors duration-200 text-left"
+                className="w-full flex items-center justify-between px-[30px] pb-[15px] pt-[15px] md:px-5 md:pb-[30px] md:pt-5 hover:bg-gray-50 transition-colors duration-200 text-left"
                 aria-expanded={openItem === item.key}
               >
                 <h5
-                    className={`
+                  className={`
                       flex-1
                       text-[20px] leading-[25px]
                       md:text-[25px] md:leading-[25px]
@@ -38,37 +38,12 @@ export const FAQ = ({ data, defaultOpen }) => {
                       font-Inter font-black
                       tracking-[-0.03em]
                     `}
-                    >
-                      {item.title}
-                    </h5>
+                >
+                  {item.title}
+                </h5>
 
-                <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
-                  {openItem === item.key ? (
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                      className="text-gray-900"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                    </svg>
-                  ) : (
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                      className="text-[#00afe3]"
-                    >
-                      <line x1="12" y1="5" x2="12" y2="19" />
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                    </svg>
-                  )}
+                <span className="flex-shrink-0  flex items-center justify-right">
+                  {openItem === item.key ? <MinusIcon /> : <PlusIconFaq />}
                 </span>
               </button>
 
