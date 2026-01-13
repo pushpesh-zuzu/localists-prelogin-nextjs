@@ -5,7 +5,7 @@ function PostCodeSection() {
   return (
     <div
       className="
-        rounded-[20px] bg-[#7ED5F1] px-9 pt-4 pb-7 md:px-9 md:py-16 my-8 md:mt-11 md:mb-[60px]
+        rounded-[20px] bg-[#7ED5F1] px-9 pt-4 pb-7 md:px-9 md:py-[62px] my-8 md:mt-[60px] md:mb-[60px]
         flex flex-col gap-6
         md:flex-row md:items-center md:justify-between
       "
@@ -25,7 +25,7 @@ function PostCodeSection() {
         Free quotes. Zero obligation.
       </p>
       {/* Left – Search */}
-      <div className="w-[223px] mx-auto md:w-auto max-w-[343px] flex justify-center">
+      <div className="w-[223px] mx-auto md:mx-0 md:w-[343px] flex justify-center">
         <PostCodeSearchField buttonBg="bg-[#02D07B]" margin={false} />
       </div>
 

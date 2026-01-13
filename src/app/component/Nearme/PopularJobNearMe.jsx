@@ -18,7 +18,7 @@ export default function PopularJobNearMe({ services = [] }) {
       
   
     </div> */}
-      <div className="md:block rounded-[20px] md:rounded-none mx-2.5 md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white  px-2.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] pt-0 xl:pb-[72px]">
+      <div className="md:block rounded-[20px] md:rounded-none mx-2.5 md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white  px-2.5 py-[30px] sm:px-10 md:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[100px]">
         <div className="rounded-[20px] md:max-w-[646px] lg:max-w-[900px] xl:max-w-[1200px] xl:h-[470px] relative overflow-visible">
           {/* 1️⃣ Shape background */}
           <div

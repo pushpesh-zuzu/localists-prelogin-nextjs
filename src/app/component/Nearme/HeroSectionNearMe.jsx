@@ -60,7 +60,7 @@ function HeroSectionNearMe({
             </H1>
             <Paragraph1
               style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
-              className="md:max-w-[80%] max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
+              className="md:max-w-[80%] max-w-full text-white pt-[18px] md:pt-2 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
             >
               {description}
             </Paragraph1>

@@ -138,7 +138,7 @@ function PostCodeSearchField({
     <>
       <div
         className={`relative max-w-[254px] md:max-w-[246px] lg:max-w-[404px] ${
-          margin ? "mt-5 md:mt-6 xl:mt-[46px]" : ""
+          margin ? "mt-5 md:mt-6 xl:mt-[40px]" : ""
         }`}
       >
         <div
@@ -157,7 +157,7 @@ function PostCodeSearchField({
               placeholder={placeholder}
               disabled={disabled}
               autoComplete="off"
-              className={`w-full font-bold px-4 py-2.5 md:px-6 md:py-2.5 xl:px-[43px] xl:py-4 
+              className={`w-full font-bold px-4 py-2.5 md:pl-6 md:py-2.5 xl:pl-[43px] xl:py-4 
                         !text-[#B3B3B3] 
                         placeholder:!text-[#B3B3B3] 
                         focus:outline-none 
@@ -182,7 +182,7 @@ function PostCodeSearchField({
             type="button"
             onClick={handleSubmit}
             
-            className={` ${buttonBg} min-w-[62px] font-bold pl-3.5 pr-5 py-[11px]  xl:pl-[22px] xl:pr-6 xl:py-4 text-white focus:outline-none text-base xl:text-[25px]!`}
+            className={` ${buttonBg} min-w-[62px] md:min-w-[100px] font-bold pl-3.5 pr-5 py-[11px]  xl:pl-[22px] xl:pr-6 xl:py-4 text-white focus:outline-none text-base xl:text-[25px]!`}
           >
             {buttonText}
           </button>

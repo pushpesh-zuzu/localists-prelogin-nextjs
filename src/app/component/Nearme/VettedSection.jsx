@@ -22,12 +22,12 @@ function VettedSection({
     <WrapperBGWidth>
       <div className="md:block p-[35px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] pt-[30px] xl:pt-[72px] xl:pb-[72px]">
         <Breadcrumb items={breadcrumb} />
-        <div className="pt-7 md:pt-12">
+        <div className="pt-7 md:pt-[58px]">
           <NearmeH2Heading
             headdingblue={vettedHeading1}
             headingblack={vettedHeading2}
           />
-          <div className="mt-5 flex flex-col gap-6">
+          <div className="mt-5 md:mt-12 flex flex-col gap-6 md:gap-12">
             {paragraph.map((item, index) => (
               <Paragraph variant="primarySmall" key={index}>
                 {item}
@@ -35,7 +35,7 @@ function VettedSection({
             ))}
             <div className="flex flex-wrap justify-center md:justify-start gap-[7px] md:gap-6 mb-2.5">
               <GetQuote text={getQuoteText} />
-              <Button variant="secondary" className="max-w-fit px-[13px] py-[7px] xl:py-3 xl:px-7  rounded-full bg-white border-4 border-black text-black shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+              <Button variant="secondary" className="max-w-fit px-[13px] py-[7px] xl:py-4 xl:px-[30px] rounded-full bg-white border-4 border-black text-black shadow-[0_0_4px_rgba(0,0,0,0.1)]">
                 {buttonText}
               </Button>
             </div>

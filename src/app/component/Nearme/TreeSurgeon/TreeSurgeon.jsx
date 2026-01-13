@@ -51,9 +51,9 @@ function TreeSurgeon() {
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe tabData={TREE_SURGEON_TABDATA} />
       <UserFeedbackNearMe feedbackData={TREE_SUREON_FEEDBACK} />
-      <PaddingWrapper>
+      {/* <PaddingWrapper> */}
         <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
-      </PaddingWrapper>
+      {/* </PaddingWrapper> */}
       <FAQ data={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]} />
       <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} />
       <DiscoverServices />

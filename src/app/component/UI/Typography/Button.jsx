@@ -9,7 +9,7 @@ export default function Button({
 
   const variants = {
     primary: "text-base md:text-[16px] lg:text-[18px]",
-    secondary: "text-sm md:text-[14px] lg:text-[16px]",
+    secondary: "text-sm md:text-[14px] lg:text-[18px]",
   };
 
   return (

@@ -22,7 +22,7 @@ const AboutServicesAndQuestions = ({
           <NearmeH2Heading
             key={index}
             headdingblue={block.text}
-            className="mb-5 max-w-[90%] md:max-w-full"
+            className="mb-5 md:mb-[25px] max-w-[90%] md:max-w-full"
           />
         );
       case "image":
@@ -58,12 +58,6 @@ const AboutServicesAndQuestions = ({
         );
       case "PostCodeSection":
         return <PostCodeSection key={index} />;
-      case "h3":
-        return (
-          <H3 key={index} className={`${textBase} font-bold mb-2 text-black`}>
-            {block.text}
-          </H3>
-        );
 
       case "p":
         return (
@@ -71,7 +65,7 @@ const AboutServicesAndQuestions = ({
             variant="primarySmall"
             key={index}
             bold="font-normal"
-            className={`${textBase} ${block?.notMarginBottom? "":"mb-5 md:mb6"} text-black`}
+            className={`${textBase} ${block?.notMarginBottom? "":"mb-5 md:mb-[25px]"} text-black`}
           >
             <span dangerouslySetInnerHTML={{ __html: block.text }} />
           </Paragraph>
@@ -92,7 +86,7 @@ const AboutServicesAndQuestions = ({
 
       case "li":
         return (
-          <ul key={index} className="mb-2.5 list-disc pl-5 md:pl-6">
+          <ul key={index} className="mb-2.5 md:mb-[15px] list-disc pl-5 md:pl-8">
             <li className={textBase}>
               {block.heading}
               {block.text && (
@@ -104,14 +98,14 @@ const AboutServicesAndQuestions = ({
 
       case "libold":
         return (
-         <ul key={index} className="mb-2.5 list-disc pl-5 md:pl-6">
+         <ul key={index} className="mb-2.5 md:mb-[15px] list-disc pl-5 md:pl-8">
             <li className={`${textBase} font-bold`}>{block.heading}</li>
           </ul>
         );
 
       case "uili":
         return (
-          <ul key={index} className="mb-2.5 list-disc pl-5 md:pl-6">
+          <ul key={index} className="mb-2.5 md:mb-[15px] list-disc pl-5 md:pl-8">
             <li className={textBase}>
               <span className="font-bold">{block.heading}</span>{" "}
               <span dangerouslySetInnerHTML={{ __html: block.text }} />
@@ -156,8 +150,9 @@ const AboutServicesAndQuestions = ({
   };
 
   return (
+    <div className="md:block px-2.5 py-5 sm:px-10 md:px-16 md:py-10 xl:px-[120px] pt-10 xl:pt-[72px] xl:pb-[72px]">
     <WrapperBGWidth>
-      <div className="container max-w-[1000px] mx-auto">
+      <div className="container max-w-[1000px] mx-auto  ">
         {contentBlocks.map(renderBlock)}
 
         {title && (
@@ -170,6 +165,7 @@ const AboutServicesAndQuestions = ({
         )}
       </div>
     </WrapperBGWidth>
+    </div>
   );
 };
 

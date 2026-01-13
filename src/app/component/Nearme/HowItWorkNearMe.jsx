@@ -8,8 +8,8 @@ import H2 from "../UI/Typography/H2";
 
 function HowItWorkNearMe() {
   return (
-    <WrapperBGWidth background={"#F7F7F7"}>
-      <section className="bg-[#F7F7F7] h-auto px-2.5 pt-12 pb-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[145px] xl:py-12">
+    <WrapperBGWidth background={"white"}>
+      <section className="bg-white h-auto px-2.5 pt-12 pb-[30px] sm:px-10 md:px-16 md:pb-10 md:pt-0 xl:px-[145px] xl:pb-[72px]">
         <H2 className="text-[#00afe3] pb-[30px] md:pb-6 xl:pb-12">
           How it <span className="text-[#253238]">Works.</span>{" "}
         </H2>

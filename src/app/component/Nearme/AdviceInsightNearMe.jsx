@@ -15,9 +15,9 @@ function AdviceInsightNearMe({ articles = [], maxWidth = false }) {
           Advice & <span className="text-[#253238]">insight.</span>
         </H2>
 
-        <div className="hidden md:block space-y-2 xl:space-y-6 xl:mb-8">
-          <div className="grid grid-cols-3 sm:gap-2 lg:gap-[17px]">
-            <article className="col-span-1 relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer">
+        <div className="hidden md:block space-y-2 xl:space-y-4 xl:mb-8">
+          <div className="grid grid-cols-3 sm:gap-2 lg:gap-4">
+            <article className="col-span-1 relative rounded-3xl md:rounded-[28px] overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer">
               <Image
                 src={articles[0].image}
                 alt={articles[0].title}
@@ -33,7 +33,7 @@ function AdviceInsightNearMe({ articles = [], maxWidth = false }) {
               </h3>
             </article>
 
-            <article className="col-span-2 relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer">
+            <article className="col-span-2 relative rounded-3xl md:rounded-[28px] overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer">
               <Image
                 src={articles[1].image}
                 alt={articles[1].title}
@@ -50,11 +50,11 @@ function AdviceInsightNearMe({ articles = [], maxWidth = false }) {
             </article>
           </div>
 
-          <div className="grid grid-cols-3 sm:gap-2 lg:gap-[17px]">
+          <div className="grid grid-cols-3 sm:gap-2 lg:gap-4">
             {articles.slice(2).map((article, index) => (
               <article
                 key={article.id}
-                className="relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer"
+                className="relative rounded-3xl md:rounded-[28px] overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer"
               >
                 <Image
                   src={article.image}
@@ -79,7 +79,7 @@ function AdviceInsightNearMe({ articles = [], maxWidth = false }) {
 
         {/* Mobile Layout */}
         <div className="md:hidden space-y-1.5">
-          <article className="relative rounded-3xl overflow-hidden h-[297px] group cursor-pointer">
+          <article className="relative rounded-3xl md:rounded-[28px] overflow-hidden h-[297px] group cursor-pointer">
             <Image
               src={articles[1].image}
               alt={articles[1].title}

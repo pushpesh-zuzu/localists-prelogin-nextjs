@@ -46,7 +46,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "pbold",
     text: "Here are some of the key things a tree surgeon does:",
-    className: "my-[15px]",
+    className: "my-[15px] md:my-[25px]",
   },
   { type: "pbold", text: "1. Tree health and safety checks" },
   {
@@ -125,7 +125,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "pbold",
     text: "When choosing a tree surgeon, it’s important to look beyond price and focus on their training, safety standards, and experience. You can look out for one or more of the following:",
-    className:"mr-5"
+    className:"mb-[15px] md:mb-[25px] "
   },
   {
     type: "li",
