@@ -1,5 +1,10 @@
+'use client'
+import dynamic from "next/dynamic";
 import React from "react";
-import PostCodeSearchField from "../PostCodeSearchField";
+const PostCodeSearchField = dynamic(() => import("../PostCodeSearchField"), {
+  ssr: false,
+  loading: () => <div className="hidden">Loading...</div>,
+});
 
 function PostCodeSection() {
   return (

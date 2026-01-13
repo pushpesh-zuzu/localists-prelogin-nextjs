@@ -4,9 +4,14 @@ import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import TrustpioletIcon from "../common/icons/HomePageIcons/TrustpioletIcon";
 import Paragraph1 from "../UI/Typography/Paragraph1";
 import H1 from "../UI/Typography/H1";
-import PostCodeSearchField from "./PostCodeSearchField";
+
 import Image from "next/image";
 import ChevroliteDoubleDownIcon from "../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
+import dynamic from "next/dynamic";
+const PostCodeSearchField = dynamic(() => import("./PostCodeSearchField"), {
+  ssr: false,
+  loading: () => <div className="hidden">Loading...</div>,
+});
 
 function HeroSectionNearMe({
   heading1 = "Find Tree Surgeons",
@@ -31,7 +36,7 @@ function HeroSectionNearMe({
     <>
       <WrapperBGWidth background={"#00aeef"}>
         <section
-          className="flex flex-col md:flex-row px-[34px] pt-10 md:px-[87px] md:pt-[38px] xl:px-[163px] xl:pt-12 relative"
+          className="flex flex-col max-h-[492px] max-[353px]:max-h-[473px] md:max-h-full  md:flex-row px-[34px] pt-10 md:px-[87px] md:pt-[38px] xl:px-[163px] xl:pt-12 relative"
           role="banner"
           aria-label="Hero section"
         >
@@ -40,13 +45,13 @@ function HeroSectionNearMe({
             <div className="absolute inset-0 z-0 md:hidden">
               <Image
                 src={bannerImage}
-                alt=""
-                fill
+                alt={altText}
                 priority
                 fetchPriority="high"
                 quality={55}
-                sizes="100vw"
-                className="object-cover"
+                height={492}
+                width={768}
+                className="object-cover w-full h-full max-h-[470px] max-w-lg sm:max-w-2xl"
                 style={{
                   mixBlendMode: "multiply",
                   opacity: 0.95,
@@ -91,7 +96,7 @@ function HeroSectionNearMe({
               className="object-cover object-center max-w-[95%]"
             />
           </div>
-          <div className="flex justify-center mb-3.5 mt-[30px] md:hidden relative z-10">
+          <div className="flex justify-center mb-3.5 mt-[30px] md:hidden ">
             <ChevroliteDoubleDownIcon />
           </div>
         </section>
