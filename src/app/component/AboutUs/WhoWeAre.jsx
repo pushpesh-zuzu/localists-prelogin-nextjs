@@ -16,21 +16,35 @@ function WhoWeAre() {
                 </H2>
             </div>
 
-            <Paragraph2 className="text-[18px] leading-[32px]
-                    max-w-[76.5%] w-full mx-auto px-[20px]
-                    max-md:text-[16px] max-md:px-0
-                    max-sm:max-w-full max-sm:leading-[26px]">
+            <p className="font-Inter
+    tracking-[-0.03em]
+    leading-[24px]
+    text-black
+    text-[20px]
+    max-w-[76.5%] w-full mx-auto px-[20px]
+    max-md:px-0
+    max-sm:max-w-full
+    max-[768px]:text-[18px]
+    max-[480px]:text-[16px]
+                    ">
                 Localists.com is one of the fastest growing local marketplaces in the UK.
                 We are transforming how local consumers connect with trusted local
                 professionals. We make it easier and faster to find verified local
                 service providers across home, business, and lifestyle sectors via one
                 online platform.
-            </Paragraph2>
+            </p>
 
-            <Paragraph2 className="text-[18px] leading-[32px]
-                    max-w-[76.5%] w-full mx-auto px-[20px]
-                    max-md:text-[16px] max-md:px-0
-                    max-sm:max-w-full max-sm:leading-[26px]">
+            <Paragraph2 className="font-Inter
+    tracking-[-0.03em]
+    leading-[24px]
+    text-black
+    text-[20px]
+    max-w-[76.5%] w-full mx-auto px-[20px]
+    max-md:px-0
+    max-sm:max-w-full
+    max-[768px]:text-[18px]
+    max-[480px]:text-[16px]
+                    ">
                 Via 1 easy platform, you can submit your service needs and get quotations
                 from up to 5 local, verified service providers. Save time and money when
                 finding your local service providers whether you need a new driveway
@@ -38,20 +52,34 @@ function WhoWeAre() {
                 local service providers ready and waiting to help you.
             </Paragraph2>
 
-            <Paragraph2 className="text-[18px] leading-[32px]
-                    max-w-[76.5%] w-full mx-auto px-[20px]
-                    max-md:text-[16px] max-md:px-0
-                    max-sm:max-w-full max-sm:leading-[26px]">
+            <Paragraph2 className="font-Inter
+    tracking-[-0.03em]
+    leading-[24px]
+    text-black
+    text-[20px]
+    max-w-[76.5%] w-full mx-auto px-[20px]
+    max-md:px-0
+    max-sm:max-w-full
+    max-[768px]:text-[18px]
+    max-[480px]:text-[16px]
+                    ">
                 At Localists, we believe that trust and quality should never be
                 compromised when it comes to your home or business. Every year, millions
                 of UK households face issues with unreliable tradespeople—and we’re here
                 to change that.
             </Paragraph2>
 
-            <Paragraph2 className="text-[18px] leading-[32px]
-                    max-w-[76.5%] w-full mx-auto px-[20px]
-                    max-md:text-[16px] max-md:px-0
-                    max-sm:max-w-full max-sm:leading-[26px]">
+            <Paragraph2 className="font-Inter
+    tracking-[-0.03em]
+    leading-[24px]
+    text-black
+    text-[20px]
+    max-w-[76.5%] w-full mx-auto px-[20px]
+    max-md:px-0
+    max-sm:max-w-full
+    max-[768px]:text-[18px]
+    max-[480px]:text-[16px]
+                    ">
                 Since our launch, we’ve been dedicated to connecting people with
                 verified, trusted local professionals who deliver work to the highest
                 standards.
@@ -66,9 +94,17 @@ function WhoWeAre() {
                     Setting the Standard
                 </H3>
 
-                <Paragraph2 className="text-[18px] leading-[32px]
-                    max-md:text-[16px]
-                     max-sm:leading-[26px]">
+                <Paragraph2 className="font-Inter
+    tracking-[-0.03em]
+    leading-[24px]
+    text-black
+    text-[20px]
+    max-w-[76.5%] w-full mx-auto px-[20px]
+    max-md:px-0
+    max-sm:max-w-full
+    max-[768px]:text-[18px]
+    max-[480px]:text-[16px]
+                    ">
                     Not just anyone can join Localists.com. Every professional is carefully
                     vetted through a series of strict checks before they’re approved.
                 </Paragraph2>
