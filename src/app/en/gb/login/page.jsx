@@ -143,9 +143,13 @@ export default function LoginPage() {
         max-md:px-[30px] max-md:pt-[10px] max-md:pb-[30px]
         max-sm:px-[20px] max-sm:pb-[20px]
       ">
-                <H1 className="mb-6 mt-4">
+                <h1 className="mb-6 mt-4 font-Inter font-black
+        tracking-[-0.03em]
+        text-[30px] leading-[32px]
+        md:text-[35px] md:leading-[32px]
+        lg:text-[40px] lg:leading-[35px]">
                     {passwordless ? <>Passwordless <br /> login</> : "Login"}
-                </H1>
+                </h1>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <TextInput
@@ -244,7 +248,7 @@ export default function LoginPage() {
 
             {/* BOTTOM LINKS */}
             {!passwordless && (
-                <div className="
+                <div className="text-center
         ">
                     <Paragraph2>
                         Offering a service?{" "}

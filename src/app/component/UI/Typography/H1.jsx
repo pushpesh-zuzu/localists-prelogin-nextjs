@@ -9,7 +9,6 @@ export default function H1({ children, className = "" }) {
         lg:text-[81px] lg:leading-[75px]
         ${className}
       `}
-      style={{ textShadow: "0px 3.65px 3.65px #0000001A" }}
     >
       {children}
     </h1>
