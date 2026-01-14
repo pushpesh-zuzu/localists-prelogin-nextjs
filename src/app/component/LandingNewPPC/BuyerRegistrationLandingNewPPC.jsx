@@ -2,7 +2,10 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { questionAnswerData, setBuyerStep } from "@/lib/store/buyerslice/buyerSlice";
+import {
+  questionAnswerData,
+  setBuyerStep,
+} from "@/lib/store/buyerslice/buyerSlice";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import ConfirmationModal from "../common/BuyerRegistration/ConfirmationModal";
 import NameEmailPhoneModalLandingPPC from "./NameEmailPhoneModalLandingPPC";
@@ -18,13 +21,14 @@ function BuyerRegistrationLandingNewPPC({
   postcode,
   city,
   postalCodeValidate,
-  cancelHeading="Don’t forget to check prices!",
-  cancelPara="Simply answer a few questions about your requirement, and we will match you with local professionals in seconds! ",
+  cancelHeading = "Don’t forget to check prices!",
+  cancelPara = "Simply answer a few questions about your requirement, and we will match you with local professionals in seconds! ",
   setSelectedService = () => {},
   setFromImageModal = () => {},
-  service_Id='43',
-  service_Name ='Landscaping',
-  serviceName='Landscaping',
+  service_Id = "",
+  service_Name = "",
+  serviceName = "Landscaping",
+  setIsOtpSent
 }) {
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const questionModalRef = useRef();
@@ -68,7 +72,7 @@ function BuyerRegistrationLandingNewPPC({
   const getService = (service) => {
     setGetServiceState(service);
   };
-   useEffect(() => {
+  useEffect(() => {
     const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
 
     if (buyerStep === 7 && pendingModal?.shouldOpen) {
@@ -82,8 +86,8 @@ function BuyerRegistrationLandingNewPPC({
     if (pendingModal?.shouldOpen) {
       dispatch(setBuyerStep(7));
     } else {
-    //   const initialStep = isAdminOrRemembered ? 2 : 1;
-    //   dispatch(setBuyerStep(initialStep));
+      //   const initialStep = isAdminOrRemembered ? 2 : 1;
+      //   dispatch(setBuyerStep(initialStep));
     }
   }, [dispatch]);
 
@@ -120,37 +124,11 @@ function BuyerRegistrationLandingNewPPC({
     if (typeof setFromImageModal === "function") setFromImageModal(false);
     if (typeof closeModal === "function") closeModal();
   };
-   useEffect(() => {
+  useEffect(() => {
     dispatch(questionAnswerData({ service_id: service_Id }));
   }, []);
   return (
     <>
-      {buyerStep === 3 && (
-        <NameEmailPhoneModalLandingPPC
-          nextStep={nextStep}
-          previousStep={previousStep}
-          onClose={handleClose}
-          formData={buyerRequest}
-          setEmails={setEmails}
-          setShowConfirmModal={setShowConfirmModal}
-          resetTrigger={resetEmailFormTrigger}
-        />
-      )}
-      {buyerStep === 2 && (
-        <ServiceAndPostCodeModalLandingPPC
-          nextStep={nextStep}
-          formData={buyerRequest}
-          serviceId={getServiceState?.id || service_Id}
-          serviceName={getServiceState?.name || service_Name || serviceName}
-          onClose={handleClose}
-          pincodes={postcode}
-          setShowConfirmModal={setShowConfirmModal}
-          postalCodeIsValidate={postalCodeValidate}
-          resetServiceTrigger={resetServiceFormTrigger}
-          getService={getService}
-          n
-        />
-      )}
       {buyerStep === 1 && (
         <QuestionModalLandingNewPPC
           ref={questionModalRef}
@@ -167,12 +145,43 @@ function BuyerRegistrationLandingNewPPC({
           isStartWithQuestionModal
         />
       )}
+
+      {buyerStep === 2 && (
+        <ServiceAndPostCodeModalLandingPPC
+          nextStep={nextStep}
+          formData={buyerRequest}
+          serviceId={getServiceState?.id || service_Id}
+          serviceName={getServiceState?.name || service_Name || serviceName}
+          onClose={handleClose}
+          pincodes={postcode}
+          setShowConfirmModal={setShowConfirmModal}
+          postalCodeIsValidate={postalCodeValidate}
+          resetServiceTrigger={resetServiceFormTrigger}
+          getService={getService}
+          n
+        />
+      )}
+
+      {buyerStep === 3 && (
+        <NameEmailPhoneModalLandingPPC
+          nextStep={nextStep}
+          previousStep={previousStep}
+          onClose={handleClose}
+          formData={buyerRequest}
+          setEmails={setEmails}
+          setShowConfirmModal={setShowConfirmModal}
+          resetTrigger={resetEmailFormTrigger}
+          isStartWithQuestionModal
+          setIsOtpSent={setIsOtpSent}
+        />
+      )}
       {reEnterMobile === 1 && (
         <ReEnterMobileNumberLandingNewPPC
           setReEnterMobile={setReEnterMobile}
           onClose={() => setReEnterMobile(2)}
         />
       )}
+
       {buyerStep === 4 && reEnterMobile === 2 && (
         <OTPVerificationLandingNewPPC
           nextStep={nextStep}

@@ -89,7 +89,7 @@ const Button1 = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`${baseClasses} ${variants[variant]} ${className}`}
+      className={`${baseClasses} ${variants[variant]} ${className} disabled:opacity-90`}
     >
       {children}
     </button>

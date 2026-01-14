@@ -15,8 +15,7 @@ function QuestionModalBanner({
       "Patio Laying": "bg-[url('/questions/PatioServices.webp')]",
       "Artificial Grass Installation":
         "bg-[url('/questions/ArtificialGrass.webp')]",
-      "Driveway Installation":
-        "bg-[url('/questions/Driveways.webp')]",
+      "Driveway Installation": "bg-[url('/questions/Driveways.webp')]",
       "Fence & Gate Installation": "bg-[url('/questions/fenceandgate.webp')]",
       Gardening: "bg-[url('/images/banners/Gardening.jpg')]",
       "Home and Garden":
@@ -33,16 +32,18 @@ function QuestionModalBanner({
   };
   return (
     <div className={`${getHeaderImageClass()} `}>
-      <h5 className="font-Inter font-black
+      <h5
+        className="font-Inter font-black
         tracking-[-0.03em]
-        text-[25px] leading-7
+        text-[20px] leading-7
         md:text-[25px] 
         lg:text-[25px] 
         mb-0 max-w-[95%] 
         text-center 
         bg-black/50 
         px-2 py-1 text-xl 
-        max-[480px]:w-full">
+        max-[480px]:w-full"
+      >
         {question}
       </h5>
 

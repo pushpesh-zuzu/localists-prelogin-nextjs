@@ -188,10 +188,10 @@ const OTPVerificationLandingNewPPC = ({
       padding="p-0"
       showButtons={false}
       isOpen={true}
-      maxWidth="max-w-[90%] sm:max-w-[500px] mt-[5%]"
+      maxWidth=" sm:max-w-[500px]"
       showClosIcon={false}
     >
-      <div className="w-full max-w-[500px] bg-white px-2  md:px-8 py-[35px] text-center shadow-sm sm:px-[31px] sm:py-[35px]">
+      <div className="w-full max-w-[500px] bg-white px-4  md:px-8 py-5 text-center shadow-sm sm:px-[31px] sm:py-[35px]">
         {/* Title */}
         <H5 className="mb-5 text-[#253238]">OTP Verification</H5>
 
@@ -234,7 +234,7 @@ const OTPVerificationLandingNewPPC = ({
         </div>
 
         {/* Resend OTP */}
-        <div className="mb-4 text-sm font-bold leading-[14px] text-[#969696] font-[Arial] tracking-[-0.03em]">
+        <div className="md:mb-4 text-[10px] md:text-sm font-bold leading-[14px] text-[#969696] font-[Arial] tracking-[-0.03em]">
           Didn't you receive the OTP?{" "}
           {timer > 0 ? (
             <span className="font-[Arial] tracking-[-0.03em] mt-4 text-sm font-bold text-[#828282]">
@@ -283,14 +283,14 @@ const OTPVerificationLandingNewPPC = ({
         </div>
 
         {/* Mobile number notice */}
-        <div className="mx-auto rounded-[3px] bg-[#F5F5F5] py px-1.5 py-5">
-          <Paragraph className="mx-auto text-[#253238]">
+        <div className="mx-auto rounded-[3px] max-w-[220px] md:max-w-full bg-[#F5F5F5] py px-1.5 py-[5px]">
+          <p className="mx-auto font-bold text-[10px] md:text-base text-[#253238]">
             WE CAN ONLY SEND A PASSCODE TO A MOBILE NUMBER NOT TO A LANDLINE.
-          </Paragraph>
+          </p>
         </div>
 
         <p
-          className="tracking-[-0.03em]
+          className="tracking-[-0.03em] max-w-[220px] md:max-w-full
         text-[12px] leading-[18px] font-[Arial] font-bold
         md:text-[14px] md:leading-[16px]
         lg:text-[16px] lg:leading-[24px] mx-auto mb-0 mt-4 text-[#A3A3A3]"

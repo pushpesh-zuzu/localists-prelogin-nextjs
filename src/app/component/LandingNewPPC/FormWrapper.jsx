@@ -3,11 +3,12 @@ import React from "react";
 import { X } from "lucide-react";
 import Button1 from "../UI/Typography/Button1";
 import H4 from "../UI/Typography/H4";
+import H5 from "../UI/Typography/H5";
 
 const FormWrapper = ({
   children,
   maxWidth = "max-w-2xl",
-  maxHeight = "max-h-[90vh]",
+  maxHeight = "",
   title,
   nextButtonText = "Continue",
   BackButtonText = "Back",
@@ -18,6 +19,7 @@ const FormWrapper = ({
   padding = "p-3 md:px-7.5 md:py-6",
   showCloseIcon = true,
   className = "",
+  disabledButton=false
 }) => {
   return (
     <div
@@ -37,28 +39,28 @@ const FormWrapper = ({
       {/* Title - Fixed */}
       {title && (
         <div className="pt-6 px-3 pb-0 flex-shrink-0">
-          <H4 className="text-center max-w-[90%] mx-auto">{title}</H4>
+          <H5 className="text-center font-black leading-8! text-[20px]! md:text-2xl max-w-[90%] mx-auto">{title}</H5>
         </div>
       )}
 
       {/* Content - Flexible, can scroll internally */}
-      {children && <div className={`flex-1 ${padding} overflow-y-auto`}>{children}</div>}
+      {children && <div className={`flex-1 ${padding} `}>{children}</div>}
 
       {/* Buttons - Fixed at bottom */}
       {showButtons && (
         <div className={`${padding} pt-0 flex-shrink-0`}>
-          {onBack && onNext ? (
+          {onBack && onNext  ? (
             <div className="flex justify-between items-center">
-              <Button1 variant="secondary" onClick={onBack}>
+              <Button1  disabled={disabledButton} className="cursor-pointer" variant="secondary" onClick={onBack}>
                 {BackButtonText}
               </Button1>
-              <Button1 variant="primary" onClick={onNext}>
+              <Button1 disabled={disabledButton} className="cursor-pointer" variant="primary" onClick={onNext}>
                 {nextButtonText}
               </Button1>
             </div>
           ) : onNext ? (
             <div className="flex justify-center">
-              <Button1 variant="primary" onClick={onNext}>
+              <Button1 disabled={disabledButton} className="cursor-pointer" variant="primary" onClick={onNext}>
                 {nextButtonText}
               </Button1>
             </div>

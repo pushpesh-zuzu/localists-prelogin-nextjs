@@ -256,8 +256,7 @@ const QuestionModalLandingNewPPC = ({
   return (
     <FormWrapper padding="p-0" showButtons={false}>
 
-        {/* Modal Content */}
-        <div className="flex flex-col h-full py-2 px-8 overflow-hidden">
+        <div className="flex flex-col h-full py-2 px-3 md:px-8 min-h-80 min-w-72 md:min-w-80">
           {loading ? (
             <div className="flex-1 flex items-center justify-center">
               <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-[#00ADD8]"></div>
@@ -358,8 +357,8 @@ const QuestionModalLandingNewPPC = ({
               </div>
             </>
           ) : (
-            <div className="flex-1 flex items-center justify-center text-base text-black">
-              <h2>No questions available</h2>
+            <div className="flex-1 flex items-center justify-center">
+              <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-[#00ADD8]"></div>
             </div>
           )}
         </div>

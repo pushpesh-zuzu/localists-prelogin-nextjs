@@ -300,16 +300,19 @@ const ServiceAndPostCodeModalLandingPPC = ({
   };
 
   return (
-    <div className="px-7.5 py-6">
+    <div>
       <FormWrapper
         isOpen={true}
-        title="What service do you need?"
+        title=""
         onNext={handleContinue}
         nextButtonText={loading ? "Validating..." : "Continue"}
         disableNext={loading || !selectedService || !postalCodeValidate}
-        maxWidth="max-w-[90%] md:max-w-[550px]"
-        onClose={()=>{handleCloseClick()}}
-        padding="px-3 py-4 md:px-7.5 md:pt-3 pb-6"
+        maxWidth="lg:min-w-[400px]"
+        onClose={() => {
+          handleCloseClick();
+        }}
+        padding="px-3 py-4 md:px-7.5 md:pt-3 pb-3"
+        showCloseIcon={false}
       >
         {/* Service Input */}
         <div className="relative" ref={dropdownRef}>

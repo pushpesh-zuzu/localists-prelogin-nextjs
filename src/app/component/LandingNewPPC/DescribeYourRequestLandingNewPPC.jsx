@@ -148,7 +148,7 @@ const DescribeYourRequestLandingNewPPC = ({
       showButtons={false}
       padding="p-3 md:px-7.5"
       isOpen={true}
-      maxWidth="max-w-[90%] md:max-w-[540px] mt-[5%] "
+      maxWidth="md:max-w-[540px] "
       maxHeight="max-h-[90vh]"
     >
       {/* Success Message */}

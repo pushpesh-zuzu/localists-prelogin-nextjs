@@ -46,7 +46,7 @@ const InputField = ({
           onBlur={onBlur}
           style={{ boxShadow: "0 0 2px .5px #0000001a" }}
           className={`
-             relative w-full px-3 py-3 rounded-sm
+             relative w-full px-3 py-2 rounded-sm
             text-gray-900 text-base
             border border-[#ccc]
             transition-all duration-200

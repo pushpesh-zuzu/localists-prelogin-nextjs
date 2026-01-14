@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "next/navigation";
 import {
   checkEmailIdApi,
+  registerQuoteCustomer,
   setbuyerRequestData,
 } from "@/lib/store/buyerslice/buyerSlice";
 import { validateEmail } from "@/utils/validateEmail";
@@ -25,6 +26,7 @@ function NameEmailPhoneModalLandingPPC({
   isStartWithQuestionModal = false,
   isPPCPages = false,
   hideCloseButton = false,
+  setIsOtpSent
   
 }) {
   const dispatch = useDispatch();
@@ -178,6 +180,7 @@ function NameEmailPhoneModalLandingPPC({
       dispatch(registerQuoteCustomer(formData)).then((result) => {
         if (result) {
           nextStep();
+          setIsOtpSent(true)
         }
       });
     } else {
@@ -202,6 +205,7 @@ function NameEmailPhoneModalLandingPPC({
   useEffect(() => {
     dispatch(setbuyerRequestData({ name, email, phone }));
   }, []);
+  console.log(requestLoader,'requestLoader')
   return (
     <div >
       <FormWrapper
@@ -209,11 +213,14 @@ function NameEmailPhoneModalLandingPPC({
         isOpen={true}
         title="YOU ARE ONLY ONE STEP FROM COMPARING FREE QUOTES!"
         onNext={handleSubmit}
-        maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
-        maxHeight="max-h-[80vh] lg:max-h-[90vh]"
+        maxWidth="lg:max-w-[760px]"
+        maxHeight=""
         padding="px-3 py-4 md:px-7.5 md:pt-3 pb-6"
+        showCloseIcon={false}
+        disabledButton={requestLoader}
+        
       >
-          <Paragraph className="text-center">
+          <Paragraph bold="font-normal" className="text-center">
           Your phone number and email are safe with us.
         </Paragraph>
         <Paragraph bold={'font-medium'} className="text-center mt-1 sm:mt-0">
