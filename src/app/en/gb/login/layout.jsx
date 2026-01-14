@@ -1,4 +1,6 @@
 import Footer from "@/app/component/Footer/Footer";
+import { Suspense } from "react";
+
 
 
 export const metadata = {
@@ -7,9 +9,9 @@ export const metadata = {
 
 export default function LoginLayout({ children }) {
     return (
-        <main>
+        <Suspense fallback={null}>
             {children}
             <Footer />
-        </main>
+        </Suspense>
     );
 }
