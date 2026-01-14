@@ -10,6 +10,7 @@ import { setbuyerRequestData } from "@/lib/store/buyerslice/buyerSlice";
 import CloseBrowserAbandon from "../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+import Footer from "../Footer/Footer";
 
 const LandingNewPPC = ({
   title = "",
@@ -81,7 +82,7 @@ const LandingNewPPC = ({
                   bold="font-normal"
                   variant="secondary"
                 >
-                  We only use verified and vetted professional
+                 We only use verified and vetted professionals
                 </Paragraph>
               </div>
               <div className="flex items-start gap-2">
@@ -93,7 +94,7 @@ const LandingNewPPC = ({
                   bold="font-normal"
                   variant="secondary"
                 >
-                  Compare prices from multiple professionalsl
+                  Compare prices from multiple professionals
                 </Paragraph>
               </div>
               <div className="flex items-start gap-2">
@@ -105,7 +106,7 @@ const LandingNewPPC = ({
                   bold="font-normal"
                   variant="secondary"
                 >
-                  Hire the one thats right for youl
+                  Hire the one thats right for you
                 </Paragraph>
               </div>
             </div>
@@ -151,6 +152,7 @@ const LandingNewPPC = ({
           </div>
         </div>
       </WrapperBGWidth>
+      <Footer/>
     </>
   );
 };
