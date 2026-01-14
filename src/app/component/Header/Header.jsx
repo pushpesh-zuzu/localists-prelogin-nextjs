@@ -185,6 +185,7 @@ export default function Header() {
                   <SearchIcon className="h-4 w-4 md:h-[18px] md:w-[18px] mr-0.5 md:mr-1" />
                 </button>
                 <button
+                  onClick={() => router.push("/en/gb/login")}
                   className="px-2.5 md:px-4 leading-4 py-[5.66px] text-[16px] font-medium text-white bg-[#00AEEF] rounded-full transition-colors duration-200"
                   aria-label="Login to your account"
                 >

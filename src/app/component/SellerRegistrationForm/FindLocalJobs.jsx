@@ -224,7 +224,9 @@ const FindLocalJobs = () => {
             <Spin indicator={<LoadingOutlined spin />} />
           </div>
         ) : (
-          <div className="grid grid-cols-2 gap-[13px] mt-5 mb-3 max-[620px]:grid-cols-1">
+          <div className="grid grid-cols-2 gap-x-[35px]
+      gap-y-[13px]
+       mt-5 mb-3 max-[620px]:grid-cols-1">
             {popularList?.map((item) => {
               const slug = generateSlug(item.name);
               return (
