@@ -6,6 +6,8 @@ import useUserInfo from "@/utils/getUserIp";
 import FindLocalJobs from "@/app/component/SellerRegistrationForm/FindLocalJobs";
 import GrowthSteps from "@/app/component/SellerRegistrationForm/GrowthSteps"
 import { setSelectedServiceFormData } from "@/lib/store/findjobslice";
+import Footer from "@/app/component/Footer/Footer";
+import CustomerSuccessStories from "@/app/component/SellerRegistrationForm/CustomerSuccessStories";
 
 function page() {
 
@@ -27,6 +29,8 @@ function page() {
     <main>
       <FindLocalJobs />;
       <GrowthSteps />
+      <CustomerSuccessStories />
+      <Footer />
     </main>
   )
 
