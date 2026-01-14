@@ -9,8 +9,8 @@ import H3 from "../UI/Typography/H3";
 import H4 from "../UI/Typography/H4";
 import CheckRightCircleIcon from "../common/icons/LandingPPCIcon/CheckRightCircleIcon";
 import Paragraph from "../UI/Typography/Paragraph";
-import VerifiedIcon from "../common/icons/LandingPPCIcon/VerifiedIcon";
-import AllUserIcon from "../common/icons/LandingPPCIcon/AllUserIcon";
+// import VerifiedIcon from "../common/icons/LandingPPCIcon/VerifiedIcon";
+// import AllUserIcon from "../common/icons/LandingPPCIcon/AllUserIcon";
 import BuyerRegistrationLandingNewPPC from "./BuyerRegistrationLandingNewPPC";
 
 const LandingNewPPC = ({
