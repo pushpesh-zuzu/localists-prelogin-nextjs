@@ -7,10 +7,11 @@ import FindLocalJobs from "@/app/component/SellerRegistrationForm/FindLocalJobs"
 import GrowthSteps from "@/app/component/SellerRegistrationForm/GrowthSteps"
 import { setSelectedServiceFormData } from "@/lib/store/findjobslice";
 import Footer from "@/app/component/Footer/Footer";
+import SEO from "@/app/component/common/seo/SEO";
 import CustomerSuccessStories from "@/app/component/SellerRegistrationForm/CustomerSuccessStories";
 
-function page() {
 
+function page() {
   const dispatch = useDispatch();
   const { ip, url } = useUserInfo();
 
@@ -27,6 +28,8 @@ function page() {
 
   return (
     <main>
+      
+      <SEO conversion />
       <FindLocalJobs />;
       <GrowthSteps />
       <CustomerSuccessStories />

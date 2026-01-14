@@ -67,25 +67,42 @@ const GrowthSteps = () => {
                                         />
                                     </div>
 
-                                    <H3 className="text-[#1e2325]">
+                                    <h3 className="text-[#1e2325] font-Inter font-black
+                                                        tracking-[-0.03em]
+                                                        text-[20px] leading-[22px]
+                                                        md:text-[18px] md:leading-[22px]
+                                                        lg:text-[25px] lg:leading-[20px] xl:text-[29px] xl:leading-[32px]">
                                         {item.title1}
                                         <br />
-                                        <H3 className="text-white">
+                                        <h3 className="text-[#1e2325] font-Inter font-black
+                                                        tracking-[-0.03em]
+                                                        text-[20px] leading-[22px]
+                                                        md:text-[18px] md:leading-[22px]
+                                                        lg:text-[25px] lg:leading-[20px] xl:text-[29px] xl:leading-[32px] text-white">
                                             {item.title2}
-                                        </H3>
-                                    </H3>
+                                        </h3>
+                                    </h3>
                                 </div>
 
-                                <ul className="list-disc list-outside
-    pl-[20px] mb-[15px]
+                                <ul className=" list-disc list-outside
+    pl-[20px]
+    mb-[15px]
+
     font-[Arial]
     tracking-[-0.03em]
-    leading-[35px]
     text-white
+
     text-[20px]
+    leading-[26px]
+
     max-[768px]:text-[18px]
+    max-[768px]:leading-[24px]
+
     max-[480px]:text-[16px]
-    max-[380px]:pl-[19px]">
+    max-[480px]:leading-[22px]
+
+    max-[380px]:pl-[19px]
+    space-y-[10px]">
                                     {item.Description1 && <li>{item.Description1}</li>}
                                     {item.Description2 && <li>{item.Description2}</li>}
                                     {item.Description3 && <li>{item.Description3}</li>}
@@ -104,7 +121,7 @@ const GrowthSteps = () => {
                                 font-[Arial]
                 tracking-[-0.03em]
                   mt-[23.69px]
-                  bg-black text-white
+                  bg-[#253238] text-white
                   text-[18px] font-bold
                   px-[15px] py-[15px]
                   rounded-full

@@ -19,7 +19,6 @@ import hiring from "../../../../public/images/ServicePanel/hiring.svg";
 import rightArrow from "../../../../public/images/ServicePanel/rightArrow.svg";
 import H1 from "../UI/Typography/H1";
 import Paragraph2 from "../UI/Typography/Paragraph2";
-import H2 from "../UI/Typography/H2";
 
 
 const FindLocalJobs = () => {
@@ -149,7 +148,7 @@ const FindLocalJobs = () => {
             className="w-[513px] max-[620px]:w-full
       h-[50px] max-[480px]:h-[40px]
       px-[18px] pr-[48px]
-      text-[16px]
+      text-[16px] bg-[white]
       shadow-[0px_0px_2px_0px_#00000033]
       font-[Arial] tracking-[-0.03em]
       border-b-2 border-[#D9D9D9] focus:border-[#00AFE3]
@@ -212,9 +211,13 @@ const FindLocalJobs = () => {
 
       {/* RIGHT */}
       <div className="bg-white rounded-[15px] p-[20px] min-w-fit shadow-[0px_0px_4px_0px_#00000033] h-fit max-[768px]:h-auto">
-        <H2 className="text-[#00AFE3]">
+        <h2 className="text-[#00AFE3] font-Inter font-black
+        tracking-[-0.03em]
+        text-[30px] leading-[32px]
+        md:text-[35px] md:leading-[35px]
+        lg:text-[38px] lg:leading-[43px]">
           Popular Services
-        </H2>
+        </h2>
 
         {popularLoader ? (
           <div className="flex justify-center">
@@ -237,7 +240,13 @@ const FindLocalJobs = () => {
                     width={20}
                     height={20}
                   />
-                  <Paragraph2 className="hover:text-[#00AFE3]">{item.name}</Paragraph2>
+                  <p className="font-[Arial]
+                      tracking-[-0.03em]
+                      leading-[24px]
+                    text-[#253238]
+                      text-[18px]       
+                      max-[768px]:text-[16px]
+                      max-[480px]:text-[14px] hover:text-[#00AFE3]">{item.name}</p>
                 </Link>
               );
             })}
