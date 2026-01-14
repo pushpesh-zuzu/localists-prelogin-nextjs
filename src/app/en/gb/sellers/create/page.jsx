@@ -28,7 +28,6 @@ function page() {
 
   return (
     <main>
-      
       <SEO conversion />
       <FindLocalJobs />;
       <GrowthSteps />
@@ -36,10 +35,6 @@ function page() {
       <Footer />
     </main>
   )
-
-
-
-
 }
 
 export default page;

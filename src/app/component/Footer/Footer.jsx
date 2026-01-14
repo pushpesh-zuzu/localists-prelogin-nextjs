@@ -106,7 +106,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/sellers/pricing"
+                    href="/en/gb/sellers/pricing"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px] xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
                     Pricing
@@ -264,7 +264,7 @@ const Footer = () => {
                       How it works
                     </Link>
                     <Link
-                      href="/sellers/pricing"
+                      href="/en/gb/sellers/pricing"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       Pricing
