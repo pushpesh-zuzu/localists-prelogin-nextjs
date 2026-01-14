@@ -1,4 +1,5 @@
 import SEO from "@/app/component/common/seo/SEO";
+import Footer from "@/app/component/Footer/Footer";
 import CreditBuyingProcess from "@/app/component/Pricing/CreditBuyingProcess";
 import PricingCards from "@/app/component/Pricing/PricingCards";
 import PricingFAQ from "@/app/component/Pricing/PricingFaq";
@@ -29,6 +30,7 @@ function page() {
             <PricingCards />
             <PricingFAQ />
             <StartWinning />
+            <Footer />
         </main>
     )
 }
