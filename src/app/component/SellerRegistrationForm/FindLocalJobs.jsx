@@ -99,7 +99,17 @@ const FindLocalJobs = () => {
 
   return (
 
-    <section className="bg-[#F9F9FA] px-[88px] py-[40px] flex gap-[5%] max-[1200px]:flex-col max-[980px]:px-[40px] max-[520px]:px-[26px] max-[380px]:px-[16px]">
+    <section className="bg-[#F9F9FA]
+    flex gap-[5%]
+    px-[88px]
+    pt-[40px]
+    pb-[15px]
+    max-[1200px]:flex-col
+    max-[980px]:px-[40px]
+    max-[980px]:pb-[60px]
+    max-[520px]:px-[26px]
+    max-[520px]:pb-[40px]
+    max-[380px]:px-[16px]">
 
       {/* LEFT */}
       <div className="w-full">
