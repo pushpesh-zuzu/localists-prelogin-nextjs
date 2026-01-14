@@ -111,7 +111,7 @@ const LandingNewPPC = ({
             </div>
             <div className="hidden md:block relative bg-[#45a834] text-white rounded-xl p-3 mt-[30px] max-w-[500px]">
               <Image
-                src="/icon.png"
+                src="/Icon.png"
                 alt="Arrow"
                 width={50}
                 height={42}
