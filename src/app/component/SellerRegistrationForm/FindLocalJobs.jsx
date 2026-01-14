@@ -16,7 +16,7 @@ import { generateSlug } from "@/utils";
 // import { extractAllParams } from "@/utils/decodeURLParams";
 import Image from "next/image";
 import hiring from "../../../../public/images/ServicePanel/hiring.svg";
-import rightArrow from "../../../../public/Images/ServicePanel/rightArrow.svg";
+import rightArrow from "../../../../public/images/ServicePanel/rightArrow.svg";
 import H1 from "../UI/Typography/H1";
 import Paragraph2 from "../UI/Typography/Paragraph2";
 import H2 from "../UI/Typography/H2";
