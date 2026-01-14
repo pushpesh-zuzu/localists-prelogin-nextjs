@@ -13,7 +13,7 @@ import Link from "next/link";
 import { LoadingOutlined } from "@ant-design/icons";
 import { Spin } from "antd";
 import { generateSlug } from "@/utils";
-import { extractAllParams } from "@/utils/decodeURLParams";
+// import { extractAllParams } from "@/utils/decodeURLParams";
 import Image from "next/image";
 import hiring from "../../../../public/images/ServicePanel/hiring.svg";
 import rightArrow from "../../../../public//Images/ServicePanel/rightArrow.svg";
