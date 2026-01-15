@@ -405,7 +405,6 @@ function page() {
                     })}
                 </div>
             </section>
-
             <Footer />
         </>
     )

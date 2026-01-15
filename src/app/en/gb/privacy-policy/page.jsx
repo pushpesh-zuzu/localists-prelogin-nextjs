@@ -1,0 +1,90 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+
+import PrivacyContentForProfession from "@/app/component/PrivacyPolicy/PrivacyContentForProfession";
+import PrivacyContentForCustomer from "@/app/component/PrivacyPolicy/PrivacyContentForCustomer";
+import Footer from "@/app/component/Footer/Footer";
+import SEO from "@/app/component/common/seo/SEO";
+
+export default function PrivacyPolicy() {
+  const pathname = usePathname();
+  const [activeTab, setActiveTab] = useState("professionals");
+
+  useEffect(() => {
+    setActiveTab("customers");
+  }, [pathname]);
+
+  return (
+    <>
+    <SEO />
+    <section className="text-[#253238]">
+      {/* TABS */}
+      <nav className="bg-[#f9f9fa] pt-[32px] mb-[24px]">
+        <div className="relative mx-auto flex max-w-[970px] flex-col sm:flex-row justify-center">
+
+          {/* CONSUMERS */}
+          <button
+            type="button"
+            onClick={() => setActiveTab("customers")}
+            className={`
+              relative z-10 w-full sm:w-auto
+              px-[32px] py-[18px] sm:py-[24px]
+              font-[Arial] text-[18px] sm:text-[20px]
+              leading-[24px] tracking-[-0.03em]
+              transition-all duration-300 ease-in-out
+              cursor-pointer
+              ${
+                activeTab === "customers"
+                  ? "bg-white text-[#253238] sm:-translate-y-[1px]"
+                  : "text-[#9da0b6]"
+              }
+              hover:text-[#253238]
+              text-center
+            `}
+          >
+            Consumers
+          </button>
+
+          {/* PROFESSIONALS */}
+          <button
+            type="button"
+            onClick={() => setActiveTab("professionals")}
+            className={`
+              relative z-10 w-full sm:w-auto
+              px-[32px] py-[18px] sm:py-[24px]
+              font-[Arial] text-[18px] sm:text-[20px]
+              leading-[24px] tracking-[-0.03em]
+              transition-all duration-300 ease-in-out
+              cursor-pointer
+              ${
+                activeTab === "professionals"
+                  ? "bg-white text-[#253238] sm:-translate-y-[1px]"
+                  : "text-[#9da0b6]"
+              }
+              hover:text-[#253238]
+              text-center
+            `}
+          >
+            Professionals
+          </button>
+        </div>
+      </nav>
+
+      {/* CONTENT */}
+      <div className="mx-auto max-w-[970px] px-[15px] pt-[20px] md:pt-[30px] pb-[15px]">
+        <div className="pb-[49px] animate-fadeIn">
+          {activeTab === "customers" ? (
+            <PrivacyContentForCustomer />
+          ) : (
+            <PrivacyContentForProfession />
+          )}
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+    </>
+  );
+}
