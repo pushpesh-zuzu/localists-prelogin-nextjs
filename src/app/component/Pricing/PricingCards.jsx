@@ -47,10 +47,10 @@ const PricingCards = () => {
           >
             <div className="flex flex-1 items-center justify-center" >
               <div className={
-    index >= 2
-      ? "w-[480px] max-[768px]:w-auto"
-      : "w-auto"
-  }>
+                index >= 2
+                  ? "w-[480px] max-[768px]:w-auto"
+                  : "w-auto"
+              }>
                 <Image
                   src={card.image}
                   alt={card.title}
