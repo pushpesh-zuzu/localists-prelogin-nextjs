@@ -3,7 +3,6 @@ import creditsAtTheReady from "../../../../public/images/Pricing/creditsAtTheRea
 import youareincontrol from "../../../../public/images/Pricing/youAreInControlImg.svg";
 import jobrelatedprice from "../../../../public/images/Pricing/jobRelatedPricesImg.svg";
 import newbusiness from "../../../../public/images/Pricing/newBusinessImg.svg";
-import H3 from "../UI/Typography/H3";
 import Paragraph2 from "../UI/Typography/Paragraph2";
 
 const cardData = [

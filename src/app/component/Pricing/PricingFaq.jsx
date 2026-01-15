@@ -60,10 +60,10 @@ const PricingFAQ = () => {
                             onClick={() => toggleFAQ(index)}
                             className={`
                 flex items-center justify-between cursor-pointer
-                font-[Arial] font-bold
+                font-Inter font-black
         tracking-[-0.03em]
         leading-[25px]
-        text-[25px]       
+        text-[25px]
         max-[768px]:text-[18px]
         max-[480px]:text-[16px]
                 ${openIndex === index ? "text-[#00AFE3]" : "text-[#253238]"}

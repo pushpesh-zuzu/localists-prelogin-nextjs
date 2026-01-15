@@ -19,14 +19,23 @@ const PricingSection = () => {
             </H1>
 
             <div
-                className="mt-5
-          bg-[#E3F6FC]
-          px-[36px] py-[44px]
-          max-w-[900px]
-          mx-auto rounded-[20px]
-          max-[768px]:px-[24px] max-[768px]:py-[32px]
-          max-[480px]:px-[16px] max-[480px]:py-[24px]
-        ">
+                className="
+      mt-5
+    bg-[#E3F6FC]
+    px-[36px] py-[44px]
+    max-w-[900px]
+    mx-auto
+    rounded-[20px]
+
+    max-[1024px]:max-w-[95%]
+    max-[1024px]:px-[28px] max-[1024px]:py-[36px]
+
+    max-[768px]:max-w-[90%]
+    max-[768px]:px-[24px] max-[768px]:py-[32px]
+
+    max-[480px]:max-w-[92%]
+    max-[480px]:px-[16px] max-[480px]:py-[24px]
+  ">
                 <Paragraph2
                     className="mb-[20px] text-center">
                     At Localists, there are no surprises. From the moment you sign up,

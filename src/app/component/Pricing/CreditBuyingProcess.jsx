@@ -50,9 +50,10 @@ const CreditBuyingProcess = () => {
                             />
                         </div>
 
-                        <p className="font-[Arial]
+                        <p className="font-[Inter]
         tracking-[-0.03em]
-        leading-[29px] font-bold
+        leading-[29px] font-Inter font-black
+        tracking-[-0.03em]
         text-[#253238]
         text-[25px]       
         max-[768px]:text-[23px]
