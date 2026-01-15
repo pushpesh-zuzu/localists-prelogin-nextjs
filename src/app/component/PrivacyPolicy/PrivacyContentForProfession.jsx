@@ -1084,7 +1084,6 @@ export default function PrivacyContentForProfession() {
 
             {professionalsTermsData.map((block, index) => {
                 switch (block.type) {
-                    /* ---------------- H3 ---------------- */
                     case "h3":
                         return (
                             <h3
@@ -1102,7 +1101,6 @@ export default function PrivacyContentForProfession() {
                             </h3>
                         );
 
-                    /* ---------------- H4 ---------------- */
                     case "h4":
                         return (
                             <h4
@@ -1121,7 +1119,6 @@ export default function PrivacyContentForProfession() {
                             </h4>
                         );
 
-                    /* ---------------- H5 ---------------- */
                     case "h5":
                         return (
                             <h5
@@ -1140,7 +1137,6 @@ export default function PrivacyContentForProfession() {
                             </h5>
                         );
 
-                    /* ---------------- PARAGRAPH ---------------- */
                     case "p":
                         return (
                             <p
@@ -1157,7 +1153,6 @@ export default function PrivacyContentForProfession() {
                             />
                         );
 
-                    /* ---------------- LIST (NON-BOLD) ---------------- */
                     case "liNonBold":
                         return (
                             <ul
