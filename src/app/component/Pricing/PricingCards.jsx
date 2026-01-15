@@ -1,8 +1,8 @@
 import Image from "next/image";
 import creditsAtTheReady from "../../../../public/images/Pricing/creditsAtTheReadyImg.svg";
 import youareincontrol from "../../../../public/images/Pricing/youAreInControlImg.svg";
-import jobrelatedprice from "../../../../public/images/Pricing/jobRelatedPricesImg.svg";
-import newbusiness from "../../../../public/images/Pricing/newBusinessImg.svg";
+import jobrelatedprice from "../../../../public/images/Pricing/development.webp";
+import newbusiness from "../../../../public/images/Pricing/newBusiness.webp";
 import Paragraph2 from "../UI/Typography/Paragraph2";
 
 const cardData = [
@@ -42,15 +42,17 @@ const PricingCards = () => {
         return (
           <div
             key={index}
-            className={`relative flex items-stretch justify-between ${
-              isReverse ? "flex-row-reverse bg-[#F9F9FA]" : "bg-[#E9F9FF]"
-            } max-[768px]:flex-col max-[768px]:text-center`}
+            className={`relative flex items-stretch justify-between ${isReverse ? "flex-row-reverse bg-[#F9F9FA]" : "bg-[#E9F9FF]"
+              } max-[768px]:flex-col max-[768px]:text-center`}
           >
-            <div className="flex flex-1 items-center justify-center">
-              <Image
-                src={card.image}
-                alt={card.title}
-                className={`
+            <div className="flex flex-1 items-center justify-center" >
+              <div className={`
+      ${index  >= 2 ? "w-[480px] max-[768px]:w-auto" : ""}
+    `}>
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  className={`
                   max-w-full object-contain
                   ${index === 0 ? "mt-[-70px] max-[768px]:mt-[-40px]" : ""}
                   ${index === 1 ? "mt-[-60px] max-[768px]:mt-[-30px]" : ""}
@@ -58,14 +60,14 @@ const PricingCards = () => {
                   ${index === 3 ? "py-[38px]" : ""}
                   max-[768px]:max-w-[250px]
                 `}
-              />
+                />
+              </div>
             </div>
 
             <div className="relative mx-[2rem] w-[2px] max-[768px]:hidden">
               <span
-                className={`absolute top-[64px] bottom-[64px] left-1/2 w-[2px] -translate-x-1/2 ${
-                  index % 2 === 0 ? "bg-white" : "bg-[#ccc]"
-                }`}
+                className={`absolute top-[64px] bottom-[64px] left-1/2 w-[2px] -translate-x-1/2 ${index % 2 === 0 ? "bg-white" : "bg-[#ccc]"
+                  }`}
               />
             </div>
 
