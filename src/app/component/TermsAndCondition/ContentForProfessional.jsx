@@ -1367,7 +1367,7 @@ export default function ContentForProfessional() {
                  lg:text-[30px] lg:leading-[30px]
                   gap-[10px]
                   max-[768px]:grid-cols-[40px_1fr]
-                  max-[520px]:grid-cols-[24px_1fr]
+                  max-[520px]:grid-cols-[24px_1fr] mb-2
                 `}>
                                 <span className="">{block.number}</span>
                                 <span>{block.text}</span>
