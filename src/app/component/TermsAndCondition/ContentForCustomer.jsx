@@ -479,7 +479,7 @@ const ContentForConsumers = () => {
                                 className="
                   font-Inter font-black
                     tracking-[-0.03em]
-                text-[30px] leading-[32px]
+                text-[28px] leading-[32px]
                 md:text-[35px] md:leading-[35px]
                     lg:text-[50px] lg:leading-[55px]
                   mt-[44px] mb-[24px]
@@ -498,17 +498,17 @@ const ContentForConsumers = () => {
                                 className={`
                   grid ${block?.fullWidth ? "grid-cols-1" : "grid-cols-[auto_1fr]"}
                 font-Inter font-black tracking-[-0.03em]
-                text-[24px] leading-[22px]
+                text-[24px] leading-[24px]
                  md:text-[22px] md:leading-[20px]
                 lg:text-[35px] lg:leading-[30px]
                 xl:text-[38px] xl:leading-[38px]
-                  gap-[5px]
-                  mt-[28px] mb-[20px]
-                 max-[768px]:grid-cols-[40px_1fr]
-                  max-[520px]:grid-cols-[24px_1fr] max-[520px]:mt-[20px] max-[520px]:mb-[14px]
-                `}
-                            >
-                                <span>{block?.number}</span>
+                  mt-[28px] mb-[20px] gap-[5px]
+                   max-[768px]:mt-[24px]
+                  max-[520px]:grid-cols-[auto_1fr] max-[520px]:mt-[20px]
+                `}>
+                                <span>
+                                    {block?.number}
+                                </span>
                                 <span>{block?.text}</span>
                             </h3>
                         );
@@ -529,7 +529,7 @@ const ContentForConsumers = () => {
                   max-[520px]:grid-cols-[24px_1fr]
                 `}
                             >
-                                <span>{block?.number}</span>
+                                <span >{block?.number}</span>
                                 <span>{block?.text}</span>
                             </h4>
                         );

@@ -1324,7 +1324,7 @@ export default function ContentForProfessional() {
                                 key={index}
                                 className="font-Inter font-black
                     tracking-[-0.03em]
-                text-[30px] leading-[32px]
+                text-[28px] leading-[32px]
                 md:text-[35px] md:leading-[35px]
                     lg:text-[50px] lg:leading-[55px]
                   mt-[44px] mb-[24px]
@@ -1340,7 +1340,7 @@ export default function ContentForProfessional() {
                                 className={`
                   grid ${block?.fullWidth ? "grid-cols-1" : "grid-cols-[auto_1fr]"}
                   font-Inter font-black tracking-[-0.03em]
-                text-[24px] leading-[22px]
+                text-[24px] leading-[26px]
                  md:text-[22px] md:leading-[20px]
                 lg:text-[35px] lg:leading-[30px]
                 xl:text-[38px] xl:leading-[38px]
@@ -1368,7 +1368,8 @@ export default function ContentForProfessional() {
                   gap-[10px]
                   max-[768px]:grid-cols-[40px_1fr]
                   max-[520px]:grid-cols-[24px_1fr]
-                `}> <span>{block.number}</span>
+                `}>
+                                <span className="">{block.number}</span>
                                 <span>{block.text}</span>
                             </h4>
                         );
