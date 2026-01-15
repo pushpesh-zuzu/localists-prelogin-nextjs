@@ -26,9 +26,9 @@ import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAb
 import AdviceInsightNearMe from "../AdviceInsightNearMe";
 export const metadata = {
   title: "Find Quality Tree Surgeons Near Me | Localists",
-  description: "Find fully qualified tree surgeons near me. Certified and skilled arborists. Safe tree removal & pruning. Get free quotes from local experts in your area.",
-  
-}
+  description:
+    "Find fully qualified tree surgeons near me. Certified and skilled arborists. Safe tree removal & pruning. Get free quotes from local experts in your area.",
+};
 function TreeSurgeon() {
   return (
     <>
@@ -38,6 +38,7 @@ function TreeSurgeon() {
         heading2="Near You."
         description="Find the best tree surgeons for your job, just enter your postcode and a few details for instant quotes."
         bannerImage="/nearme/treeSurgeon.webp"
+        bannerImageMobile="/nearme/treeSurgeon1.webp"
         altText="Tree Surgeon"
       />
       <VettedSection
@@ -49,10 +50,14 @@ function TreeSurgeon() {
       <PopularJobNearMe services={POPULAR_SERVICES} />
       <HowItWorkNearMe />
       {/* <Feature /> */}
-      <HireRelatedToServiceNearMe heading1="Tree surgeons" heading2="in your area" tabData={TREE_SURGEON_TABDATA} />
+      <HireRelatedToServiceNearMe
+        heading1="Tree surgeons"
+        heading2="in your area"
+        tabData={TREE_SURGEON_TABDATA}
+      />
       <UserFeedbackNearMe feedbackData={TREE_SUREON_FEEDBACK} />
       {/* <PaddingWrapper> */}
-        <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
+      <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
       {/* </PaddingWrapper> */}
       <FAQ data={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]} />
       <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} />

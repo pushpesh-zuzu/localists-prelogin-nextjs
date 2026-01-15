@@ -27,7 +27,7 @@ export const carouselData = [
   {
     id: 5,
     title: "Patio Layer",
-    image: "/patiolayer.webp", // Aapki image path
+    image: "/homepage/patiolayer.webp", // Aapki image path
     isSpecial: false
   },
   //  {
