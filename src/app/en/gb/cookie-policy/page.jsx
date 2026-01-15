@@ -1,4 +1,5 @@
-import H1 from '@/app/component/UI/Typography/H1';
+import SEO from '@/app/component/common/seo/SEO';
+import Footer from '@/app/component/Footer/Footer';
 import Paragraph2 from '@/app/component/UI/Typography/Paragraph2';
 import React from 'react'
 
@@ -270,45 +271,53 @@ export const professionalsTermsData = [
     },
 ];
 
+export const metadata = {
+    title: "Cookies Policy | Localists.com",
+    description:
+        "Learn how Localists uses cookies to improve your browsing experience. See details on cookie types, tracking technologies, consent settings, and your privacy rights.",
+};
+
 function page() {
     return (
-        <section>
-<div className="mx-auto max-w-[970px] px-[15px] pt-[30px] md:pt-[48px] pb-[15px]">
-                <h1 className="text-center font-Inter font-black
+        <>
+            <SEO conversion />
+            <section>
+                <div className="mx-auto max-w-[970px] px-[15px] pt-[30px] md:pt-[48px] pb-[15px]">
+                    <h1 className="text-center font-Inter font-black
         tracking-[-0.03em]
         text-[45px] leading-[48px]
         md:text-[60px] md:leading-[55px]
         lg:text-[81px] lg:leading-[75px] mb-[56px] max-[520px]:mb-[16px]">
-                    Cookie Policy
-                </h1>
+                        Cookie Policy
+                    </h1>
 
-                <Paragraph2 className="mb-[20px] text-left">
-                    <b>Last Updated:</b> <span>29 August 2025</span>
-                </Paragraph2>
+                    <Paragraph2 className="mb-[20px] text-left">
+                        <b>Last Updated:</b> <span>29 August 2025</span>
+                    </Paragraph2>
 
-                {/* Content */}
-                {professionalsTermsData.map((block, index) => {
-                    switch (block.type) {
-                        case "h2":
-                            return (
-                                <h2
-                                    key={index}
-                                    className="font-Inter font-black
+                    {/* Content */}
+                    {professionalsTermsData.map((block, index) => {
+                        switch (block.type) {
+                            case "h2":
+                                return (
+                                    <h2
+                                        key={index}
+                                        className="font-Inter font-black
         tracking-[-0.03em]
         text-[30px] leading-[32px]
         md:text-[35px] md:leading-[35px]
         lg:text-[50px] lg:leading-[55px]
                     mt-[30px] md:mt-[44px] mb-[24px]"
-                                >
-                                    {block.text}
-                                </h2>
-                            );
+                                    >
+                                        {block.text}
+                                    </h2>
+                                );
 
-                        case "h3":
-                            return (
-                                <h3
-  key={index}
-  className={`
+                            case "h3":
+                                return (
+                                    <h3
+                                        key={index}
+                                        className={`
     font-Inter font-black tracking-[-0.03em]
     text-[24px] leading-[22px]
     md:text-[22px] md:leading-[20px]
@@ -320,50 +329,50 @@ function page() {
     md:grid               
     ${block.fullWidth ? "md:grid-cols-1" : "md:grid-cols-[20px_1fr]"}
   `}
->
-  {block.number && (
-    <span className='leading-[26px]'>{block.number}</span>
-  )}
-  <span>{block.text}</span>
-</h3>
+                                    >
+                                        {block.number && (
+                                            <span className='leading-[26px]'>{block.number}</span>
+                                        )}
+                                        <span>{block.text}</span>
+                                    </h3>
 
-                            );
+                                );
 
-                        case "p":
-                            return (
-                                <p
-                                    key={index}
-                                    className="font-[Arial]
+                            case "p":
+                                return (
+                                    <p
+                                        key={index}
+                                        className="font-[Arial]
         tracking-[-0.03em]
         leading-[24px]
         text-[#253238]
         text-[20px]       
         max-[768px]:text-[18px]
         max-[480px]:text-[16px] mb-[16px]"
-                                    dangerouslySetInnerHTML={{ __html: block.text }}
-                                />
-                            );
+                                        dangerouslySetInnerHTML={{ __html: block.text }}
+                                    />
+                                );
 
-                        case "paraWithoutMargin":
-                            return (
-                                <div
-                                    key={index}
-                                    className="font-[Arial]
+                            case "paraWithoutMargin":
+                                return (
+                                    <div
+                                        key={index}
+                                        className="font-[Arial]
         tracking-[-0.03em]
         leading-[24px]
         text-[#253238]
         text-[20px]       
         max-[768px]:text-[18px]
         max-[480px]:text-[16px]"
-                                    dangerouslySetInnerHTML={{ __html: block.text }}
-                                />
-                            );
+                                        dangerouslySetInnerHTML={{ __html: block.text }}
+                                    />
+                                );
 
-                        case "li":
-                            return (
-                                <ul
-                                    key={index}
-                                    className="ml-[8.5%] list-disc list-outside
+                            case "li":
+                                return (
+                                    <ul
+                                        key={index}
+                                        className="ml-[8.5%] list-disc list-outside
 
     font-[Arial]
     tracking-[-0.03em]
@@ -380,22 +389,25 @@ function page() {
 
     space-y-[10px] mb-3
                     max-[520px]:ml-[20px]"
-                                >
-                                    <li className="break-words">
-                                        {block.heading && <b>{block.heading} </b>}
-                                        <span
-                                            dangerouslySetInnerHTML={{ __html: block.text }}
-                                        />
-                                    </li>
-                                </ul>
-                            );
+                                    >
+                                        <li className="break-words">
+                                            {block.heading && <b>{block.heading} </b>}
+                                            <span
+                                                dangerouslySetInnerHTML={{ __html: block.text }}
+                                            />
+                                        </li>
+                                    </ul>
+                                );
 
-                        default:
-                            return null;
-                    }
-                })}
-            </div>
-        </section>
+                            default:
+                                return null;
+                        }
+                    })}
+                </div>
+            </section>
+
+            <Footer />
+        </>
     )
 }
 
