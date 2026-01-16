@@ -7,21 +7,28 @@ import Footer from "@/app/component/Footer/Footer";
 
 
 export const metadata = {
-  title: "Meet Our Leadership Team & Investors - Localists",
-  description:
-    "Meet our experienced leadership team and the investors driving Localists, the world’s fastest-growing local services marketplace. Get free quotes.",
-
-  openGraph: {
     title: "Meet Our Leadership Team & Investors - Localists",
     description:
-      "Meet our experienced leadership team and the investors driving Localists, the world’s fastest-growing local services marketplace. Get free quotes.",
-  },
+        "Meet our experienced leadership team and the investors driving Localists, the world’s fastest-growing local services marketplace. Get free quotes.",
 
-  twitter: {
-    title: "Meet Our Leadership Team & Investors - Localists",
-    description:
-      "Meet our experienced leadership team and the investors driving Localists, the world’s fastest-growing local services marketplace. Get free quotes.",
-  },
+    alternates: {
+        canonical: "https://dev2.localistsbooster.com/en/gb/about-us",
+        languages: {
+            "en-GB": "https://dev2.localistsbooster.com/en/gb/About-us"
+        },
+    },
+
+    openGraph: {
+        title: "Meet Our Leadership Team & Investors - Localists",
+        description:
+            "Meet our experienced leadership team and the investors driving Localists, the world’s fastest-growing local services marketplace. Get free quotes.",
+    },
+
+    twitter: {
+        title: "Meet Our Leadership Team & Investors - Localists",
+        description:
+            "Meet our experienced leadership team and the investors driving Localists, the world’s fastest-growing local services marketplace. Get free quotes.",
+    },
 };
 
 export default function Page() {
