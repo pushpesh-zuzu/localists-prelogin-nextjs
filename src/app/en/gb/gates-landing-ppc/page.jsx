@@ -9,7 +9,7 @@ export default function Page() {
     return (
         <Suspense fallback={<div></div>}>
             <LandingNewPPC
-                serviceId={"49"}
+                serviceId={49}
                 serviceName="Gate Installation"
                 subHeading="gate company"
                 title="Gate installers"
