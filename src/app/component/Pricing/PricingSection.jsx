@@ -3,13 +3,14 @@
 import { useRouter } from "next/navigation";
 import H1 from "../UI/Typography/H1";
 import Paragraph2 from "../UI/Typography/Paragraph2";
+import Link from "next/link";
 
 const PricingSection = () => {
     const router = useRouter();
 
-    const onSubmitPageChange = () => {
-        router.push("/en/gb/sellers/create");
-    };
+    // const onSubmitPageChange = () => {
+    //     router.push("/en/gb/sellers/create");
+    // };
 
     return (
         <section className="w-full text-center mt-[30px]">
@@ -37,7 +38,7 @@ const PricingSection = () => {
     max-[480px]:px-[16px] max-[480px]:py-[24px]
   ">
                 <Paragraph2
-                    className="mb-[20px] text-center">
+                    className="mb-[20px] md:mb-[30px]  text-center">
                     At Localists, there are no surprises. From the moment you sign up,
                     you’ll start receiving{" "}
                     <Paragraph2 className="!text-[#00AFE3] inline font-bold">
@@ -47,9 +48,8 @@ const PricingSection = () => {
                     for your business.
                 </Paragraph2>
 
-                <button
-                    onClick={onSubmitPageChange}
-                    className="
+                <Link
+                    href="/en/gb/sellers/create" className="
             bg-[#00AFE3]
             text-white
             font-bold
@@ -62,7 +62,7 @@ const PricingSection = () => {
             max-[768px]:text-[16px] max-[768px]:px-[26px] max-[768px]:py-[10px]
             max-[480px]:text-[15px] max-[480px]:px-[22px] max-[480px]:py-[9px]">
                     Join as a Professional
-                </button>
+                </Link>
             </div>
         </section>
     );

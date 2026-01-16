@@ -11,25 +11,25 @@ import GetQuotes from "@/app/component/common/GetQuotes/GetQuote";
 import Footer from "@/app/component/Footer/Footer";
 
 export const metadata = {
-    title: "Lessons & Training From Local Experts | Localists",
+    title: "Transportation Services Near Me | Find Local Professionals - Localists",
     description:
-        "Develop a skill, and get lessons in anything from driving to academics with trusted local tutors and trainers. Get your free quote now!",
+        "Find reliable transportation services near you. Get free quotes for removals, airport transfers, coach hire and more.",
 
     alternates: {
         canonical: "https://www.localists.com/en/gb/transportation-services",
     },
 
     openGraph: {
-        title: "Lessons & Training From Local Experts | Localists",
+        title: "Transportation Services Near Me | Find Local Professionals - Localists",
         description:
-            "Develop a skill, and get lessons in anything from driving to academics with trusted local tutors and trainers.",
+            "Find reliable transportation services near you. Get free quotes for removals, airport transfers, coach hire and more.",
         url: "https://www.localists.com/en/gb/transportation-services",
         images: [
             {
                 url: "https://dev2.localistsbooster.com/en/gb/component/level/banner/TransportBanner.webp",
                 width: 1200,
                 height: 630,
-                alt: "Lessons & Training From Local Experts",
+                alt: "transport",
             },
         ],
     },

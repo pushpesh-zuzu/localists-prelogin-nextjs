@@ -29,7 +29,7 @@ export const metadata = {
                 url: "https://dev2.localistsbooster.com/en/gb/component/level/banner/LessonsAndTraining.webp",
                 width: 1200,
                 height: 630,
-                alt: "Home",
+                alt: "Lessons & Training Services",
             },
         ],
     },

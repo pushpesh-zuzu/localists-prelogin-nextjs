@@ -60,19 +60,13 @@ const ClonePopularCategories = ({ data }) => {
                 max-[520px]:pb-[22px]
               " >
                             {row.path ? (
-                                <Link
-                                    href={""
-                                        // `/${currentLang}/${currentCountry}/${row.path}`
-                                    }
-                                >
-                                    <Image
-                                        src={row.image}
-                                        alt={row.title}
-                                        className="w-full object-cover rounded-tl-[20px] rounded-tr-[20px]"
-                                        width={400}
-                                        height={260}
-                                    />
-                                </Link>
+                                <Image
+                                    src={row.image}
+                                    alt={row.title}
+                                    className="w-full cursor-pointer object-cover rounded-tl-[20px] rounded-tr-[20px]"
+                                    width={400}
+                                    height={260}
+                                />
                             ) : (
                                 <Image
                                     src={row.image}
@@ -102,7 +96,7 @@ const ClonePopularCategories = ({ data }) => {
                             )}
 
                             {row.path ? (
-                                <Link
+                                <Button
                                     href={""
                                         // `/${currentLang}/${currentCountry}/${row.path}`
                                     }
@@ -110,7 +104,7 @@ const ClonePopularCategories = ({ data }) => {
                     w-full text-center
                     text-white
                     font-extrabold text-[20px]
-                    py-[10px]
+                    py-[10px] cursor-pointer
                     rounded-[4.5px]
                     leading-[30px]
                     bg-[#00afe3]
@@ -120,7 +114,7 @@ const ClonePopularCategories = ({ data }) => {
                   "
                                 >
                                     {row.title}
-                                </Link>
+                                </Button>
                             ) : (
                                 <Button className="bg-[#00afe3] hover:bg-[#0096c4] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] cursor-pointer text-white rounded-[4.5px]">
                                     {row.title}

@@ -43,7 +43,7 @@ export default function Page() {
             />
             <HowItWorks
                 howItWorksData={LessionAndTrainingHowItWork}
-                ctaText={"Transport Services"}
+                ctaText={"Lessons & Training"}
             />
             <PopularCategories data={LessionAndTrainingPopularCategory} />
             <AllServiceLevel1

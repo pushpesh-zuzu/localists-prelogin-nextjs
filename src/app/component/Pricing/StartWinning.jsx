@@ -2,6 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import H3 from "../UI/Typography/H3";
+import Link from "next/link";
+
 
 const StartWinning = () => {
   const router = useRouter();
@@ -19,12 +21,12 @@ const StartWinning = () => {
         max-[480px]:py-[30px]
       "
     >
-      <H3 className="mb-[20px]">
+      <H3 className="mb-[20px] md:mb-[40px]">
         Start winning new business today
       </H3>
 
-      <button
-        onClick={onSubmitPageChange}
+      <Link
+        href="/en/gb/sellers/create"
         className="
           rounded-[10px]
           bg-[#00AFE3]
@@ -43,7 +45,7 @@ const StartWinning = () => {
         "
       >
         Join as a Professional
-      </button>
+      </Link>
     </section>
   );
 };

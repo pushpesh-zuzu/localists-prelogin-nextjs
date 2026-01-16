@@ -8,6 +8,7 @@ import { GrowthStepsData } from "@/app/../constants/severalPanel";
 import Image from "next/image";
 import H2 from "../UI/Typography/H2";
 import H3 from "../UI/Typography/H3";
+import Button from "../UI/Typography/Button";
 
 const GrowthSteps = () => {
     const { lang, country } = useParams();
@@ -110,17 +111,12 @@ const GrowthSteps = () => {
                             </div>
 
                             {/* BUTTON */}
-                            <Link
-                                href={
-                                    item.id === 1 || item.id === 3
-                                        ? `/${currentLang}/${currentCountry}/${item.path}`
-                                        : "#"
-                                }
+                            <Button
                                 onClick={() => handleCardClick(item)}
                                 className="
                                 font-[Arial]
                 tracking-[-0.03em]
-                  mt-[23.69px]
+                  mt-[23.69px] cursor-pointer
                   bg-[#253238] text-white
                   text-[18px] font-bold
                   px-[15px] py-[15px]
@@ -134,7 +130,7 @@ const GrowthSteps = () => {
                 "
                             >
                                 {item.button}
-                            </Link>
+                            </Button>
                         </div>
                     ))}
                 </div>

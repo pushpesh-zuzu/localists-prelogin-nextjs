@@ -43,7 +43,7 @@ const PricingFAQ = () => {
       max-[480px]:px-[20px] max-[480px]:py-[30px]
     ">
             <H2 className="
-        text-center mb-[2rem]
+        text-center mb-[2rem] !leading-[34px]
         max-[480px]:mb-[10px]
       ">
                 Frequently asked{" "}

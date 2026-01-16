@@ -3,26 +3,74 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import { useState } from "react";
 import { showToast } from "@/utils/toaster";
+import { generateSlug } from "@/utils"
 import Image from "next/image";
 import { searchService, setService } from '@/lib/store/searchSlice';
 import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/navigation";
 import WrapperBGWidth from '../common/WrapperBGWidth/WrapperBGWidth';
+import { getBarkToken, getBarkUserData } from "@/utils/CookiesHelper";
+import BuyerRegistration from '../common/BuyerRegistration/BuyerRegistration';
+import {
+    getPopularServiceList,
+    setSelectedServiceId,
+} from "@/lib/store/findjobslice";
 
-const HeroSectionSellers = () => {
+const HeroSectionSellers = ({ onCustomContinue = null,
+}) => {
     const [selectedService, setSelectedService] = useState(null)
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
     const [input, setInput] = useState("")
+    const [showModal, setShowModal] = useState(false);
 
+    const router = useRouter();
     const dispatch = useDispatch();
     const { services, loading } = useSelector((state) => state.search)
 
     const divRef = useRef(null)
+
+    const handleClose = () => {
+        setShowModal(false);
+        setInput("");
+        setSelectedService(null);
+    };
+
+    useEffect(() => {
+        dispatch(getPopularServiceList());
+        return () => dispatch(setService([]));
+    }, [dispatch]);
 
     const handleContinue = () => {
         if (!selectedService) {
             showToast("error", "Please select a service from the suggestions.");
             return;
         }
+
+        if (getBarkToken()?.active_status === 1) {
+            showToast(
+                "error",
+                "You are already logged in, please switch to buyer to proceed."
+            );
+            return;
+        }
+
+        if (onCustomContinue) {
+            const shouldProceed = onCustomContinue({
+                selectedService,
+                input,
+            });
+            if (shouldProceed === false) return;
+        }
+
+        const slug = generateSlug(selectedService.name);
+        dispatch(setSelectedServiceId(selectedService.id));
+
+        router.push(
+            `/en/gb/sellers/create-account/${slug}`
+        );
+
+        dispatch(questionAnswerData({ service_id: selectedService.id }));
+        setShowModal(true);
     }
 
     const handleSelectService = useCallback(
@@ -137,6 +185,16 @@ const HeroSectionSellers = () => {
                     </div>
                 </div>
             </WrapperBGWidth>
+
+            {showModal &&
+                (getBarkUserData()?.active_status === 2 || !getBarkToken()) && (
+                    <BuyerRegistration
+                        closeModal={handleClose}
+                        serviceId={selectedService?.id}
+                        serviceName={selectedService?.name}
+                    />
+                )}
+
         </section>
     )
 }

@@ -49,11 +49,8 @@ const AllServiceLevel1 = ({ data }) => {
                         // const servicePath = `/${currentLang}/${currentCountry}${path}`;
 
                         return path ? (
-                            <Link
+                            <div
                                 key={idx}
-                                href={
-                                    "" // servicePath
-                                }
                                 className="
                   bg-[#e3f6fc]
                   px-[19px] py-[12px]
@@ -61,9 +58,8 @@ const AllServiceLevel1 = ({ data }) => {
                   text-center
                   text-black
                   cursor-pointer
-                " >
-                               <Paragraph2>{name}</Paragraph2>
-                            </Link>
+                " > <Paragraph2>{name}</Paragraph2>
+                            </div>
                         ) : (
                             <Paragraph2
                                 key={idx}

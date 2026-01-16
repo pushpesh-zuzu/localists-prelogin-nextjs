@@ -328,20 +328,26 @@ const Footer = () => {
         </div>
 
         <div className="bg-gray-100 border-t border-gray-200">
-          <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-center md:text-left">
               <p className="mx-auto text-[rgba(37, 50, 56, 1)] text-xs lg:text-[12px]">
-                © 2025 Localists. Terms & Conditions / Cookie policy /{" "}
-                <Link
-                  href="/privacy-policy"
-                  className="text-[#253238] hover:underline"
-                >
+                © 2026 Localists.{" "}
+                <Link href="/en/gb/terms" className="text-[#253238] hover:underline">
+                  Terms & Conditions
+                </Link>{" "}
+                /{" "}
+                <Link href="/en/gb/cookie-policy" className="text-[#253238] hover:underline">
+                  Cookie policy
+                </Link>{" "}
+                /{" "}
+                <Link href="/en/gb/privacy-policy" className="text-[#253238] hover:underline">
                   Privacy policy
                 </Link>
               </p>
             </div>
           </div>
         </div>
+
       </footer>
     </WrapperBGWidth>
   );
