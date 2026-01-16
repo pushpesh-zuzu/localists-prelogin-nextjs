@@ -145,7 +145,7 @@ const Footer = () => {
               <div className="flex gap-4">
                 {/* Facebook */}
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/localistsuk/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Facebook page"
@@ -163,7 +163,7 @@ const Footer = () => {
 
                 {/* Instagram */}
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/localists_official/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Instagram page"
@@ -181,7 +181,7 @@ const Footer = () => {
 
                 {/* LinkedIn */}
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/localistsuk/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit LinkedIn page"

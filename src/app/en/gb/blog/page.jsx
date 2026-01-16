@@ -16,9 +16,9 @@ export const metadata = {
     },
 
     alternates: {
-        canonical: "https://dev2.localistsbooster.com/en/gb/blog-archive",
+        canonical: "https://dev2.localistsbooster.com/en/gb/blog",
         languages: {
-            "en-GB": "https://dev2.localistsbooster.com/en/gb/blog-archive"
+            "en-GB": "https://dev2.localistsbooster.com/en/gb/blog"
         },
     },
 
