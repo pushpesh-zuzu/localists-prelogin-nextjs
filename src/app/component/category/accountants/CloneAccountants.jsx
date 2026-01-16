@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Image from "next/image";
 import {
     getPopularServiceList,
     searchService,
@@ -15,15 +16,12 @@ import {
     getCityName,
 } from "@/lib/store/buyerslice/buyerSlice";
 import H1 from "@/app/component/UI/Typography/H1";
-import Paragraph1 from "@/app/component/UI/Typography/Paragraph1";
 import GreenCheckIcon from "../../common/icons/GreenCheckIcon";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import BuyerRegistration from "../../common/BuyerRegistration/BuyerRegistration";
 import { showToast } from "@/utils/toaster";
-import Image from "next/image";
 import { getBarkToken, getBarkUserData } from "@/utils/CookiesHelper";
 import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-import Paragraph from "../../UI/Typography/Paragraph";
 
 
 const CloneAccountants = ({
@@ -36,6 +34,7 @@ const CloneAccountants = ({
     doYouNeetTitle = [],
     inputLable1 = "What service do you require?",
     inputLable2 = "Tell us where you need it?",
+    imageAlt
 }) => {
     const dispatch = useDispatch();
     const inputRef = useRef(null);
@@ -47,6 +46,9 @@ const CloneAccountants = ({
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [postalCodeValidate, setPostalCodeValidate] = useState(false);
     const [isCheckingPostcode, setIsCheckingPostcode] = useState(false);
+
+    const [postcodeError, setPostcodeError] = useState("");
+
 
     const { service, searchServiceLoader } = useSelector(
         (state) => state.findJobs
@@ -135,6 +137,7 @@ const CloneAccountants = ({
         const value = e.target.value.trim().slice(0, 10);
         setPincode(value);
         setPostalCodeValidate(false);
+        setPostcodeError("")
         // console.log("sssssssssssss", value)
         // setIsPostcodeSelected(false);
         // setIsPincodeFromDropdown(false);
@@ -149,6 +152,7 @@ const CloneAccountants = ({
 
             if (res?.data?.city) {
                 setPostalCodeValidate(true);
+                setPostcodeError("")
                 // setIsPostcodeSelected(true);
                 // setIsPincodeFromDropdown(true);
                 // setCity(res.data.city);
@@ -162,11 +166,13 @@ const CloneAccountants = ({
                 );
             } else {
                 setPostalCodeValidate(false);
-                showToast("error", "Please enter a valid postcode!");
+                // showToast("error", "Please enter a valid postcode!");
+                setPostcodeError("Please enter a valid postcode!")
             }
 
         } catch {
-            showToast("error", "Please enter a valid postcode!");
+            setPostalCodeValidate(false);
+            setPostcodeError("Please enter a valid postcode!")
         } finally {
             setIsCheckingPostcode(false);
         }
@@ -198,15 +204,21 @@ const CloneAccountants = ({
 
     return (
         <div
-            className="relative bg-cover bg-center bg-no-repeat
+            className="relative
     h-auto
     flex flex-col items-center justify-center
     py-[50.5px] px-[208px]
     max-[1280px]:px-[100px]
     max-[980px]:py-[45.5px] max-[980px]:px-[50px]
     max-[480px]:py-[20px] max-[480px]:px-[10px]"
-            style={{ backgroundImage: `url(${panelImage?.src})` }} >
-
+        >
+            {/* Background Image */}
+            <Image
+                src={panelImage}
+                alt={imageAlt}
+                fill
+                priority
+            />
             <CloseBrowserAbandon />
             <WrapperBGWidth>
                 <div className="relative flex flex-col items-center justify-center">
@@ -298,6 +310,11 @@ const CloneAccountants = ({
                                             </div>
                                         ) : (
                                             ""
+                                        )}
+                                        {postcodeError && (
+                                            <p className="mt-[6px] text-[14px] text-red-500 font-[Arial]">
+                                                {postcodeError}
+                                            </p>
                                         )}
                                     </div>
                                 </div>

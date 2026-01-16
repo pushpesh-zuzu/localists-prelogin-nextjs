@@ -1,9 +1,8 @@
 "use client";
 
-import Script from "next/script";
 import { usePathname } from "next/navigation";
 import BannerWithBreadCrum from "@/app/component/category/ServicesHeroSection/BannerWithBreadCrum";
-import Home from "../../../../../public/images/Banners/Home.jpg";
+import Home from "../../../../../public/images/Banners/Home.webp";
 import HowItWorks from "@/app/component/category/howItWorks/CloneHowitWorks";
 import {
     HowItWorksData,
@@ -14,7 +13,6 @@ import PopularCategories from "@/app/component/category/popularCategories/CloneP
 import AllServiceLevel1 from "@/app/component/category/allServices/AllServiceLevel1";
 import GetQuotes from "@/app/component/common/GetQuotes/GetQuote";
 import Footer from "@/app/component/Footer/Footer";
-
 
 const endpointCategoryMap = {
     "financial-and-accounting": ["Accounting", "Bookkeeping Services"],
@@ -35,7 +33,6 @@ const endpointCategoryMap = {
         "Gutter Cleaning",
     ],
 };
-
 
 export default function Page() {
     const pathname = usePathname();
@@ -61,6 +58,7 @@ export default function Page() {
             />
             <BannerWithBreadCrum
                 header={"Home & Garden"}
+                imageAlt={"Home"}
                 LevelOneTwoTitle={"Home & Garden"}
                 accountHeader="Home & Garden"
                 level={2}

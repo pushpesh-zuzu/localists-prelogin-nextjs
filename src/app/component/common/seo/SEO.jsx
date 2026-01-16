@@ -3,7 +3,10 @@
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 
-const BASE_URL = "https://www.localists.com";
+// const BASE_URL = "https://www.localists.com";
+
+const BASE_URL = "https://dev2.localistsbooster.com";
+
 
 export default function SEO({
   breadcrumb = [],

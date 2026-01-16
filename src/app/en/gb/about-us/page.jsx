@@ -35,6 +35,7 @@ export default function Page() {
                 conversion
             />
             <BannerWrapper
+                imageAlt={"About Us"}
                 headingText="About Us"
                 image={aboutUsBanner.src}
             />

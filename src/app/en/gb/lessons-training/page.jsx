@@ -23,6 +23,7 @@ export default function Page() {
                 conversion
             />
             <BannerWithBreadCrum
+                imageAlt={"Lessons & Training Services"}
                 accountHeader=" Lessons & Training Services"
                 level={2}
                 isNeedS={false}

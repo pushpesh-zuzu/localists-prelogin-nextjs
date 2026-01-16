@@ -21,8 +21,8 @@ function BannerWithBreadCrum({
   placeholderText,
   doYouNeetTitle,
   inputLable1,
-  inputLable2
-
+  inputLable2,
+  imageAlt
   
 }) {
   return (
@@ -39,6 +39,7 @@ function BannerWithBreadCrum({
           doYouNeetTitle={doYouNeetTitle}
           inputLable1={inputLable1}
           inputLable2={inputLable2}
+          imageAlt={imageAlt}
         />
       )}
 

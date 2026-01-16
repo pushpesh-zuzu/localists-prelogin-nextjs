@@ -16,17 +16,17 @@ export const metadata = {
         "Develop a skill, and get lessons in anything from driving to academics with trusted local tutors and trainers. Get your free quote now!",
 
     alternates: {
-        canonical: "https://www.localists.com/en/gb/lessons-training",
+        canonical: "https://www.localists.com/en/gb/transportation-services",
     },
 
     openGraph: {
         title: "Lessons & Training From Local Experts | Localists",
         description:
             "Develop a skill, and get lessons in anything from driving to academics with trusted local tutors and trainers.",
-        url: "https://www.localists.com/en/gb/lessons-training",
+        url: "https://www.localists.com/en/gb/transportation-services",
         images: [
             {
-                url: "https://www.localists.com/images/Banners/LessonsAndTraining.webp",
+                url: "https://dev2.localistsbooster.com/en/gb/component/level/banner/TransportBanner.webp",
                 width: 1200,
                 height: 630,
                 alt: "Lessons & Training From Local Experts",
@@ -37,7 +37,7 @@ export const metadata = {
     twitter: {
         card: "summary_large_image",
         images: [
-            "https://www.localists.com/images/Banners/LessonsAndTraining.webp",
+            "https://dev2.localistsbooster.com/en/gb/component/level/banner/TransportBanner.webp",
         ],
     },
 };
@@ -55,6 +55,7 @@ export default function Page() {
                 conversion
             />
             <BannerWithBreadCrum
+                imageAlt={"transport"}
                 accountHeader="Transportation Services"
                 level={2}
                 isNeedS={false}
@@ -80,7 +81,7 @@ export default function Page() {
                 data={[
                     {
                         name: "Airport Transfers",
-                        path: "/airport-transfers-near-me",
+                        path: "",
                     },
                 ]}
             />

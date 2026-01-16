@@ -39,7 +39,7 @@ const TransportPopularCategory = [
     id: 1,
     title: "Airport Transfers",
     image: AirportTransfers,
-    path: "airport-transfers-near-me",
+    path: "",
   },
 ];
 export { TransportHowItWork, TransportPopularCategory };

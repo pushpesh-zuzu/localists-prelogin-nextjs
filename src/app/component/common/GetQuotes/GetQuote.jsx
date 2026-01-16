@@ -1,15 +1,18 @@
+"use client"
+
 import React from "react";
 import Button from "../../UI/Typography/Button";
-import Paragraph1 from "../../UI/Typography/Paragraph1";
-import H2 from "../../UI/Typography/H2";
 import H3 from "../../UI/Typography/H3";
+import { handleScrollToBottom } from "@/utils/handleScrollToBottom";
+
 
 function GetQuote({ text = "Get Quotes", ctaText, needSString = true }) {
   return (
     <div className="flex flex-col items-center justify-center">
-      <Button className="max-w-fit xl:text-[38px] px-4.5 py-1 xl:px-7 cursor-pointer rounded-full bg-[#00afe3] text-white hover:bg-[#0096c4]">
-        {text}
-      </Button>
+        <Button onClick={() => {handleScrollToBottom()}} className="max-w-fit xl:text-[38px] px-4.5 py-1 xl:px-7 cursor-pointer rounded-full bg-[#00afe3] text-white hover:bg-[#0096c4]">
+          {text}
+        </Button>
+
 
       {ctaText && (
         <H3
