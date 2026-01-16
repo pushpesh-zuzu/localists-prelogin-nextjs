@@ -24,14 +24,6 @@ export const metadata = {
         url: "https://dev2.localistsbooster.com/en/gb/lessons-training",
         siteName: "Localists",
         type: "website",
-        images: [
-            {
-                url: "https://dev2.localistsbooster.com/en/gb/component/level/banner/LessonsAndTraining.webp",
-                width: 1200,
-                height: 630,
-                alt: "Lessons & Training Services",
-            },
-        ],
     },
 
     twitter: {

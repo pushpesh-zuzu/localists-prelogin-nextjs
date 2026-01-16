@@ -24,21 +24,13 @@ export const metadata = {
         description:
             "Find reliable transportation services near you. Get free quotes for removals, airport transfers, coach hire and more.",
         url: "https://www.localists.com/en/gb/transportation-services",
-        images: [
-            {
-                url: "https://dev2.localistsbooster.com/en/gb/component/level/banner/TransportBanner.webp",
-                width: 1200,
-                height: 630,
-                alt: "transport",
-            },
-        ],
     },
 
     twitter: {
         card: "summary_large_image",
-        images: [
-            "https://dev2.localistsbooster.com/en/gb/component/level/banner/TransportBanner.webp",
-        ],
+        title: "Transportation Services Near Me | Find Local Professionals - Localists",
+        description:
+            "Find reliable transportation services near you. Get free quotes for removals, airport transfers, coach hire and more.",
     },
 };
 

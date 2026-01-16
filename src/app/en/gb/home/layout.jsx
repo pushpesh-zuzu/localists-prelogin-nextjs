@@ -24,14 +24,6 @@ export const metadata = {
         url: "https://dev2.localistsbooster.com/en/gb/home",
         siteName: "Localists",
         type: "website",
-        images: [
-            {
-                url: "https://dev2.localistsbooster.com/images/Banners/Home.webp",
-                width: 1200,
-                height: 630,
-                alt: "Home",
-            },
-        ],
     },
 
     twitter: {

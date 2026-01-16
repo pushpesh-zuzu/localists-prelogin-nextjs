@@ -26,7 +26,7 @@ export const metadata = {
         title: "Blog – Latest Guides, Tips & Insights | Localists",
         description:
             "Explore the Localists blog for expert guides, helpful tips, cost advice and the latest insights on local services across the UK.",
-        url: "https://dev2.localistsbooster.com/en/gb/blog-archive",
+        url: "https://dev2.localistsbooster.com/en/gb/blog",
         siteName: "Localists",
         type: "website",
     },
