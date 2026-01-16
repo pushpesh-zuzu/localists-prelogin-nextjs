@@ -5,11 +5,6 @@ export const metadata = {
     description:
         "Develop a skill, and get lessons in anything from driving to academics with trusted local tutors and trainers. Get your free quote now!",
 
-    robots: {
-        index: false,
-        follow: false,
-    },
-
     alternates: {
         canonical: "https://dev2.localistsbooster.com/en/gb/lessons-training",
         languages: {

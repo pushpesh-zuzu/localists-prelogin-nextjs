@@ -5,10 +5,10 @@ export const metadata = {
     description:
         "Need help finding Home & Garden professionals, consultants, or expert local services near you? Get free quotes now at Localists. It's quick, easy & free.",
 
-    robots: {
-        index: false,
-        follow: false,
-    },
+    // robots: {
+    //     index: false,
+    //     follow: false,
+    // },
 
     alternates: {
         canonical: "https://dev2.localistsbooster.com/en/gb/home",
