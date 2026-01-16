@@ -24,11 +24,13 @@ export default function HireRelatedToServiceNearMe({
   const handleClick = (activtab) => {
     setcurrentTab(activtab);
   };
-  const tabs = [
-    { lable: "Popular Jobs", activtab: "popular" },
-    { lable: "Find Professionals", activtab: "professionals" },
-    { lable: "Advice & Insight", activtab: "insight" },
-  ];
+ const tabs = [
+  { lable: "Popular Jobs", activtab: "popular" },
+  { lable: "Find Professionals", activtab: "professionals" },
+  { lable: "Advice & Insight", activtab: "insight" },
+].filter(
+  (tab) => tabData?.[tab.activtab]?.length > 0
+);
   return (
     <WrapperBGWidth background={"#00AFE3"}>
       <div className="bg-[#00AFE3]  px-2.5 py-[30px] md:py-[50px] md:pl-16  xl:px-[120px] lg:py-[72px] w-full h-full">

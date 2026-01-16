@@ -2,24 +2,24 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "image",
     src: "/nearme/treesurgery.webp",
-    alt: "Tree Surgeon",
+    alt: "A tree surgeon climbing to the top of a tree with chainsaw in hand",
     marginBottom: true,
   },
   {
     type: "h2",
-    text: "How much does a tree surgeon cost?",
+    text: "How much does a tree surgeon cost",
   },
   {
     type: "p",
-    text: "The cost of hiring a tree surgeon depends on several factors, including the size and type of tree, the complexity of the job, and your location. Small pruning jobs for garden trees are generally less expensive.",
+    text: "The cost of hiring a tree surgeon depends on several factors, including the size and type of tree, the complexity of the job, and your location. Small pruning jobs for garden trees are generally less expensive. However, removing large or hazardous trees requires more time, equipment, and expertise, which increases the cost. Also, in terms of location, specialists in larger cities like Manchester or high-demand areas may charge more than those in rural regions.",
   },
   {
     type: "p",
-    text: "However, removing large or hazardous trees requires more time, equipment, and expertise, which increases the cost. Also, in terms of location, specialists in larger cities like Manchester or high-demand areas may charge more than those in rural regions.",
+    text: "Other considerations that can affect pricing include accessibility (how easy it is to reach the tree), whether stump removal is needed, and if the job requires special safety equipment or multiple hands on site.",
   },
   {
     type: "p",
-    text: "Other considerations that can affect pricing include accessibility (how easy it is to reach the tree), whether stump removal is needed, and if the job requires special safety equipment or multiple hands on site. At Localists, you don’t need to guess or spend hours searching for reliable tree surgeons. Simply submit your requirements and receive free quotes from qualified local experts to your inbox. You can then compare prices, experience, and availability, and see what fits your needs.",
+    text: "At Localists, you don’t need to guess or spend hours searching for reliable tree surgeons. Simply submit your requirements and receive free quotes from qualified local experts to your inbox. You can then compare prices, experience, and availability, and see what fits your needs.",
   },
   {
     type: "AveratePriceSection",
@@ -27,7 +27,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "image",
     src: "/nearme/sergeondo.webp",
-    alt: "Tree sergeon do",
+    alt: "a tree surgeon performing some crown reduction on a tree",
     marginBottom: true,
     // marginTop:true
   },
@@ -51,12 +51,12 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   { type: "pbold", text: "1. Tree health and safety checks" },
   {
     type: "p",
-    text: "Before any work begins, a tree surgeon assesses the overall health and stability of your trees. They’re trained to spot early signs of disease, pest infestations, cracks, or hidden rot that most of us would overlook.",
+    text: "Before any work begins, a tree surgeon assesses the overall health and stability of your trees. They’re trained to spot early signs of disease, pest infestations, cracks, or hidden rot that most of us would overlook. ",
   },
-  { type: "pbold", text: "2. Pruning, crown work & structural trimming " },
+  { type: "pbold", text: "2. Pruning, crown work & structural trimming" },
   {
     type: "p",
-    text: "Pruning isn’t just about making a tree look neat. It’s about keeping it healthy and safe. Tree surgeons handle this carefully, making precise cuts to support long-term growth and stability. Whether it’s reducing the crown to let in more light, lifting branches to clear space around buildings, or removing overgrowth, tree surgeons know how to balance a tree’s structure",
+    text: "Pruning isn’t just about making a tree look neat. It’s about keeping it healthy and safe. Tree surgeons handle this carefully, making precise cuts to support long-term growth and stability. Whether it’s reducing the crown to let in more light, lifting branches to clear space around buildings, or removing overgrowth, tree surgeons know how to balance a tree’s structure.",
   },
   { type: "PostCodeSection" },
   {
@@ -78,7 +78,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   },
   {
     type: "pbold",
-    text: "5. Planting & conservation",
+    text: "5.  Planting & conservation",
   },
   {
     type: "p",
@@ -109,48 +109,48 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "For planning applications, insurance, or legal compliance, a tree surgeon (or arborist) can provide formal surveys and written reports to assess safety, preservation needs, or risks.",
-    notMarginBottom:true
+    notMarginBottom: true,
   },
   {
     type: "image",
     src: "/nearme/surgeonPick.webp",
-    alt: "surgeonPick",
+    alt: "a tree surgeon hanging from a tree whilst pressing buttons on his chainsaw",
     marginTop: true,
     marginBottom: true,
   },
   {
     type: "h2",
-    text: "How do I pick the right tree surgeon?",
+    text: "How do I pick the right tree surgeon",
   },
   {
     type: "pbold",
     text: "When choosing a tree surgeon, it’s important to look beyond price and focus on their training, safety standards, and experience. You can look out for one or more of the following:",
-    className:"mb-[15px] md:mb-[25px] "
+    className: "mb-[15px] md:mb-[25px] ",
   },
   {
     type: "li",
-    text: "Insurance - This is also non-negotiable as it protects you and your property if something goes wrong.",
-    className:"mr-5"
+    text: "<strong>Insurance -</strong> This is also non-negotiable as it protects you and your property if something goes wrong.",
+    className: "mr-5",
   },
   {
     type: "li",
-    text: "Reviews - Check reviews and recommendations from past clients to see how reliable they are in practice.",
-    className:"mr-5"
+    text: "<strong>Reviews -</strong> Check reviews and recommendations from past clients to see how reliable they are in practice.",
+    className: "mr-5",
   },
   {
     type: "li",
-    text: "Transparency - A good tree surgeon will be transparent: they’ll explain the work clearly, provide a written quote, and answer your questions before starting.",
-    className:"mr-5"
+    text: "<strong>Transparency -</strong> A good tree surgeon will be transparent: they’ll explain the work clearly, provide a written quote, and answer your questions before starting.",
+    className: "mr-5",
   },
   {
     type: "li",
-    text: "Relevant experience - Having hands-on experience with the type of job you need is also a plus. Whether that’s caring for ornamental trees in your garden, managing large oaks on a commercial site, or maintaining multiple trees in public spaces.",
-    className:"mr-5"
+    text: "<strong>Relevant experience -</strong> Having hands-on experience with the type of job you need is also a plus. Whether that’s caring for ornamental trees in your garden, managing large oaks on a commercial site, or maintaining multiple trees in public spaces.",
+    className: "mr-5",
   },
   {
     type: "li",
-    text: "Professional bodies membership - Having a membership to organisations such as the Arboricultural Association often means they have to adhere to strict regulations and protocols.",
-    className:"mr-5"
+    text: `<strong>Professional bodies membership –</strong>  Having a membership to organisations such as the <a href='https://www.trees.org.uk/' target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>Arboricultural Association</a> often means they have to adhere to strict regulations and protocols.`,
+    className: "mr-5",
   },
 ];
 export const FREQUENTLY_DATA_TREE_SURGEON = {
@@ -168,22 +168,22 @@ export const FREQUENTLY_DATA_TREE_SURGEON = {
       key: "2",
       title: "When should you worry about a tree?",
       description: `
-      You should be concerned about a tree if you notice signs such as large dead branches, cracks in the trunk, leaning, root damage, fungus growth, or falling branches. These can indicate that the tree is unhealthy or unsafe and may pose a risk to people or property. A professional tree surgeon can assess the condition and advise on the necessary action.
+      You should start to worry about a tree if you notice signs that it might be unhealthy or unstable. Things like large cracks in the trunk, branches that look dead or brittle, fungus or mushrooms growing around the base, or the tree leaning more than usual are all red flags. Roots lifting pavings, or damaging walls can also be a concern.
+      <br /> <br />
+      Sometimes the warning signs aren’t that obvious though. For example, rot can be hidden inside the trunk. If you’re unsure, it’s always safer to have a professional tree removal expert take a look. They can quickly tell you whether the tree just needs some pruning, or if it’s a bigger issue that requires urgent action.
       `,
     },
     {
       key: "3",
       title: "What trees can be cut down without permission in the UK?",
       description: `
-      In the UK, you can usually cut down trees that are not protected by a Tree Preservation Order (TPO) and are not located within a conservation area. However, rules can vary by local council, so it’s always best to check with your local authority before carrying out any work to avoid fines or legal issues.
-      `,
+      Not all trees can be removed freely. If a tree is protected by a Tree Preservation Order (TPO) or is in a conservation area, you’ll need council permission before carrying out work. Cutting down or heavily pruning without approval could lead to hefty fines. If you’re unsure, a tree surgeon can check the status for you and guide you through the process.`,
     },
     {
       key: "4",
       title: "How much does it cost to reduce the height of a tree in the UK?",
       description: `
-      The cost of reducing the height of a tree depends on its size, location, and complexity of the job. On average, tree height reduction can range from a few hundred pounds to over a thousand pounds for large or difficult trees. Getting multiple quotes from qualified tree surgeons is the best way to find a fair price.
-      `,
+      Reducing a tree’s height (also called crown reduction) can cost anywhere between <strong>£150 and £500</strong>, depending on the size of the tree, how much needs to be reduced, and where you live. For example, reducing a very tall oak will cost more than trimming back a medium-sized birch. Tree surgeons usually visit first to assess and give a tailored quote.`,
     },
     {
       key: "5",
@@ -223,41 +223,28 @@ export const TREE_SRUGEON_ADVICEINSIGHT = [
 ];
 export const TREE_SURGEON_TABDATA = {
   professionals: [
-    "Tree Surgeons London",
-    "Tree Surgeons Burnley",
-    "Tree Surgeons Manchester",
-    "Tree Surgeons Wrexham",
-    "Tree Surgeons Wolverhampton",
-    "Tree Surgeons Birmingham",
-    "Tree Surgeons Rhyl",
-    "Tree Surgeons Snowdonia",
-    "Tree Surgeons Ayr",
-    "Tree Surgeons Bath",
-    "Tree Surgeons Cardiff",
-    "Tree Surgeons Birmingham",
-  ],
-  popular: [
-    "Tree Surgeons Chester",
+    "Tree Surgeons North Yorkshire",
     "Tree Surgeons Liverpool",
+    "Tree Surgeons Manchester",
+    "Tree Surgeons Chester",
     "Tree Surgeons Leeds",
     "Tree Surgeons York",
-    "Tree Surgeons Wolverhampton",
+    "Tree Surgeons Harrogate",
+    "Tree Surgeons Cheshire",
     "Tree Surgeons Hull",
-    "Tree Surgeons Wrexham",
-    "Tree Surgeons Creww",
+    "Tree Surgeons Stockport",
+    "Tree Surgeons Bolton",
   ],
+popular: [
+  "Landscapers Near Me",
+  "Gardeners Near Me",
+  "Fence and Gate Installation Near Me",
+  "Architects Near Me",
+  "Gutter Cleaners Near Me",
+  "Artificial Grass Installers Near Me",
+],
   insight: [
-    "Hiring Tips",
-    "Roofing Safety",
-    "Electrician Rates",
-    "Garden Design",
-    "Math Tutoring",
-    "Best Patio Materials",
-    "Interior Design",
-    "Home Renovation",
-    "Top Carpenters",
-    "Painting Techniques",
-    "DIY Gardening Hacks",
+    
   ],
 };
 export const VETTED_DATA_TREE_SURGEON = [
@@ -265,9 +252,7 @@ export const VETTED_DATA_TREE_SURGEON = [
         like they’ve had too many, or hedges with some boundary issues,
         Localists can help you find a local tree surgeon that can set things
         straight.`,
-  `From precise pruning, to safe removals. We’ll connect you with vetted
-        and verified tree surgeons near you, ensuring you have healthy trees,
-        safer spaces and peace of mind - without the hassle`,
+  `From precise pruning, to safe removals. We’ll connect you with vetted and verified tree surgeons near you, ensuring you have healthy trees, safer spaces and peace of mind - without the hassle.`,
 ];
 
 export const BREADCRUM_DATA_TREESURGEON = [
@@ -277,8 +262,8 @@ export const BREADCRUM_DATA_TREESURGEON = [
 
 export const POPULAR_SERVICES = [
   "Crown Reduction",
-  "Crown Thinking",
-  "Stumb Grindinng",
+  "Crown Thinning",
+  "Stump Grinding",
   "Tree Felling",
   "Tree Removal",
   "Stump Removal",

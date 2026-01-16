@@ -32,7 +32,6 @@ export const metadata = {
     "Find fully qualified tree surgeons near me. Certified and skilled arborists. Safe tree removal & pruning. Get free quotes from local experts in your area.",
 };
 
-
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
     <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
@@ -44,7 +43,6 @@ const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   ),
 });
 
-
 function TreeSurgeon() {
   return (
     <>
@@ -52,10 +50,10 @@ function TreeSurgeon() {
       <HeroSectionNearMe
         heading1="Find Tree Surgeons"
         heading2="Near You."
-        description="Find the best tree surgeons for your job, just enter your postcode and a few details for instant quotes."
+        description="Get free, no-obligation quotes from the highest quality tree surgeons in your area. Enter your postcode below, and give us a few details about your project - It takes under a minute!"
         bannerImage="/nearme/treeSurgeon.webp"
         bannerImageMobile="/nearme/treeSurgeon1.webp"
-        altText="Tree Surgeon"
+        altText="Tree Surgeon Hanging From a Tree trimming branches with a chainsaw"
       />
       <VettedSection
         paragraph={VETTED_DATA_TREE_SURGEON}

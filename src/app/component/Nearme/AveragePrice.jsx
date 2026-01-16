@@ -43,8 +43,7 @@ export default function AveragePrice() {
                   variant="primarySmall"
                   className="text-left lg:text-center max-w-[164px] lg:min-w-[264px]"
                 >
-                  For a medium stump removal (under 15 inch diameter), the
-                  average cost is
+                  For a medium stump removal under 15 inch diameter), the average cost is
                 </Paragraph>
                 <p className="text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left lg:text-center text-[#253238] mt-3">
                   £215
@@ -73,8 +72,7 @@ export default function AveragePrice() {
                   variant="primarySmall"
                   className="text-left lg:text-center max-w-[154px] lg:min-w-[264px]"
                 >
-                  For medium stump grinding (under 15 inch in diameter the
-                  average cost is)
+                  For medium stump grinding (under 15 inch in diameter), the average cost is
                 </Paragraph>
                 <p className="text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left lg:text-center text-[#253238] mt-3">
                   £115
@@ -94,7 +92,7 @@ export default function AveragePrice() {
         lg:text-[16px] lg:leading-[16px]
         lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[-0.03em]font-normal lg:font-bold"
           >
-            *Costs are estimates only, to get a more specific estimate, try our{" "}
+            *costs are estimates only, to get a more specific estimate try our{" "}
             <a href="#" className="underline font-normal text-[#00AFE3]">
               Tree Surgery Calculator
             </a>

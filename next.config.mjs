@@ -30,17 +30,19 @@ const nextConfig = {
 
   experimental: {
     optimizeCss: true,
+    optimizePackageImports: ["lucide-react", "date-fns"],
   },
 
   images: {
     formats: ["image/avif", "image/webp"],
-    deviceSizes: [320, 420, 768, 1024, 1200],
-    imageSizes: [16, 32, 48, 64, 96],
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [320, 420, 640, 750, 828, 1080, 1200],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+
     loader: "default",
-    qualities: [75, 85, 90],
+    qualities: [50, 75, 85, 90],
     minimumCacheTTL: 60,
   },
-
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
