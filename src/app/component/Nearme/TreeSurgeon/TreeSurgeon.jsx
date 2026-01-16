@@ -1,5 +1,5 @@
 import React from "react";
-import HeroSectionNearMe from "../HeroSectionNearMe";
+// import HeroSectionNearMe from "../HeroSectionNearMe";
 import PaddingWrapper from "../PaddingWrapper";
 import VettedSection from "../VettedSection";
 import AboutServicesAndQuestions from "../AboutServicesAndQuestions";
@@ -24,11 +24,27 @@ import HireRelatedToServiceNearMe from "../HireRelatedToServiceNearMe";
 import UserFeedbackNearMe from "../UserFeedbackNearMe";
 import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import AdviceInsightNearMe from "../AdviceInsightNearMe";
+import dynamic from "next/dynamic";
+
 export const metadata = {
   title: "Find Quality Tree Surgeons Near Me | Localists",
   description:
     "Find fully qualified tree surgeons near me. Certified and skilled arborists. Safe tree removal & pruning. Get free quotes from local experts in your area.",
 };
+
+
+const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
+  loading: () => (
+    <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
+      <div className="relative h-12 w-12">
+        <div className="absolute inset-0 rounded-full border-4 border-gray-200" />
+        <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-blue-600 animate-spin" />
+      </div>
+    </div>
+  ),
+});
+
+
 function TreeSurgeon() {
   return (
     <>
