@@ -23,10 +23,10 @@ export default function Header() {
   const router = useRouter()
   return (
     <header
-    className="w-full sticky top-0 left-0 border-b border-[#DEDEDE] bg-white z-50"
-    role="banner"
+      className="w-full sticky top-0 left-0 border-b border-[#DEDEDE] bg-white z-50"
+      role="banner"
     >
-        <WrapperBGWidth>
+      <WrapperBGWidth>
         <div className="hidden lg:flex justify-between items-center px-[11px] sm:pb-4 sm:pt-5 sm:px-6 md:px-[46.93] lg:px-12 xl:px-30 xl:pb-6 xl:pt-[18px] ">
           <div className="flex items-center space-x-4  md:space-x-[11px] lg:space-x-[21px] ">
             <a
@@ -183,6 +183,7 @@ export default function Header() {
                   <SearchIcon className="h-4 w-4 md:h-[18px] md:w-[18px] mr-0.5 md:mr-1" />
                 </button>
                 <button
+                  onClick={() => router.push("/en/gb/login")}
                   className="px-2.5 md:px-4 leading-4 py-[5.66px] text-[16px] font-medium text-white bg-[#00AEEF] rounded-full transition-colors duration-200"
                   aria-label="Login to your account"
                 >
@@ -192,7 +193,7 @@ export default function Header() {
             </>
           )}
         </div>
-    </WrapperBGWidth>
-      </header>
+      </WrapperBGWidth>
+    </header>
   );
 }

@@ -1,143 +1,261 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { useDispatch } from "react-redux";
-import { useRouter } from "next/navigation";
-import { setSelectedServiceId } from "@/lib/store/findjobslice";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
+import {
+  getPopularServiceList,
+  searchService,
+  setSelectedServiceId,
+  setService,
+} from "@/lib/store/findjobslice";
+import Link from "next/link";
+import { LoadingOutlined } from "@ant-design/icons";
+import { Spin } from "antd";
+import { generateSlug } from "@/utils";
+// import { extractAllParams } from "@/utils/decodeURLParams";
+import Image from "next/image";
+import hiring from "../../../../public/images/ServicePanel/hiring.svg";
+import rightArrow from "../../../../public/images/ServicePanel/rightArrow.svg";
+import H1 from "../UI/Typography/H1";
+import Paragraph2 from "../UI/Typography/Paragraph2";
 
-// Predefined service slugs
-const serviceRouteMap = {
-  49: "fence-gate-installation",
-  51: "driveway-installation",
-  52: "patio-laying",
-  54: "artificial-grass-installation",
-  43: "landscaping",
-  112: "tree-surgery",
-  53: "roofing",
-};
 
-// Example services list (replace with API call if needed)
-const popularServices = [
-  { id: 49, name: "Fence & Gate Installation" },
-  { id: 51, name: "Driveway Installation" },
-  { id: 52, name: "Patio Laying" },
-  { id: 54, name: "Artificial Grass Installation" },
-  { id: 43, name: "Landscaping" },
-  { id: 112, name: "Tree Surgery" },
-  { id: 53, name: "Roofing" },
-];
-
-const FindLocalJobs = ({ lang = "en", country = "gb" }) => {
-  const [input, setInput] = useState("");
-  const [selectedService, setSelectedService] = useState(null);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [filteredServices, setFilteredServices] = useState(popularServices);
-
+const FindLocalJobs = () => {
   const dispatch = useDispatch();
   const router = useRouter();
-  const divRef = useRef(null);
+  // const searchParams = useSearchParams();
+  const { lang, country } = useParams();
 
-  // Filter services based on input
+  const currentLang = lang || "en";
+  const currentCountry = country || "gb";
+
+  const [input, setInput] = useState("");
+  const [selectedService, setSelectedService] = useState(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const dropdownRef = useRef(null);
+  const debounceRef = useRef(null);
+
+  const {
+    popularList,
+    service,
+    popularLoader,
+    searchServiceLoader,
+  } = useSelector((state) => state.findJobs);
+
+  /* Fetch popular services */
   useEffect(() => {
-    if (input.trim() === "") setFilteredServices(popularServices);
-    else
-      setFilteredServices(
-        popularServices.filter((s) =>
-          s.name.toLowerCase().includes(input.toLowerCase())
-        )
-      );
-  }, [input]);
+    dispatch(getPopularServiceList());
+    return () => dispatch(setService([]));
+  }, [dispatch]);
 
-  // Close dropdown on outside click
+
+  /* Click outside */
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (divRef.current && !divRef.current.contains(e.target)) {
-        setDropdownOpen(false);
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsDropdownOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleSelectService = (service) => {
-    setSelectedService(service);
-    setInput(service.name);
-    setDropdownOpen(false);
+
+  /* Debounced search */
+  const triggerSearch = (value) => {
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => {
+      dispatch(searchService({ search: value.trim() }));
+    }, 250);
   };
 
-  const handleGetStarted = (service) => {
-    if (!service) return;
+  const handleSelectService = useCallback(
+    (item) => {
+      setInput(item.name);
+      setSelectedService(item);
+      setIsDropdownOpen(false);
+      setTimeout(() => dispatch(setService([])), 100);
+    },
+    [dispatch]
+  );
 
-    const slug = serviceRouteMap[service.id];
+  const handleGetStarted = () => {
+    if (!selectedService) return;
+    const slug = generateSlug(selectedService.name);
+
     if (!slug) {
       alert("Service route not defined!");
       return;
     }
 
-    dispatch(setSelectedServiceId(service.id));
-
-    router.push(`/${lang}/${country}/sellers/create-account/${slug}`);
+    dispatch(setSelectedServiceId(selectedService.id));
+    router.push(
+      `/${currentLang}/${currentCountry}/sellers/create-account/${slug}`
+    );
   };
 
   return (
-    <div className="max-w-4xl mx-auto mt-10 p-4">
-      <h1 className="text-2xl font-bold mb-4">
-        Connect with Clients Who Need You
-      </h1>
-      <div className="relative">
-        <input
-          type="text"
-          placeholder="What service do you provide?"
-          className="w-full max-w-[400px] border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          value={input}
-          onFocus={() => setDropdownOpen(true)}
-          onChange={(e) => {
-            setInput(e.target.value);
-            setSelectedService(null);
-            setDropdownOpen(true);
-          }}
-        />
 
-        {dropdownOpen && filteredServices.length > 0 && (
-          <div
-            ref={divRef}
-            className="absolute w-full bg-white border border-gray-300 rounded mt-1 z-10 max-h-60 overflow-y-auto"
+    <section className="bg-[#F9F9FA]
+    flex gap-[5%]
+    px-[88px]
+    pt-[40px]
+    pb-[15px]
+    max-[1200px]:flex-col
+    max-[980px]:px-[40px]
+    max-[980px]:pb-[60px]
+    max-[520px]:px-[26px]
+    max-[520px]:pb-[40px]
+    max-[380px]:px-[16px]">
+
+      {/* LEFT */}
+      <div className="w-full">
+        <H1 className="max-[480px]:-mt-[15px]">
+          Connect with Clients Who Need You Now
+        </H1>
+
+        <Paragraph2 className="font-bold mt-2 max-[480px]:mt-5">
+          Get matched with 1000s of local customers who need your services
+        </Paragraph2>
+
+        <style>{`
+                    .custom-placeholder::placeholder {
+                        color: #C8C8C8;
+                        opacity: 1; }
+                        `}</style>
+
+        {/* SEARCH */}
+        <div className=" relative 
+  mt-[50px] 
+  max-[480px]:mt-[20px]
+  mb-[40px] max-[480px]:mb-[25px]
+  w-fit max-[620px]:w-full">
+          <input
+            value={input}
+            placeholder="What service do you provide?"
+            onFocus={() => {
+              setIsDropdownOpen(true);
+              if (!input.trim()) dispatch(searchService({ search: "" }));
+            }}
+            onChange={(e) => {
+              setInput(e.target.value);
+              setIsDropdownOpen(true);
+              setSelectedService(null);
+              triggerSearch(e.target.value);
+            }}
+            className="w-[513px] max-[620px]:w-full
+      h-[50px] max-[480px]:h-[40px]
+      px-[18px] pr-[48px]
+      text-[16px] bg-[white]
+      shadow-[0px_0px_2px_0px_#00000033]
+      font-[Arial] tracking-[-0.03em]
+      border-b-2 border-[#D9D9D9] focus:border-[#00AFE3]
+      outline-none rounded-[10px]
+      placeholder:text-[#C8C8C8]" />
+
+          {/* DROPDOWN */}
+          {isDropdownOpen && service?.length > 0 && (
+            <div
+              ref={dropdownRef}
+              className="absolute w-full bg-white shadow-[0px_0px_2px_0px_#00000033] z-10"
+            >
+              {searchServiceLoader ? (
+                <div className="flex justify-center py-4">
+                  <Spin indicator={<LoadingOutlined spin />} />
+                </div>
+              ) : (
+                service.map((item) => (
+                  <p
+                    key={item.id}
+                    onClick={() => handleSelectService(item)}
+                    className="px-[18px] py-[12px] text-[16px] font-[Arial] tracking-[-0.03em] text-[#848484] cursor-pointer hover:bg-gray-100"
+                  >
+                    {item.name}
+                  </p>
+                ))
+              )}
+            </div>
+          )}
+
+          {/* BUTTON */}
+          <button
+            onClick={handleGetStarted}
+            className="absolute right-[7px] bottom-[7px] font-bold
+              bg-[#00AFE3] text-white font-[Arial] tracking-[-0.03em]
+              px-[20px] py-[5px] rounded-[3px]
+              hidden min-[481px]:block hover:bg-[#008cc0]"
           >
-            {filteredServices.map((service) => (
-              <div
-                key={service.id}
-                className="p-2 hover:bg-gray-100 cursor-pointer"
-                onClick={() => handleGetStarted(service)}
-              >
-                {service.name}
-              </div>
-            ))}
+            Get started
+          </button>
+
+          <button
+            onClick={handleGetStarted}
+            className="
+      absolute right-[10px] top-1/2 -translate-y-1/2
+      hidden max-[480px]:flex
+      w-[32px] h-[32px]
+      items-center justify-center
+      bg-[#00AFE3] rounded-full 
+    "
+          >
+            <Image
+              src={rightArrow}
+              alt="arrow"
+              className="w-[16px] h-[16px]"
+            />
+          </button>
+        </div>
+      </div>
+
+      {/* RIGHT */}
+      <div className="bg-white rounded-[15px] p-[20px] min-w-fit shadow-[0px_0px_4px_0px_#00000033] h-fit max-[768px]:h-auto">
+        <h2 className="text-[#00AFE3] font-Inter font-black
+        tracking-[-0.03em]
+        text-[30px] leading-[32px]
+        md:text-[35px] md:leading-[35px]
+        lg:text-[38px] lg:leading-[43px]">
+          Popular Services
+        </h2>
+
+        {popularLoader ? (
+          <div className="flex justify-center">
+            <Spin indicator={<LoadingOutlined spin />} />
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 gap-x-[35px]
+      gap-y-[13px]
+       mt-5 mb-3 max-[620px]:grid-cols-1">
+            {popularList?.map((item) => {
+              const slug = generateSlug(item.name);
+              return (
+                <Link
+                  key={item.id}
+                  href={`/${currentLang}/${currentCountry}/sellers/create-account/${slug}`}
+                  onClick={() => dispatch(setSelectedServiceId(item.id))}
+                  className="flex items-center gap-2"
+                >
+                  <Image
+                    src={item.category_icon ? `${item.baseurl}/${item.category_icon}` : hiring}
+                    alt={item.name}
+                    width={20}
+                    height={20}
+                  />
+                  <p className="font-[Arial]
+                      tracking-[-0.03em]
+                      leading-[24px]
+                    text-[#253238]
+                      text-[18px]       
+                      max-[768px]:text-[16px]
+                      max-[480px]:text-[14px] hover:text-[#00AFE3]">{item.name}</p>
+                </Link>
+              );
+            })}
           </div>
         )}
       </div>
-
-      <button
-        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-        onClick={handleGetStarted}
-      >
-        Get Started
-      </button>
-
-      <div className="mt-8">
-        <h2 className="text-xl font-semibold mb-2">Popular Services</h2>
-        <div className="flex flex-wrap gap-4">
-          {popularServices.map((service) => (
-            <button
-              key={service.id}
-              className="px-3 py-1 border rounded hover:bg-gray-100"
-              onClick={() => handleGetStarted(service)} // direct service pass
-            >
-              {service.name}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 

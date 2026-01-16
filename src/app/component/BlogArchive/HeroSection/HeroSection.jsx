@@ -42,7 +42,7 @@ const HeroSection = memo(function HeroSection() {
   return (
     <WrapperBGWidth background={"#00aeef"}>
       <section
-        className="flex flex-col lg:flex-row items-center gap-[30px] lg:gap-[116px] min-h-[543px] sm:min-h-[376px] xl:min-h-[330px] bg-[#00AEEF] px-[31px] pt-10 pb-5 md:px-[87px] md:pt-[38px] md:pb-6 xl:px-[163px] xl:py-[72px]"
+        className="flex flex-col lg:flex-row items-center gap-[30px] lg:gap-[116px] min-h-[543px] sm:min-h-[356px] xl:min-h-[330px] bg-[#00AEEF] px-[31px] pt-10 pb-5 md:px-[87px] md:pt-[38px] md:pb-6 xl:px-[153px] xl:py-[30px] xl:pb-[62px]"
         role="banner"
         aria-label="Hero section"
       >
@@ -73,7 +73,7 @@ const HeroSection = memo(function HeroSection() {
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center items-start h-full">
+       <div className="w-full lg:w-1/2 flex flex-col justify-center items-start -mt-[30px] lg:mt-0">
           <HeroSectionSearch />
 
           {/* SPACE BETWEEN SEARCH & SERVICES */}

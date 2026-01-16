@@ -12,7 +12,6 @@ const RadioButton = ({
       htmlFor={id}
       className="
         flex items-center gap-2
-        border border-[#dedede]
         p-[10px]
         rounded-[3px]
         cursor-pointer
@@ -29,7 +28,7 @@ const RadioButton = ({
         onChange={onChange}
         className={`
           shrink-0
-          ${type === "checkbox" ? "mt-[3px]" : "mt-0"}
+          ${type === "checkbox" ? "mt-0" : "mt-0"}
         `}
       />
 

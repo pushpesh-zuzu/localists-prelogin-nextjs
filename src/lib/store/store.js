@@ -4,6 +4,8 @@ import searchReducer from "./searchSlice.js";
 import buyerReducer from "./buyerslice/buyerSlice.js";
 import findJobsReducer from "./findjobslice.js";
 import companyReducer from "./companyJobSlice.js";
+import authReducer from "./Auth/authSlice";
+
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +13,7 @@ export const store = configureStore({
     buyer: buyerReducer,
     findJobs: findJobsReducer,
     companyLook: companyReducer,
+    auth: authReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
