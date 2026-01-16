@@ -5,6 +5,7 @@ import WithoutSpecialCardCarousel from "../Carousel/WithoutSpecialCardCarousel";
 import UserFeedbackCard from "../Home/UserFeedback/UserFeedbackCard";
 import Button from "../UI/Typography/Button";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
+import { handleScrollToBottom } from "@/utils/scroll";
 
 function UserFeedbackNearMe({feedbackData=[]}) {
 
@@ -22,7 +23,7 @@ function UserFeedbackNearMe({feedbackData=[]}) {
           />
         </div>
         <div className="flex justify-center">
-          <Button className="px-4.5 py-2 xl:py-3 xl:px-7 mt-8 xl:mt-12 rounded-full bg-[#253238] text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+          <Button onClick={()=>{handleScrollToBottom()}} className="cursor-pointer px-4.5 py-2 xl:py-3 xl:px-7 mt-8 xl:mt-12 rounded-full bg-[#253238] text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
             Get your Quote
           </Button>
         </div>

@@ -1,3 +1,5 @@
+'use client'
+import { handleScrollToBottom } from "@/utils/scroll";
 import HowItWorksCard from "../common/HowItWorkCard";
 import HowItWorkCompareIcon from "../common/icons/HomePageIcons/HowItWorkCompareIcon";
 import HowItWorkIconPencingIcon from "../common/icons/HomePageIcons/HowItWorkIconPencingIcon";
@@ -42,7 +44,7 @@ function HowItWorkNearMe() {
           />
         </div>
         <div className="flex justify-center">
-          <Button className="rounded-[94px] max-w-fit bg-[#10C87B] text-white mt-[30px] px-4 py-2 lg:mt-12 md:py-1.5 md:px-4.5 lg:py-2 lg:px-8 ">
+          <Button onClick={()=>{handleScrollToBottom()}} className="cursor-pointer rounded-[94px] max-w-fit bg-[#10C87B] text-white mt-[30px] px-4 py-2 lg:mt-12 md:py-1.5 md:px-4.5 lg:py-2 lg:px-8 ">
             Get Started
           </Button>
         </div>

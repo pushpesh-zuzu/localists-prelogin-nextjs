@@ -271,7 +271,6 @@ function ServiceDetailsStep({
 
         {formData.is_company_website === 1 && (
           <Input
-            label="Website address (optional)"
             name="company_website"
             placeholder="Website address (optional)"
                   value={

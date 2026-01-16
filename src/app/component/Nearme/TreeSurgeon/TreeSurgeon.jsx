@@ -49,7 +49,7 @@ function TreeSurgeon() {
       <CloseBrowserAbandon />
       <HeroSectionNearMe
         heading1="Find Tree Surgeons"
-        heading2="Near You."
+        heading2="Near You"
         description="Get free, no-obligation quotes from the highest quality tree surgeons in your area. Enter your postcode below, and give us a few details about your project - It takes under a minute!"
         bannerImage="/nearme/treeSurgeon.webp"
         bannerImageMobile="/nearme/treeSurgeon1.webp"
@@ -58,7 +58,7 @@ function TreeSurgeon() {
       <VettedSection
         paragraph={VETTED_DATA_TREE_SURGEON}
         vettedHeading1="Vetted tree surgeons you can"
-        vettedHeading2="trust."
+        vettedHeading2="trust"
         breadcrumb={BREADCRUM_DATA_TREESURGEON}
       />
       <PopularJobNearMe services={POPULAR_SERVICES} />
