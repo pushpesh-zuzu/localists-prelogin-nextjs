@@ -17,9 +17,9 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.localists.com/how-it-works-for-customers",
+    canonical: "https://dev2.localistsbooster.com/en/gb/how-it-works-for-customers",
     languages: {
-      "en-GB": "https://www.localists.com/en/gb/how-it-works-for-customers"
+      "en-GB": "https://dev2.localistsbooster.com/en/gb/how-it-works-for-customers"
     },
   },
 

@@ -21,9 +21,9 @@ export const metadata = {
     },
 
     alternates: {
-        canonical: "https://www.localists.com/transportation-services",
+        canonical: "https://dev2.localistsbooster.com/en/gb/transportation-services",
         languages: {
-            "en-GB": "https://www.localists.com/en/gb/transportation-services"
+            "en-GB": "https://dev2.localistsbooster.com/en/gb/transportation-services"
         },
     },
 
@@ -31,7 +31,7 @@ export const metadata = {
         title: "Transportation Services Near Me | Find Local Professionals - Localists",
         description:
             "Find reliable transportation services near you. Get free quotes for removals, airport transfers, coach hire and more.",
-        url: "https://www.localists.com/en/gb/transportation-services",
+        url: "https://dev2.localistsbooster.com/en/gb/transportation-services",
         siteName: "Localists",
         type: "website",
     },

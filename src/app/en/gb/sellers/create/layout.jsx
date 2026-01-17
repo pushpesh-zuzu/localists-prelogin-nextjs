@@ -6,9 +6,9 @@ export const metadata = {
     "Join Localists free as a professional. Get verified leads with no hidden fees. Pay only for the customers you want and keep all your earnings.",
 
   alternates: {
-    canonical: "https://www.localists.com/sellers-create",
+    canonical: "https://dev2.localistsbooster.com/en/gb/sellers-create",
     languages: {
-      "en-GB": "https://www.localists.com/en/gb/sellers-create"
+      "en-GB": "https://dev2.localistsbooster.com/en/gb/sellers-create"
     },
   },
 
@@ -24,7 +24,7 @@ export const metadata = {
     title: "Join Localists for Professionals | Free Sign-Up",
     description:
       "Join Localists free as a professional. Get verified leads with no hidden fees. Pay only for the customers you want and keep all your earnings.",
-    url: "https://www.localists.com/en/gb/sellers-create",
+    url: "https://dev2.localistsbooster.com/en/gb/sellers-create",
     siteName: "Localists",
     type: "website",
   },
