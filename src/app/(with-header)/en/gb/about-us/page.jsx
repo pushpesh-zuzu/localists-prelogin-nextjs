@@ -1,5 +1,5 @@
 import BannerWrapper from "@/app/component/common/bannerWrapper/BannerWrapper";
-import { aboutUsBanner } from "../../../../../public/images/MainBanners";
+import { aboutUsBanner } from "../../../../../../public/images/MainBanners";
 import SEO from "@/app/component/common/seo/SEO";
 import WhoWeAre from "@/app/component/AboutUs/WhoWeAre";
 import GetInTouchButton from "@/app/component/AboutUs/GetInTouch";
@@ -35,7 +35,7 @@ export default function Page() {
     return (
         <main className="bg-white">
             <SEO
-                bannerImage={aboutUsBanner}
+                bannerImage="./images/MainBanners"
                 breadcrumb={[
                     { title: "About Us", path: "/en/gb/about-us" },
                 ]}

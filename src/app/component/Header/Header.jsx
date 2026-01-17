@@ -131,10 +131,11 @@ export default function Header() {
                   Login
                 </button>
                 <button
-                  className="flex items-center gap-2 px-2.5 py-1.5 lg:px-5 lg:py-3 text-[14px] lg:text-base text-white bg-[#00AEEF] rounded-full whitespace-nowrap"
+                  className="flex items-center cursor-pointer font-bold gap-2 px-2.5 py-1.5 lg:px-5 lg:py-3 text-[14px] lg:text-[16px] text-white bg-[#00AEEF] rounded-full whitespace-nowrap"
                   aria-label="Sign up for new account"
+                  onClick={() => { router.push('/en/gb/sellers/create') }}
                 >
-                  <Image
+                  {/* <Image
                     src="/icons/signup.webp"
                     alt="signup icon"
                     width={16.71}
@@ -143,8 +144,8 @@ export default function Header() {
                     priority
                     fetchPriority="high"
                     loading="eager"
-                  />
-                  Sign Up
+                  /> */}
+                  Join as a Professional
                 </button>
               </div>
             </nav>

@@ -1,7 +1,7 @@
 "use client";
 
 import BannerWithBreadCrum from "@/app/component/category/ServicesHeroSection/BannerWithBreadCrum";
-import LessonsAndTraining from "../../../component/level1/banner/LessonsAndTraining.webp";
+import LessonsAndTraining from "@/app/component/level1/banner/LessonsAndTraining.webp";
 import {
     LessionAndTrainingHowItWork, LessionAndTrainingPopularCategory
 } from "@/constants/lessonAndTrainingData";

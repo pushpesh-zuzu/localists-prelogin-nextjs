@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import BannerWithBreadCrum from "@/app/component/category/ServicesHeroSection/BannerWithBreadCrum";
-import Home from "../../../../../public/images/Banners/Home.webp";
+import Home from "../../../../../../public/images/Banners/Home.webp";
 import HowItWorks from "@/app/component/category/howItWorks/CloneHowitWorks";
 import {
     HowItWorksData,

@@ -1,5 +1,5 @@
 import BannerWithBreadCrum from "@/app/component/category/ServicesHeroSection/BannerWithBreadCrum";
-import TransportBanner from "../../../component/level1/banner/TransportBanner.webp";
+import TransportBanner from "@/app/component/level1/banner/TransportBanner.webp";
 import {
     TransportHowItWork, TransportPopularCategory
 } from "@/constants/transportData";

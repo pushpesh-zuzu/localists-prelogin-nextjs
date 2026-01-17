@@ -89,9 +89,9 @@ export default function IndustryInsights() {
     mt-10
   "
                 >
-                    {insights.map((item) => (
+                    {insights.map((item, index) => (
                         <button
-                            key={item}
+                            key={index}
                             className="
         border xl:border-2 border-white
         hover:border-[#B4EEFF]
