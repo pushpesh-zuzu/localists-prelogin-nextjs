@@ -9,6 +9,7 @@ import Member from "./component/Home/Member/Member";
 import AdviceInsight from "./component/Home/AdviceInsight/AdviceInsight";
 import { articles, feedbackData, tabData } from "@/constants/homepageData";
 import CloseBrowserAbandon from "./component/common/CloseBrowserAbandon/CloseBrowserAbandon";
+import Header from "./component/Header/Header";
 
 export const metadata = {
   title: "Localists.com: Find Trusted Local Services and Professionals",
@@ -20,6 +21,7 @@ export default function Home() {
   return (
     <main className="bg-white">
       <CloseBrowserAbandon />
+      <Header/>
       <HeroSection />
       <PopularCard />
       <HowItWork />
