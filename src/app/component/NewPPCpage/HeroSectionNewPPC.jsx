@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import H1 from "@/app/component/UI/Typography/H1";
@@ -80,9 +80,12 @@ export default function HeroSectionNewPPC({
             {localRequestId === null && (
                 <>
                     {typeof window !== "undefined" && window.innerWidth > 768 ? (
-                        <NavigationDetectorDesktop />
-                    ) : (
-                        <NavigationDetectorWithConfirmations />
+                        <Suspense fallback={null}>
+                            <NavigationDetectorDesktop />
+                        </Suspense>) : (
+                        <Suspense fallback={null}>
+                            <NavigationDetectorWithConfirmations />
+                        </Suspense>
                     )}
                 </>
             )}
@@ -165,14 +168,16 @@ export default function HeroSectionNewPPC({
                 )}
 
                 {buyerStep === 2 && (
-                    <QuestionModalNewPPC
-                        questions={questionanswerData}
-                        loading={questionLoader}
-                        serviceName={buyerRequest.service_name}
-                        nextStep={nextStep}
-                        setLocalRequestId={setLocalRequestId}
-                        description={questionDescription}
-                    />
+                    <Suspense fallback={null}>
+                        <QuestionModalNewPPC
+                            questions={questionanswerData}
+                            loading={questionLoader}
+                            serviceName={buyerRequest.service_name}
+                            nextStep={nextStep}
+                            setLocalRequestId={setLocalRequestId}
+                            description={questionDescription}
+                        />
+                    </Suspense>
                 )}
 
                 {buyerStep === 3 && reEnterMobile === 2 && (
