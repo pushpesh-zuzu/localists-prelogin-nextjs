@@ -25,13 +25,14 @@ const inter = Inter({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased`} suppressHydrationWarning
+      >
         <StoreProvider>
           {/* <Header /> */}
           {children}
           {/* <TrackingScripts />
               <NoscriptTags /> */}
-              <ToastProvider />
+          <ToastProvider />
         </StoreProvider>
       </body>
     </html>
