@@ -284,10 +284,8 @@ const MultiStepFormDriveways = ({ isQuestionWithImage = false }) => {
               </div>
             </div>
 
-            {/* Commented out sections as requested */}
             <div ref={sectionsStartRef}>
               <HowItWorkNewPPC  />
-              <div>{null}</div>
             </div>
             {/* <CookieConsent /> */}
             <div className="mb-20 sm:mb-20">
