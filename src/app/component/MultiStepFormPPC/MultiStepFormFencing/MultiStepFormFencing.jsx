@@ -192,7 +192,7 @@ const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
                   {buyerStep === 2 && (
                     <div className="" style={{ margin: "auto" }}>
                       <PostSearchMultiStepFence
-                          getProgressPercentage={getProgressPercentage}
+                        getProgressPercentage={getProgressPercentage}
                         prevStep={prevStep}
                         onNext={nextStep}
                         backButtonTriggered={backButtonTriggered}
@@ -228,7 +228,7 @@ const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
                   {buyerStep === 5 && (
                     <div style={{ maxWidth: "592px", margin: "auto" }}>
                       <PhoneNumberMultiStepForm
-                       nextStep={nextStep}
+                        nextStep={nextStep}
                         onBack={prevStep}
                         updateNumberStep={updateNumberStep}
                         setUpdateNumberStep={setUpdateNumberStep}
