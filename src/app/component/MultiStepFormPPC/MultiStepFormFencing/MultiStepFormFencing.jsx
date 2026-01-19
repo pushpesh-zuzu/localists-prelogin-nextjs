@@ -19,8 +19,6 @@ import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAb
 import QuestionAnswerMultiStepFence2 from "./QuestionAnswerMultiStepFence2";
 import QuestionAnswerMultiStepFence from "./QuestionAnswerMultiStepFence";
 import PostSearchMultiStepFence from "./PostSearchMultiStepFence";
-import HowItWorkNewPPC from "../../NewPPCpage/HowItWorkNewPPC";
-import Logo from "../../../../../public/ReactIcons/Logo";
 
 const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
   const dispatch = useDispatch();
@@ -160,9 +158,9 @@ const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
       <FloatingButtonWrapper>
         {(heroRef, sectionsStartRef) => (
           <>
-           <div className="h-9 w-48 mt-6 ml-[2%] lg:h-7 lg:w-32 md:h-5 md:w-[120px] xl:w-[195px] xl:h-[38px] md:mt-6">
-              <Logo className="w-[120px] h-[20px]  md:w-[125px] md:h-[28px] lg:w-[195px] lg:h-[38px]" />
-            </div>
+            {/* <div className="h-9 w-48 mt-6 ml-[2%] lg:h-7 lg:w-32 md:h-5 md:w-[120px] md:mt-4">
+              <Logo />
+            </div> */}
 
             <div
               className="w-[90%] mx-auto my-5 lg:w-3/5 md:w-4/5 md:my-2.5 sm:w-[90%] sm:my-2.5"
@@ -263,8 +261,10 @@ const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
               </div>
             </div>
 
+            {/* Commented out sections as requested */}
             <div ref={sectionsStartRef}>
-              <HowItWorkNewPPC />
+              {/* <HowItWorkNewPPC  /> */}
+              <div>{null}</div>
             </div>
             {/* <CookieConsent /> */}
             <div className="mb-20 sm:mb-20">
