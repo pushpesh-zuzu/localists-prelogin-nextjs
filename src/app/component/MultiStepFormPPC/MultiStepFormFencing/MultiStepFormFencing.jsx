@@ -19,6 +19,7 @@ import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAb
 import QuestionAnswerMultiStepFence2 from "./QuestionAnswerMultiStepFence2";
 import QuestionAnswerMultiStepFence from "./QuestionAnswerMultiStepFence";
 import PostSearchMultiStepFence from "./PostSearchMultiStepFence";
+import HowItWorkNewPPC from "../../NewPPCpage/HowItWorkNewPPC";
 
 const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
   const dispatch = useDispatch();
@@ -263,8 +264,7 @@ const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
 
             {/* Commented out sections as requested */}
             <div ref={sectionsStartRef}>
-              {/* <HowItWorkNewPPC  /> */}
-              <div>{null}</div>
+              <HowItWorkNewPPC  />
             </div>
             {/* <CookieConsent /> */}
             <div className="mb-20 sm:mb-20">
