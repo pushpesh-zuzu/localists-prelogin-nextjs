@@ -36,9 +36,9 @@ import StepEdgingGardeningIcon from "../../../../../../public/ReactIcons/StepEdg
 import DrainageAndLandIcon from "../../../../../../public/ReactIcons/DrainageAndLandIcon";
 import RetailWallIcon from "../../../../../../public/ReactIcons/RetailWallIcon";
 import VotedProfessionIcon from "../../../../../../public/ReactIcons/VotedProfessionIcon";
-import FloatingButtonWrapper from "@/app/component/NewPPCpage/FloatingButtonWrapper";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import SEO from '@/app/component/common/seo/SEO';
+import FloatingButtonWrapper from '@/app/component/common/FloatingButton.jsx/FloatingButtonWrapper';
 
 
 

@@ -23,9 +23,9 @@ import CuttingToolIcon from '../../../../../../public/ReactIcons/CuttingToolIcon
 import GuaranteedWorkIcon from '../../../../../../public/ReactIcons/GuaranteedWorkIcon';
 import CompetitivePricingIcon from "../../../../../../public/ReactIcons/CompetitivePricingIcon";
 import QuicAlarmIcon from "../../../../../../public/ReactIcons/QuicAlarmIcon";
-import FloatingButtonWrapper from "@/app/component/NewPPCpage/FloatingButtonWrapper";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import SEO from '@/app/component/common/seo/SEO';
+import FloatingButtonWrapper from '@/app/component/common/FloatingButton.jsx/FloatingButtonWrapper';
 
 export const NEW_PPC_POPULUAR_SERVICE_TYPE = [
     {
