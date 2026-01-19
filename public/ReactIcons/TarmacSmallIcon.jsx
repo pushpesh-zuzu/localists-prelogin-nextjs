@@ -22,7 +22,7 @@ function TarmacSmallIcon({ className = "" }) {
           d="M15.0312 5.57031L15.0312 17.2554L15.0312 28.9406"
           stroke="white"
           strokeWidth="2.24247"
-          stroke-dasharray="2.8 2.8"
+          strokeDasharray="2.8 2.8"
         />
       </g>
       <defs>
