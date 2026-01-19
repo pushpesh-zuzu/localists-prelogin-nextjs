@@ -4,6 +4,7 @@ import IndustryInsights from "@/app/component/BlogArchive/IndustryInsights";
 import CloseBrowserAbandon from "@/app/component/common/CloseBrowserAbandon/CloseBrowserAbandon";
 import DiscoverServices from "@/app/component/BlogArchive/DiscoverServices";
 import Footer from "@/app/component/Footer/Footer";
+import SEO from "@/app/component/common/seo/SEO";
 
 
 export const metadata = {
@@ -16,7 +17,7 @@ export const metadata = {
     },
 
     alternates: {
-        canonical: "https://dev2.localistsbooster.com/en/gb/blog",
+        // canonical: "https://dev2.localistsbooster.com/en/gb/blog",
         languages: {
             "en-GB": "https://dev2.localistsbooster.com/en/gb/blog"
         },
@@ -42,6 +43,7 @@ export const metadata = {
 export default function Page() {
     return (
         <main className="bg-white">
+            <SEO conversion />
             <CloseBrowserAbandon />
             <HeroSection />
             <BlogGridSection />

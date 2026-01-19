@@ -2,17 +2,23 @@ import {
   PhysicsMathsSlider,
   TutorsServiceSlider,
 } from "@/app/component/level3/imagesServices";
-import {
-  BusinessProfessionalsIcon,
-  FreeQuotesIcon,
-  WhatYouNeedIcon,
-} from "@/app/component/level1/images";
+// import {
+//   BusinessProfessionalsIcon,
+//   FreeQuotesIcon,
+//   WhatYouNeedIcon,
+// } from "@/app/component/level1/images";
+import SearchUserIcon from "../../public/ReactIcons/SearchUserIcon";
+import CheckDocumentIcon from "../../public/ReactIcons/CheckDocumentIcon";
+import SecureHandshakeIcon from "../../public/ReactIcons/SecureHandshakeIcon";
+
+
+
 
 const LessionAndTrainingHowItWork = [
   {
     id: 1,
     title: "the Best Match",
-    image: WhatYouNeedIcon, // Same icon as business
+    icon: SearchUserIcon,
     heading1: "Find the ",
     heading2: "best match",
     description:
@@ -21,7 +27,7 @@ const LessionAndTrainingHowItWork = [
   {
     id: 2,
     title: "Free Quotes",
-    image: FreeQuotesIcon, // Same icon as business
+    icon: CheckDocumentIcon,
     heading1: "Request ",
     heading2: "free quotes",
     description:
@@ -30,7 +36,7 @@ const LessionAndTrainingHowItWork = [
   {
     id: 3,
     title: "Start Your Training ",
-    image: BusinessProfessionalsIcon, // Same icon as business
+    icon: SecureHandshakeIcon,
     heading1: "Start your  ",
     heading2: "training ",
     description:

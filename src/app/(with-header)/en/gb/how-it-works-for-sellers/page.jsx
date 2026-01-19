@@ -4,6 +4,7 @@ import HeroSectionSellers from '@/app/component/HowItWorksSellers/HeroSectionSel
 import HowItWorksDetail from '@/app/component/HowItWorksSellers/HowItWorksDetail';
 import RegisterNow from '@/app/component/HowItWorks/RegisterNow/RegisterNow';
 import WrapperBGWidth from '@/app/component/common/WrapperBGWidth/WrapperBGWidth';
+import SEO from '@/app/component/common/seo/SEO';
 
 export const metadata = {
   title: "How It Works for Professionals & Businesses - Localists",
@@ -15,7 +16,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.localists.com/how-it-works-for-sellers",
+    // canonical: "https://www.localists.com/how-it-works-for-sellers",
     languages: {
       "en-GB": "https://www.localists.com/en/gb/how-it-works-for-sellers"
     },
@@ -41,6 +42,7 @@ export const metadata = {
 const page = () => {
   return (
     <main>
+      <SEO conversion />
       <HeroSectionSellers />
       <WrapperBGWidth>
         <HowItWorksDetail />

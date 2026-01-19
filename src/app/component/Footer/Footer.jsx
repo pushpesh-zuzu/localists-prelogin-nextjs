@@ -149,10 +149,10 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Facebook page"
-                  className="block w-[35px] h-[35px]"
+                  className="block w-[35px] h-[35px] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-md"
                 >
                   <Image
-                    src={"/facebook.svg"}
+                    src="/facebook.svg"
                     alt="Facebook Icon"
                     width={35}
                     height={35}
@@ -167,11 +167,29 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Instagram page"
-                  className="block w-[35px] h-[35px]"
+                  className="block w-[35px] h-[35px] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-md"
                 >
                   <Image
-                    src={"/Xsocialicon.png"}
-                    alt="Xsocialicon.png"
+                    src="/instagram.svg"
+                    alt="Instagram Icon"
+                    width={35}
+                    height={35}
+                    className="rounded-full object-cover"
+                    priority
+                  />
+                </a>
+
+                {/* X (Twitter) */}
+                <a
+                  href="https://x.com/LocalistsUK"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit X page"
+                  className="block w-[35px] h-[35px] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-md"
+                >
+                  <Image
+                    src="/Xsocialicon.png"
+                    alt="X Icon"
                     width={35}
                     height={35}
                     className="rounded-full object-cover"
@@ -185,10 +203,10 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit LinkedIn page"
-                  className="block w-[35px] h-[35px]"
+                  className="block w-[35px] h-[35px] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-md"
                 >
                   <Image
-                    src={"/linkedinsocialicon.png"}
+                    src="/linkedinsocialicon.png"
                     alt="LinkedIn Icon"
                     width={35}
                     height={35}
@@ -197,7 +215,6 @@ const Footer = () => {
                   />
                 </a>
               </div>
-
               <CountryDropdown />
             </div>
 
@@ -232,7 +249,7 @@ const Footer = () => {
                       How it works
                     </Link>
                     <Link
-                      href="/login"
+                      href="en/gb/login"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       Login
@@ -296,7 +313,7 @@ const Footer = () => {
                 {openSections.about && (
                   <div className="mt-3 space-y-2 pl-4">
                     <Link
-                      href="/about-us"
+                      href="/en/gb/about-us"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       About Localists
@@ -331,9 +348,23 @@ const Footer = () => {
           <div className="mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-center md:text-left">
               <p className="mx-auto text-[rgba(37, 50, 56, 1)] text-xs lg:text-[12px]">
-                © 2026 Localists. Terms & Conditions / Cookie policy /{" "}
+                © 2026 Localists.{" "}
                 <Link
-                  href="/privacy-policy"
+                  href="/en/gb/terms"
+                  className="text-[#253238] hover:underline"
+                >
+                  Terms & Conditions
+                </Link>{" "}
+                /{" "}
+                <Link
+                  href="/en/gb/cookie-policy"
+                  className="text-[#253238] hover:underline"
+                >
+                  Cookie policy
+                </Link>{" "}
+                /{" "}
+                <Link
+                  href="/en/gb/privacy-policy"
                   className="text-[#253238] hover:underline"
                 >
                   Privacy policy
@@ -342,6 +373,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
 
       </footer>
     </WrapperBGWidth>
