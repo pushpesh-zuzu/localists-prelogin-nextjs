@@ -10,7 +10,7 @@ export const metadata = {
   },
 };
 function page() {
-  return <MultiStepFormDriveways />;
+  return <MultiStepFormDriveways isQuestionWithImage />;
 }
 
 export default page;
