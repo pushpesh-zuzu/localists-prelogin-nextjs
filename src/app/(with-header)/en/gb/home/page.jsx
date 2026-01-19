@@ -103,7 +103,7 @@ export default function Page() {
                     { name: "Gutter Cleaning", path: "/gutter-cleaning-near-me" },
                 ]}
             />
-            <div className="mt-[5px] mb-3">
+            <div className="mt-[5px] mb-3 flex justify-center">
                 <div
                     className="py-[50px] max-[768px]:py-[30px] max-[480px]:py-[20px]" >
                     <GetQuotes ctaText="Home & Garden" needSString={false} />

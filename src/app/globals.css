@@ -23,6 +23,27 @@ select {
   color: #6C6C6C;
 }
 
+.floating {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.floating  {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .floating {
+    display: flex;
+    justify-content: center;
+  }
+}
 input::placeholder,
 textarea::placeholder,
 select::placeholder {
