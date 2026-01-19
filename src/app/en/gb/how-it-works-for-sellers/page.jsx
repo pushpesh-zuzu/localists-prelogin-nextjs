@@ -1,9 +1,13 @@
 import React from 'react'
-import HeroSectionSellers from '../component/HowItWorksSellers/HeroSectionSellers';
-import HowItWorksDetail from '../component/HowItWorksSellers/HowItWorksDetail';
-import RegisterNow from '../component/HowItWorks/RegisterNow/RegisterNow';
-import Footer from '../component/Footer/Footer';
-import WrapperBGWidth from '../component/common/WrapperBGWidth/WrapperBGWidth';
+// import HeroSectionSellers from '../../../component/HowItWorksSellers/HeroSectionSellers';
+// import HowItWorksDetail from '../../../component/HowItWorksSellers/HowItWorksDetail';
+// import RegisterNow from '../../../component/HowItWorks/RegisterNow/RegisterNow';
+// import WrapperBGWidth from '../../../component/common/WrapperBGWidth/WrapperBGWidth';
+import Footer from '@/app/component/Footer/Footer';
+import HeroSectionSellers from '@/app/component/HowItWorksSellers/HeroSectionSellers';
+import HowItWorksDetail from '@/app/component/HowItWorksSellers/HowItWorksDetail';
+import RegisterNow from '@/app/component/HowItWorks/RegisterNow/RegisterNow';
+import WrapperBGWidth from '@/app/component/common/WrapperBGWidth/WrapperBGWidth';
 
 export const metadata = {
   title: "How It Works for Professionals & Businesses - Localists",
