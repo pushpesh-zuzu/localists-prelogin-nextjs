@@ -6,7 +6,7 @@ export const metadata = {
     "Join Localists free as a professional. Get verified leads with no hidden fees. Pay only for the customers you want and keep all your earnings.",
 
   alternates: {
-    canonical: "https://dev2.localistsbooster.com/en/gb/sellers-create",
+    // canonical: "https://dev2.localistsbooster.com/en/gb/sellers-create",
     languages: {
       "en-GB": "https://dev2.localistsbooster.com/en/gb/sellers-create"
     },

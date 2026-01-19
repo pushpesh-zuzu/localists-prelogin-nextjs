@@ -34,7 +34,7 @@ export default function Page() {
 
   return (
     <>
-      <SEO />
+      <SEO conversion />
 
       <section className="text-[#253238]">
         {/* TABS */}

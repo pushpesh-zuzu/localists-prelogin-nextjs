@@ -1,3 +1,4 @@
+import SEO from "@/app/component/common/seo/SEO";
 import ContactUs from "@/app/component/ContactUs/ContactUs";
 import Footer from "@/app/component/Footer/Footer";
 
@@ -24,6 +25,7 @@ export const metadata = {
 export default function Page() {
     return (
         <main>
+            <SEO conversion />
             <ContactUs />
             <Footer />
         </main>

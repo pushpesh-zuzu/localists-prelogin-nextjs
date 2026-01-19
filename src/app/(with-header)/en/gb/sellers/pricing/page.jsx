@@ -12,7 +12,7 @@ export const metadata = {
         "Register free on Localists and get customer leads. Only pay a small fee to connect with the ones you want. Keep 100% of what you earn.",
 
     alternates: {
-        canonical: "https://dev2.localistsbooster.com/en/gb/sellers-pricing",
+        // canonical: "https://dev2.localistsbooster.com/en/gb/sellers-pricing",
         languages: {
             "en-GB": "https://dev2.localistsbooster.com/en/gb/sellers-pricing"
         },
