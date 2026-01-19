@@ -1,0 +1,274 @@
+"use client"
+
+import HeroSectionNewPPC from '@/app/component/NewPPCpage/HeroSectionNewPPC';
+import HowItWorkNewPPC from '@/app/component/NewPPCpage/HowItWorkNewPPC';
+import PopularServicesTypes from '@/app/component/NewPPCpage/PopularServicesTypes';
+import TreeSurgeryCostGuide from '@/app/component/NewPPCpage/TreeSurgeryCostGuide';
+import ProfessionalServiceInstallation from '@/app/component/NewPPCpage/ProfessionalServiceInstallation';
+import RegionalGuide from '@/app/component/NewPPCpage/RegionalGuide';
+import FAQSection from '@/app/component/NewPPCpage/FAQSection';
+
+import GuaranteedWorkIcon from '../../../../../../public/ReactIcons/GuaranteedWorkIcon';
+import DesignExpertsIcon from '../../../../../../public/ReactIcons/DesignExpertsIcon';
+import RoofInspections from '../../../../../../public/ReactIcons/RoofInspections';
+import EmergencyRoofRepairsIcon from '../../../../../../public/ReactIcons/EmergencyRoofRepairsIcon';
+import GutterRepairsIcon from '../../../../../../public/ReactIcons/GutterRepairsIcon';
+import RoofFlatIcon from '../../../../../../public/ReactIcons/RoofFlatIcon';
+import RoofTilesSlateIcon from '../../../../../../public/ReactIcons/RoofTilesSlateIcon';
+import LeakRepairIcon from '../../../../../../public/ReactIcons/LeakRepairIcon';
+import CompetitivePricingIcon from "../../../../../../public/ReactIcons/CompetitivePricingIcon";
+import QuicAlarmIcon from "../../../../../../public/ReactIcons/QuicAlarmIcon";
+import FloatingButtonWrapper from "@/app/component/NewPPCpage/FloatingButtonWrapper";
+import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
+import SEO from '@/app/component/common/seo/SEO';
+
+
+export const NEW_PPC_POPULUAR_SERVICE_TYPE = [
+    {
+        icon: <LeakRepairIcon bgColor="white" fillColor="#00AFE3" />,
+        inActiveIcon: <LeakRepairIcon />,
+        title: "Roof Leak Repairs",
+        description:
+            "Fix leaks caused by damaged tiles, flashing, or gutter issues to prevent water damage.",
+        points: [
+            { text: "Tile replacement" },
+            { text: "Flashing repairs" },
+            { text: "Gutter and valley fixes" },
+        ],
+    },
+    {
+        icon: <RoofTilesSlateIcon bgColor="white" fillColor="#00AFE3" />,
+        inActiveIcon: <RoofTilesSlateIcon bgColor="#00AFE3" fillColor="white" />,
+        title: "Roof Tile & Slate Replacement",
+        description:
+            "Professional replacement of damaged or missing tiles and slates to restore roof integrity.",
+        points: [
+            { text: "Matching existing roof materials" },
+            { text: "Structural reinforcement" },
+            { text: "Storm damage repair" },
+        ],
+    },
+    {
+        icon: <RoofFlatIcon bgColor="white" fillColor="#00AFE3" />,
+        inActiveIcon: <RoofFlatIcon bgColor="#00AFE3" fillColor="white" />,
+        title: "Flat Roof Repairs",
+        description:
+            "Specialist solutions for flat roof issues including leaks, ponding water, and membrane damage.",
+        points: [
+            { text: "Felt repairs" },
+            { text: "EPDM & rubber membrane fixes" },
+            { text: "Resin or liquid-applied coatings" },
+        ],
+    },
+    {
+        icon: <GutterRepairsIcon bgColor="white" fillColor="#00AFE3" />,
+        inActiveIcon: <GutterRepairsIcon bgColor="#00AFE3" fillColor="white" />,
+        title: "Gutter & Drainage Repairs",
+        description:
+            "Ensure proper water flow to prevent leaks, rot, and structural damage.",
+        points: [
+            { text: "Gutter replacement & repair" },
+            { text: "Downpipe repair" },
+            { text: "Drainage channel clearing" },
+        ],
+    },
+    {
+        icon: (
+            <EmergencyRoofRepairsIcon
+                bgColor="white"
+                fillColor="#00AFE3"
+                strokeColor="#00AFE3"
+            />
+        ),
+        inActiveIcon: (
+            <EmergencyRoofRepairsIcon
+                bgColor="#00AFE3"
+                fillColor="white"
+                strokeColor="white"
+            />
+        ),
+        title: "Emergency Roof Repairs",
+        description:
+            "Storm, wind, or accidental damage handled promptly and safely.",
+        points: [
+            { text: "Tarping and temporary fixes" },
+            { text: "Hazardous tile or structure removal" },
+            { text: "Rapid response for urgent leaks" },
+        ],
+    },
+    {
+        icon: <RoofInspections bgColor="white" fillColor="#00AFE3" />,
+        inActiveIcon: <RoofInspections bgColor="#00AFE3" fillColor="white" />,
+        title: "Roof Inspections & Maintenance",
+        description:
+            "Assess roof condition, identify potential issues, and provide preventative care.",
+        points: [
+            { text: "Full roof inspection" },
+            { text: "Structural assessment" },
+            { text: "Maintenance plans" },
+        ],
+    },
+];
+
+const CostGuidData = [
+    {
+        service: "Minor leak repairs",
+        price: "£120 - £450",
+    },
+    {
+        service: "Tile/slate replacement",
+        price: "£200 - £1,000",
+    },
+    {
+        service: "Flat roof repairs",
+        price: "£250 - £1,500",
+    },
+    {
+        service: "Gutter & drainage repairs",
+        price: "£80 - £400",
+    },
+    {
+        service: "Emergency roof repairs",
+        price: "£300 - £1,500+",
+    },
+];
+
+export const PSI_TOP = [
+    {
+        icon: <DesignExpertsIcon />,
+        title: "Expertise & Safety",
+        text: "Qualified roofing contractors with years of experience use industry-approved techniques to carry out safe, precise repairs.",
+    },
+    {
+        icon: <GuaranteedWorkIcon />,
+        title: "Guaranteed Work",
+        text: "Most professionals offer up to 10-year guarantees on workmanship and materials where applicable, giving long-term peace of mind.",
+    },
+    {
+        icon: <CompetitivePricingIcon />,
+        title: "Competitive Pricing",
+        text: "Receive fair, transparent pricing from vetted local roofers, allowing you to compare quotes and choose the best value.",
+    },
+    {
+        icon: <QuicAlarmIcon />,
+        title: "Quick Turnaround",
+        text: "Roofing repairs are completed efficiently and safely, minimising disruption while maintaining high standards.",
+    },
+];
+
+export const regionPricingData = [
+    {
+        region: "Nationwide",
+        prices: [{ label: "Standard Rate", value: "£350" }],
+    },
+    {
+        region: "London",
+        prices: [{ label: "Standard Rate", value: "£450" }],
+    },
+    {
+        region: "South East / South West",
+        prices: [{ label: "Standard Rate", value: "£400" }],
+    },
+    {
+        region: "East Midlands",
+        prices: [{ label: "Standard Rate", value: "£375" }],
+    },
+    {
+        region: "North West / Scotland / Wales",
+        prices: [{ label: "Standard Rate", value: "£350" }],
+    },
+];
+
+const FrequentlyQuestion = [
+    {
+        key: "1",
+        title: "What are common signs that my roof needs repairing?",
+        description:
+            "Look for slipped or missing tiles, cracked flashing, water stains on ceilings or walls, blocked gutters, or moss and algae growth - these often indicate roof damage that needs professional attention.",
+    },
+    {
+        key: "2",
+        title: "How much do roof repairs cost in the UK?",
+        description:
+            "Roof repair costs vary by job type, access, and materials. Small fixes like replacing a few tiles can cost a few hundred pounds, while larger jobs, including flashing repairs or flat roof patches, can range higher. Getting multiple local quotes is the best way to understand your exact cost.",
+    },
+    {
+        key: "3",
+        title: "Do I need permission for roof work?",
+        description:
+            "Planning permission is usually not required unless your property is listed, in a conservation area, or changing roof height.",
+    },
+    {
+        key: "4",
+        title: "How long does roof repair take?",
+        description:
+            "Minor repairs can be completed in a few hours, while full replacements may take several days",
+    },
+    {
+        key: "5",
+        title: "Will I need scaffolding for roof repairs?",
+        description:
+            "Scaffolding is often required for safe access during external roof repairs, especially on pitched roofs. Minor internal fixes might not need it, but your roofer will assess safety requirements during the site survey. ",
+    },
+];
+
+function page() {
+    useRegistrationRedirect();
+    return (
+        <FloatingButtonWrapper>
+            {(heroRef, sectionsStartRef) => (
+                <>
+                    <SEO conversion />
+                    <div ref={heroRef}>
+                        <HeroSectionNewPPC
+                            heading0="Find"
+                            heading1=" Roofing Repair"
+                            heading2="Experts Near You"
+                            quoteText="Find Roofing Repair Experts Near You"
+                            questionDescription="To find the ideal Roofing Specialists for your project, simply complete the quick form below."
+                            serviceId={113}
+                        />
+                    </div>
+                    <div ref={sectionsStartRef}>
+                        <HowItWorkNewPPC />
+                    </div>
+                    <PopularServicesTypes
+                        data={NEW_PPC_POPULUAR_SERVICE_TYPE}
+                        heading1="Roofing"
+                        heading2="Repair Services"
+                        description="Explore our comprehensive range of roofing installation options to
+                        find the perfect solution for your property" />
+
+                    <TreeSurgeryCostGuide
+                        CostGuidData={CostGuidData}
+                        heading1="Roofing Installation"
+                        description="Understanding the costs involved in roofing installation helps you
+                         budget effectively. Prices vary based on material, size, and
+                         complexity."
+                    />
+
+                    <ProfessionalServiceInstallation
+                        heading="Roofing Experts"
+                        topCards={PSI_TOP}
+                    />
+
+                    <RegionalGuide
+                        heading2="Roofing Repairs Costs"
+                        description="Average roofing installation costs across different UK regions"
+                        regionPricingData={regionPricingData}
+                        bannerHeading="Note: Prices are averages for guidance. Final costs may vary depending on roof size, type, access, and specific work required."
+                        bannerPrice=""
+                        budget=""
+                    />
+
+                    <FAQSection
+                        description="Get answers to common roofing installation questions"
+                        FrequentlyQuestion={FrequentlyQuestion}
+                    />
+                </>
+            )}
+        </FloatingButtonWrapper>
+    );
+}
+
+export default page
