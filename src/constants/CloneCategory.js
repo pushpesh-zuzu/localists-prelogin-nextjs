@@ -1,8 +1,12 @@
 // import businessProfessionals from "../../public/icons/BusinessProfessionals.svg";
 
-import WhatYouNeedIcon from "../../public/icons/WhatYouNeedIcon.png";
-import FreeQuotesIcon from "../../public/icons/FreeQuotesIcon.png";
-import BusinessProfessionalsIcon from "../../public/icons/BusinessProfessionalsIcon.png";
+// import WhatYouNeedIcon from "../../public/icons/WhatYouNeedIcon.png";
+// import FreeQuotesIcon from "../../public/icons/FreeQuotesIcon.png";
+// import BusinessProfessionalsIcon from "../../public/icons/BusinessProfessionalsIcon.png";
+import SearchUserIcon from "../../public/ReactIcons/SearchUserIcon";
+import CheckDocumentIcon from "../../public/ReactIcons/CheckDocumentIcon";
+import SecureHandshakeIcon from "../../public/ReactIcons/SecureHandshakeIcon";
+
 import {
   ArtificialGrassSlider,
   DrivewayInstallationSlider,
@@ -26,7 +30,8 @@ const HowItWorksData = {
     {
       id: 1,
       title: "the Best Match",
-      image: WhatYouNeedIcon,
+      // image: WhatYouNeedIcon,
+      icon: SearchUserIcon,
       heading1: "Find ",
       heading2: "the Best Match",
       description:
@@ -35,7 +40,8 @@ const HowItWorksData = {
     {
       id: 2,
       title: "Free Quotes",
-      image: FreeQuotesIcon,
+      // image: FreeQuotesIcon,
+      icon: CheckDocumentIcon,
       heading1: "Request ",
       heading2: "Free Quotes",
       description:
@@ -44,7 +50,8 @@ const HowItWorksData = {
     {
       id: 3,
       title: "Business Professional",
-      image: BusinessProfessionalsIcon,
+      // image: BusinessProfessionalsIcon,
+      icon: SecureHandshakeIcon,
       heading1: "Work With Your ",
       heading2: "Business Professional",
       description:
@@ -57,7 +64,7 @@ const HowItWorksData = {
     {
       id: 1,
       title: "the Best Match",
-      image: WhatYouNeedIcon, // Same icon as business
+      icon: SearchUserIcon,
       heading1: "Find the ",
       heading2: "best match",
       break: true,
@@ -68,7 +75,7 @@ const HowItWorksData = {
     {
       id: 2,
       title: "Free Quotes",
-      image: FreeQuotesIcon, // Same icon as business
+      icon: CheckDocumentIcon,
       heading1: "Request ",
       heading2: "free quotes",
       break: true,
@@ -79,7 +86,8 @@ const HowItWorksData = {
     {
       id: 3,
       title: "Home & Garden Professional",
-      image: BusinessProfessionalsIcon, // Same icon as business
+      // image: BusinessProfessionalsIcon, // Same icon as business
+      icon: SecureHandshakeIcon,
       heading1: "Work with your ",
       heading2: "home & garden ",
       heading3: "professional",
