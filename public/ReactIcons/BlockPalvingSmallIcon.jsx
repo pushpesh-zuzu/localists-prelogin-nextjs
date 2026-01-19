@@ -10,7 +10,7 @@ function BlockPalvingSmallIcon({className=''}) {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <g clip-path="url(#clip0_9384_10094)">
+      <g clipPath="url(#clip0_9384_10094)">
         <mask id="path-3-inside-1_9384_10094" fill="white">
           <rect
             x="4.91406"

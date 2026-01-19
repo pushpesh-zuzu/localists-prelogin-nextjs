@@ -229,7 +229,7 @@ const DescribeYourRequestNewPPC = () => {
             <div className="flex justify-center mt-[30px] max-sm:mt-[10px]">
                 <button
                     onClick={handleSubmit}
-                    className="bg-[#00afe3] text-white px-[29px] py-[9px] rounded font-medium hover:bg-[#007bbd]"
+                    className="bg-[#00afe3] text-white px-[29px] py-[9px] cursor-pointer rounded font-medium hover:bg-[#007bbd]"
                 >
                     {addDetailLoader ? (
                         <Spin indicator={<LoadingOutlined spin style={{ color: "white" }} />} />

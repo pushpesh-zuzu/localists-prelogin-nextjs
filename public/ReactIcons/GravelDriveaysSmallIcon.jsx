@@ -10,7 +10,7 @@ function GravelDriveaysSmallIcon({className=''}) {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <g clip-path="url(#clip0_9416_8866)">
+      <g clipPath="url(#clip0_9416_8866)">
         <path
           d="M12.7881 4.3125C13.3503 3.33873 14.7551 3.33877 15.3174 4.3125L24.8594 20.8389C25.4216 21.8127 24.7191 23.0301 23.5947 23.0303H4.51074C3.38642 23.0301 2.68389 21.8126 3.24609 20.8389L12.7881 4.3125Z"
           stroke="#00AFE3"

@@ -8,7 +8,6 @@ import Logo from "../../../../public/ReactIcons/Logo";
 import VettedProffessionIcon from "../../../../public/ReactIcons/VotedProfessionIcon";
 import FreeQuoteIcon from "../../../../public/ReactIcons/FreeQuoteIcon";
 import FastResponseIcon from "../../../../public/ReactIcons/FastResponseIcon";
-import GetQuotesIcon from "../../../../public/ReactIcons/GetQuotesIcon";
 
 import {
     setBuyerStep,
@@ -157,7 +156,7 @@ export default function HeroSectionNewPPC({
                         </div>
 
                         <div className="flex gap-[20px] mt-[40px]">
-                            <PrimaryButton>{quoteText} <GetQuotesIcon color="white" /></PrimaryButton>
+                            <PrimaryButton>{quoteText}</PrimaryButton>
                         </div>
                     </div>
                 </div>
@@ -234,7 +233,7 @@ export default function HeroSectionNewPPC({
                             className="text-[16px] !py-[6px] cursor-pointer"
                             onClick={handleScrollToBottom}
                         >
-                            {quoteText} <GetQuotesIcon color="white" />
+                            {quoteText}
                         </PrimaryButton>
                     </div>
                 </div>

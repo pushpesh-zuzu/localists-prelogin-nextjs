@@ -11,8 +11,8 @@ function ResinBoundSmallIcon({ className = "" }) {
       className={className}
     >
       <rect width="30" height="30" rx="15" fill="white" />
-      <g clip-path="url(#clip0_9416_8856)">
-        <g clip-path="url(#clip1_9416_8856)">
+      <g clipPath="url(#clip0_9416_8856)">
+        <g clipPath="url(#clip1_9416_8856)">
           <path
             d="M15.112 23.25L5.94531 12.4792L8.55547 6.75H21.6685L24.2786 12.4792L15.112 23.25Z"
             stroke="#00AFE3"

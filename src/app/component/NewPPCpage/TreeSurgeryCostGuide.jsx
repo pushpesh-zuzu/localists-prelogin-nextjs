@@ -91,7 +91,7 @@ function TreeSurgeryCostGuide({
             >
               {item.service}
               {item.description && (
-                <span className="block font-normal text-[#253238]">
+                <span className="font-normal text-[#253238]">
                   {item.description}
                 </span>
               )}
