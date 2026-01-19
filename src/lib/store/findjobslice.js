@@ -10,6 +10,7 @@ import {
   setCookie,
 } from "@/utils/CookiesHelper";
 import { fetchCompanyDetails } from "./companyJobSlice";
+import { showToastWithLink } from "@/hooks/showToastWithLink";
 // import { changeSequenceServices } from "@/utils/allservices";
 // import { safeLocalStorage } from "@/utils/localStorage";
 
@@ -266,7 +267,15 @@ export const checkEmailIdApi = (emailData) => {
         return response.data;
       }
     } catch (error) {
-      showToast("error", error?.response?.data?.message);
+      // showToast("error", error?.response?.data?.message);
+      showToastWithLink(
+        "error",
+        "Your account is already registered. Please",
+        "/en/gb/login",
+        "click here",
+        "to login",
+        false
+      );
     } finally {
       dispatch(setsearchServiceLoader(false));
     }
