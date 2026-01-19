@@ -274,7 +274,6 @@ function PrimaryButton({ children, className = "", ...props }) {
         text-white
         px-[22px] py-[12px]
         rounded-full font-black
-         cursor-pointer
         flex items-center gap-[10px]
         font-[Arial]
         tracking-[-0.03em]
