@@ -48,7 +48,7 @@ export default function FloatingButtonWrapper({ children }) {
       {children(heroRef, sectionsStartRef)}
 
       {showFloating && (
-        <div className="fixed bottom-[1%] mb-[10px] right-4 z-50 md:hidden">
+        <div className="fixed bottom-[1%] mb-[10px] inset-x-0 flex justify-center z-50 md:hidden">
           <FloatingButton />
         </div>
       )}

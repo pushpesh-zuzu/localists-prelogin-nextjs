@@ -38,6 +38,7 @@ import RetailWallIcon from "../../../../../../public/ReactIcons/RetailWallIcon";
 import VotedProfessionIcon from "../../../../../../public/ReactIcons/VotedProfessionIcon";
 import FloatingButtonWrapper from "@/app/component/NewPPCpage/FloatingButtonWrapper";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
+import SEO from '@/app/component/common/seo/SEO';
 
 
 
@@ -436,13 +437,13 @@ const landscapingQuotesStep = [
 ];
 
 
-
 function page() {
   useRegistrationRedirect();
   return (
     <FloatingButtonWrapper>
       {(heroRef, sectionsStartRef) => (
         <>
+          <SEO conversion />
           <div ref={heroRef}>
             <HeroSectionNewPPC
               heading0="Find"

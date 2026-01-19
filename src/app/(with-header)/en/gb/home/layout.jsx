@@ -30,7 +30,7 @@ export const metadata = {
 };
 
 
-export default function LoginLayout({ children }) {
+export default function HomeLayout({ children }) {
     return (
         <Suspense fallback={null}>
             {children}
