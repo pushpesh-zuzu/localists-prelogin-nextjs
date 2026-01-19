@@ -98,7 +98,7 @@ const Footer = () => {
               <ul className="space-y-3 sm:text-[9px] xl:text-[17px]">
                 <li>
                   <Link
-                    href="/how-it-works-for-sellers"
+                    href="/en/gb/how-it-works-for-sellers"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px] xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
                     How it works
@@ -258,7 +258,7 @@ const Footer = () => {
                 {openSections.professionals && (
                   <div className="mt-3 space-y-2 pl-4">
                     <Link
-                      href="/how-it-works-for-sellers"
+                      href="/en/gb/how-it-works-for-sellers"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       How it works
@@ -331,7 +331,7 @@ const Footer = () => {
           <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-center md:text-left">
               <p className="mx-auto text-[rgba(37, 50, 56, 1)] text-xs lg:text-[12px]">
-                © 2025 Localists. Terms & Conditions / Cookie policy /{" "}
+                © 2026 Localists. Terms & Conditions / Cookie policy /{" "}
                 <Link
                   href="/privacy-policy"
                   className="text-[#253238] hover:underline"
