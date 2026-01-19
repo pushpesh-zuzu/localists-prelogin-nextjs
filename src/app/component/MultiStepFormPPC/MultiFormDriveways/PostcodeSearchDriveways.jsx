@@ -10,6 +10,7 @@ import {
 } from "@/lib/store/buyerslice/buyerSlice";
 import CardLayoutWrapper from "../../common/MultiStepFormPPC/CardLayoutWrappper";
 import LocationMapIcon from "../../common/icons/SellerRegistration/LocationMapIcon";
+import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 
 const PostcodeSearchDriveways = ({
   onNext,
@@ -131,22 +132,14 @@ const PostcodeSearchDriveways = ({
               onChange={handlePincodeChange}
               onKeyPress={handleKeyPress}
             />
-            {/* <Image
-              src={locationIcon}
-              alt="location icon"
-              className="absolute left-3 top-1/2 transform -translate-y-1/2 h-3 w-4"
-            /> */}
             <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
               <LocationMapIcon background="#00afe3" className="h-3.5 w-3.5" />
             </div>
             {isCheckingPostcode ? (
-              <span className="absolute right-2 inline-block h-5 w-5 animate-spin rounded-full border-2 border-red border-t-transparent"></span>
+              <div className="absolute right-3">
+                <LoaderIndicator size="small" />
+              </div>
             ) : postalCodeValidate ? (
-              //   <Image
-              //     src={CheckIcon}
-              //     alt="Success"
-              //     className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5"
-              //   />
               <div className="h-4 w-4">
                 <CheckVerifiedIcon className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5" />
               </div>
