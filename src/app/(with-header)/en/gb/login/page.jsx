@@ -117,9 +117,9 @@ export default function LoginPage() {
 
                     showToast("success", "Login successful!");
 
-                    res.data.active_status === 1
-                        ? router.replace(`/${currentLang}/${currentCountry}/sellers/leads`)
-                        : router.replace(`/${currentLang}/${currentCountry}/sellers/leads`);
+                    res?.data?.active_status === 1
+                        ? router.replace(`/${currentLang}/${currentCountry}/home`)
+                        : router.replace(`/${currentLang}/${currentCountry}/home`);
                     ;
                 } else {
                     showToast("error", res?.message || "Login failed. Please try again.");
@@ -193,15 +193,21 @@ export default function LoginPage() {
                     {/* Submit */}
                     <Button1
                         type="submit"
-                        className="h-[49px] w-full bg-[#00AFE3] hover:bg-[#4096ff] text-white text-[16px]
-            flex items-center cursor-pointer justify-center
-              max-md:h-[45px] max-md:text-[14px]
-              max-sm:h-[40px] max-sm:text-[12px]
-            "
-                    >
-                        {passwordless
-                            ? passwordlessLoader ? "Sending..." : "Send"
-                            : loginLoader ? "Logging in..." : "Login"}
+                        disabled={loginLoader || passwordlessLoader}
+                        className="h-[49px] w-full bg-[#00AFE3] hover:bg-[#4096ff]
+    text-white text-[16px] cursor-pointer
+    flex items-center justify-center gap-2
+    disabled:opacity-70 disabled:cursor-not-allowed
+    max-md:h-[45px] max-md:text-[14px]
+    max-sm:h-[40px] max-sm:text-[12px]
+            " >
+                        {(loginLoader || passwordlessLoader) ? (
+                            <span className="h-5 w-5 border-3 border-[#4096ff] border-t-transparent rounded-full animate-spin" />
+                        ) : passwordless ? (
+                            "Send"
+                        ) : (
+                            "Login"
+                        )}
                     </Button1>
 
                     {/* OR */}
@@ -224,8 +230,7 @@ export default function LoginPage() {
                   rounded-full
                   max-md:h-[45px] max-md:text-[14px]
                   max-sm:h-[40px] max-sm:text-[12px]
-                "
-                            >
+                " >
                                 Send me a link to log in
                             </button>
                         </>
