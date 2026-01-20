@@ -65,15 +65,17 @@ const DescribeYourRequestNewPPC = () => {
             professional_letin: professionalLetin ? 1 : 0,
         };
 
+        console.log("payload", payload)
+
         dispatch(addDetailsRequestData(payload, router, requestId)).then((res) => {
             if (res?.success) {
                 showToast("success", res?.message || "Request submitted successfully");
                 localStorage.setItem("isRegistrationComplete", "true");
-                dispatch(clearSetbuyerRequestData());
-                dispatch(clearBuyerRegisterFormData());
-                dispatch(setQualityData());
-                localStorage.removeItem("pendingBuyerModal");
             }
+            dispatch(clearSetbuyerRequestData());
+            dispatch(clearBuyerRegisterFormData());
+            dispatch(setQualityData());
+            localStorage.removeItem("pendingBuyerModal");
         });
     };
 

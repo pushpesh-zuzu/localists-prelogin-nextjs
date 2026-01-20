@@ -428,7 +428,7 @@ const QuestionModalNewPPC = ({
     const noQuestionClass = "flex justify-center items-center h-[200px] text-base text-[#253238]";
     const optionsContainerClass = `flex flex-col mt-3 gap-[12px] overflow-auto max-h-[40vh] transition-all duration-300 ${isAnimating ? "[animation:fadeIn_0.3s_ease-out_forwards]" : ""
         }`;
-    const optionClass = "flex items-center gap-[8px] border-2 border-[#e1e5e9] px-[15px] py-[10px] cursor-pointer font-semibold rounded-[3px] text-[#235238] text-start hover:bg-gray-50 transition-colors duration-200 font-[Arial] tracking-[-0.03em] leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
+    const optionClass = "flex items-center gap-[8px] border-2 border-[#e1e5e9] px-[15px] py-[10px] cursor-pointer font-semibold rounded-[3px] text-[#253238] text-start hover:bg-gray-50 transition-colors duration-200 font-[Arial] tracking-[-0.03em] leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
     const inputClass = "w-full font-[Arial] tracking-[-0.03em] px-[10.5px] py-[10px] border border-[#d9d9d9] outline-none rounded-[3px] disabled:opacity-50 leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
     const errorMessageClass = "text-red-500 text-start text-sm mt-2";
     const question1Class = "w-full mb-[15px] text-[#253238]";
