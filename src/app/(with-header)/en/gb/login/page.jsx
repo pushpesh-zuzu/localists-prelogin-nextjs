@@ -11,7 +11,6 @@ import {
 } from "@/lib/store/Auth/authSlice";
 import { showToast } from "@/utils/toaster";
 import SEO from "@/app/component/common/seo/SEO";
-import H1 from "@/app/component/UI/Typography/H1";
 import TextInput from "@/app/component/UI/Inputs/InputField";
 import PasswordInput from "@/app/component/UI/Inputs/InputField";
 import RadioButton from "@/app/component/UI/Inputs/RadioButton";
@@ -27,7 +26,7 @@ export default function LoginPage() {
     const currentCountry = country || "gb";
 
     const [passwordless, setPasswordless] = useState(false);
-    const [rememberMe, setRememberMe] = useState(false);
+    const [rememberMe, setRememberMe] = useState(true);
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -111,15 +110,18 @@ export default function LoginPage() {
         dispatch(userLogin({ email, password }))
             .then((res) => {
                 if (res?.success) {
-                    ocument.cookie = rememberMe
-                        ? "token=logged-in; path=/; max-age=2592000"
-                        : "token=logged-in; path=/";
+
+                    if (typeof window !== "undefined") {
+                        document.cookie = rememberMe
+                            ? "token=logged-in; path=/; max-age=2592000"
+                            : "token=logged-in; path=/";
+                    }
 
                     showToast("success", "Login successful!");
 
                     res?.data?.active_status === 1
-                        ? router.replace(`/${currentLang}/${currentCountry}/home`)
-                        : router.replace(`/${currentLang}/${currentCountry}/home`);
+                        ? router.replace(`/${currentLang}/${currentCountry}/sellers/leads`)
+                        : router.replace(`/${currentLang}/${currentCountry}/buyers/create`);
                     ;
                 } else {
                     showToast("error", res?.message || "Login failed. Please try again.");

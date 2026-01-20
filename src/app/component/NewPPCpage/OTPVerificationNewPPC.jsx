@@ -118,7 +118,7 @@ const OTPVerificationNewPPC = ({
             formData.append("user_id", requestUserId);
 
             dispatch(createRequestData(formData)).then((r) => {
-                if (isThankuPageOnlyShow) {
+                if (r?.success && isThankuPageOnlyShow) {
                     localStorage.setItem(
                         "pendingBuyerModal",
                         JSON.stringify({
