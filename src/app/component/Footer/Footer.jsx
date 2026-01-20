@@ -8,6 +8,10 @@ import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import EmailIcon from "../common/icons/HomePageIcons/EmailIcon";
 import DownArrowSolidBlue from "../common/icons/HomePageIcons/DownArrowSolidBlue";
 import UpArrowSolidBlue from "../common/icons/HomePageIcons/UpArrowSolidBlue";
+import FacebookIcon from "../../../../public/ReactIcons/FacebookIcon";
+import InstagramIcon from "../../../../public/ReactIcons/InstagramIcon";
+import XIcon from "../../../../public/ReactIcons/XIcon";
+import LinkedInIcon from "../../../../public/ReactIcons/LinkedInIcon";
 
 const Footer = () => {
   const [openSections, setOpenSections] = useState({
@@ -149,15 +153,11 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Facebook page"
-                  className="block w-[35px] h-[35px] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-md"
+                  className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-[#EAEAEA] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-md"
                 >
-                  <Image
-                    src="/facebook.svg"
-                    alt="Facebook Icon"
-                    width={35}
-                    height={35}
-                    className="rounded-full object-cover"
-                    priority
+                  <FacebookIcon
+                    bgColor="transparent"
+                    className="w-[35px] h-[35px]"
                   />
                 </a>
 
@@ -167,33 +167,25 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Instagram page"
-                  className="block w-[35px] h-[35px] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-md"
+                  className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-[#EAEAEA] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-md"
                 >
-                  <Image
-                    src="/instagram.svg"
-                    alt="Instagram Icon"
-                    width={35}
-                    height={35}
-                    className="rounded-full object-cover"
-                    priority
+                  <InstagramIcon
+                    bgColor="transparent"
+                    className="w-[35px] h-[35px]"
                   />
                 </a>
 
-                {/* X (Twitter) */}
+                {/* X */}
                 <a
                   href="https://x.com/LocalistsUK"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit X page"
-                  className="block w-[35px] h-[35px] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-md"
+                  className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-[#EAEAEA] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-md"
                 >
-                  <Image
-                    src="/Xsocialicon.png"
-                    alt="X Icon"
-                    width={35}
-                    height={35}
-                    className="rounded-full object-cover"
-                    priority
+                  <XIcon
+                    bgColor="transparent"
+                    className="w-[35px] h-[35px]"
                   />
                 </a>
 
@@ -203,18 +195,16 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit LinkedIn page"
-                  className="block w-[35px] h-[35px] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-md"
+                  className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-[#EAEAEA] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-md"
                 >
-                  <Image
-                    src="/linkedinsocialicon.png"
-                    alt="LinkedIn Icon"
-                    width={35}
-                    height={35}
-                    className="rounded-full object-cover"
-                    priority
+                  <LinkedInIcon
+                    bgColor="transparent"
+                    className="w-[35px] h-[35px]"
                   />
                 </a>
               </div>
+
+
               <CountryDropdown />
             </div>
 
