@@ -1,13 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { useParams } from "next/navigation";
 import LeadInfoModal from "./LeadStaticModal";
 import { GrowthStepsData } from "@/app/../constants/severalPanel";
-import Image from "next/image";
 import H2 from "../UI/Typography/H2";
-import H3 from "../UI/Typography/H3";
 import Button from "../UI/Typography/Button";
 
 const GrowthSteps = () => {
@@ -60,11 +57,10 @@ const GrowthSteps = () => {
                             <div>
                                 <div className="flex items-center gap-[10px] mb-[20px]">
                                     <div className="w-[54px] h-[54px] bg-white rounded-full flex items-center justify-center">
-                                        <Image
-                                            src={item.image}
-                                            alt="icon"
-                                            width={30}
-                                            height={30}
+                                        <item.icon
+                                            className="w-[54px] h-[54px]"
+                                            bgColor="transparent"
+                                            aria-hidden="true"
                                         />
                                     </div>
 

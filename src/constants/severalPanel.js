@@ -10,12 +10,12 @@ import GraphicDesign from "../../public/images/ServicePanel/GraphicDesign.svg";
 import PersonalTrainers from "../../public/images/ServicePanel/PersonalTrainers.svg";
 import Gardening from "../../public/images/ServicePanel/Gardening.svg";
 import CommercialAndOfficeCleaning from "../../public/images/ServicePanel/CommercialAndOfficeCleaning.svg";
-import GetQualityLeads from "../../public/images/ServicePanel/GetQualityLeads.png";
-import WinNewClients from "../../public/images/ServicePanel/WinNewClients.png";
-import GrowYourBusiness from "../../public/images/ServicePanel/GrowYourBusiness.png";
 import StefanWesley from "../../public/images/ServicePanel/StefanWesley.png";
 import LeanneOsbourne from "../../public/images/ServicePanel/LeanneOsbourne.png";
 import RichardGray from "../../public/images/ServicePanel/RichardGray.png";
+import QualityLeadsIcon from "../../public/ReactIcons/QualityLeadsIcon";
+import WinClientsIcon from "../../public/ReactIcons/WinClientsIcon";
+import GrowIcon from "../../public/ReactIcons/GrowIcon";
 
 const PopularServiceData = [
   {
@@ -83,29 +83,31 @@ const PopularServiceData = [
 const GrowthStepsData = [
   {
     id: 1,
-    image: GetQualityLeads,
+    icon: QualityLeadsIcon,
+    // image: GetQualityLeads,
     title1: "Quality leads",
     title2: "you can trust",
     Description1: "See real client requests near you or nationwide.",
     Description2: "Preview leads for free before spending credits.",
-        Description3: "Get new opportunities the moment they’re posted.",
+    Description3: "Get new opportunities the moment they’re posted.",
 
     button: "How it works",
-    path:"how-it-works-for-sellers"
+    path: "how-it-works-for-sellers"
   },
   {
     id: 2,
-    image: WinNewClients,
+    // image: WinNewClients,
+    icon: WinClientsIcon,
     title1: "Win clients",
     title2: "without the chase",
     Description1: "Choose the jobs that work for your schedule and skills.",
-    Description2:"Connect directly with clients,  no middlemen.",
-    Description3:"Unlock contacts with credits and get working fast.",
+    Description2: "Connect directly with clients,  no middlemen.",
+    Description3: "Unlock contacts with credits and get working fast.",
     button: "See an example lead",
   },
   {
     id: 3,
-    image: GrowYourBusiness,
+    icon: GrowIcon,
     title1: "Grow your business,",
 
     title2: "your way",
@@ -113,7 +115,7 @@ const GrowthStepsData = [
     Description2: "No commission or hidden fees",
     Description3: "First-lead guarantee so you can start with confidence.",
     button: "See more about pricing",
-     path: "sellers/pricing"
+    path: "sellers/pricing"
   },
 ];
 
