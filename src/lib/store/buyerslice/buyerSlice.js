@@ -528,7 +528,7 @@ export const checkEmailIdApi = createAsyncThunk(
   async (emailData, { rejectWithValue }) => {
     try {
       const response = await axiosInstance.post(`check/email-id`, emailData);
-      console.log(response, "rrrrrrrrrr");
+      // console.log(response, "rrrrrrrrrr");
       return response.data.data;
     } catch (error) {
       showToast("error", error?.response?.data?.message);
