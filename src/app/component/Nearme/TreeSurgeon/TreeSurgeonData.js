@@ -44,7 +44,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     text: "Trees can become harmful when they’re diseased, unstable, or simply too large for their surroundings. For example, a tree with hidden rot at the base might look fine on the outside but could topple in a storm, damaging property or blocking a road. In other cases, overgrown branches might stretch into power lines, or roots can push up paving slabs and create trip hazards. This is where a tree surgeon’s expertise matters. They can spot these risks early and take action.",
   },
   {
-    type: "p",
+    type: "pbold",
     text: "Here are some of the key things a tree surgeon does:",
     className: "my-[15px] md:my-[25px]",
   },
@@ -123,7 +123,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     text: "How do I pick the right tree surgeon",
   },
   {
-    type: "p",
+    type: "pbold",
     text: "When choosing a tree surgeon, it’s important to look beyond price and focus on their training, safety standards, and experience. You can look out for one or more of the following:",
     className: "mb-[15px] md:mb-[25px] ",
   },

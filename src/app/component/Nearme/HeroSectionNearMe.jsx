@@ -25,8 +25,8 @@ function HeroSectionNearMe({
 }) {
   return (
     <>
-      <WrapperBGWidth secondaryClass="md:h-[450px] lg:h-[560px] max-h-[560px]" className="relative md:h-[450px] lg:h-[560px] max-h-[560px]" background={'#00afe3'}>
-        <div className="absolute inset-0 md:h-[450px] lg:h-[560px] max-h-[560px]  hidden md:block">
+      <WrapperBGWidth secondaryClass="md:h-[450px] lg:h-[690px] max-h-[690px]" className="relative md:h-[450px] lg:h-[690px] max-h-[690px]" background={'#00afe3'}>
+        <div className="absolute inset-0 md:h-[450px] lg:h-[690px] max-h-[690px]  hidden md:block">
           <Image
             src={bannerImage}
             alt={altText}
@@ -34,7 +34,7 @@ function HeroSectionNearMe({
             priority={true}
             fetchPriority="high"
             quality={75}
-            className="h-10 w-10 md:h-[540px] min-[900px]:h-[400px] lg:h-[560px] md:max-w-[1536px] mx-auto"
+            className="h-10 w-10 md:h-[540px] min-[900px]:h-[400px] lg:h-[690px] md:max-w-[1536px] mx-auto"
             sizes="(min-width: 768px) 100vw, 0px"
           />
         </div>
@@ -52,13 +52,13 @@ function HeroSectionNearMe({
           />
         </div>
         <section
-          className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full  md:flex-row px-[34px] pt-10 md:px-[87px] md:pb-[72px] xl:pb-[100px] md:pt-[38px] xl:px-[163px] xl:pt-12 relative"
+          className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full  md:flex-row px-[34px] pt-10 md:px-[87px] md:pb-[72px] xl:pb-[100px] md:pt-[38px] xl:px-[120px] xl:pt-[150px] relative"
           role="banner"
           aria-label="Hero section"
         >
           <div
             className="w-full md:w-4/5
-           flex flex-col xl:ml-[43px] relative z-10"
+           flex flex-col  relative z-10"
           >
             <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px]  lg:mb-7 max-h-12" />
             <H1 className="text-white block text-shadow-[0_2.03px_2.03px_0_#0000001A]">

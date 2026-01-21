@@ -137,7 +137,7 @@ function PostCodeSearchField({
   return (
     <>
       <div
-        className={`relative max-w-[260px] md:max-w-[246px] lg:max-w-[404px] ${
+        className={`relative max-w-[260px] md:max-w-[246px] lg:max-w-[416px] ${
           margin ? "mt-5 md:mt-6 xl:mt-[40px]" : ""
         }`}
       >
@@ -189,7 +189,7 @@ function PostCodeSearchField({
         </div>
 
       {error && (
-        <p className="text-left text-red-500 text-sm mt-2 max-w-[254px] md:max-w-[246px] lg:max-w-[404px]">
+        <p className="ml-[5%] text-left text-red-500 text-sm mt-2 max-w-[254px] md:max-w-[246px] lg:max-w-[404px]">
           {error}
         </p>
       )}

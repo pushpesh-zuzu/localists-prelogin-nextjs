@@ -18,7 +18,7 @@ function PostCodeSection() {
       <p
         className="block md:hidden text-center
           font-Inter font-black text-white
-          
+          tracking-[-0.03em]
           text-[25px] leading-[28px]
           md:text-[30px] md:leading-[35px]
           lg:text-[40px] lg:leading-[55px]
@@ -38,6 +38,7 @@ function PostCodeSection() {
       <p
         className="hidden md:block
           font-Inter font-black text-white
+          tracking-[-0.03em]
           text-[25px] leading-[28px]
           md:text-[30px] md:leading-[35px]
           lg:text-[40px] lg:leading-[55px]
