@@ -137,8 +137,8 @@ function PostCodeSearchField({
   return (
     <>
       <div
-        className={`relative max-w-[260px] md:max-w-[246px] lg:max-w-[416px] ${
-          margin ? "mt-5 md:mt-6 xl:mt-[40px]" : ""
+        className={`relative max-w-[260px] md:max-w-[280px] lg:max-w-[416px] ${
+          margin ? "mt-5 md:mt-6 lg:mt-[40px]" : ""
         }`}
       >
         <div
@@ -157,12 +157,12 @@ function PostCodeSearchField({
               placeholder={placeholder}
               disabled={disabled}
               autoComplete="off"
-              className={`w-full font-bold px-4 py-2.5 md:pl-6 md:py-2.5 xl:pl-[43px] xl:py-4 
+              className={`w-full font-bold px-4 py-2.5 md:pl-6 md:py-2.5 lg:pl-[43px] lg:py-4 
                         !text-[#B3B3B3] 
                         placeholder:!text-[#B3B3B3] 
                         focus:outline-none 
-                        text-base xl:!text-[25px] 
-                        placeholder:text-base xl:placeholder:!text-[25px]`}
+                        text-base lg:!text-[25px] 
+                        placeholder:text-base lg:placeholder:!text-[25px]`}
             />
 
             {/* Validation Icons */}
@@ -182,7 +182,7 @@ function PostCodeSearchField({
             type="button"
             onClick={handleSubmit}
             
-            className={` ${buttonBg} cursor-pointer min-w-[62px] md:min-w-[100px] font-bold pl-3.5 pr-5 py-[11px]  xl:pl-[22px] xl:pr-6 xl:py-4 text-white focus:outline-none text-base xl:text-[25px]!`}
+            className={` ${buttonBg} cursor-pointer min-w-[62px] lg:min-w-[100px] font-bold pl-3.5 pr-5 py-[11px]  lg:pl-[22px] lg:pr-6 lg:py-4 text-white focus:outline-none text-base lg:text-[25px]!`}
           >
             {buttonText}
           </button>

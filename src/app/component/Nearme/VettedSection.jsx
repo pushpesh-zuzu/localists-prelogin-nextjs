@@ -22,20 +22,20 @@ function VettedSection({
     <WrapperBGWidth>
       <div className="md:block p-[10px] min-[358px]:p-[35px]  sm:px-10 md:px-16 md:py-10 xl:px-[120px] xl:pt-[72px] xl:pb-[72px]">
         <Breadcrumb items={breadcrumb} />
-        <div className="pt-7 md:pt-[58px]">
+        <div className="pt-7 lg:pt-10 lg:pt-[58px]">
           <NearmeH2Heading
             headdingblue={vettedHeading1}
             headingblack={vettedHeading2}
           />
-          <div className="mt-5 md:mt-12 flex flex-col gap-[15px] md:gap-6">
+          <div className="mt-5 md:mt-6 lg:mt-12 flex flex-col gap-[15px] lg:gap-6">
             {paragraph.map((item, index) => (
-              <Paragraph bold="font-normal" variant="primarySmall" key={index}>
+              <Paragraph className="font-normal! md:font-bold!" variant="primarySmall" key={index}>
                 {item}
               </Paragraph>
             ))}
-            <div className="flex flex-wrap justify-center md:justify-start gap-[7px] md:gap-6 mb-2.5 mt-1.5 md:mt-6">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-[7px] md:gap-6 mb-2.5 mt-1.5 md:mt-3 lg:mt-6">
               <GetQuote text={getQuoteText} />
-              <Button variant="secondary" className="max-w-fit px-[13px] py-[7px] xl:py-4 xl:px-[30px] rounded-full bg-white border-[1.78px] md:border-4 border-black text-black shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+              <Button variant="secondary" className="max-w-fit px-[13px] py-[7px] xl:py-4 xl:px-[30px] rounded-full bg-white border-[1.78px] lg:border-4 border-black text-black shadow-[0_0_4px_rgba(0,0,0,0.1)]">
                 {buttonText}
               </Button>
             </div>

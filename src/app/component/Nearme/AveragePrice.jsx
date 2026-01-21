@@ -4,7 +4,7 @@ import Paragraph from "../UI/Typography/Paragraph";
 
 export default function AveragePrice() {
   return (
-    <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] md:pb-0 pt-2 md:pt-[50px] ">
+    <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] lg:pb-0 pt-2 md:pt-6 lg:pt-[50px] ">
       <div className="w-full max-w-[1000px]">
         <div
           className="w-full rounded-[25px]"
@@ -17,7 +17,7 @@ export default function AveragePrice() {
                 Average cost of tree surgery UK
               </H2>
 
-              <div className="hidden md:flex mt-6 lg:mt-0 justify-center lg:justify-start">
+              <div className="hidden lg:flex mt-6 lg:mt-0 justify-center lg:justify-start">
                 <GetQuote text=" Get a real quote" />
               </div>
             </div>
@@ -28,11 +28,11 @@ export default function AveragePrice() {
               <div className="">
                 <Paragraph
                   variant="primarySmall"
-                  className="max-w-[152px] lg:max-w-full text-left lg:text-center"
+                  className="md:mx-auto max-w-[152px] lg:max-w-full text-left lg:text-center"
                 >
                   For a small tree removal (under 25ft), the average cost is
                 </Paragraph>
-                <p className="text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left lg:text-center text-[#253238] mt-8 lg:mt-3">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left md:text-center lg:text-center text-[#253238] mt-8 lg:mt-3">
                   £450
                 </p>
               </div>
@@ -41,11 +41,11 @@ export default function AveragePrice() {
               <div className="">
                 <Paragraph
                   variant="primarySmall"
-                  className="text-left lg:text-center max-w-[164px] lg:min-w-[264px]"
+                  className="md:mx-auto text-left md:text-center lg:text-center max-w-[164px] lg:min-w-[264px]"
                 >
                   For a medium stump removal under 15 inch diameter), the average cost is
                 </Paragraph>
-                <p className="text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left lg:text-center text-[#253238] mt-3">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left md:text-center text-[#253238] mt-3">
                   £215
                 </p>
               </div>
@@ -57,11 +57,11 @@ export default function AveragePrice() {
               <div className="">
                 <Paragraph
                   variant="primarySmall"
-                  className="text-left lg:text-center max-w-[154px] lg:max-w-[90%]"
+                  className="md:mx-auto text-left md:text-center lg:text-center max-w-[154px] lg:max-w-[90%]"
                 >
                   Trimming or pruning a small tree (under 25ft) costs on average
                 </Paragraph>
-                <p className="text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left lg:text-center text-[#253238] max-[336px]:mt-[22%] mt-[10%] sm:mt-4">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left md:text-center text-[#253238] max-[336px]:mt-[22%] mt-[10%] sm:mt-4">
                   £250
                 </p>
               </div>
@@ -70,15 +70,15 @@ export default function AveragePrice() {
               <div className="">
                 <Paragraph
                   variant="primarySmall"
-                  className="text-left lg:text-center max-w-[154px] lg:min-w-[264px]"
+                  className="md:mx-auto text-left md:text-center lg:text-center max-w-[154px] lg:min-w-[264px]"
                 >
                   For medium stump grinding (under 15 inch in diameter), the average cost is
                 </Paragraph>
-                <p className="text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left lg:text-center text-[#253238] mt-3">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left md:text-center text-[#253238] mt-3">
                   £115
                 </p>
               </div>
-              <div className="flex md:hidden col-span-2 mt-0 justify-center">
+              <div className="flex lg:hidden col-span-2 mt-0 justify-center">
                 <GetQuote text=" Get a real quote" />
               </div>
             </div>

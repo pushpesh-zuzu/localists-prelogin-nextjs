@@ -22,12 +22,12 @@ export default function PopularJobNearMe({
       
   
     </div> */}
-      <div className="md:block rounded-[20px] md:rounded-none mx-2.5 md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white  px-2.5 py-[30px] sm:px-10 md:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[100px]">
-        <div className="rounded-[20px] md:max-w-[646px] lg:max-w-[900px] xl:max-w-[1200px] xl:h-[470px] relative overflow-visible">
+      <div className="md:block rounded-[20px] md:rounded-none mx-2.5 md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white  px-2.5 py-[30px] sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[100px]">
+        <div className="rounded-[20px] md:max-w-[646px] lg:max-w-[900px] xl:max-w-[1200px] md:h-[280px] lg:h-[380px] xl:h-[470px] relative overflow-visible">
           {/* 1️⃣ Shape background */}
           <div
             className="rounded-[20px] md:rounded-[40px] absolute inset-0 bg-[#00AFE3]
-    md:[clip-path:polygon(0%_0%,90%_0%,80.66%_100%,0%_100%)]"
+          md:[clip-path:polygon(0%_0%,90%_0%,80.66%_100%,0%_100%)]"
           />
 
           {/* 2️⃣ Normal content layer */}
@@ -60,9 +60,9 @@ export default function PopularJobNearMe({
             width={400}
             height={600}
             fetchPriority="high"
-            className="hidden md:block w-auto h-[248px] lg:h-[331px] xl:h-[472px] xl:w-[400px] absolute md:-right-6 lg:-right-7  xl:-right-14 bottom-0 z-20 pointer-events-none"
+            className="hidden md:block w-auto h-[280px] lg:h-[380px] xl:h-[472px] xl:w-[400px] absolute md:-right-12 lg:-right-14 xl:-right-14 bottom-0 z-20 pointer-events-none"
           />
-          <LogoIcon className="hidden md:block absolute -bottom-1 -right-8 xl:-right-13 w-[100px] h-6 lg:w-[140px] lg:h-8 xl:w-[200px] xl:h-12" />
+          <LogoIcon className="hidden md:block absolute -bottom-1 -right-8 xl:-right-13 w-[120px] h-6 lg:w-[140px] lg:h-8 xl:w-[200px] xl:h-12" />
         </div>
       </div>
     </WrapperBGWidth>

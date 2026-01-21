@@ -52,7 +52,7 @@ function HeroSectionNearMe({
           />
         </div>
         <section
-          className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full  md:flex-row px-[34px] pt-10 md:px-[60px] md:pb-[72px] xl:pb-[100px] md:pt-[38px] xl:px-[120px] xl:pt-[72px] relative"
+          className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full  md:flex-row px-[34px] pt-10 md:px-[60px] lg:pb-[72px] xl:pb-[100px] md:pt-[38px] xl:px-[120px] xl:pt-[72px] relative"
           role="banner"
           aria-label="Hero section"
         >
@@ -69,7 +69,7 @@ function HeroSectionNearMe({
             </H1>
             <Paragraph1
               style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
-              className="md:max-w-[80%] sm:max-w-[60%] max-w-full text-white pt-[18px] md:pt-2 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
+              className="md:max-w-[60%] sm:max-w-[60%] max-w-full text-white pt-[18px] md:pt-2 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
             >
               {description}
             </Paragraph1>

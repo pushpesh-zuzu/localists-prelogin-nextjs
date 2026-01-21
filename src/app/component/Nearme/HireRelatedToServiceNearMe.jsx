@@ -33,7 +33,7 @@ export default function HireRelatedToServiceNearMe({
 );
   return (
     <WrapperBGWidth background={"#00AFE3"}>
-      <div className="bg-[#00AFE3]  px-2.5 py-[30px] md:py-[50px] md:pl-16  xl:px-[120px] lg:py-[72px] w-full h-full">
+      <div className="bg-[#00AFE3] px-2.5  md:px-10 py-[30px] md:py-[50px] lg:pl-16  xl:px-[120px] lg:py-[72px] w-full h-full">
         <header className="mb-5 xl:mb-12">
           <div className="flex flex-wrap md:flex-col lg:flex-row xl:justify-between items-left gap-7.5 md:gap-6 xl:gap-12">
             <h2

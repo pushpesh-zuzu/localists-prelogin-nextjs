@@ -9,11 +9,11 @@ function NearmeMember({ description = "" }) {
   return (
     <div className="w-full max-w-[283px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto pt-5 pb-[30px]  md:py-[75px] xl:pt-0 xl:pb-[72px]">
       <div className="hidden md:flex w-fit rounded-[36px] overflow-hidden mx-auto ">
-        <div className=" w-[340] md:h-[280px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
+        <div className=" w-[340] md:h-[350px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
           <>
             <H3
               style={{ textShadow: "0px 1.95px 1.95px #0000000D" }}
-              className="hidden md:block text-white font-bold font-[Arial] leading-7 xl:leading-[42px] lg:pr-6"
+              className="hidden md:block text-white font-bold font-[Arial] leading-9 xl:leading-[42px] lg:pr-6"
             >
               {description}
             </H3>
@@ -41,7 +41,7 @@ function NearmeMember({ description = "" }) {
             loading="eager"
             height={512}
             width={521}
-            className="w-[273px] h-[280px] lg:w-[521px] lg:h-[512px]"
+            className="w-[273px] h-[350px] lg:w-[521px] lg:h-[512px]"
           />
         </div>
       </div>
