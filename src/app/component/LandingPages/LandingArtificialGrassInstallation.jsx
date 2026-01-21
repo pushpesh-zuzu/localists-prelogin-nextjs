@@ -57,7 +57,7 @@ function LandingArtificialGrassInstallation() {
         bannerImage={LANDING_DETAIL_BANNERS["artificial_grass_installation_ppc"]?.banner}
         cancelHeading={CANCEL_POPUP_DATA.cancelHeading}
         cancelPara={CANCEL_POPUP_DATA.cancelPara}
-        serviceId={ServiceId.landscaping_ppc}
+        serviceId={ServiceId.artificial_grass_installation_ppc}
         welcomModalTitle={LANDING_WELCOM_MODAL_TITLE["artificial_grass_installation_ppc"]}
         welcomModalButtonText={
           LANDING_WELCOM_MODAL_BUTTON_TITLE["artificial_grass_installation_ppc"]
