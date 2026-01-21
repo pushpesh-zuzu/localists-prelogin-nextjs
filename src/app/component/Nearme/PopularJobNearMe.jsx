@@ -60,9 +60,9 @@ export default function PopularJobNearMe({
             width={400}
             height={600}
             fetchPriority="high"
-            className="hidden md:block w-auto h-[285px] lg:h-[360px] xl:h-[472px] xl:w-[400px] absolute md:-right-11 xl:-right-14 bottom-0 z-20 pointer-events-none"
+            className="hidden md:block w-auto h-[248px] lg:h-[331px] xl:h-[472px] xl:w-[400px] absolute md:-right-6 lg:-right-7  xl:-right-14 bottom-0 z-20 pointer-events-none"
           />
-          <LogoIcon className="hidden md:block absolute bottom-0 -right-13 w-[120px] h-6 lg:w-[140px] lg:h-8 xl:w-[200px] xl:h-12" />
+          <LogoIcon className="hidden md:block absolute bottom-0 -right-8 xl:-right-13 w-[100px] h-6 lg:w-[140px] lg:h-8 xl:w-[200px] xl:h-12" />
         </div>
       </div>
     </WrapperBGWidth>

@@ -20,7 +20,7 @@ function VettedSection({
 }) {
   return (
     <WrapperBGWidth>
-      <div className="md:block p-[35px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] xl:pt-[72px] xl:pb-[72px]">
+      <div className="md:block p-[10px] min-[358px]:p-[35px]  sm:px-10 md:px-16 md:py-10 xl:px-[120px] xl:pt-[72px] xl:pb-[72px]">
         <Breadcrumb items={breadcrumb} />
         <div className="pt-7 md:pt-[58px]">
           <NearmeH2Heading
