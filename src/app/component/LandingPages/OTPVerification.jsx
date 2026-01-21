@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { usePathname, useRouter } from "next/navigation";
-import Modal from "../Modal";
+import Modal from "../common/Modal";
 import {
   createRequestData,
   resendOtp,
@@ -11,9 +11,9 @@ import {
 } from "@/lib/store/buyerslice/buyerSlice";
 import { showToast } from "@/utils/toaster";
 import { formatUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
-import BackButtonOTP from "../icons/Registration/BackButtonOTP";
-import H5 from "../../UI/Typography/H5";
-import Paragraph from "../../UI/Typography/Paragraph";
+import BackButtonOTP from "../common/icons/Registration/BackButtonOTP";
+import H5 from "../UI/Typography/H5";
+import Paragraph from "../UI/Typography/Paragraph2";
 
 const OtpVerification = ({
   open,
@@ -248,7 +248,7 @@ const OtpVerification = ({
 
         {/* Verify Button */}
         <button
-          className="mt-[18px] w-[200px] rounded-[3px] bg-[#00ADD8] cursor-pointer px-[23px] py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0096c4] disabled:opacity-50"
+          className="mt-[18px] w-[200px] rounded-[3px] bg-[#00ADD8] px-[23px] py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0096c4] disabled:opacity-50"
           disabled={requestLoader || verifyPhoneNumberLoader}
           onClick={handleSubmit}
         >

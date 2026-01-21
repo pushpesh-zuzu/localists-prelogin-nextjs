@@ -57,7 +57,7 @@ function LandingFenceAndGate() {
         bannerImage={LANDING_DETAIL_BANNERS["fencing_ppc"]?.banner}
         cancelHeading={CANCEL_POPUP_DATA.cancelHeading}
         cancelPara={CANCEL_POPUP_DATA.cancelPara}
-        serviceId={ServiceId.landscaping_ppc}
+        serviceId={ServiceId.fencing_ppc}
         welcomModalTitle={LANDING_WELCOM_MODAL_TITLE["fencing_ppc"]}
         welcomModalButtonText={
           LANDING_WELCOM_MODAL_BUTTON_TITLE["fencing_ppc"]

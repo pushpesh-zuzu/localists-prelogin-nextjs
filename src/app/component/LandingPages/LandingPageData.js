@@ -8,9 +8,6 @@ import ResinDriveway from "../common/LandingPagesBannerAndIcons/ResinDriveway.we
 import BlockPaving from "../common/LandingPagesBannerAndIcons/BlockPaving.webp";
 import TarmacDriveway from "../common/LandingPagesBannerAndIcons/TarmacDriveway.webp";
 import ImprintedConcrete from "../common/LandingPagesBannerAndIcons/ImprintedConcrete.webp";
-// import QuoteStepIcon from "../common/LandingPagesBannerAndIcons/QuoteStepIcon";
-// import FormStepIcon from "../common/LandingPagesBannerAndIcons/QuoteStepIcon";
-// import CompareStepIcon from "../common/LandingPagesBannerAndIcons/QuoteStepIcon";
 import CompareStepIcon from "../common/icons/HomePageIcons/HowItWorkCompareIcon";
 import FormStepIcon from "../common/icons/HomePageIcons/HowItWorkIconPencingIcon";
 import QuoteStepIcon from "../common/icons/HomePageIcons/HowItWorkUserIcon";

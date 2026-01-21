@@ -35,8 +35,7 @@ const LandingHowItWorkSteps = ({ step }) => {
           max-[667px]:bg-black max-[667px]:mt-[-50px]
 
           max-[390px]:w-[56.46px] max-[390px]:h-[56.46px] max-[390px]:top-[-4px]
-        "
-            >
+        " >
                 <Icon
                     className="
           [&_*]:stroke-white        

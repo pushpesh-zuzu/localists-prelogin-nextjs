@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "next/navigation";
-import Modal from "../Modal";
+import Modal from "../common/Modal";
 import useUserInfo from "@/utils/getUserIp";
 import { extractAllParams } from "@/utils/decodeURLParams";
 import {
@@ -12,9 +12,9 @@ import {
 } from "@/lib/store/buyerslice/buyerSlice";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
-import Button1 from "../../UI/Typography/Button1";
-import H3 from "../../UI/Typography/H3";
-import Paragraph2 from "../../UI/Typography/Paragraph2";
+import Button1 from "../UI/Typography/Button1";
+import H3 from "../UI/Typography/H3";
+import Paragraph2 from "../UI/Typography/Paragraph2";
 
 const ConfirmationModal = ({
   isOpen,

@@ -8,9 +8,9 @@ import {
   setBuyerStep,
   setcitySerach,
 } from "@/lib/store/buyerslice/buyerSlice";
-// import BuyerRegistrationLandingPage from "../BuyerRegistrationLandingPage/BuyerRegistrationLandingPage";
+import BuyerRegistrationLandingPage from "./BuyerRegistrationLandingPage";
 import H2 from "../UI/Typography/H2";
-import LoaderIndicator from "../common/Loader/LoaderIndicatore";
+import { getBarkToken } from "@/utils/CookiesHelper";
 
 const SearchPostAndBanner = ({
   title = "",
@@ -23,7 +23,7 @@ const SearchPostAndBanner = ({
   welcomModalButtonText,
 }) => {
   const dispatch = useDispatch();
-  const { userToken } = useSelector((state) => state.auth);
+  const userToken = getBarkToken();
   const { postCodeLoader, buyerRequest } = useSelector((state) => state.buyer);
 
   const [pincode, setPincode] = useState("");
@@ -48,6 +48,19 @@ const SearchPostAndBanner = ({
 
     return () => clearTimeout(timeout);
   }, []);
+
+
+  useEffect(() => {
+    const pending = JSON.parse(localStorage.getItem("pendingBuyerModal"));
+    if (pending?.shouldOpen) {
+      setTimeout(() => {
+        dispatch(setbuyerRequestData(pending.buyerRequest));
+        dispatch(setcitySerach(pending.city));
+        setShowModal(true);
+        dispatch(setBuyerStep(7));
+      }, 200);
+    }
+  }, [dispatch]);
 
   const handleContinue = async () => {
     if (!pincode.trim()) {
@@ -180,11 +193,11 @@ const SearchPostAndBanner = ({
       </div>
 
       {/* Modal */}
-      {/* {showModal && (userToken?.active_status === 2 || !userToken) && (
+      {showModal && (userToken?.active_status === 2 || !userToken) && (
         <BuyerRegistrationLandingPage
           closeModal={handleClose}
           postcode={pincode}
-          postalCodeValidate
+          postalCodeValidate={true}
           serviceName={defaultService}
           cancelHeading={cancelHeading}
           cancelPara={cancelPara}
@@ -193,7 +206,7 @@ const SearchPostAndBanner = ({
           welcomModalTitle={welcomModalTitle}
           welcomModalButtonText={welcomModalButtonText}
         />
-      )} */}
+      )}
     </div>
   );
 };
