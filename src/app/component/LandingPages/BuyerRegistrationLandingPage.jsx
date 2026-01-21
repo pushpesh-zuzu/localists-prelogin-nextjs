@@ -220,13 +220,13 @@ const BuyerRegistrationLandingPage = ({
             />
           )}
 
-          {buyerStep === 8 && (
+          {/* {buyerStep === 8 && (
             <BidsList
               nextStep={nextStep}
               previousStep={previousStep}
               onClose={handleClose}
             />
-          )}
+          )} */}
 
           {showConfirmModal && (
             <ConfirmationModal
@@ -344,13 +344,13 @@ const BuyerRegistrationLandingPage = ({
             />
           )}
 
-          {buyerStep === 8 && (
+          {/* {buyerStep === 8 && (
             <BidsList
               nextStep={nextStep}
               previousStep={previousStep}
               onClose={handleClose}
             />
-          )}
+          )} */}
 
           {showConfirmModal && (
             <ConfirmationModal
