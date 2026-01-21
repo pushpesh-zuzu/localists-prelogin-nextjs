@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import LoginForm from "@/app/component/common/Auth/LoginForm";
 
 export const metadata = {
@@ -10,5 +11,9 @@ export const metadata = {
 };
 
 export default function LoginPage() {
-    return <LoginForm passwordless={false} />;
+    return (
+        <Suspense fallback={null}>
+            <LoginForm passwordless={false} />
+        </Suspense>
+    );
 }
