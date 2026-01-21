@@ -2,7 +2,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "image",
     src: "/nearme/treesurgery1.webp",
-    alt: "A tree surgeon climbing to the top of a tree with chainsaw in hand",
+    alt: "a tree surgeon performing some crown reduction on a tree",
     marginBottom: true,
   },
   {
@@ -27,7 +27,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "image",
     src: "/nearme/treesurgery.webp",
-    alt: "a tree surgeon performing some crown reduction on a tree",
+    alt: "A tree surgeon climbing to the top of a tree with chainsaw in hand",
     marginBottom: true,
     // marginTop:true
   },

@@ -7,7 +7,11 @@ import Paragraph1 from "../UI/Typography/Paragraph1";
 import LogoIcon from "../common/icons/HomePageIcons/LogoIcon";
 import Paragraph from "../UI/Typography/Paragraph";
 
-export default function PopularJobNearMe({ services = [], popularImage = "" }) {
+export default function PopularJobNearMe({
+  services = [],
+  popularImage = "",
+  altText = "",
+}) {
   return (
     <WrapperBGWidth>
       {/* <div className="w-full max-w-[1200px] mx-auto aspect-[1200/590] relative">
@@ -52,7 +56,7 @@ export default function PopularJobNearMe({ services = [], popularImage = "" }) {
           {/* 3️⃣ Floating image */}
           <Image
             src={popularImage}
-            alt="tree surgeon near me"
+            alt={altText}
             width={400}
             height={600}
             fetchPriority="high"
