@@ -26,6 +26,7 @@ import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAb
 import AdviceInsightNearMe from "../AdviceInsightNearMe";
 import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
+import FAQScript from "../../common/seo/FAQScript";
 
 export const metadata = {
   title: "Find Quality Tree Surgeons Near Me | Localists",
@@ -49,6 +50,7 @@ function TreeSurgeon() {
   return (
     <>
       <CloseBrowserAbandon />
+      <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]}/>
       <HeroSectionNearMe
         heading1="Find Tree Surgeons"
         heading2="Near You"
@@ -71,7 +73,7 @@ function TreeSurgeon() {
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
-        heading1="Tree surgeons"
+        heading1="Tree Surgeons"
         heading2="in your area"
         tabData={TREE_SURGEON_TABDATA}
       />
@@ -80,7 +82,7 @@ function TreeSurgeon() {
       <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
       {/* </PaddingWrapper> */}
       <FAQ data={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]} />
-      <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} />
+      {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}
       <DiscoverServices />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

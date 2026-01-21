@@ -44,7 +44,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     text: "Trees can become harmful when they’re diseased, unstable, or simply too large for their surroundings. For example, a tree with hidden rot at the base might look fine on the outside but could topple in a storm, damaging property or blocking a road. In other cases, overgrown branches might stretch into power lines, or roots can push up paving slabs and create trip hazards. This is where a tree surgeon’s expertise matters. They can spot these risks early and take action.",
   },
   {
-    type: "pbold",
+    type: "p",
     text: "Here are some of the key things a tree surgeon does:",
     className: "my-[15px] md:my-[25px]",
   },
@@ -123,7 +123,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     text: "How do I pick the right tree surgeon",
   },
   {
-    type: "pbold",
+    type: "p",
     text: "When choosing a tree surgeon, it’s important to look beyond price and focus on their training, safety standards, and experience. You can look out for one or more of the following:",
     className: "mb-[15px] md:mb-[25px] ",
   },
@@ -185,13 +185,7 @@ export const FREQUENTLY_DATA_TREE_SURGEON = {
       description: `
       Reducing a tree’s height (also called crown reduction) can cost anywhere between <strong>£150 and £500</strong>, depending on the size of the tree, how much needs to be reduced, and where you live. For example, reducing a very tall oak will cost more than trimming back a medium-sized birch. Tree surgeons usually visit first to assess and give a tailored quote.`,
     },
-    {
-      key: "5",
-      title: "Which trees are protected in the UK?",
-      description: `
-      Trees that are protected in the UK include those covered by a Tree Preservation Order (TPO) or those located in conservation areas. These protections mean you must get permission from the local council before cutting, pruning, or removing the tree. Protected trees are usually those with significant environmental, historical, or aesthetic value.
-      `,
-    },
+  
   ],
 };
 export const TREE_SRUGEON_ADVICEINSIGHT = [

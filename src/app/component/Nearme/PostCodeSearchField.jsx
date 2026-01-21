@@ -182,7 +182,7 @@ function PostCodeSearchField({
             type="button"
             onClick={handleSubmit}
             
-            className={` ${buttonBg} min-w-[62px] md:min-w-[100px] font-bold pl-3.5 pr-5 py-[11px]  xl:pl-[22px] xl:pr-6 xl:py-4 text-white focus:outline-none text-base xl:text-[25px]!`}
+            className={` ${buttonBg} cursor-pointer min-w-[62px] md:min-w-[100px] font-bold pl-3.5 pr-5 py-[11px]  xl:pl-[22px] xl:pr-6 xl:py-4 text-white focus:outline-none text-base xl:text-[25px]!`}
           >
             {buttonText}
           </button>

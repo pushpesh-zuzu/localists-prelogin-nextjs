@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 
 // const BASE_URL = "https://www.localists.com";
 
-const BASE_URL = "https://dev2.localistsbooster.com";
+const BASE_URL = "https://localistsbooster.com/en/gb";
 
 
 export default function SEO({
@@ -14,7 +14,7 @@ export default function SEO({
   conversion = false,
 }) {
   const pathname = usePathname();
-  const canonicalUrl = `${BASE_URL}${pathname}`;
+  const canonicalUrl = `${BASE_URL}/${pathname}`;
 
   const breadcrumbList =
     breadcrumb?.length > 0

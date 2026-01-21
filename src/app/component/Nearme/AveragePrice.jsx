@@ -90,12 +90,12 @@ export default function AveragePrice() {
           <p
             className="text-[13.5px] leading-[18px]
         lg:text-[16px] lg:leading-[16px]
-        lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[-0.03em]font-normal lg:font-bold"
+        lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[-0.03em] font-normal "
           >
             *costs are estimates only, to get a more specific estimate try our{" "}
-            <a href="#" className="underline font-normal text-[#00AFE3]">
+            {/* <a href="#" className="underline font-normal text-[#00AFE3]"> */}
               Tree Surgery Calculator
-            </a>
+            {/* </a> */}
           </p>
         </div>
         
