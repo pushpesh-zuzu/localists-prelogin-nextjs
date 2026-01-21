@@ -7,7 +7,7 @@ import Paragraph1 from "../UI/Typography/Paragraph1";
 import LogoIcon from "../common/icons/HomePageIcons/LogoIcon";
 import Paragraph from "../UI/Typography/Paragraph";
 
-export default function PopularJobNearMe({ services = [] }) {
+export default function PopularJobNearMe({ services = [], popularImage = "" }) {
   return (
     <WrapperBGWidth>
       {/* <div className="w-full max-w-[1200px] mx-auto aspect-[1200/590] relative">
@@ -28,8 +28,11 @@ export default function PopularJobNearMe({ services = [] }) {
 
           {/* 2️⃣ Normal content layer */}
           <div className="relative z-10 h-full pt-[30px] md:px-8 xl:px-15 flex flex-col md:justify-center md:max-w-[70%]">
-            <H2 className="text-white mb-4 md:mb-0 md:pb-4 xl:pb-[35px]">Popular Jobs.</H2>
-            <Paragraph variant="secondary"
+            <H2 className="text-white mb-4 md:mb-0 md:pb-4 xl:pb-[35px]">
+              Popular Jobs.
+            </H2>
+            <Paragraph
+              variant="secondary"
               style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
               className=" sm:max-w-full mb-5 md:mb-0 text-white  pb-4 xl:pb-[43px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
             >
@@ -37,14 +40,18 @@ export default function PopularJobNearMe({ services = [] }) {
             </Paragraph>
             <div className=" flex flex-wrap gap-2 xl:gap-5 md:mb-4 md:max-w-[400px] xl:max-w-full">
               {services.map((service) => (
-                <ServicesButton mobileBorder="border-2" key={service} service={service} />
+                <ServicesButton
+                  mobileBorder="border-2"
+                  key={service}
+                  service={service}
+                />
               ))}
             </div>
           </div>
 
           {/* 3️⃣ Floating image */}
           <Image
-            src="/nearme/treeSurgeonNearmeRounded.png"
+            src={popularImage}
             alt="tree surgeon near me"
             width={400}
             height={600}

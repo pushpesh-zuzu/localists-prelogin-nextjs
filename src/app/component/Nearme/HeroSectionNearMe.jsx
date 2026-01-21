@@ -25,7 +25,7 @@ function HeroSectionNearMe({
 }) {
   return (
     <>
-      <WrapperBGWidth className="relative">
+      <WrapperBGWidth className="relative" background={'#00afe3'}>
         <div className="absolute inset-0 md:h-[450px] lg:h-[560px] max-h-[560px]  hidden md:block">
           <Image
             src={bannerImage}
@@ -34,7 +34,7 @@ function HeroSectionNearMe({
             priority={true}
             fetchPriority="high"
             quality={75}
-            className="h-10 w-10 md:h-[540px] min-[900px]:h-[400px] lg:h-[560px] md:max-w-[1536px]"
+            className="h-10 w-10 md:h-[540px] min-[900px]:h-[400px] lg:h-[560px] md:max-w-[1536px] mx-auto"
             sizes="(min-width: 768px) 100vw, 0px"
           />
         </div>

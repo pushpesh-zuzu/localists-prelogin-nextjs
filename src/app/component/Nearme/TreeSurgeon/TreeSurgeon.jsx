@@ -61,7 +61,7 @@ function TreeSurgeon() {
         vettedHeading2="trust"
         breadcrumb={BREADCRUM_DATA_TREESURGEON}
       />
-      <PopularJobNearMe services={POPULAR_SERVICES} />
+      <PopularJobNearMe services={POPULAR_SERVICES} popularImage="/nearme/treeSurgeonNearmeRounded.webp" />
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
