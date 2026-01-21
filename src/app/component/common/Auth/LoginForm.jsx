@@ -19,7 +19,7 @@ import Paragraph2 from "@/app/component/UI/Typography/Paragraph2";
 import Footer from "../../Footer/Footer";
 
 export default function LoginForm({ passwordless }) {
-    
+
     const router = useRouter();
     const searchParams = useSearchParams();
     const dispatch = useDispatch();
@@ -139,141 +139,144 @@ export default function LoginForm({ passwordless }) {
 
     return (
         <>
-        <div className="min-h-screen flex flex-col items-center justify-center gap-[51px] pt-[60px] pb-[50px] max-md:gap-[35px] max-sm:gap-[20px]">
-            <SEO conversion />
-            {/* LOGIN BOX */}
-            <div className="w-full max-w-[600px] bg-white shadow-[0px_0px_4px_1px_#0000001A]
+            <div className={`flex flex-col items-center justify-center pt-[60px] pb-[50px] gap-[51px] max-md:gap-[35px] max-sm:gap-[20px] ${passwordless
+                    ? ""
+                    : "min-h-screen"
+                }`}>
+                <SEO conversion />
+                {/* LOGIN BOX */}
+                <div className="w-full max-w-[600px] bg-white shadow-[0px_0px_4px_1px_#0000001A]
         px-[40px] py-[40px] flex flex-col gap-[10px]
         max-md:px-[30px] max-md:pt-[10px] max-md:pb-[30px]
         max-sm:px-[20px] max-sm:pb-[20px] rounded-[20px]
       ">
-                <h1 className="mb-6 mt-4 font-Inter font-black
+                    <h1 className="mb-6 mt-4 font-Inter font-black
         tracking-[-0.03em]
         text-[30px] leading-[32px]
         md:text-[35px] md:leading-[32px]
         lg:text-[40px] lg:leading-[40px]">
-                    {passwordless ? <>Passwordless <br /> login</> : "Login"}
-                </h1>
+                        {passwordless ? <>Passwordless <br /> login</> : "Login"}
+                    </h1>
 
-                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                    <TextInput
-                        label="Email"
-                        name="email"
-                        type="email"
-                        placeholder="Enter email"
-                        required
-                        value={formData.email}
-                        error={errors.email}
-                        onChange={handleChange}
-                    />
-
-                    {!passwordless && (
-                        <PasswordInput
-                            label="Password"
-                            name="password"
-                            type="password"
-                            placeholder="Enter password"
-                            value={formData.password}
-                            error={errors.password}
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                        <TextInput
+                            label="Email"
+                            name="email"
+                            type="email"
+                            placeholder="Enter email"
                             required
+                            value={formData.email}
+                            error={errors.email}
                             onChange={handleChange}
                         />
-                    )}
 
-                    {/* Remember */}
-                    {!passwordless && (
-                        <div className="gap-2 text-[16px]">
-                            <RadioButton
-                                type="checkbox"
-                                id="rememberMe"
-                                name="rememberMe"
-                                label="Remember me"
-                                checked={rememberMe}
-                                onChange={(e) => setRememberMe(e.target.checked)}
+                        {!passwordless && (
+                            <PasswordInput
+                                label="Password"
+                                name="password"
+                                type="password"
+                                placeholder="Enter password"
+                                value={formData.password}
+                                error={errors.password}
+                                required
+                                onChange={handleChange}
                             />
-                        </div>
-                    )}
+                        )}
 
-                    {/* Submit */}
-                    <Button1
-                        type="submit"
-                        disabled={loginLoader || passwordlessLoader}
-                        className="h-[49px] w-full bg-[#00AFE3] hover:bg-[#4096ff]
+                        {/* Remember */}
+                        {!passwordless && (
+                            <div className="gap-2 text-[16px]">
+                                <RadioButton
+                                    type="checkbox"
+                                    id="rememberMe"
+                                    name="rememberMe"
+                                    label="Remember me"
+                                    checked={rememberMe}
+                                    onChange={(e) => setRememberMe(e.target.checked)}
+                                />
+                            </div>
+                        )}
+
+                        {/* Submit */}
+                        <Button1
+                            type="submit"
+                            disabled={loginLoader || passwordlessLoader}
+                            className="h-[49px] w-full bg-[#00AFE3] hover:bg-[#4096ff]
     text-white text-[16px] cursor-pointer
     flex items-center justify-center gap-2
     disabled:opacity-70 disabled:cursor-not-allowed
     max-md:h-[45px] max-md:text-[14px]
     max-sm:h-[40px] max-sm:text-[12px]
             " >
-                        {(loginLoader || passwordlessLoader) ? (
-                            <span className="h-5 w-5 border-3 border-[#4096ff] border-t-transparent rounded-full animate-spin" />
-                        ) : passwordless ? (
-                            "Send"
-                        ) : (
-                            "Login"
-                        )}
-                    </Button1>
+                            {(loginLoader || passwordlessLoader) ? (
+                                <span className="h-5 w-5 border-3 border-[#4096ff] border-t-transparent rounded-full animate-spin" />
+                            ) : passwordless ? (
+                                "Send"
+                            ) : (
+                                "Login"
+                            )}
+                        </Button1>
 
-                    {/* OR */}
-                    {!passwordless && (
-                        <>
-                            <div className="text-center text-[#ABABAB] text-[20px]
+                        {/* OR */}
+                        {!passwordless && (
+                            <>
+                                <div className="text-center text-[#ABABAB] text-[20px]
                 mt-[15px] mb-[15px]
                 max-md:text-[14px] max-md:my-[10px]
               ">
-                                OR
-                            </div>
+                                    OR
+                                </div>
 
-                            <button
-                                type="button"
-                                onClick={() => {
-                                    router.push(`/${currentLang}/${currentCountry}/passwordless_login`)
-                                }}
-                                className="h-[49px] cursor-pointer border border-[#dedede] text-[16px] hover:border-[#4096ff] hover:text-[#4096ff]
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        router.push(`/${currentLang}/${currentCountry}/passwordless_login`)
+                                    }}
+                                    className="h-[49px] cursor-pointer border border-[#dedede] text-[16px] hover:border-[#4096ff] hover:text-[#4096ff]
                   rounded-full
                   max-md:h-[45px] max-md:text-[14px]
                   max-sm:h-[40px] max-sm:text-[12px]
                 " >
-                                Send me a link to log in
-                            </button>
-                        </>
-                    )}
+                                    Send me a link to log in
+                                </button>
+                            </>
+                        )}
 
-                    {passwordless && (
-                        <button
-                            type="button"
-                            onClick={() => {
-                                router.push(`/${currentLang}/${currentCountry}/login`);
-                            }}
-                            className="text-left cursor-pointer text-[#ABABAB] mt-4"
-                        >
-                            Back to Login
-                        </button>
-                    )}
-                </form>
+                        {passwordless && (
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    router.push(`/${currentLang}/${currentCountry}/login`);
+                                }}
+                                className="text-left cursor-pointer text-[#ABABAB] mt-4"
+                            >
+                                Back to Login
+                            </button>
+                        )}
+                    </form>
+                </div>
+
+                {/* BOTTOM LINKS */}
+                {!passwordless && (
+                    <div className="text-center
+        ">
+                        <Paragraph2>
+                            Offering a service?{" "}
+                            <Link href={`/${currentLang}/${currentCountry}/sellers/create`} className="text-[#00AFE3] underline">
+                                Join as a professional
+                            </Link>
+                        </Paragraph2>
+                        <Paragraph2 className="mt-2">
+                            Looking for a service?{" "}
+                            <Link href={`/${currentLang}/${currentCountry}/`} className="text-[#00AFE3] underline">
+                                Get started
+                            </Link>
+                        </Paragraph2>
+                    </div>
+                )}
             </div>
 
-            {/* BOTTOM LINKS */}
-            {!passwordless && (
-                <div className="text-center
-        ">
-                    <Paragraph2>
-                        Offering a service?{" "}
-                        <Link href={`/${currentLang}/${currentCountry}/sellers/create`} className="text-[#00AFE3] underline">
-                            Join as a professional
-                        </Link>
-                    </Paragraph2>
-                    <Paragraph2 className="mt-2">
-                        Looking for a service?{" "}
-                        <Link href={`/${currentLang}/${currentCountry}/`} className="text-[#00AFE3] underline">
-                            Get started
-                        </Link>
-                    </Paragraph2>
-                </div>
-            )}
-        </div>
-
-        <Footer />
+            <Footer />
         </>
     );
 }
