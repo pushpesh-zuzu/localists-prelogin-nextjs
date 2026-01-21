@@ -45,11 +45,11 @@ const HeroSection = memo(function HeroSection() {
   return (
     <WrapperBGWidth background={"#00aeef"}>
       <section
-        className="flex flex-col lg:flex-row gap-[30px] lg:gap-[116px] min-h-[543px] sm:min-h-[376px] xl:min-h-[670px] bg-[#00AEEF] px-[31px] pt-10 pb-5 md:px-[87px] md:pt-[38px] md:pb-6 xl:px-[163px] xl:py-[72px]"
+        className="flex flex-col lg:flex-row gap-[30px] lg:gap-[116px] min-h-[543px] sm:min-h-[376px] xl:min-h-[670px] bg-[#00AEEF] px-[31px] pt-10 pb-5 md:px-[60px] md:pt-[38px] md:pb-6 xl:px-[120px] xl:py-[72px]"
         role="banner"
         aria-label="Hero section"
       >
-        <div className="w-full lg:w-1/2 flex flex-col xl:ml-[43px]">
+        <div className="w-full lg:w-1/2 flex flex-col">
           <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] lg:mb-7 max-h-12" />
 
           <H1 className="text-white block  text-shadow-[0_2.03px_2.03px_0_#0000001A]">

@@ -52,7 +52,7 @@ function HeroSectionNearMe({
           />
         </div>
         <section
-          className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full  md:flex-row px-[34px] pt-10 md:px-[87px] md:pb-[72px] xl:pb-[100px] md:pt-[38px] xl:px-[120px] xl:pt-[150px] relative"
+          className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full  md:flex-row px-[34px] pt-10 md:px-[60px] md:pb-[72px] xl:pb-[100px] md:pt-[38px] xl:px-[120px] xl:pt-[72px] relative"
           role="banner"
           aria-label="Hero section"
         >

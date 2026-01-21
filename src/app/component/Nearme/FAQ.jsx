@@ -16,7 +16,7 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
     <WrapperBGWidth>
       {" "}
       <div className="w-full px-2.5 sm:px-10 md:px-16 xl:px-[0px] lg:max-w-[1200px] mx-auto">
-        <NearmeH2Heading headdingblue="FAQ" className="mb-10" />
+        <NearmeH2Heading headdingblue="FAQ" className="mb-5 md:mb-10" />
 
         <div className="space-y-0 border-2 border-[#DBDFE4] rounded-[30px] overflow-hidden bg-white shadow-sm">
           {data.map((item, index) => (
