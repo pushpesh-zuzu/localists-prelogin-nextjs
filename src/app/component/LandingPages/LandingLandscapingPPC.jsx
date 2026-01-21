@@ -5,6 +5,19 @@ import { useEffect, useState } from "react";
 // import CloseBrowserAbandon from "../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import NavigationDetectorDesktop from "../common/NavigationDetected/NavigationDetectorDesktop";
 import NavigationDetectorWithConfirmations from "../common/NavigationDetected/NavigationDetectorWithConfirmations";
+import FindDetailAndBannerWrapper from "./FindDetailAndBannerWrapper";
+import LandingHowItWork from "./LandingHowItWork";
+import {
+  CANCEL_POPUP_DATA,
+  LANDING_DETAIL_BANNERS,
+  LANDING_DETAIL_DATA,
+  LANDING_HOW_IT_WORK,
+  LANDING_SERVICES,
+  LANDING_TITLES_AND_META,
+  LANDING_WELCOM_MODAL_BUTTON_TITLE,
+  LANDING_WELCOM_MODAL_TITLE,
+  ServiceId,
+} from "./LandingPageData"
 
 function LandingLandscapingPPC() {
   const [isClient, setIsClient] = useState(false);
@@ -37,7 +50,21 @@ function LandingLandscapingPPC() {
           )}
         </div>
       )}
-      <div>LandscapingPPC</div>
+      <FindDetailAndBannerWrapper
+        title={LANDING_TITLES_AND_META["landscaping_ppc"]?.title}
+        paragraphs={LANDING_DETAIL_DATA["landscaping_ppc"].paragraphs}
+        defaultService={LANDING_SERVICES["landscaping_ppc"]}
+        bannerImage={LANDING_DETAIL_BANNERS["landscaping_ppc"]?.banner}
+        cancelHeading={CANCEL_POPUP_DATA.cancelHeading}
+        cancelPara={CANCEL_POPUP_DATA.cancelPara}
+        serviceId={ServiceId.landscaping_ppc}
+        welcomModalTitle={LANDING_WELCOM_MODAL_TITLE["landscaping_ppc"]}
+        welcomModalButtonText={
+          LANDING_WELCOM_MODAL_BUTTON_TITLE["landscaping_ppc"]
+        }
+      />
+
+      <LandingHowItWork WORK_STEPS={LANDING_HOW_IT_WORK["landscaping_ppc"]} />
     </>
   )
 }
