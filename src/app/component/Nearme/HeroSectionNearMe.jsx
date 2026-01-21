@@ -62,10 +62,10 @@ function HeroSectionNearMe({
           >
             <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px]  lg:mb-7 max-h-12" />
             <H1 className="text-white block text-shadow-[0_2.03px_2.03px_0_#0000001A]">
-              <p>
+              <span>
                 {heading1}
                 <span className="text-[#253238] block">{heading2}</span>
-              </p>
+              </span>
             </H1>
             <Paragraph1
               style={{ textShadow: "0px 3.65px 3.65px #00000026" }}

@@ -10,6 +10,7 @@ import {
   QUESTION_AND_ABOUT_SERVICE,
   TREE_SRUGEON_ADVICEINSIGHT,
   TREE_SUREON_FEEDBACK,
+  TREE_SURGEON_DATA,
   TREE_SURGEON_TABDATA,
   VETTED_DATA_TREE_SURGEON,
 } from "./TreeSurgeonData";
@@ -27,6 +28,7 @@ import AdviceInsightNearMe from "../AdviceInsightNearMe";
 import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
+import DiscoverNearMe from "../DiscoverNearMe";
 
 export const metadata = {
   title: "Find Quality Tree Surgeons Near Me | Localists",
@@ -83,7 +85,7 @@ function TreeSurgeon() {
       {/* </PaddingWrapper> */}
       <FAQ data={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]} />
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}
-      <DiscoverServices />
+      <DiscoverNearMe homeData={TREE_SURGEON_DATA} />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
       />

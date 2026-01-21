@@ -285,3 +285,32 @@ export const TREE_SUREON_FEEDBACK = [
     name: "Tracey",
   },
 ];
+
+export const TREE_SURGEON_DATA = [
+  {
+    id: 1,
+    title: "Home & Garden",
+    image: "/homepage/image6.webp", 
+    isSpecial: true, 
+    bgColor: "bg-cyan-400"
+  },
+  {
+    id: 2,
+    title: "Fence & Gate Installation",
+    image: "/homepage/fenceandgate.webp", 
+    isSpecial: false
+  },
+  {
+    id: 4,
+    title: "Artificial Grass Installation",
+    image: "/homepage/artificialgrassinstallation.webp", 
+    isSpecial: false
+  },
+  {
+    id: 5,
+    title: "Patio Layer",
+    image: "/homepage/patiolayer.webp", // Aapki image path
+    isSpecial: false
+  },
+  
+];

@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 // JSON-LD Component
 function StructuredData() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.localists.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://localistsbooster.com';
   const canonicalUrl = `${baseUrl}/en/gb/tree-surgeons-near-me`;
   
   const breadcrumbList = [
@@ -39,7 +39,7 @@ function StructuredData() {
 
 // Metadata
 export async function generateMetadata() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.localists.com/en/gb';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://localistsbooster.com';
   const canonicalUrl = `${baseUrl}/en/gb/tree-surgeons-near-me`;
   
   const bannerImage = "/nearme/treeSurgeon.webp";
