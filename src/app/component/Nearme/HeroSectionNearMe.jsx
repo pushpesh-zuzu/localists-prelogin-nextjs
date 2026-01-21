@@ -25,7 +25,7 @@ function HeroSectionNearMe({
 }) {
   return (
     <>
-      <WrapperBGWidth className="relative" background={'#00afe3'}>
+      <WrapperBGWidth className="relative md:h-[450px] lg:h-[560px] max-h-[560px]" background={'#00afe3'}>
         <div className="absolute inset-0 md:h-[450px] lg:h-[560px] max-h-[560px]  hidden md:block">
           <Image
             src={bannerImage}
