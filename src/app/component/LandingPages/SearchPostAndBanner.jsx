@@ -8,9 +8,9 @@ import {
   setBuyerStep,
   setcitySerach,
 } from "@/lib/store/buyerslice/buyerSlice";
-import { message, Spin } from "antd";
 // import BuyerRegistrationLandingPage from "../BuyerRegistrationLandingPage/BuyerRegistrationLandingPage";
-import { LoadingOutlined } from "@ant-design/icons";
+import H2 from "../UI/Typography/H2";
+import LoaderIndicator from "../common/Loader/LoaderIndicatore";
 
 const SearchPostAndBanner = ({
   title = "",
@@ -84,21 +84,31 @@ const SearchPostAndBanner = ({
 
   return (
     <div className="w-[884px] mx-auto text-center">
-      {/* Heading */}
-      <h1
+      <style>{`
+               .custom-input {
+          color: #000000;
+          font-weight: 700;
+                  }
+      .custom-input::placeholder {
+        color: #959595;
+        opacity: 1;
+        font-weight: 700;
+      }
+    `}</style>
+
+      <H2
         className="
-          text-[45px] font-semibold text-white mb-[15px]
-          bg-black/50 inline-block px-2
-          max-[768px]:text-[38px]
-          max-[500px]:text-[32px] max-[500px]:leading-[40px]
-        "
-      >
+            leading-[40px]
+    max-[768px]:leading-[50px]
+    max-[480px]:leading-[55px]
+          text-white mb-[15px] rounded-[10px]
+          bg-black/50 inline-block py-3 px-2">
         Compare{" "}
-        <span className="text-[var(--primary-color)]">
+        <span className="text-[#00afe3]">
           FREE QUOTES{isNeedS ? "s" : ""}
         </span>{" "}
         from local {title}!
-      </h1>
+      </H2>
 
       {/* Search Box */}
       <div
@@ -108,9 +118,10 @@ const SearchPostAndBanner = ({
           rounded-[10px]
           mx-auto
           max-[768px]:px-[30px] max-[768px]:py-[50px]
-          max-[500px]:px-[15px] max-[500px]:py-[20px] max-[500px]:gap-[6px]
-        "
+          max-[500px]:px-[15px] max-[500px]:py-[20px]
+           max-[500px]:gap-[6px]"
       >
+
         <div className="relative flex items-center">
           <input
             ref={inputRef}
@@ -119,14 +130,15 @@ const SearchPostAndBanner = ({
             placeholder="Enter Postcode (No Spaces)"
             className="
               w-[509px] h-[50px]
-              border border-[#d9d9d9]
-              shadow-[0px_0px_2px_0.5px_#0000001a]
+              border border-[#D9D9D9]
               font-semibold text-[16px]
-              pl-[18px]
-              placeholder:text-[#959595]
+              pl-[18px] bg-white rounded-[5px]
+              custom-input
               max-[980px]:w-full
               max-[500px]:h-[36px] max-[500px]:text-[12px]
               max-[400px]:pl-[12px]
+              font-[Arial] leading-[100%]
+              tracking-[-0.03em]
             "
           />
 
@@ -136,23 +148,26 @@ const SearchPostAndBanner = ({
             className="
               absolute right-[7px]
               w-[187px] h-[40px]
-              bg-[var(--primary-color)] text-white
-              rounded-[3px]
-              text-[20px] font-medium
-              shadow-[0px_0px_2px_0.5px_#0000001a]
+              bg-[#00afe3] text-white
+              rounded-[5px]
+              text-[20px] cursor-pointer
               hover:bg-[#008cc0]
               max-[980px]:w-[157px]
-              max-[768px]:w-[120px]
+              max-[768px]:w-[120px] font-[Arial] leading-[100%]
+              tracking-[-0.03em]
               max-[500px]:w-[60px] max-[500px]:h-[26px] max-[500px]:text-[12px]
             "
           >
             {postCodeLoader ? (
-              <Spin
-                indicator={
-                  <LoadingOutlined spin style={{ color: "white" }} />
-                }
-              />
-            ) : (
+              <span
+                className="
+      inline-block
+      h-5 w-5
+      border-2 border-white/40
+      border-t-white
+      rounded-full
+      animate-spin
+    "/>) : (
               "Search"
             )}
           </button>
@@ -160,7 +175,7 @@ const SearchPostAndBanner = ({
       </div>
 
       {/* Modal */}
-      {showModal && (userToken?.active_status === 2 || !userToken) && (
+      {/* {showModal && (userToken?.active_status === 2 || !userToken) && (
         <BuyerRegistrationLandingPage
           closeModal={handleClose}
           postcode={pincode}
@@ -173,7 +188,7 @@ const SearchPostAndBanner = ({
           welcomModalTitle={welcomModalTitle}
           welcomModalButtonText={welcomModalButtonText}
         />
-      )}
+      )} */}
     </div>
   );
 };

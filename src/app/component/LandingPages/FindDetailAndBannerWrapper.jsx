@@ -14,7 +14,6 @@ const FindDetailAndBannerWrapper = ({
 }) => {
   return (
     <>
-      {/* Banner Section */}
       <div
         className="
           relative flex items-center justify-center text-white
@@ -24,7 +23,9 @@ const FindDetailAndBannerWrapper = ({
           max-[768px]:h-[440px] max-[768px]:px-[30px]
           max-[500px]:px-[10px]
         "
-        style={{ backgroundImage: `url(${bannerImage})` }}
+        style={{
+          backgroundImage: `url(${bannerImage?.src})`,
+        }}
       >
         <SearchPostAndBanner
           serviceId={serviceId}
@@ -37,7 +38,6 @@ const FindDetailAndBannerWrapper = ({
         />
       </div>
 
-      {/* Detail Section */}
       <div>
         <FindDetail paragraphs={paragraphs} />
       </div>

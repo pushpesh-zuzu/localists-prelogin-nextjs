@@ -3,7 +3,6 @@ const FindDetail = ({ paragraphs = [] }) => {
   return (
     <div
       className="
-        bg-[url('/assets/Images/subcategory/accountantInfoBackground.png')]
         bg-cover bg-center bg-no-repeat
         px-[88px] pt-[27px] pb-[18px]
         max-[768px]:px-[20px]
@@ -32,9 +31,14 @@ const FindDetail = ({ paragraphs = [] }) => {
             <p
               key={index}
               className="
-                text-center text-[18px] leading-[32px] font-normal
-                text-[#00afe3]
-                max-[500px]:text-[16px] max-[500px]:leading-[25px]
+        text-center
+        font-[Arial]
+        tracking-[-0.03em]
+        leading-[26px]
+        text-[#253238]
+        text-[20px]       
+        max-[768px]:text-[18px]
+        max-[480px]:text-[16px]
               "
               dangerouslySetInnerHTML={{ __html: para }}
             />

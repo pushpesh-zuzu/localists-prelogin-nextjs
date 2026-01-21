@@ -19,7 +19,7 @@ import {
   ServiceId,
 } from "./LandingPageData"
 
-function LandingLandscapingPPC() {
+function LandingArtificialGrassInstallation() {
   const [isClient, setIsClient] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -51,16 +51,16 @@ function LandingLandscapingPPC() {
         </div>
       )}
       <FindDetailAndBannerWrapper
-        title={LANDING_TITLES_AND_META["landscaping_ppc"]?.title}
-        paragraphs={LANDING_DETAIL_DATA["landscaping_ppc"].paragraphs}
-        defaultService={LANDING_SERVICES["landscaping_ppc"]}
-        bannerImage={LANDING_DETAIL_BANNERS["landscaping_ppc"]?.banner}
+        title={LANDING_TITLES_AND_META["artificial_grass_installation_ppc"]?.title}
+        paragraphs={LANDING_DETAIL_DATA["artificial_grass_installation_ppc"].paragraphs}
+        defaultService={LANDING_SERVICES["artificial_grass_installation_ppc"]}
+        bannerImage={LANDING_DETAIL_BANNERS["artificial_grass_installation_ppc"]?.banner}
         cancelHeading={CANCEL_POPUP_DATA.cancelHeading}
         cancelPara={CANCEL_POPUP_DATA.cancelPara}
         serviceId={ServiceId.landscaping_ppc}
-        welcomModalTitle={LANDING_WELCOM_MODAL_TITLE["landscaping_ppc"]}
+        welcomModalTitle={LANDING_WELCOM_MODAL_TITLE["artificial_grass_installation_ppc"]}
         welcomModalButtonText={
-          LANDING_WELCOM_MODAL_BUTTON_TITLE["landscaping_ppc"]
+          LANDING_WELCOM_MODAL_BUTTON_TITLE["artificial_grass_installation_ppc"]
         }
       />
 
@@ -69,4 +69,4 @@ function LandingLandscapingPPC() {
   )
 }
 
-export default LandingLandscapingPPC
+export default LandingArtificialGrassInstallation

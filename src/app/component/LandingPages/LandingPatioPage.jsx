@@ -19,7 +19,7 @@ import {
   ServiceId,
 } from "./LandingPageData"
 
-function LandingLandscapingPPC() {
+function LandingPatioPage() {
   const [isClient, setIsClient] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -51,16 +51,16 @@ function LandingLandscapingPPC() {
         </div>
       )}
       <FindDetailAndBannerWrapper
-        title={LANDING_TITLES_AND_META["landscaping_ppc"]?.title}
-        paragraphs={LANDING_DETAIL_DATA["landscaping_ppc"].paragraphs}
-        defaultService={LANDING_SERVICES["landscaping_ppc"]}
-        bannerImage={LANDING_DETAIL_BANNERS["landscaping_ppc"]?.banner}
+        title={LANDING_TITLES_AND_META["patio_services_ppc"]?.title}
+        paragraphs={LANDING_DETAIL_DATA["patio_services_ppc"].paragraphs}
+        defaultService={LANDING_SERVICES["patio_services_ppc"]}
+        bannerImage={LANDING_DETAIL_BANNERS["patio_services_ppc"]?.banner}
         cancelHeading={CANCEL_POPUP_DATA.cancelHeading}
         cancelPara={CANCEL_POPUP_DATA.cancelPara}
-        serviceId={ServiceId.landscaping_ppc}
-        welcomModalTitle={LANDING_WELCOM_MODAL_TITLE["landscaping_ppc"]}
+        serviceId={ServiceId.patio_services_ppc}
+        welcomModalTitle={LANDING_WELCOM_MODAL_TITLE["patio_services_ppc"]}
         welcomModalButtonText={
-          LANDING_WELCOM_MODAL_BUTTON_TITLE["landscaping_ppc"]
+          LANDING_WELCOM_MODAL_BUTTON_TITLE["patio_services_ppc"]
         }
       />
 
@@ -69,4 +69,4 @@ function LandingLandscapingPPC() {
   )
 }
 
-export default LandingLandscapingPPC
+export default LandingPatioPage
