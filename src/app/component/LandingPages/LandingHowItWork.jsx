@@ -61,7 +61,7 @@ const LandingHowItWork = ({ WORK_STEPS }) => {
           max-[390px]:gap-[50px]
         "
       >
-        {WORK_STEPS.map((item) => (
+        {WORK_STEPS?.map((item) => (
           <LandingHowItWorkSteps key={item.id} step={item} />
         ))}
       </div>
