@@ -121,8 +121,8 @@ export default function LoginForm({ passwordless }) {
                     showToast("success", "Login successful!");
 
                     res?.data?.active_status === 1
-                        ? router.replace(`/${currentLang}/${currentCountry}/sellers/leads`)
-                        : router.replace(`/${currentLang}/${currentCountry}/buyers/create`);
+                        ? router.replace("/sellers/leads")
+                        : router.replace("/buyers/create");
                     ;
                 } else {
                     showToast("error", res?.message || "Login failed. Please try again.");
