@@ -25,6 +25,7 @@ import UserFeedbackNearMe from "../UserFeedbackNearMe";
 import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import AdviceInsightNearMe from "../AdviceInsightNearMe";
 import dynamic from "next/dynamic";
+import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 
 export const metadata = {
   title: "Find Quality Tree Surgeons Near Me | Localists",
@@ -35,10 +36,11 @@ export const metadata = {
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
     <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
-      <div className="relative h-12 w-12">
+      {/* <div className="relative h-12 w-12">
         <div className="absolute inset-0 rounded-full border-4 border-gray-200" />
         <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-blue-600 animate-spin" />
-      </div>
+      </div> */}
+      <LoaderIndicator size="large"/>
     </div>
   ),
 });
