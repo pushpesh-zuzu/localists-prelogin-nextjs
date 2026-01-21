@@ -42,8 +42,8 @@ const LandingHowItWorkSteps = ({ step }) => {
           [&_*]:stroke-white        
         w-[80%] h-[80%]
 
-            max-[667px]:w-[44.99px] max-[667px]:h-[44.99px]
-            max-[390px]:w-[36.99px] max-[390px]:h-[36.99px]
+            max-[667px]:w-[60px] max-[667px]:h-[60px]
+            max-[390px]:w-[55px] max-[390px]:h-[55px]
           "/>
             </div>
 

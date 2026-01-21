@@ -98,17 +98,21 @@ const SearchPostAndBanner = ({
 
       <H2
         className="
-            leading-[40px]
-    max-[768px]:leading-[50px]
-    max-[480px]:leading-[55px]
-          text-white mb-[15px] rounded-[10px]
-          bg-black/50 inline-block py-3 px-2">
+    leading-[40px]
+    sm:leading-[32px]
+    md:leading-[50px]
+    lg:leading-[65px]
+    text-white mb-[15px] rounded-[10px]
+    bg-black/50 inline-block py-3 px-2
+  "
+      >
         Compare{" "}
         <span className="text-[#00afe3]">
           FREE QUOTES{isNeedS ? "s" : ""}
         </span>{" "}
         from local {title}!
       </H2>
+
 
       {/* Search Box */}
       <div
@@ -131,10 +135,11 @@ const SearchPostAndBanner = ({
             className="
               w-[509px] h-[50px]
               border border-[#D9D9D9]
-              font-semibold text-[16px]
+              text-[16px]
               pl-[18px] bg-white rounded-[5px]
               custom-input
               max-[980px]:w-full
+              max-[500px]:pr-[70px]
               max-[500px]:h-[36px] max-[500px]:text-[12px]
               max-[400px]:pl-[12px]
               font-[Arial] leading-[100%]
