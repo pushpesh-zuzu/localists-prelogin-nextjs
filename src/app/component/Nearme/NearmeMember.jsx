@@ -49,7 +49,7 @@ function NearmeMember({ description = "" }) {
       <div className="md:hidden rounded-[36px] overflow-hidden shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
         <div className="w-full  relative">
           <Image
-            src="/nearme/treeSurgeonMember.webp"
+            src="/nearme/treeSurgeonMemberMobile.webp"
             alt="Professional using phone"
             height={300}
             width={250}
