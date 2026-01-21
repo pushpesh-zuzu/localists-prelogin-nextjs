@@ -145,7 +145,7 @@ export default function LoginForm({ passwordless }) {
             <div className="w-full max-w-[600px] bg-white shadow-[0px_0px_4px_1px_#0000001A]
         px-[40px] py-[40px] flex flex-col gap-[10px]
         max-md:px-[30px] max-md:pt-[10px] max-md:pb-[30px]
-        max-sm:px-[20px] max-sm:pb-[20px]
+        max-sm:px-[20px] max-sm:pb-[20px] rounded-[20px]
       ">
                 <h1 className="mb-6 mt-4 font-Inter font-black
         tracking-[-0.03em]
