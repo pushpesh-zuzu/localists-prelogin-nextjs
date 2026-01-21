@@ -300,6 +300,12 @@ export const TREE_SURGEON_DATA = [
     image: "/homepage/fenceandgate.webp", 
     isSpecial: false
   },
+    {
+    id: 3,
+    title: "Landscaping",
+    image: "/homepage/landscapingservice.webp", // Aapki image path
+    isSpecial: false
+  },
   {
     id: 4,
     title: "Artificial Grass Installation",
@@ -313,4 +319,10 @@ export const TREE_SURGEON_DATA = [
     isSpecial: false
   },
   
+    {
+    id: 6,
+    title: "Gutter Cleaning",
+    image: "/homepage/guttercleaning.webp", // Aapki image path
+    isSpecial: false
+  },
 ];

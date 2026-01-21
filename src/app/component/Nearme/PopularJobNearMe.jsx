@@ -38,11 +38,11 @@ export default function PopularJobNearMe({
             <Paragraph
               variant="secondary"
               style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
-              className=" sm:max-w-full mb-5 md:mb-0 text-white  pb-4 xl:pb-[43px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
+              className=" sm:max-w-full mb-5 md:mb-0 text-white  pb-4 xl:pb-[43px]"
             >
               Click below to get a quote for the specific job you want
             </Paragraph>
-            <div className=" flex flex-wrap gap-2 xl:gap-5 md:mb-4 md:max-w-[400px] xl:max-w-full">
+            <div className=" flex flex-wrap gap-2 xl:gap-[15px] md:mb-4 md:max-w-[400px] xl:max-w-full">
               {services.map((service) => (
                 <ServicesButton
                   mobileBorder="border-2"

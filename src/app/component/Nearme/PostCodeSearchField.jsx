@@ -144,7 +144,7 @@ function PostCodeSearchField({
         <div
           className="flex items-center bg-white rounded-full overflow-hidden "
           style={{
-            boxShadow: "0px 23.2px 38.66px 0px #005974E5",
+            boxShadow: "0px 12.56px 20.94px 0px #005974E5",
           }}
         >
           {/* Input Field */}

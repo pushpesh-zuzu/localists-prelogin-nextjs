@@ -11,11 +11,11 @@ function DiscoverNearMe({ homeData = [], businessData = [], eventData = [] }) {
   return (
     <WrapperBGWidth>
       <div className="md:block px-2.5 py-5 sm:px-10 md:px-16 md:py-10 xl:px-[120px] pt-10 xl:pt-12 xl:pb-[72px]">
-        <H2 className="hidden lg:block text-[#00afe3] pb-4 xl:pb-10 text-center">
+        <H2 className=" text-[#00afe3] pb-4 xl:pb-10 text-center">
           Discover <span className="text-[#253238]">services.</span>{" "}
         </H2>
         <div>
-          {homeData && (
+          {homeData ? (
             <div>
               <div className="flex lg:hidden justify-between pt-5 md:pt-0 pb-12 md:pb-10 xl:pb-10">
                 <H2 className="text-[#00AFE3]">Home & Garden</H2>{" "}
@@ -30,8 +30,8 @@ function DiscoverNearMe({ homeData = [], businessData = [], eventData = [] }) {
                 showSpecial={true}
               />
             </div>
-          )}
-          {businessData && (
+          ):''}
+          {businessData.length ? (
             <div className="mt-[30px]">
               <div className="flex lg:hidden justify-between pt-5 pb-12 xl:pb-10">
                 <H2 className="text-[#00AFE3]">Business Services</H2>{" "}
@@ -46,8 +46,8 @@ function DiscoverNearMe({ homeData = [], businessData = [], eventData = [] }) {
                 showSpecial={true}
               />
             </div>
-          )}
-          {eventData && (
+          ):''}
+          {eventData.length ? (
             <div className="mt-[30px]">
               <div className="flex lg:hidden justify-between pt-5 pb-12 xl:pb-10">
                 <H2 className="text-[#00AFE3]">Weddings & Events</H2>{" "}
@@ -62,7 +62,7 @@ function DiscoverNearMe({ homeData = [], businessData = [], eventData = [] }) {
                 showSpecial={true}
               />
             </div>
-          )}
+          ):''}
         </div>
       </div>
     </WrapperBGWidth>

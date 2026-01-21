@@ -41,8 +41,8 @@ const AboutServicesAndQuestions = ({
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               className={`w-full h-auto object-cover rounded-lg ${
                 block?.className
-              } ${block?.marginTop ? "mt-[30px] lg:mt-[72px]" : ""} ${
-                block?.marginBottom ? "mb-5 lg:mb-[72px]" : ""
+              } ${block?.marginTop ? "mt-[30px] lg:mt-[60px]" : ""} ${
+                block?.marginBottom ? "mb-5 lg:mb-[60px]" : ""
               }`}
               priority={block?.priority || false}
             />

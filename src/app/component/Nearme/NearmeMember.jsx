@@ -7,7 +7,7 @@ import Button from "../UI/Typography/Button";
 
 function NearmeMember({ description = "" }) {
   return (
-    <div className="w-full max-w-[300px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto pt-5 pb-[30px]  md:py-[75px] xl:pt-0 xl:pb-[72px]">
+    <div className="w-full max-w-[283px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto pt-5 pb-[30px]  md:py-[75px] xl:pt-0 xl:pb-[72px]">
       <div className="hidden md:flex w-fit rounded-[36px] overflow-hidden mx-auto ">
         <div className=" w-[340] md:h-[280px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
           <>
@@ -19,7 +19,7 @@ function NearmeMember({ description = "" }) {
             </H3>
 
             <div className="hidden md:block mt-3">
-              <p className="  text-white font-bold text-xs lg:mt-[18px]">
+              <p className="  text-white font-bold text-xs md:text-[20px] md:mt-[18px]" >
                 Localists Professional, Chris
               </p>
               {/* <p className=" text-white text-xs lg:text-[16px] font-normal">

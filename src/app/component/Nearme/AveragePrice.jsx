@@ -86,7 +86,7 @@ export default function AveragePrice() {
         </div>
 
         {/* Disclaimer Text */}
-        <div className="mt-2.5 text-left lg:text-left px-0 lg:px-4 ">
+        <div className="mt-2.5 text-left lg:text-left">
           <p
             className="text-[13.5px] leading-[18px]
         lg:text-[16px] lg:leading-[16px]
