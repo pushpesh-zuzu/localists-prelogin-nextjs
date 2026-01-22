@@ -30,11 +30,13 @@ export default function FeedbacCardCarouselNearme({
     containScroll: "trimSnaps",
     dragFree: false,
     loop: true,
+    skipSnaps: false,
   });
 
   const [emblaRefMobile, emblaApiMobile] = useEmblaCarousel({
     align: "center",
     loop: true,
+    skipSnaps: false,
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -73,8 +75,10 @@ export default function FeedbacCardCarouselNearme({
 
   const onSelectMobile = useCallback(() => {
     if (!emblaApiMobile) return;
-    setSelectedIndexMobile(emblaApiMobile.selectedScrollSnap());
-  }, [emblaApiMobile]);
+    const rawIndex = emblaApiMobile.selectedScrollSnap();
+    const normalizedIndex = rawIndex % originalSlideCount;
+    setSelectedIndexMobile(normalizedIndex);
+  }, [emblaApiMobile, originalSlideCount]);
 
   const onInit = useCallback(() => {
     if (!emblaApi) return;
@@ -116,7 +120,7 @@ export default function FeedbacCardCarouselNearme({
       <div className="hidden sm:block">
         <div className="relative">
           {/* Navigation Arrows */}
-          {showArrowAndDots ? (
+          {showArrowAndDots && (
             <div className="flex justify-end items-end mb-3.5 mr-[1%]">
               <NavigationArrows
                 onPrev={scrollPrev}
@@ -125,24 +129,25 @@ export default function FeedbacCardCarouselNearme({
                 canScrollNext={canScrollNext}
               />
             </div>
-          ) : (
-            ""
           )}
 
-          {/* Carousel - Maximum 4 cards, no cut-off */}
-          <div className="overflow-hidden">
+          {/* Carousel with consistent gap using margin-right */}
+          <div className="overflow-hidden -mr-4 sm:-mr-5 lg:-mr-6">
             <div ref={emblaRef} className="overflow-hidden">
-              <div className="flex gap-4 sm:gap-5 lg:gap-6">
+              <div className="flex">
                 {loopableCards.map((card, index) => (
                   <div
                     key={`${card.id}-${index}`}
-                  
-                    className="flex-[0_0_calc(50%-10px)] 
-                                  sm:flex-[0_0_calc(50%-12.5px)]
-                                  md:flex-[0_0_calc(33%-15px)]
-                                  lg:flex-[0_0_calc(25%-18px)]
-                                  xl:flex-[0_0_calc(25%-18px)]
-                                  min-w-0"
+                    className="flex-[0_0_50%] 
+                               sm:flex-[0_0_50%]
+                               md:flex-[0_0_33.333%]
+                               lg:flex-[0_0_25%]
+                               xl:flex-[0_0_25%]
+                               min-w-0
+                               pr-4 sm:pr-5 lg:pr-6"
+                    style={{ 
+                      boxSizing: 'border-box'
+                    }}
                   >
                     {renderCard(card, index)}
                   </div>
@@ -152,7 +157,7 @@ export default function FeedbacCardCarouselNearme({
           </div>
 
           {/* Dot Indicators */}
-          {showArrowAndDots ? (
+          {showArrowAndDots && (
             <div className="flex justify-center gap-2 mt-6">
               {Array.from({ length: originalSlideCount }).map((_, index) => (
                 <button
@@ -167,8 +172,6 @@ export default function FeedbacCardCarouselNearme({
                 />
               ))}
             </div>
-          ) : (
-            ""
           )}
         </div>
       </div>
@@ -180,7 +183,7 @@ export default function FeedbacCardCarouselNearme({
             {loopableCards.map((card, index) => (
               <div
                 key={`${card.id}-${index}`}
-                className="flex-[0_0_100%] flex justify-center"
+                className="flex-[0_0_100%] min-w-0 flex justify-center"
               >
                 <div style={{ width: `${mobileImageWidth}%` }}>
                   {renderCard(card, index)}
@@ -197,21 +200,6 @@ export default function FeedbacCardCarouselNearme({
           className="absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 rounded-full z-10 hover:bg-gray-100"
           aria-label="Previous slide"
         >
-          {/* <svg
-            width="20"
-            height="32"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M15 18L9 12L15 6"
-              stroke="black"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg> */}
           <LeftArrowBlack className="h-7 w-5" />
         </button>
         <button
@@ -220,26 +208,11 @@ export default function FeedbacCardCarouselNearme({
           className="absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 rounded-full z-10 hover:bg-gray-100"
           aria-label="Next slide"
         >
-          {/* <svg
-            width="20"
-            height="32"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9 18L15 12L9 6"
-              stroke="black"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg> */}
           <RightArrowBlack className="h-7 w-5" />
         </button>
 
         {/* Dot Indicators */}
-        {showArrowAndDots ? (
+        {showArrowAndDots && (
           <div className="flex justify-center gap-2 mt-6">
             {Array.from({ length: originalSlideCount }).map((_, index) => (
               <button
@@ -254,8 +227,6 @@ export default function FeedbacCardCarouselNearme({
               />
             ))}
           </div>
-        ) : (
-          ""
         )}
       </div>
     </div>

@@ -26,11 +26,11 @@ function HeroSectionNearMe({
   return (
     <>
       <WrapperBGWidth
-        secondaryClass="md:h-[450px] lg:h-[690px] max-h-[690px]"
-        className="relative md:h-[450px] lg:h-[690px] max-h-[690px]"
+        secondaryClass="md:h-[390px] lg:h-[650px] xl:h-[690px] max-h-[690px]"
+        className="relative md:h-[390px] lg:h-[650px] xl:h-[690px] max-h-[690px]"
         background={"#00afe3"}
       >
-        <div className="absolute inset-0 md:h-[450px] lg:h-[690px] max-h-[690px]  hidden md:block">
+        <div className="absolute inset-0 md:h-[390px] lg:h-[650px] xl:h-[690px] max-h-[690px]  hidden md:block">
           <Image
             src={bannerImage}
             alt={altText}
@@ -38,7 +38,7 @@ function HeroSectionNearMe({
             priority={true}
             fetchPriority="high"
             quality={75}
-            className="h-10 w-10 md:h-[540px] min-[900px]:h-[400px] lg:h-[690px] md:max-w-[1536px] mx-auto"
+            className="h-10 w-10 md:h-[390px] min-[900px]:h-[400px] lg:h-[650px] xl:h-[690px] md:max-w-[1536px] mx-auto"
             sizes="(min-width: 768px) 100vw, 0px"
           />
         </div>
@@ -61,7 +61,7 @@ function HeroSectionNearMe({
           aria-label="Hero section"
         >
           <div
-            className="w-full md:w-[85%] lg:w-4/5
+            className="w-full md:w-[85%] lg:w-[84%]  xl:w-[65%]
            flex flex-col  relative z-10"
           >
             <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] md:mb-3 lg:mb-[30px] max-h-12" />
