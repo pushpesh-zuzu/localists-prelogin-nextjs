@@ -19,7 +19,7 @@ function NearmeMember({ description = "" }) {
             </H3>
 
             <div className="hidden md:block mt-3">
-              <p className="  text-white font-bold text-xs md:text-[20px] md:mt-[18px]" >
+              <p className="  text-white font-bold text-xs md:text-base lg:text-[20px] md:mt-[18px]" >
                 Localists Professional, Chris
               </p>
               {/* <p className=" text-white text-xs lg:text-[16px] font-normal">

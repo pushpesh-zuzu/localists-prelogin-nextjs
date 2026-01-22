@@ -66,6 +66,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "Sometimes a tree is simply too diseased, damaged, or unstable to save. In these cases, tree surgeons carry out removals safely using specialist climbing gear, cranes, ropes, and dismantling techniques. They know how to handle this professionally, keeping health and safety in mind, to prevent damage to people, property, or surrounding plants.",
+    className:"pb-[5px] md:pb-0"
   },
 
   {
@@ -75,6 +76,8 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "Taking down a tree is only half the job. The stump left behind can become a tripping hazard, attract pests, or sprout regrowth. Tree surgeons use professional stump grinders to remove it completely, making space for new planting, landscaping, or simply a tidy, safer garden.",
+        className:"pb-[5px] md:pb-0"
+
   },
   {
     type: "pbold",
@@ -83,6 +86,8 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "Tree surgeons don’t just remove trees. They help plant them too. They can recommend the right species for your soil, plant them correctly and even transplant existing trees when needed.",
+      className:"pb-[5px] md:pb-0"
+
   },
 
   {
@@ -92,6 +97,8 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "Trees can suffer from pests, fungi, and decay. Tree surgeons identify these problems early and recommend treatments or interventions to prevent further spread.",
+     className:"pb-[5px] md:pb-0"
+
   },
   {
     type: "pbold",
@@ -100,6 +107,8 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "Storm damage or fallen branches can pose immediate risks. Tree surgeons are often called out in emergencies to make trees safe, clear debris, and restore access quickly.",
+     className:"pb-[5px] md:pb-0"
+
   },
 
   {
@@ -129,27 +138,27 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   },
   {
     type: "li",
-    text: "<strong>Insurance -</strong> This is also non-negotiable as it protects you and your property if something goes wrong.",
+    text: "Insurance - This is also non-negotiable as it protects you and your property if something goes wrong.",
     className: "mr-5",
   },
   {
     type: "li",
-    text: "<strong>Reviews -</strong> Check reviews and recommendations from past clients to see how reliable they are in practice.",
+    text: "Reviews - Check reviews and recommendations from past clients to see how reliable they are in practice.",
     className: "mr-5",
   },
   {
     type: "li",
-    text: "<strong>Transparency -</strong> A good tree surgeon will be transparent: they’ll explain the work clearly, provide a written quote, and answer your questions before starting.",
+    text: "Transparency - A good tree surgeon will be transparent: they’ll explain the work clearly, provide a written quote, and answer your questions before starting.",
     className: "mr-5",
   },
   {
     type: "li",
-    text: "<strong>Relevant experience -</strong> Having hands-on experience with the type of job you need is also a plus. Whether that’s caring for ornamental trees in your garden, managing large oaks on a commercial site, or maintaining multiple trees in public spaces.",
+    text: "Relevant experience - Having hands-on experience with the type of job you need is also a plus. Whether that’s caring for ornamental trees in your garden, managing large oaks on a commercial site, or maintaining multiple trees in public spaces.",
     className: "mr-5",
   },
   {
     type: "li",
-    text: `<strong>Professional bodies membership –</strong>  Having a membership to organisations such as the <a href='https://www.trees.org.uk/' target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>Arboricultural Association</a> often means they have to adhere to strict regulations and protocols.`,
+    text: `Professional bodies membership –  Having a membership to organisations such as the <a href='https://www.trees.org.uk/' target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>Arboricultural Association</a> often means they have to adhere to strict regulations and protocols.`,
     className: "mr-5",
   },
 ];

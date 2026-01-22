@@ -41,8 +41,8 @@ const AboutServicesAndQuestions = ({
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               className={`w-full h-auto object-cover rounded-lg ${
                 block?.className
-              } ${block?.marginTop ? "mt-[30px] lg:mt-[60px]" : ""} ${
-                block?.marginBottom ? "mb-5 lg:mb-[60px]" : ""
+              } ${block?.marginTop ? "mt-[30px] lg:mt-[72px]" : ""} ${
+                block?.marginBottom ? "mb-5 lg:mb-[85px]" : ""
               }`}
               priority={block?.priority || false}
             />
@@ -65,7 +65,7 @@ const AboutServicesAndQuestions = ({
             variant="primarySmall"
             key={index}
             bold="font-normal"
-            className={`${textBase} ${block?.notMarginBottom? "":"mb-5 md:mb-[25px]"} text-black`}
+            className={`${textBase} ${block?.notMarginBottom? "":"mb-[15px] md:mb-[25px]"} ${block?.className? block?.className:""} text-black`}
           >
             <span dangerouslySetInnerHTML={{ __html: block.text }} />
           </Paragraph>
@@ -77,7 +77,7 @@ const AboutServicesAndQuestions = ({
             variant="primarySmall"
             key={index}
             className={`${textBase} font-bold ${
-              block?.className ? block?.className : "mb-2.5"
+              block?.className ? block?.className : "mb-[5px] md:mb-2.5"
             } text-[#253238]`}
           >
             {block.text}

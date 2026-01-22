@@ -56,7 +56,7 @@ function HeroSectionNearMe({
           />
         </div>
         <section
-          className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full  md:flex-row px-[34px] pt-10 md:px-[60px] lg:pb-[72px] xl:pb-[100px] md:pt-[38px] xl:px-[120px] xl:pt-[72px] relative"
+          className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full  md:flex-row px-[34px] pt-10 md:px-[60px] lg:pb-[64px] xl:pb-[100px] md:pt-[38px] xl:px-[120px] xl:pt-[73.88px] relative"
           role="banner"
           aria-label="Hero section"
         >
@@ -64,8 +64,8 @@ function HeroSectionNearMe({
             className="w-full lg:w-4/5
            flex flex-col  relative z-10"
           >
-            <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] md:mb-4 lg:mb-7 max-h-12" />
-            <H1 className="text-white block text-shadow-[0_2.03px_2.03px_0_#0000001A]">
+            <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] md:mb-4 lg:mb-[30px] max-h-12" />
+            <H1  className="text-white block text-shadow-[0_4px_4px_0_#0000001A]">
               <span>
                 {heading1}
                 <span className="text-[#253238] block">{heading2}</span>

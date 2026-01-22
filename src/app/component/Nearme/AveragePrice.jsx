@@ -4,16 +4,16 @@ import Paragraph from "../UI/Typography/Paragraph";
 
 export default function AveragePrice() {
   return (
-    <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] lg:pb-0 pt-2 md:pt-6 lg:pt-[50px] ">
+    <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px] ">
       <div className="w-full max-w-[1000px]">
         <div
           className="w-full rounded-[25px]"
           style={{ backgroundColor: "#8BFFCF" }}
         >
-          <div className="flex flex-col lg:flex-row lg:gap-4">
+          <div className="flex flex-col lg:flex-row lg:gap-6">
             {/* Left Section - H2 and GetQuote */}
-            <div className="flex flex-col justify-between px-4  pt-7 lg:pl-9  lg:py-14 lg:min-w-[386px]">
-              <H2 className="text-center lg:text-left px-2">
+            <div className="flex flex-col justify-between px-4  pt-7 lg:pl-[38px]  lg:pt-[54px] lg:pb-[52px] lg:min-w-[386px]">
+              <H2 className="text-center lg:text-left">
                 Average cost of tree surgery UK
               </H2>
 
@@ -23,7 +23,7 @@ export default function AveragePrice() {
             </div>
 
             {/* Right Section - Price Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-2 gap-x-3 gap-y-5 lg:gap-x-5 px-3 md:px-20 lg:px-0 py-8 lg:py-16 lg:pr-7">
+            <div className="grid grid-cols-2 lg:grid-cols-2 gap-x-3 gap-y-5 lg:gap-x-5 px-3 md:px-20 lg:px-0 py-[23px] lg:py-16 lg:pr-7">
               {/* Price Card 1 */}
               <div className="">
                 <Paragraph
@@ -57,7 +57,7 @@ export default function AveragePrice() {
               <div className="">
                 <Paragraph
                   variant="primarySmall"
-                  className="md:mx-auto text-left md:text-center lg:text-center max-w-[154px] lg:max-w-[90%]"
+                  className="md:mx-auto text-left md:text-center lg:text-center max-w-[132px]  lg:max-w-[90%]"
                 >
                   Trimming or pruning a small tree (under 25ft) costs on average
                 </Paragraph>
@@ -78,7 +78,7 @@ export default function AveragePrice() {
                   £115
                 </p>
               </div>
-              <div className="flex lg:hidden col-span-2 mt-0 justify-center">
+              <div className="flex lg:hidden col-span-2 mt-2 md:mt-0 justify-center">
                 <GetQuote text=" Get a real quote" />
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function AveragePrice() {
         {/* Disclaimer Text */}
         <div className="mt-2.5 text-left lg:text-left">
           <p
-            className="text-[13.5px] leading-[18px]
+            className="text-[12px] leading-[12px]
         lg:text-[16px] lg:leading-[16px]
         lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[-0.03em] font-normal lg:font-bold"
           >

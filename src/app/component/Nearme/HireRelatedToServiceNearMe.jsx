@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react";
 const JobButton = ({ title }) => (
   <button
     className="font-[Arial] border-2 xl:border-2 border-white font-bold text-[13px] -tracking-[3%] lg:text-[20px] 
-               px-1.5 py-[5px] xl:px-5 xl:py-1 rounded-full text-white 
+               px-1.5 py-[5px] xl:px-5 xl:py-[4px] rounded-full text-white 
                whitespace-nowrap focus:outline-none"
     aria-label={`Search for ${title}`}
   >
@@ -63,7 +63,7 @@ export default function HireRelatedToServiceNearMe({
             </nav>
           </div>
         </header>
-        <div className="flex flex-wrap gap-y-2 xl:gap-y-[23px] gap-2 lg:gap-[23px] w-full md:max-w-full">
+        <div className="flex flex-wrap gap-y-2 xl:gap-y-[23px] gap-2 lg:gap-[23.92px] w-full md:max-w-full">
           {tabData[currentTab].map((title, i) => (
             <JobButton key={i} title={title} />
           ))}

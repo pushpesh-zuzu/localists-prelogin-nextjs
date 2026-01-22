@@ -22,7 +22,7 @@ export default function PopularJobNearMe({
       
   
     </div> */}
-      <div className="md:block rounded-[20px] md:rounded-none mx-2.5 md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white  px-2.5 py-[30px] sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[100px]">
+      <div className="md:block rounded-[20px] md:rounded-none mx-2.5 md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white  px-2.5 py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[108px]">
         <div className="rounded-[20px] md:max-w-[600px] lg:max-w-[900px] xl:max-w-[1200px] md:h-[280px] lg:h-[380px] xl:h-[470px] relative overflow-visible">
           {/* 1️⃣ Shape background */}
           <div
@@ -31,7 +31,7 @@ export default function PopularJobNearMe({
           />
 
           {/* 2️⃣ Normal content layer */}
-          <div className="relative z-10 h-full pt-[30px] md:px-8 xl:px-15 flex flex-col md:justify-center max-w-full lg:max-w-[70%]">
+          <div className="relative z-10 h-full pt-[30px] md:pt-[37px] md:px-8 xl:px-15 flex flex-col md:justify-center max-w-full lg:max-w-[70%]">
             <H2 className="text-white mb-4 md:mb-0 md:pb-4 xl:pb-[35px]">
               Popular Jobs.
             </H2>
@@ -41,11 +41,11 @@ export default function PopularJobNearMe({
               className={`text-[16px] leading-[16px]
         md:text-[14px] md:leading-[16px]
         lg:text-[20px] lg:leading-[24px] font-[Arial] font-bold
-          tracking-[-0.03em] sm:max-w-full mb-5 md:mb-0 text-white  pb-4 xl:pb-[43px]`}
+          tracking-[-0.03em] sm:max-w-full mb-5 md:mb-0 text-white  md:pb-4 xl:pb-[43px]`}
             >
               Click below to get a quote for the specific job you want
             </p>
-            <div className=" flex flex-wrap gap-2 xl:gap-[15px] md:mb-4 md:max-w-[400px] xl:max-w-full">
+            <div className=" flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 md:max-w-[400px] xl:max-w-full">
               {services.map((service) => (
                 <ServicesButton
                   mobileBorder="border-2"

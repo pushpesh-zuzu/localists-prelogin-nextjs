@@ -1,6 +1,7 @@
-export default function H1({ children, className = "" }) {
+export default function H1({ children, className = "",style={} }) {
   return (
     <h1
+    style={style}
       className={`
         font-Inter font-black
         tracking-[-0.03em]

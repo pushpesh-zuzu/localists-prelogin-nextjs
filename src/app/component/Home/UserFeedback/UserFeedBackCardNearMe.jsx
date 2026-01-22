@@ -20,11 +20,11 @@ function UserFeedBackCardNearMe({ item ,mobileWidth='w-[198px]' }) {
                     lg:px-[18px] lg:py-7`}
       >
         <div className="flex flex-col justify-between h-full">
-          <div className="flex flex-col gap-2.5">
+          <div className="flex flex-col gap-2.5 gap-[18.99px]">
             <FiveStarYelloIcon
               className="w-[111px] h-[22px]
-                         md:w-[85px] md:h-[17px]
-                         md:lg:w-[88px]
+                         md:w-[88px] md:h-[17px]
+                         lg:lg:w-[159px]
                          md:xl:h-[31px]"
             />
 

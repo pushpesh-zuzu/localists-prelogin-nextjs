@@ -10,7 +10,7 @@ function PostCodeSection() {
   return (
     <div
       className="
-        rounded-[20px] bg-[#7ED5F1] px-9 pt-4 pb-7 lg:px-9 lg:py-[62px] my-8 lg:mt-[60px] lg:mb-[60px]
+        rounded-[20px] bg-[#7ED5F1] px-9 pt-4 pb-7 lg:px-9 lg:py-[62px] mt-8 mb-[30px] lg:mt-[60px] lg:mb-[60px]
         flex flex-col gap-6
         lg:flex-row lg:items-center lg:justify-between
       "
