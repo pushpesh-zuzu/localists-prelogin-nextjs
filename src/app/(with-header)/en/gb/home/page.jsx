@@ -50,8 +50,10 @@ export default function Page() {
     return (
         <main className="bg-white">
             <SEO
+                canonicalPath="/en/gb/home"
                 bannerImage={Home}
                 breadcrumb={[
+                    { title: "Home", path: "/en/gb" },
                     { title: "Home & Garden", path: "/en/gb/home" },
                 ]}
                 conversion

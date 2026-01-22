@@ -92,7 +92,7 @@ const GrowthStepsData = [
     Description3: "Get new opportunities the moment they’re posted.",
 
     button: "How it works",
-    path: "how-it-works-for-sellers"
+    path: "/how-it-works-for-sellers"
   },
   {
     id: 2,
@@ -115,7 +115,7 @@ const GrowthStepsData = [
     Description2: "No commission or hidden fees",
     Description3: "First-lead guarantee so you can start with confidence.",
     button: "See more about pricing",
-    path: "sellers/pricing"
+    path: "/sellers/pricing"
   },
 ];
 

@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import Paragraph1 from "../UI/Typography/Paragraph1";
 import H1 from "../UI/Typography/H1";

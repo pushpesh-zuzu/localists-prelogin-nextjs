@@ -4,7 +4,9 @@ import Script from "next/script";
 import { usePathname } from "next/navigation";
 
 // 👉 Change this automatically later for prod if needed
-const BASE_URL = "https://dev2.localistsbooster.com";
+const BASE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://dev2.localistsbooster.com";
+
 
 export default function SEO({
   breadcrumb = [],
@@ -27,11 +29,11 @@ export default function SEO({
   const breadcrumbList =
     breadcrumb?.length > 0
       ? breadcrumb.map((item, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          name: item.title,
-          item: `${BASE_URL}${item.path}`,
-        }))
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.title,
+        item: `${BASE_URL}${item.path}`,
+      }))
       : [];
 
   const breadcrumbJsonLd = {
@@ -47,6 +49,7 @@ export default function SEO({
 
       {/* Open Graph URL */}
       <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content="website" />
 
       {/* Open Graph Image */}
       {bannerImage && (

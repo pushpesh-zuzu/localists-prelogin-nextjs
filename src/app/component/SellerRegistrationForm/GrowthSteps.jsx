@@ -1,19 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import LeadInfoModal from "./LeadStaticModal";
 import { GrowthStepsData } from "@/app/../constants/severalPanel";
 import H2 from "../UI/Typography/H2";
 import Button from "../UI/Typography/Button";
 
 const GrowthSteps = () => {
+    const router = useRouter();
     const { lang, country } = useParams();
     const currentLang = lang || "en";
     const currentCountry = country || "gb";
     const [showModal, setShowModal] = useState(false);
 
     const handleCardClick = (item) => {
+        if (item?.path) {
+            router.push(`/${currentLang}/${currentCountry}${item.path}`);
+            return;
+        }
+        
         if (item?.id === 2) {
             setShowModal(true);
         }

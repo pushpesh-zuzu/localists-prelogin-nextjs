@@ -5,7 +5,13 @@ import DummyImage from "../../public/images/Setting/ProfileWebIcon.svg";
 
 /* ---------------- SLUG ---------------- */
 export const generateSlug = (name = "") =>
-    name.toLowerCase().replace(/\s+/g, "-");
+    name
+        .toLowerCase()
+        .trim()
+        .replace(/&/g, "")
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/\s+/g, "-")
+        .replace(/-+/g, "-");
 
 /* ---------------- TOAST ---------------- */
 export const showToast = (type, message) => {
