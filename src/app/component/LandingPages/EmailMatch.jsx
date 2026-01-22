@@ -14,7 +14,7 @@ import { validateUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
 import { useEmailCheck } from "@/hooks/emailExist";
 import useUserInfo from "@/utils/getUserIp";
 import { getBarkToken } from "@/utils/CookiesHelper";
-import Paragraph from "../ui/Typography/Paragraph2";
+import Paragraph from "../UI/Typography/Paragraph2";
 
 function EmailMatch({
     onClose,
