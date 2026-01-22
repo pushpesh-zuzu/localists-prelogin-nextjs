@@ -28,11 +28,11 @@ export default function AveragePrice() {
               <div className="">
                 <Paragraph
                   variant="primarySmall"
-                  className="md:mx-auto max-w-[152px] lg:max-w-full text-left lg:text-center"
+                  className="md:mx-auto max-w-[152px] md:text-center md:max-w-[160px] lg:max-w-full text-left lg:text-center"
                 >
                   For a small tree removal (under 25ft), the average cost is
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left md:text-center lg:text-center text-[#253238] mt-8 lg:mt-3">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left md:text-center lg:text-center text-[#253238] mt-8 md:mt-3 lg:mt-3">
                   £450
                 </p>
               </div>
@@ -41,7 +41,7 @@ export default function AveragePrice() {
               <div className="">
                 <Paragraph
                   variant="primarySmall"
-                  className="md:mx-auto text-left md:text-center lg:text-center max-w-[164px] lg:min-w-[264px]"
+                  className="md:mx-auto text-left md:text-center lg:text-center max-w-[164px] md:max-w-[220px] lg:min-w-[264px]"
                 >
                   For a medium stump removal under 15 inch diameter), the average cost is
                 </Paragraph>
@@ -57,11 +57,11 @@ export default function AveragePrice() {
               <div className="">
                 <Paragraph
                   variant="primarySmall"
-                  className="md:mx-auto text-left md:text-center lg:text-center max-w-[132px]  lg:max-w-[90%]"
+                  className="md:mx-auto text-left md:text-center lg:text-center max-w-[132px] md:max-w-[220px]  lg:max-w-[90%]"
                 >
                   Trimming or pruning a small tree (under 25ft) costs on average
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left md:text-center text-[#253238] max-[336px]:mt-[22%] mt-[10%] sm:mt-4">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black  text-left md:text-center text-[#253238] max-[336px]:mt-[22%] mt-[10%] md:mt-3 sm:mt-4">
                   £250
                 </p>
               </div>
@@ -70,7 +70,7 @@ export default function AveragePrice() {
               <div className="">
                 <Paragraph
                   variant="primarySmall"
-                  className="md:mx-auto text-left md:text-center lg:text-center max-w-[154px] lg:min-w-[264px]"
+                  className="md:mx-auto text-left md:text-center lg:text-center max-w-[154px] md:max-w-[220px] lg:min-w-[264px]"
                 >
                   For medium stump grinding (under 15 inch in diameter), the average cost is
                 </Paragraph>
@@ -78,7 +78,7 @@ export default function AveragePrice() {
                   £115
                 </p>
               </div>
-              <div className="flex lg:hidden col-span-2 mt-5 md:mt-0 justify-center">
+              <div className="flex lg:hidden col-span-2 mt-5 md:mt-2.5 lg:mt-0 md:mb-[5px] lg:mb-0 justify-center">
                 <GetQuote text=" Get a real quote" />
               </div>
             </div>

@@ -33,7 +33,7 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
                   className={`
                       flex-1 max-w-[90%] md:max-w-full
                       text-[20px] leading-[25px]
-                      md:text-[25px] md:leading-[25px]
+                      md:text-[20px] md:leading-[20px]
                       lg:text-[25px] lg:leading-[25px]
                       font-Inter font-black
                       tracking-[-0.03em]

@@ -22,10 +22,8 @@ function PostCodeSection() {
           text-[25px] leading-[28px]
           md:text-[30px] md:leading-[35px]
           lg:text-[40px] lg:leading-[55px]
-          lg:text-right
+          lg:text-right drop-shadow-[0_0px_3.67px_rgba(0,0,0,0.25)]
         "
-        style={{ textShadow: "0px 0px 3.67px 0px #00000040" }}
-        
       >
         Free quotes. Zero obligation.
       </p>
@@ -43,6 +41,7 @@ function PostCodeSection() {
           md:text-[30px] md:leading-[35px]
           lg:text-[40px] lg:leading-[55px]
           md:text-right
+          drop-shadow-[0_0px_3.67px_rgba(0,0,0,0.25)]
         "
       >
         Free quotes. Zero obligation.

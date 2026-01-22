@@ -22,5 +22,8 @@ module.exports = {
   //   preflight: false,
   // },
 
-  plugins: [],
+    plugins: [
+    require('tailwindcss-textshadow'),
+  ],
+
 };

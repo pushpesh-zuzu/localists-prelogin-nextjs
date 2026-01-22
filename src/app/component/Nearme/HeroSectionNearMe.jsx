@@ -61,12 +61,12 @@ function HeroSectionNearMe({
           aria-label="Hero section"
         >
           <div
-            className="w-full lg:w-4/5
+            className="w-full md:w-[85%] lg:w-4/5
            flex flex-col  relative z-10"
           >
-            <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] md:mb-4 lg:mb-[30px] max-h-12" />
-            <H1  className="text-white block text-shadow-[0_4px_4px_0_#0000001A]">
-              <span>
+            <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] md:mb-3 lg:mb-[30px] max-h-12" />
+            <H1  className="text-white block drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)] ">
+              <span >
                 {heading1}
                 <span className="text-[#253238] block">{heading2}</span>
               </span>

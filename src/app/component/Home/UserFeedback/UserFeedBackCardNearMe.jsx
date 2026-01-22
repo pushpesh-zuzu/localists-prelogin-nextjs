@@ -11,7 +11,7 @@ function UserFeedBackCardNearMe({ item ,mobileWidth='w-[198px]' }) {
                     px-[13.32px] py-5
                     bg-[#D0F7EB]
 
-                    md:w-[180.89px] md:h-[250.89px]
+                    md:w-[200px] md:h-[250.89px]
                     md:rounded-[20.25px]
                     md:px-[10.5px] md:py-4
 
