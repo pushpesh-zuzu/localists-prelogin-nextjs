@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { checkEmailIdApi } from "@/lib/store/findjobslice";
 import { setbuyerRequestData } from "@/lib/store/buyerslice/buyerSlice";
 import LogoIcon from "@/app/component/LandingPages/LogoIcon";
 import { ArrowRight } from "lucide-react";

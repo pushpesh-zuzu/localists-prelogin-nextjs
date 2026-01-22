@@ -8,7 +8,7 @@ import React, {
 import Modal from "../common/Modal";
 import InputField from "../UI/Inputs/InputField";
 import { useDispatch, useSelector } from "react-redux";
-import { CheckCircle, CheckIcon, CircleX, Search } from "lucide-react";
+import { CheckIcon, Search } from "lucide-react";
 import {
   getCityName,
   setbuyerRequestData,
@@ -20,7 +20,6 @@ import { getBarkToken } from "@/utils/CookiesHelper";
 import { megaMenu } from "./MegaMenu";
 import { searchService, setService } from "@/lib/store/findjobslice";
 import { showToast } from "@/utils/toaster";
-import LoaderIndicator from "../common/Loader/LoaderIndicatore";
 
 function getNameFromSlug(slug, categoryList) {
   if (typeof slug !== "string" || !slug || !Array.isArray(categoryList))
