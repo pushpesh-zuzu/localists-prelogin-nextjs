@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import H2 from "../UI/Typography/H2";
-import WithoutSpecialCardCarousel from "../Carousel/WithoutSpecialCardCarousel";
-import UserFeedbackCard from "../Home/UserFeedback/UserFeedbackCard";
 import Button from "../UI/Typography/Button";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import { handleScrollToBottom } from "@/utils/scroll";
+import UserFeedBackCardNearMe from "../Home/UserFeedback/UserFeedBackCardNearMe";
+import FeedbacCardCarouselNearme from "../Carousel/FeedbacCardCarouselNearme";
 
 function UserFeedbackNearMe({feedbackData=[]}) {
 
@@ -16,9 +16,9 @@ function UserFeedbackNearMe({feedbackData=[]}) {
           Rated <span className="text-[#253238]">excellent.</span>
         </H2>
         <div className="flex flex-wrap justify-between select-none">
-          <WithoutSpecialCardCarousel
+          <FeedbacCardCarouselNearme
             data={feedbackData}
-            renderCard={(card) => <UserFeedbackCard mobileWidth="w-[217px]" item={card} />}
+            renderCard={(card) => <UserFeedBackCardNearMe mobileWidth="w-[217px]" item={card} />}
             showArrowAndDots={false}
           />
         </div>

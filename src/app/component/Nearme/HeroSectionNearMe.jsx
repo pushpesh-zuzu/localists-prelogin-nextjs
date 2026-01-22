@@ -20,7 +20,7 @@ function HeroSectionNearMe({
   description = `Find the best tree surgeons for your job, just enter your postcode
               and a few details for instant quotes.`,
   bannerImage = "/nearme/treeSurgeon.webp",
-  bannerImageMobile = "/nearme/treeSurgeon1.webp",
+  bannerImageMobile = "",
   altText = "Tree Surgeon",
 }) {
   return (
@@ -61,17 +61,17 @@ function HeroSectionNearMe({
           aria-label="Hero section"
         >
           <div
-            className="w-full md:w-4/5
+            className="w-full lg:w-4/5
            flex flex-col  relative z-10"
           >
-            <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px]  lg:mb-7 max-h-12" />
+            <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] md:mb-4 lg:mb-7 max-h-12" />
             <H1 className="text-white block text-shadow-[0_2.03px_2.03px_0_#0000001A]">
               <span>
                 {heading1}
                 <span className="text-[#253238] block">{heading2}</span>
               </span>
             </H1>
-            <Paragraph1 className="text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-[60%] sm:max-w-[60%] max-w-full text-white pt-[18px] md:pt-2 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
+            <Paragraph1 className="text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-[80%] sm:max-w-[60%] max-w-full text-white pt-[18px] md:pt-4 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
               {description}
             </Paragraph1>
             <PostCodeSearchField />

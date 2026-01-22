@@ -23,7 +23,7 @@ export default function AveragePrice() {
             </div>
 
             {/* Right Section - Price Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-2 gap-x-3 gap-y-5 lg:gap-x-5 px-3 lg:px-0 py-8 lg:py-16 lg:pr-7">
+            <div className="grid grid-cols-2 lg:grid-cols-2 gap-x-3 gap-y-5 lg:gap-x-5 px-3 md:px-20 lg:px-0 py-8 lg:py-16 lg:pr-7">
               {/* Price Card 1 */}
               <div className="">
                 <Paragraph

@@ -10,7 +10,7 @@ export default function Breadcrumb({ items = [] }) {
         href="/"
         className="flex items-center text-[#959B9E] hover:opacity-80 transition"
       >
-        <HomeIcon size={22} className="h-4 w-4 md:h-[22px] md:w-[22px]" />
+        <HomeIcon size={22} className="h-4 w-4 md:h-[22px] md:w-4 lg:h-4 lg:w-[22px]" />
       </Link>
 
       {items.map((item, index) => {
@@ -21,15 +21,15 @@ export default function Breadcrumb({ items = [] }) {
             {/* Arrow */}
             <RightArrowBlack
               color="#959B9E"
-              className="h-4 w-3 md:h-7 md:w-5"
+              className="h-4 w-3 md:h-4 md:w-3 lg:h-7 lg:w-5"
             />
 
             {isLast || !item.path ? (
               // ACTIVE / CURRENT PAGE
               <span
                 className="
-                  font-inter font-[900] text-[14px] sm:text-[18px]
-                  md:text-[25px] leading-[26px]
+                  font-inter font-[900] text-[14px] sm:text-[16px]
+                  lg:text-[25px] leading-[26px]
                   tracking-[-0.03em]
                   text-[#00AFE3]
                 "
@@ -40,8 +40,8 @@ export default function Breadcrumb({ items = [] }) {
               <Link
                 href={item.path}
                 className="
-                  font-inter font-[900] text-[14px] sm:text-[18px]
-                  md:text-[25px] leading-[26px]
+                  font-inter font-[900] text-[14px] sm:text-[16px]
+                  lg:text-[25px] leading-[26px]
                   tracking-[-0.03em]
                   text-[#959B9E]
                   hover:opacity-80 transition
