@@ -25,7 +25,11 @@ function HeroSectionNearMe({
 }) {
   return (
     <>
-      <WrapperBGWidth secondaryClass="md:h-[450px] lg:h-[690px] max-h-[690px]" className="relative md:h-[450px] lg:h-[690px] max-h-[690px]" background={'#00afe3'}>
+      <WrapperBGWidth
+        secondaryClass="md:h-[450px] lg:h-[690px] max-h-[690px]"
+        className="relative md:h-[450px] lg:h-[690px] max-h-[690px]"
+        background={"#00afe3"}
+      >
         <div className="absolute inset-0 md:h-[450px] lg:h-[690px] max-h-[690px]  hidden md:block">
           <Image
             src={bannerImage}
@@ -67,10 +71,7 @@ function HeroSectionNearMe({
                 <span className="text-[#253238] block">{heading2}</span>
               </span>
             </H1>
-            <Paragraph1
-              style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
-              className="md:max-w-[60%] sm:max-w-[60%] max-w-full text-white pt-[18px] md:pt-2 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
-            >
+            <Paragraph1 className="text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-[60%] sm:max-w-[60%] max-w-full text-white pt-[18px] md:pt-2 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
               {description}
             </Paragraph1>
             <PostCodeSearchField />

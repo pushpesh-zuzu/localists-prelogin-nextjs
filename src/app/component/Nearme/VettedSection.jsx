@@ -29,7 +29,7 @@ function VettedSection({
           />
           <div className="mt-5 md:mt-6 lg:mt-12 flex flex-col gap-[15px] lg:gap-6">
             {paragraph.map((item, index) => (
-              <Paragraph className="font-normal! md:font-bold!" variant="primarySmall" key={index}>
+              <Paragraph bold="font-bold" variant="primarySmall" key={index}>
                 {item}
               </Paragraph>
             ))}
