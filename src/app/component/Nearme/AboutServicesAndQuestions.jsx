@@ -90,7 +90,7 @@ const AboutServicesAndQuestions = ({
             <li className={textBase}>
               {block.heading}
               {block.text && (
-                <span dangerouslySetInnerHTML={{ __html: block.text }} />
+                <span className="leading-[22px]" dangerouslySetInnerHTML={{ __html: block.text }} />
               )}
             </li>
           </ul>
