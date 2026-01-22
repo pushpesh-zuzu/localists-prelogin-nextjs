@@ -16,11 +16,13 @@ export default function Page() {
     return (
         <main className="bg-white">
             <SEO
+                canonicalPath="/en/gb/transportation-services"
                 bannerImage={LessonsAndTraining}
                 breadcrumb={[
+                    { title: "Lessons & Training", path: "/en/gb" },
                     { title: "Lessons & Training", path: "/en/gb/lessons-training" },
                 ]}
-                conversion
+                conversion={true}
             />
             <BannerWithBreadCrum
                 imageAlt={"Lessons & Training Services"}

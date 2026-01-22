@@ -11,7 +11,7 @@ const BASE_URL =
 export default function SEO({
   breadcrumb = [],
   bannerImage,
-  conversion = false,
+  conversion,
   canonicalPath, // 👈 allow manual canonical control
 }) {
   const pathname = usePathname();

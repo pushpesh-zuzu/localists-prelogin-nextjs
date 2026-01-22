@@ -56,7 +56,7 @@ export default function Page() {
                     { title: "Home", path: "/en/gb" },
                     { title: "Home & Garden", path: "/en/gb/home" },
                 ]}
-                conversion
+                conversion={true}
             />
             <BannerWithBreadCrum
                 header={"Home & Garden"}

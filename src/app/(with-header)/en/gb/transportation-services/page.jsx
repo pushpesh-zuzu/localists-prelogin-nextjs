@@ -19,29 +19,6 @@ export const metadata = {
         index: false,
         follow: false,
     },
-
-    alternates: {
-        // canonical: "https://dev2.localistsbooster.com/en/gb/transportation-services",
-        languages: {
-            "en-GB": "https://dev2.localistsbooster.com/en/gb/transportation-services"
-        },
-    },
-
-    openGraph: {
-        title: "Transportation Services Near Me | Find Local Professionals - Localists",
-        description:
-            "Find reliable transportation services near you. Get free quotes for removals, airport transfers, coach hire and more.",
-        url: "https://dev2.localistsbooster.com/en/gb/transportation-services",
-        siteName: "Localists",
-        type: "website",
-    },
-
-    twitter: {
-        card: "summary_large_image",
-        title: "Transportation Services Near Me | Find Local Professionals - Localists",
-        description:
-            "Find reliable transportation services near you. Get free quotes for removals, airport transfers, coach hire and more.",
-    },
 };
 
 
@@ -50,12 +27,15 @@ export default function Page() {
     return (
         <main className="bg-white">
             <SEO
+                canonicalPath="/en/gb/transportation-services"
                 bannerImage={TransportBanner}
                 breadcrumb={[
+                    { title: "Transportation Services", path: "/en/gb" },
                     { title: "Transportation Services", path: "/en/gb/transportation-services" },
                 ]}
                 conversion
             />
+
             <BannerWithBreadCrum
                 imageAlt={"transport"}
                 accountHeader="Transportation Services"
