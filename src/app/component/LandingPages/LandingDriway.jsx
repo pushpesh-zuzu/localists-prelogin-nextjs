@@ -19,7 +19,7 @@ import {
   ServiceId,
 } from "./LandingPageData"
 
-function LandingArtificialGrassInstallation() {
+function LandingDriway() {
   const [isClient, setIsClient] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -51,25 +51,17 @@ function LandingArtificialGrassInstallation() {
         </div>
       )}
       <FindDetailAndBannerWrapper
-        title={
-          LANDING_TITLES_AND_META["artificial_grass_installation_ppc"]?.title
-        }
-        paragraphs={
-          LANDING_DETAIL_DATA["artificial_grass_installation_ppc"].paragraphs
-        }
-        defaultService={LANDING_SERVICES["artificial_grass_installation_ppc"]}
+        title={LANDING_TITLES_AND_META["driveways_ppc"]?.title}
+        paragraphs={LANDING_DETAIL_DATA["driveways_ppc"].paragraphs}
+        defaultService={LANDING_SERVICES["driveways_ppc"]}
         isNeedS={false}
-        bannerImage={
-          LANDING_DETAIL_BANNERS["artificial_grass_installation_ppc"]?.banner
-        }
+        bannerImage={LANDING_DETAIL_BANNERS["driveways_ppc"]?.banner}
         cancelHeading={CANCEL_POPUP_DATA.cancelHeading}
         cancelPara={CANCEL_POPUP_DATA.cancelPara}
-        serviceId={ServiceId.artificial_grass_installation_ppc}
-        welcomModalTitle={
-          LANDING_WELCOM_MODAL_TITLE["artificial_grass_installation_ppc"]
-        }
+        serviceId={ServiceId.driveways_ppc}
+        welcomModalTitle={LANDING_WELCOM_MODAL_TITLE["driveways_ppc"]}
         welcomModalButtonText={
-          LANDING_WELCOM_MODAL_BUTTON_TITLE["artificial_grass_installation_ppc"]
+          LANDING_WELCOM_MODAL_BUTTON_TITLE["driveways_ppc"]
         }
       />
 
@@ -78,4 +70,4 @@ function LandingArtificialGrassInstallation() {
   )
 }
 
-export default LandingArtificialGrassInstallation
+export default LandingDriway

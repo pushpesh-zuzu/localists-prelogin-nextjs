@@ -54,14 +54,13 @@ function LandingFenceAndGate() {
         title={LANDING_TITLES_AND_META["fencing_ppc"]?.title}
         paragraphs={LANDING_DETAIL_DATA["fencing_ppc"].paragraphs}
         defaultService={LANDING_SERVICES["fencing_ppc"]}
+        isNeedS={false}
         bannerImage={LANDING_DETAIL_BANNERS["fencing_ppc"]?.banner}
         cancelHeading={CANCEL_POPUP_DATA.cancelHeading}
         cancelPara={CANCEL_POPUP_DATA.cancelPara}
         serviceId={ServiceId.fencing_ppc}
         welcomModalTitle={LANDING_WELCOM_MODAL_TITLE["fencing_ppc"]}
-        welcomModalButtonText={
-          LANDING_WELCOM_MODAL_BUTTON_TITLE["fencing_ppc"]
-        }
+        welcomModalButtonText={LANDING_WELCOM_MODAL_BUTTON_TITLE["fencing_ppc"]}
       />
 
       <LandingHowItWork WORK_STEPS={LANDING_HOW_IT_WORK["landscaping_ppc"]} />

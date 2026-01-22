@@ -4,21 +4,22 @@ import {
     LANDING_DETAIL_BANNERS,
 } from "@/app/component/LandingPages/LandingPageData";
 import Footer from "@/app/component/Footer/Footer";
-import LandingPatioPage from "@/app/component/LandingPages/LandingPatioPage";
+import LandingConcreteDriveway from "@/app/component/LandingPages/LandingConcreteDriveway";
+
 
 export const metadata = {
-    title: "Compare Free Quotes from Local Patio Companies | Localists",
+    title: "Compare Free Concrete Driveway Quotes | Localists",
     description:
-        "Find trusted patio companies near you. Compare free quotes and hire the best experts for patio design, installation, and repairs – fast and easy!",
+        "Get free quotes from trusted local concrete driveway companies. Compare prices, read reviews, and hire top-rated professionals near you – quick and simple.",
 };
 
 export default function Page() {
     return (
         <Suspense fallback={<div></div>}>
             <SEO conversion
-                bannerImage={LANDING_DETAIL_BANNERS["patio_services_ppc"]?.banner}
+                bannerImage={LANDING_DETAIL_BANNERS["concrete_driveways_ppc"]?.banner}
             />
-            <LandingPatioPage />
+            <LandingConcreteDriveway />
             <Footer />
         </Suspense>
     );
