@@ -57,11 +57,11 @@ export default function AveragePrice() {
               <div className="">
                 <Paragraph
                   variant="primarySmall"
-                  className="md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center max-w-[130px] md:max-w-[220px]  lg:max-w-[90%]"
+                  className="md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center max-w-[132px] md:max-w-[220px]  lg:max-w-[90%]"
                 >
                   Trimming or pruning a small tree (under 25ft) costs on average
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] max-[336px]:mt-[12px] mt-[10%] md:mt-3 sm:mt-4">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] max-[336px]:mt-[12px] mt-[12%] md:mt-3 sm:mt-4">
                   £250
                 </p>
               </div>
