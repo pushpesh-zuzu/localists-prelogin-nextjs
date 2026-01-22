@@ -6,6 +6,7 @@ import LeadInfoModal from "./LeadStaticModal";
 import { GrowthStepsData } from "@/app/../constants/severalPanel";
 import H2 from "../UI/Typography/H2";
 import Button from "../UI/Typography/Button";
+import Link from "next/link";
 
 const GrowthSteps = () => {
     const router = useRouter();
@@ -19,7 +20,7 @@ const GrowthSteps = () => {
             router.push(`/${currentLang}/${currentCountry}${item.path}`);
             return;
         }
-        
+
         if (item?.id === 2) {
             setShowModal(true);
         }
@@ -113,26 +114,48 @@ const GrowthSteps = () => {
                             </div>
 
                             {/* BUTTON */}
-                            <Button
-                                onClick={() => handleCardClick(item)}
-                                className="
-                                font-[Arial]
-                tracking-[-0.03em]
-                  mt-[23.69px] cursor-pointer
-                  bg-[#253238] text-white
-                  text-[18px] font-bold
-                  px-[15px] py-[15px]
-                  rounded-full
-                  text-center
-                  leading-[100%]
-                  hover:bg-[#333]
-                  max-[460px]:text-[16px]
-                  max-[460px]:py-[12px]
-                  max-[460px]:mt-0
-                "
-                            >
-                                {item.button}
-                            </Button>
+                            {item?.path ? (
+                                <Link
+                                    href={`/${currentLang}/${currentCountry}${item.path}`}
+                                    className="
+      font-[Arial]
+      tracking-[-0.03em]
+      mt-[23.69px]
+      block
+      bg-[#253238] text-white
+      text-[18px] font-bold
+      px-[15px] py-[15px]
+      rounded-full
+      text-center
+      leading-[100%]
+      hover:bg-[#333]
+      max-[460px]:text-[16px]
+      max-[460px]:py-[12px]
+      max-[460px]:mt-0
+    " > {item.button} </Link>
+                            ) : (
+                                <Button
+                                    onClick={() => handleCardClick(item)}
+                                    className="
+      font-[Arial]
+      tracking-[-0.03em]
+      mt-[23.69px] cursor-pointer
+      bg-[#253238] text-white
+      text-[18px] font-bold
+      px-[15px] py-[15px]
+      rounded-full
+      text-center
+      leading-[100%]
+      hover:bg-[#333]
+      max-[460px]:text-[16px]
+      max-[460px]:py-[12px]
+      max-[460px]:mt-0
+    "
+                                >
+                                    {item.button}
+                                </Button>
+                            )}
+
                         </div>
                     ))}
                 </div>
