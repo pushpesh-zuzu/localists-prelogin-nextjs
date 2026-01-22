@@ -1,16 +1,12 @@
 "use client";
-import Image from "next/image";
 import { memo, useState } from "react";
-import { searchService } from "@/lib/store/searchSlice";
 import { useDispatch } from "react-redux";
 import dynamic from "next/dynamic";
 import H1 from "../../UI/Typography/H1";
 import Paragraph from "../../UI/Typography/Paragraph";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
-import SearchIcon from "../../common/icons/HomePageIcons/SearchIcon";
 import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 import Paragraph1 from "../../UI/Typography/Paragraph1";
-import TrustpioletIcon from "../../common/icons/HomePageIcons/TrustpioletIcon";
 import HeroSectionSearch from "./HeroSectionSearch";
 
 const SearchResults = dynamic(() => import("../../common/SearchResult"), {

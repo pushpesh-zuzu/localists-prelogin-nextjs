@@ -25,8 +25,6 @@ import H2 from "../UI/Typography/H2";
 import HomeGardenCarousel from "../Carousel/HomeCarousel";
 import {
     carouselData,
-    carouselData1,
-    carouselData2,
 } from "@/constants/blogPageData";
 import CarouselCard from "../Carousel/CarouselCard";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
@@ -79,23 +77,11 @@ function DiscoverServices() {
                             showSpecial={true}
                         />
                     </div>
-                    <div className="mt-[30px]">
-                        <div className="flex lg:hidden justify-between pt-5 pb-12 xl:pb-10">
-                            <H2 className="text-[#00AFE3]">Painting & Decorating</H2>{" "}
-                            <button className="font-bold text-xs sm:text-base tracking-[0.03em] leading-[18px] whitespace-nowrap">
-                                <span className="underline">See all</span>
-                            </button>
-                        </div>
-                        <HomeGardenCarousel
-                            data={carouselData1}
-                            renderCard={(card) => <CarouselCard card={card} />}
-                            showSpecial={true}
-                        />
-                    </div>
                 </div>
             </div>
 
-            <div className="px-2.5 sm:px-10 md:px-16 xl:px-[125px] mt-6 xl:mt-10">
+            <div className="px-2.5 sm:px-10 md:px-16 xl:px-[125px] mt-4 mb-8 lg:mb-12 xl:mb-12 xl:mt-2
+">
                 <div
                     className="
       bg-[#7ED5F1]
@@ -177,52 +163,6 @@ function DiscoverServices() {
                         <div className="flex justify-start lg:justify-end mt-[15px] lg:mt-0">
                             <LocationIcon />
                         </div>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <div className="md:block px-2.5 py-5 sm:px-10 md:px-16 md:py-10 xl:px-[120px] pt-10 xl:pt-12 xl:pb-[72px]">
-                <div>
-                    <div>
-                        <div className="flex lg:hidden justify-between pt-5 md:pt-0 pb-12 md:pb-10 xl:pb-10">
-                            <H2 className="text-[#00AFE3]">Plumbing</H2>{" "}
-                            <button className="font-bold text-xs sm:text-base tracking-[0.03em] leading-[18px] whitespace-nowrap">
-                                <span className="underline">See all</span>
-                            </button>
-                        </div>
-                        <HomeGardenCarousel
-                            data={carouselData2}
-                            renderCard={(card) => <CarouselCard card={card} />}
-                            showSpecial={true}
-                        />
-                    </div>
-                    <div className="mt-[30px]">
-                        <div className="flex lg:hidden justify-between pt-5 pb-12 xl:pb-10">
-                            <H2 className="text-[#00AFE3]">Painting & Decorating</H2>{" "}
-                            <button className="font-bold text-xs sm:text-base tracking-[0.03em] leading-[18px] whitespace-nowrap">
-                                <span className="underline">See all</span>
-                            </button>
-                        </div>
-                        <HomeGardenCarousel
-                            data={carouselData2}
-                            renderCard={(card) => <CarouselCard card={card} />}
-                            showSpecial={true}
-                        />
-                    </div>
-                    <div className="mt-[30px]">
-                        <div className="flex lg:hidden justify-between pt-5 pb-12 xl:pb-10">
-                            <H2 className="text-[#00AFE3]">Painting & Decorating</H2>{" "}
-                            <button className="font-bold text-xs sm:text-base tracking-[0.03em] leading-[18px] whitespace-nowrap">
-                                <span className="underline">See all</span>
-                            </button>
-                        </div>
-                        <HomeGardenCarousel
-                            data={carouselData2}
-                            renderCard={(card) => <CarouselCard card={card} />}
-                            showSpecial={true}
-                        />
                     </div>
                 </div>
             </div>

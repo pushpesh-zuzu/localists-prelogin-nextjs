@@ -1,104 +1,33 @@
 export const carouselData = [
   {
     id: 1,
-    title: "Plumbing",
-    image: "/images/BlogPage/plumber.webp", 
-    isSpecial: true, 
-    bgColor: "bg-cyan-400"
-  },
-  {
-    id: 2,
-    title: "How much does a plumber cost in 2026?",
-    image: "/images/BlogPage/plumber.webp", 
-    isSpecial: false
-  },
-  {
-    id: 3,
-    title: "How much does a plumber cost in 2026?",
-    image: "/images/BlogPage/handy-plumber.webp",
-    isSpecial: false
-  },
-  {
-    id: 4,
-    title: "How much does a plumber cost in 2026?",
-    image: "/images/BlogPage/tech-plumber.webp",
-    isSpecial: false
-  },
-  {
-    id: 5,
-    title: "How much does a plumber cost in 2026?",
-    image: "/images/BlogPage/plumber.webp",
-    isSpecial: false
-  },
-];
-
-export const carouselData1 = [
-  {
-    id: 1,
-    title: "Painting & Decorating",
-    image: "/images/BlogPage/human-hanging.webp",
+    title: "Home & Garden",
+    image: "/images/BlogPage/landscap.webp",
     isSpecial: true,
     bgColor: "bg-cyan-400"
   },
-
-  {
-    id: 2,
-    title: "How much does Painting & Decorating cost in 2026?",
-    image: "/images/BlogPage/human-hanging.webp",
-    isSpecial: false
-  },
-  {
-    id: 3,
-    title: "How much does Painting & Decorating cost in 2026?",
-    image: "/images/BlogPage/smile-man.webp",
-    isSpecial: false
-  },
-  {
-    id: 4,
-    title: "How much does an Accountant cost in 2026?",
-    image: "/images/BlogPage/painter.webp",
-    isSpecial: false
-  },
-  {
-    id: 5,
-    title: "How much does an Accountant cost in 2026?",
-    image: "/images/BlogPage/human-hanging.webp",
-    isSpecial: false
-  }
-];
-
-
-export const carouselData2 = [
-  {
-    id: 1,
-    title: "Landlord",
-    image: "/images/BlogPage/tech-plumber.webp",
-    isSpecial: true,
-    bgColor: "bg-cyan-400"
-  },
-
   {
     id: 2,
     title: "How much does a plumber cost in 2026?",
-    image: "/images/BlogPage/tech-plumber.webp",
+    image: "/images/BlogPage/landscap.webp",
     isSpecial: false
   },
   {
     id: 3,
     title: "How much does a plumber cost in 2026?",
-    image: "/images/BlogPage/hand-painting.webp",
+    image: "/images/BlogPage/handCutTree.webp",
     isSpecial: false
   },
   {
     id: 4,
     title: "How much does a plumber cost in 2026?",
-    image: "/images/BlogPage/family.webp",
+    image: "/images/BlogPage/Howlong.webp",
     isSpecial: false
   },
   {
     id: 5,
     title: "How much does a plumber cost in 2026?",
-    image: "/images/BlogPage/tech-plumber.webp",
+    image: "/images/BlogPage/view.webp",
     isSpecial: false
-  }
+  },
 ];
