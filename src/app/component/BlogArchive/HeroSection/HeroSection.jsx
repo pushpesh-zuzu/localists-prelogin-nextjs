@@ -1,6 +1,5 @@
 "use client";
 import { memo, useState } from "react";
-import { useDispatch } from "react-redux";
 import dynamic from "next/dynamic";
 import H1 from "../../UI/Typography/H1";
 import Paragraph from "../../UI/Typography/Paragraph";
@@ -30,10 +29,6 @@ const HeroSection = memo(function HeroSection() {
   const displayedServicesMediusScreen = showAllServices
     ? services
     : services.slice(0, 9);
-
-  const dispatch = useDispatch();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [Show, setShow] = useState(false);
 
   return (
     <WrapperBGWidth background={"#00aeef"}>

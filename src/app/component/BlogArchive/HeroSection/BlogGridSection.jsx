@@ -4,28 +4,8 @@ import Image from "next/image";
 const blogs = [
     {
         title: "How much does a Plumber cost in 2026?",
-        image: "/images/plumber.jpg",
+        image: "/images/landscap.webp",
     },
-    //   {
-    //     title: "How much does a electrician cost in 2026?",
-    //     image: "/images/electrician.jpg",
-    //   },
-    //   {
-    //     title: "How much does a tree surgeon cost in 2026?",
-    //     image: "/images/tree.jpg",
-    //   },
-    //   {
-    //     title: "How much does a Plumber cost in 2026?",
-    //     image: "/images/plumber.jpg",
-    //   },
-    //   {
-    //     title: "How much does a electrician cost in 2026?",
-    //     image: "/images/electrician.jpg",
-    //   },
-    //   {
-    //     title: "How much does a tree surgeon cost in 2026?",
-    //     image: "/images/tree.jpg",
-    //   },
 ];
 
 export default function BlogGridSection() {

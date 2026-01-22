@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import H3 from "../../UI/Typography/H3";
 
 export default function BlogHeroCard({ title, image }) {
   return (
