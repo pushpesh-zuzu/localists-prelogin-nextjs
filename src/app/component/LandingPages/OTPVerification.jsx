@@ -248,7 +248,7 @@ const OtpVerification = ({
 
         {/* Verify Button */}
         <button
-          className="mt-[18px] w-[200px] rounded-[3px] bg-[#00ADD8] px-[23px] py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0096c4] disabled:opacity-50"
+          className="mt-[18px] w-[200px] cursor-pointer rounded-[3px] bg-[#00ADD8] px-[23px] py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0096c4] disabled:opacity-50"
           disabled={requestLoader || verifyPhoneNumberLoader}
           onClick={handleSubmit}
         >
