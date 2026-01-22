@@ -67,7 +67,7 @@ function DiscoverServices() {
                     <div>
                         <div className="flex lg:hidden justify-between pt-5 md:pt-0 pb-12 md:pb-10 xl:pb-10">
                             <H2 className="text-[#00AFE3]">Plumbing</H2>{" "}
-                            <button className="font-bold text-xs sm:text-base tracking-[0.03em] leading-[18px] whitespace-nowrap">
+                            <button className="font-bold cursor-pointer text-xs sm:text-base tracking-[0.03em] leading-[18px] whitespace-nowrap">
                                 <span className="underline">See all</span>
                             </button>
                         </div>

@@ -8,25 +8,25 @@ export const carouselData = [
   },
   {
     id: 2,
-    title: "How much does a plumber cost in 2026?",
+    title: "How to start a landscaping Businees",
     image: "/images/BlogPage/landscap.webp",
     isSpecial: false
   },
   {
     id: 3,
-    title: "How much does a plumber cost in 2026?",
+    title: "How much do landscapers earn?",
     image: "/images/BlogPage/handCutTree.webp",
     isSpecial: false
   },
   {
     id: 4,
-    title: "How much does a plumber cost in 2026?",
+    title: "How long does a flat roof last",
     image: "/images/BlogPage/Howlong.webp",
     isSpecial: false
   },
   {
     id: 5,
-    title: "How much does a plumber cost in 2026?",
+    title: "How to start a landscaping Businees",
     image: "/images/BlogPage/view.webp",
     isSpecial: false
   },

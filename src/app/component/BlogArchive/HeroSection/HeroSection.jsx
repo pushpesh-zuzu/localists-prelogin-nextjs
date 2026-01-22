@@ -77,7 +77,7 @@ const HeroSection = memo(function HeroSection() {
             {services.map((service) => (
               <button
                 key={service}
-                className="border xl:border-2 border-white hover:border-[#B4EEFF] family-55 px-1.5 py-[5px] xl:px-3.5 xl:py-[7px] rounded-full text-white hover:bg-[#B4EEFF] hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none"
+                className="border xl:border-2 border-white hover:border-[#B4EEFF] family-55 px-1.5 py-[5px] xl:px-3.5 xl:py-[7px] rounded-full text-white hover:bg-[#B4EEFF] hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none cursor-pointer"
                 aria-label={`Search for ${service}`}
               >
                 <Paragraph>{service}</Paragraph>
@@ -132,7 +132,7 @@ const HeroSection = memo(function HeroSection() {
             {services.length > 5 && (
               <div className="flex justify-center mt-5">
                 <button
-                  className="font-bold text-[12px] rounded-full transition-all duration-200 flex items-center justify-center"
+                  className="font-bold text-[12px] cursor-pointer cursor-pointer rounded-full transition-all duration-200 flex items-center justify-center"
                   onClick={() => setShowAllServices(!showAllServices)}
                 >
                   <ChevroliteDoubleDownIcon />

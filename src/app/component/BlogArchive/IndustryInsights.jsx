@@ -7,42 +7,23 @@ import ChevroliteDoubleDownIcon from "../common/icons/HomePageIcons/ChevroliteDo
 
 
 const insights = [
-    "Plumbing",
-    "Roofing",
-    "Tree Surgery",
-    "Health",
-    "Interior Design",
-    "Painting & Decorating",
-    "Conversions",
-    "Extensions",
+    "Fence & Gate Installation",
+    "Driveway Installation",
+    "Patio Services",
     "Landscaping",
-    "Landlord",
-    "Kitchen",
-    "Insulation",
-    "Storage Ideas",
-    "Renovation",
-    "Gardening",
-    "Sound Proofing",
-    "Bathroom",
-    "Green Homes",
-    "Home Improvements",
-    "Money Advice",
-    "Cost Calculators",
-    "Radiator",
-    "Furniture",
-    "Fireplace",
-    "Insulation",
-    "Energy Efficiency",
-    "Green Homes",
-    "Carpentry",
-    "Guttering",
+    "Artificial Grass Installation",
+    "Tree Surgeon",
+    "Gutter Cleaning",
+    "Airport Transfers",
+    "Physics and Maths",
+    "Tutoring"
 ];
 
 export default function IndustryInsights() {
     const [showAll, setShowAll] = useState(false);
 
-    const mobileItems = showAll ? insights : insights.slice(0, 10);
-    const tabletItems = showAll ? insights : insights.slice(0, 13);
+    const mobileItems = showAll ? insights : insights.slice(0, 5);
+    const tabletItems = showAll ? insights : insights.slice(0, 10);
 
 
     return (
@@ -96,7 +77,7 @@ export default function IndustryInsights() {
         border xl:border-2 border-white
         hover:border-[#B4EEFF]
         px-1.5 py-[5px] xl:px-3.5 xl:py-[7px]
-        rounded-full
+        rounded-full cursor-pointer
         text-white
         hover:bg-[#B4EEFF] hover:text-[#00AEEF]
         transition-all duration-200
@@ -136,7 +117,7 @@ export default function IndustryInsights() {
                         ))}
                     </div>
 
-                    {insights.length > 10 && (
+                    {insights.length > 5 && (
                         <div className="flex justify-center mt-5">
                             <button
                                 onClick={() => setShowAll(!showAll)}
@@ -172,7 +153,7 @@ export default function IndustryInsights() {
                         ))}
                     </div>
 
-                    {insights.length > 13 && (
+                    {insights.length > 10 && (
                         <div className="flex justify-center mt-5">
                             <button
                                 onClick={() => setShowAll(!showAll)}
@@ -185,7 +166,7 @@ export default function IndustryInsights() {
                 </div>
 
                 <div className="flex justify-center mt-6 xl:mt-12">
-                    <Button className="bg-[#253238] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] text-white rounded-full">
+                    <Button className="bg-[#253238] hover:bg-[#1b2326] cursor-pointer px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] text-white rounded-full">
                         Show More
                     </Button>
                 </div>

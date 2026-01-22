@@ -22,6 +22,7 @@ export default function BlogGridSection() {
                         fill
                         className="object-cover"
                         priority
+                        fetchPriority="high"
                     />
 
                     {/* Gradient */}
@@ -44,6 +45,8 @@ export default function BlogGridSection() {
                             alt={item.title}
                             fill
                             className="object-cover"
+                            priority
+                            fetchPriority="high"
                         />
 
                         {/* Gradient */}
@@ -59,7 +62,7 @@ export default function BlogGridSection() {
 
             {/* BUTTON */}
             <div className="flex justify-center mt-10">
-                <button className="bg-[#2E3A3F] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-black transition">
+                <button className="bg-[#2E3A3F] cursor-pointer text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-black transition">
                     Show more
                 </button>
             </div>

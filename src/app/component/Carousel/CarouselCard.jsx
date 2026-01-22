@@ -16,7 +16,7 @@ export default function CarouselCard({ card }) {
             {card.title}
           </H3>
 
-          <button className="rounded-full bg-black text-white px-[18px] xl:px-[35px] text-base xl:text-[20px] -tracking-[3%] py-[3px] lg:py-[5px]">
+          <button className="rounded-full cursor-pointer bg-black hover:bg-[#1b2326] text-white px-[18px] xl:px-[35px] text-base xl:text-[20px] -tracking-[3%] py-[3px] lg:py-[5px]">
             View All
           </button>
         </div>
@@ -26,12 +26,13 @@ export default function CarouselCard({ card }) {
 
   return (
     <div className="select-none h-[213px] sm:h-[145px] lg:h-[200px] xl:h-[235px] relative flex justify-center">
-      <div className="relative w-full h-full max-w-[281px] rounded-[20px] xl:rounded-[28px] overflow-hidden">
+      <div className="relative cursor-pointer w-full h-full max-w-[281px] rounded-[20px] xl:rounded-[28px] overflow-hidden">
         <Image
           src={card.image}
           alt={card.title}
           fill
-          className="w-[244px] h-[213px] md:w-[180px] md:h-[132px] xl:w-[297px]  max-w-[281px] xl:h-[248px]"
+          className="w-[244px] h-[213px] md:w-[180px] md:h-[132px] xl:w-[297px] max-w-[281px] xl:h-[248px]
+          "
           sizes="(max-width: 768px) 90px,
                (max-width: 1024px) 133px,
                (max-width: 1280px) 195px,

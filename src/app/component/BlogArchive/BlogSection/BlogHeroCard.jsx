@@ -12,6 +12,7 @@ export default function BlogHeroCard({ title, image }) {
         className="object-cover transition-transform duration-300 group-hover:scale-105"
         quality={90}
         priority
+        fetchPriority="high"
       />
 
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]" />
