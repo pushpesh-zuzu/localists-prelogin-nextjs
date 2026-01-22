@@ -22,7 +22,7 @@ export default function PopularJobNearMe({
       
   
     </div> */}
-      <div className="md:block rounded-[20px] md:rounded-none mx-2.5 md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white  px-2.5 py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[108px]">
+      <div className="md:block rounded-[20px] md:rounded-none mx-2.5 md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white  px-2.5 py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[100px]">
         <div className="rounded-[20px] md:max-w-[600px] lg:max-w-[900px] xl:max-w-[1200px] md:h-[280px] lg:h-[380px] xl:h-[470px] relative overflow-visible">
           {/* 1️⃣ Shape background */}
           <div
@@ -37,7 +37,7 @@ export default function PopularJobNearMe({
             </H2>
             <p
               variant="secondary"
-              style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
+              // style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
               className={`text-[16px] leading-[16px]
         md:text-[14px] md:leading-[16px]
         lg:text-[20px] lg:leading-[24px] font-[Arial] font-bold

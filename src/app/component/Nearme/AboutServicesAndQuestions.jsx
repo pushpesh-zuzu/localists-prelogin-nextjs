@@ -42,7 +42,7 @@ const AboutServicesAndQuestions = ({
               className={`w-full h-auto object-cover rounded-lg ${
                 block?.className
               } ${block?.marginTop ? "mt-[30px] lg:mt-[72px]" : ""} ${
-                block?.marginBottom ? "mb-5 lg:mb-[85px]" : ""
+                block?.marginBottom ? "mb-5 lg:mb-[70px]" : ""
               }`}
               priority={block?.priority || false}
             />

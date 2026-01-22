@@ -63,7 +63,7 @@ export default function HireRelatedToServiceNearMe({
             </nav>
           </div>
         </header>
-        <div className="flex flex-wrap gap-y-2 xl:gap-y-[23px] gap-2 lg:gap-[23.92px] w-full md:max-w-full">
+        <div className="flex flex-wrap gap-y-2 xl:gap-[24px] gap-2 lg:gap-[23.92px] w-full md:max-w-full">
           {tabData[currentTab].map((title, i) => (
             <JobButton key={i} title={title} />
           ))}
