@@ -23,7 +23,7 @@ export default function PopularJobNearMe({
   
     </div> */}
       <div className="md:block rounded-[20px] md:rounded-none mx-2.5 md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white  px-2.5 py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[100px]">
-        <div className="rounded-[20px] md:max-w-[600px] lg:max-w-[900px] xl:max-w-[1200px] md:h-[280px] lg:h-[380px] xl:h-[470px] relative overflow-visible">
+        <div className="rounded-[30px] md:max-w-[600px] lg:max-w-[900px] xl:max-w-[1200px] md:h-[280px] lg:h-[380px] xl:h-[470px] relative overflow-visible">
           {/* 1️⃣ Shape background */}
           <div
             className="rounded-[20px] md:rounded-[40px] absolute inset-0 bg-[#00AFE3]

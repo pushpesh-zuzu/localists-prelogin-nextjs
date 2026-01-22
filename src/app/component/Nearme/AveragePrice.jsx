@@ -7,7 +7,7 @@ export default function AveragePrice() {
     <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px] ">
       <div className="w-full max-w-[1000px]">
         <div
-          className="w-full rounded-[25px]"
+          className="w-full rounded-[30px] md:rounded-[25px]"
           style={{ backgroundColor: "#8BFFCF" }}
         >
           <div className="flex flex-col lg:flex-row lg:gap-6">
@@ -78,7 +78,7 @@ export default function AveragePrice() {
                   £115
                 </p>
               </div>
-              <div className="flex lg:hidden col-span-2 mt-2 md:mt-0 justify-center">
+              <div className="flex lg:hidden col-span-2 mt-5 md:mt-0 justify-center">
                 <GetQuote text=" Get a real quote" />
               </div>
             </div>

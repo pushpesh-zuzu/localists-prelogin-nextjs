@@ -16,7 +16,7 @@ function UserFeedBackCardNearMe({ item ,mobileWidth='w-[198px]' }) {
                     md:px-[10.5px] md:py-4
 
                     lg:w-[300px] lg:h-[366px]
-                    lg:rounded-[40px]
+                    lg:rounded-[38px]
                     lg:px-[18px] lg:py-7`}
       >
         <div className="flex flex-col justify-between h-full">

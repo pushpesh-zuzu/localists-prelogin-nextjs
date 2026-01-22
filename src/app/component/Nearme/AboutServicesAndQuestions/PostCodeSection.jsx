@@ -9,8 +9,8 @@ const PostCodeSearchField = dynamic(() => import("../PostCodeSearchField"), {
 function PostCodeSection() {
   return (
     <div
-      className="
-        rounded-[20px] bg-[#7ED5F1] px-9 pt-4 pb-7 lg:px-9 lg:py-[62px] my-[30px] lg:mt-[60px] lg:mb-[60px]
+      className="rounded-[20px]
+        md:rounded-[27.5px] bg-[#7ED5F1] px-9 pt-4 pb-7 lg:px-9 lg:py-[62px] my-[30px] lg:mt-[60px] lg:mb-[60px]
         flex flex-col gap-6
         lg:flex-row lg:items-center lg:justify-between
       "

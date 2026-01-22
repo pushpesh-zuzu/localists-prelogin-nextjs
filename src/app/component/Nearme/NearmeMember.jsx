@@ -8,8 +8,8 @@ import Button from "../UI/Typography/Button";
 function NearmeMember({ description = "" }) {
   return (
     <div className="w-full max-w-[283px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto pt-5 pb-[30px]  md:py-[24px] xl:pt-0 xl:pb-[72px]">
-      <div className="hidden md:flex w-fit rounded-[36px] overflow-hidden mx-auto ">
-        <div className=" w-[340] md:h-[350px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
+      <div className="hidden md:flex w-fit rounded-[15px] md:rounded-[33px] overflow-hidden mx-auto ">
+        <div className=" w-[340] md:h-[350px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[15px] md:rounded-l-[33px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
           <>
             <H3
               style={{ textShadow: "0px 1.95px 1.95px #0000000D" }}
@@ -32,7 +32,7 @@ function NearmeMember({ description = "" }) {
           </>
         </div>
 
-        <div className=" relative rounded-r-[36px] overflow-hidden">
+        <div className=" relative rounded-r-[15px] md:rounded-r-[33px] overflow-hidden">
           <Image
             src="/nearme/treeSurgeonMember.webp"
             alt="Professional using phone"
@@ -46,7 +46,7 @@ function NearmeMember({ description = "" }) {
         </div>
       </div>
 
-      <div className="md:hidden rounded-[36px] overflow-hidden shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
+      <div className="md:hidden rounded-[15px] md:rounded-[33px] overflow-hidden shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
         <div className="w-full  relative">
           <Image
             src="/nearme/treeSurgeonMemberMobile.webp"
