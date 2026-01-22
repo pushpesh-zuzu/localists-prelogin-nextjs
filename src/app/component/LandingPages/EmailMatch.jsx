@@ -8,6 +8,7 @@ import { useSearchParams } from "next/navigation";
 import {
     checkEmailIdApi,
     setbuyerRequestData,
+    registerQuoteCustomer
 } from "@/lib/store/buyerslice/buyerSlice";
 import { validateEmail } from "@/utils/validateEmail";
 import { validateUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
