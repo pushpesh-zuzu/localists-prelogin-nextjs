@@ -21,9 +21,10 @@ export default function Page() {
     return (
         <main className="bg-white">
             <SEO
-                conversion
+                conversion={true}
                 canonicalPath="/en/gb/blog"
                 breadcrumb={[
+                    { title: "Blog", path: "/en/gb" },
                     { title: "Blog", path: "/en/gb/blog" },
                 ]} />
             <CloseBrowserAbandon />

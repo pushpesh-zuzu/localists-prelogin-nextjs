@@ -21,11 +21,19 @@ export const metadata = {
 export default function Page() {
   return (
     <main>
-      <SEO conversion />
+      <SEO
+        canonicalPath="/en/gb/how-it-works-for-customers"
+        breadcrumb={[
+          { title: "How it works for customers", path: "/en/gb" },
+          { title: "How it works for customers", path: "/en/gb/how-it-works-for-customers" },
+        ]}
+        conversion={true}
+      />
+
       <HeroSection />
       <WrapperBGWidth>
-        <FindLocalServices/>
-        <ServicesSteps/>
+        <FindLocalServices />
+        <ServicesSteps />
         <RegisterNow />
       </WrapperBGWidth>
       <Footer />

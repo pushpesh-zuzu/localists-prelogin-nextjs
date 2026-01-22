@@ -34,8 +34,14 @@ export default function Page() {
 
   return (
     <>
-      <SEO conversion />
-
+      <SEO
+        canonicalPath="/en/gb/terms"
+        breadcrumb={[
+          { title: "Terms", path: "/en/gb" },
+          { title: "Terms", path: "/en/gb/terms" },
+        ]}
+        conversion={true}
+      />
       <section className="text-[#253238]">
         {/* TABS */}
         <nav className="bg-[#f9f9fa] pt-[32px] mb-[24px]">
@@ -52,10 +58,9 @@ export default function Page() {
                 leading-[24px] tracking-[-0.03em]
                 transition-all duration-300 ease-in-out
                 cursor-pointer
-                ${
-                  activeTab === "customers"
-                    ? "bg-white text-[#253238] sm:-translate-y-[1px]"
-                    : "text-[#9da0b6]"
+                ${activeTab === "customers"
+                  ? "bg-white text-[#253238] sm:-translate-y-[1px]"
+                  : "text-[#9da0b6]"
                 }
                 hover:text-[#253238]
                 text-center
@@ -75,10 +80,9 @@ export default function Page() {
                 leading-[24px] tracking-[-0.03em]
                 transition-all duration-300 ease-in-out
                 cursor-pointer
-                ${
-                  activeTab === "professionals"
-                    ? "bg-white text-[#253238] sm:-translate-y-[1px]"
-                    : "text-[#9da0b6]"
+                ${activeTab === "professionals"
+                  ? "bg-white text-[#253238] sm:-translate-y-[1px]"
+                  : "text-[#9da0b6]"
                 }
                 hover:text-[#253238]
                 text-center

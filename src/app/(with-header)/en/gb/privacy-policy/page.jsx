@@ -35,7 +35,13 @@ export default function PrivacyPolicy() {
 
   return (
     <>
-      <SEO conversion />
+      <SEO canonicalPath="/en/gb/privacy-policy"
+        breadcrumb={[
+          { title: "Privacy Policy", path: "/en/gb" },
+          { title: "Privacy Policy", path: "/en/gb/privacy-policy" },
+        ]}
+        conversion={true}
+      />
 
       <section className="text-[#253238]">
         {/* TABS */}
@@ -53,10 +59,9 @@ export default function PrivacyPolicy() {
                 leading-[24px] tracking-[-0.03em]
                 transition-all duration-300 ease-in-out
                 cursor-pointer
-                ${
-                  activeTab === "customers"
-                    ? "bg-white text-[#253238] sm:-translate-y-[1px]"
-                    : "text-[#9da0b6]"
+                ${activeTab === "customers"
+                  ? "bg-white text-[#253238] sm:-translate-y-[1px]"
+                  : "text-[#9da0b6]"
                 }
                 hover:text-[#253238]
                 text-center
@@ -76,10 +81,9 @@ export default function PrivacyPolicy() {
                 leading-[24px] tracking-[-0.03em]
                 transition-all duration-300 ease-in-out
                 cursor-pointer
-                ${
-                  activeTab === "professionals"
-                    ? "bg-white text-[#253238] sm:-translate-y-[1px]"
-                    : "text-[#9da0b6]"
+                ${activeTab === "professionals"
+                  ? "bg-white text-[#253238] sm:-translate-y-[1px]"
+                  : "text-[#9da0b6]"
                 }
                 hover:text-[#253238]
                 text-center
