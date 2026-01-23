@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axiosInstance from "../axios";
+import { setCookie } from "@/utils/CookiesHelper";
 import {
     clearAuthToken,
     clearBuyerRegisterFormData,
@@ -66,11 +67,8 @@ export const userLogin = (loginData) => {
             dispatch(setCurrentUser(data.user_type));
             dispatch(setAuthToken(data.remember_tokens));
 
-
-            // 👉 Set cookie for middleware
-            if (typeof window !== "undefined") {
-                document.cookie = `token=${data.remember_tokens}; path=/`;
-            }
+            setCookie("barkToken", data.remember_tokens);
+            setCookie("barkUserToken", data);
 
             return res.data;
         } finally {
@@ -92,7 +90,8 @@ export const sendPasswordlessLink = (data) => {
                 throw new Error(res?.data?.message || "Failed to send magic link");
             }
 
-            if (response?.data?.data?.magic_link) {
+            if (res?.data?.data?.magic_link) {
+                console.log("Magiclink", res.data.data.magic_link);
             } else {
                 console.warn("⚠️ Backend did not return magic link in response.");
             }
