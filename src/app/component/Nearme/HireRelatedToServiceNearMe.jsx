@@ -24,13 +24,11 @@ export default function HireRelatedToServiceNearMe({
   const handleClick = (activtab) => {
     setcurrentTab(activtab);
   };
- const tabs = [
-  { lable: "Popular Jobs", activtab: "popular" },
-  { lable: "Find Professionals", activtab: "professionals" },
-  { lable: "Advice & Insight", activtab: "insight" },
-].filter(
-  (tab) => tabData?.[tab.activtab]?.length > 0
-);
+  const tabs = [
+    { lable: "Popular Jobs", activtab: "popular" },
+    { lable: "Find Professionals", activtab: "professionals" },
+    { lable: "Advice & Insight", activtab: "insight" },
+  ].filter((tab) => tabData?.[tab.activtab]?.length > 0);
   return (
     <WrapperBGWidth background={"#00AFE3"}>
       <div className="bg-[#00AFE3] px-2.5  md:px-16 py-[30px] md:py-[50px] lg:pl-16  xl:px-[120px] lg:py-[72px] w-full h-full">
@@ -68,11 +66,11 @@ export default function HireRelatedToServiceNearMe({
             <JobButton key={i} title={title} />
           ))}
         </div>
-      </div>
-      <div className="flex md:hidden justify-center pb-[30px]">
-        <Button className="mx-auto flex bg-black text-white px-[15px] py-2 rounded-full">
-          Show More <ChevronDown />
-        </Button>
+        <div className="flex md:hidden justify-center pb-2 pt-[38px]">
+          <Button className="mx-auto flex bg-black text-white px-[15px] py-2 rounded-full">
+            Show More <ChevronDown />
+          </Button>
+        </div>
       </div>
     </WrapperBGWidth>
   );
