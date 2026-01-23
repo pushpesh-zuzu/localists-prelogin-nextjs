@@ -7,12 +7,12 @@ import { getBarkToken, getRegisterTokens } from "@/utils/CookiesHelper";
 const useRegistrationRedirect = () => {
   const router = useRouter();
 
-  const userToken = getBarkToken();
-  const registerToken = getRegisterTokens();
-
+  
   useEffect(() => {
     if (typeof window === "undefined") return;
-
+    
+    const userToken = getBarkToken();
+    const registerToken = getRegisterTokens();
     const isRegistrationComplete =
       localStorage.getItem("isRegistrationComplete");
 
@@ -22,7 +22,7 @@ const useRegistrationRedirect = () => {
     ) {
       router.replace("/buyers/create");
     }
-  }, [userToken, registerToken, router]);
+  }, [router]);
 };
 
 export default useRegistrationRedirect;
