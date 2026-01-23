@@ -6,7 +6,7 @@ export const metadata = {
         "Develop a skill, and get lessons in anything from driving to academics with trusted local tutors and trainers. Get your free quote now!",
 
     alternates: {
-        canonical: "https://dev2.localistsbooster.com/en/gb/lessons-training",
+        // canonical: "https://dev2.localistsbooster.com/en/gb/lessons-training",
         languages: {
             "en-GB": "https://dev2.localistsbooster.com/en/gb/lessons-training"
         },

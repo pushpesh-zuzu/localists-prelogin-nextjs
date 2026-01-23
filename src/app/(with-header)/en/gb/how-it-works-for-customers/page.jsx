@@ -4,6 +4,7 @@ import HeroSection from "@/app/component/HowItWorks/HeroSection/HeroSection";
 import FindLocalServices from "./FindLocalServices";
 import ServicesSteps from "./ServicesSteps";
 import RegisterNow from "@/app/component/HowItWorks/RegisterNow/RegisterNow";
+import SEO from "@/app/component/common/seo/SEO";
 
 
 
@@ -17,7 +18,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://dev2.localistsbooster.com/en/gb/how-it-works-for-customers",
+    // canonical: "https://dev2.localistsbooster.com/en/gb/how-it-works-for-customers",
     languages: {
       "en-GB": "https://dev2.localistsbooster.com/en/gb/how-it-works-for-customers"
     },
@@ -43,6 +44,7 @@ export const metadata = {
 export default function Page() {
   return (
     <main>
+      <SEO conversion />
       <HeroSection />
       <WrapperBGWidth>
         <FindLocalServices/>

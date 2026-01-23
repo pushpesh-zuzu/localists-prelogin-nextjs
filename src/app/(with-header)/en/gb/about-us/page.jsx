@@ -12,7 +12,7 @@ export const metadata = {
         "Meet our experienced leadership team and the investors driving Localists, the world’s fastest-growing local services marketplace. Get free quotes.",
 
     alternates: {
-        canonical: "https://dev2.localistsbooster.com/en/gb/about-us",
+        // canonical: "https://dev2.localistsbooster.com/en/gb/about-us",
         languages: {
             "en-GB": "https://dev2.localistsbooster.com/en/gb/About-us"
         },

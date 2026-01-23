@@ -1,6 +1,6 @@
 import React from "react";
 
-const LoaderIndicator = ({ size = "default" }) => {
+const LoaderIndicator = ({ size = "default",background='#00aef3' }) => {
   const sizeMap = {
     small: "w-3.5 h-3.5",
     default: "w-5 h-5",
@@ -37,16 +37,20 @@ const LoaderIndicator = ({ size = "default" }) => {
       `}</style>
       <span className="ant-spin-dot absolute inset-0">
         <i
-          className={`ant-spin-dot-item absolute top-0 left-0 ${dotSizeMap[size]} bg-[#00aef3] rounded-full`}
+          className={`ant-spin-dot-item absolute top-0 left-0 ${dotSizeMap[size]}  rounded-full`}
+          style={{ backgroundColor: background }}
         />
         <i
-          className={`ant-spin-dot-item absolute top-0 right-0 ${dotSizeMap[size]} bg-[#00aef3] rounded-full`}
+          className={`ant-spin-dot-item absolute top-0 right-0 ${dotSizeMap[size]}  rounded-full`}
+          style={{ backgroundColor: background }}
         />
         <i
-          className={`ant-spin-dot-item absolute bottom-0 right-0 ${dotSizeMap[size]} bg-[#00aef3] rounded-full`}
+          className={`ant-spin-dot-item absolute bottom-0 right-0 ${dotSizeMap[size]}  rounded-full`}
+          style={{ backgroundColor: background }}
         />
         <i
-          className={`ant-spin-dot-item absolute bottom-0 left-0 ${dotSizeMap[size]} bg-[#00aef3] rounded-full`}
+          className={`ant-spin-dot-item absolute bottom-0 left-0 ${dotSizeMap[size]}  rounded-full`}
+          style={{ backgroundColor: background }}
         />
       </span>
     </div>

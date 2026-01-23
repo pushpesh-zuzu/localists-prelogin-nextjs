@@ -50,32 +50,30 @@ const CloneHowitWorks = ({ ctaText, howItWorksData }) => {
               max-[920px]:px-[20px] max-[920px]:pb-[20px]
               max-[667px]:w-[90%]
               max-[667px]:flex max-[667px]:flex-col max-[667px]:items-center
-            "
-          >
+            " >
 
             <div
               className="
-                flex items-center justify-center
-                w-[132px] h-[132px]
-                rounded-full bg-black
-                mx-auto mb-[20px]
-                mt-[-58px]
-                max-[920px]:mt-[-52px]
-                max-[768px]:w-[102px] max-[768px]:h-[102px]
-                max-[667px]:w-[100px] max-[667px]:h-[100px]
-                max-[667px]:mt-[-50px] max-[667px]:mb-[20px]
-              "
+    flex items-center justify-center
+    w-[132px] h-[132px]
+    rounded-full bg-black
+    mx-auto mb-[20px]
+    mt-[-58px]
+    max-[920px]:mt-[-52px]
+    max-[768px]:w-[102px] max-[768px]:h-[102px]
+    max-[667px]:w-[100px] max-[667px]:h-[100px]
+    max-[667px]:mt-[-50px] max-[667px]:mb-[20px]
+  "
             >
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={78}
-                height={78}
-                className="
-                  max-[768px]:w-[48px] max-[768px]:h-[48px]
-                "
-              />
+              {item.icon && (
+                <item.icon
+                  width={110}
+                  height={110}
+                  className="max-[768px]:w-[48px] max-[768px]:h-[48px]"
+                />
+              )}
             </div>
+
 
             <div>
               <H3

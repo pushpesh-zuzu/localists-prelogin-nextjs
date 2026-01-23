@@ -21,7 +21,7 @@ export const metadata = {
     },
 
     alternates: {
-        canonical: "https://dev2.localistsbooster.com/en/gb/transportation-services",
+        // canonical: "https://dev2.localistsbooster.com/en/gb/transportation-services",
         languages: {
             "en-GB": "https://dev2.localistsbooster.com/en/gb/transportation-services"
         },

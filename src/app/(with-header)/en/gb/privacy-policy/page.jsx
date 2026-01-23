@@ -35,7 +35,7 @@ export default function PrivacyPolicy() {
 
   return (
     <>
-      <SEO />
+      <SEO conversion />
 
       <section className="text-[#253238]">
         {/* TABS */}
