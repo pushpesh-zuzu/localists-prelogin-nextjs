@@ -19,18 +19,18 @@ function HeroSectionNearMe({
   heading2 = "Near You.",
   description = `Find the best tree surgeons for your job, just enter your postcode
               and a few details for instant quotes.`,
-  bannerImage = "/nearme/treeSurgeon.webp",
+  bannerImage = "",
   bannerImageMobile = "",
   altText = "Tree Surgeon",
 }) {
   return (
     <>
       <WrapperBGWidth
-        secondaryClass="md:h-[368px] lg:h-[650px] xl:h-[690px] max-h-[690px]"
-        className="relative md:h-[368px] lg:h-[650px] xl:h-[690px] max-h-[690px]"
+        secondaryClass="md:h-[350px] lg:h-[650px] xl:h-[690px] max-h-[690px]"
+        className="relative md:h-[350px] lg:h-[650px] xl:h-[690px] max-h-[690px]"
         background={"#00afe3"}
       >
-        <div className="absolute inset-0 md:h-[368px] lg:h-[650px] xl:h-[690px] max-h-[690px]  hidden md:block">
+        <div className="absolute inset-0 md:h-[350px] lg:h-[650px] xl:h-[690px] max-h-[690px]  hidden md:block">
           <Image
             src={bannerImage}
             alt={altText}
@@ -38,7 +38,7 @@ function HeroSectionNearMe({
             priority={true}
             fetchPriority="high"
             quality={75}
-            className="h-10 w-10 md:h-[368px] min-[900px]:h-[400px] lg:h-[650px] xl:h-[690px] md:max-w-[1536px] mx-auto"
+            className="h-10 w-10 md:h-[350px] min-[900px]:h-[400px] lg:h-[650px] xl:h-[690px] md:max-w-[1536px] mx-auto"
             sizes="(min-width: 768px) 100vw, 0px"
           />
         </div>
@@ -56,7 +56,7 @@ function HeroSectionNearMe({
           />
         </div>
         <section
-          className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full  md:flex-row px-[34px] pt-10 md:px-[60px] lg:pb-[64px] xl:pb-[100px] md:pt-[28px] xl:px-[120px] xl:pt-[73.88px] relative"
+          className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full  md:flex-row px-[34px] pt-10 md:px-[60px] lg:pb-[64px] xl:pb-[100px] md:pt-4 xl:px-[120px] xl:pt-[73.88px] relative"
           role="banner"
           aria-label="Hero section"
         >

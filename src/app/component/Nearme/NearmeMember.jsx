@@ -9,7 +9,7 @@ function NearmeMember({ description = "" }) {
   return (
     <div className="w-full max-w-[283px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto pt-5 pb-[30px]  md:py-[0px] xl:pt-0 xl:pb-[72px]">
       <div className="hidden md:flex w-fit rounded-[15px] md:rounded-[33px] overflow-hidden mx-auto ">
-        <div className=" w-[340] md:h-[310px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[15px] md:rounded-l-[33px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
+        <div className=" w-[340] md:h-[298px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[15px] md:rounded-l-[33px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
           <>
             <H3
               style={{ textShadow: "0px 1.95px 1.95px #0000000D" }}
@@ -19,14 +19,14 @@ function NearmeMember({ description = "" }) {
             </H3>
 
             <div className="hidden md:block mt-0 lg:mt-3">
-              <p className="  text-white font-bold text-xs md:text-base lg:text-[20px] md:mt-[18px]" >
+              <p className="  text-white font-bold text-xs md:text-base lg:text-[20px] mt-[9px] lg:mt-[18px]" >
                 Localists Professional, Chris
               </p>
               {/* <p className=" text-white text-xs lg:text-[16px] font-normal">
                 CH Joinery
               </p> */}
             </div>
-            <Button className="hidden md:inline-flex bg-[#253238] mt-4 lg:mt-9 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
+            <Button className="hidden md:inline-flex bg-[#253238] mt-3 lg:mt-9 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
               Become a member
             </Button>
           </>
@@ -41,7 +41,7 @@ function NearmeMember({ description = "" }) {
             loading="eager"
             height={512}
             width={521}
-            className="w-[273px] h-[350px] md:h-[310px] lg:w-[521px] lg:h-[512px]"
+            className="w-[273px] h-[350px] md:h-[298px] lg:w-[521px] lg:h-[512px]"
           />
         </div>
       </div>
