@@ -2,10 +2,15 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
 import { getBarkToken, getRegisterTokens } from "@/utils/CookiesHelper";
+import { setBuyerStep } from "@/lib/store/buyerslice/buyerSlice";
+
 
 const useRegistrationRedirect = () => {
   const router = useRouter();
+  const dispatch = useDispatch(); // ✅ correct place
+
 
 
   useEffect(() => {
@@ -14,8 +19,9 @@ const useRegistrationRedirect = () => {
     const userToken = getBarkToken();
     const registerToken = getRegisterTokens();
 
-    // 🚨 User logged out → cleanup stale PPC data
+    // 🚨 User logged out → FULL cleanup
     if (!userToken && !registerToken) {
+      dispatch(setBuyerStep(1));
       localStorage.removeItem("pendingBuyerModal");
       localStorage.removeItem("isRegistrationComplete");
       return;
@@ -25,8 +31,7 @@ const useRegistrationRedirect = () => {
     if (userToken || registerToken) {
       router.replace("/buyers/create");
     }
-  }, [router]);
-
+  }, [router, dispatch]);
 };
 
 export default useRegistrationRedirect;
