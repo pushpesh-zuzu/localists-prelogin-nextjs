@@ -6,7 +6,6 @@ export const metadata = {
     description:
         "Log in to your Localists account to manage leads, connect with customers, and grow your business with trusted local opportunities.",
 
-
     robots: "noindex",
 };
 

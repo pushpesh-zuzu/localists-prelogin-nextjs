@@ -17,6 +17,7 @@ import RadioButton from "@/app/component/UI/Inputs/RadioButton";
 import Button1 from "@/app/component/UI/Typography/Button1";
 import Paragraph2 from "@/app/component/UI/Typography/Paragraph2";
 import Footer from "../../Footer/Footer";
+import LoaderIndicator from "../Loader/LoaderIndicatore";
 
 export default function LoginForm({ passwordless }) {
 
@@ -112,12 +113,6 @@ export default function LoginForm({ passwordless }) {
             .then((res) => {
                 if (res?.success) {
 
-                    if (typeof window !== "undefined") {
-                        document.cookie = rememberMe
-                            ? "token=logged-in; path=/; max-age=2592000"
-                            : "token=logged-in; path=/";
-                    }
-
                     showToast("success", "Login successful!");
 
                     res?.data?.active_status === 1
@@ -201,7 +196,7 @@ export default function LoginForm({ passwordless }) {
                         <Button1
                             type="submit"
                             disabled={loginLoader || passwordlessLoader}
-                            className="h-[49px] w-full bg-[#00AFE3] hover:bg-[#4096ff]
+                            className="h-[49px] min-h-[49px] w-full bg-[#00AFE3] hover:bg-[#0397c4]
     text-white text-[16px] cursor-pointer
     flex items-center justify-center gap-2
     disabled:opacity-70 disabled:cursor-not-allowed
@@ -209,7 +204,7 @@ export default function LoginForm({ passwordless }) {
     max-sm:h-[40px] max-sm:text-[12px]
             " >
                             {(loginLoader || passwordlessLoader) ? (
-                                <span className="h-5 w-5 border-3 border-[#4096ff] border-t-transparent rounded-full animate-spin" />
+                                <LoaderIndicator background="white" size="small"/>
                             ) : passwordless ? (
                                 "Send"
                             ) : (
