@@ -23,7 +23,7 @@ const ThankuPage = () => {
   const handleSubmit = () => {
     if (typeof window !== "undefined") {
       const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal") || "null");
-      localStorage.setItem("isRegistrationComplete", "true");
+      localStorage.setItem("isRegistrationComplete", "false");
       
       let redirectPath = "/";
       
