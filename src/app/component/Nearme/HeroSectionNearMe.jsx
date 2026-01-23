@@ -64,7 +64,7 @@ function HeroSectionNearMe({
             className="w-full
            flex flex-col  relative z-10"
           >
-            <TrustpioletIcon className="lg:min-h-[54px] max-h-[28px] max-w-[184px] md:max-w-[177px] lg:max-w-[360px] md:mb-3 lg:mb-[30px] lg:max-h-12" />
+            <TrustpioletIcon className="lg:min-h-[54px] max-h-[28px] max-w-[184px] md:max-w-[177px] lg:max-w-[360px] mb-[16.54px] md:mb-3 lg:mb-[30px] lg:max-h-12" />
             <H1  className="text-white block drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)] ">
               <span >
                 {heading1}
