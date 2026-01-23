@@ -43,6 +43,25 @@ const CloseBrowserAbandon = () => {
 
   const hasSent = useRef(false);
 
+  // Check if form has any data
+  const hasFormData = () => {
+    const { userToken, buyerRequest } = latestData.current;
+    
+    if (userToken) {
+      return false;
+    }
+
+    // Check if any field has value
+    const hasData = 
+      (buyerRequest?.name?.trim()?.length > 0) ||
+      (buyerRequest?.email?.trim()?.length > 0) ||
+      (buyerRequest?.phone?.trim()?.length > 0) ||
+      (buyerRequest?.postcode?.trim()?.length > 0) ||
+      (buyerRequest?.questions && buyerRequest.questions.length > 0);
+
+    return hasData;
+  };
+
   const submitFormData = () => {
     const { userToken, buyerRequest, citySerach } = latestData.current;
     
@@ -133,26 +152,30 @@ const CloseBrowserAbandon = () => {
     console.log(`🔵 Mounted - ${isMobile.current ? "Mobile 📱" : "Desktop 💻"}`);
 
     const handleBeforeUnload = (event) => {
+      if (!hasFormData()) {
+        console.log("🟢 No form data - allowing navigation without popup");
+        return;
+      }
+
       if (hasSent.current) return;
       
       console.log(`🚨 ${isMobile.current ? "Mobile" : "Desktop"} - beforeunload triggered`);
       submitFormData();
       
-      // This is important for browser to show confirmation dialog
       event.preventDefault();
       event.returnValue = "";
     };
 
     // Mobile specific handlers
     const handlePageHide = (event) => {
-      if (hasSent.current) return;
+      if (!hasFormData() || hasSent.current) return;
       console.log("📱 Mobile - pagehide triggered");
       submitFormData();
     };
 
     const handleVisibilityChange = () => {
       if (document.visibilityState === "hidden") {
-        if (hasSent.current) return;
+        if (!hasFormData() || hasSent.current) return;
         console.log("📱 Mobile - visibilitychange (hidden)");
         submitFormData();
       }
@@ -160,10 +183,10 @@ const CloseBrowserAbandon = () => {
 
     const handleBlur = () => {
       // Only for mobile, with slight delay to avoid false triggers
-      if (!isMobile.current || hasSent.current) return;
+      if (!isMobile.current || !hasFormData() || hasSent.current) return;
       
       setTimeout(() => {
-        if (document.hidden && !hasSent.current) {
+        if (document.hidden && !hasSent.current && hasFormData()) {
           console.log("📱 Mobile - blur triggered");
           submitFormData();
         }

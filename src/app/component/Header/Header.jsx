@@ -12,6 +12,7 @@ import SearchIcon from "../common/icons/HomePageIcons/SearchIcon";
 import MobileMenuIcon from "../common/icons/HomePageIcons/MobileMenuIcon";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import { useRouter } from "next/navigation";
+import AuthenticatedHeader from "./AthenticatedHeader";
 
 const SearchResults = dynamic(() => import("../common/SearchResult"), {
   ssr: false,
@@ -23,7 +24,9 @@ export default function Header() {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  return (
+  return getBarkToken() ? (
+    <AuthenticatedHeader />
+  ) : (
     <header
       className="w-full sticky top-0 left-0 border-b border-[#DEDEDE] bg-white z-50"
       role="banner"
@@ -51,7 +54,7 @@ export default function Header() {
             <div className="flex items-center space-x-4 md:space-x-2 lg:space-x-2.5 lg:py-3">
               <MegaMenu>
                 <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
-                  {/* Explore Our Services */}
+                  Explore Our Services
                   {/* <Image
                     src="/icons/downarrowblue.svg"
                     alt="down-arrow"
@@ -83,59 +86,58 @@ export default function Header() {
             </div>
           </div>
 
-          {getBarkToken() ? (
-            <p className="text-[#253238]">User Logged In</p>
-          ) : (
-            <nav
-              className="flex items-center space-x-4  md:space-x-2 lg:space-x-8"
-              role="navigation"
-              aria-label="User account navigation"
-            >
-              <div className="relative flex gap-1.5">
-                <input
-                  type="text"
-                  placeholder="Search for a service"
-                  className="text-base w-[207px] h-[34px]  px-2.5 py-2 font-bold bg-white border-[1.5px] border-[#CACACA] rounded-[100px] focus:outline-none"
-                  value={searchQuery || ""}
-                  onChange={(e) => {
-                    const query = e.target.value;
-                    setSearchQuery(query); // State update
-                    if (query.trim() !== "") {
-                      dispatch(searchService({ query }));
-                    }
-                  }}
+          <nav
+            className="flex items-center space-x-4  md:space-x-2 lg:space-x-8"
+            role="navigation"
+            aria-label="User account navigation"
+          >
+            <div className="relative flex gap-1.5">
+              <input
+                type="text"
+                placeholder="Search for a service"
+                className="text-base w-[207px] h-[34px]  px-2.5 py-2 font-bold bg-white border-[1.5px] border-[#CACACA] rounded-[100px] focus:outline-none"
+                value={searchQuery || ""}
+                onChange={(e) => {
+                  const query = e.target.value;
+                  setSearchQuery(query); // State update
+                  if (query.trim() !== "") {
+                    dispatch(searchService({ query }));
+                  }
+                }}
+              />
+              {searchQuery.length ? (
+                <SearchResults
+                  searchQuery={searchQuery}
+                  setSearchQuery={setSearchQuery}
                 />
-                {searchQuery.length ? (
-                  <SearchResults
-                    searchQuery={searchQuery}
-                    setSearchQuery={setSearchQuery}
-                  />
-                ) : (
-                  ""
-                )}
-                <div className="absolute inset-y-0 right-2 flex items-center pointer-events-none">
-                  <SearchIcon className="h-4 w-4" />
-                </div>
+              ) : (
+                ""
+              )}
+              <div className="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+                <SearchIcon className="h-4 w-4" />
               </div>
+            </div>
 
-              <div
-                className="flex items-center space-x-1 lg:space-x-4"
-                role="group"
-                aria-label="User authentication"
+            <div
+              className="flex items-center space-x-1 lg:space-x-4"
+              role="group"
+              aria-label="User authentication"
+            >
+              <button
+                onClick={() => router.push("/en/gb/login")}
+                className="text-[14px] lg:text-base cursor-pointer font-normal text-[#1E2A2E] lg:py-[12.5px] md:px-1 lg:px-4 whitespace-nowrap"
+                aria-label="Login to your account"
               >
-                <button
-                  onClick={() => router.push("/en/gb/login")}
-                  className="text-[14px] lg:text-base cursor-pointer font-normal text-[#1E2A2E] lg:py-[12.5px] md:px-1 lg:px-4 whitespace-nowrap"
-                  aria-label="Login to your account"
-                >
-                  Login
-                </button>
-                <button
-                  className="flex items-center cursor-pointer font-bold gap-2 px-2.5 py-1.5 lg:px-5 lg:py-3 text-[14px] lg:text-[16px] text-white bg-[#00AEEF] rounded-full whitespace-nowrap"
-                  aria-label="Sign up for new account"
-                  onClick={() => { router.push('/en/gb/sellers/create') }}
-                >
-                  {/* <Image
+                Login
+              </button>
+              <button
+                className="flex items-center cursor-pointer font-bold gap-2 px-2.5 py-1.5 lg:px-5 lg:py-3 text-[14px] lg:text-[16px] text-white bg-[#00AEEF] rounded-full whitespace-nowrap"
+                aria-label="Sign up for new account"
+                onClick={() => {
+                  router.push("/en/gb/sellers/create");
+                }}
+              >
+                {/* <Image
                     src="/icons/signup.webp"
                     alt="signup icon"
                     width={16.71}
@@ -145,11 +147,10 @@ export default function Header() {
                     fetchPriority="high"
                     loading="eager"
                   /> */}
-                  Join as a Professional
-                </button>
-              </div>
-            </nav>
-          )}
+                Join as a Professional
+              </button>
+            </div>
+          </nav>
         </div>
 
         <div className="flex lg:hidden items-center justify-between px-2.5 py-2.5 md:py-[9.5px] md:px-16">
@@ -158,43 +159,40 @@ export default function Header() {
               <MobileMenuIcon className="" />
             </button>
           </MegaMenu>
-          {getBarkToken() ? (
-            <p className="text-[#253238]">User Logged In</p>
-          ) : (
-            <>
-              <div className="flex justify-center flex-1 max-w-[103px] max-h-[25px]">
-                <a
-                  href="/"
-                  aria-label="Go to Localists homepage"
-                  className="shrink-0"
-                >
-                  <Image
-                    src="/logo.webp"
-                    alt="Localists - Local Service Provider Directory"
-                    width={103}
-                    height={25}
-                    className="w-[103px] h-[25px] md:w-[133px] md:w-8 ml-[25%]"
-                    priority
-                    fetchPriority="high"
-                    loading="eager"
-                    layout="intrinsic"
-                  />
-                </a>
-              </div>
-              <div className="flex items-center space-x-[4.34px]">
-                <button type="button" aria-label="Search services">
-                  <SearchIcon className="h-4 w-4 md:h-[18px] md:w-[18px] mr-0.5 md:mr-1" />
-                </button>
-                <button
-                  onClick={() => router.push("/en/gb/login")}
-                  className="px-2.5 md:px-4 leading-4 py-[5.66px] text-[16px] font-medium text-white bg-[#00AEEF] rounded-full transition-colors duration-200"
-                  aria-label="Login to your account"
-                >
-                  Login
-                </button>
-              </div>
-            </>
-          )}
+
+          <>
+            <div className="flex justify-center flex-1 max-w-[103px] max-h-[25px]">
+              <a
+                href="/"
+                aria-label="Go to Localists homepage"
+                className="shrink-0"
+              >
+                <Image
+                  src="/logo.webp"
+                  alt="Localists - Local Service Provider Directory"
+                  width={103}
+                  height={25}
+                  className="w-[103px] h-[25px] md:w-[133px] md:w-8 ml-[25%]"
+                  priority
+                  fetchPriority="high"
+                  loading="eager"
+                  layout="intrinsic"
+                />
+              </a>
+            </div>
+            <div className="flex items-center space-x-[4.34px]">
+              <button type="button" aria-label="Search services">
+                <SearchIcon className="h-4 w-4 md:h-[18px] md:w-[18px] mr-0.5 md:mr-1" />
+              </button>
+              <button
+                onClick={() => router.push("/en/gb/login")}
+                className="px-2.5 md:px-4 leading-4 py-[5.66px] text-[16px] font-medium text-white bg-[#00AEEF] rounded-full transition-colors duration-200"
+                aria-label="Login to your account"
+              >
+                Login
+              </button>
+            </div>
+          </>
         </div>
       </WrapperBGWidth>
     </header>

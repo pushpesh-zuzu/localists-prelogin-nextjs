@@ -21,9 +21,9 @@ export default function Home() {
   return (
     <main className="bg-white">
       <CloseBrowserAbandon />
-      <div suppressHydrationWarning>
+      {/* <div suppressHydrationWarning> */}
         <Header />
-      </div>
+      {/* </div> */}
       <HeroSection />
       <PopularCard />
       <HowItWork />

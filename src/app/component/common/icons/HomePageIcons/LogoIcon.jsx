@@ -70,7 +70,7 @@ function LogoIcon({ className = "", height = "29", width = "156" }) {
           <stop offset="2.49201e-07" stopColor="#2E81C4" />
           <stop offset="0.107" stopColor="#308FCD" />
           <stop offset="0.3876" stopColor="#36B1E3" />
-          <stop offset="0.5231" stop-color="#3AC0EC" />
+          <stop offset="0.5231" stopColor="#3AC0EC" />
         </linearGradient>
       </defs>
     </svg>

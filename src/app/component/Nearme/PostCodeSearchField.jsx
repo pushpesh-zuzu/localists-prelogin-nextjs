@@ -41,7 +41,7 @@ function PostCodeSearchField({
         const response = await dispatch(getCityName({ postcode: postcode }));
         const newResponse = response?.payload || response;
 
-        if (newResponse?.data?.city) {
+        if (newResponse?.data?.valid) {
           setIsValid(true);
           setCity(newResponse.data.city);
           dispatch(setcitySerach(newResponse.data.city));
