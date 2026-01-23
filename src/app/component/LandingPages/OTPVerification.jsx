@@ -14,11 +14,13 @@ import { formatUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
 import BackButtonOTP from "../common/icons/Registration/BackButtonOTP";
 import H5 from "../UI/Typography/H5";
 import Paragraph from "../UI/Typography/Paragraph2";
+import Paragraph2 from "../UI/Typography/Paragraph2";
+import Paragraph1 from "../UI/Typography/Paragraph1";
 
 const OtpVerification = ({
   open,
   nextStep,
-  isThankuPageOnlyShow = true,
+  isThankuPageOnlyShow = false,
   setReEnterMobile,
 }) => {
   const [otp, setOtp] = useState(["", "", "", ""]);
@@ -121,7 +123,7 @@ const OtpVerification = ({
           "questions",
           JSON.stringify(buyerRequest?.questions || [])
         );
-        formData.append("form_status", "1");
+        formData.append("form_status", 1);
         formData.append("request_id", requestId);
         formData.append("user_id", requestUserId);
 
@@ -157,6 +159,7 @@ const OtpVerification = ({
         });
       } else {
         showToast("error", result?.message || "OTP verification failed");
+        return;
       }
     });
   };
@@ -186,6 +189,7 @@ const OtpVerification = ({
       isOpen={true}
       maxWidth="max-w-[90%] sm:max-w-[500px] mt-[5%]"
       showClosIcon={false}
+      radius="rounded-[10px]"
     >
       <div className="w-full max-w-[500px] bg-white px-2  md:px-8 py-[35px] text-center shadow-sm sm:px-[31px] sm:py-[35px]">
         {/* Title */}
@@ -194,17 +198,18 @@ const OtpVerification = ({
         </H5>
 
         {/* Instruction */}
-        <Paragraph className="mb-6 text-[#828282] font-black">
+        <p className="mb-6 text-[#828282] font-[Arial]
+        tracking-[-0.03em] text-[16px] leading-[18px]">
           Enter the OTP sent to{" "}
           <span className="text-[#253238]">
             {formatUKPhoneNumber(requestUserPhone)}
           </span>
-        </Paragraph>
+        </p>
 
         {/* Phone verification notice */}
         <span className="tracking-[-0.03em]
         text-[12px] leading-[18px] font-[Arial] font-bold
-        md:text-[14px] md:leading-[16px]
+        md:text-[14px] md:leading-[16px] text-[#253238]
         lg:text-[16px] lg:leading-[24px] mx-auto mb-5 w-fit bg-[#F5F5F5] px-[7px] py-[6px]">
           **Please check the above number is correct**
         </span>
@@ -248,7 +253,7 @@ const OtpVerification = ({
 
         {/* Verify Button */}
         <button
-          className="mt-[18px] w-[200px] cursor-pointer rounded-[3px] bg-[#00ADD8] px-[23px] py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0096c4] disabled:opacity-50"
+          className="mt-[18px] w-[200px] rounded-[5px] cursor-pointer rounded-[3px] bg-[#00ADD8] px-[23px] py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0096c4] disabled:opacity-50"
           disabled={requestLoader || verifyPhoneNumberLoader}
           onClick={handleSubmit}
         >
@@ -273,14 +278,14 @@ const OtpVerification = ({
           <span className="mr-[5px] text-sm font-bold font-[Arial] tracking-[-0.03em] text-[#00ADD8]">
             Go Back
           </span>
-          <BackButtonOTP/>
+          <BackButtonOTP />
         </div>
 
         {/* Mobile number notice */}
-        <div className="mx-auto rounded-[3px] bg-[#F5F5F5] py px-1.5 py-5">
-          <Paragraph className="mx-auto text-[#253238]">
+        <div className="mx-auto rounded-[10px] bg-[#F5F5F5] py px-1.5 py-5">
+          <Paragraph2 className="mx-auto text-[#253238] !text-[16px] font-bold">
             WE CAN ONLY SEND A PASSCODE TO A MOBILE NUMBER NOT TO A LANDLINE.
-          </Paragraph>
+          </Paragraph2>
         </div>
 
         <p className="tracking-[-0.03em]

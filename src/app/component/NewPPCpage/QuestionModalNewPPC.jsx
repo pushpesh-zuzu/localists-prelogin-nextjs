@@ -215,7 +215,7 @@ const QuestionModalNewPPC = ({
         );
 
         const nextQ = selectedObj?.next_question;
-        console.log(nextQ, "nextQnextQ");
+        // console.log(nextQ, "nextQnextQ");
         if (nextQ === "last") {
             const hasQuestionNo = updatedAnswers.some(
                 (q) => q && typeof q === "object" && "question_no" in q

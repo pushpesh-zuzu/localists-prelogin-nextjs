@@ -64,6 +64,8 @@ const WhatServiceYouNeed = ({
     [slug]
   );
 
+  // console.log("services", service, isDropdownOpen)
+
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -308,9 +310,12 @@ const WhatServiceYouNeed = ({
         onNext={handleContinue}
         nextButtonText={loading ? "Validating..." : "Continue"}
         disableNext={loading || !selectedService || !postalCodeValidate}
+        titleClassName="text-[#253238]"
         maxWidth="max-w-[90%] md:max-w-[550px]"
-        onClose={()=>{handleCloseClick()}}
+        onClose={() => { handleCloseClick() }}
         padding="px-3 py-4 md:px-7.5 md:pt-3 pb-6"
+        radius="rounded-[10px]"
+        nextButtonClassName="bg-[#00afe3] hover:bg-[#008cc0]"
       >
         {/* Service Input */}
         <div className="relative" ref={dropdownRef}>
@@ -327,7 +332,7 @@ const WhatServiceYouNeed = ({
 
           {isDropdownOpen && service?.length > 0 && (
             <div className="absolute z-10 w-full bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto mt-1">
-              {!searchServiceLoader ? (
+              {searchServiceLoader ? (
                 <div className="p-2 text-center text-gray-500">
                   <div className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-blue-500"></div>
                   <span className="ml-2">Searching...</span>

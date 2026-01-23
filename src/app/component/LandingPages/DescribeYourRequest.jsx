@@ -148,8 +148,9 @@ const DescribeYourRequest = ({
       showButtons={false}
       padding="p-3 md:px-7.5"
       isOpen={true}
-      maxWidth="max-w-[90%] md:max-w-[540px] mt-[5%] "
+      maxWidth="max-w-[90%] md:max-w-[540px] mt-[5%]"
       maxHeight="max-h-[90vh]"
+      radius="rounded-[10px]"
     >
       {/* Success Message */}
       <div className="mb-[10px] flex items-center justify-center gap-[6.18px] text-base font-medium text-[#00afe3] max-[480px]:items-start max-[480px]:text-left max-[480px]:text-[13px] max-[480px]:font-semibold">
@@ -288,7 +289,7 @@ const DescribeYourRequest = ({
       {/* Button */}
       <div className="mt-[30.44px] max-[480px]:mt-[10.44px] flex justify-center">
         <button
-          className="cursor-pointer rounded-full rounded border-none bg-[#00afe3] px-[29px] py-[9px] text-center align-middle text-[15px] font-medium text-white disabled:opacity-50 max-[768px]:px-6 max-[768px]:py-2 max-[768px]:text-sm max-[480px]:px-5 max-[480px]:py-2 max-[480px]:text-[13px]"
+          className="cursor-pointer rounded-full rounded border-none bg-[#00afe3] px-[29px] py-[9px] text-center align-middle text-[15px] font-medium text-white disabled:opacity-50 max-[768px]:px-6 max-[768px]:py-2 max-[768px]:text-sm max-[480px]:px-5 max-[480px]:py-2 max-[480px]:text-[13px] hover:bg-[#008cc0]"
           onClick={handleSubmit}
           disabled={isLoading}
         >

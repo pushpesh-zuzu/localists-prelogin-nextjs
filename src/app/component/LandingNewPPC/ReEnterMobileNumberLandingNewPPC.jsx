@@ -20,7 +20,7 @@ function ReEnterMobileNumberLandingNewPPC({ onClose, setReEnterMobile }) {
   const [name, setName] = useState(buyerRequest?.name || "");
   const [email, setEmail] = useState(buyerRequest?.email || "");
   const [phone, setPhone] = useState(buyerRequest?.phone || "");
-  
+
   const [inputType, setInputType] = useState("text");
   const [errors, setErrors] = useState({
     email: false,
@@ -137,9 +137,11 @@ function ReEnterMobileNumberLandingNewPPC({ onClose, setReEnterMobile }) {
       title="YOU ARE ONLY ONE STEP FROM COMPARING FREE QUOTES!"
       onNext={handleSubmit}
       nextButtonText={requestLoader ? "Updating..." : "Continue"}
-      maxWidth="max-w-[800px]"
-      maxHeight="max-h-[70vh] lg:max-h-[90vh]"
-      zIndex="z-200"
+      titleClassName="text-[#253238]"
+      maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
+      maxHeight="max-h-[80vh] lg:max-h-[90vh]"
+      padding="px-3 py-4 md:px-7.5 md:pt-3 pb-6"
+      radius="rounded-[10px]"
     >
       {/* EXACTLY SAME AS NameEmailPhoneModal - No extra content */}
       <p className=" text-center text-base font-normal  text-[#253238]">
@@ -149,7 +151,7 @@ function ReEnterMobileNumberLandingNewPPC({ onClose, setReEnterMobile }) {
         We'll only use them to help you connect with trusted, verified
         professionals.
       </p>
-      
+
       {/* EXACTLY SAME Input Fields */}
       <InputField
         label="Name"
@@ -160,7 +162,7 @@ function ReEnterMobileNumberLandingNewPPC({ onClose, setReEnterMobile }) {
         type={inputType}
         disabled={true}
       />
-      
+
       <InputField
         label="Email"
         type={inputType}
@@ -170,7 +172,7 @@ function ReEnterMobileNumberLandingNewPPC({ onClose, setReEnterMobile }) {
         placeholder="Your Email"
         disabled={true}
       />
-      
+
       <InputField
         label="Phone"
         type={inputType}
@@ -179,7 +181,7 @@ function ReEnterMobileNumberLandingNewPPC({ onClose, setReEnterMobile }) {
         error={errors.phone && "Please enter a valid 11-digit phone number."}
         placeholder="Phone Number"
       />
-      
+
       {/* NO EXTRA CONTENT - Exactly like NameEmailPhoneModal */}
     </FormWrapper>
   );

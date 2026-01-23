@@ -22,8 +22,6 @@ const useRegistrationRedirect = () => {
     // 🚨 User logged out → FULL cleanup
     if (!userToken && !registerToken) {
       dispatch(setBuyerStep(1));
-      localStorage.removeItem("pendingBuyerModal");
-      localStorage.removeItem("isRegistrationComplete");
       return;
     }
 

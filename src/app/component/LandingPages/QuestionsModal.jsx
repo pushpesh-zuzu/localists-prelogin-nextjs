@@ -22,15 +22,15 @@ const QuestionModal = ({
   onClose,
   nextStep,
   previousStep,
-  loading = false,
+  loading,
   setShowConfirmModal,
-  isStartWithQuestionModal = false,
+  isStartWithQuestionModal
 }) => {
   const dispatch = useDispatch();
   const searchParams = useSearchParams();
   const { buyerRequest, requestLoader, citySerach, questionanswerData } =
     useSelector((state) => state.buyer);
-  const { service, registerData } = useSelector((state) => state.findJobs);
+  const { service } = useSelector((state) => state.findJobs);
 
   const { ip, url } = useUserInfo();
 
@@ -274,7 +274,7 @@ const QuestionModal = ({
         <div className="flex flex-col h-full p-6 overflow-hidden">
           {loading ? (
             <div className="flex-1 flex items-center justify-center">
-              <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-[#00ADD8]"></div>
+              <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-[#00afe3]"></div>
             </div>
           ) : questions.length > 0 ? (
             <>
@@ -349,7 +349,7 @@ const QuestionModal = ({
                   <Button1
                     variant="secondary"
                     onClick={handleBack}
-                    className="cursor-pointer  border-none disabled:opacity-50"
+                    className="cursor-pointer !bg-[#253238] hover:!bg-[#37474f] border-none disabled:opacity-50"
                   >
                     Back
                   </Button1>
@@ -361,7 +361,7 @@ const QuestionModal = ({
                   variant="primary"
                   onClick={handleNext}
                   disabled={requestLoader}
-                  className="cursor-pointer  border-none disabled:opacity-50"
+                  className="cursor-pointer bg-[#00afe3] hover:bg-[#008cc0] border-none disabled:opacity-50"
                 >
                   {requestLoader ? (
                     <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></span>

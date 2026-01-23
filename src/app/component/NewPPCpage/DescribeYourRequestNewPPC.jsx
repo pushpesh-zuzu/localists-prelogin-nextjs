@@ -72,7 +72,6 @@ const DescribeYourRequestNewPPC = () => {
                 dispatch(clearSetbuyerRequestData());
                 dispatch(clearBuyerRegisterFormData());
                 dispatch(setQualityData());
-                localStorage.removeItem("pendingBuyerModal");
             }
         });
     };

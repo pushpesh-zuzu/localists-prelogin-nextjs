@@ -10,7 +10,7 @@ import {
 } from "@/lib/store/buyerslice/buyerSlice";
 import BuyerRegistrationLandingPage from "./BuyerRegistrationLandingPage";
 import H2 from "../UI/Typography/H2";
-import { getBarkToken } from "@/utils/CookiesHelper";
+import { getBarkToken, getBarkUserData } from "@/utils/CookiesHelper";
 
 const SearchPostAndBanner = ({
   title = "",
@@ -24,7 +24,10 @@ const SearchPostAndBanner = ({
 }) => {
   const dispatch = useDispatch();
   const userToken = getBarkToken();
+  const userData = getBarkUserData()
   const { postCodeLoader, buyerRequest } = useSelector((state) => state.buyer);
+
+  // console.log("userToken", userToken, userData)
 
   const [pincode, setPincode] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -51,15 +54,24 @@ const SearchPostAndBanner = ({
 
 
   useEffect(() => {
-    const pending = JSON.parse(localStorage.getItem("pendingBuyerModal"));
-    if (pending?.shouldOpen) {
-      setTimeout(() => {
-        dispatch(setbuyerRequestData(pending.buyerRequest));
-        dispatch(setcitySerach(pending.city));
-        setShowModal(true);
-        dispatch(setBuyerStep(7));
-      }, 200);
-    }
+    const checkPendingModal = () => {
+      const pendingModal = JSON.parse(
+        localStorage.getItem("pendingBuyerModal")
+      );
+
+      console.log("pendingModal", pendingModal)
+
+      if (pendingModal?.shouldOpen) {
+        setTimeout(() => {
+          dispatch(setbuyerRequestData(pendingModal.buyerRequest));
+          dispatch(setcitySerach(pendingModal.city));
+          setShowModal(true);
+          dispatch(setBuyerStep(7));
+        }, 200);
+      }
+    };
+
+    checkPendingModal();
   }, [dispatch]);
 
   const handleContinue = async () => {
@@ -88,10 +100,20 @@ const SearchPostAndBanner = ({
         );
         setShowModal(true);
       } else {
-        showToast("error", "Please enter a valid postcode!");
+        const errorMessage =
+          data?.data?.error ||
+          data?.message ||
+          "Please enter a valid UK postcode.";
+
+        showToast("error", errorMessage);
       }
     } catch {
-      showToast("error", "Please enter a valid postcode!");
+      const errorMessage =
+        error?.data?.error ||
+        error?.message ||
+        "Unable to validate postcode. Please try again.";
+
+      showToast("error", errorMessage);
     }
   };
 
@@ -193,7 +215,7 @@ const SearchPostAndBanner = ({
       </div>
 
       {/* Modal */}
-      {showModal && (userToken?.active_status === 2 || !userToken) && (
+      {showModal && (userData?.active_status === 2 || !userToken) && (
         <BuyerRegistrationLandingPage
           closeModal={handleClose}
           postcode={pincode}

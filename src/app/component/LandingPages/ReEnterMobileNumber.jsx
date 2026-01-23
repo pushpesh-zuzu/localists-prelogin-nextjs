@@ -13,14 +13,20 @@ import { showToast } from "@/utils/toaster";
 
 function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
   const dispatch = useDispatch();
+  // const { registerLoader, errorMessage } = useSelector(
+  //   (state) => state.findJobs
+  // );
+
   const { buyerRequest, requestLoader, requestUserId } = useSelector(
     (state) => state.buyer
   );
 
+  // console.log("requestUserId", requestUserId)
+
   const [name, setName] = useState(buyerRequest?.name || "");
   const [email, setEmail] = useState(buyerRequest?.email || "");
   const [phone, setPhone] = useState(buyerRequest?.phone || "");
-  
+
   const [inputType, setInputType] = useState("text");
   const [errors, setErrors] = useState({
     email: false,
@@ -71,6 +77,15 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
   };
 
   const handleSubmit = () => {
+
+    if (!requestUserId) {
+      showToast(
+        "error",
+        "User verification not completed. Please verify OTP first."
+      );
+      return;
+    }
+
     const newErrors = {
       email: !email || !/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email),
       name: !name.trim(),
@@ -122,9 +137,9 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
     }
   };
 
-  const SimpleSpinner = () => (
-    <div className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
-  );
+  // const SimpleSpinner = () => (
+  //   <div className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
+  // );
 
   useEffect(() => {
     dispatch(setbuyerRequestData({ name, email, phone }));
@@ -137,49 +152,58 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
       title="YOU ARE ONLY ONE STEP FROM COMPARING FREE QUOTES!"
       onNext={handleSubmit}
       nextButtonText={requestLoader ? "Updating..." : "Continue"}
-      maxWidth="max-w-[800px]"
-      maxHeight="max-h-[70vh] lg:max-h-[90vh]"
-      zIndex="z-200"
+      maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
+      maxHeight="max-h-[80vh] lg:max-h-[90vh]"
+      padding="px-3 py-4 md:px-7.5 md:pt-3 pb-6"
+      radius="rounded-[10px]"
+      titleClassName="text-[#253238]"
+      nextButtonClassName="bg-[#00afe3] hover:bg-[#008cc0]"
     >
       {/* EXACTLY SAME AS NameEmailPhoneModal - No extra content */}
-      <p className=" text-center text-base font-normal  text-[#253238]">
+      <p className=" text-center text-base font-normal text-[#253238]">
         Your phone number and email are safe with us.
       </p>
       <p className=" text-center text-base font-normal text-[#253238]">
         We'll only use them to help you connect with trusted, verified
         professionals.
       </p>
-      
+
       {/* EXACTLY SAME Input Fields */}
-      <InputField
-        label="Name"
-        value={name}
-        onChange={handleNameChange}
-        error={errors.name && "Name is required"}
-        placeholder="Your Name"
-        type={inputType}
-        disabled={true}
-      />
-      
-      <InputField
-        label="Email"
-        type={inputType}
-        value={email}
-        onChange={handleEmailChange}
-        error={errors.email && "Please enter a valid email address."}
-        placeholder="Your Email"
-        disabled={true}
-      />
-      
-      <InputField
-        label="Phone"
-        type={inputType}
-        value={phone}
-        onChange={handlePhoneChange}
-        error={errors.phone && "Please enter a valid 11-digit phone number."}
-        placeholder="Phone Number"
-      />
-      
+      <div className="[&_label]:text-left [&_label]:block">
+        <InputField
+          label="Name"
+          value={name}
+          onChange={handleNameChange}
+          error={errors.name && "Name is required"}
+          placeholder="Your Name"
+          type={inputType}
+          disabled={true}
+        />
+      </div>
+
+      <div className="[&_label]:text-left [&_label]:block">
+        <InputField
+          label="Email"
+          type={inputType}
+          value={email}
+          onChange={handleEmailChange}
+          error={errors.email && "Please enter a valid email address."}
+          placeholder="Your Email"
+          disabled={true}
+        />
+      </div>
+
+      <div className="[&_label]:text-left [&_label]:block">
+        <InputField
+          label="Phone"
+          type={inputType}
+          value={phone}
+          onChange={handlePhoneChange}
+          error={errors.phone && "Please enter a valid 11-digit phone number."}
+          placeholder="Phone Number"
+        />
+      </div>
+
       {/* NO EXTRA CONTENT - Exactly like NameEmailPhoneModal */}
     </Modal>
   );

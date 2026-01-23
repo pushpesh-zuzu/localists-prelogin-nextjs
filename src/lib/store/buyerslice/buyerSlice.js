@@ -8,7 +8,7 @@ import {
   getCreateRequestToken,
   setCookie,
 } from "@/utils/CookiesHelper";
-// import { setAuthToken, setRegisterData, setRegisterToken } from "../findjobslice";
+import { setRegisterData, setRegisterToken } from "../findjobslice";
 // import { setToken } from "../authSlice";
 // import { updateLocalStorageValue } from "@/utils";
 // import { safeLocalStorage } from "@/utils/localStorage";
@@ -167,6 +167,7 @@ export const registerQuoteCustomer = (customerData) => {
       );
 
       if (response) {
+        // console.log("ammmmmmmmm", response.data.data?.user_id)
         dispatch(setRequestUserId(response.data.data?.user_id));
         dispatch(setRequestUserPhone(response.data.data?.phone));
         return response.data;
@@ -514,7 +515,7 @@ export const getCityName = (postcodeData) => {
         return response.data;
       }
     } catch (error) {
-      // showToast("error", error?.response?.data?.message);
+      showToast("error", error?.response?.data?.data.error);
       console.log("Error getting city name:", error?.response?.data);
       throw error;
     } finally {
@@ -643,7 +644,7 @@ const buyerSlice = createSlice({
         email: "",
         name: "",
       };
-      state.buyerStep=1
+      state.buyerStep = 1
     },
     setVerifyPhoneNumberLoader(state, action) {
       state.verifyPhoneNumberLoader = action.payload;

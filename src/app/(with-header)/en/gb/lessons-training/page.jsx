@@ -9,7 +9,7 @@ import SEO from "@/app/component/common/seo/SEO";
 import HowItWorks from "@/app/component/category/howItWorks/CloneHowitWorks";
 import PopularCategories from "@/app/component/category/popularCategories/ClonePopularCategories";
 import AllServiceLevel1 from "@/app/component/category/allServices/AllServiceLevel1";
-import GetQuotes from "@/app/component/common/GetQuotes/GetQuote";
+import GetQuotes from "@/app/component/common/GetQuotesForHome/GetQuotes";
 import Footer from "@/app/component/Footer/Footer";
 export default function Page() {
 

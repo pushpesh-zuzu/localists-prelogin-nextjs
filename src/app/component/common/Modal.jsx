@@ -21,6 +21,7 @@ const Modal = ({
   zIndex = "z-50",
   showClosIcon = true,
   radius = "rounded-none",
+  nextButtonClassName = "",
 }) => {
   if (!isOpen) return null;
 
@@ -64,13 +65,13 @@ const Modal = ({
                 <Button1 variant="secondary" onClick={onBack}>
                   {BackButtonText}
                 </Button1>
-                <Button1 variant="primary" onClick={onNext}>
+                <Button1 variant="primary" onClick={onNext} className={nextButtonClassName}>
                   {nextButtonText}
                 </Button1>
               </div>
             ) : onNext ? (
               <div className="flex justify-center cursor-pointer">
-                <Button1 variant="primary" onClick={onNext}>
+                <Button1 variant="primary" onClick={onNext}  className={nextButtonClassName}>
                   {nextButtonText}
                 </Button1>
               </div>

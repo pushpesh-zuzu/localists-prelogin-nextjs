@@ -106,7 +106,7 @@ export default function HeroSection() {
           ? await response.unwrap()
           : response;
 
-        console.log("newResponse:", newResponse)
+        // console.log("newResponse:", newResponse)
         if (newResponse?.data?.city) {
           setPostalCodeValidate(true);
           dispatch(setcitySerach(newResponse.data.city));
