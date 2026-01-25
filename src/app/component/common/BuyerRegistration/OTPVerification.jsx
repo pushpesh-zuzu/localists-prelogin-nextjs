@@ -147,7 +147,6 @@ const OtpVerification = ({
                 );
               }
 
-              router.push("/thank-you");
             } else {
               nextStep();
             }
@@ -231,7 +230,7 @@ const OtpVerification = ({
 
         {/* Resend OTP */}
         <div className="mb-4 text-sm font-bold leading-[14px] text-[#969696] font-[Arial] tracking-[-0.03em]">
-          Didn't you receive the OTP?{" "}
+          Didn&apos;t you receive the OTP?{" "}
           {timer > 0 ? (
             <span className="font-[Arial] tracking-[-0.03em] mt-4 text-sm font-bold text-[#828282]">
               Resend OTP in <strong>{timer}</strong>s

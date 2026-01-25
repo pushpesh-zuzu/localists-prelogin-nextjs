@@ -33,6 +33,13 @@ const DescribeYourRequestNewPPC = () => {
     const dispatch = useDispatch();
     const router = useRouter();
 
+    useEffect(() => {
+        window.onbeforeunload = null;
+        return () => {
+            window.onbeforeunload = null;
+        };
+    }, []);
+
     /* 🔹 Quality debounce */
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -65,10 +72,10 @@ const DescribeYourRequestNewPPC = () => {
             professional_letin: professionalLetin ? 1 : 0,
         };
 
+        localStorage.setItem("isRegistrationComplete", "true");
         dispatch(addDetailsRequestData(payload, router, requestId)).then((res) => {
             if (res?.success) {
                 showToast("success", res?.message || "Request submitted successfully");
-                localStorage.setItem("isRegistrationComplete", "true");
                 dispatch(clearSetbuyerRequestData());
                 dispatch(clearBuyerRegisterFormData());
                 dispatch(setQualityData());

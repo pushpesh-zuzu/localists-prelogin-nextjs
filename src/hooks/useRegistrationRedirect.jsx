@@ -25,8 +25,14 @@ const useRegistrationRedirect = () => {
       return;
     }
 
-    // ✅ Logged in → redirect
-    if (userToken || registerToken) {
+    const isRegistrationComplete =
+      localStorage.getItem("isRegistrationComplete");
+
+    if (
+      isRegistrationComplete === "true" &&
+      userToken || registerToken
+    ) {
+      localStorage.setItem("isRegistrationComplete", "true");
       router.replace("/buyers/create");
     }
   }, [router, dispatch]);
