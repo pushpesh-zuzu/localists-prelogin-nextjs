@@ -515,7 +515,7 @@ export const getCityName = (postcodeData) => {
         return response.data;
       }
     } catch (error) {
-      showToast("error", error?.response?.data?.data.error);
+      // showToast("error", error?.response?.data?.data.error);
       console.log("Error getting city name:", error?.response?.data);
       throw error;
     } finally {

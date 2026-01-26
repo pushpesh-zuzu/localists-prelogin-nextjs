@@ -19,6 +19,8 @@ import NewPPCForm from "./NewPPCForm";
 import QuestionModalNewPPC from "./QuestionModalNewPPC";
 import OTPVerificationNewPPC from "./OTPVerificationNewPPC";
 import ReEnterMobileNumberNewPPC from "./ReEnterMobileNumberNewPPC";
+import PostCodeNewPPC from "./PostCodeNewPPC";
+import EmailNewPPC from "./EmailNewPPC";
 import FormWrapper from "./FormWrapper";
 import DescribeYourRequestNewPPC from "./DescribeYourRequestNewPPC";
 import NavigationDetectorDesktop from "@/app/component/common/NavigationDetected/NavigationDetectorDesktop";
@@ -47,28 +49,34 @@ export default function HeroSectionNewPPC({
 
     const [localRequestId, setLocalRequestId] = useState(null);
     const [reEnterMobile, setReEnterMobile] = useState(2);
+    const [backButtonTriggered, setBackButtonTriggered] = useState(false);
 
-    const stepFlow = [1, 2, 3, 4];
+
+    const stepFlow = [1, 2, 3, 4, 5, 6];
     const isAdminOrRemembered = authToken || userToken?.remember_tokens;
 
     const nextStep = () => {
         const index = stepFlow.indexOf(buyerStep);
         if (index < stepFlow.length - 1) {
+            setBackButtonTriggered(false);
             dispatch(setBuyerStep(stepFlow[index + 1]));
         }
     };
 
-    useEffect(() => {
-        const pendingModal = JSON.parse(
-            localStorage.getItem("pendingBuyerModal")
-        );
+    const prevStep = () => {
+        setBackButtonTriggered(true);
+        const index = stepFlow.indexOf(buyerStep);
+        if (index > 0) dispatch(setBuyerStep(stepFlow[index - 1]));
+    };
 
-        if (pendingModal?.shouldOpen) {
-            dispatch(setBuyerStep(4));
-        } else {
-            dispatch(setBuyerStep(1));
-        }
+    useEffect(() => {
+        const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
+        dispatch(setBuyerStep(pendingModal?.shouldOpen ? 6 : 1));
     }, [dispatch, isAdminOrRemembered]);
+
+    useEffect(() => {
+        handleScrollToBottom();
+    }, [buyerStep]);
 
     useEffect(() => {
         dispatch(questionAnswerData({ service_id: serviceId }));
@@ -119,7 +127,7 @@ export default function HeroSectionNewPPC({
             "
                     />
 
-                    <H1 className="font-inter">
+                    <H1 className="font-inter lg:leading-[80px]">
                         {heading0}{" "}
                         <span className="text-[#00afe3]">{heading1}</span>{" "}
                         {heading2}
@@ -175,32 +183,36 @@ export default function HeroSectionNewPPC({
                             nextStep={nextStep}
                             setLocalRequestId={setLocalRequestId}
                             description={questionDescription}
+                            backButtonTriggered={backButtonTriggered}
                         />
                     </Suspense>
                 )}
 
-                {buyerStep === 3 && reEnterMobile === 2 && (
+                {buyerStep === 3 && <PostCodeNewPPC prevStep={prevStep} onNext={nextStep} />}
+                {buyerStep === 4 && <EmailNewPPC onBack={prevStep} nextStep={nextStep} />}
+
+                {buyerStep === 5 && reEnterMobile === 2 && (
                     <OTPVerificationNewPPC
                         setReEnterMobile={setReEnterMobile}
                         isThankuPageOnlyShow
                     />
                 )}
 
-                {buyerStep === 3 && reEnterMobile === 1 && (
+                {buyerStep === 5 && reEnterMobile === 1 && (
                     <ReEnterMobileNumberNewPPC
                         setReEnterMobile={setReEnterMobile}
                         onClose={() => setReEnterMobile(2)}
                     />
                 )}
 
-                {buyerStep === 4 && (
+                {buyerStep === 6 && (
                     <FormWrapper>
                         <DescribeYourRequestNewPPC />
                     </FormWrapper>
                 )}
 
                 {/* MOBILE */}
-                <div className="hidden max-[600px]:block">
+                {/* <div className="hidden max-[600px]:block">
                     <div
                         className="
               flex flex-wrap gap-[11px] mt-[26px]
@@ -236,16 +248,17 @@ export default function HeroSectionNewPPC({
                             {quoteText}
                         </PrimaryButton>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );
 }
 
 
-function Feature({ icon, text }) {
+function Feature({ icon, text, full }) {
     return (
-        <div className="flex items-center gap-[9px]">
+        <div className={`flex items-center gap-2 ${full ? "basis-full justify-center" : ""
+            }`}>
             <div className="w-[40px] h-[40px] bg-[#00afe3] text-white rounded-full flex items-center justify-center">
                 {icon}
             </div>
@@ -254,16 +267,16 @@ function Feature({ icon, text }) {
     );
 }
 
-function MobileFeature({ icon, text }) {
-    return (
-        <div className="flex items-center gap-[7px] h-[40px]">
-            <div className="w-[40px] h-[40px] bg-[#00afe3] text-white rounded-full flex items-center justify-center">
-                {icon}
-            </div>
-            <p>{text}</p>
-        </div>
-    );
-}
+// function MobileFeature({ icon, text }) {
+//     return (
+//         <div className="flex items-center gap-[7px] h-[40px]">
+//             <div className="w-[40px] h-[40px] bg-[#00afe3] text-white rounded-full flex items-center justify-center">
+//                 {icon}
+//             </div>
+//             <p>{text}</p>
+//         </div>
+//     );
+// }
 
 function PrimaryButton({ children, className = "", ...props }) {
     return (

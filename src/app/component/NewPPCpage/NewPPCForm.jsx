@@ -3,34 +3,27 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import AsyncSelect from "react-select/async";
-import { Spin } from "antd";
-import { LoadingOutlined } from "@ant-design/icons";
-
-import H3 from "@/app/component/UI/Typography/H3";
 import Paragraph from "@/app/component/UI/Typography/Paragraph2";
 import GetQuotesIcon from "../../../../public/ReactIcons/GetQuotesIcon";
 import FormWrapper from "./FormWrapper";
 
 import {
-    getCityName,
     questionAnswerData,
     setbuyerRequestData,
-    setcitySerach,
 } from "@/lib/store/buyerslice/buyerSlice";
 import { searchService } from "@/lib/store/findjobslice";
 import { validateUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
 import { useEmailCheck } from "@/hooks/emailExist";
-import { showToast } from "@/utils/toaster";
-import CheckIcon from "@/app/component/common/icons/GreenCheckIcon";
 import { handleScrollToBottom } from "@/utils/handleScrollToBottom"
+import LoaderIndicator from "../common/Loader/LoaderIndicatore";
+import H4 from "../UI/Typography/H4";
 
 const AsyncSelect = dynamic(
-  () => import("react-select/async"),
-  { ssr: false }
+    () => import("react-select/async"),
+    { ssr: false }
 );
 
-function NewPPCForm({ nextStep, serviceId = 51 }) {
+function NewPPCForm({ nextStep, serviceId }) {
     const dispatch = useDispatch();
     const { buyerRequest, questionLoader } = useSelector((s) => s.buyer);
     const { searchServiceLoader, service } = useSelector((s) => s.findJobs);
@@ -38,21 +31,15 @@ function NewPPCForm({ nextStep, serviceId = 51 }) {
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
-        email: "",
         service_name: null,
         service_id: "",
-        postcode: "",
     });
 
     const [errors, setErrors] = useState({});
-    const [loading, setLoading] = useState(false);
-    const [postcodeValidating, setPostcodeValidating] = useState(false);
-    const [postcodeValid, setPostcodeValid] = useState(false);
     const [serviceOptions, setServiceOptions] = useState([]);
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const [initialServiceLoaded, setInitialServiceLoaded] = useState(false);
 
-    const postcodeValidationTimeout = useRef(null);
     const searchTimeout = useRef(null);
     const lastSearchValue = useRef("");
 
@@ -101,54 +88,6 @@ function NewPPCForm({ nextStep, serviceId = 51 }) {
     );
 
 
-    const validatePostcode = async (postcodeValue) => {
-        if (!postcodeValue || postcodeValue.length < 3) return;
-
-        setPostcodeValidating(true);
-        try {
-            const response = await dispatch(
-                getCityName({ postcode: postcodeValue })
-            );
-            const res = response?.unwrap ? await response.unwrap() : response;
-
-            if (res?.data?.valid) {
-                setPostcodeValid(true);
-                dispatch(setcitySerach(res.data.city));
-                setErrors((p) => ({ ...p, pincode: "" }));
-            } else {
-                throw new Error();
-            }
-        } catch {
-            setPostcodeValid(false);
-            setErrors((p) => ({
-                ...p,
-                pincode: "Please enter a valid postcode!",
-            }));
-        } finally {
-            setPostcodeValidating(false);
-        }
-    };
-
-    useEffect(() => {
-        if (postcodeValidationTimeout.current)
-            clearTimeout(postcodeValidationTimeout.current);
-
-        if (formData.postcode.trim().length >= 3) {
-            postcodeValidationTimeout.current = setTimeout(() => {
-                validatePostcode(formData.postcode);
-            }, 600);
-        } else {
-            setPostcodeValid(false);
-            setErrors((p) => ({ ...p, pincode: "" }));
-        }
-
-        return () => {
-            if (postcodeValidationTimeout.current)
-                clearTimeout(postcodeValidationTimeout.current);
-        };
-    }, [formData.postcode]);
-
-
     const handleInputChange = (e) => {
         const { name, value } = e.target;
 
@@ -160,26 +99,28 @@ function NewPPCForm({ nextStep, serviceId = 51 }) {
         }
     };
 
-    const handleServiceChange = (selectedOption, isAutoSelect = false) => {
+    const handleServiceChange = (option, auto = false) => {
+        if (!option) {
+            setFormData((p) => ({ ...p, service_name: null, service_id: "" }));
+            dispatch(setbuyerRequestData({ service_id: "", service_name: "" }));
+            return;
+        }
+
         setFormData((p) => ({
             ...p,
-            service_name: selectedOption,
-            service_id: selectedOption?.value || "",
+            service_name: option,
+            service_id: option.value,
         }));
 
+        dispatch(questionAnswerData({ service_id: option.value }));
         dispatch(
             setbuyerRequestData({
-                ...buyerRequest,
-                service_id: selectedOption?.value || "",
-                service_name: selectedOption?.label || "",
+                service_id: option.value,
+                service_name: option.label,
             })
         );
 
-        setErrors((p) => ({ ...p, service: "" }));
-
-        if (!isAutoSelect && selectedOption?.value) {
-            dispatch(questionAnswerData({ service_id: selectedOption.value }));
-        }
+        if (auto) setInitialServiceLoaded(true);
     };
 
     const validateForm = () => {
@@ -197,23 +138,8 @@ function NewPPCForm({ nextStep, serviceId = 51 }) {
             newErrors.phone = "Please enter a valid 11-digit phone number";
         }
 
-        if (!formData.email.trim()) {
-            newErrors.email = "Email is required";
-        } else {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(formData.email)) {
-                newErrors.email = "Please enter a valid email address";
-            }
-        }
-
         if (!formData.service_id) {
             newErrors.service = "Please select a service!";
-        }
-
-        if (!formData.postcode.trim()) {
-            newErrors.pincode = "Postcode is required!";
-        } else if (!postcodeValid) {
-            newErrors.pincode = "Please enter a valid postcode!";
         }
 
         return newErrors;
@@ -230,31 +156,30 @@ function NewPPCForm({ nextStep, serviceId = 51 }) {
 
         if (!validateUKPhoneNumber(formData.phone)) return;
 
-        setLoading(true);
-        try {
-            nextStep();
-        } catch {
-            showToast("error", "Something went wrong");
-        } finally {
-            setLoading(false);
-        }
+        dispatch(
+            setbuyerRequestData({
+                name: formData.name,
+                phone: formData.phone,
+                service_id: formData.service_id,
+                service_name: formData.service_name.label,
+            })
+        );
+        nextStep();
     };
 
     useEffect(() => {
         if (!isEmailAvailable) {
-            setFormData((p) => ({ ...p, email: "" }));
             dispatch(setbuyerRequestData({ ...buyerRequest, email: "" }));
             handleScrollToBottom();
         }
     }, [isEmailAvailable]);
 
-
     return (
         <FormWrapper>
             <div className="py-[16px] text-center">
-                <H3 className="text-[#00afe3]">Get Quotes Now</H3>
+                <H4 className="text-[#00afe3]">Get Free Customised Quotes</H4>
                 <Paragraph className="mt-[8px] font-bold mx-auto max-w-[70%] max-[640px]:max-w-[98%]">
-                    Fill out the form and receive quotes from local professionals
+                    Fill out the form to get free estimates from trusted and verified local professionals
                 </Paragraph>
             </div>
 
@@ -293,18 +218,6 @@ function NewPPCForm({ nextStep, serviceId = 51 }) {
                 />
                 <Error>{errors.phone}</Error>
 
-                {/* EMAIL */}
-                <Label>Email Address *</Label>
-                <Input
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    error={errors.email}
-                    placeholder="Enter your email"
-                />
-                <Error>{errors.email}</Error>
-
                 {/* SERVICE */}
                 <Label>What Service Do You Need? *</Label>
                 <AsyncSelect
@@ -327,31 +240,10 @@ function NewPPCForm({ nextStep, serviceId = 51 }) {
                 />
                 <Error>{errors.service}</Error>
 
-                {/* POSTCODE */}
-                <Label>What Is Your Postcode? *</Label>
-                <div className="relative">
-                    <Input
-                        name="postcode"
-                        value={formData.postcode}
-                        onChange={handleInputChange}
-                        error={errors.pincode}
-                        placeholder="Enter your postcode"
-                    />
-                    <div className="absolute right-[16px] top-1/2 -translate-y-1/2">
-                        {postcodeValidating && (
-                            <Spin size="small" indicator={<LoadingOutlined spin />} />
-                        )}
-                        {postcodeValid && (
-                            <CheckIcon className="w-[14px] h-[14px]" />
-                        )}
-                    </div>
-                </div>
-                <Error>{errors.pincode}</Error>
-
                 {/* SUBMIT */}
                 <button
                     type="submit"
-                    disabled={loading || !!questionLoader}
+                    disabled={questionLoader}
                     className="
             mt-[27px] w-full
             bg-[#00afe3] text-white
@@ -367,10 +259,8 @@ function NewPPCForm({ nextStep, serviceId = 51 }) {
         max-[480px]:text-[16px]
           "
                 >
-                    {loading ? (
-                        <Spin
-                            indicator={<LoadingOutlined spin style={{ color: '#fff' }} />}
-                        />
+                    {questionLoader ? (
+                        <LoaderIndicator />
                     ) : (
                         <>
                             Continue <GetQuotesIcon color="#fff" />
