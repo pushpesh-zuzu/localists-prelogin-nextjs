@@ -70,7 +70,7 @@ const Footer = () => {
               <ul className="space-y-3 sm:text-[9px] xl:text-[17px]">
                 <li>
                   <Link
-                    href="/"
+                    href="/en/gb"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px]  xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
                     Find a Professional
@@ -227,19 +227,19 @@ const Footer = () => {
                 {openSections.customers && (
                   <div className="mt-3 space-y-2 pl-4">
                     <Link
-                      href="/"
+                      href="/en/gb"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       Find a Professional
                     </Link>
                     <Link
-                      href="/how-it-works-for-customers"
+                      href="/en/gb/how-it-works-for-customers"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       How it works
                     </Link>
                     <Link
-                      href="en/gb/login"
+                      href="/en/gb/login"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       Login
@@ -277,7 +277,7 @@ const Footer = () => {
                       Pricing
                     </Link>
                     <Link
-                      href="/sellers/create"
+                      href="/en/gb/sellers/create"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       Join as a Professional
