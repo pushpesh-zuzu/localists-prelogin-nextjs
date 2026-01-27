@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Paragraph from "@/app/component/UI/Typography/Paragraph2";
-import GetQuotesIcon from "../../../../public/ReactIcons/GetQuotesIcon";
 import FormWrapper from "./FormWrapper";
 
 import {
@@ -263,7 +262,7 @@ function NewPPCForm({ nextStep, serviceId }) {
                         <LoaderIndicator />
                     ) : (
                         <>
-                            Continue <GetQuotesIcon color="#fff" />
+                            Continue
                         </>
                     )}
                 </button>
