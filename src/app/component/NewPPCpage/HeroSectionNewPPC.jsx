@@ -126,7 +126,7 @@ export default function HeroSectionNewPPC({
               max-[600px]:mb-[15px]
             "/>
 
-                    <H1 className="text-center max-lg:!text-[23px] max-lg:!leading-[30px] lg:text-left lg:leading-[80px]">
+                    <H1 className="text-center max-lg:!text-[25px] max-lg:!leading-[30px] lg:text-left lg:leading-[80px]">
                         {heading0}{" "}
                         <span className="text-[#00afe3]">{heading1}</span>{" "}
                         {heading2}
@@ -146,7 +146,7 @@ export default function HeroSectionNewPPC({
                             <Feature icon={<VettedProffessionIcon />} text={text1} />
                             <Feature
                                 icon={
-                                    <div className="w-[50px] h-[50px]">
+                                    <div className="">
                                         <FreeQuoteIcon />
                                     </div>
                                 }
@@ -155,57 +155,48 @@ export default function HeroSectionNewPPC({
 
                             <Feature
                                 icon={
-                                    <div className="w-[50px] h-[50px]">
+                                    <div className="">
                                         <FastResponseIcon />
                                     </div>
                                 }
                                 text={text3}
                             />
                         </div>
-
-                        <div className="flex gap-[20px] mt-[40px]">
+                        {/* <div className="flex gap-[20px] mt-[40px]">
                             <PrimaryButton>{quoteText}</PrimaryButton>
-                        </div>
+                        </div> */}
+
                     </div>
 
                     {/* Mobile Features */}
                     <div className="hidden max-[600px]:block">
                         <div
                             className="
-              flex flex-wrap justify-center items-center gap-[11px] mt-[10px]
-              font-[Arial] font-bold
-              text-[14px] leading-[22px]
-              tracking-[-0.03px]
-            text-[#253238] text-center
-            ">
+      flex flex-col items-center
+      mt-[10px]
+      font-[Arial] font-bold
+      text-[14px] leading-[22px]
+      tracking-[-0.03px]
+      text-[#253238] text-center
+    "
+                        >
+                            {/* First row */}
                             <MobileFeature
                                 icon={
-                                    <div
-                                        className="
-        flex items-center justify-center
-        scale-100
-        max-[600px]:scale-75
-        origin-center
-      " ><VettedProffessionIcon className="w-[30px] h-[30px]" />
+                                    <div className="flex items-center justify-center scale-75 origin-center">
+                                        <VettedProffessionIcon className="w-[30px] h-[30px]" />
                                     </div>
                                 }
                                 text={text1}
                             />
 
-                            <MobileFeature icon={<FreeQuoteIcon />} text={text2} />
-                            <MobileFeature icon={<FastResponseIcon />} text={text3} />
+                            {/* Second row – icons close */}
+                            <div className="flex items-center justify-center gap-[8px] mt-[6px]">
+                                <MobileFeature icon={<FreeQuoteIcon />} text={text2} />
+                                <MobileFeature icon={<FastResponseIcon />} text={text3} />
+                            </div>
                         </div>
-
-                        {/* <div className="flex flex-col items-center mt-[40px]">
-                            <PrimaryButton
-                                className="text-[16px] !py-[6px] cursor-pointer"
-                                onClick={handleScrollToBottom}
-                            >
-                                {quoteText}
-                            </PrimaryButton>
-                        </div> */}
                     </div>
-
                 </div>
 
                 {/* RIGHT FORM */}
