@@ -16,13 +16,13 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
     <WrapperBGWidth>
       {" "}
       <div className="w-full px-2.5 sm:px-10 md:px-16 xl:px-[0px] lg:max-w-[1200px] mx-auto">
-        <NearmeH2Heading headdingblue="FAQ" className="mb-10" />
+        <NearmeH2Heading headdingblue="FAQ" className="mb-5 md:mb-6 lg:mb-10" />
 
-        <div className="space-y-0 border-2 border-[#DBDFE4] rounded-[30px] overflow-hidden bg-white shadow-sm">
+        <div className="space-y-0 border-2 lg:border-4 border-[#DBDFE4] rounded-[20px] overflow-hidden bg-white shadow-sm">
           {data.map((item, index) => (
             <div
               key={item.key}
-              className={`${index !== 0 ? "border-t-2 border-[#DBDFE4]" : ""}`}
+              className={`${index !== 0 ? "border-t-2 lg:border-t-4 border-[#DBDFE4]" : ""}`}
             >
               <button
                 onClick={() => toggleItem(item.key)}
@@ -33,7 +33,7 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
                   className={`
                       flex-1 max-w-[90%] md:max-w-full
                       text-[20px] leading-[25px]
-                      md:text-[25px] md:leading-[25px]
+                      md:text-[20px] md:leading-[20px]
                       lg:text-[25px] lg:leading-[25px]
                       font-Inter font-black
                       tracking-[-0.03em]
@@ -60,8 +60,8 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
                     variant="secondary"
                     dangerouslySetInnerHTML={{ __html: item.description }}
                     className={`font-[Arial] faq-content text-[16px] 
-                            md:text-[16px] md:leading-[16px]
-                            lg:text-[20px] lg:leading-[24px] tracking-[-0.03em] font-normal`}
+                            md:text-[16px] md:leading-[22px]
+                            lg:text-[20px] lg:leading-[24px] tracking-[-0.03em] font-normal md:max-w-[95%]`}
                   />
                 </div>
               </div>

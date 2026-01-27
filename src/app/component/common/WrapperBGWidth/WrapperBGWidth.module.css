@@ -1,0 +1,9 @@
+.bgResponsive {
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .bgResponsive {
+    background: var(--wrapper-bg);
+  }
+}

@@ -17,6 +17,7 @@ import RadioButton from "@/app/component/UI/Inputs/RadioButton";
 import Button1 from "@/app/component/UI/Typography/Button1";
 import Paragraph2 from "@/app/component/UI/Typography/Paragraph2";
 import Footer from "../../Footer/Footer";
+import Loader from "../Loader/Loader";
 import LoaderIndicator from "../Loader/LoaderIndicatore";
 
 export default function LoginForm({ passwordless }) {
@@ -196,7 +197,7 @@ export default function LoginForm({ passwordless }) {
                         <Button1
                             type="submit"
                             disabled={loginLoader || passwordlessLoader}
-                            className="h-[49px] min-h-[49px] w-full bg-[#00AFE3] hover:bg-[#0397c4]
+                            className="h-[49px] min-h-[49px] w-full bg-[#00AFE3] hover:bg-[#4096ff]
     text-white text-[16px] cursor-pointer
     flex items-center justify-center gap-2
     disabled:opacity-70 disabled:cursor-not-allowed

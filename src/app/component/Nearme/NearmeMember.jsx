@@ -7,32 +7,36 @@ import Button from "../UI/Typography/Button";
 
 function NearmeMember({ description = "" }) {
   return (
-    <div className="w-full max-w-[300px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto pt-5 pb-[30px]  md:py-[75px] xl:pt-0 xl:pb-[72px]">
-      <div className="hidden md:flex w-fit rounded-[36px] overflow-hidden mx-auto ">
-        <div className=" w-[340] md:h-[280px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
+    <div className="w-full max-w-[283px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto pt-5 pb-[30px]  md:py-[0px] md:pb-10 lg:pb-0 xl:pt-0 xl:pb-[72px]">
+      <div className="hidden md:flex w-fit rounded-[15px] md:rounded-[33px] overflow-hidden mx-auto ">
+        <div className=" w-[340] md:h-[270px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[15px] md:rounded-l-[33px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
           <>
-            <H3
+            <h3
               style={{ textShadow: "0px 1.95px 1.95px #0000000D" }}
-              className="hidden md:block text-white font-bold font-[Arial] leading-7 xl:leading-[42px] lg:pr-6"
+              className="font-Inter font-black
+                  tracking-[-0.03em]
+                  text-[24px] leading-[28px]
+                  md:text-[18px] md:leading-[22px]
+                  lg:text-[35px] lg:leading-[30px] xl:text-[38px] xl:leading-[38px] hidden md:block text-white font-bold font-[Arial] leading-9 xl:leading-[42px] lg:pr-6"
             >
               {description}
-            </H3>
+            </h3>
 
-            <div className="hidden md:block mt-3">
-              <p className="  text-white font-bold text-xs lg:mt-[18px]">
+            <div className="hidden md:block mt-0 lg:mt-3">
+              <p className="  text-white font-bold text-xs md:text-base lg:text-[20px] mt-[9px] lg:mt-[18px]" >
                 Localists Professional, Chris
               </p>
               {/* <p className=" text-white text-xs lg:text-[16px] font-normal">
                 CH Joinery
               </p> */}
             </div>
-            <Button className="hidden md:inline-flex bg-[#253238] mt-9 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
+            <Button className="hidden md:inline-flex bg-[#253238] mt-3 lg:mt-9 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
               Become a member
             </Button>
           </>
         </div>
 
-        <div className=" relative rounded-r-[36px] overflow-hidden">
+        <div className=" relative rounded-r-[15px] md:rounded-r-[33px] overflow-hidden">
           <Image
             src="/nearme/treeSurgeonMember.webp"
             alt="Professional using phone"
@@ -41,15 +45,15 @@ function NearmeMember({ description = "" }) {
             loading="eager"
             height={512}
             width={521}
-            className="w-[273px] h-[280px] lg:w-[521px] lg:h-[512px]"
+            className="w-[273px] h-[350px] md:h-[270px] lg:w-[521px] lg:h-[512px]"
           />
         </div>
       </div>
 
-      <div className="md:hidden rounded-[36px] overflow-hidden shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
+      <div className="md:hidden rounded-[15px] md:rounded-[33px] overflow-hidden shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
         <div className="w-full  relative">
           <Image
-            src="/nearme/treeSurgeonMember.webp"
+            src="/nearme/treeSurgeonMemberMobile.webp"
             alt="Professional using phone"
             height={300}
             width={250}

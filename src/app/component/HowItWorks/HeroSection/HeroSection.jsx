@@ -106,8 +106,8 @@ export default function HeroSection() {
           ? await response.unwrap()
           : response;
 
-        // console.log("newResponse:", newResponse)
-        if (newResponse?.data?.city) {
+        console.log("newResponse:", newResponse)
+        if (newResponse?.data?.valid) {
           setPostalCodeValidate(true);
           dispatch(setcitySerach(newResponse.data.city));
           lastInvalidPinRef.current = "";

@@ -13,6 +13,7 @@ export default function HomeGardenCarousel({
   specialCard = null,
   mobileImageWidth = 72,
   mobileArrowSpacing = 15,
+  showArrow = true
 }) {
   const scrollableCards = data.filter((card) => !card.isSpecial);
   const MIN_SLIDES_FOR_LOOP = 6;
@@ -155,14 +156,14 @@ export default function HomeGardenCarousel({
       <div className="hidden sm:block">
         <div className="relative max-w-full md:max-w-[90%] lg:max-w-full mx-auto">
           {/* Navigation Arrows */}
-          <div className="hidden lg:flex justify-end items-end mb-3.5 mr-[1%]">
+          {showArrow && <div className="hidden lg:flex justify-end items-end mb-3.5 mr-[1%]">
             <NavigationArrows
               onPrev={scrollPrev}
               onNext={scrollNext}
               canScrollPrev={canScrollPrev}
               canScrollNext={canScrollNext}
             />
-          </div>
+          </div>}
 
           {/* sm/md screens - Only 3 cards, no special card */}
           <div className="lg:hidden overflow-hidden ">

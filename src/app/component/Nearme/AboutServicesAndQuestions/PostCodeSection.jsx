@@ -9,40 +9,39 @@ const PostCodeSearchField = dynamic(() => import("../PostCodeSearchField"), {
 function PostCodeSection() {
   return (
     <div
-      className="
-        rounded-[20px] bg-[#7ED5F1] px-9 pt-4 pb-7 md:px-9 md:py-[62px] my-8 md:mt-[60px] md:mb-[60px]
+      className="rounded-[20px]
+        md:rounded-[27.5px] bg-[#7ED5F1] px-9 pt-4 pb-7 lg:px-9 lg:py-[62px] my-[30px] lg:mt-[60px] lg:mb-[60px]
         flex flex-col gap-6
-        md:flex-row md:items-center md:justify-between
+        lg:flex-row lg:items-center lg:justify-between
       "
     >
       <p
-        className="block md:hidden text-center
+        className="block lg:hidden text-center
           font-Inter font-black text-white
           tracking-[-0.03em]
           text-[25px] leading-[28px]
           md:text-[30px] md:leading-[35px]
           lg:text-[40px] lg:leading-[55px]
-          md:text-right
+          lg:text-right drop-shadow-[0_0px_3.67px_rgba(0,0,0,0.25)]
         "
-        style={{ textShadow: "0px 0px 3.67px 0px #00000040" }}
-        
       >
         Free quotes. Zero obligation.
       </p>
       {/* Left – Search */}
-      <div className="w-[223px] mx-auto md:mx-0 md:w-[343px] flex justify-center">
+      <div className="w-[223px] mx-auto lg:mx-0 md:w-[343px] flex justify-center">
         <PostCodeSearchField buttonBg="bg-[#02D07B]" margin={false} />
       </div>
 
       {/* Right – Text */}
       <p
-        className="hidden md:block
+        className="hidden lg:block
           font-Inter font-black text-white
           tracking-[-0.03em]
           text-[25px] leading-[28px]
           md:text-[30px] md:leading-[35px]
           lg:text-[40px] lg:leading-[55px]
           md:text-right
+          drop-shadow-[0_0px_3.67px_rgba(0,0,0,0.25)]
         "
       >
         Free quotes. Zero obligation.

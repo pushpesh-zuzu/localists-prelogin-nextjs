@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axiosInstance from "../axios";
-import { setCookie } from "@/utils/CookiesHelper";
+import { clearCookies, setCookie } from "@/utils/CookiesHelper";
 import {
     clearAuthToken,
     clearBuyerRegisterFormData,
@@ -135,7 +135,7 @@ export const userLogout = () => {
                 dispatch(setRequestData());
                 dispatch(setRegisterStep(0));
                 dispatch(clearCompanyData());
-
+                clearCookies();
                 safeLocalStorage.removeItem("barkToken");
                 safeLocalStorage.removeItem("barkUserToken");
                 safeLocalStorage.removeItem("registerDataToken");

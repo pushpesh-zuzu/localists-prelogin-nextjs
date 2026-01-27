@@ -3,8 +3,8 @@ import React from "react";
 function TrustpioletIcon({ className = "" }) {
   return (
     <svg
-      width="331"
-      height="50"
+      width="365"
+      height="54"
       viewBox="0 0 331 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
