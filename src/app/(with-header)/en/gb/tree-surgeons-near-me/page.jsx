@@ -1,6 +1,9 @@
 // app/tree-surgeons-near-me/page.tsx
+
+import { Suspense } from "react";
 import SEO from "@/app/component/common/seo/SEO";
 import TreeSurgeon from "@/app/component/Nearme/TreeSurgeon/TreeSurgeon";
+import LoadingIndicator from "@/app/component/common/Loader/LoaderIndicatore";
 // import { BREADCRUM_DATA_TREESURGEON } from "@/app/component/Nearme/TreeSurgeon/TreeSurgeonData";
 // import { Metadata } from "next";
 
@@ -97,12 +100,16 @@ export default function Page() {
         canonicalPath="/en/gb/tree-surgeon-near-me"
         bannerImage="/nearme/treeSurgeon.webp"
         breadcrumb={[
-          { title: "Home & Garden", path: "/home" },  
+          { title: "Home & Garden", path: "/home" },
           { title: "Tree Surgeons", path: "/tree-surgeon-near-me" },
         ]}
         conversion={true}
       />
-      <TreeSurgeon />
+      <Suspense fallback={
+        <LoadingIndicator />
+      }>
+        <TreeSurgeon />
+      </Suspense>
     </>
   );
 }
