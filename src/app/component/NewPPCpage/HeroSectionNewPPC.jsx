@@ -168,14 +168,15 @@ export default function HeroSectionNewPPC({
                         </div>
                     </div>
 
+                    {/* Mobile Features */}
                     <div className="hidden max-[600px]:block">
                         <div
                             className="
-              flex flex-wrap gap-[11px] mt-[26px]
+              flex flex-wrap justify-center items-center gap-[11px] mt-[26px]
               font-[Arial] font-bold
               text-[16px] leading-[24px]
               tracking-[-0.03px]
-            text-[#253238]
+            text-[#253238] text-center
             "
                         >
                             <MobileFeature
