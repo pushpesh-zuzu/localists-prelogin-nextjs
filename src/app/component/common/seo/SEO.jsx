@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://dev2.localistsbooster.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://dev-prelogin.localists.com";
 
 export default function SEO({
   breadcrumb = [],
