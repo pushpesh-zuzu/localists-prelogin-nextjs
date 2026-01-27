@@ -25,7 +25,7 @@ import Footer from "../../Footer/Footer";
 import HowItWorkNearMe from "../HowItWorkNearMe";
 import HireRelatedToServiceNearMe from "../HireRelatedToServiceNearMe";
 import UserFeedbackNearMe from "../UserFeedbackNearMe";
-// import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 // import AdviceInsightNearMe from "../AdviceInsightNearMe";
 import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
@@ -46,13 +46,6 @@ const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   ),
   ssr: true,
 });
-
-const CloseBrowserAbandon = dynamic(() => import("../../common/CloseBrowserAbandon/CloseBrowserAbandon"), {
-  loading: () => (
-    <LoaderIndicator size="small" />
-  ),
-  ssr: false,
-})
 
 function TreeSurgeon() {
   return (
