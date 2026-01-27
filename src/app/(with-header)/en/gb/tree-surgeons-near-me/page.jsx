@@ -105,9 +105,13 @@ export default function Page() {
         ]}
         conversion={true}
       />
-      <Suspense fallback={
-        <LoadingIndicator />
-      }>
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
+            <LoadingIndicator />
+          </div>
+        }
+      >
         <TreeSurgeon />
       </Suspense>
     </>

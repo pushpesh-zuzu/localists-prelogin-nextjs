@@ -5,23 +5,19 @@ import { useDispatch, useSelector } from "react-redux";
 import CheckVerifiedIcon from "../../common/icons/LandingPPCIcon/CheckVerifiedIcon";
 import {
   getCityName,
-  getProgressPercentageAPI,
   setbuyerRequestData,
   setcitySerach,
 } from "@/lib/store/buyerslice/buyerSlice";
 import CardLayoutWrapper from "../../common/MultiStepFormPPC/CardLayoutWrappper";
 import LocationMapIcon from "../../common/icons/SellerRegistration/LocationMapIcon";
-import { showToast } from "@/utils/toaster";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 
-const PostCodeSearchTreeSurgeon = ({
+const PostcodeSearchRoofing = ({
   onNext,
   title = "What is your postcode",
   prevStep,
-  setBackButtonTriggered,
-  setProgressPercentage,
+  setPercetangForPost,
   titleHeading = "landscaping specialists",
-  setSelectedOption,
 }) => {
   const dispatch = useDispatch();
   const inputRef = useRef(null);
@@ -31,6 +27,7 @@ const PostCodeSearchTreeSurgeon = ({
   const [postalCodeValidate, setPostalCodeValidate] = useState(
     !!buyerRequest?.postal_code,
   );
+
   const [isCheckingPostcode, setIsCheckingPostcode] = useState(false);
   const [error, setError] = useState("");
 
@@ -68,6 +65,7 @@ const PostCodeSearchTreeSurgeon = ({
         setError("");
 
         handleNext(true);
+        setPercetangForPost(5);
       } else {
         setPostalCodeValidate(false);
         setError("Please enter a valid postcode!");
@@ -86,11 +84,9 @@ const PostCodeSearchTreeSurgeon = ({
       return;
     }
 
-    setProgressPercentage((pre) => pre + 10);
     if (onNext) {
       onNext();
-      setBackButtonTriggered(false);
-      setSelectedOption([]);
+      setPercetangForPost(5);
     }
   };
 
@@ -98,31 +94,8 @@ const PostCodeSearchTreeSurgeon = ({
     if (e.key === "Enter") handleNext();
   };
 
-  const handleBack = async () => {
+  const handleBack = () => {
     prevStep();
-    const lastQuestionsArray = buyerRequest.questions;
-
-    const lastAnswer = lastQuestionsArray[lastQuestionsArray.length - 1].ans;
-    setSelectedOption([lastAnswer]);
-    const updatedBuyerRequest = {
-      ...buyerRequest,
-      questions: [...buyerRequest.questions].slice(0, -1),
-    };
-
-    dispatch(setbuyerRequestData(updatedBuyerRequest));
-
-    try {
-      const formData = new FormData();
-      formData.append(
-        "questions",
-        JSON.stringify(updatedBuyerRequest.questions),
-      );
-      formData.append("service_id", updatedBuyerRequest.service_id);
-      const response = await dispatch(getProgressPercentageAPI(formData));
-      setProgressPercentage(response.percentage);
-    } catch (err) {
-      console.error("Error updating progress on back:", err);
-    }
   };
   return (
     <div>
@@ -153,12 +126,11 @@ const PostCodeSearchTreeSurgeon = ({
               onChange={handlePincodeChange}
               onKeyPress={handleKeyPress}
             />
-
             <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
               <LocationMapIcon background="#00afe3" className="h-3.5 w-3.5" />
             </div>
             {isCheckingPostcode ? (
-              <div className="absolute right-2">
+              <div className="absolute right-3">
                 <LoaderIndicator size="small" />
               </div>
             ) : postalCodeValidate ? (
@@ -176,4 +148,4 @@ const PostCodeSearchTreeSurgeon = ({
   );
 };
 
-export default PostCodeSearchTreeSurgeon;
+export default PostcodeSearchRoofing;

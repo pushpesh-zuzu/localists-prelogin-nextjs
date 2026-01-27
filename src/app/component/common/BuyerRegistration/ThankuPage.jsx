@@ -9,28 +9,32 @@ import { useSelector } from "react-redux";
 const ThankuPage = () => {
   const router = useRouter();
 
-   const { buyerStep } = useSelector(
-        (state) => state.buyer)
-//   useEffect(() => {
-//     // Track conversion
-//     if (typeof window !== "undefined" && window.gtag) {
-//       window.gtag('event', 'conversion', {
-//         'send_to': 'AW-17528251553/iVB9CJjZsZMbEKHJj6ZB',
-//         'value': 1.0,
-//         'currency': 'GBP'
-//       });
-//     }
-//   }, []);
+  const { buyerStep } = useSelector((state) => state.buyer);
+  //   useEffect(() => {
+  //     // Track conversion
+  //     if (typeof window !== "undefined" && window.gtag) {
+  //       window.gtag('event', 'conversion', {
+  //         'send_to': 'AW-17528251553/iVB9CJjZsZMbEKHJj6ZB',
+  //         'value': 1.0,
+  //         'currency': 'GBP'
+  //       });
+  //     }
+  //   }, []);
 
   const handleSubmit = () => {
     if (typeof window !== "undefined") {
-      const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal") || "null");
+      const pendingModal = JSON.parse(
+        localStorage.getItem("pendingBuyerModal") || "null",
+      );
       localStorage.setItem("isRegistrationComplete", "false");
-      
+
       let redirectPath = "/";
-      
-      if (pendingModal?.baseRedirectPath && pendingModal.baseRedirectPath !== "root") {
-        const lang = "en"; 
+
+      if (
+        pendingModal?.baseRedirectPath &&
+        pendingModal.baseRedirectPath !== "root"
+      ) {
+        const lang = "en";
         const country = "gb";
         redirectPath = `/${lang}/${country}/${pendingModal.baseRedirectPath}`;
       }
@@ -105,7 +109,7 @@ const ThankuPage = () => {
             <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-[#00afe3] rounded-full flex items-center justify-center">
               <CheckIcon className="w-8 h-8 md:w-10 md:h-10 text-white" />
             </div>
-            
+
             <H4 className="text-[#253238] mt-4 md:mt-6">
               Thank You! Your number has been verified.
             </H4>
@@ -115,13 +119,14 @@ const ThankuPage = () => {
             <div className="flex justify-center mb-8">
               <button
                 onClick={handleSubmit}
-                className="cursor-pointer rounded-full bg-[#00afe3] hover:bg-[#008cc0] text-white px-8 py-3 rounded flex items-center gap-1 font-medium text-sm md:text-base transition-colors duration-200"
+                className="cursor-pointer rounded-full bg-[#00afe3]  text-white px-8 py-3 flex items-center gap-2.5 font-medium text-sm md:text-base transition-colors duration-200"
               >
                 {/* Checkbox icon image */}
-                <div className="w-5 h-5 bg-[#00afe3] hover:bg-[#008cc0] rounded flex items-center justify-center ">
-                  <svg className="w-4 h-4 text-[white]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+                <div className="w-4 h-4 bg-[#00afe3]  flex items-center justify-center ">
+                  <CheckIcon
+                    color="white"
+                    className="w-4 h-4 border border-white  text-white"
+                  />
                 </div>
                 <span className="font-[Arial]">View your matches now.</span>
               </button>
@@ -130,12 +135,12 @@ const ThankuPage = () => {
             <div className="mt-6">
               <p className="font-[Arial] text-[10px] md:text-[11px] text-gray-500 leading-relaxed text-left">
                 Localists may share your information with up to five relevant
-                service providers, who may contact you by phone, text or email to
-                discuss your request. By submitting this form, you agree that
+                service providers, who may contact you by phone, text or email
+                to discuss your request. By submitting this form, you agree that
                 professionals can contact you via phone, text or email to offer
                 their services. Your consent to be contacted is not a condition
-                for purchasing or receiving any services. All data will be handled
-                in accordance with our Privacy Policy.
+                for purchasing or receiving any services. All data will be
+                handled in accordance with our Privacy Policy.
               </p>
             </div>
           </div>
