@@ -1,14 +1,19 @@
 // app/tree-surgeons-near-me/page.tsx
+
+import { Suspense } from "react";
+import SEO from "@/app/component/common/seo/SEO";
 import TreeSurgeon from "@/app/component/Nearme/TreeSurgeon/TreeSurgeon";
+import LoadingIndicator from "@/app/component/common/Loader/LoaderIndicatore";
+// import { BREADCRUM_DATA_TREESURGEON } from "@/app/component/Nearme/TreeSurgeon/TreeSurgeonData";
 // import { Metadata } from "next";
 
 // JSON-LD Component
 // function StructuredData() {
 //   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://localistsbooster.com';
 //   const canonicalUrl = `${baseUrl}/en/gb/tree-surgeons-near-me`;
-  
+
 //   const breadcrumbList = [
-    
+
 //     {
 //       "@type": "ListItem",
 //       "position": 1,
@@ -41,10 +46,10 @@ import TreeSurgeon from "@/app/component/Nearme/TreeSurgeon/TreeSurgeon";
 // export async function generateMetadata() {
 //   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://localistsbooster.com';
 //   const canonicalUrl = `${baseUrl}/en/gb/tree-surgeons-near-me`;
-  
+
 //   const bannerImage = "/nearme/treeSurgeon.webp";
 //   const fullImageUrl = `${baseUrl}/${bannerImage}`;
-  
+
 //   const description = "Find fully qualified tree surgeons near me. Certified and skilled arborists. Safe tree removal & pruning. Get free quotes from local experts in your area.";
 //   const title = "Find Quality Tree Surgeons Near Me | Localists";
 
@@ -53,14 +58,14 @@ import TreeSurgeon from "@/app/component/Nearme/TreeSurgeon/TreeSurgeon";
 //     description,
 //     metadataBase: new URL(baseUrl),
 //     robots: "index, follow",
-    
+
 //     alternates: {
 //       canonical: canonicalUrl,
 //       languages: {
 //         'en-gb': canonicalUrl,
 //       },
 //     },
-    
+
 //     openGraph: {
 //       url: canonicalUrl,
 //       type: "website",
@@ -77,7 +82,7 @@ import TreeSurgeon from "@/app/component/Nearme/TreeSurgeon/TreeSurgeon";
 //         },
 //       ],
 //     },
-    
+
 //     twitter: {
 //       card: "summary_large_image",
 //       title,
@@ -91,7 +96,20 @@ export default function Page() {
   return (
     <>
       {/* <StructuredData /> */}
-      <TreeSurgeon />
+      <SEO
+        canonicalPath="/en/gb/tree-surgeon-near-me"
+        bannerImage="/nearme/treeSurgeon.webp"
+        breadcrumb={[
+          { title: "Home & Garden", path: "/home" },
+          { title: "Tree Surgeons", path: "/tree-surgeon-near-me" },
+        ]}
+        conversion={true}
+      />
+      <Suspense fallback={
+        <LoadingIndicator />
+      }>
+        <TreeSurgeon />
+      </Suspense>
     </>
   );
 }
