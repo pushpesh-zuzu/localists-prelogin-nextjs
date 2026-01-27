@@ -1,30 +1,30 @@
 "use client"
 
-import Script from "next/script";
 import { usePathname } from "next/navigation";
 
-// const BASE_URL = "https://www.localists.com";
-
-const BASE_URL = "https://localistsbooster.com/en/gb";
-
+const BASE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://dev2.localistsbooster.com";
 
 export default function SEO({
   breadcrumb = [],
   bannerImage,
-  conversion = false,
+  conversion,
+  canonicalPath,
 }) {
   const pathname = usePathname();
-  const canonicalUrl = `${BASE_URL}/${pathname}`;
 
-  const breadcrumbList =
-    breadcrumb?.length > 0
-      ? breadcrumb.map((item, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          name: item.title,
-          item: `${BASE_URL}${item.path}`,
-        }))
-      : [];
+  const finalPath = canonicalPath || pathname;
+  const normalizedPath =
+    finalPath !== "/" ? finalPath.replace(/\/$/, "") : finalPath;
+
+  const canonicalUrl = `${BASE_URL}${normalizedPath}`;
+
+  const breadcrumbList = breadcrumb.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.title,
+    item: `${BASE_URL}${item.path}`,
+  }));
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -34,40 +34,54 @@ export default function SEO({
 
   return (
     <>
-      {/* Canonical URL */}
+      {/* Canonical */}
       <link rel="canonical" href={canonicalUrl} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content="website" />
 
-      {/* Open Graph Image (optional) */}
       {bannerImage && (
         <meta
           property="og:image"
-          content={`${BASE_URL}${bannerImage.src ?? bannerImage}`}
+          content={`${BASE_URL}${bannerImage?.src ?? bannerImage}`}
         />
       )}
 
-      {/* Breadcrumb JSON-LD */}
-      {breadcrumbList.length > 0 && (
-        <Script
-          id="breadcrumb-jsonld"
+      {/* ✅ VISIBLE breadcrumb HTML */}
+      {breadcrumb.length > 0 && (
+        <nav aria-label="Breadcrumb">
+          <ol className="hidden">
+            {breadcrumb.map((item, index) => (
+              <li key={index}>
+                <a href={item.path}>{item.title}</a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+
+      {/* ✅ JSON-LD rendered in HTML */}
+      {breadcrumb.length > 0 && (
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(breadcrumbJsonLd),
           }}
         />
       )}
 
-      {/* Google Ads Conversion */}
+      {/* Conversion (can stay client-side) */}
       {conversion && (
-        <Script id="gtag-conversion" strategy="afterInteractive">
-          {`
-            gtag('event', 'conversion', {
-              'send_to': 'AW-17528251553/iVB9CJjZsZMbEKHJj6ZB',
-              'value': 1.0,
-              'currency': 'GBP'
-            });
-          `}
-        </Script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              gtag('event', 'conversion', {
+                'send_to': 'AW-17528251553/iVB9CJjZsZMbEKHJj6ZB',
+                'value': 1.0,
+                'currency': 'GBP'
+              });
+            `,
+          }}
+        />
       )}
     </>
   );

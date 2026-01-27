@@ -15,10 +15,13 @@ const Modal = ({
   BackButtonText = "Back",
   onNext,
   onBack,
+  titleClassName="",
   showButtons = true,
   padding = "p-3 md:px-7.5 md:py-6",
   zIndex = "z-50",
   showClosIcon = true,
+  radius = "rounded-none",
+  nextButtonClassName = "",
 }) => {
   if (!isOpen) return null;
 
@@ -28,7 +31,7 @@ const Modal = ({
       // onClick={onClose}
     >
       <div
-        className={`relative w-full ${maxWidth} ${maxHeight} py-4 bg-white shadow-2xl flex flex-col`}
+        className={`relative w-full ${maxWidth} ${maxHeight} py-4 bg-white shadow-2xl flex flex-col ${radius} overflow-hidden`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -45,7 +48,7 @@ const Modal = ({
         {/* Title - Fixed */}
         {title && (
           <div className={` pt-6 px-3 pb-0 flex-shrink-0`}>
-             <H4 className="text-center max-w-[90%] mx-auto">
+             <H4 className={`text-center max-w-[90%] mx-auto ${titleClassName}`}>
               {title}
               </H4> 
           </div>
@@ -62,13 +65,13 @@ const Modal = ({
                 <Button1 variant="secondary" onClick={onBack}>
                   {BackButtonText}
                 </Button1>
-                <Button1 variant="primary" onClick={onNext}>
+                <Button1 variant="primary" onClick={onNext} className={nextButtonClassName}>
                   {nextButtonText}
                 </Button1>
               </div>
             ) : onNext ? (
-              <div className="flex justify-center">
-                <Button1 variant="primary" onClick={onNext}>
+              <div className="flex justify-center cursor-pointer">
+                <Button1 variant="primary" onClick={onNext}  className={nextButtonClassName}>
                   {nextButtonText}
                 </Button1>
               </div>

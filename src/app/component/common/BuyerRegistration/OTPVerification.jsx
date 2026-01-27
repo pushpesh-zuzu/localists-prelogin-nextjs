@@ -12,7 +12,6 @@ import {
 import { showToast } from "@/utils/toaster";
 import { formatUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
 import BackButtonOTP from "../icons/Registration/BackButtonOTP";
-import H4 from "../../UI/Typography/H4";
 import H5 from "../../UI/Typography/H5";
 import Paragraph from "../../UI/Typography/Paragraph";
 
@@ -148,7 +147,6 @@ const OtpVerification = ({
                 );
               }
 
-              router.push("/thank-you");
             } else {
               nextStep();
             }
@@ -232,7 +230,7 @@ const OtpVerification = ({
 
         {/* Resend OTP */}
         <div className="mb-4 text-sm font-bold leading-[14px] text-[#969696] font-[Arial] tracking-[-0.03em]">
-          Didn't you receive the OTP?{" "}
+          Didn&apos;t you receive the OTP?{" "}
           {timer > 0 ? (
             <span className="font-[Arial] tracking-[-0.03em] mt-4 text-sm font-bold text-[#828282]">
               Resend OTP in <strong>{timer}</strong>s
@@ -249,7 +247,7 @@ const OtpVerification = ({
 
         {/* Verify Button */}
         <button
-          className="mt-[18px] w-[200px] rounded-[3px] bg-[#00ADD8] px-[23px] py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0096c4] disabled:opacity-50"
+          className="mt-[18px] w-[200px] rounded-[3px] bg-[#00ADD8] cursor-pointer px-[23px] py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0096c4] disabled:opacity-50"
           disabled={requestLoader || verifyPhoneNumberLoader}
           onClick={handleSubmit}
         >

@@ -35,7 +35,14 @@ export const metadata = {
 function page() {
     return (
         <main>
-            <SEO conversion />
+            <SEO
+                canonicalPath="/en/gb/sellers/pricing"
+                breadcrumb={[
+                    { title: "Pricing", path: "/en/gb" },
+                    { title: "Pricing", path: "/en/gb/sellers/pricing" },
+                ]}
+                conversion={true}
+            />
             <PricingSection />
             <CreditBuyingProcess />
             <PricingCards />

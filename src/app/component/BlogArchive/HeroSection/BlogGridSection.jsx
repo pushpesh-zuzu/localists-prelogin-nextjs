@@ -4,28 +4,8 @@ import Image from "next/image";
 const blogs = [
     {
         title: "How much does a Plumber cost in 2026?",
-        image: "/images/plumber.jpg",
+        image: "/images/landscap.webp",
     },
-    //   {
-    //     title: "How much does a electrician cost in 2026?",
-    //     image: "/images/electrician.jpg",
-    //   },
-    //   {
-    //     title: "How much does a tree surgeon cost in 2026?",
-    //     image: "/images/tree.jpg",
-    //   },
-    //   {
-    //     title: "How much does a Plumber cost in 2026?",
-    //     image: "/images/plumber.jpg",
-    //   },
-    //   {
-    //     title: "How much does a electrician cost in 2026?",
-    //     image: "/images/electrician.jpg",
-    //   },
-    //   {
-    //     title: "How much does a tree surgeon cost in 2026?",
-    //     image: "/images/tree.jpg",
-    //   },
 ];
 
 export default function BlogGridSection() {
@@ -42,6 +22,7 @@ export default function BlogGridSection() {
                         fill
                         className="object-cover"
                         priority
+                        fetchPriority="high"
                     />
 
                     {/* Gradient */}
@@ -64,6 +45,8 @@ export default function BlogGridSection() {
                             alt={item.title}
                             fill
                             className="object-cover"
+                            priority
+                            fetchPriority="high"
                         />
 
                         {/* Gradient */}
@@ -79,7 +62,7 @@ export default function BlogGridSection() {
 
             {/* BUTTON */}
             <div className="flex justify-center mt-10">
-                <button className="bg-[#2E3A3F] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-black transition">
+                <button className="bg-[#2E3A3F] cursor-pointer text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-black transition">
                     Show more
                 </button>
             </div>

@@ -25,7 +25,14 @@ export const metadata = {
 export default function Page() {
     return (
         <main>
-            <SEO conversion />
+            <SEO
+                canonicalPath="/en/gb/contact-us"
+                breadcrumb={[
+                    { title: "Contact us", path: "/en/gb" },
+                    { title: "Contact us", path: "/en/gb/contact-us" },
+                ]}
+                conversion={true}
+            />
             <ContactUs />
             <Footer />
         </main>

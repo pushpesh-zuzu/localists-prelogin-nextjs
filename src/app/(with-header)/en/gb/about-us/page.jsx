@@ -10,25 +10,6 @@ export const metadata = {
     title: "Meet Our Leadership Team & Investors - Localists",
     description:
         "Meet our experienced leadership team and the investors driving Localists, the world’s fastest-growing local services marketplace. Get free quotes.",
-
-    alternates: {
-        // canonical: "https://dev2.localistsbooster.com/en/gb/about-us",
-        languages: {
-            "en-GB": "https://dev2.localistsbooster.com/en/gb/About-us"
-        },
-    },
-
-    openGraph: {
-        title: "Meet Our Leadership Team & Investors - Localists",
-        description:
-            "Meet our experienced leadership team and the investors driving Localists, the world’s fastest-growing local services marketplace. Get free quotes.",
-    },
-
-    twitter: {
-        title: "Meet Our Leadership Team & Investors - Localists",
-        description:
-            "Meet our experienced leadership team and the investors driving Localists, the world’s fastest-growing local services marketplace. Get free quotes.",
-    },
 };
 
 export default function Page() {
@@ -36,10 +17,12 @@ export default function Page() {
         <main className="bg-white">
             <SEO
                 bannerImage="./images/MainBanners"
+                canonicalPath="/en/gb/about-us"
                 breadcrumb={[
+                    { title: "About Us", path: "/en/gb" },
                     { title: "About Us", path: "/en/gb/about-us" },
                 ]}
-                conversion
+                conversion={true}
             />
             <BannerWrapper
                 imageAlt={"About Us"}

@@ -1,10 +1,10 @@
 "use client";
 
-import { Spin } from "antd";
-import { LoadingOutlined } from "@ant-design/icons";
+import LoaderIndicator from "../common/Loader/LoaderIndicatore";
 import Image from "next/image";
 import leftNormalArrow from "../../../../public/icons/leftNormalArrow.svg";
 import H5 from "../UI/Typography/H5";
+import H4 from "../UI/Typography/H4";
 
 const CardLayoutWrapper = ({
   children,
@@ -20,6 +20,8 @@ const CardLayoutWrapper = ({
   headingCenter = true,
   titlePrimary = false,
   NameEmailContainer = false,
+  titleHeading = "",
+  buttonWrapperClassName = "",
 }) => {
   return (
     <div
@@ -30,14 +32,19 @@ const CardLayoutWrapper = ({
         ${NameEmailContainer ? "max-[480px]:w-[82%]" : ""}
       `}
     >
+
       <div className="bg-white rounded-[20px] mt-[20px] w-full">
+        {titleHeading && (
+          <H4 className="mb-[20px] leading-[26px] md:leading-[16px] lg:leading-[30px] max-[768px]:mb-[15px] text-[#253238] text-center">
+            {titleHeading}
+          </H4>
+        )}
+
         {/* TITLE */}
         {title && (
           <H5
             className={`
-              font-bold !leading-[30px]
-              mx-auto
-              text-left
+              mx-auto text-center
               ${titlePrimary ? "text-[#00afe3]" : "text-[#253238]"}
               mb-[20px]
             `}
@@ -56,7 +63,6 @@ const CardLayoutWrapper = ({
               text-[#253238]
                    font-[Arial]
                   tracking-[-0.03em]
-
               max-[768px]:text-[15px]
               max-[768px]:mb-[32px]
 
@@ -76,7 +82,7 @@ const CardLayoutWrapper = ({
           <div
             className={`
               flex items-center gap-[12px] mt-[40px]
-
+               ${buttonWrapperClassName}
               max-[768px]:mt-[32px]
               max-[768px]:gap-[10px]
 
@@ -140,15 +146,7 @@ const CardLayoutWrapper = ({
                 max-[480px]:h-[48px]
               `}
             >
-              {loader ? (
-                <Spin
-                  indicator={
-                    <LoadingOutlined spin style={{ color: "white" }} />
-                  }
-                />
-              ) : (
-                buttonText
-              )}
+              {loader ? <LoaderIndicator size="small" /> : buttonText}
             </button>
           </div>
         )}

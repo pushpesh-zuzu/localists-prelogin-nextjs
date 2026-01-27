@@ -280,7 +280,13 @@ export const metadata = {
 function page() {
     return (
         <>
-            <SEO conversion />
+            <SEO canonicalPath="/en/gb/cookie-policy"
+                breadcrumb={[
+                    { title: "Cookie Policy", path: "/en/gb" },
+                    { title: "Cookie Policy", path: "/en/gb/cookie-policy" },
+                ]}
+                conversion={true}
+            />
             <section>
                 <div className="mx-auto max-w-[970px] px-[15px] pt-[30px] md:pt-[48px] pb-[15px]">
                     <h1 className="text-center font-Inter font-black

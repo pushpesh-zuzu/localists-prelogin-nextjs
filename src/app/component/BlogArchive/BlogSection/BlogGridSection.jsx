@@ -8,28 +8,44 @@ import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 
 const blogs = [
     {
-        title: "How much does a plumber cost in 2026?",
-        image: "/images/BlogPage/plumber.webp",
+        title: "Tree Removal Cost UK",
+        image: "/images/BlogPage/garden_shrubs.webp",
     },
     {
-        title: "How much does an electrician cost in 2026?",
-        image: "/images/BlogPage/electrician.webp",
+        title: "New Roof Grants in 2026",
+        image: "/images/BlogPage/shrub1.webp",
     },
     {
-        title: "How much does a tree surgeon cost in 2026?",
-        image: "/images/BlogPage/surgeon.webp",
+        title: "How long does a flat roof last",
+        image: "/images/BlogPage/Howlong.webp",
     },
     {
-        title: "How much does a plumber cost in 2026?",
-        image: "/images/BlogPage/plumber.webp",
+        title: "Roof Replacement Cost in 2026: The full Breakdown",
+        image: "/images/BlogPage/view.webp",
     },
     {
-        title: "How much does an electrician cost in 2026?",
-        image: "/images/BlogPage/electrician.webp",
+        title: "Roof repair cost in 2026: The full Breakdown",
+        image: "/images/BlogPage/capMan.webp",
     },
     {
-        title: "How much does a tree surgeon cost in 2026?",
-        image: "/images/BlogPage/surgeon.webp",
+        title: "Roof cleaning cost in 2026: The full Breakdown",
+        image: "/images/BlogPage/waterMan.webp",
+    },
+    {
+        title: "Roof tile Replacement Costs in 2026: The full Breakdown",
+        image: "/images/BlogPage/DrillMan.webp",
+    },
+    {
+        title: "Roof inspection cost in 2026: The full Breakdown",
+        image: "/images/BlogPage/planPeoples.webp",
+    },
+    {
+        title: "Rubber roofing cost in 2026: The full Breakdown",
+        image: "/images/BlogPage/plates.webp",
+    },
+     {
+        title: "State vs tile roof: Which one is best for your home?",
+        image: "/images/BlogPage/frame.webp",
     },
 ];
 
@@ -40,8 +56,8 @@ export default function BlogGridSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
                     <BlogHeroCard
-                        title="A guide to Tree Preservation Orders"
-                        image="/images/BlogPage/guideTree.webp"
+                        title="ECO4 Axe Will Trigger a Wave of Business Collapse and Job Carnage, Expert Warns"
+                        image="/images/BlogPage/Eco4.webp"
                     />
 
                     {blogs.map((item, index) => (
@@ -54,7 +70,7 @@ export default function BlogGridSection() {
                 </div>
 
                 <div className="flex justify-center mt-6 xl:mt-12">
-                    <Button className="bg-[#253238] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] text-white rounded-full">
+                    <Button className="bg-[#253238] cursor-pointer px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] text-white hover:bg-[#1b2326] rounded-full">
                         Show More
                     </Button>
                 </div>

@@ -1,16 +1,11 @@
 "use client";
-import Image from "next/image";
 import { memo, useState } from "react";
-import { searchService } from "@/lib/store/searchSlice";
-import { useDispatch } from "react-redux";
 import dynamic from "next/dynamic";
 import H1 from "../../UI/Typography/H1";
 import Paragraph from "../../UI/Typography/Paragraph";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
-import SearchIcon from "../../common/icons/HomePageIcons/SearchIcon";
 import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 import Paragraph1 from "../../UI/Typography/Paragraph1";
-import TrustpioletIcon from "../../common/icons/HomePageIcons/TrustpioletIcon";
 import HeroSectionSearch from "./HeroSectionSearch";
 
 const SearchResults = dynamic(() => import("../../common/SearchResult"), {
@@ -34,10 +29,6 @@ const HeroSection = memo(function HeroSection() {
   const displayedServicesMediusScreen = showAllServices
     ? services
     : services.slice(0, 9);
-
-  const dispatch = useDispatch();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [Show, setShow] = useState(false);
 
   return (
     <WrapperBGWidth background={"#00aeef"}>
@@ -86,7 +77,7 @@ const HeroSection = memo(function HeroSection() {
             {services.map((service) => (
               <button
                 key={service}
-                className="border xl:border-2 border-white hover:border-[#B4EEFF] family-55 px-1.5 py-[5px] xl:px-3.5 xl:py-[7px] rounded-full text-white hover:bg-[#B4EEFF] hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none"
+                className="border xl:border-2 border-white hover:border-[#B4EEFF] family-55 px-1.5 py-[5px] xl:px-3.5 xl:py-[7px] rounded-full text-white hover:bg-[#B4EEFF] hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none cursor-pointer"
                 aria-label={`Search for ${service}`}
               >
                 <Paragraph>{service}</Paragraph>
@@ -141,7 +132,7 @@ const HeroSection = memo(function HeroSection() {
             {services.length > 5 && (
               <div className="flex justify-center mt-5">
                 <button
-                  className="font-bold text-[12px] rounded-full transition-all duration-200 flex items-center justify-center"
+                  className="font-bold text-[12px] cursor-pointer cursor-pointer rounded-full transition-all duration-200 flex items-center justify-center"
                   onClick={() => setShowAllServices(!showAllServices)}
                 >
                   <ChevroliteDoubleDownIcon />

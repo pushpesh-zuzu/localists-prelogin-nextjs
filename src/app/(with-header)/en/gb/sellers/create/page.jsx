@@ -28,7 +28,14 @@ function page() {
 
   return (
     <main>
-      <SEO conversion />
+      <SEO
+        canonicalPath="/en/gb/sellers/create"
+        breadcrumb={[
+          { title: "Join Localists as professional", path: "/en/gb" },
+          { title: "Join Localists as professional", path: "/en/gb/sellers/create" },
+        ]}
+        conversion={true}
+      />
       <FindLocalJobs />;
       <GrowthSteps />
       <CustomerSuccessStories />

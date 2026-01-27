@@ -33,6 +33,13 @@ const DescribeYourRequestNewPPC = () => {
     const dispatch = useDispatch();
     const router = useRouter();
 
+    useEffect(() => {
+        window.onbeforeunload = null;
+        return () => {
+            window.onbeforeunload = null;
+        };
+    }, []);
+
     /* 🔹 Quality debounce */
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -65,14 +72,13 @@ const DescribeYourRequestNewPPC = () => {
             professional_letin: professionalLetin ? 1 : 0,
         };
 
+        localStorage.setItem("isRegistrationComplete", "true");
         dispatch(addDetailsRequestData(payload, router, requestId)).then((res) => {
             if (res?.success) {
                 showToast("success", res?.message || "Request submitted successfully");
-                localStorage.setItem("isRegistrationComplete", "true");
                 dispatch(clearSetbuyerRequestData());
                 dispatch(clearBuyerRegisterFormData());
                 dispatch(setQualityData());
-                localStorage.removeItem("pendingBuyerModal");
             }
         });
     };
@@ -85,15 +91,6 @@ const DescribeYourRequestNewPPC = () => {
                 <Image src={CheckIcon} alt="success" width={20} height={20} />
                 <span>Your request has been submitted</span>
             </div>
-
-
-            {/* font-[Arial]
-        tracking-[-0.03em]
-        leading-[24px]
-        text-[#253238]
-        text-[20px]       
-        max-[768px]:text-[18px]
-        max-[480px]:text-[16px] */}
 
             {/* Header */}
             <div className="text-center mb-[6px]">

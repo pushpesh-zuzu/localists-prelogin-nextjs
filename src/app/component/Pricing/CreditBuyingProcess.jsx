@@ -1,29 +1,29 @@
-import Image from "next/image";
-import ChooseRightCreditIcon from "../../../../public/images/Pricing/ChooseRightCreditIcon.svg";
-import CompletePurchaseIcon from "../../../../public/images/Pricing/CompletePurchaseIcon.svg";
-import RedeemCreditsIcon from "../../../../public/images/Pricing/RedeemCreditsIcon.svg";
+import RightCreditIcon from "../../../../public/ReactIcons/RightCreditIcon";
+import RedeemCreditIcon from "../../../../public/ReactIcons/RedeemCreditIcon";
+import PurchaseIcon from "../../../../public/ReactIcons/PurchaseIcon";
 import H2 from "../UI/Typography/H2";
+
 
 const CreditBuyingProcess = () => {
     const HowItWorksData = [
         {
             id: 1,
             title: "Choose Right Credits",
-            image: ChooseRightCreditIcon,
+            icon: RightCreditIcon,
             description:
                 "Pick a credit pack that fits your business needs. Basic or premium, there’s an option for you.",
         },
         {
             id: 2,
             title: "Complete Purchase",
-            image: CompletePurchaseIcon,
+            icon: PurchaseIcon,
             description:
                 "Buy credits quickly and safely using your preferred payment method.",
         },
         {
             id: 3,
             title: "Redeem Credits",
-            image: RedeemCreditsIcon,
+            icon: RedeemCreditIcon,
             description:
                 "Spend credits to contact customers you’re interested in. Once unlocked, you’ll get their phone number and email so you can reach out directly.",
         },
@@ -43,13 +43,15 @@ const CreditBuyingProcess = () => {
                         className="relative w-full max-w-[409px] bg-[#F9F9FA] rounded-[20px] px-[28px] pb-[28px] text-center max-[920px]:px-[20px] max-[920px]:pb-[20px] max-[667px]:w-[90%]"
                     >
                         <div className="mx-auto mt-[-58px] mb-[22px] flex h-[132px] w-[132px] items-center justify-center rounded-full bg-[#00AFE3] max-[920px]:mt-[-52px] max-[768px]:h-[102px] max-[768px]:w-[102px] max-[667px]:mt-[-50px] max-[667px]:h-[100px] max-[667px]:w-[100px]">
-                            <Image
-                                src={item.image}
-                                alt={item.title}
-                                className="h-[78px] w-[78px] max-[768px]:h-[48px] max-[768px]:w-[48px]"
+                            <item.icon
+                                aria-label={item.title}
+                                className="
+                                    w-[120px] h-[120px]
+                                    max-[768px]:w-[78px] 
+                                    max-[768px]:h-[78px]
+                                "
                             />
                         </div>
-
                         <p className="font-[Inter]
         tracking-[-0.03em]
         leading-[29px] font-Inter font-black

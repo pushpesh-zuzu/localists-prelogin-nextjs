@@ -19,6 +19,24 @@ import hiring from "../../../../public/images/ServicePanel/hiring.svg";
 import rightArrow from "../../../../public/images/ServicePanel/rightArrow.svg";
 import H1 from "../UI/Typography/H1";
 import Paragraph2 from "../UI/Typography/Paragraph2";
+import ArtGrassIcon from "../../../../public/ReactIcons/ArtGrassIcon";
+import DrivewaysInstallIcon from "../../../../public/ReactIcons/DrivewayInstallIcon";
+import FencyGateIcon from "../../../../public/ReactIcons/FencyGateIcon";
+import LandscapIcon from "../../../../public/ReactIcons/LandscapIcon";
+import PatioIcon from "../../../../public/ReactIcons/PatioIcon";
+import RoofIcon from "../../../../public/ReactIcons/RoofIcon";
+import TreeSurgeryIcon from "../../../../public/ReactIcons/TreeSurgeruIcon";
+
+
+const CATEGORY_ICON_MAP = {
+  43: LandscapIcon,
+  51: DrivewaysInstallIcon,
+  49: FencyGateIcon,
+  113: RoofIcon,
+  112: TreeSurgeryIcon,
+  54: ArtGrassIcon,
+  52: PatioIcon,
+};
 
 
 const FindLocalJobs = () => {
@@ -229,6 +247,7 @@ const FindLocalJobs = () => {
        mt-5 mb-3 max-[620px]:grid-cols-1">
             {popularList?.map((item) => {
               const slug = generateSlug(item.name);
+              const IconComponent = CATEGORY_ICON_MAP[item.id];
               return (
                 <Link
                   key={item.id}
@@ -236,12 +255,20 @@ const FindLocalJobs = () => {
                   onClick={() => dispatch(setSelectedServiceId(item.id))}
                   className="flex items-center gap-2"
                 >
-                  <Image
-                    src={item.category_icon ? `${item.baseurl}/${item.category_icon}` : hiring}
-                    alt={item.name}
-                    width={20}
-                    height={20}
-                  />
+                  {IconComponent ? (
+                    <IconComponent className="w-[20px] h-[20px]" />
+                  ) : (
+                    <Image
+                      src={
+                        item.category_icon
+                          ? `${item.baseurl}/${item.category_icon}`
+                          : hiring
+                      }
+                      alt={item.name}
+                      width={20}
+                      height={20}
+                    />
+                  )}
                   <p className="font-[Arial]
                       tracking-[-0.03em]
                       leading-[24px]

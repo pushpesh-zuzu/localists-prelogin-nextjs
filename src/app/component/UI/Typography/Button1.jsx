@@ -20,7 +20,7 @@ const Button1 = ({
         text-base
         md:text-[16px]
         lg:text-[18px]
-        leading-7
+        leading-7 cursor-pointer
         px-6 py-2 xl:py-2 xl:px-7 h-fit  rounded-full
         shadow-[0_0_4px_rgba(0,0,0,0.1)
     `,

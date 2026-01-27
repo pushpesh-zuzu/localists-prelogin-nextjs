@@ -14,35 +14,19 @@ export const metadata = {
     index: false,
     follow: false,
   },
-
-  alternates: {
-    // canonical: "https://www.localists.com/how-it-works-for-sellers",
-    languages: {
-      "en-GB": "https://www.localists.com/en/gb/how-it-works-for-sellers"
-    },
-  },
-
-  openGraph: {
-    title: "How It Works for Professionals & Businesses - Localists",
-    description:
-      "Learn how Localists connect you with ready-to-hire customers in your area. Get quality leads, grow your business, and boost your visibility online today.",
-    url: "https://www.localists.com/en/gb/how-it-works-for-sellers",
-    siteName: "Localists",
-    type: "website",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "How It Works for Professionals & Businesses - Localists",
-    description:
-      "Learn how Localists connect you with ready-to-hire customers in your area. Get quality leads, grow your business, and boost your visibility online today.",
-  },
 };
 
 const page = () => {
   return (
     <main>
-      <SEO conversion />
+      <SEO
+        canonicalPath="/en/gb/how-it-works-for-customers"
+        breadcrumb={[
+          { title: "How it works for sellers", path: "/en/gb" },
+          { title: "How it works for sellers", path: "/en/gb/how-it-works-for-sellers" },
+        ]}
+        conversion={true}
+      />
       <HeroSectionSellers />
       <WrapperBGWidth>
         <HowItWorksDetail />

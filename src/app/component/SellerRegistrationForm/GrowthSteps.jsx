@@ -1,22 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import LeadInfoModal from "./LeadStaticModal";
 import { GrowthStepsData } from "@/app/../constants/severalPanel";
-import Image from "next/image";
 import H2 from "../UI/Typography/H2";
-import H3 from "../UI/Typography/H3";
 import Button from "../UI/Typography/Button";
+import Link from "next/link";
 
 const GrowthSteps = () => {
+    const router = useRouter();
     const { lang, country } = useParams();
     const currentLang = lang || "en";
     const currentCountry = country || "gb";
     const [showModal, setShowModal] = useState(false);
 
     const handleCardClick = (item) => {
+        if (item?.path) {
+            router.push(`/${currentLang}/${currentCountry}${item.path}`);
+            return;
+        }
+
         if (item?.id === 2) {
             setShowModal(true);
         }
@@ -60,11 +64,10 @@ const GrowthSteps = () => {
                             <div>
                                 <div className="flex items-center gap-[10px] mb-[20px]">
                                     <div className="w-[54px] h-[54px] bg-white rounded-full flex items-center justify-center">
-                                        <Image
-                                            src={item.image}
-                                            alt="icon"
-                                            width={30}
-                                            height={30}
+                                        <item.icon
+                                            className="w-[54px] h-[54px]"
+                                            bgColor="transparent"
+                                            aria-hidden="true"
                                         />
                                     </div>
 
@@ -111,26 +114,48 @@ const GrowthSteps = () => {
                             </div>
 
                             {/* BUTTON */}
-                            <Button
-                                onClick={() => handleCardClick(item)}
-                                className="
-                                font-[Arial]
-                tracking-[-0.03em]
-                  mt-[23.69px] cursor-pointer
-                  bg-[#253238] text-white
-                  text-[18px] font-bold
-                  px-[15px] py-[15px]
-                  rounded-full
-                  text-center
-                  leading-[100%]
-                  hover:bg-[#333]
-                  max-[460px]:text-[16px]
-                  max-[460px]:py-[12px]
-                  max-[460px]:mt-0
-                "
-                            >
-                                {item.button}
-                            </Button>
+                            {item?.path ? (
+                                <Link
+                                    href={`/${currentLang}/${currentCountry}${item.path}`}
+                                    className="
+      font-[Arial]
+      tracking-[-0.03em]
+      mt-[23.69px]
+      block
+      bg-[#253238] text-white
+      text-[18px] font-bold
+      px-[15px] py-[15px]
+      rounded-full
+      text-center
+      leading-[100%]
+      hover:bg-[#333]
+      max-[460px]:text-[16px]
+      max-[460px]:py-[12px]
+      max-[460px]:mt-0
+    " > {item.button} </Link>
+                            ) : (
+                                <Button
+                                    onClick={() => handleCardClick(item)}
+                                    className="
+      font-[Arial]
+      tracking-[-0.03em]
+      mt-[23.69px] cursor-pointer
+      bg-[#253238] text-white
+      text-[18px] font-bold
+      px-[15px] py-[15px]
+      rounded-full
+      text-center
+      leading-[100%]
+      hover:bg-[#333]
+      max-[460px]:text-[16px]
+      max-[460px]:py-[12px]
+      max-[460px]:mt-0
+    "
+                                >
+                                    {item.button}
+                                </Button>
+                            )}
+
                         </div>
                     ))}
                 </div>

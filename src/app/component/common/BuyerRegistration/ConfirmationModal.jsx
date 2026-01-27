@@ -13,6 +13,8 @@ import {
 import { getBarkToken } from "@/utils/CookiesHelper";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import Button1 from "../../UI/Typography/Button1";
+import H3 from "../../UI/Typography/H3";
+import Paragraph2 from "../../UI/Typography/Paragraph2";
 
 const ConfirmationModal = ({
   isOpen,
@@ -21,6 +23,8 @@ const ConfirmationModal = ({
   cancelHeading = "Are you sure that you want to leave?",
   cancelPara = `We're asking a few questions so we can find you the right pros, and send you quotes fast and free!`,
 }) => {
+
+
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const searchParams = useSearchParams();
@@ -119,15 +123,16 @@ const ConfirmationModal = ({
       maxHeight="max-h-auto"
       padding="p-0"
       showButtons={false}
+      radius="rounded-[20px]"
     >
-      <div className="bg-white w-full px-6 py-9 text-center md:px-12 md:py-12">
+      <div className="bg-white w-full rounded-[20px] overflow-hidden px-6 py-9 text-center md:px-12 md:py-12">
         {/* Header */}
-        <h2 className="mb-6 text-2xl font-bold text-[#253238] md:text-2xl">
+        <H3 className="mb-6 text-2xl font-bold text-[#253238] md:text-2xl">
           {cancelHeading}
-        </h2>
+        </H3>
 
         {/* Description */}
-        <p className="mb-9 text-base font-medium text-[#253238]">{cancelPara}</p>
+        <Paragraph2 className="mb-9 text-base font-medium text-[#253238]">{cancelPara}</Paragraph2>
 
         {/* Button Group */}
         <div className="flex justify-between gap-[12px] max-[480px]:flex-row">
@@ -142,6 +147,7 @@ const ConfirmationModal = ({
                       rounded-[3px] font-medium
                       shadow-sm hover:bg-[#000000cf]
                       disabled:opacity-50
+                      cursor-pointer
                     "
           >
             Back
@@ -159,6 +165,7 @@ const ConfirmationModal = ({
                       rounded-[3px] font-medium
                       hover:bg-[#0096c4]
                       disabled:opacity-50
+                      cursor-pointer
                 "
           >
             {loading ? (

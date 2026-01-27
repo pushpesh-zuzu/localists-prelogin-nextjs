@@ -78,7 +78,7 @@ const TreeSurgeryRegionalGuide = ({
 
             {/* CTA */}
             <div className="mt-[10px] flex justify-center">
-                <GetCTAButton onClick={handleScrollToBottom} />
+                <GetCTAButton text="Hire a Tradesperson" onClick={handleScrollToBottom} />
             </div>
         </PaddingWrapper>
     );

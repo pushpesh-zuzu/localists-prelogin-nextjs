@@ -44,7 +44,7 @@ const FAQSection = ({
 
             {/* CTA */}
             <div className="flex justify-center">
-                <GetCTAButton
+                <GetCTAButton text="Get Free Estimates"
                     onClick={() => {
                         handleScrollToBottom();
                     }}

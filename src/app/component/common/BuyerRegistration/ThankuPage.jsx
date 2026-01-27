@@ -1,14 +1,16 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 // import Script from "next/script";
 import { CheckCircle, CheckIcon } from "lucide-react"; // या आप कोई और icon library use कर सकते हैं
 import H4 from "../../UI/Typography/H4";
+import { useSelector } from "react-redux";
 
 const ThankuPage = () => {
   const router = useRouter();
 
+   const { buyerStep } = useSelector(
+        (state) => state.buyer)
 //   useEffect(() => {
 //     // Track conversion
 //     if (typeof window !== "undefined" && window.gtag) {
@@ -32,7 +34,7 @@ const ThankuPage = () => {
         const country = "gb";
         redirectPath = `/${lang}/${country}/${pendingModal.baseRedirectPath}`;
       }
-      
+
       router.push(redirectPath);
     }
   };
@@ -113,10 +115,10 @@ const ThankuPage = () => {
             <div className="flex justify-center mb-8">
               <button
                 onClick={handleSubmit}
-                className="cursor-pointer rounded-full bg-[#00afe3] text-white px-8 py-3 rounded flex items-center gap-1 font-medium text-sm md:text-base transition-colors duration-200"
+                className="cursor-pointer rounded-full bg-[#00afe3] hover:bg-[#008cc0] text-white px-8 py-3 rounded flex items-center gap-1 font-medium text-sm md:text-base transition-colors duration-200"
               >
                 {/* Checkbox icon image */}
-                <div className="w-5 h-5 bg-[#00afe3] rounded flex items-center justify-center ">
+                <div className="w-5 h-5 bg-[#00afe3] hover:bg-[#008cc0] rounded flex items-center justify-center ">
                   <svg className="w-4 h-4 text-[white]" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>

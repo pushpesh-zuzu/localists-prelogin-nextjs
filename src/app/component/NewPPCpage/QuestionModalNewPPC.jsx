@@ -1,16 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-// import { Spin } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "next/navigation";
 import {
-    registerQuoteCustomer,
     setbuyerRequestData,
 } from "@/lib/store/buyerslice/buyerSlice";
 import { extractAllParams } from "@/utils/decodeURLParams";
 import { handleScrollToBottom } from "@/utils/handleScrollToBottom";
-import useUserInfo from "@/utils/getUserIp";
 
 import FormWrapper from "./FormWrapper";
 import CardLayoutWrapper from "./CardLayoutWrapper";
@@ -64,12 +61,10 @@ const CustomSpinner = ({ size = "large" }) => (
 
 const QuestionModalNewPPC = ({
     questions = [],
-    serviceName,
     nextStep,
     loading = true,
-    setLocalRequestId,
     isQuestionWithImage = false,
-    description = ""
+    backButtonTriggered
 }) => {
     const dispatch = useDispatch();
     const { buyerRequest, requestLoader, citySerach, questionLoader } =
@@ -98,7 +93,13 @@ const QuestionModalNewPPC = ({
     const [showDelay, setShowDelay] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
     const [animationDirection, setAnimationDirection] = useState("next");
-    const { ip, url } = useUserInfo();
+
+
+    useEffect(() => {
+        backButtonTriggered && setSelectedOption([''])
+    }, [backButtonTriggered])
+
+    const hasInitializedRef = useRef(false);
 
     useEffect(() => {
         if (questions.length > 0 && currentQuestion === -1) {
@@ -114,8 +115,46 @@ const QuestionModalNewPPC = ({
     }, []);
 
     useEffect(() => {
+        if (
+            questions.length > 0 &&
+            buyerRequest?.questions?.length > 0 &&
+            !hasInitializedRef.current
+        ) {
+            const savedQuestions = buyerRequest.questions;
+            const reconstructedHistory = [0];
+
+            savedQuestions.forEach((savedQ, index) => {
+                if (index > 0) {
+                    const questionIndex = questionIndexMap[savedQ.question_no];
+                    if (questionIndex !== undefined) {
+                        reconstructedHistory.push(questionIndex);
+                    }
+                }
+            });
+
+            const lastQuestionNo = savedQuestions[savedQuestions.length - 1]?.question_no;
+            const lastQuestionIndex = questionIndexMap[lastQuestionNo];
+
+            if (lastQuestionIndex !== undefined) {
+                setQuestionHistory(reconstructedHistory);
+                setCurrentQuestion(lastQuestionIndex);
+            }
+
+            hasInitializedRef.current = true;
+        }
+    }, [questions, buyerRequest?.questions]);
+
+    useEffect(() => {
+        return () => {
+            hasInitializedRef.current = false;
+        };
+    }, []);
+
+    useEffect(() => {
         if (questions.length > 0 && buyerRequest?.questions?.length > 0) {
-            const savedAnswer = buyerRequest.questions[currentQuestion]?.ans || [];
+            const savedAnswer = buyerRequest.questions.find(
+                q => q.question_no === formattedQuestions[currentQuestion]?.question_no
+            )?.ans || [];
             const savedArray =
                 typeof savedAnswer === "string"
                     ? savedAnswer.split(",").map((a) => a.trim())
@@ -139,15 +178,15 @@ const QuestionModalNewPPC = ({
     const totalQuestions = questions?.length;
 
     // Animation functions
-    const animateQuestionChange = (direction, callback) => {
-        if (isAnimating) return;
-        setIsAnimating(true);
-        setAnimationDirection(direction);
-        setTimeout(() => {
-            if (callback) callback();
-            setIsAnimating(false);
-        }, 300);
-    };
+    // const animateQuestionChange = (direction, callback) => {
+    //     if (isAnimating) return;
+    //     setIsAnimating(true);
+    //     setAnimationDirection(direction);
+    //     setTimeout(() => {
+    //         if (callback) callback();
+    //         setIsAnimating(false);
+    //     }, 300);
+    // };
 
     const handleOptionChange = (e) => {
         const { value, checked } = e.target;
@@ -215,59 +254,46 @@ const QuestionModalNewPPC = ({
         );
 
         const nextQ = selectedObj?.next_question;
-        console.log(nextQ, "nextQnextQ");
-        if (nextQ === "last") {
-            const hasQuestionNo = updatedAnswers.some(
-                (q) => q && typeof q === "object" && "question_no" in q
-            );
-            const answersToSend = hasQuestionNo
-                ? updatedAnswers.map((q) => {
-                    if (!q || typeof q !== "object") return q;
-                    const { question_no, ...rest } = q;
-                    return rest;
-                })
-                : updatedAnswers;
-            const formData = new FormData();
-            formData.append("name", buyerRequest?.name);
-            formData.append("email", buyerRequest?.email);
-            formData.append("phone", buyerRequest?.phone);
-            formData.append("questions", JSON.stringify(answersToSend));
-            formData.append("service_id", buyerRequest?.service_id);
-            formData?.append("city", citySerach);
-            formData.append("postcode", buyerRequest?.postcode);
-            formData.append("form_status", 1);
-            formData.append("campaignid", campaignid || "");
-            formData.append("gclid", gclid || "");
-            formData.append("campaign", campaign || "");
-            formData.append("adgroup", adGroup || "");
-            formData.append("targetid", targetID || "");
-            formData.append("msclickid", msclickid || "");
-            formData.append("utm_source", utm_source || "");
-            formData.append("keyword", keyword || "");
-            formData.append("entry_url", url);
-            formData.append("user_ip_address", ip);
-
-            dispatch(registerQuoteCustomer(formData)).then((result) => {
-                if (result) {
-                    nextStep();
-                }
-            });
-        } else if (nextQ && questionIndexMap[nextQ]) {
-            setQuestionHistory((prev) => [...prev, questionIndexMap[nextQ]]);
-            setCurrentQuestion(questionIndexMap[nextQ]);
-        } else {
-            if (currentQuestion < totalQuestions - 1) {
-                setQuestionHistory((prev) => [...prev, currentQuestion + 1]);
-                setCurrentQuestion(currentQuestion + 1);
-                animateQuestionChange("next");
-            } else {
-                nextStep();
-            }
-        }
 
         setSelectedOption([]);
         setOtherText("");
         setError("");
+
+        // console.log(nextQ, "nextQnextQ");
+        if (nextQ === "last") {
+            nextStep();
+        } else if (nextQ && questionIndexMap[nextQ] !== undefined) {
+            const nextIndex = questionIndexMap[nextQ];
+
+            // Update both states in sequence
+            setQuestionHistory(prev => {
+                const newHistory = [...prev, nextIndex];
+                return newHistory;
+            });
+
+            // Use setTimeout to ensure state updates in correct order
+            setTimeout(() => {
+                setCurrentQuestion(nextIndex);
+            }, 0);
+
+        } else {
+            if (currentQuestion < totalQuestions - 1) {
+                const nextIndex = currentQuestion + 1;
+
+                setQuestionHistory(prev => {
+                    const newHistory = [...prev, nextIndex];
+                    return newHistory;
+                });
+
+                // Use setTimeout to ensure state updates in correct order
+                setTimeout(() => {
+                    setCurrentQuestion(nextIndex);
+                    // animateQuestionChange("next");
+                }, 0);
+            } else {
+                nextStep();
+            }
+        }
     };
 
     const handleNext = (selected) => {
@@ -315,58 +341,42 @@ const QuestionModalNewPPC = ({
             (a) => a.option === selected[0]
         );
         const nextQ = selectedObj?.next_question;
-        if (nextQ === "last") {
-            const hasQuestionNo = updatedAnswers.some(
-                (q) => q && typeof q === "object" && "question_no" in q
-            );
-            const answersToSend = hasQuestionNo
-                ? updatedAnswers.map((q) => {
-                    if (!q || typeof q !== "object") return q;
-                    const { question_no, ...rest } = q;
-                    return rest;
-                })
-                : updatedAnswers;
-            const formData = new FormData();
-            formData.append("name", buyerRequest?.name);
-            formData.append("email", buyerRequest?.email);
-            formData.append("phone", buyerRequest?.phone);
-            formData.append("questions", JSON.stringify(answersToSend));
-            formData.append("service_id", buyerRequest?.service_id);
-            formData?.append("city", citySerach);
-            formData.append("postcode", buyerRequest?.postcode);
-            formData.append("form_status", 1);
-            formData.append("campaignid", campaignid || "");
-            formData.append("gclid", gclid || "");
-            formData.append("campaign", campaign || "");
-            formData.append("adgroup", adGroup || "");
-            formData.append("targetid", targetID || "");
-            formData.append("msclickid", msclickid || "");
-            formData.append("utm_source", utm_source || "");
-            formData.append("keyword", keyword || "");
-            formData.append("entry_url", url);
-            formData.append("user_ip_address", ip);
-
-            dispatch(registerQuoteCustomer(formData)).then((result) => {
-                if (result) {
-                    nextStep();
-                }
-            });
-        } else if (nextQ && questionIndexMap[nextQ]) {
-            setQuestionHistory((prev) => [...prev, questionIndexMap[nextQ]]);
-            setCurrentQuestion(questionIndexMap[nextQ]);
-        } else {
-            if (currentQuestion < totalQuestions - 1) {
-                setQuestionHistory((prev) => [...prev, currentQuestion + 1]);
-                setCurrentQuestion(currentQuestion + 1);
-                animateQuestionChange("next");
-            } else {
-                nextStep();
-            }
-        }
 
         setSelectedOption([]);
         setOtherText("");
         setError("");
+
+        if (nextQ === "last") {
+            nextStep();
+        } else if (nextQ && questionIndexMap[nextQ] !== undefined) {
+            const nextIndex = questionIndexMap[nextQ];
+
+            setQuestionHistory(prev => {
+                const newHistory = [...prev, nextIndex];
+                return newHistory;
+            });
+
+            setTimeout(() => {
+                setCurrentQuestion(nextIndex);
+            }, 0);
+
+        } else {
+            if (currentQuestion < totalQuestions - 1) {
+                const nextIndex = currentQuestion + 1;
+
+                setQuestionHistory(prev => {
+                    const newHistory = [...prev, nextIndex];
+                    return newHistory;
+                });
+
+                // Use setTimeout to ensure state updates in correct order
+                setTimeout(() => {
+                    setCurrentQuestion(nextIndex);
+                }, 0);
+            } else {
+                nextStep();
+            }
+        }
     };
 
     const handleBack = () => {
@@ -375,8 +385,19 @@ const QuestionModalNewPPC = ({
             newHistory.pop();
             const prevIndex = newHistory[newHistory.length - 1];
             setQuestionHistory(newHistory);
-            setCurrentQuestion(prevIndex);
+
+            setTimeout(() => {
+                setCurrentQuestion(prevIndex);
+            }, 0);
             setError("");
+
+            const currentQuestionNo = formattedQuestions[currentQuestion]?.question_no;
+            const updatedAnswers = buyerRequest?.questions?.filter(
+                (q) => q.question_no !== currentQuestionNo
+            ) || [];
+            dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+            setSelectedOption([]);
+            setOtherText("");
         } else {
             handleScrollToBottom();
         }
@@ -428,7 +449,7 @@ const QuestionModalNewPPC = ({
     const noQuestionClass = "flex justify-center items-center h-[200px] text-base text-[#253238]";
     const optionsContainerClass = `flex flex-col mt-3 gap-[12px] overflow-auto max-h-[40vh] transition-all duration-300 ${isAnimating ? "[animation:fadeIn_0.3s_ease-out_forwards]" : ""
         }`;
-    const optionClass = "flex items-center gap-[8px] border-2 border-[#e1e5e9] px-[15px] py-[10px] cursor-pointer font-semibold rounded-[3px] text-[#235238] text-start hover:bg-gray-50 transition-colors duration-200 font-[Arial] tracking-[-0.03em] leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
+    const optionClass = "flex items-center gap-[8px] border-2 border-[#e1e5e9] px-[15px] py-[10px] cursor-pointer font-semibold rounded-[3px] text-[#253238] text-start hover:bg-gray-50 transition-colors duration-200 font-[Arial] tracking-[-0.03em] leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
     const inputClass = "w-full font-[Arial] tracking-[-0.03em] px-[10.5px] py-[10px] border border-[#d9d9d9] outline-none rounded-[3px] disabled:opacity-50 leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
     const errorMessageClass = "text-red-500 text-start text-sm mt-2";
     const question1Class = "w-full mb-[15px] text-[#253238]";

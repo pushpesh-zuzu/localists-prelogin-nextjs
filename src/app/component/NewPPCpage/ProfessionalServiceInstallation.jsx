@@ -92,7 +92,7 @@ function ProfessionalServiceInstallation({
       </div>
 
       {/* CTA */}
-      <GetCTAButton
+      <GetCTAButton text="Post a Job for Free Now"
         onClick={() => {
           handleScrollToBottom();
         }}
