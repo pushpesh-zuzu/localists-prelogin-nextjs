@@ -1,6 +1,8 @@
+"use client"
+
 import React from "react";
 // import HeroSectionNearMe from "../HeroSectionNearMe";
-import PaddingWrapper from "../PaddingWrapper";
+// import PaddingWrapper from "../PaddingWrapper";
 import VettedSection from "../VettedSection";
 import AboutServicesAndQuestions from "../AboutServicesAndQuestions";
 import {
@@ -8,13 +10,13 @@ import {
   FREQUENTLY_DATA_TREE_SURGEON,
   POPULAR_SERVICES,
   QUESTION_AND_ABOUT_SERVICE,
-  TREE_SRUGEON_ADVICEINSIGHT,
+  // TREE_SRUGEON_ADVICEINSIGHT,
   TREE_SUREON_FEEDBACK,
   TREE_SURGEON_DATA,
   TREE_SURGEON_TABDATA,
   VETTED_DATA_TREE_SURGEON,
 } from "./TreeSurgeonData";
-import DiscoverServices from "../../Home/DiscoverServices/DiscoverServices";
+// import DiscoverServices from "../../Home/DiscoverServices/DiscoverServices";
 // import Feature from "../Feature";
 import { FAQ } from "../FAQ";
 import PopularJobNearMe from "../PopularJobNearMe";
@@ -23,8 +25,8 @@ import Footer from "../../Footer/Footer";
 import HowItWorkNearMe from "../HowItWorkNearMe";
 import HireRelatedToServiceNearMe from "../HireRelatedToServiceNearMe";
 import UserFeedbackNearMe from "../UserFeedbackNearMe";
-import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-import AdviceInsightNearMe from "../AdviceInsightNearMe";
+// import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+// import AdviceInsightNearMe from "../AdviceInsightNearMe";
 import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
@@ -39,20 +41,24 @@ export const metadata = {
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
     <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
-      {/* <div className="relative h-12 w-12">
-        <div className="absolute inset-0 rounded-full border-4 border-gray-200" />
-        <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-blue-600 animate-spin" />
-      </div> */}
-      <LoaderIndicator size="large"/>
+      <LoaderIndicator size="large" />
     </div>
   ),
+  ssr: true,
 });
+
+const CloseBrowserAbandon = dynamic(() => import("../../common/CloseBrowserAbandon/CloseBrowserAbandon"), {
+  loading: () => (
+    <LoaderIndicator size="small" />
+  ),
+  ssr: false,
+})
 
 function TreeSurgeon() {
   return (
     <>
       <CloseBrowserAbandon />
-      <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]}/>
+      <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]} />
       <HeroSectionNearMe
         heading1="Find Tree Surgeons"
         heading2="Near You"

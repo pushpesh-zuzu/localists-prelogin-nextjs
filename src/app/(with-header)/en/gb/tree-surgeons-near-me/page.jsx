@@ -1,7 +1,7 @@
 // app/tree-surgeons-near-me/page.tsx
 import SEO from "@/app/component/common/seo/SEO";
 import TreeSurgeon from "@/app/component/Nearme/TreeSurgeon/TreeSurgeon";
-import { BREADCRUM_DATA_TREESURGEON } from "@/app/component/Nearme/TreeSurgeon/TreeSurgeonData";
+// import { BREADCRUM_DATA_TREESURGEON } from "@/app/component/Nearme/TreeSurgeon/TreeSurgeonData";
 // import { Metadata } from "next";
 
 // JSON-LD Component
