@@ -108,7 +108,7 @@ export default function Page() {
       <Suspense
         fallback={
           <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
-            <LoadingIndicator />
+            <LoadingIndicator size="large" />
           </div>
         }
       >
