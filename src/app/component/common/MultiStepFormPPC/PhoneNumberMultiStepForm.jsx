@@ -164,6 +164,8 @@ const PhoneNumberMultiStepForm = ({
       onBackClick={handleBackClick}
       buttonText="Compare quotes now"
       showBackButton={true}
+      disableNextButton={requestLoader || isSubmitting}
+      loader={requestLoader || isSubmitting}
     >
       <div className="mb-2">
         <div

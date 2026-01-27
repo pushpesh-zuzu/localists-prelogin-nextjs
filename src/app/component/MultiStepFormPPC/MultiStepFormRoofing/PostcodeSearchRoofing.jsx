@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CheckVerifiedIcon from "../../common/icons/LandingPPCIcon/CheckVerifiedIcon";
 import {
@@ -12,29 +12,27 @@ import CardLayoutWrapper from "../../common/MultiStepFormPPC/CardLayoutWrappper"
 import LocationMapIcon from "../../common/icons/SellerRegistration/LocationMapIcon";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 
-const PostSearchMultiStepFence = ({
+const PostcodeSearchRoofing = ({
   onNext,
   title = "What is your postcode",
   prevStep,
-  getProgressPercentage,
-  setBackButtonTriggered,
-  returPercentage,
-  titleHeading = "fencing companies",
+  setPercetangForPost,
+  titleHeading = "landscaping specialists",
 }) => {
   const dispatch = useDispatch();
   const inputRef = useRef(null);
-  const { buyerRequest } = useSelector((state) => state.buyer);
+  const { buyerRequest, citySerach } = useSelector((state) => state.buyer);
   const [pincode, setPincode] = useState(buyerRequest?.postal_code || "");
+  const [city, setCity] = useState(citySerach || "");
   const [postalCodeValidate, setPostalCodeValidate] = useState(
     !!buyerRequest?.postal_code,
   );
+
   const [isCheckingPostcode, setIsCheckingPostcode] = useState(false);
   const [error, setError] = useState("");
 
-  const firstStepProgress = (2 / 3) * 100;
-  const remainingProgressPerStep = (100 - firstStepProgress) / 3;
-
   const showToast = (type, content) => message[type](content);
+
   const handlePincodeChange = async (e) => {
     const value = e.target.value.slice(0, 10);
     setPincode(value);
@@ -42,6 +40,7 @@ const PostSearchMultiStepFence = ({
 
     if (!value.trim()) {
       setError("");
+      setCity("");
       setPostalCodeValidate(false);
       return;
     }
@@ -60,10 +59,13 @@ const PostSearchMultiStepFence = ({
       if (newResponse?.data?.valid) {
         const validPostcode = newResponse.data.postcode;
         setPostalCodeValidate(true);
+        setCity(newResponse.data.city);
         dispatch(setcitySerach(newResponse.data.city));
         dispatch(setbuyerRequestData({ postal_code: validPostcode }));
         setError("");
+
         handleNext(true);
+        setPercetangForPost(5);
       } else {
         setPostalCodeValidate(false);
         setError("Please enter a valid postcode!");
@@ -82,18 +84,17 @@ const PostSearchMultiStepFence = ({
       return;
     }
 
-    getProgressPercentage(remainingProgressPerStep);
     if (onNext) {
       onNext();
-      setBackButtonTriggered(false);
+      setPercetangForPost(5);
     }
   };
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") handleNext();
   };
+
   const handleBack = () => {
-    getProgressPercentage(-returPercentage);
     prevStep();
   };
   return (
@@ -125,16 +126,11 @@ const PostSearchMultiStepFence = ({
               onChange={handlePincodeChange}
               onKeyPress={handleKeyPress}
             />
-            {/* <Image
-              src={locationIcon}
-              alt="location icon"
-              className="absolute left-3 top-1/2 transform -translate-y-1/2 h-3 w-4"
-            /> */}
             <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
               <LocationMapIcon background="#00afe3" className="h-3.5 w-3.5" />
             </div>
             {isCheckingPostcode ? (
-              <div className="absolute right-2">
+              <div className="absolute right-3">
                 <LoaderIndicator size="small" />
               </div>
             ) : postalCodeValidate ? (
@@ -152,4 +148,4 @@ const PostSearchMultiStepFence = ({
   );
 };
 
-export default PostSearchMultiStepFence;
+export default PostcodeSearchRoofing;
