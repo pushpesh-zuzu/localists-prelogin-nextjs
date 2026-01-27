@@ -44,7 +44,6 @@ const EmailNewPPC = ({ nextStep, onBack, isPPCPages = false }) => {
 
     const { isEmailAvailable } = useEmailCheck(email);
 
-
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
         setErrors({ email: false });

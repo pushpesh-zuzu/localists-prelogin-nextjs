@@ -60,7 +60,7 @@ function PopularServicesTypes({
             </div>
 
             {/* CTA */}
-            <GetCTAButton
+            <GetCTAButton text="Get Free Estimates"
                 onClick={() => {
                     handleScrollToBottom();
                 }}

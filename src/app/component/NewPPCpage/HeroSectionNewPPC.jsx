@@ -38,7 +38,7 @@ export default function HeroSectionNewPPC({
     text3 = "Fast Response",
     quoteText = "Get Free Quotes Now",
     questionDescription = "",
-    serviceId = 51,
+    serviceId,
 }) {
     const dispatch = useDispatch();
     const userToken = getBarkToken();

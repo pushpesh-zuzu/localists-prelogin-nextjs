@@ -113,7 +113,7 @@ function TreeSurgeryCostGuide({
       </div>
 
       {/* CTA */}
-      <GetCTAButton
+      <GetCTAButton text="Hire a Tradesperson"
         onClick={() => {
           handleScrollToBottom();
         }}
