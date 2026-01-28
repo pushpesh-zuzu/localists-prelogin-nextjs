@@ -24,6 +24,7 @@ import RoofReplacement from '../../../../../../public/ReactIcons/RoofReplacement
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import SEO from '@/app/component/common/seo/SEO';
 import FloatingButtonWrapper from '@/app/component/common/FloatingButton.jsx/FloatingButtonWrapper';
+import CloseBrowserAbandon from '@/app/component/common/CloseBrowserAbandon/CloseBrowserAbandon';
 
 export const NEW_PPC_POPULUAR_SERVICE_TYPE = [
     {
@@ -279,62 +280,65 @@ const CostGuidData = [
 function page() {
     useRegistrationRedirect();
     return (
-        <FloatingButtonWrapper>
-            {(heroRef, sectionsStartRef) => (
-                <>
-                    <SEO conversion />
-                    <div ref={heroRef}>
-                        <HeroSectionNewPPC
-                            trustedText="Trusted New Roof Installation & Replacement Specialists"
-                            heading0="Find"
-                            heading1="Roof Installation"
-                            heading2="Experts Near You"
-                            quoteText="Find Roof Installation Experts Near You"
-                            questionDescription="To find the ideal Roof Installation & Replacement Specialist for your project, simply complete the quick form below."
-                            serviceId={113}
+        <>
+            <CloseBrowserAbandon />
+            <FloatingButtonWrapper>
+                {(heroRef, sectionsStartRef) => (
+                    <>
+                        <SEO conversion />
+                        <div ref={heroRef}>
+                            <HeroSectionNewPPC
+                                trustedText="Trusted New Roof Installation & Replacement Specialists"
+                                heading0="Find"
+                                heading1="Roof Installation"
+                                heading2="Experts Near You"
+                                quoteText="Find Roof Installation Experts Near You"
+                                questionDescription="To find the ideal Roof Installation & Replacement Specialist for your project, simply complete the quick form below."
+                                serviceId={113}
+                            />
+                        </div>
+
+                        <div ref={sectionsStartRef}>
+                            <HowItWorkNewPPC />
+                        </div>
+
+                        <PopularServicesTypes
+                            data={NEW_PPC_POPULUAR_SERVICE_TYPE}
+                            heading1="Roofing"
+                            heading2="Services"
+                            description="Comprehensive roofing solutions for homes and businesses:"
                         />
-                    </div>
 
-                    <div ref={sectionsStartRef}>
-                        <HowItWorkNewPPC />
-                    </div>
+                        <TreeSurgeryCostGuide
+                            heading1="Roofing (New and Replacements)"
+                            headding2="Cost Guide"
+                            description="Understanding the costs involved in a new roof or full roof replacement helps you budget effectively. Prices vary based on roof size, materials, access, and complexity."
+                            CostGuidData={CostGuidData}
+                            maxWidth="900px"
+                        />
 
-                    <PopularServicesTypes
-                        data={NEW_PPC_POPULUAR_SERVICE_TYPE}
-                        heading1="Roofing"
-                        heading2="Services"
-                        description="Comprehensive roofing solutions for homes and businesses:"
-                    />
+                        <ProfessionalServiceInstallation
+                            heading="Roofing Expert"
+                            topCards={PSI_TOP}
+                        />
 
-                    <TreeSurgeryCostGuide
-                        heading1="Roofing (New and Replacements)"
-                        headding2="Cost Guide"
-                        description="Understanding the costs involved in a new roof or full roof replacement helps you budget effectively. Prices vary based on roof size, materials, access, and complexity."
-                        CostGuidData={CostGuidData}
-                        maxWidth="900px"
-                    />
+                        <RegionalGuide
+                            heading1="Regional Roofing (New and Replacements)"
+                            description="Average new roof / full replacement pricing guide"
+                            regionPricingData={regionPricingData}
+                            bannerHeading="Note: Rates vary based on roof size, pitch, materials, and additional features."
+                            bannerPrice=""
+                            budget=""
+                        />
 
-                    <ProfessionalServiceInstallation
-                        heading="Roofing Expert"
-                        topCards={PSI_TOP}
-                    />
-
-                    <RegionalGuide
-                        heading1="Regional Roofing (New and Replacements)"
-                        description="Average new roof / full replacement pricing guide"
-                        regionPricingData={regionPricingData}
-                        bannerHeading="Note: Rates vary based on roof size, pitch, materials, and additional features."
-                        bannerPrice=""
-                        budget=""
-                    />
-
-                    <FAQSection
-                        description="Get answers to common roofing replacement questions"
-                        FrequentlyQuestion={FrequentlyQuestion}
-                    />
-                </>
-            )}
-        </FloatingButtonWrapper>
+                        <FAQSection
+                            description="Get answers to common roofing replacement questions"
+                            FrequentlyQuestion={FrequentlyQuestion}
+                        />
+                    </>
+                )}
+            </FloatingButtonWrapper>
+        </>
     );
 }
 

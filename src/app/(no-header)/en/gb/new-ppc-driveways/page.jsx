@@ -39,6 +39,7 @@ import VotedProfessionIcon from "../../../../../../public/ReactIcons/VotedProfes
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import SEO from '@/app/component/common/seo/SEO';
 import FloatingButtonWrapper from '@/app/component/common/FloatingButton.jsx/FloatingButtonWrapper';
+import CloseBrowserAbandon from '@/app/component/common/CloseBrowserAbandon/CloseBrowserAbandon';
 
 
 export const NEW_PPC_POPULUAR_SERVICE_TYPE = [
@@ -379,51 +380,54 @@ const FrequentlyQuestion = [
 function page() {
     useRegistrationRedirect();
     return (
-        <FloatingButtonWrapper>
-            {(heroRef, sectionsStartRef) => (
-                <>
-                    <SEO conversion />
-                    <div ref={heroRef}>
-                        <HeroSectionNewPPC
-                            heading0="Find"
-                            heading1="Driveway Installation"
-                            heading2="Experts Near You"
-                            quoteText="Find Driveway Installation Experts Near You"
-                            questionDescription="To find the ideal Driveway Installation specialist for your project, simply complete the quick form below."
-                            serviceId={51}
+        <>
+            <CloseBrowserAbandon />
+            <FloatingButtonWrapper>
+                {(heroRef, sectionsStartRef) => (
+                    <>
+                        <SEO conversion />
+                        <div ref={heroRef}>
+                            <HeroSectionNewPPC
+                                heading0="Find"
+                                heading1="Driveway Installation"
+                                heading2="Experts Near You"
+                                quoteText="Find Driveway Installation Experts Near You"
+                                questionDescription="To find the ideal Driveway Installation specialist for your project, simply complete the quick form below."
+                                serviceId={51}
+                            />
+                        </div>
+
+                        <div ref={sectionsStartRef}>
+                            <HowItWorkNewPPC />
+                        </div>
+
+                        <PopularServicesTypes
+                            data={NEW_PPC_POPULUAR_SERVICE_TYPE}
                         />
-                    </div>
 
-                    <div ref={sectionsStartRef}>
-                        <HowItWorkNewPPC />
-                    </div>
+                        <CostGuide
+                            pricing={COST_PRICING}
+                            factors={COST_FACTORS}
+                            icons={COST_ICONS}
+                        />
 
-                    <PopularServicesTypes
-                        data={NEW_PPC_POPULUAR_SERVICE_TYPE}
-                    />
+                        <ProfessionalServiceInstallation
+                            topCards={PSI_TOP}
+                        />
 
-                    <CostGuide
-                        pricing={COST_PRICING}
-                        factors={COST_FACTORS}
-                        icons={COST_ICONS}
-                    />
+                        <RegionalGuide
+                            background="white"
+                            regionPricingData={regionPricingData}
+                        />
 
-                    <ProfessionalServiceInstallation
-                        topCards={PSI_TOP}
-                    />
-
-                    <RegionalGuide
-                        background="white"
-                        regionPricingData={regionPricingData}
-                    />
-
-                    <FAQSection
-                        background="#FAFAFA"
-                        FrequentlyQuestion={FrequentlyQuestion}
-                    />
-                </>
-            )}
-        </FloatingButtonWrapper>
+                        <FAQSection
+                            background="#FAFAFA"
+                            FrequentlyQuestion={FrequentlyQuestion}
+                        />
+                    </>
+                )}
+            </FloatingButtonWrapper>
+        </>
     );
 }
 

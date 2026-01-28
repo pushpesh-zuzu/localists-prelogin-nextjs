@@ -21,6 +21,7 @@ import GuaranteedWorkIcon from '../../../../../../public/ReactIcons/GuaranteedWo
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import SEO from '@/app/component/common/seo/SEO';
 import FloatingButtonWrapper from '@/app/component/common/FloatingButton.jsx/FloatingButtonWrapper';
+import CloseBrowserAbandon from '@/app/component/common/CloseBrowserAbandon/CloseBrowserAbandon';
 
 
 
@@ -176,56 +177,59 @@ const CostGuidData = [
 function page() {
     useRegistrationRedirect();
     return (
-        <FloatingButtonWrapper>
-            {(heroRef, sectionsStartRef) => (
-                <>
-                    <SEO conversion />
-                    <div ref={heroRef}>
-                        <HeroSectionNewPPC
-                            heading0="Find"
-                            heading1="Fence Installation"
-                            heading2="Experts Near You"
-                            quoteText="Find Fence Installation Experts Near You"
-                            questionDescription="To find the ideal Fence Installation for your project, simply complete the quick form below"
-                            serviceId={49}
+        <>
+            <CloseBrowserAbandon />
+            <FloatingButtonWrapper>
+                {(heroRef, sectionsStartRef) => (
+                    <>
+                        <SEO conversion />
+                        <div ref={heroRef}>
+                            <HeroSectionNewPPC
+                                heading0="Find"
+                                heading1="Fence Installation"
+                                heading2="Experts Near You"
+                                quoteText="Find Fence Installation Experts Near You"
+                                questionDescription="To find the ideal Fence Installation for your project, simply complete the quick form below"
+                                serviceId={49}
+                            />
+                        </div>
+                        <div ref={sectionsStartRef}>
+                            <HowItWorkNewPPC />
+                        </div>
+
+                        <PopularServicesTypes
+                            heading1="Popular"
+                            heading2="Fence Types"
+                            description="Local comprehensive fence care services tailored to your needs:"
+                            data={NEW_PPC_POPULUAR_SERVICE_TYPE}
                         />
-                    </div>
-                    <div ref={sectionsStartRef}>
-                        <HowItWorkNewPPC />
-                    </div>
 
-                    <PopularServicesTypes
-                        heading1="Popular"
-                        heading2="Fence Types"
-                        description="Local comprehensive fence care services tailored to your needs:"
-                        data={NEW_PPC_POPULUAR_SERVICE_TYPE}
-                    />
+                        <TreeSurgeryCostGuide
+                            heading1="Fence Installation"
+                            description="Understanding the costs involved in fence installation helps you budget effectively. Prices vary based on material, size, and complexity."
+                            CostGuidData={CostGuidData}
+                        />
 
-                    <TreeSurgeryCostGuide
-                        heading1="Fence Installation"
-                        description="Understanding the costs involved in fence installation helps you budget effectively. Prices vary based on material, size, and complexity."
-                        CostGuidData={CostGuidData}
-                    />
+                        <ProfessionalServiceInstallation
+                            heading="Fence Installation"
+                            topCards={PSI_TOP}
+                        />
 
-                    <ProfessionalServiceInstallation
-                        heading="Fence Installation"
-                        topCards={PSI_TOP}
-                    />
+                        <TreeSurgeryRegionalGuide
+                            pricingData={FenceInstallationRegionalPricing}
+                            background="white"
+                            heading2="Pricing Guide"
+                        />
 
-                    <TreeSurgeryRegionalGuide
-                        pricingData={FenceInstallationRegionalPricing}
-                        background="white"
-                        heading2="Pricing Guide"
-                    />
-
-                    <FAQSection
-                        description="Get answers to common fence installation questions"
-                        FrequentlyQuestion={FrequentlyQuestion}
-                        background="#FAFAFA"
-                    />
-                </>
-            )}
-        </FloatingButtonWrapper>
+                        <FAQSection
+                            description="Get answers to common fence installation questions"
+                            FrequentlyQuestion={FrequentlyQuestion}
+                            background="#FAFAFA"
+                        />
+                    </>
+                )}
+            </FloatingButtonWrapper>
+        </>
     );
 }
 

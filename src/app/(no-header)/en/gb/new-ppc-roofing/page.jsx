@@ -21,6 +21,7 @@ import QuicAlarmIcon from "../../../../../../public/ReactIcons/QuicAlarmIcon";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import SEO from '@/app/component/common/seo/SEO';
 import FloatingButtonWrapper from '@/app/component/common/FloatingButton.jsx/FloatingButtonWrapper';
+import CloseBrowserAbandon from '@/app/component/common/CloseBrowserAbandon/CloseBrowserAbandon';
 
 
 export const NEW_PPC_POPULUAR_SERVICE_TYPE = [
@@ -215,59 +216,62 @@ const FrequentlyQuestion = [
 function page() {
     useRegistrationRedirect();
     return (
-        <FloatingButtonWrapper>
-            {(heroRef, sectionsStartRef) => (
-                <>
-                    <SEO conversion />
-                    <div ref={heroRef}>
-                        <HeroSectionNewPPC
-                            heading0="Find"
-                            heading1=" Roofing Repair"
-                            heading2="Experts Near You"
-                            quoteText="Find Roofing Repair Experts Near You"
-                            questionDescription="To find the ideal Roofing Specialists for your project, simply complete the quick form below."
-                            serviceId={113}
-                        />
-                    </div>
-                    <div ref={sectionsStartRef}>
-                        <HowItWorkNewPPC />
-                    </div>
-                    <PopularServicesTypes
-                        data={NEW_PPC_POPULUAR_SERVICE_TYPE}
-                        heading1="Roofing"
-                        heading2="Repair Services"
-                        description="Explore our comprehensive range of roofing installation options to
+        <>
+            <CloseBrowserAbandon />
+            <FloatingButtonWrapper>
+                {(heroRef, sectionsStartRef) => (
+                    <>
+                        <SEO conversion />
+                        <div ref={heroRef}>
+                            <HeroSectionNewPPC
+                                heading0="Find"
+                                heading1=" Roofing Repair"
+                                heading2="Experts Near You"
+                                quoteText="Find Roofing Repair Experts Near You"
+                                questionDescription="To find the ideal Roofing Specialists for your project, simply complete the quick form below."
+                                serviceId={113}
+                            />
+                        </div>
+                        <div ref={sectionsStartRef}>
+                            <HowItWorkNewPPC />
+                        </div>
+                        <PopularServicesTypes
+                            data={NEW_PPC_POPULUAR_SERVICE_TYPE}
+                            heading1="Roofing"
+                            heading2="Repair Services"
+                            description="Explore our comprehensive range of roofing installation options to
                         find the perfect solution for your property" />
 
-                    <TreeSurgeryCostGuide
-                        CostGuidData={CostGuidData}
-                        heading1="Roofing Installation"
-                        description="Understanding the costs involved in roofing installation helps you
+                        <TreeSurgeryCostGuide
+                            CostGuidData={CostGuidData}
+                            heading1="Roofing Installation"
+                            description="Understanding the costs involved in roofing installation helps you
                          budget effectively. Prices vary based on material, size, and
                          complexity."
-                    />
+                        />
 
-                    <ProfessionalServiceInstallation
-                        heading="Roofing Experts"
-                        topCards={PSI_TOP}
-                    />
+                        <ProfessionalServiceInstallation
+                            heading="Roofing Experts"
+                            topCards={PSI_TOP}
+                        />
 
-                    <RegionalGuide
-                        heading2="Roofing Repairs Costs"
-                        description="Average roofing installation costs across different UK regions"
-                        regionPricingData={regionPricingData}
-                        bannerHeading="Note: Prices are averages for guidance. Final costs may vary depending on roof size, type, access, and specific work required."
-                        bannerPrice=""
-                        budget=""
-                    />
+                        <RegionalGuide
+                            heading2="Roofing Repairs Costs"
+                            description="Average roofing installation costs across different UK regions"
+                            regionPricingData={regionPricingData}
+                            bannerHeading="Note: Prices are averages for guidance. Final costs may vary depending on roof size, type, access, and specific work required."
+                            bannerPrice=""
+                            budget=""
+                        />
 
-                    <FAQSection
-                        description="Get answers to common roofing installation questions"
-                        FrequentlyQuestion={FrequentlyQuestion}
-                    />
-                </>
-            )}
-        </FloatingButtonWrapper>
+                        <FAQSection
+                            description="Get answers to common roofing installation questions"
+                            FrequentlyQuestion={FrequentlyQuestion}
+                        />
+                    </>
+                )}
+            </FloatingButtonWrapper>
+        </>
     );
 }
 

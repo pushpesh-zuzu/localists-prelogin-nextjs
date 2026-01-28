@@ -39,6 +39,7 @@ import VotedProfessionIcon from "../../../../../../public/ReactIcons/VotedProfes
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import SEO from '@/app/component/common/seo/SEO';
 import FloatingButtonWrapper from '@/app/component/common/FloatingButton.jsx/FloatingButtonWrapper';
+import CloseBrowserAbandon from '@/app/component/common/CloseBrowserAbandon/CloseBrowserAbandon';
 
 
 
@@ -440,63 +441,66 @@ const landscapingQuotesStep = [
 function page() {
   useRegistrationRedirect();
   return (
-    <FloatingButtonWrapper>
-      {(heroRef, sectionsStartRef) => (
-        <>
-          <SEO conversion />
-          <div ref={heroRef}>
-            <HeroSectionNewPPC
-              heading0="Find"
+    <>
+      <CloseBrowserAbandon />
+      <FloatingButtonWrapper>
+        {(heroRef, sectionsStartRef) => (
+          <>
+            <SEO conversion />
+            <div ref={heroRef}>
+              <HeroSectionNewPPC
+                heading0="Find"
+                heading1="Landscaping"
+                heading2="Experts Near You"
+                quoteText="Find Landscaping Experts Near You"
+                questionDescription="To find the ideal landscaping specialist for your project, simply complete the quick form below."
+                serviceId={43}
+              />
+            </div>
+
+            <div ref={sectionsStartRef}>
+              <HowItWorkNewPPC />
+            </div>
+
+            <PopularServicesTypes
               heading1="Landscaping"
-              heading2="Experts Near You"
-              quoteText="Find Landscaping Experts Near You"
-              questionDescription="To find the ideal landscaping specialist for your project, simply complete the quick form below."
-              serviceId={43}
+              heading2="Services"
+              description="Experts on hard landscaping and structural outdoor work, for both residential and commercial proje"
+              data={NEW_PPC_POPULUAR_SERVICE_TYPE}
             />
-          </div>
 
-          <div ref={sectionsStartRef}>
-            <HowItWorkNewPPC />
-          </div>
+            <TreeSurgeryCostGuide
+              description=""
+              heading1="Landscaping Services"
+              headding2="Cost Guide"
+              CostGuidData={CostGuidData}
+              maxWidth="1200px"
+            />
 
-          <PopularServicesTypes
-            heading1="Landscaping"
-            heading2="Services"
-            description="Experts on hard landscaping and structural outdoor work, for both residential and commercial proje"
-            data={NEW_PPC_POPULUAR_SERVICE_TYPE}
-          />
+            <LandscapingQuotesGuid
+              heading1="What’s Included in"
+              heading2="Landscaping Quotes"
+              description=""
+            />
 
-          <TreeSurgeryCostGuide
-            description=""
-            heading1="Landscaping Services"
-            headding2="Cost Guide"
-            CostGuidData={CostGuidData}
-            maxWidth="1200px"
-          />
+            <ProfessionalServiceInstallation
+              heading="Landscape Gardeners"
+              topCards={PSI_TOP}
+            />
 
-          <LandscapingQuotesGuid
-            heading1="What’s Included in"
-            heading2="Landscaping Quotes"
-            description=""
-          />
+            <TreeSurgeryRegionalGuide
+              heading2="Landscaping Costs"
+              pricingData={landscapingRegionalPricing}
+            />
 
-          <ProfessionalServiceInstallation
-            heading="Landscape Gardeners"
-            topCards={PSI_TOP}
-          />
-
-          <TreeSurgeryRegionalGuide
-            heading2="Landscaping Costs"
-            pricingData={landscapingRegionalPricing}
-          />
-
-          <FAQSection
-            FrequentlyQuestion={FrequentlyQuestion}
-            description="Get answers to common landscaping installation questions"
-          />
-        </>
-      )}
-    </FloatingButtonWrapper>
+            <FAQSection
+              FrequentlyQuestion={FrequentlyQuestion}
+              description="Get answers to common landscaping installation questions"
+            />
+          </>
+        )}
+      </FloatingButtonWrapper>
+    </>
   );
 }
 

@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Paragraph from "@/app/component/UI/Typography/Paragraph2";
-import GetQuotesIcon from "../../../../public/ReactIcons/GetQuotesIcon";
 import FormWrapper from "./FormWrapper";
 
 import {
@@ -185,7 +184,7 @@ function NewPPCForm({ nextStep, serviceId }) {
 
             <form
                 onSubmit={handleSubmit}
-                className="flex flex-col px-[27px] pb-[27px] max-[1024px]:px-[20px]"
+                className="flex flex-col px-[27px] max-[768px]:mt-[-20px] pb-[27px] max-[1024px]:px-[20px]"
             >
                 {/* NAME */}
                 <Label>Full Name *</Label>
@@ -263,7 +262,7 @@ function NewPPCForm({ nextStep, serviceId }) {
                         <LoaderIndicator />
                     ) : (
                         <>
-                            Continue <GetQuotesIcon color="#fff" />
+                            Continue
                         </>
                     )}
                 </button>
@@ -288,10 +287,10 @@ export default NewPPCForm;
 const Label = ({ children }) => (
     <label className="mt-[14px] mb-[8px] font-[Arial]
         tracking-[-0.03em]
-        leading-[24px]
+        leading-[20px]
         text-[#253238]
-        text-[20px] font-bold
-        max-[768px]:text-[18px]
+        text-[16px] font-bold
+        max-[768px]:text-[16px]
         max-[480px]:text-[16px]">
         {children}
     </label>

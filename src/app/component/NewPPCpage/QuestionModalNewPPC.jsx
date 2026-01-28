@@ -473,7 +473,11 @@ const QuestionModalNewPPC = ({
                                             ? !isQuestionWithImage
                                                 ? ""
                                                 : ""
-                                            : questions[currentQuestion]?.questions
+                                            : (
+                                                <div className="max-[768px]:mt-[-30px]">
+                                                    {questions[currentQuestion]?.questions}
+                                                </div>
+                                            )
                                     }
                                     onButtonClick={handleNextCheckBox}
                                     onBackClick={handleBack}
@@ -490,7 +494,7 @@ const QuestionModalNewPPC = ({
                                 >
                                     {currentQuestion === 0 && (
                                         <H5
-                                            className={`${question1Class} !leading-[30px] font-bold text-[#253238] ${isQuestionWithImage ? "text-center" : "text-left"
+                                            className={`${question1Class} !leading-[30px] max-[768px]:mt-[-30px] font-bold text-[#253238] ${isQuestionWithImage ? "text-center" : "text-left"
                                                 }`}
                                         >
                                             {formattedQuestions[currentQuestion]?.questions}

@@ -33,7 +33,7 @@ export default function SearchResults({
     // setSearchQuery('');
     // setShow && setShow(true);
     dispatch(clearSearch());
-  
+
 
     service?.id && dispatch(questionAnswerData({ service_id: service?.id }));
 
@@ -59,7 +59,7 @@ export default function SearchResults({
   // Agar services hain
   if (services.length > 0) {
     return (
-      <div className="absolute z-50 w-full bg-white shadow-lg rounded-lg  max-h-80 overflow-y-auto">
+      <div className="absolute mt-[30px] z-50 w-full bg-white shadow-lg rounded-lg  max-h-80 overflow-y-auto">
         {services.map((service, index) => (
           <div
             key={index}

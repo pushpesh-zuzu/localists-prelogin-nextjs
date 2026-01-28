@@ -26,6 +26,7 @@ import QuicAlarmIcon from "../../../../../../public/ReactIcons/QuicAlarmIcon";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import SEO from '@/app/component/common/seo/SEO';
 import FloatingButtonWrapper from '@/app/component/common/FloatingButton.jsx/FloatingButtonWrapper';
+import CloseBrowserAbandon from '@/app/component/common/CloseBrowserAbandon/CloseBrowserAbandon';
 
 export const NEW_PPC_POPULUAR_SERVICE_TYPE = [
     {
@@ -221,6 +222,8 @@ const CostGuidData = [
 function page() {
     useRegistrationRedirect();
     return (
+        <>
+        <CloseBrowserAbandon />
         <FloatingButtonWrapper>
             {(heroRef, sectionsStartRef) => (
                 <>
@@ -279,6 +282,7 @@ function page() {
                 </>
             )}
         </FloatingButtonWrapper>
+        </>
     );
 }
 

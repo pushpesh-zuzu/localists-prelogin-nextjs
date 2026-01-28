@@ -123,15 +123,15 @@ export default function HeroSectionNewPPC({
               max-[1250px]:h-[28px]
               max-[600px]:w-[120px]
               max-[600px]:h-[20px]
-              max-[600px]:mb-[16px]
-            "
-                    />
+              max-[600px]:mb-[15px]
+            "/>
 
-                    <H1 className="font-inter lg:leading-[80px]">
+                    <H1 className="text-center max-lg:!text-[25px] max-lg:!leading-[30px] lg:text-left lg:leading-[80px]">
                         {heading0}{" "}
                         <span className="text-[#00afe3]">{heading1}</span>{" "}
                         {heading2}
                     </H1>
+
 
                     {/* DESKTOP FEATURES */}
                     <div className="block max-[600px]:hidden">
@@ -146,7 +146,7 @@ export default function HeroSectionNewPPC({
                             <Feature icon={<VettedProffessionIcon />} text={text1} />
                             <Feature
                                 icon={
-                                    <div className="w-[50px] h-[50px]">
+                                    <div className="">
                                         <FreeQuoteIcon />
                                     </div>
                                 }
@@ -155,16 +155,46 @@ export default function HeroSectionNewPPC({
 
                             <Feature
                                 icon={
-                                    <div className="w-[50px] h-[50px]">
+                                    <div className="">
                                         <FastResponseIcon />
                                     </div>
                                 }
                                 text={text3}
                             />
                         </div>
-
                         <div className="flex gap-[20px] mt-[40px]">
                             <PrimaryButton>{quoteText}</PrimaryButton>
+                        </div>
+
+                    </div>
+
+                    {/* Mobile Features */}
+                    <div className="hidden max-[600px]:block">
+                        <div
+                            className="
+      flex flex-col items-center
+      mt-[10px]
+      font-[Arial] font-bold
+      text-[14px] leading-[22px]
+      tracking-[-0.03px]
+      text-[#253238] text-center
+    "
+                        >
+                            {/* First row */}
+                            <MobileFeature
+                                icon={
+                                    <div className="flex items-center justify-center scale-75 origin-center">
+                                        <VettedProffessionIcon className="w-[30px] h-[30px]" />
+                                    </div>
+                                }
+                                text={text1}
+                            />
+
+                            {/* Second row – icons close */}
+                            <div className="flex items-center justify-center gap-[8px] mt-[6px]">
+                                <MobileFeature icon={<FreeQuoteIcon />} text={text2} />
+                                <MobileFeature icon={<FastResponseIcon />} text={text3} />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -211,44 +241,6 @@ export default function HeroSectionNewPPC({
                     </FormWrapper>
                 )}
 
-                {/* MOBILE */}
-                {/* <div className="hidden max-[600px]:block">
-                    <div
-                        className="
-              flex flex-wrap gap-[11px] mt-[26px]
-              font-[Arial] font-bold
-              text-[16px] leading-[24px]
-              tracking-[-0.03px]
-            text-[#253238]
-            "
-                    >
-                        <MobileFeature
-                            icon={
-                                <div
-                                    className="
-        flex items-center justify-center
-        scale-100
-        max-[600px]:scale-75
-        origin-center
-      " ><VettedProffessionIcon />
-                                </div>
-                            }
-                            text={text2}
-                        />
-
-                        <MobileFeature icon={<FreeQuoteIcon />} text={text2} />
-                        <MobileFeature icon={<FastResponseIcon />} text={text3} />
-                    </div>
-
-                    <div className="flex flex-col items-center mt-[40px]">
-                        <PrimaryButton
-                            className="text-[16px] !py-[6px] cursor-pointer"
-                            onClick={handleScrollToBottom}
-                        >
-                            {quoteText}
-                        </PrimaryButton>
-                    </div>
-                </div> */}
             </div>
         </section>
     );
@@ -267,16 +259,16 @@ function Feature({ icon, text, full }) {
     );
 }
 
-// function MobileFeature({ icon, text }) {
-//     return (
-//         <div className="flex items-center gap-[7px] h-[40px]">
-//             <div className="w-[40px] h-[40px] bg-[#00afe3] text-white rounded-full flex items-center justify-center">
-//                 {icon}
-//             </div>
-//             <p>{text}</p>
-//         </div>
-//     );
-// }
+function MobileFeature({ icon, text }) {
+    return (
+        <div className="flex items-center gap-[7px]">
+            <div className="w-[30px] h-[30px] bg-[#00afe3] text-white rounded-full flex items-center justify-center">
+                {icon}
+            </div>
+            <p>{text}</p>
+        </div>
+    );
+}
 
 function PrimaryButton({ children, className = "", ...props }) {
     return (
