@@ -90,12 +90,12 @@ function PostCodeSearchField({
 
   const handleSubmit = () => {
     if (!postcode.trim()) {
-      setError("Please enter a postcode");
+      setError("Please enter a valid postcode!");
       return;
     }
 
     if (!isValid) {
-      setError("Please wait for validation");
+      setError("Please enter a valid postcode!");
       return;
     }
 
