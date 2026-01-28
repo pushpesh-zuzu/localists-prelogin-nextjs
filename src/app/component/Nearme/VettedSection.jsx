@@ -35,9 +35,9 @@ function VettedSection({
             ))}
             <div className="flex flex-wrap justify-center md:justify-start gap-[7px] gap-2.5 lg:gap-6 mb-2.5 mt-0 md:mt-[5px] lg:mt-3 lg:mt-0">
               <GetQuote text={getQuoteText} />
-              <Button variant="secondary" className="max-w-fit px-[13px] py-[7px] xl:py-4 xl:px-[30px] rounded-full bg-white border-[1.78px] lg:border-4 border-black text-black shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+              {/* <Button variant="secondary" className="max-w-fit px-[13px] py-[7px] xl:py-4 xl:px-[30px] rounded-full bg-white border-[1.78px] lg:border-4 border-black text-black shadow-[0_0_4px_rgba(0,0,0,0.1)]">
                 {buttonText}
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

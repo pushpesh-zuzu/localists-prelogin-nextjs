@@ -46,7 +46,6 @@ function PostCodeSearchField({
           setCity(newResponse.data.city);
           dispatch(setcitySerach(newResponse.data.city));
           setError("");
-          setShow(true);
 
           // Notify parent component - validation success
           if (onValidationSuccess) {
@@ -90,7 +89,6 @@ function PostCodeSearchField({
   };
 
   const handleSubmit = () => {
-    debugger
     if (!postcode.trim()) {
       setError("Please enter a postcode");
       return;
@@ -109,6 +107,8 @@ function PostCodeSearchField({
         isValid,
       });
     }
+     setShow(true);
+
   };
 
   const handleKeyPress = (e) => {

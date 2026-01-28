@@ -9,7 +9,7 @@ function WhoWeAre() {
         <section className="w-full my-[48px] px-[20px] box-border flex flex-col
                         max-md:my-[32px] max-sm:my-[16px]">
 
-            <div className="max-w-[76.5%] w-full mx-auto px-[20px] max-md:px-0 max-sm:max-w-full mb-5">
+            <div className="w-full mx-auto px-[20px] max-md:px-0 max-sm:max-w-full mb-5">
                 <H2>
                     <span className="text-[#00AFE3]">Who </span>
                     <span className="text-black">we are</span>
@@ -17,7 +17,7 @@ function WhoWeAre() {
             </div>
 
             <Paragraph2 className="
-                   max-w-[76.5%] w-full mx-auto px-[20px]
+                    w-full mx-auto px-[20px]
     max-md:px-0
     max-sm:max-w-full
     text-[16px] leading-[20px]

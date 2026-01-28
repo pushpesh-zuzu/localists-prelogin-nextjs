@@ -4,6 +4,7 @@ import SEO from "@/app/component/common/seo/SEO";
 import WhoWeAre from "@/app/component/AboutUs/WhoWeAre";
 import GetInTouchButton from "@/app/component/AboutUs/GetInTouch";
 import Footer from "@/app/component/Footer/Footer";
+import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 
 
 export const metadata = {
@@ -29,8 +30,10 @@ export default function Page() {
                 headingText="About Us"
                 image={aboutUsBanner.src}
             />
+            <WrapperBGWidth>
             <WhoWeAre />
             <GetInTouchButton />
+            </WrapperBGWidth>
             <Footer />
         </main>
     );

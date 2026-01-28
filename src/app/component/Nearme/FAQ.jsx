@@ -16,7 +16,7 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
     <WrapperBGWidth>
       {" "}
       <div className="w-full px-2.5 sm:px-10 md:px-16 xl:px-[0px] lg:max-w-[1200px] mx-auto">
-        <NearmeH2Heading headdingblue="FAQ" className="mb-5 md:mb-6 lg:mb-10" />
+        <NearmeH2Heading headdingblue="FAQ's" className="mb-5 md:mb-6 lg:mb-10" />
 
         <div className="space-y-0 border-2 lg:border-4 border-[#DBDFE4] rounded-[20px] overflow-hidden bg-white shadow-sm">
           {data.map((item, index) => (
@@ -42,7 +42,7 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
                   {item.title}
                 </h5>
 
-                <span className="flex-shrink-0  flex items-center justify-right">
+                <span className="flex-shrink-0 cursor-pointer flex items-center justify-right">
                   {openItem === item.key ? <MinusIcon /> : <PlusIconFaq />}
                 </span>
               </button>
