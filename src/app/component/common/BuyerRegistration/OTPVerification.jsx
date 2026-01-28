@@ -146,7 +146,7 @@ const OtpVerification = ({
                   JSON.stringify(modalData)
                 );
               }
-
+               router.push(`/thank-you`);
             } else {
               nextStep();
             }
