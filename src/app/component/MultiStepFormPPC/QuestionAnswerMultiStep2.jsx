@@ -1,39 +1,35 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { handleScrollToBottom } from "@/utils/scroll";
-import BannerImagesQuestion from "../../common/MultiStepFormPPC/BannerImagesQuestion";
-import CardLayoutWrapper from "../../common/MultiStepFormPPC/CardLayoutWrappper";
-import { getProgressPercentageAPI, setbuyerRequestData } from "@/lib/store/buyerslice/buyerSlice";
-import Loader from "../../common/Loader/Loader";
+import { setbuyerRequestData } from "@/lib/store/buyerslice/buyerSlice";
+import Loader from "../common/Loader/Loader";
+import BannerImagesQuestion from "../common/MultiStepFormPPC/BannerImagesQuestion";
+import CardLayoutWrapper from "../common/MultiStepFormPPC/CardLayoutWrappper";
 
-const QuestionAsnwerMultiStepTreeSurgeon2 = ({
-   questions = [],
+const QuestionAnswerMultiStep2 = ({
+  questions = [],
   onNext,
   onBack,
+  getProgressPercentage,
   isComingFromStep3 = false,
   setQuestionHistory,
   questionHistory,
   setIsComingFromStep3,
   setProgressPercentage,
   loading = true,
-  serviceName = "Driveway Installers",
+  serviceName = "Landscaping",
   isQuestionWithImage = false,
-  setQuestion2History,
-  question2History,
-  setSelectedOption,
-  selectedOption,
 }) => {
- const dispatch = useDispatch();
-  const { buyerRequest } = useSelector((state) => state.buyer);
-  const [specialFlowPercentage, SpecialFlowPercentage] = useState(70);
+   const dispatch = useDispatch();
+  const { buyerRequest, citySerach } = useSelector((state) => state.buyer);
+  const { service } = useSelector((state) => state.findJobs);
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [selectedOption, setSelectedOption] = useState([]);
   const [otherText, setOtherText] = useState("");
   const [error, setError] = useState("");
-  const [totalQuestionsAnswered, setTotalQuestionsAnswered] = useState(1);
 
   const totalQuestions = questions?.length || 1;
-
   const formattedQuestions = questions.map((q) => ({
     ...q,
     parsedAnswers: Array.isArray(q.answer)
@@ -53,12 +49,9 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
   });
   useEffect(() => {
     if (isComingFromStep3 && buyerRequest?.questions?.length > 0) {
-      setCurrentQuestion(question2History.at(-1));
-      setTotalQuestionsAnswered(5);
-      setQuestionHistory(question2History);
+      setCurrentQuestion(3);
     }
   }, [isComingFromStep3]);
-
   useEffect(() => {
     if (questions.length > 0 && buyerRequest?.questions?.length > 0) {
       const savedAnswer = buyerRequest.questions[currentQuestion]?.ans || [];
@@ -66,6 +59,9 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
         typeof savedAnswer === "string"
           ? savedAnswer.split(",").map((a) => a.trim())
           : savedAnswer;
+
+      setSelectedOption(savedArray);
+
       const otherVal = savedArray.find(
         (ans) =>
           ans.toLowerCase() !== "yes" &&
@@ -80,21 +76,6 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
     }
     handleScrollToBottom();
   }, [currentQuestion, buyerRequest, questions]);
-  useEffect(() => {
-    if (buyerRequest && Array.isArray(buyerRequest.questions)) {
-      const hasSpecialAnswer = buyerRequest.questions.some(
-        (q) =>
-          q?.ans === "Replace the current driveway" ||
-          q?.ans === "Business or Commercial Premises"
-      );
-
-      if (hasSpecialAnswer) {
-        SpecialFlowPercentage(70);
-      } else {
-        SpecialFlowPercentage(90);
-      }
-    }
-  }, [buyerRequest]);
 
   const handleOptionChange = (e) => {
     const { value, checked } = e.target;
@@ -117,7 +98,7 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
     }
   };
 
-  const handleNextCheckBox = async () => {
+  const handleNextCheckBox = () => {
     if (selectedOption.length === 0) {
       setError("Please select at least one option.");
       return;
@@ -135,68 +116,53 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
     const finalAnswer = selectedOption?.map((opt) =>
       opt.toLowerCase() === "something else (please describe)" ? otherText : opt
     );
+
     const updatedAnswer = {
       ques: questions[currentQuestion]?.questions,
       ans: finalAnswer.join(", "),
     };
 
     const previousAnswers = buyerRequest?.questions || [];
-    const existingIndex = previousAnswers.findIndex(
-      (item) => item?.ques === updatedAnswer.ques
-    );
+    const updatedAnswers = [...previousAnswers];
+    updatedAnswers[currentQuestion] = updatedAnswer;
 
-    let updatedAnswers;
-    if (existingIndex !== -1) {
-      updatedAnswers = [...previousAnswers];
-      updatedAnswers[existingIndex] = updatedAnswer;
-    } else {
-      updatedAnswers = [...previousAnswers, updatedAnswer];
-    }
-    try {
-      const formData = new FormData();
-      formData.append("questions", JSON.stringify(updatedAnswers));
-      formData.append("service_id", buyerRequest?.service_id);
-      const respone = await dispatch(getProgressPercentageAPI(formData));
-      setProgressPercentage(respone?.percentage);
-    } catch (error) {
-      console.log(error, "progressPercent");
-    }
     dispatch(setbuyerRequestData({ questions: updatedAnswers }));
-
+    const percentage = (100 * 2) / (totalQuestions * 3);
+    getProgressPercentage(percentage);
     const selectedObj = formattedQuestions[currentQuestion]?.parsedAnswers.find(
       (a) => a.option === selectedOption[0]
     );
 
     const nextQ = selectedObj?.next_question;
-
-    setTotalQuestionsAnswered((prev) => Math.min(prev + 1, 7));
-
-    let nextIndex = null;
-    if (nextQ === "6") {
+    if (nextQ === Number(nextQ)) {
+      dispatch(
+        setbuyerRequestData({
+          service_id: service?.id || buyerRequest?.service_id,
+          postcode: buyerRequest?.postcode,
+          city: citySerach,
+          questions: updatedAnswers,
+        })
+      );
       onNext();
-      return;
-    } else if (nextQ === "last") {
+    }
+    if (nextQ === "last") {
       onNext();
-      return;
+      const firstStepProgress = (2 / 3) * 100;
+      const remainingProgressPerStep = (100 - firstStepProgress) / 2;
+      getProgressPercentage(remainingProgressPerStep);
     } else if (nextQ && questionIndexMap[nextQ]) {
-      nextIndex = questionIndexMap[nextQ];
-    } else if (currentQuestion < totalQuestions - 1) {
-      nextIndex = currentQuestion + 1;
-    }
-
-    if (nextIndex !== null) {
-      if (!questionHistory.includes(nextIndex)) {
-        setQuestionHistory((prev) => [...prev, nextIndex]);
-        setQuestion2History((prev) => [...prev, questionIndexMap[nextQ]]);
-      }
-      setCurrentQuestion(nextIndex);
+      setQuestionHistory((prev) => [...prev, questionIndexMap[nextQ]]);
+      setCurrentQuestion(questionIndexMap[nextQ]);
     } else {
-      onNext();
+      if (currentQuestion < totalQuestions - 1) {
+        setQuestionHistory((prev) => [...prev, currentQuestion + 1]);
+        setCurrentQuestion(currentQuestion + 1);
+      } else {
+        onNext();
+      }
     }
-    setSelectedOption([]);
   };
-
-  const handleNext = async (selected) => {
+  const handleNext = (selected) => {
     if (selected.length === 0) {
       setError("Please select at least one option.");
       return;
@@ -221,28 +187,14 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
     };
 
     const previousAnswers = buyerRequest?.questions || [];
+    const updatedAnswers = [...previousAnswers];
+    updatedAnswers[currentQuestion] = updatedAnswer;
 
-    const existingIndex = previousAnswers.findIndex(
-      (item) => item?.ques === updatedAnswer.ques
-    );
-
-    let updatedAnswers;
-    if (existingIndex !== -1) {
-      updatedAnswers = [...previousAnswers];
-      updatedAnswers[existingIndex] = updatedAnswer;
-    } else {
-      updatedAnswers = [...previousAnswers, updatedAnswer];
-    }
-    try {
-      const formData = new FormData();
-      formData.append("questions", JSON.stringify(updatedAnswers));
-      formData.append("service_id", buyerRequest?.service_id);
-      const respone = await dispatch(getProgressPercentageAPI(formData));
-      setProgressPercentage(respone?.percentage);
-    } catch (error) {
-      console.log(error, "progressPercent");
-    }
     dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+
+    const percentage = (100 * 2) / (totalQuestions * 3);
+
+    getProgressPercentage(percentage);
 
     const selectedObj = formattedQuestions[currentQuestion]?.parsedAnswers.find(
       (a) => a.option === selected[0]
@@ -250,13 +202,15 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
 
     const nextQ = selectedObj?.next_question;
 
-    setTotalQuestionsAnswered((prev) => Math.min(prev + 1, 7));
-
     let nextIndex = null;
-    if (nextQ === "6") {
+
+    if (nextQ === Number(nextQ)) {
       onNext();
       return;
     } else if (nextQ === "last") {
+      const firstStepProgress = (2 / 3) * 100;
+      const remainingProgressPerStep = (100 - firstStepProgress) / 2;
+      getProgressPercentage(remainingProgressPerStep);
       onNext();
       return;
     } else if (nextQ && questionIndexMap[nextQ]) {
@@ -268,62 +222,27 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
     if (nextIndex !== null) {
       if (!questionHistory.includes(nextIndex)) {
         setQuestionHistory((prev) => [...prev, nextIndex]);
-        setQuestion2History((prev) => [...prev, questionIndexMap[nextQ]]);
       }
       setCurrentQuestion(nextIndex);
     } else {
       onNext();
     }
-    setSelectedOption([]);
   };
-  const handleBack = async () => {
-    setIsComingFromStep3(false);
 
+  const handleBack = () => {
+    setIsComingFromStep3(false);
     if (questionHistory.length > 1) {
       const newHistory = [...questionHistory];
-      const newHistory2 = [...question2History];
-
       newHistory.pop();
-      newHistory2.pop();
-
       const prevIndex = newHistory[newHistory.length - 1];
       setQuestionHistory(newHistory);
-      setQuestion2History(newHistory2);
       setCurrentQuestion(prevIndex);
-
-      setTotalQuestionsAnswered((prev) => Math.max(1, prev - 1));
+      const percentage = (100 * 2) / (totalQuestions * 3);
+      currentQuestion > 1 && getProgressPercentage(-percentage);
+      currentQuestion === 1 &&
+        setProgressPercentage((100 * 2) / (totalQuestions * 3));
     } else {
       onBack();
-    }
-
-    const lastQuestionsArray = buyerRequest.questions;
-
-    if (lastQuestionsArray.length > 0) {
-      const lastAnswer = lastQuestionsArray[lastQuestionsArray.length - 1].ans;
-
-      setSelectedOption([lastAnswer]);
-
-      const updatedBuyerRequest = {
-        ...buyerRequest,
-        questions: lastQuestionsArray.slice(0, -1), // remove last
-      };
-
-      dispatch(setbuyerRequestData(updatedBuyerRequest));
-
-      try {
-        const formData = new FormData();
-        formData.append(
-          "questions",
-          JSON.stringify(updatedBuyerRequest.questions)
-        );
-        formData.append("service_id", updatedBuyerRequest.service_id);
-        const response = await dispatch(getProgressPercentageAPI(formData));
-        setProgressPercentage(response.percentage);
-      } catch (err) {
-        console.error("Error updating progress on back:", err);
-      }
-    } else {
-      console.log("No questions left to go back to.");
     }
   };
 
@@ -351,7 +270,7 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
       subtitle={
         currentQuestion === 0
           ? !isQuestionWithImage
-            ? "To find the ideal Tree Surgeon for your project, simply complete the quick form below."
+            ? "To find the ideal landscaping specialist for your project, simply complete the quick form below."
             : ""
           : ""
       }
@@ -364,10 +283,8 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
         <h2
           style={{
             textAlign: isQuestionWithImage ? "center" : "left",
-            maxWidth: "83%",
-            marginLeft: isQuestionWithImage ? "auto" : "",
-            marginRight: isQuestionWithImage ? "auto" : "",
-            marginBottom: isQuestionWithImage ? "auto" : "",
+            maxWidth: "86%",
+            margin: isQuestionWithImage ? "auto" : "",
             marginBottom: "10px",
           }}
           className="text-[20px] font-extrabold leading-[32px] mb-[10px] max-w-[544px] md:text-[26px] md:font-bold"
@@ -466,4 +383,4 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
   );
 };
 
-export default QuestionAsnwerMultiStepTreeSurgeon2;
+export default QuestionAnswerMultiStep2;
