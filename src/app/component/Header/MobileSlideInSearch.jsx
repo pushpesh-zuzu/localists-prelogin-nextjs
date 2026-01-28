@@ -104,19 +104,19 @@ export default function MobileSlideInSearch({
                             setShowSuggestions(true);
                         }}
                         onFocus={() => setShowSuggestions(true)}
-                        className="w-full border-none text-[16px] font-medium outline-none placeholder:text-[#999]"
+                        className="w-full border-none text-[16px] font-bold outline-none placeholder:text-[#999]"
                     />
                 </div>
 
                 {/* Suggestions */}
                 {showSuggestions && (
-                    <ul className="max-h-[calc(100vh-56px)] overflow-y-auto px-4 py-2">
+                    <ul className="divide-y divide-[#E6E6E6] border-t border-[#E6E6E6] max-h-[calc(100vh-56px)] overflow-y-auto px-4 py-2">
                         {services?.length ? (
                             services.map((service, index) => (
                                 <li
                                     key={index}
                                     onClick={() => handleServiceClick(service)}
-                                    className="cursor-pointer rounded-md px-2 py-2 text-[15px] text-[#253238] hover:bg-[#F3F3F3]"
+                                    className="font-[Arial] tracking-[-0.03em] cursor-pointer rounded-md px-2 py-2 text-[15px] text-[#253238] hover:bg-[#F3F3F3]"
                                 >
                                     {service.name}
                                 </li>
