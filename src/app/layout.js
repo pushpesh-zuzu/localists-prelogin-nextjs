@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import StoreProvider from "./StoreProvider";
 import { ToastProvider } from "@/utils/toaster";
+import CookieConsent from "./component/common/CookieConsent/CookieConsent";
 
 export const metadata = {
   title: "Localists",
@@ -32,6 +33,10 @@ export default function RootLayout({ children }) {
           {children}
           {/* <TrackingScripts />
               <NoscriptTags /> */}
+
+          {/* Global Cookie Consent */}
+          <CookieConsent />
+
           <ToastProvider />
         </StoreProvider>
       </body>
