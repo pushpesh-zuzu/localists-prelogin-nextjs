@@ -4,12 +4,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { clearSearch, setSelectedSearchService } from "@/lib/store/searchSlice";
 import { useEffect } from "react";
 import { questionAnswerData } from "@/lib/store/buyerslice/buyerSlice";
+import LoaderIndicator from "./Loader/LoaderIndicatore";
 
 export default function SearchResults({
   setShow,
   searchQuery,
   setSearchQuery,
-  setSelectedServiceId
+  setSelectedService
 }) {
   const { services, loading, error } = useSelector((state) => state.search);
   const dispatch = useDispatch();
@@ -27,8 +28,10 @@ export default function SearchResults({
         id: service?.id || null,
       })
     );
-    setSearchQuery('');
-    setShow && setShow(true);
+    setSearchQuery(service.name)
+    setSelectedService(service?.id)
+    // setSearchQuery('');
+    // setShow && setShow(true);
     dispatch(clearSearch());
   
 
@@ -39,7 +42,7 @@ export default function SearchResults({
   if (loading) {
     return (
       <div className="absolute z-50 w-full bg-white shadow-lg rounded-lg mt-2 p-4">
-        <p>Searching...</p>
+       <div className="flex justify-center"> <LoaderIndicator size="small"/></div>
       </div>
     );
   }

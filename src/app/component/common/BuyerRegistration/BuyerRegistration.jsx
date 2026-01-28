@@ -48,7 +48,7 @@ function BuyerRegistration({
   const isAdminOrRemembered = getBarkToken();
 
   const stepFlow = isAdminOrRemembered
-    ? [2, 3, 6, 7, 8]
+    ? [2, 3, 5, 7, 8]
     : [1, 2, 3, 4, 5, 7, 8];
 
   // console.log(buyerRequest, "buyerRequest");

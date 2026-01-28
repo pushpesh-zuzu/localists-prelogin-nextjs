@@ -16,7 +16,7 @@ function QuestionModalBanner({
       "Artificial Grass Installation":
         "bg-[url('/questions/ArtificialGrass.webp')]",
       "Driveway Installation": "bg-[url('/questions/Driveways.webp')]",
-      "Fence & Gate Installation": "bg-[url('/questions/fenceandgate.webp')]",
+      "Fence & Gate Installation": "bg-[url('/questions/Fence.webp')]",
       Gardening: "bg-[url('/images/banners/Gardening.jpg')]",
       "Home and Garden":
         "bg-[url('/images/banners/landscapingandgardening.webp')]",
