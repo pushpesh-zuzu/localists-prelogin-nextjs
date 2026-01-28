@@ -63,7 +63,7 @@ function TreeSurgeon() {
         heading1="Find Tree Surgeons"
         heading2="Near You"
         description="Get free, no-obligation quotes from the highest quality tree surgeons in your area. Enter your postcode below, and give us a few details about your project - It takes under a minute!"
-        bannerImage="/nearme/treeSurgeon.webp"
+        bannerImage="/nearme/tree-surgeon-header.webp"
         bannerImageMobile="/nearme/treeSurgeon1.png"
         altText="Tree Surgeon Hanging From a Tree trimming branches with a chainsaw"
       />
