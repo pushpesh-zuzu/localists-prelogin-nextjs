@@ -182,7 +182,7 @@ function PostCodeSearchField({
             type="button"
             onClick={handleSubmit}
             
-            className={` ${buttonBg} cursor-pointer min-w-[62px] lg:min-w-[100px] font-bold pl-3.5 pr-5 py-[11px]  lg:pl-[22px] lg:pr-6 lg:py-4 text-white focus:outline-none text-base lg:text-[25px]!`}
+            className={` ${buttonBg} cursor-pointer min-w-[62px] lg:min-w-[100px] font-bold pl-3.5 pr-5 py-[11px] hover:bg-[#00aef3]  lg:pl-[22px] lg:pr-6 lg:py-4 text-white focus:outline-none text-base lg:text-[25px]!`}
           >
             {buttonText}
           </button>
@@ -196,7 +196,7 @@ function PostCodeSearchField({
       </div>
       {show && (
         <BuyerRegistration
-        closeModal={handleClose}
+          closeModal={handleClose}
           service_Id={112}
           postcode={postcode}
           serviceName="Tree Surgery"
