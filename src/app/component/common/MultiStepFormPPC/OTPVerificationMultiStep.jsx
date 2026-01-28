@@ -37,8 +37,11 @@ const OTPVerificationMultiStep = ({
   } = useSelector((state) => state.buyer || {});
 
   // Get last segment from pathname
-  const pathSegments = pathname?.split("/") || [];
-  const lastSegment = pathSegments[pathSegments.length - 1];
+  // const pathSegments = pathname?.split("/") || [];
+  // const lastSegment = pathSegments[pathSegments.length - 1];
+     const pathSegments = pathname?.split("/").filter(Boolean) || []; 
+     const lastSegment = pathSegments[pathSegments.length - 1];
+
 
   useEffect(() => {
     if (timer > 0) {
@@ -124,7 +127,7 @@ const OTPVerificationMultiStep = ({
         dispatch(createRequestData(formData)).then((res) => {
           if (res?.success) {
             showToast("success", res?.message);
-
+            const localePattern = /^[a-z]{2}$/i;
             if (isThankuPageOnlyShow) {
               const modalData = {
                 shouldOpen: true,
@@ -132,7 +135,8 @@ const OTPVerificationMultiStep = ({
                 buyerRequest: buyerRequest,
                 city: citySerach,
                 serviceId: buyerRequest?.service_id,
-                baseRedirectPath: lastSegment ? lastSegment : "root",
+                // baseRedirectPath: lastSegment ? lastSegment : "root",
+                baseRedirectPath : localePattern.test(lastSegment) ? "root" : lastSegment
               };
 
               // LocalStorage will be used later
