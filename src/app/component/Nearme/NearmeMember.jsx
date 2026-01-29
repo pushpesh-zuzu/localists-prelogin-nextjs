@@ -7,7 +7,7 @@ import Button from "../UI/Typography/Button";
 
 function NearmeMember({ description = "" }) {
   return (
-    <div className="w-full max-w-[283px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto pt-5 pb-[30px]  md:py-[0px] md:pb-10 lg:pb-0 xl:pt-0 xl:pb-[72px]">
+    <div className="w-full max-w-[283px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto pt-10 pb-10  md:py-[0px] md:pb-10 md:pt-10 lg:pb-0 xl:pt-[72px] xl:pb-[72px]">
       <div className="hidden md:flex w-fit rounded-[15px] md:rounded-[33px] overflow-hidden mx-auto ">
         <div className=" w-[340] md:h-[270px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[15px] md:rounded-l-[33px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
           <>

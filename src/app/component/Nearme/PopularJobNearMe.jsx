@@ -31,7 +31,7 @@ export default function PopularJobNearMe({
           />
 
           {/* 2️⃣ Normal content layer */}
-          <div className="relative z-10 h-full pt-[30px] md:pt-[37px] md:pb-[24px] xl:pb-0 md:px-8 xl:px-15 flex flex-col md:justify-center max-w-full lg:max-w-[70%]">
+          <div className="relative z-10 h-full pt-[30px] md:pt-[37px] xl:pt-[0px] md:pb-[24px] xl:pb-0 md:px-8 xl:px-15 flex flex-col md:justify-center max-w-full lg:max-w-[70%]">
             <H2 className="text-white mb-4 md:mb-0 md:pb-4 xl:pb-[35px]">
               Popular Jobs.
             </H2>
@@ -41,11 +41,26 @@ export default function PopularJobNearMe({
               className={`text-[16px] leading-[16px]
         md:text-[14px] md:leading-[16px]
         lg:text-[20px] lg:leading-[24px] font-[Arial] font-bold
-          tracking-[-0.03em] sm:max-w-full mb-5 md:mb-0 text-white  md:pb-4 xl:pb-[43px]`}
+          tracking-[0em]! sm:max-w-full mb-5 md:mb-0 text-white  md:pb-4 xl:pb-[43px]`}
             >
               Click below to get a quote for the specific job you want
             </p>
-            <div className=" flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 md:max-w-[400px] xl:max-w-full">
+
+            {/* 🔥 Centered Services Section */}
+            <div className=" flex md:hidden items-center justify-center">
+              <div className="w-[265px]">
+                <div className="flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4 md:max-w-[400px] xl:max-w-full">
+                  {services.map((service) => (
+                    <ServicesButton
+                      key={service}
+                      service={service}
+                      mobileBorder="border-2"
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="hidden md:flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4 md:max-w-[400px] xl:max-w-full">
               {services.map((service) => (
                 <ServicesButton
                   mobileBorder="border-2"
@@ -56,7 +71,7 @@ export default function PopularJobNearMe({
             </div>
           </div>
 
-          {/* 3️⃣ Floating image */}
+          {/* 3️⃣ Floating Image */}
           <Image
             src={popularImage}
             alt={altText}
@@ -65,6 +80,7 @@ export default function PopularJobNearMe({
             fetchPriority="high"
             className="hidden md:block w-auto h-[280px] lg:h-[380px] xl:h-[472px] xl:w-[400px] absolute md:-right-13 lg:-right-14 xl:-right-14 bottom-0 z-20 pointer-events-none"
           />
+
           <LogoIcon className="hidden md:block absolute -bottom-1 -right-10 xl:-right-13 w-[100px] h-6 lg:w-[140px] lg:h-8 xl:w-[200px] xl:h-12" />
         </div>
       </div>

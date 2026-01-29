@@ -65,7 +65,7 @@ const AboutServicesAndQuestions = ({
             variant="primarySmall"
             key={index}
             bold="font-normal"
-            className={`${textBase} ${block?.notMarginBottom? "":"mb-[15px] md:mb-[25px]"} ${block?.className? block?.className:""} text-black`}
+            className={`${textBase} ${block?.notMarginBottom? "":"mb-[15px] md:mb-[25px]"} ${block?.className? block?.className:""} text-black tracking-[0em]!`}
           >
             <span dangerouslySetInnerHTML={{ __html: block.text }} />
           </Paragraph>
@@ -150,7 +150,7 @@ const AboutServicesAndQuestions = ({
   };
 
   return (
-    <div className="md:block px-2.5 py-5 sm:px-10 md:px-16 md:py-10 xl:px-[120px] pt-10 xl:pt-[72px] xl:pb-[72px]">
+    <div className="md:block px-2.5 pt-5 pb-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px]  xl:pt-[72px] xl:pb-[72px]">
     <WrapperBGWidth>
       <div className="container max-w-[1000px] mx-auto  ">
         {contentBlocks.map(renderBlock)}

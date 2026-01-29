@@ -28,7 +28,7 @@ function HeroSectionNearMe({
             priority={true}
             fetchPriority="high"
             unoptimized
-            className="object-cover h-10 w-10 md:h-[340px] min-[900px]:h-[400px] lg:h-[513px] xl:h-[570px]"
+            className="object-cover h-10 w-10 md:h-[380px] min-[900px]:h-[400px] lg:h-[513px] xl:h-[570px]"
             sizes="(min-width: 768px) 100vw, 0px"
           />
         </div>
@@ -61,7 +61,7 @@ function HeroSectionNearMe({
                   <span className="text-[#253238] block">{heading2}</span>
                 </span>
               </H1>
-              <Paragraph1 className="text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-[80%] sm:max-w-[60%] md:max-w-[450px] lg:max-w-[590px] text-white pt-[18px] md:pt-4 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
+              <Paragraph1 className="tracking-[0em]! text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-[80%] sm:max-w-[60%] md:max-w-[450px] lg:max-w-[590px] text-white pt-[18px] md:pt-4 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
                 {description}
               </Paragraph1>
               <PostCodeSearchField />

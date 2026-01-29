@@ -131,6 +131,7 @@ const OtpVerification = ({
           if (res?.success) {
             showToast("success", res?.message);
 
+              const localePattern = /^[a-z]{2}$/i;
             if (isThankuPageOnlyShow) {
               const modalData = {
                 shouldOpen: true,
@@ -138,7 +139,8 @@ const OtpVerification = ({
                 buyerRequest: buyerRequest,
                 city: citySerach,
                 serviceId: buyerRequest?.service_id,
-                baseRedirectPath: lastSegment ? lastSegment : "root",
+                // baseRedirectPath: lastSegment ? lastSegment : "root",
+                baseRedirectPath : localePattern.test(lastSegment) ? "root" : lastSegment
               };
 
               // LocalStorage will be used later
