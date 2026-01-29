@@ -19,7 +19,7 @@ function HeroSectionNearMe({
 }) {
   return (
     <>
-      <div className="relative w-full md:h-[340px] lg:h-[513px] xl:h-[570px] max-h-[570px]">
+      <div className="relative w-full min-h-screen md:min-h-0 md:h-[340px] lg:h-[513px] xl:h-[570px]">
         <div className="absolute inset-0 hidden md:block z-0 w-full h-full">
           <Image
             src={bannerImage}
@@ -49,7 +49,7 @@ function HeroSectionNearMe({
 
         <div className="relative z-10 max-w-[1536px] mx-auto h-full">
           <section
-            className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full md:flex-row px-[34px] pt-10 md:px-[60px] lg:pb-[64px] xl:pb-[100px] md:pt-5 lg:pt-8 xl:px-[120px] xl:pt-[73.88px] relative z-10"
+            className="flex flex-col min-h-full md:flex-row px-[34px] pt-10 md:px-[60px] md:pt-5 lg:pt-8 xl:px-[120px] xl:pt-[73.88px] lg:pb-[64px] xl:pb-[100px] relative z-10"
             role="banner"
             aria-label="Hero section"
           >
@@ -66,7 +66,7 @@ function HeroSectionNearMe({
               </Paragraph1>
               <PostCodeSearchField />
             </div>
-            <div className="flex h-[52px] w-[52px] ml-auto mr-auto justify-center mb-3.5 mt-[30px] md:hidden relative z-1">
+            <div className="flex h-[52px] w-[52px] mx-auto mr-auto justify-center mb-3.5 mt-[30px] md:hidden relative z-1">
               <ChevroliteDoubleDownIcon />
             </div>
           </section>
