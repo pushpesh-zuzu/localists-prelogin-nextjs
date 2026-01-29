@@ -20,7 +20,7 @@ const QuestionAnswerMultiStep2 = ({
   serviceName = "Landscaping",
   isQuestionWithImage = false,
 }) => {
-   const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const { buyerRequest, citySerach } = useSelector((state) => state.buyer);
   const { service } = useSelector((state) => state.findJobs);
 
@@ -35,12 +35,12 @@ const QuestionAnswerMultiStep2 = ({
     parsedAnswers: Array.isArray(q.answer)
       ? q.answer
       : (() => {
-          try {
-            return JSON.parse(q.answer);
-          } catch (e) {
-            return [];
-          }
-        })(),
+        try {
+          return JSON.parse(q.answer);
+        } catch (e) {
+          return [];
+        }
+      })(),
   }));
 
   const questionIndexMap = {};
@@ -229,12 +229,20 @@ const QuestionAnswerMultiStep2 = ({
     }
   };
 
+  const removeQuestionsAfter = (questionIndex) => {
+    const updatedAnswers =
+      buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
+
+    dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+  };
+
   const handleBack = () => {
     setIsComingFromStep3(false);
     if (questionHistory.length > 1) {
       const newHistory = [...questionHistory];
       newHistory.pop();
       const prevIndex = newHistory[newHistory.length - 1];
+      removeQuestionsAfter(prevIndex);
       setQuestionHistory(newHistory);
       setCurrentQuestion(prevIndex);
       const percentage = (100 * 2) / (totalQuestions * 3);
@@ -242,6 +250,7 @@ const QuestionAnswerMultiStep2 = ({
       currentQuestion === 1 &&
         setProgressPercentage((100 * 2) / (totalQuestions * 3));
     } else {
+      dispatch(setbuyerRequestData({ questions: [] }));
       onBack();
     }
   };
@@ -317,7 +326,7 @@ const QuestionAnswerMultiStep2 = ({
                 <input
                   type={
                     formattedQuestions[currentQuestion]?.option_type ===
-                    "single"
+                      "single"
                       ? "radio"
                       : "checkbox"
                   }
