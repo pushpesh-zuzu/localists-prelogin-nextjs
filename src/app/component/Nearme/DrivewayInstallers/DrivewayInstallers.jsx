@@ -2,7 +2,7 @@
 
 import React from "react";
 import VettedSection from "../VettedSection";
-// import AboutServicesAndQuestions from "../AboutServicesAndQuestions";
+import AboutServicesAndQuestions from "../AboutServicesAndQuestions";
 import {
     BREADCRUM_DATA_DRIVEWAY,
     FREQUENTLY_DATA_TREE_SURGEON,
@@ -14,7 +14,6 @@ import {
     DRIVEWAY_INSTALLERS_TABDATA,
     VETTED_DATA_DRIVEWAY_INSTALLER,
 } from "./DrivewayInstallersData";
-import { BREADCRUM_DATA_TREESURGEON } from "../TreeSurgeon/TreeSurgeonData";
 // import DiscoverServices from "../../Home/DiscoverServices/DiscoverServices";
 // import Feature from "../Feature";
 // import { FAQ } from "../FAQ";
@@ -82,7 +81,7 @@ function DrivewayInstallers() {
                 tabData={DRIVEWAY_INSTALLERS_TABDATA}
             />
             <UserFeedbackNearMe feedbackData={DRIVEWAY_INSTALLERS_FEEDBACK} />
-            {/* <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} /> */}
+            <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
 
 

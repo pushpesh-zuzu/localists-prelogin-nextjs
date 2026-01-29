@@ -93,12 +93,12 @@ const QuestionModal = ({
     parsedAnswers: Array.isArray(q.answer)
       ? q.answer
       : (() => {
-          try {
-            return JSON.parse(q.answer);
-          } catch (e) {
-            return [];
-          }
-        })(),
+        try {
+          return JSON.parse(q.answer);
+        } catch (e) {
+          return [];
+        }
+      })(),
   }));
 
   const questionIndexMap = {};
@@ -159,6 +159,7 @@ const QuestionModal = ({
       updatedAnswers = [...previousAnswers, updatedAnswer];
     }
 
+
     dispatch(setbuyerRequestData({ questions: updatedAnswers }));
 
     const selectedObj = formattedQuestions[currentQuestion]?.parsedAnswers.find(
@@ -168,6 +169,7 @@ const QuestionModal = ({
     const nextQ = selectedObj?.next_question;
     if (nextQ === "last") {
       if (isStartWithQuestionModal) {
+
         dispatch(
           setbuyerRequestData({
             service_id: service?.id || buyerRequest?.service_id,
@@ -207,13 +209,27 @@ const QuestionModal = ({
           }
         });
       }
-    } else if (nextQ && questionIndexMap[nextQ]) {
-      setQuestionHistory((prev) => [...prev, questionIndexMap[nextQ]]);
-      setCurrentQuestion(questionIndexMap[nextQ]);
+    } else if (nextQ && questionIndexMap[nextQ] !== undefined) {
+      const nextIndex = questionIndexMap[nextQ];
+
+      setQuestionHistory((prev) => {
+        const index = prev.indexOf(currentQuestion);
+        const trimmed = prev.slice(0, index + 1); // ✅ clears old future questions
+        return [...trimmed, nextIndex];
+      });
+
+      setCurrentQuestion(nextIndex);
     } else {
       if (currentQuestion < totalQuestions - 1) {
-        setQuestionHistory((prev) => [...prev, currentQuestion + 1]);
-        setCurrentQuestion(currentQuestion + 1);
+        const nextIndex = currentQuestion + 1;
+
+        setQuestionHistory((prev) => {
+          const index = prev.indexOf(currentQuestion);
+          const trimmed = prev.slice(0, index + 1); // ✅ clears old future questions
+          return [...trimmed, nextIndex];
+        });
+
+        setCurrentQuestion(nextIndex);
       } else {
         nextStep();
       }
@@ -305,7 +321,7 @@ const QuestionModal = ({
                         <input
                           type={
                             formattedQuestions[currentQuestion]?.option_type ===
-                            "single"
+                              "single"
                               ? "radio"
                               : "checkbox"
                           }
