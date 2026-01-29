@@ -213,7 +213,7 @@ const QuestionModal = ({
 
       setQuestionHistory((prev) => {
         const index = prev.indexOf(currentQuestion);
-        const trimmed = prev.slice(0, index + 1); // ✅ clears old future questions
+        const trimmed = prev.slice(0, index + 1); // clears old future questions
         return [...trimmed, nextIndex];
       });
 
@@ -224,7 +224,7 @@ const QuestionModal = ({
 
         setQuestionHistory((prev) => {
           const index = prev.indexOf(currentQuestion);
-          const trimmed = prev.slice(0, index + 1); // ✅ clears old future questions
+          const trimmed = prev.slice(0, index + 1); // clears old future questions
           return [...trimmed, nextIndex];
         });
 
@@ -245,7 +245,7 @@ const QuestionModal = ({
     newHistory.pop();
     const prevIndex = newHistory[newHistory.length - 1];
 
-    // ✅ CLEAR FUTURE ANSWERS
+    // CLEAR FUTURE ANSWERS
     const trimmedAnswers =
       buyerRequest?.questions?.slice(0, prevIndex) || [];
 
