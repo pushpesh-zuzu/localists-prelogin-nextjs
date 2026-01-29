@@ -4,7 +4,7 @@ import HomeIcon from "../icons/HomePageIcons/HomeIcon";
 
 export default function Breadcrumb({ items = [] }) {
   return (
-    <nav className="flex items-center gap-2 lg:gap-[17px]">
+    <nav className="flex items-center gap-1 sm:gap-2 lg:gap-[17px]">
       {/* Home Icon */}
       <Link
         href="/"
@@ -17,7 +17,7 @@ export default function Breadcrumb({ items = [] }) {
         const isLast = index === items.length - 1;
 
         return (
-          <div key={index} className="flex items-center gap-2">
+          <div key={index} className="flex items-center gap-1 sm:gap-2">
             {/* Arrow */}
             <RightArrowBlack
               color="#838383"
@@ -29,10 +29,10 @@ export default function Breadcrumb({ items = [] }) {
               <span
                 className="
                   font-inter font-[900] text-[14px] sm:text-[16px]
-                  lg:text-[25px] leading-[26px]
+                  lg:text-[25px] leading-[1.20]
                   tracking-[-0.03em]
                   text-[#00AFE3]
-                "
+                  whitespace-normal break-words"
               >
                 {item.title}
               </span>
@@ -41,10 +41,11 @@ export default function Breadcrumb({ items = [] }) {
                 href={item.path}
                 className="
                   font-inter font-[900] text-[14px] sm:text-[16px]
-                  lg:text-[25px] leading-[26px]
+                  lg:text-[25px] leading-[1.20]
                   tracking-[-0.03em]
                   text-[#959B9E]
                   hover:opacity-80 transition
+                  whitespace-normal break-words
                 "
               >
                 {item.title}

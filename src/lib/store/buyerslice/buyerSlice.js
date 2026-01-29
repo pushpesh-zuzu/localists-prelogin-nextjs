@@ -75,6 +75,7 @@ const initialState = {
 // ----------------------------
 
 export const questionAnswerData = (questionData) => {
+  console.log("questionData",questionData)
   return async (dispatch) => {
     dispatch(setquestionLoader(true));
     try {
