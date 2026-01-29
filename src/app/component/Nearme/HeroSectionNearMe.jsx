@@ -27,7 +27,7 @@ function HeroSectionNearMe({
             fill
             priority={true}
             fetchPriority="high"
-            unoptimized
+            quality={90}
             className="object-cover h-10 w-10 md:h-[380px] min-[900px]:h-[400px] lg:h-[513px] xl:h-[570px]"
             sizes="(min-width: 768px) 100vw, 0px"
           />
