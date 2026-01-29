@@ -7,7 +7,7 @@ import { getProgressPercentageAPI, setbuyerRequestData } from "@/lib/store/buyer
 import Loader from "../../common/Loader/Loader";
 
 const QuestionAsnwerMultiStepTreeSurgeon2 = ({
-   questions = [],
+  questions = [],
   onNext,
   onBack,
   isComingFromStep3 = false,
@@ -23,7 +23,7 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
   setSelectedOption,
   selectedOption,
 }) => {
- const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const { buyerRequest } = useSelector((state) => state.buyer);
   const [specialFlowPercentage, SpecialFlowPercentage] = useState(70);
 
@@ -39,12 +39,12 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
     parsedAnswers: Array.isArray(q.answer)
       ? q.answer
       : (() => {
-          try {
-            return JSON.parse(q.answer);
-          } catch (e) {
-            return [];
-          }
-        })(),
+        try {
+          return JSON.parse(q.answer);
+        } catch (e) {
+          return [];
+        }
+      })(),
   }));
 
   const questionIndexMap = {};
@@ -276,6 +276,25 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
     }
     setSelectedOption([]);
   };
+
+
+  const removeQuestionsAfterIndex = async (questionIndex) => {
+    const updatedQuestions =
+      buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
+
+    dispatch(setbuyerRequestData({ questions: updatedQuestions }));
+
+    try {
+      const formData = new FormData();
+      formData.append("questions", JSON.stringify(updatedQuestions));
+      formData.append("service_id", buyerRequest?.service_id);
+      const response = await dispatch(getProgressPercentageAPI(formData));
+      setProgressPercentage(response?.percentage);
+    } catch (err) {
+      console.error("Progress update failed:", err);
+    }
+  };
+
   const handleBack = async () => {
     setIsComingFromStep3(false);
 
@@ -287,12 +306,16 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
       newHistory2.pop();
 
       const prevIndex = newHistory[newHistory.length - 1];
+
+      await removeQuestionsAfterIndex(prevIndex);
+
       setQuestionHistory(newHistory);
       setQuestion2History(newHistory2);
       setCurrentQuestion(prevIndex);
 
       setTotalQuestionsAnswered((prev) => Math.max(1, prev - 1));
     } else {
+      dispatch(setbuyerRequestData({ questions: [] }));
       onBack();
     }
 
@@ -400,7 +423,7 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
                 <input
                   type={
                     formattedQuestions[currentQuestion]?.option_type ===
-                    "single"
+                      "single"
                       ? "radio"
                       : "checkbox"
                   }

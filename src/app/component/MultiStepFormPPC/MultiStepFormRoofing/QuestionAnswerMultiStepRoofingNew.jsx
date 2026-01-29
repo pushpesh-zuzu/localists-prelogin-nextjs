@@ -31,12 +31,12 @@ const QuestionAnswerMultiStepRoofingNew = ({
       parsedAnswers: Array.isArray(q.answer)
         ? q.answer
         : (() => {
-            try {
-              return JSON.parse(q.answer);
-            } catch (e) {
-              return [];
-            }
-          })(),
+          try {
+            return JSON.parse(q.answer);
+          } catch (e) {
+            return [];
+          }
+        })(),
     }));
   }, [questions]);
 
@@ -257,12 +257,29 @@ const QuestionAnswerMultiStepRoofingNew = ({
     }
   };
 
+  const removeQuestionsAfter = (questionNo) => {  //added
+    dispatch(
+      setbuyerRequestData({
+        questions: buyerRequest.questions.filter(
+          (q) => q.question_no <= questionNo
+        ),
+      })
+    );
+  };
+
+
   const handleBack = () => {
     setIsComingFromStep4(false);
     if (questionHistory.length > 1) {
       const newHistory = [...questionHistory];
       newHistory.pop();
       const prevIndex = newHistory[newHistory.length - 1];
+      const prevQuestionNo =
+        formattedQuestions[prevIndex]?.question_no; // added
+
+      removeQuestionsAfter(prevQuestionNo); //added
+
+
       setQuestionHistory(newHistory);
       setCurrentQuestion(prevIndex);
 
@@ -270,6 +287,7 @@ const QuestionAnswerMultiStepRoofingNew = ({
         setIsFirstQuestionAnswered(false);
       }
     } else {
+      dispatch(setbuyerRequestData({ questions: [] })); //added
       onBack();
       setPercetangForPost(0);
     }
@@ -322,7 +340,7 @@ const QuestionAnswerMultiStepRoofingNew = ({
                 <input
                   type={
                     formattedQuestions[currentQuestion]?.option_type ===
-                    "single"
+                      "single"
                       ? "radio"
                       : "checkbox"
                   }

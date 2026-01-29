@@ -41,14 +41,14 @@ const QuestionAnswerMultiStepTreeSurgeon = ({
       parsedAnswers: Array.isArray(q.answer)
         ? q.answer
         : (() => {
-            try {
-              return JSON.parse(q.answer);
-            } catch (e) {
-              return [];
-            }
-          })(),
+          try {
+            return JSON.parse(q.answer);
+          } catch (e) {
+            return [];
+          }
+        })(),
     }));
-  }, [questions]); 
+  }, [questions]);
 
   const questionIndexMap = useMemo(() => {
     const map = {};
@@ -290,6 +290,23 @@ const QuestionAnswerMultiStepTreeSurgeon = ({
     setSelectedOption([]);
   };
 
+  const removeAnswersAfterIndex = async (questionIndex) => {
+    const updatedQuestions =
+      buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
+
+    dispatch(setbuyerRequestData({ questions: updatedQuestions }));
+
+    try {
+      const formData = new FormData();
+      formData.append("questions", JSON.stringify(updatedQuestions));
+      formData.append("service_id", buyerRequest?.service_id);
+      const response = await dispatch(getProgressPercentageAPI(formData));
+      setProgressPercentage(response?.percentage);
+    } catch (err) {
+      console.error("Progress update failed:", err);
+    }
+  };
+
   const handleBack = async () => {
     setIsComingFromStep4(false);
 
@@ -297,6 +314,9 @@ const QuestionAnswerMultiStepTreeSurgeon = ({
       const newHistory = [...questionHistory];
       newHistory.pop();
       const prevIndex = newHistory[newHistory.length - 1];
+
+      await removeAnswersAfterIndex(prevIndex);
+
       setQuestionHistory(newHistory);
       setCurrentQuestion(prevIndex);
 
@@ -309,53 +329,57 @@ const QuestionAnswerMultiStepTreeSurgeon = ({
           lastQuestionsArray[lastQuestionsArray.length - 1].ans;
 
         // Array format me set karna
-        setSelectedOption([lastAnswer]);
-      }
-      const updatedBuyerRequest = {
-        ...buyerRequest,
-        questions: [...buyerRequest.questions].slice(0, -1), // remove last
-      };
-
-      dispatch(setbuyerRequestData(updatedBuyerRequest));
-
-      // ✅ Send updated questions to API for progress calculation
-      try {
-        const formData = new FormData();
-        formData.append(
-          "questions",
-          JSON.stringify(updatedBuyerRequest.questions)
+        setSelectedOption(
+          typeof lastAnswer === "string"
+            ? lastAnswer.split(",").map((a) => a.trim())
+            : [lastAnswer]
         );
-        formData.append("service_id", updatedBuyerRequest.service_id);
-        if (prevIndex === 0) {
-          const response = await dispatch(getProgressPercentageAPI(formData));
-          setProgressPercentage(response.percentage);
-        }
-      } catch (err) {
-        console.error("Error updating progress on back:", err);
       }
+      // const updatedBuyerRequest = {
+      //   ...buyerRequest,
+      //   questions: [...buyerRequest.questions].slice(0, -1), // remove last
+      // };
+
+      // dispatch(setbuyerRequestData(updatedBuyerRequest));
+
+      // // ✅ Send updated questions to API for progress calculation
+      // try {
+      //   const formData = new FormData();
+      //   formData.append(
+      //     "questions",
+      //     JSON.stringify(updatedBuyerRequest.questions)
+      //   );
+      //   formData.append("service_id", updatedBuyerRequest.service_id);
+      //   if (prevIndex === 0) {
+      //     const response = await dispatch(getProgressPercentageAPI(formData));
+      //     setProgressPercentage(response.percentage);
+      //   }
+      // } catch (err) {
+      //   console.error("Error updating progress on back:", err);
+      // }
     } else {
       onBack();
       setIsStepFrom4(false);
-      const updatedBuyerRequest = {
-        ...buyerRequest,
-        questions: [...buyerRequest.questions].slice(0, -1), // remove last
-      };
+      // const updatedBuyerRequest = {
+      //   ...buyerRequest,
+      //   questions: [...buyerRequest.questions].slice(0, -1), // remove last
+      // };
 
-      dispatch(setbuyerRequestData(updatedBuyerRequest));
+      // dispatch(setbuyerRequestData(updatedBuyerRequest));
 
-      // ✅ Send updated questions to API for progress calculation
-      try {
-        const formData = new FormData();
-        formData.append(
-          "questions",
-          JSON.stringify(updatedBuyerRequest.questions)
-        );
-        formData.append("service_id", updatedBuyerRequest.service_id);
-        const response = await dispatch(getProgressPercentageAPI(formData));
-        setProgressPercentage(response.percentage);
-      } catch (err) {
-        console.error("Error updating progress on back:", err);
-      }
+      // // ✅ Send updated questions to API for progress calculation
+      // try {
+      //   const formData = new FormData();
+      //   formData.append(
+      //     "questions",
+      //     JSON.stringify(updatedBuyerRequest.questions)
+      //   );
+      //   formData.append("service_id", updatedBuyerRequest.service_id);
+      //   const response = await dispatch(getProgressPercentageAPI(formData));
+      //   setProgressPercentage(response.percentage);
+      // } catch (err) {
+      //   console.error("Error updating progress on back:", err);
+      // }
     }
   };
   const handleBack2 = async () => {
@@ -487,7 +511,7 @@ const QuestionAnswerMultiStepTreeSurgeon = ({
                 <input
                   type={
                     formattedQuestions[currentQuestion]?.option_type ===
-                    "single"
+                      "single"
                       ? "radio"
                       : "checkbox"
                   }
