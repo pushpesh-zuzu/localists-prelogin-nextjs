@@ -112,10 +112,10 @@ const LANDING_DETAIL_BANNERS = {
 const LANDING_SERVICES = {
   fencing_ppc: "Fence & Gate Installation",
   driveways_ppc: "Driveway Installation",
-  patio_services_ppc: "Patio Services",
+  patio_services_ppc: "Patio Laying",
   landscaping_ppc: "Landscaping",
   artificial_grass_installation_ppc: "Artificial Grass Installation",
-  gates_ppc: "Gate Installation",
+  gates_ppc: "Fence & Gate Installation",
 };
 const LANDING_TITLES_AND_META = {
   landscaping_ppc: {
