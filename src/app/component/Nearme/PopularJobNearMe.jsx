@@ -31,7 +31,7 @@ export default function PopularJobNearMe({
           />
 
           {/* 2️⃣ Normal content layer */}
-          <div className="relative z-10 h-full pt-[30px] md:pt-[37px] md:pb-[24px] xl:pb-0 md:px-8 xl:px-15 flex flex-col md:justify-center max-w-full lg:max-w-[70%]">
+          <div className="relative z-10 h-full pt-[30px] md:pt-[37px] xl:pt-[20px] md:pb-[24px] xl:pb-0 md:px-8 xl:px-15 flex flex-col md:justify-center max-w-full lg:max-w-[70%]">
             <H2 className="text-white mb-4 md:mb-0 md:pb-4 xl:pb-[35px]">
               Popular Jobs.
             </H2>
