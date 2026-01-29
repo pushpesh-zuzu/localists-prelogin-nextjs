@@ -19,7 +19,7 @@ function HeroSectionNearMe({
 }) {
   return (
     <>
-      <div className="relative w-full md:h-[340px] lg:h-[513px] xl:h-[570px] max-h-[570px]">
+      <div className="relative w-full md:h-[380px] lg:h-[513px] xl:h-[570px] max-h-[570px]">
         <div className="absolute inset-0 hidden md:block z-0 w-full h-full">
           <Image
             src={bannerImage}
@@ -28,7 +28,7 @@ function HeroSectionNearMe({
             priority={true}
             fetchPriority="high"
             unoptimized
-            className="object-cover h-10 w-10 md:h-[340px] min-[900px]:h-[400px] lg:h-[513px] xl:h-[570px]"
+            className="object-cover h-10 w-10 md:h-[380px] min-[900px]:h-[400px] lg:h-[513px] xl:h-[570px]"
             sizes="(min-width: 768px) 100vw, 0px"
           />
         </div>
