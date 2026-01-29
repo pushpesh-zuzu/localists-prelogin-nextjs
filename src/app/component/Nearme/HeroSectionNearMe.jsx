@@ -66,8 +66,8 @@ function HeroSectionNearMe({
               </Paragraph1>
               <PostCodeSearchField />
             </div>
-            <div className="flex h-[52px] w-[52px] ml-auto mr-auto justify-center mb-3.5 mt-[30px] md:hidden relative z-1">
-              <ChevroliteDoubleDownIcon />
+            <div className="flex h-[52px] ml-auto mr-auto justify-center mb-3.5 mt-[30px] md:hidden relative z-1">
+              {/* <ChevroliteDoubleDownIcon /> */}
             </div>
           </section>
         </div>

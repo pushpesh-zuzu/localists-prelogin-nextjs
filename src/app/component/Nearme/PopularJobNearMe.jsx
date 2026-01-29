@@ -48,7 +48,7 @@ export default function PopularJobNearMe({
 
             {/* 🔥 Centered Services Section */}
             <div className=" flex md:hidden items-center justify-center">
-              <div className="w-[265px]">
+              <div className="w-[235px] min-[397px]:w-[302px] min-[512px]:w-[350px]">
                 <div className="flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4 md:max-w-[400px] xl:max-w-full">
                   {services.map((service) => (
                     <ServicesButton
