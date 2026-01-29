@@ -10,7 +10,7 @@ import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 function DiscoverNearMe({ homeData = [], businessData = [], eventData = [] }) {
   return (
     <WrapperBGWidth background={"#f7f7f7f7"}>
-      <div className=" bg-[#f7f7f7f7] md:block px-2.5 py-5 sm:px-10 md:px-16 md:py-10 xl:px-[120px] pt-10 xl:pt-[72px] xl:pb-[72px]">
+      <div className=" bg-[#f7f7f7f7] md:block px-2.5 py-5 sm:px-10 md:px-16 md:py-10 xl:px-[120px] pt-10 pb-10 xl:pt-[72px] xl:pb-[72px]">
         <H2 className=" text-[#00afe3] pb-5 xl:pb-[50px] text-center">
           Discover <span className="text-[#253238]">services.</span>{" "}
         </H2>
