@@ -143,6 +143,7 @@ export const createRequestData = (requestData) => {
         dispatch(setRequestUserId(response.data.data?.user_id));
         dispatch(setRequestUserPhone(response.data.data?.phone));
         dispatch(setRequestId(response?.data?.data?.request_id));
+        setCookie('requestId',response?.data?.data?.request_id, 10 / (24 * 60))
         return response.data;
       }
     } catch (error) {

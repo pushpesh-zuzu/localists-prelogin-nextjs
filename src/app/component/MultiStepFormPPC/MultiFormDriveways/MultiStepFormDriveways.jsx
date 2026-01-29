@@ -21,8 +21,10 @@ import Footer from "../../Footer/Footer";
 import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import HowItWorkNewPPC from "../../NewPPCpage/HowItWorkNewPPC";
 import Logo from "../../../../../public/ReactIcons/Logo";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 
 const MultiStepFormDriveways = ({ isQuestionWithImage = false }) => {
+  usePendingBuyerRedirect()
   const dispatch = useDispatch();
   const { questionanswerData, buyerStep, questionLoader, buyerRequest } =
     useSelector((state) => state.buyer);

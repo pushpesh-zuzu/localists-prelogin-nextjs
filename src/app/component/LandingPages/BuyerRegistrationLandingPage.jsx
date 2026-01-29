@@ -133,7 +133,7 @@ const BuyerRegistrationLandingPage = ({
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-[rgba(22,25,41,0.3)] flex items-center justify-center z-[1000] py-[20px] h-[100vh] overflow-auto max-sm:py-[15px] max-[480px]:w-[96%] max-h-[600px]:items-start">
+    <div className="fixed top-0 left-0 w-full bg-[rgba(22,25,41,0.3)] flex items-center justify-center z-[1000] py-[20px] h-[100vh] overflow-auto max-sm:py-[15px] max-[480px]:w-[100%] max-h-[600px]:items-start">
       {!isStartWithQuestionModal ? (
         <div className="bg-white text-center shadow-[0_0_10px_0_rgba(0,0,0,0.06)] relative h-fit">
           {buyerStep === 1 && (

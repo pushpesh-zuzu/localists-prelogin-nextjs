@@ -1,3 +1,5 @@
+'use client'
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import FindDetail from "./FindDetail";
 import SearchPostAndBanner from "./SearchPostAndBanner";
 
@@ -12,6 +14,7 @@ const FindDetailAndBannerWrapper = ({
   welcomModalTitle,
   welcomModalButtonText,
 }) => {
+  usePendingBuyerRedirect()
   return (
     <>
       <div

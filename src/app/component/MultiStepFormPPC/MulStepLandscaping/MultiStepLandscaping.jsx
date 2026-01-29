@@ -24,8 +24,10 @@ import QuestionAnswerMultiStepDriveways from "../MultiFormDriveways/QuestionAnsw
 import QuestionAnswerMultiStep2 from "../QuestionAnswerMultiStep2";
 import PostcodeSearchLandscapingMultiform from "./PostcodeSearchLandscapingMultiform";
 import QuestionAnswerMultiStep from "./QuestionAnswerMultiStep";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 
 const MultiStepLandscaping = ({ isQuestionWithImage = false }) => {
+  usePendingBuyerRedirect()
   const dispatch = useDispatch();
 
   const { questionanswerData, buyerStep, questionLoader, buyerRequest } =

@@ -26,6 +26,7 @@ import DescribeYourRequestNewPPC from "./DescribeYourRequestNewPPC";
 import NavigationDetectorDesktop from "@/app/component/common/NavigationDetected/NavigationDetectorDesktop";
 import NavigationDetectorWithConfirmations from "@/app/component/common/NavigationDetected/NavigationDetectorWithConfirmations";
 import { handleScrollToBottom } from "@/utils/handleScrollToBottom";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 
 
 
@@ -40,6 +41,7 @@ export default function HeroSectionNewPPC({
     questionDescription = "",
     serviceId,
 }) {
+    usePendingBuyerRedirect()
     const dispatch = useDispatch();
     const userToken = getBarkToken();
     const authToken = useSelector((state) => state.findJobs.authToken);

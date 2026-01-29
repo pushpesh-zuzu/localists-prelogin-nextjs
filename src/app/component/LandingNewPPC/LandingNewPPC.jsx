@@ -11,6 +11,7 @@ import CloseBrowserAbandon from "../common/CloseBrowserAbandon/CloseBrowserAband
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import Footer from "../Footer/Footer";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 
 const LandingNewPPC = ({
   title = "",
@@ -18,6 +19,7 @@ const LandingNewPPC = ({
   serviceId,
   serviceName = "",
 }) => {
+  usePendingBuyerRedirect()
   const dispatch = useDispatch();
   const [isOtpSent, setIsOtpSent] = useState(false);
   useEffect(() => {

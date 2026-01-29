@@ -22,6 +22,7 @@ import { useProgress } from "@/hooks/useProgress";
 import QuestionAnserMultiStepRoofingNew2 from "./QuestionAnserMultiStepRoofingNew2";
 import PostcodeSearchRoofing from "./PostcodeSearchRoofing";
 import QuestionAnswerMultiStepRoofingNew from "./QuestionAnswerMultiStepRoofingNew";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 
 const MultiStepRoofing = ({
   isQuestionWithImage = false,
@@ -29,6 +30,7 @@ const MultiStepRoofing = ({
   serviceName = "Driveway Installers",
 }) => {
   const dispatch = useDispatch();
+  usePendingBuyerRedirect()
   const { questionanswerData, buyerStep } = useSelector((state) => state.buyer);
   const { progressPercentage, removeQuestionByNumber, setProgressPercentage } =
     useProgress(serviceId);
