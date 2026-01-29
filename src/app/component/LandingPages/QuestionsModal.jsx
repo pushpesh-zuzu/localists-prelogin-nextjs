@@ -159,7 +159,6 @@ const QuestionModal = ({
       updatedAnswers = [...previousAnswers, updatedAnswer];
     }
 
-
     dispatch(setbuyerRequestData({ questions: updatedAnswers }));
 
     const selectedObj = formattedQuestions[currentQuestion]?.parsedAnswers.find(
@@ -241,16 +240,23 @@ const QuestionModal = ({
   };
 
   const handleBack = () => {
-    if (questionHistory.length > 1) {
-      const newHistory = [...questionHistory];
-      newHistory.pop();
-      const prevIndex = newHistory[newHistory.length - 1];
-      setQuestionHistory(newHistory);
-      setCurrentQuestion(prevIndex);
-    } else {
-      previousStep();
-    }
-  };
+  if (questionHistory.length > 1) {
+    const newHistory = [...questionHistory];
+    newHistory.pop();
+    const prevIndex = newHistory[newHistory.length - 1];
+
+    // ✅ CLEAR FUTURE ANSWERS
+    const trimmedAnswers =
+      buyerRequest?.questions?.slice(0, prevIndex) || [];
+
+    dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
+
+    setQuestionHistory(newHistory);
+    setCurrentQuestion(prevIndex);
+  } else {
+    previousStep();
+  }
+};
 
   const handleCloseClick = () => {
     if (questionanswerData?.length === 0) {
