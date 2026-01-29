@@ -61,7 +61,7 @@ export default function AveragePrice() {
                 >
                   Trimming or pruning a small tree (under 25ft) costs on average
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center md:text-center text-[#253238] max-[336px]:mt-9 mt-8 md:mt-3 sm:mt-4">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center md:text-center text-[#253238] max-[336px]:mt-[12px] mt-9 md:mt-3 sm:mt-4">
                   £250
                 </p>
               </div>
