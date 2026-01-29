@@ -71,6 +71,12 @@ function NewPPCForm({ nextStep, serviceId }) {
         (inputValue, callback) => {
             if (searchTimeout.current) clearTimeout(searchTimeout.current);
 
+            if (!inputValue) {
+                lastSearchValue.current = "";
+                callback(serviceOptions); // show all services
+                return;
+            }
+
             if (lastSearchValue.current === inputValue) {
                 callback(serviceOptions);
                 return;

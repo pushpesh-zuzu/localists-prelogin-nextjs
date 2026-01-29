@@ -94,12 +94,12 @@ const QuestionModalLandingNewPPC = ({
     parsedAnswers: Array.isArray(q.answer)
       ? q.answer
       : (() => {
-          try {
-            return JSON.parse(q.answer);
-          } catch (e) {
-            return [];
-          }
-        })(),
+        try {
+          return JSON.parse(q.answer);
+        } catch (e) {
+          return [];
+        }
+      })(),
   }));
 
   const questionIndexMap = {};
@@ -230,6 +230,12 @@ const QuestionModalLandingNewPPC = ({
       const newHistory = [...questionHistory];
       newHistory.pop();
       const prevIndex = newHistory[newHistory.length - 1];
+
+      const trimmedAnswers =
+        buyerRequest?.questions?.slice(0, prevIndex) || [];
+
+      dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
+
       setQuestionHistory(newHistory);
       setCurrentQuestion(prevIndex);
     } else {
@@ -256,112 +262,112 @@ const QuestionModalLandingNewPPC = ({
   return (
     <FormWrapper padding="p-0" showButtons={false}>
 
-        <div className="flex flex-col h-full py-2 px-3 md:px-8 min-h-80 min-w-72 md:min-w-80">
-          {loading ? (
-            <div className="flex-1 flex items-center justify-center">
-              <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-[#00ADD8]"></div>
+      <div className="flex flex-col h-full py-2 px-3 md:px-8 min-h-80 min-w-72 md:min-w-80">
+        {loading ? (
+          <div className="flex-1 flex items-center justify-center">
+            <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-[#00ADD8]"></div>
+          </div>
+        ) : questions.length > 0 ? (
+          <>
+            {/* Fixed Banner */}
+            <div className="flex-shrink-0 mb-4">
+              <QuestionModalBanner
+                serviceName={serviceName}
+                progressPercent={progressPercent}
+                question={questions[currentQuestion]?.questions}
+              />
             </div>
-          ) : questions.length > 0 ? (
-            <>
-              {/* Fixed Banner */}
-              <div className="flex-shrink-0 mb-4">
-                <QuestionModalBanner
-                  serviceName={serviceName}
-                  progressPercent={progressPercent}
-                  question={questions[currentQuestion]?.questions}
-                />
-              </div>
 
-              {/* Options Container - Fixed Height with Scroll */}
-              <div
-                className="overflow-y-auto"
-                style={{
-                  maxHeight: "300px",
-                  minHeight: "200px",
-                }}
-              >
-                <div className="flex flex-col gap-[7px]">
-                  {formattedQuestions[currentQuestion]?.parsedAnswers.map(
-                    (opt, index) => (
-                      <label
-                        key={index}
-                        className="flex cursor-pointer items-center gap-2 rounded-[3px] border border-[#dedede] px-[10px] py-[10px] text-left text-sm font-medium text-black hover:bg-gray-50 transition-colors"
-                      >
-                        <input
-                          type={
-                            formattedQuestions[currentQuestion]?.option_type ===
+            {/* Options Container - Fixed Height with Scroll */}
+            <div
+              className="overflow-y-auto"
+              style={{
+                maxHeight: "300px",
+                minHeight: "200px",
+              }}
+            >
+              <div className="flex flex-col gap-[7px]">
+                {formattedQuestions[currentQuestion]?.parsedAnswers.map(
+                  (opt, index) => (
+                    <label
+                      key={index}
+                      className="flex cursor-pointer items-center gap-2 rounded-[3px] border border-[#dedede] px-[10px] py-[10px] text-left text-sm font-medium text-black hover:bg-gray-50 transition-colors"
+                    >
+                      <input
+                        type={
+                          formattedQuestions[currentQuestion]?.option_type ===
                             "single"
-                              ? "radio"
-                              : "checkbox"
-                          }
-                          name="surveyOption"
-                          value={opt.option}
-                          checked={selectedOption.includes(opt.option)}
-                          onChange={handleOptionChange}
-                          className="flex-shrink-0"
-                        />
-                        <span className="arial-font  tracking-[-0.03em] inline-block wrap-break-word text-black">
-                          {opt.option}
-                        </span>
-                      </label>
-                    )
-                  )}
-
-                  {/* Other Input */}
-                  {formattedQuestions[currentQuestion]?.parsedAnswers.some(
-                    (opt) => opt.option === "Something else (please describe)"
-                  ) &&
-                    selectedOption.includes(
-                      "Something else (please describe)"
-                    ) && (
-                      <div className="mt-2">
-                        <InputField
-                          placeholder="Please Enter..."
-                          value={otherText}
-                          onChange={(e) => setOtherText(e.target.value)}
-                          error={error && error}
-                        />
-                      </div>
-                    )}
-                </div>
-              </div>
-
-              {!selectedOption.includes("Something else (please describe)") &&
-                error && <p className="text-xs text-red-600 flex items-start mt-1.5">{error}</p>}
-              {/* Fixed Buttons - Always visible */}
-              <div className="flex-shrink-0 mt-6 flex justify-between">
-                {currentQuestion > 0 ? (
-                  <Button1
-                    variant="secondary"
-                    onClick={handleBack}
-                    className="cursor-pointer  border-none disabled:opacity-50"
-                  >
-                    Back
-                  </Button1>
-                ) : (
-                  <div className="w-20"></div>
+                            ? "radio"
+                            : "checkbox"
+                        }
+                        name="surveyOption"
+                        value={opt.option}
+                        checked={selectedOption.includes(opt.option)}
+                        onChange={handleOptionChange}
+                        className="flex-shrink-0"
+                      />
+                      <span className="arial-font  tracking-[-0.03em] inline-block wrap-break-word text-black">
+                        {opt.option}
+                      </span>
+                    </label>
+                  )
                 )}
 
+                {/* Other Input */}
+                {formattedQuestions[currentQuestion]?.parsedAnswers.some(
+                  (opt) => opt.option === "Something else (please describe)"
+                ) &&
+                  selectedOption.includes(
+                    "Something else (please describe)"
+                  ) && (
+                    <div className="mt-2">
+                      <InputField
+                        placeholder="Please Enter..."
+                        value={otherText}
+                        onChange={(e) => setOtherText(e.target.value)}
+                        error={error && error}
+                      />
+                    </div>
+                  )}
+              </div>
+            </div>
+
+            {!selectedOption.includes("Something else (please describe)") &&
+              error && <p className="text-xs text-red-600 flex items-start mt-1.5">{error}</p>}
+            {/* Fixed Buttons - Always visible */}
+            <div className="flex-shrink-0 mt-6 flex justify-between">
+              {currentQuestion > 0 ? (
                 <Button1
-                  variant="primary"
-                  onClick={handleNext}
-                  disabled={requestLoader}
+                  variant="secondary"
+                  onClick={handleBack}
                   className="cursor-pointer  border-none disabled:opacity-50"
                 >
-                  {requestLoader ? (
-                    <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
-                  ) : (
-                    "Next"
-                  )}
+                  Back
                 </Button1>
-              </div>
-            </>
-          ) : (
-            <div className="flex-1 flex items-center justify-center">
-              <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-[#00ADD8]"></div>
+              ) : (
+                <div className="w-20"></div>
+              )}
+
+              <Button1
+                variant="primary"
+                onClick={handleNext}
+                disabled={requestLoader}
+                className="cursor-pointer  border-none disabled:opacity-50"
+              >
+                {requestLoader ? (
+                  <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
+                ) : (
+                  "Next"
+                )}
+              </Button1>
             </div>
-          )}
-        </div>
+          </>
+        ) : (
+          <div className="flex-1 flex items-center justify-center">
+            <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-[#00ADD8]"></div>
+          </div>
+        )}
+      </div>
     </FormWrapper>
   );
 };
