@@ -320,6 +320,7 @@ const WhatServiceYouNeed = ({
         {/* Service Input */}
         <div className="relative" ref={dropdownRef}>
           <InputField
+            labelClass="text-base text-[20px] mt-3 mb-4 text-left"
             label="What service do you need?"
             placeholder="e.g. Landscaping, Driveway Installation"
             value={input}
@@ -360,6 +361,7 @@ const WhatServiceYouNeed = ({
         {/* Postcode Input */}
         <div className="mt-4 relative">
           <InputField
+            labelClass="text-base text-[20px] mt-3 mb-4 text-left"
             label="Where do you need it?"
             placeholder="Enter Postcode (No Spaces)"
             value={pincode}

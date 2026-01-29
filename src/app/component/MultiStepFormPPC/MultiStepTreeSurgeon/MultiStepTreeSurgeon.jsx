@@ -21,9 +21,11 @@ import PostCodeSearchTreeSurgeon from "./PostCodeSearchTreeSurgeon";
 import QuestionAnswerMultiStepTreeSurgeon from "./QuestionAnswerMultiStepTreeSurgeon";
 import NameEmailTreeSurgeon from "./NameEmailMultiStepForm";
 import MultiStepDescribeYourRequest from "../../common/MultiStepFormPPC/MultiStepDescribeYourRequest";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 
 const MultiStepTreeSurgeon = ({ isQuestionWithImage = false, serviceId=null }) => {
   const dispatch = useDispatch();
+  usePendingBuyerRedirect()
   const { questionanswerData, buyerStep, questionLoader, buyerRequest } =
     useSelector((state) => state.buyer);
 

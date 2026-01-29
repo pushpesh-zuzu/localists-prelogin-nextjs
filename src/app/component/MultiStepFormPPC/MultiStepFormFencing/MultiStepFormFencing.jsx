@@ -21,8 +21,10 @@ import QuestionAnswerMultiStepFence from "./QuestionAnswerMultiStepFence";
 import PostSearchMultiStepFence from "./PostSearchMultiStepFence";
 import HowItWorkNewPPC from "../../NewPPCpage/HowItWorkNewPPC";
 import LogoIconMultiForm from "../LogoIconMultiForm";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 
 const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
+      usePendingBuyerRedirect()
   const dispatch = useDispatch();
   const { questionanswerData, buyerStep, questionLoader, buyerRequest } =
     useSelector((state) => state.buyer);

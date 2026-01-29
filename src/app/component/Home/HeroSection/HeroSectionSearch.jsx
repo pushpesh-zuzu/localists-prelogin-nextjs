@@ -11,6 +11,7 @@ import {
 } from "@/lib/store/buyerslice/buyerSlice";
 import { setSelectedServiceId } from "@/lib/store/findjobslice";
 import { showToast } from "@/utils/toaster";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 const SearchResults = dynamic(() => import("../../common/SearchResult"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -28,6 +29,7 @@ function HeroSectionSearch() {
   //     id: null,
   //     name: "",
   //   });
+  usePendingBuyerRedirect()
   const [selectedService, setSelectedService] = useState('')
   const [searchQuery, setSearchQuery] = useState("");
   const [show, setShow] = useState(false);

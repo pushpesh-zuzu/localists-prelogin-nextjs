@@ -2,9 +2,10 @@
 
 import { useRouter } from "next/navigation";
 // import Script from "next/script";
-import { CheckCircle, CheckIcon } from "lucide-react"; // या आप कोई और icon library use कर सकते हैं
+import { CheckCircle, CheckIcon } from "lucide-react"; 
 import H4 from "../../UI/Typography/H4";
 import { useSelector } from "react-redux";
+import { setCookie } from "@/utils/CookiesHelper";
 
 const ThankuPage = () => {
   const router = useRouter();
@@ -27,6 +28,7 @@ const ThankuPage = () => {
         localStorage.getItem("pendingBuyerModal") || "null",
       );
       localStorage.setItem("isRegistrationComplete", "false");
+      setCookie('isRegistrationComplete',false)
 
       let redirectPath = "/";
 

@@ -14,6 +14,7 @@ const InputField = ({
   id,
   className = "",
   onBlur,
+  labelClass = "text-base text-[20px] mt-3 mb-4",
 }) => {
   const [showPassword, setShowPassword] = useState(false);
   const inputId = id || name || label?.toLowerCase().replace(/\s+/g, "-");
@@ -26,7 +27,7 @@ const InputField = ({
       {label && (
         <label
           htmlFor={inputId}
-          className="block text-base text-[20px] leading-[100%] tracking-[-0.03em] font-bold font-[Arial] text-[#253238] mt-3 mb-4"
+          className={`block ${labelClass}  leading-[100%] tracking-[-0.03em] font-bold font-[Arial] text-[#253238] `}
         >
           {label}
           {required && <span className="text-red-500 ml-1">*</span>}

@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
-import { getBarkToken, getRegisterTokens } from "@/utils/CookiesHelper";
+import { getBarkToken, getCookie, getRegisterTokens } from "@/utils/CookiesHelper";
 import { setBuyerStep } from "@/lib/store/buyerslice/buyerSlice";
 
 
@@ -27,9 +27,10 @@ const useRegistrationRedirect = () => {
 
     const isRegistrationComplete =
       localStorage.getItem("isRegistrationComplete");
-
+    const isRegisRegistrationSuccess = getCookie('isRegistrationComplete')
+    console.log(isRegisRegistrationSuccess,'isRegisRegistrationSuccess')
     if (
-      isRegistrationComplete === "true" &&
+      isRegistrationComplete === "true" || isRegisRegistrationSuccess &&
       userToken || registerToken
     ) {
       localStorage.setItem("isRegistrationComplete", "true");

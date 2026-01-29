@@ -31,6 +31,7 @@ import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 
 export const metadata = {
   title: "Find Quality Tree Surgeons Near Me | Localists",
@@ -55,6 +56,7 @@ const CloseBrowserAbandon = dynamic(
 );
 
 function TreeSurgeon() {
+  usePendingBuyerRedirect()
   return (
     <>
       <CloseBrowserAbandon />
