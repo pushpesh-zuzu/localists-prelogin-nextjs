@@ -190,6 +190,26 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         type: "p",
         text: "A first point of call should be checking out their reviews. And our platform makes it even easier to check a company's reviews – as we source their reviews from multiple platforms for you to read all in one place.",
     },
+     {
+        type: "pbold",
+        text: "Previous Projects",
+    },
+     {
+        type: "p",
+        text: "Ask to see photos of past projects so you can get a feel for their workmanship and style across different materials. Before committing, always ask for a clear, written quote that outlines costs and timelines. If any local or planning rules apply, an installer who understands regional planning requirements can save you delays or headaches.",
+    },
+    {
+        type: "pbold",
+        text: "Regulatory Bodies",
+    },
+    {
+        type: "p",
+        text: "Driveway companies that are members of certain regulatory bodies often have to adhere to strict guidelines. Check whether your driveway installer is a member of regulatory bodies such as The Asphalt Industry Alliance or Britpave can be an indicator of quality.",
+    },
+    {
+        type: "p",
+        text: "Fortunately, with Localists, that legwork is already done. Every professional in our network is pre-vetted, reviewed, insured, and trained. You don’t need to spend hours comparing credentials; just tell us what you need, and we’ll match you with trusted driveway specialists nearby.",
+    },
 
 ];
 export const FREQUENTLY_DATA_TREE_SURGEON = {
