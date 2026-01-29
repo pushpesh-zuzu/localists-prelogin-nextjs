@@ -15,7 +15,7 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
   return (
     <WrapperBGWidth>
       {" "}
-      <div className="w-full px-2.5 sm:px-10 md:px-16 xl:px-[0px] lg:max-w-[1200px] mx-auto">
+      <div className="w-full px-2.5 sm:px-10 md:px-16 xl:px-[0px] lg:max-w-[1200px] mx-auto pb-10 xl:pb-[72px]">
         <NearmeH2Heading headdingblue="FAQ's" className="mb-5 md:mb-6 lg:mb-10" />
 
         <div className="space-y-0 border-2 lg:border-4 border-[#DBDFE4] rounded-[20px] overflow-hidden bg-white shadow-sm">
@@ -61,7 +61,7 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
                     dangerouslySetInnerHTML={{ __html: item.description }}
                     className={`font-[Arial] faq-content text-[16px] 
                             md:text-[16px] md:leading-[22px]
-                            lg:text-[20px] lg:leading-[24px] tracking-[-0.03em] font-normal md:max-w-[95%]`}
+                            lg:text-[20px] lg:leading-[24px] tracking-[0em]! font-normal md:max-w-[95%]`}
                   />
                 </div>
               </div>

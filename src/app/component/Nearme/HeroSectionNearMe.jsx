@@ -49,7 +49,7 @@ function HeroSectionNearMe({
 
         <div className="relative z-10 max-w-[1536px] mx-auto h-full">
           <section
-            className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full md:flex-row px-[34px] pt-10 md:px-[60px] lg:pb-[64px] xl:pb-[100px] md:pt-5 lg:pt-8 xl:px-[120px] xl:pt-[73.88px] relative z-10"
+            className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full md:flex-row px-[30px] pt-10 md:px-[60px] lg:pb-[64px] xl:pb-[100px] md:pt-5 lg:pt-8 xl:px-[120px] xl:pt-[73.88px] relative z-10"
             role="banner"
             aria-label="Hero section"
           >
@@ -61,7 +61,7 @@ function HeroSectionNearMe({
                   <span className="text-[#253238] block">{heading2}</span>
                 </span>
               </H1>
-              <Paragraph1 className="text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-[80%] sm:max-w-[60%] md:max-w-[450px] lg:max-w-[590px] text-white pt-[18px] md:pt-4 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
+              <Paragraph1 className="tracking-[0em]! text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-[80%] sm:max-w-[60%] md:max-w-[450px] lg:max-w-[590px] text-white pt-[18px] md:pt-4 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
                 {description}
               </Paragraph1>
               <PostCodeSearchField />

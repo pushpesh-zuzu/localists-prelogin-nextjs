@@ -267,10 +267,10 @@ export const POPULAR_SERVICES = [
   "Crown Reduction",
   "Crown Thinning",
   "Stump Grinding",
+  "Tree & Stump Removal",
   "Tree Felling",
   "Tree Removal",
   "Stump Removal",
-  "Tree & Stump Removal",
 ];
 export const TREE_SUREON_FEEDBACK = [
   {

@@ -23,16 +23,16 @@ export default function AveragePrice() {
             </div>
 
             {/* Right Section - Price Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-2 gap-x-3 gap-y-5 lg:gap-x-5 px-3 min-[450px]:px-20 lg:px-0 py-[23px] lg:py-16 lg:pr-7">
+            <div className="grid grid-cols-2 lg:grid-cols-2 gap-x-[14px] gap-y-5 lg:gap-x-5 px-[17px] min-[450px]:px-20 lg:px-0 py-[23px] lg:py-16 lg:pr-7">
               {/* Price Card 1 */}
               <div className="">
                 <Paragraph
                   variant="primarySmall"
-                  className="md:mx-auto max-w-[152px] min-[450px]:text-center min-[450px]:mx-auto md:text-center md:max-w-[160px] lg:max-w-full text-left lg:text-center"
+                  className="md:mx-auto max-w-[153px]  min-[360px]:max-w-[153px] min-[360px]:min-w-[153px] min-[450px]:text-center min-[450px]:mx-auto md:text-center md:max-w-[160px] lg:max-w-full text-left lg:text-center"
                 >
                   For a small tree removal (under 25ft), the average cost is
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center lg:text-center text-[#253238] mt-8 md:mt-3 lg:mt-3">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center md:text-center lg:text-center text-[#253238] mt-7 md:mt-3 lg:mt-3">
                   £450
                 </p>
               </div>
@@ -41,11 +41,11 @@ export default function AveragePrice() {
               <div className="">
                 <Paragraph
                   variant="primarySmall"
-                  className="md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto  md:text-center lg:text-center max-w-[164px] md:max-w-[220px] lg:min-w-[264px]"
+                  className="tracking-[-0.03em]! md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto  md:text-center lg:text-center max-w-[164px] md:max-w-[220px] lg:min-w-[264px]"
                 >
                   For a medium stump removal under 15 inch diameter), the average cost is
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] mt-3">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center md:text-center text-[#253238] mt-3">
                   £215
                 </p>
               </div>
@@ -61,7 +61,7 @@ export default function AveragePrice() {
                 >
                   Trimming or pruning a small tree (under 25ft) costs on average
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] max-[336px]:mt-[12px] mt-[12%] md:mt-3 sm:mt-4">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center md:text-center text-[#253238] max-[336px]:mt-[12px] mt-[12%] md:mt-3 sm:mt-4">
                   £250
                 </p>
               </div>
@@ -70,11 +70,11 @@ export default function AveragePrice() {
               <div className="">
                 <Paragraph
                   variant="primarySmall"
-                  className="md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center max-w-[154px] md:max-w-[220px] lg:min-w-[264px]"
+                  className="md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center max-w-[150px] md:max-w-[220px] lg:min-w-[264px]"
                 >
                   For medium stump grinding (under 15 inch in diameter), the average cost is
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] mt-3">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center md:text-center text-[#253238] mt-2.5 min-[331px]:mt-[18px] md:mt-3 mr-1 sm:mr-0">
                   £115
                 </p>
               </div>
@@ -90,10 +90,10 @@ export default function AveragePrice() {
           <p
             className="text-[12px] leading-[12px]
         lg:text-[16px] lg:leading-[16px]
-        lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[-0.03em] font-normal lg:font-bold"
+        lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[0em]! font-normal lg:font-bold"
           >
             *costs are estimates only, to get a more specific estimate try our{" "}
-            <a href="#" className="underline font-normal text-[#00AFE3]">
+            <a href="#" className="underline font-normal md:font-bold text-[#00AFE3]">
               Tree Surgery Calculator
             </a>
           </p>
