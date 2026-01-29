@@ -31,7 +31,7 @@ export default function PopularJobNearMe({
           />
 
           {/* 2️⃣ Normal content layer */}
-          <div className="relative z-10 h-full pt-[30px] md:pt-[37px] xl:pt-[20px] md:pb-[24px] xl:pb-0 md:px-8 xl:px-15 flex flex-col md:justify-center max-w-full lg:max-w-[70%]">
+          <div className="relative z-10 h-full pt-[30px] md:pt-[37px] xl:pt-[0px] md:pb-[24px] xl:pb-0 md:px-8 xl:px-15 flex flex-col md:justify-center max-w-full lg:max-w-[70%]">
             <H2 className="text-white mb-4 md:mb-0 md:pb-4 xl:pb-[35px]">
               Popular Jobs.
             </H2>
@@ -45,7 +45,7 @@ export default function PopularJobNearMe({
             >
               Click below to get a quote for the specific job you want
             </p>
-            <div className=" flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 md:max-w-[400px] xl:max-w-full">
+            <div className=" flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4 md:max-w-[400px] xl:max-w-full">
               {services.map((service) => (
                 <ServicesButton
                   mobileBorder="border-2"
