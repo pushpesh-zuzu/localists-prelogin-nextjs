@@ -14,7 +14,6 @@ import {
     VETTED_DATA_DRIVEWAY_INSTALLER,
 } from "./DrivewayInstallersData";
 import { FAQ } from "../FAQ";
-import PopularJobNearMe from "../PopularJobNearMe";
 import NearmeMember from "../NearmeMember";
 import Footer from "../../Footer/Footer";
 import HowItWorkNearMe from "../HowItWorkNearMe";
@@ -24,6 +23,7 @@ import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
+import DrivewayPopularJobNearMe from "./DrivewayPopularJobNearMe";
 
 export const metadata = {
     title: "Find Driveway Companies & Driveway Contractors Near Me - Localists",
@@ -64,7 +64,7 @@ function DrivewayInstallers() {
                 vettedHeading2="trust"
                 breadcrumb={BREADCRUM_DATA_DRIVEWAY}
             />
-            <PopularJobNearMe
+            <DrivewayPopularJobNearMe
                 services={POPULAR_SERVICES}
                 popularImage="/nearme/preparing-install-pavers.webp"
                 altText="installer creating cement mix for block paving driveway installation"
@@ -78,7 +78,11 @@ function DrivewayInstallers() {
             <UserFeedbackNearMe feedbackData={DRIVEWAY_INSTALLERS_FEEDBACK} />
             <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
-            <FAQ data={FREQUENTLY_DATA_DRIVEWAY_INSTALLERS["driveway-installers-near-me"]} />
+            <div className="-mt-[15px] xl:-mt-[50px]">
+                <FAQ
+                    data={FREQUENTLY_DATA_DRIVEWAY_INSTALLERS["driveway-installers-near-me"]}
+                />
+            </div>
 
             <DiscoverNearMe homeData={DRIVEWAY_INSTALLERS_DATA} />
 

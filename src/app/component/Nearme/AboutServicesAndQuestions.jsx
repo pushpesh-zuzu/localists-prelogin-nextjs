@@ -129,7 +129,7 @@ const AboutServicesAndQuestions = ({
                     {row.map((cell, c) => (
                       <td
                         key={c}
-                        className={`border p-3 align-top ${c === 0 ? "font-bold" : ""}`}
+                        className={`border p-3 ${c !== 0 ? "align-top" : "align-middle font-bold"}`}
                       >
                         {cell}
                       </td>

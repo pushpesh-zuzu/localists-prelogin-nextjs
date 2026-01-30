@@ -16,14 +16,14 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "pbold",
         text: "Hiring through Localists just makes sense.",
-        className: "my-[15px] md:my-[25px]",
+        // className: "my-[15px] md:my-[25px]",
     },
     {
         type: "image",
         src: "/nearme/residental-property.webp",
         alt: "newly installed resin driveway in a residential property",
         marginBottom: true,
-        // marginTop:true
+        marginTop:true
     },
     {
         type: "h2",
@@ -112,6 +112,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         src: "/nearme/home.webp",
         alt: "newly installed tarmac driveway in a home",
         marginBottom: true,
+        marginTop: true
     },
     {
         type: "h2",
