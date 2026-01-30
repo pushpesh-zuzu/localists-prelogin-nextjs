@@ -22,7 +22,7 @@ const AboutServicesAndQuestions = ({
           <NearmeH2Heading
             key={index}
             headdingblue={block.text}
-            className="mb-5 md:mb-[25px] max-w-[90%] md:max-w-full"
+            className="mb-5 md:mb-[25px] max-w-[100%] md:max-w-full"
           />
         );
       case "image":
@@ -50,7 +50,7 @@ const AboutServicesAndQuestions = ({
         return <AveragePrice key={index} />;
       case "h3":
         return (
-          <H3 key={index} className={`${textBase} font-bold mb-2 text-black`}>
+          <H3 key={index} className={`${textBase} font-bold mb-2 text-[#253238]`}>
             {block.text}
           </H3>
         );
@@ -63,7 +63,7 @@ const AboutServicesAndQuestions = ({
             variant="primarySmall"
             key={index}
             bold="font-normal"
-            className={`${textBase} ${block?.notMarginBottom ? "" : "mb-[15px] md:mb-[25px]"} ${block?.className ? block?.className : ""} text-black tracking-[0em]!`}
+            className={`${textBase} ${block?.notMarginBottom ? "" : "mb-[15px] md:mb-[25px]"} ${block?.className ? block?.className : ""} text-[#253238] tracking-[0em]!`}
           >
             <span dangerouslySetInnerHTML={{ __html: block.text }} />
           </Paragraph>

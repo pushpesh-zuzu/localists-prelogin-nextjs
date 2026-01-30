@@ -40,7 +40,7 @@ export default function HireRelatedToServiceNearMe({
                           text-[30px] md:text-[35px] leading-7 md:leading-6
                           lg:text-[50px] lg:leading-[55px] text-white md:whitespace-nowrap"
             >
-              {heading1} <span className="text-[#023047]">{heading2}</span>
+              {heading1} <span className="text-[#253238]">{heading2}</span>
             </h2>
             <nav className="flex gap-1 sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap">
               {tabs.map((tab, index) => (

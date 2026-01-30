@@ -38,7 +38,7 @@ export default function DrivewayPopularJobNearMe({
 
                         {/* 🔥 Centered Services Section */}
                         <div className=" flex md:hidden items-center justify-center">
-                            <div className="w-[260px] min-[440px]:w-[302px] min-[512px]:w-[350px]">
+                            <div className="w-[265px] min-[440px]:w-[302px] min-[512px]:w-[350px]">
                                 <div className="flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4 md:max-w-[400px] xl:max-w-full">
                                     {services.map((service) => (
                                         <ServicesButton
@@ -77,7 +77,7 @@ export default function DrivewayPopularJobNearMe({
                         width={400}
                         height={600}
                         fetchPriority="high"
-                        className="hidden md:block w-auto h-[280px] lg:h-[380px] xl:h-[541px] xl:w-[450px] absolute md:-right-13 lg:-right-14 xl:-right-22 bottom-0 z-20 pointer-events-none"
+                        className="hidden md:block w-auto h-[280px] lg:h-[380px] xl:h-[541px] xl:w-[450px] absolute md:-right-13 lg:-right-14 xl:-right-23 bottom-0 z-20 pointer-events-none"
                     />
 
                     <LogoIcon className="hidden md:block absolute -bottom-1 -right-10 xl:-right-13 w-[100px] h-6 lg:w-[140px] lg:h-8 xl:w-[200px] xl:h-12" />
