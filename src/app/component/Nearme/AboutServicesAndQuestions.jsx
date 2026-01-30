@@ -8,7 +8,7 @@ import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import AveragePrice from "./AveragePrice";
 
 const textBase =
-  "font-[Arial] tracking-[-0.03em] text-[16px] leading-[20px] md:text-[16px] md:leading-[16px] lg:text-[20px] lg:leading-[24px]";
+  "font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[16px] lg:text-[20px] lg:leading-[24px]";
 
 const AboutServicesAndQuestions = ({
   title,
