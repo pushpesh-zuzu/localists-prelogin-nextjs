@@ -76,20 +76,21 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     type: "p",
     text: "When you hire through Localists, you’re not just picking a random name online. We’ve already put them through our rigorous registration process, so you can rest easy knowing you’ll only get the best landscape gardeners when you hire through us. We make it easy for you to check each landscape gardener's credentials and skills. You can also view things such as",
   },
+ 
   {
     type: "li",
     text: "Their most recent projects",
-    className: "mr-5",
+    // className: "mr-5",
   },
   {
     type: "li",
     text: "Insurance documents clearly displayed",
-    className: "mr-5",
+    // className: "mr-5 ",
   },
   {
     type: "li",
     text: "Reviews sourced from various review sites",
-    className: "mr-5",
+    className: "mb-[0px]",
   },
 
   {
@@ -111,6 +112,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "A landscaper, on the other hand, goes beyond maintenance. A landscape gardener or landscape architect can design and build outdoor spaces, often from the ground up. They handle both hard landscaping (paths, patios, walls) and soft landscaping (planting schemes, turfing). Many landscapers also provide maintenance services, so the line can blur.",
+    notMarginBottom:true
   },
   {
     type: "image",
@@ -130,6 +132,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "pbold",
     text: "Here's a rundown of what landscape architect or landscape garden designers commonly offer:",
+    className: "my-[15px] md:my-[25px]",
   },
   {
     type: "h3",
@@ -183,6 +186,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "Many landscapers install features such as fire pits, raised beds, seating areas, water features, and lighting. These additions enhance both the usability and aesthetic of a garden.",
+    notMarginBottom:true
   },
 
   {
@@ -213,13 +217,6 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     type: "h2",
     text: "How much does a landscape gardener cost?",
   },
-  {
-    type: "image",
-    src: "/nearme/Landscaping/plantsAndFlowers.webp",
-    alt: "Professional landscaper carefully placing different plants and flowers around site",
-    marginTop: true,
-    marginBottom: true,
-  },
 
   {
     type: "p",
@@ -228,6 +225,14 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "For example, a residential landscaping project might involve lawn installation, planting, and a simple patio area. A commercial landscaping project on the other hand, could require larger-scale groundwork, drainage, lighting, or structural features. This makes it more labour-intensive and expensive.",
+    notMarginBottom:true
+  },
+  {
+    type: "image",
+    src: "/nearme/Landscaping/plantsAndFlowers.webp",
+    alt: "Professional landscaper carefully placing different plants and flowers around site",
+    marginTop: true,
+    marginBottom: true,
   },
   {
     type: "pbold",
@@ -257,7 +262,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     type: "p",
     text: "For more accurate cost estimates, simply start your search at Localists today, and we will match you with trusted local landscape gardeners or gardening companies near you, who’ll provide free, no-obligation quotes tailored to your needs",
   },
-  { type: "PostCodeSection" },
+  { type: "PostCodeSection",className:"my-[30px] lg:mt-[60px] lg:mb-[0px]" },
 
   //  {
   //   type:"p",

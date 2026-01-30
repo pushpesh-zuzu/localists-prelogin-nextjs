@@ -43,18 +43,18 @@ function UserFeedBackCardFullHeight({ item, mobileWidth = "w-[198px]" }) {
           </div>
           <p
             className="self-end mt-2 font-bold text-[#253238] text-[21px]
-                        md:text-[16px] md:tracking-[-0.03em]
-                        md:lg:text-[20px]
-                        md:xl:text-[28px]"
+                        md:text-[16px] leading-[22px]
+                        md:lg:text-[20px] 
+                        md:xl:text-[28px] xl:leading-[28px]"
           >
             {item.name}
           </p>
           {item?.location && (
             <p
-              className="self-end mt-2 font-bold text-[#253238] text-[21px]
-                        md:text-[16px] md:tracking-[-0.03em]
-                        md:lg:text-[20px]
-                        md:xl:text-[28px]"
+              className="self-end font-bold text-[#253238] text-[21px]
+                        md:text-[16px] leading-[22px]
+                        md:lg:text-[20px]  
+                        md:xl:text-[28px] xl:leading-[28px]"
             >
               {item?.location}
             </p>

@@ -8,7 +8,7 @@ import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import AveragePrice from "./AveragePrice";
 
 const textBase =
-  "font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[16px] lg:text-[20px] lg:leading-[24px]";
+  "font-[Arial] text-[14px] leading-[16px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px]"
 
 const AboutServicesAndQuestions = ({
   title,
@@ -39,7 +39,7 @@ const AboutServicesAndQuestions = ({
               width={block?.width || 1000}
               height={block?.height || 600}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-              className={`w-full h-auto object-cover rounded-[30px] ${
+              className={`w-full h-auto object-cover rounded-lg ${
                 block?.className
               } ${block?.marginTop ? "mt-[30px] lg:mt-[72px]" : ""} ${
                 block?.marginBottom ? "mb-5 lg:mb-[70px]" : ""
@@ -58,7 +58,7 @@ const AboutServicesAndQuestions = ({
           </H3>
         );
       case "PostCodeSection":
-        return <PostCodeSection key={index} />;
+        return <PostCodeSection classNamePostCode={block?.className} key={index} />;
 
       case "p":
         return (
@@ -87,7 +87,7 @@ const AboutServicesAndQuestions = ({
 
       case "li":
         return (
-          <ul key={index} className="mb-2.5 md:mb-[15px] list-disc pl-5 md:pl-8">
+          <ul key={index} className={`${block?.className ? block?.className:'mb-2.5 md:mb-[15px]' } list-disc pl-5 md:pl-8`}>
             <li className={textBase}>
               {block.heading}
               {block.text && (
