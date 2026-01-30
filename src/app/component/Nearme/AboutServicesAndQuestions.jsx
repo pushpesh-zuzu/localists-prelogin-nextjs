@@ -8,7 +8,7 @@ import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import AveragePrice from "./AveragePrice";
 
 const textBase =
-  "font-[Arial] text-[16px] leading-[16px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px]"
+  "font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em]!"
 
 const AboutServicesAndQuestions = ({
   title,
@@ -90,7 +90,7 @@ const AboutServicesAndQuestions = ({
             <li className={textBase}>
               {block.heading}
               {block.text && (
-                <span className="leading-[22px]" dangerouslySetInnerHTML={{ __html: block.text }} />
+                <span className="" dangerouslySetInnerHTML={{ __html: block.text }} />
               )}
             </li>
           </ul>
