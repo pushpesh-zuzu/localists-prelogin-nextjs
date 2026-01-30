@@ -5,18 +5,17 @@ import VettedSection from "../VettedSection";
 import AboutServicesAndQuestions from "../AboutServicesAndQuestions";
 import {
     BREADCRUM_DATA_DRIVEWAY,
-    FREQUENTLY_DATA_TREE_SURGEON,
+    FREQUENTLY_DATA_DRIVEWAY_INSTALLERS,
     POPULAR_SERVICES,
     QUESTION_AND_ABOUT_SERVICE,
-    // TREE_SRUGEON_ADVICEINSIGHT,
     DRIVEWAY_INSTALLERS_FEEDBACK,
-    TREE_SURGEON_DATA,
+    DRIVEWAY_INSTALLERS_DATA,
     DRIVEWAY_INSTALLERS_TABDATA,
     VETTED_DATA_DRIVEWAY_INSTALLER,
 } from "./DrivewayInstallersData";
 // import DiscoverServices from "../../Home/DiscoverServices/DiscoverServices";
 // import Feature from "../Feature";
-// import { FAQ } from "../FAQ";
+import { FAQ } from "../FAQ";
 import PopularJobNearMe from "../PopularJobNearMe";
 // import NearmeMember from "../NearmeMember";
 import Footer from "../../Footer/Footer";
@@ -28,7 +27,7 @@ import UserFeedbackNearMe from "../UserFeedbackNearMe";
 import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 // import FAQScript from "../../common/seo/FAQScript";
-// import DiscoverNearMe from "../DiscoverNearMe";
+import DiscoverNearMe from "../DiscoverNearMe";
 
 export const metadata = {
     title: "Find Driveway Companies & Driveway Contractors Near Me - Localists",
@@ -83,7 +82,9 @@ function DrivewayInstallers() {
             <UserFeedbackNearMe feedbackData={DRIVEWAY_INSTALLERS_FEEDBACK} />
             <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
+            <FAQ data={FREQUENTLY_DATA_DRIVEWAY_INSTALLERS["driveway-installers-near-me"]} />
 
+            <DiscoverNearMe homeData={DRIVEWAY_INSTALLERS_DATA} />
 
 
             <Footer />

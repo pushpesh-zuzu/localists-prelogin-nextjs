@@ -29,9 +29,8 @@ const AboutServicesAndQuestions = ({
         return (
           <div
             key={index}
-            className={`relative w-full overflow-hidden ${
-              block.className || ""
-            }`}
+            className={`relative w-full overflow-hidden ${block.className || ""
+              }`}
           >
             <Image
               src={block?.src}
@@ -39,11 +38,9 @@ const AboutServicesAndQuestions = ({
               width={block?.width || 1000}
               height={block?.height || 600}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-              className={`w-full h-auto object-cover rounded-lg ${
-                block?.className
-              } ${block?.marginTop ? "mt-[30px] lg:mt-[72px]" : ""} ${
-                block?.marginBottom ? "mb-5 lg:mb-[70px]" : ""
-              }`}
+              className={`w-full h-auto object-cover rounded-lg ${block?.className
+                } ${block?.marginTop ? "mt-[30px] lg:mt-[72px]" : ""} ${block?.marginBottom ? "mb-5 lg:mb-[70px]" : ""
+                }`}
               priority={block?.priority || false}
             />
           </div>
@@ -65,7 +62,7 @@ const AboutServicesAndQuestions = ({
             variant="primarySmall"
             key={index}
             bold="font-normal"
-            className={`${textBase} ${block?.notMarginBottom? "":"mb-[15px] md:mb-[25px]"} ${block?.className? block?.className:""} text-black tracking-[0em]!`}
+            className={`${textBase} ${block?.notMarginBottom ? "" : "mb-[15px] md:mb-[25px]"} ${block?.className ? block?.className : ""} text-black tracking-[0em]!`}
           >
             <span dangerouslySetInnerHTML={{ __html: block.text }} />
           </Paragraph>
@@ -76,9 +73,8 @@ const AboutServicesAndQuestions = ({
           <Paragraph
             variant="primarySmall"
             key={index}
-            className={`${textBase} font-bold ${
-              block?.className ? block?.className : "mb-[5px] md:mb-2.5"
-            } text-[#253238]`}
+            className={`${textBase} font-bold ${block?.className ? block?.className : "mb-[5px] md:mb-2.5"
+              } text-[#253238]`}
           >
             {block.text}
           </Paragraph>
@@ -98,7 +94,7 @@ const AboutServicesAndQuestions = ({
 
       case "libold":
         return (
-         <ul key={index} className="mb-2.5 md:mb-[15px] list-disc pl-5 md:pl-8">
+          <ul key={index} className="mb-2.5 md:mb-[15px] list-disc pl-5 md:pl-8">
             <li className={`${textBase} font-bold`}>{block.heading}</li>
           </ul>
         );
@@ -120,7 +116,7 @@ const AboutServicesAndQuestions = ({
               <thead className="bg-gray-100">
                 <tr>
                   {block.tableHeaders.map((h, i) => (
-                    <th key={i} className="border p-3 text-left">
+                    <th key={i} className="border p-3 text-center">
                       {h}
                     </th>
                   ))}
@@ -151,20 +147,20 @@ const AboutServicesAndQuestions = ({
 
   return (
     <div className="md:block px-2.5 pt-5 pb-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px]  xl:pt-[72px] xl:pb-[72px]">
-    <WrapperBGWidth>
-      <div className="container max-w-[1000px] mx-auto  ">
-        {contentBlocks.map(renderBlock)}
+      <WrapperBGWidth>
+        <div className="container max-w-[1000px] mx-auto  ">
+          {contentBlocks.map(renderBlock)}
 
-        {title && (
-          <button
-            onClick={handleScrollToBottom}
-            className="mt-6 bg-blue-600 text-white px-6 py-3 rounded"
-          >
-            {buttonText || "Get Quotes Now"}
-          </button>
-        )}
-      </div>
-    </WrapperBGWidth>
+          {title && (
+            <button
+              onClick={handleScrollToBottom}
+              className="mt-6 bg-blue-600 text-white px-6 py-3 rounded"
+            >
+              {buttonText || "Get Quotes Now"}
+            </button>
+          )}
+        </div>
+      </WrapperBGWidth>
     </div>
   );
 };
