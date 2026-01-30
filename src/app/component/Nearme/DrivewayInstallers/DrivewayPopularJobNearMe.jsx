@@ -77,9 +77,8 @@ export default function DrivewayPopularJobNearMe({
                         width={400}
                         height={600}
                         fetchPriority="high"
-                        className="hidden md:block w-auto h-[280px] lg:h-[380px] xl:h-[541px] xl:w-[420px] absolute md:-right-13 lg:-right-14 xl:-right-17 bottom-0 z-20 pointer-events-none"
+                        className="hidden md:block w-auto h-[280px] lg:h-[380px] xl:h-[541px] xl:w-[450px] absolute md:-right-13 lg:-right-14 xl:-right-22 bottom-0 z-20 pointer-events-none"
                     />
-
 
                     <LogoIcon className="hidden md:block absolute -bottom-1 -right-10 xl:-right-13 w-[100px] h-6 lg:w-[140px] lg:h-8 xl:w-[200px] xl:h-12" />
                 </div>
