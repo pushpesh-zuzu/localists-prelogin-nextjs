@@ -209,19 +209,19 @@ export const FREQUENTLY_DATA_DRIVEWAY_INSTALLERS = {
         </tr>
         <tr>
           <td>Resin Bound</td>
-          <td>~£60</td>
+          <td>£60</td>
         </tr>
         <tr>
           <td>Gravel</td>
-          <td>~£60</td>
+          <td>£60</td>
         </tr>
         <tr>
           <td>Block Paving / Stone</td>
-          <td>~£110</td>
+          <td>£110</td>
         </tr>
         <tr>
           <td>Concrete</td>
-          <td>~£90</td>
+          <td>£90</td>
         </tr>
       </tbody>
     </table>

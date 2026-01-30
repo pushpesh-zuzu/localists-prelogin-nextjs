@@ -129,7 +129,7 @@ const AboutServicesAndQuestions = ({
                     {row.map((cell, c) => (
                       <td
                         key={c}
-                        className={`border p-3 ${c === 0 ? "font-bold" : ""}`}
+                        className={`border p-3 align-top ${c === 0 ? "font-bold" : ""}`}
                       >
                         {cell}
                       </td>
@@ -148,9 +148,9 @@ const AboutServicesAndQuestions = ({
 
   return (
     <div className="md:block px-[30px] pt-10 pb-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px]  xl:pt-[72px] xl:pb-[72px]">
-    <WrapperBGWidth>
-      <div className="container max-w-[1000px] mx-auto  ">
-        {contentBlocks.map(renderBlock)}
+      <WrapperBGWidth>
+        <div className="container max-w-[1000px] mx-auto  ">
+          {contentBlocks.map(renderBlock)}
 
           {title && (
             <button

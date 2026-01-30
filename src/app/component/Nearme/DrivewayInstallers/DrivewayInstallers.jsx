@@ -13,20 +13,16 @@ import {
     DRIVEWAY_INSTALLERS_TABDATA,
     VETTED_DATA_DRIVEWAY_INSTALLER,
 } from "./DrivewayInstallersData";
-// import DiscoverServices from "../../Home/DiscoverServices/DiscoverServices";
-// import Feature from "../Feature";
 import { FAQ } from "../FAQ";
 import PopularJobNearMe from "../PopularJobNearMe";
-// import NearmeMember from "../NearmeMember";
+import NearmeMember from "../NearmeMember";
 import Footer from "../../Footer/Footer";
 import HowItWorkNearMe from "../HowItWorkNearMe";
 import HireRelatedToServiceNearMe from "../HireRelatedToServiceNearMe";
 import UserFeedbackNearMe from "../UserFeedbackNearMe";
-// import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-// import AdviceInsightNearMe from "../AdviceInsightNearMe";
 import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
-// import FAQScript from "../../common/seo/FAQScript";
+import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 
 export const metadata = {
@@ -53,7 +49,7 @@ function DrivewayInstallers() {
     return (
         <>
             <CloseBrowserAbandon />
-            {/* <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]} /> */}
+            <FAQScript FAQ={FREQUENTLY_DATA_DRIVEWAY_INSTALLERS["driveway-installers-near-me"]} />
             <HeroSectionNearMe
                 heading1="Find Driveway Installers"
                 heading2="Near You"
@@ -86,7 +82,9 @@ function DrivewayInstallers() {
 
             <DiscoverNearMe homeData={DRIVEWAY_INSTALLERS_DATA} />
 
-
+            <NearmeMember
+                description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
+            />
             <Footer />
         </>
     );
