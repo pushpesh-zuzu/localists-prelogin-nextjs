@@ -319,7 +319,8 @@ export const POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME = [
   "Re-Seaming",
   "Sub-Base Installation",
   "Replacement",
-  "Weed Membrane Installation   Edging & Border Installation ",
+  "Weed Membrane Installation",
+  "Edging & Border Installation",
   "Drainage System Installation",
 ];
 export const FEEDBACK_ARTIFICIAL_GRASS_NEARME = [
