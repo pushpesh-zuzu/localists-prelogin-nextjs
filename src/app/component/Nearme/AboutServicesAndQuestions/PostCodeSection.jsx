@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import dynamic from "next/dynamic";
 import React from "react";
 const PostCodeSearchField = dynamic(() => import("../PostCodeSearchField"), {
@@ -6,7 +6,11 @@ const PostCodeSearchField = dynamic(() => import("../PostCodeSearchField"), {
   loading: () => <div className="hidden">Loading...</div>,
 });
 
-function PostCodeSection({classNamePostCode="my-[30px] lg:mt-[60px] lg:mb-[60px]"}) {
+function PostCodeSection({
+  classNamePostCode = "my-[30px] lg:mt-[60px] lg:mb-[60px]",
+  serviceId = 112,
+  serviceName = "Tree Surgery",
+}) {
   return (
     <div
       className={`${classNamePostCode} rounded-[20px]
@@ -29,7 +33,7 @@ function PostCodeSection({classNamePostCode="my-[30px] lg:mt-[60px] lg:mb-[60px]
       </p>
       {/* Left – Search */}
       <div className="w-[223px] mx-auto lg:mx-0 md:w-[343px] flex justify-center">
-        <PostCodeSearchField buttonBg="bg-[#02D07B]" margin={false} />
+        <PostCodeSearchField serviceId={serviceId} serviceName={serviceName} buttonBg="bg-[#02D07B]" margin={false} />
       </div>
 
       {/* Right – Text */}

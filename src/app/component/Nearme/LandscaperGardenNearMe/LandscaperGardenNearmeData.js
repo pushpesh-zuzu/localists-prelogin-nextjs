@@ -1,4 +1,5 @@
 export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
+ 
   {
     type: "h2",
     text: "Your shortcut to free landscape gardening quotes",
@@ -6,8 +7,15 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "Having work done on your property can significantly increase its value - especially on your garden. But hiring the wrong landscaper can leave you out of pocket and even de-value your properties value. That’s where we come in. At Localists, we do all the vetting for you, and make sure that only the best local landscapers are present on our platform. All of the landscape gardeners on our platform are put through a rigorous  vetting procedure, and we source all of their reviews from various review sites across the web and put it all in one convenient place for you. Just enter your postcode and a few details to get started!",
+    notMarginBottom:true
   },
-
+ {
+    type: "image",
+    src: "/nearme/Landscaping/natuaralGrassTurf.webp",
+    alt: "landscaping expert installing natural grass turf in a home garden",
+    marginBottom: true,
+    marginTop:true
+  },
   {
     type: "h2",
     text: "Benefits of hiring a local landscape gardener",
@@ -24,32 +32,26 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "li",
     text: "Local expertise - Local landscapers understand your region’s weather and soil conditions, helping you choose the right plants while ensuring compliance with local planning regulations.",
-    className: "mr-5",
   },
   {
     type: "li",
     text: "Smart, lasting design - Landscape gardeners create gardens built to last and tailored to your lifestyle, advising against design choices that may cause issues later.",
-    className: "mr-5",
   },
   {
     type: "li",
     text: "Access to quality materials - Many landscape gardeners have long-term relationships with trade merchants, allowing them to source high-quality plants, stone, and timber at competitive prices.",
-    className: "mr-5",
   },
   {
     type: "li",
     text: "Avoid costly mistakes - Proper drainage, soil preparation, and plant selection help prevent expensive fixes that often arise from DIY landscaping.",
-    className: "mr-5",
   },
   {
     type: "li",
     text: "Boost property value - Professional landscaping can increase your property’s value, and experienced landscapers can advise on designs that add the most value.",
-    className: "mr-5",
   },
   {
     type: "li",
     text: "Full-service installation - Local landscapers can handle patios, decking, fencing, pathways, and lighting, saving you from learning multiple trades yourself.",
-    className: "mr-5",
   },
   {
     type: "li",
@@ -63,8 +65,8 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   },
   {
     type: "image",
-    src: "/nearme/Landscaping/natuaralGrassTurf.webp",
-    alt: "landscaping expert installing natural grass turf in a home garden",
+    src: "/nearme/Landscaping/dripIrigation.webp",
+    alt: "Drip irrigation system being installed by a professional landscaper",
     marginTop: true,
     marginBottom: true,
   },
@@ -92,15 +94,13 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     text: "Reviews sourced from various review sites",
     className: "mb-[0px]",
   },
-
-  {
+ {
     type: "image",
-    src: "/nearme/Landscaping/dripIrigation.webp",
-    alt: "Drip irrigation system being installed by a professional landscaper",
+    src: "/nearme/Landscaping/residentialProperty.webp",
+    alt: "newly completed landscaping project in a residential property ",
     marginTop: true,
     marginBottom: true,
   },
-
   {
     type: "h2",
     text: "What's the difference between a gardener and a landscaper?",
@@ -116,8 +116,8 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   },
   {
     type: "image",
-    src: "/nearme/Landscaping/residentialProperty.webp",
-    alt: "newly completed landscaping project in a residential property ",
+    src: "/nearme/Landscaping/plantingBeds.webp",
+    alt: "new landscape backgarden project with raised planting beds",
     marginTop: true,
     marginBottom: true,
   },
@@ -186,16 +186,9 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "Many landscapers install features such as fire pits, raised beds, seating areas, water features, and lighting. These additions enhance both the usability and aesthetic of a garden.",
-    notMarginBottom:true
   },
 
-  {
-    type: "image",
-    src: "/nearme/Landscaping/plantingBeds.webp",
-    alt: "new landscape backgarden project with raised planting beds",
-    marginTop: true,
-    marginBottom: true,
-  },
+  
   {
     type: "h3",
     text: "Eco-friendly & sustainable sandscaping",
@@ -211,8 +204,15 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "Services may also include wildlife-focused landscaping such as rain gardens, pollinator-friendly planting, wildflower meadows, and foodscaping (edible gardens that blend with the landscape). These projects support biodiversity while adding beauty and function.",
+  notMarginBottom:true
   },
-
+  {
+    type: "image",
+    src: "/nearme/Landscaping/plantsAndFlowers.webp",
+    alt: "Professional landscaper carefully placing different plants and flowers around site",
+    marginTop: true,
+    marginBottom: true,
+  },
   {
     type: "h2",
     text: "How much does a landscape gardener cost?",
@@ -227,42 +227,34 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     text: "For example, a residential landscaping project might involve lawn installation, planting, and a simple patio area. A commercial landscaping project on the other hand, could require larger-scale groundwork, drainage, lighting, or structural features. This makes it more labour-intensive and expensive.",
     notMarginBottom:true
   },
-  {
-    type: "image",
-    src: "/nearme/Landscaping/plantsAndFlowers.webp",
-    alt: "Professional landscaper carefully placing different plants and flowers around site",
-    marginTop: true,
-    marginBottom: true,
-  },
+
   {
     type: "pbold",
     text: "However, on average in the UK, here’s what you can expect to spend:",
+        className: "my-[15px] md:my-[25px]",
+
   },
   {
     type: "li",
     text: "<strong>Basic garden tidy-up and planting  </strong> – from <strong> £800 to £1,500</strong>",
-    className: "mr-5",
   },
   {
     type: "li",
     text: "<strong>Small garden landscaping with lawn, patio, and beds</strong> – around <strong> beds  £4,000 to £6,000 </strong>",
-    className: "mr-5",
   },
   {
     type: "li",
     text: "<strong>Medium-sized residential garden with more complex design (decking, lighting, water features, raised beds) </strong> – between  <strong> £6,000 and £10,000+</strong>",
-    className: "mr-5",
   },
   {
     type: "li",
     text: "<strong>Commercial or large-scale landscaping projects</strong> – typically  <strong>  £15,000 upwards, </strong> depending on size, design, and required features.",
-    className: "mr-5",
   },
   {
     type: "p",
     text: "For more accurate cost estimates, simply start your search at Localists today, and we will match you with trusted local landscape gardeners or gardening companies near you, who’ll provide free, no-obligation quotes tailored to your needs",
   },
-  { type: "PostCodeSection",className:"my-[30px] lg:mt-[60px] lg:mb-[0px]" },
+  { type: "PostCodeSection",className:"mt-[30px] mb-0 lg:mt-[60px] lg:mb-[0px]" },
 
   //  {
   //   type:"p",

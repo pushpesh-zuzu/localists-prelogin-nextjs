@@ -41,7 +41,8 @@ function UserFeedBackCardFullHeight({ item, mobileWidth = "w-[198px]" }) {
               {item.text}
             </p>
           </div>
-          <p
+          <div className="ml-auto">
+            <p
             className="self-end mt-2 font-bold text-[#253238] text-[21px]
                         md:text-[16px] leading-[22px]
                         md:lg:text-[20px] 
@@ -59,6 +60,7 @@ function UserFeedBackCardFullHeight({ item, mobileWidth = "w-[198px]" }) {
               {item?.location}
             </p>
           )}
+          </div>
         </div>
       </div>
     </div>

@@ -1,22 +1,22 @@
 import SEO from "@/app/component/common/seo/SEO";
-import LandscapeGardenNearme from "@/app/component/Nearme/LandscaperGardenNearMe/LandscapeGardenNearme";
 import React, { Suspense } from "react";
 import LoadingIndicator from "@/app/component/common/Loader/LoaderIndicatore";
+import ArtificialGrassInstallationNearme from "@/app/component/Nearme/ArtificialGrassInstallationNearme/ArtificialGrassInstallationNearme";
 
 export const metadata = {
-  title: "Find Landscape Gardeners Near Me - Localists",
+  title: "Find Artificial Grass Installers Near Me - Localists",
   description:
-    "Looking to hire expert landscape gardeners or landscape architects in your local area? Start today at Localists. Obtain free no obligation quotes.",
+    "Get instant quotes from artificial grass installation specialists near you. View their past projects and read reviews before you hire. Get started today at Localists  ",
 };
 function page() {
   return (
     <>
       <SEO
-        canonicalPath="/en/gb/landscape-gardeners-near-me"
+        canonicalPath="/en/gb/artificial-grass-installers-near-me"
         bannerImage="/nearme/Landscaping/Landscapingbanner.webp"
         breadcrumb={[
           { title: "Home & Garden", path: "/home" },
-          { title: "Landscaping", path: "/landscape-gardeners-near-me" },
+          { title: "Artificial Grass Installation", path: "/artificial-grass-installers-near-me" },
         ]}
         conversion={true}
       />
@@ -27,7 +27,7 @@ function page() {
           </div>
         }
       >
-        <LandscapeGardenNearme />;
+        <ArtificialGrassInstallationNearme />;
       </Suspense>
     </>
   );

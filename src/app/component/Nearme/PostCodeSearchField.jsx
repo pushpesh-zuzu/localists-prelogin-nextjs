@@ -17,6 +17,8 @@ function PostCodeSearchField({
   onSubmit,
   margin = true,
   buttonBg = "bg-[#7DD5F1]",
+  serviceId=112,
+  serviceName="Tree Surgery"
 }) {
   const [postcode, setPostcode] = useState("");
   const [isValidating, setIsValidating] = useState(false);
@@ -197,10 +199,10 @@ function PostCodeSearchField({
       {show && (
         <BuyerRegistration
           closeModal={handleClose}
-          service_Id={112}
+          service_Id={serviceId}
           postcode={postcode}
-          serviceName="Tree Surgery"
-          service_Name="Tree Surgery"
+          serviceName={serviceName}
+          service_Name={serviceName}
         />
       )}
     </>

@@ -5,17 +5,17 @@ import React from "react";
 // import PaddingWrapper from "../PaddingWrapper";
 import VettedSection from "../VettedSection";
 import AboutServicesAndQuestions from "../AboutServicesAndQuestions";
-import {
-  QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME,
-  FREQUENTLY_DATA_LANDSCAPE_NEARME,
-  // ADVICEINSIGHT_LANDSCAPE_NEARME,
-  LANDSCAPE_NEARME_TABDATA,
-  VETTED_DATA_LANDSCAPE_NEARME,
-  BREADCRUM_DATA_LANDSCAPE_NEARME,
-  POPULAR_SERVICES_LANDSCAPE_NEARME,
-  FEEDBACK_LANDSCAPE_NEARME,
-  DISCOVER_LANDSCAPE_NEARME_DATA,
-} from "./LandscaperGardenNearmeData";
+// import {
+//   QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME,
+//   FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME,
+//   // ADVICEINSIGHT_ARTIFICIAL_NEARME,
+//   ARTIFICIAL_GRASS_NEARME_TABDATA,
+//   VETTED_DATA_ARTIFICIAL_GRASS_NEARME,
+//   BREADCRUM_DATA_ARTIFICIAL_NEARME,
+//   POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME,
+//   FEEDBACK_ARTIFICIAL_GRASS_NEARME,
+//   DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA,
+// } from "./ArtificialGrassInstallationNearmeData";
 // import DiscoverServices from "../../Home/DiscoverServices/DiscoverServices";
 // import Feature from "../Feature";
 import { FAQ } from "../FAQ";
@@ -33,6 +33,7 @@ import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
+import { ARTIFICIAL_GRASS_NEARME_TABDATA, BREADCRUM_DATA_ARTIFICIAL_GRASS_NEARME, DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA, FEEDBACK_ARTIFICIAL_GRASS_NEARME, FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME, POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME, QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME, VETTED_DATA_ARTIFICIAL_GRASS_NEARME } from "./ArtificialGrassInstallationNearmeData";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -50,53 +51,55 @@ const CloseBrowserAbandon = dynamic(
   { ssr: false },
 );
 
-function LandscapeGardenNearme() {
+function ArtificialGrassInstallationNearme() {
   usePendingBuyerRedirect();
   return (
     <>
       <CloseBrowserAbandon />
       <FAQScript
-        FAQ={FREQUENTLY_DATA_LANDSCAPE_NEARME}
+        FAQ={FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME}
       />
       <HeroSectionNearMe
-        heading1=" Find Landscape Gardeners"
+        heading1=" Find Artificial Grass Installers"
         heading2="Near You"
-        description="Find the best landscape gardeners near you! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss. "
-        bannerImage="/nearme/Landscaping/Landscapingbanner.webp"
+        description="Find the best artificial grass installers in your area, just enter your postcode and a few details for instant quotes"
+        bannerImage="/nearme/Artificial/ArtificialGrassBanner.jpg"
         bannerImageMobile="/nearme/Landscaping/landscapingMobile.webp"
-        altText="A Landscaper carefully laying a large concrete slab amongst a garden of flowers and grey pebble dash"
-        serviceId={43}
-        serviceName="Landscaping"
+        altText="Artificial grass installer landscaping a yard with artificial grass, measuring tap on grass."
+        serviceId={54}
+        serviceName="Artificial Grass Installation"
       />
       <VettedSection
-        paragraph={VETTED_DATA_LANDSCAPE_NEARME}
+        paragraph={VETTED_DATA_ARTIFICIAL_GRASS_NEARME}
         vettedHeading1="Vetted landscape gardeners you can "
         vettedHeading2="trust"
-        breadcrumb={BREADCRUM_DATA_LANDSCAPE_NEARME}
+        breadcrumb={BREADCRUM_DATA_ARTIFICIAL_GRASS_NEARME}
       />
+              {/* popularImage="/nearme/Artificial/artificialPopularJobs.webp" */}
+
       <PopularJobNearMe
-        services={POPULAR_SERVICES_LANDSCAPE_NEARME}
-        popularImage="/nearme/Landscaping/pathwayPopularJob.png"
-        altText="beautifully landscaped garden with pathway and decorative paving edges "
+        services={POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME}
+        popularImage="/nearme/Artificial/artificialPopularJobs.webp"
+        altText="Grass fitter hand cutting artificial turf with sharp cutter"
       />
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
         heading1="Landscaping Specialists"
         heading2="in your area"
-        tabData={LANDSCAPE_NEARME_TABDATA}
+        tabData={ARTIFICIAL_GRASS_NEARME_TABDATA}
       />
-      <UserFeedbackNearMe2 feedbackData={FEEDBACK_LANDSCAPE_NEARME} />
+      <UserFeedbackNearMe2 feedbackData={FEEDBACK_ARTIFICIAL_GRASS_NEARME} />
       {/* <PaddingWrapper> */}
       <AboutServicesAndQuestions
-        serviceId={43}
-        serviceName="Landscaping"
-        contentBlocks={QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME}
+        serviceId={54}
+        serviceName="Artificial Grass Installation"
+        contentBlocks={QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME}
       />
       {/* </PaddingWrapper> */}
-      <FAQ data={FREQUENTLY_DATA_LANDSCAPE_NEARME} />
+      <FAQ data={FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME} />
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}
-      <DiscoverNearMe homeData={DISCOVER_LANDSCAPE_NEARME_DATA} />
+      <DiscoverNearMe homeData={DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA} />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
       />
@@ -105,4 +108,4 @@ function LandscapeGardenNearme() {
   );
 }
 
-export default LandscapeGardenNearme;
+export default ArtificialGrassInstallationNearme;

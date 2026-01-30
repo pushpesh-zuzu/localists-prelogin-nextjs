@@ -14,6 +14,8 @@ const AboutServicesAndQuestions = ({
   title,
   contentBlocks = [],
   buttonText,
+  serviceId=112,
+  serviceName="Tree Surgery"
 }) => {
   const renderBlock = (block, index) => {
     switch (block.type) {
@@ -53,12 +55,13 @@ const AboutServicesAndQuestions = ({
         return <AveragePrice key={index} />;
       case "h3":
         return (
-          <H3 key={index} className={`${textBase} font-bold mb-2 text-black`}>
+          <H3 key={index} className={`${textBase} font-bold ${
+              block?.className ? block?.className : 'mb-[10px] md:mb-[15px]'} text-black`}>
             {block.text}
           </H3>
         );
       case "PostCodeSection":
-        return <PostCodeSection classNamePostCode={block?.className} key={index} />;
+        return <PostCodeSection serviceId={serviceId} serviceName={serviceName}  classNamePostCode={block?.className} key={index} />;
 
       case "p":
         return (

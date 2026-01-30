@@ -16,6 +16,9 @@ function HeroSectionNearMe({
   bannerImage = "",
   bannerImageMobile = "",
   altText = "Tree Surgeon",
+  serviceId=112,
+  serviceName="Tree Surgery"
+
 }) {
   return (
     <>
@@ -64,7 +67,7 @@ function HeroSectionNearMe({
               <Paragraph1 className="tracking-[0em]! text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-[80%] sm:max-w-[60%] md:max-w-[450px] lg:max-w-[590px] text-white pt-[18px] md:pt-4 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
                 {description}
               </Paragraph1>
-              <PostCodeSearchField />
+              <PostCodeSearchField serviceId={serviceId} serviceName={serviceName} />
             </div>
             <div className="flex h-[12px] ml-auto mr-auto justify-center mb-3.5 mt-[30px] md:hidden relative z-1">
               {/* <ChevroliteDoubleDownIcon /> */}
