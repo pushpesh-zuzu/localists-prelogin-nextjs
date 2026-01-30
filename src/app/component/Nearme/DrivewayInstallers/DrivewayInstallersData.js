@@ -23,7 +23,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         src: "/nearme/residental-property.webp",
         alt: "newly installed resin driveway in a residential property",
         marginBottom: true,
-        marginTop:true
+        marginTop: true
     },
     {
         type: "h2",
@@ -81,7 +81,6 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "pbold",
         text: "Reviews",
-        className: "my-[15px] md:my-[25px]",
     },
     {
         type: "p",
