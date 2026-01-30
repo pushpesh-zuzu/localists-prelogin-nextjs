@@ -32,7 +32,7 @@ export default function AveragePrice() {
                 >
                   For a small tree removal (under 25ft), the average cost is
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-left md:text-center lg:text-center text-[#253238] mt-7 md:mt-3 lg:mt-3">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-left md:text-center lg:text-center text-[#253238] mt-6 md:mt-3 lg:mt-3">
                   £450
                 </p>
               </div>
@@ -61,7 +61,7 @@ export default function AveragePrice() {
                 >
                   Trimming or pruning a small tree (under 25ft) costs on average
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-left md:text-center text-[#253238] max-[336px]:mt-[12px] mt-6 md:mt-3 sm:mt-4">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-left md:text-center text-[#253238] max-[336px]:mt-[12px] mt-12 md:mt-3 sm:mt-4">
                   £250
                 </p>
               </div>
