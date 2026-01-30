@@ -27,7 +27,7 @@ function HeroSectionNearMe({
             fill
             priority={true}
             fetchPriority="high"
-            unoptimized
+            quality={90}
             className="object-cover h-10 w-10 md:h-[380px] min-[900px]:h-[400px] lg:h-[513px] xl:h-[570px]"
             sizes="(min-width: 768px) 100vw, 0px"
           />
@@ -66,7 +66,7 @@ function HeroSectionNearMe({
               </Paragraph1>
               <PostCodeSearchField />
             </div>
-            <div className="flex h-[52px] ml-auto mr-auto justify-center mb-3.5 mt-[30px] md:hidden relative z-1">
+            <div className="flex h-[12px] ml-auto mr-auto justify-center mb-3.5 mt-[30px] md:hidden relative z-1">
               {/* <ChevroliteDoubleDownIcon /> */}
             </div>
           </section>

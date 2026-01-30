@@ -10,7 +10,7 @@ export default function FeedbacCardCarouselNearme({
   data,
   renderCard,
   mobileImageWidth = 72,
-  mobileArrowSpacing = 15,
+  mobileArrowSpacing = 0,
   showArrowAndDots = true,
 }) {
   const MIN_SLIDES_FOR_LOOP = 6;
