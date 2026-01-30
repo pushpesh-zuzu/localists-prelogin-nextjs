@@ -56,12 +56,11 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "li",
     text: "Seasonal care - Lawn care, hedge trimming, planting, and regular upkeep keep your garden looking its best throughout the year.",
-    className: "mr-5",
   },
   {
     type: "li",
     text: "Creative extras - Features like water features and bespoke decking, often avoided due to lack of experience, can be professionally designed and installed by local landscapers.",
-    className: "mr-5",
+    className: "mb-0",
   },
   {
     type: "image",
