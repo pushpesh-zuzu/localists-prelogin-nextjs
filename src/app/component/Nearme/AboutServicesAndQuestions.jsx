@@ -24,16 +24,15 @@ const AboutServicesAndQuestions = ({
           <NearmeH2Heading
             key={index}
             headdingblue={block.text}
-            className="mb-5 md:mb-[25px] max-w-[90%] md:max-w-full"
+            className="mb-5 md:mb-[25px] max-w-[100%] md:max-w-full"
           />
         );
       case "image":
         return (
           <div
             key={index}
-            className={`relative w-full overflow-hidden ${
-              block.className || ""
-            }`}
+            className={`relative w-full overflow-hidden ${block.className || ""
+              }`}
           >
             <Image
               src={block?.src}
@@ -41,11 +40,9 @@ const AboutServicesAndQuestions = ({
               width={block?.width || 1000}
               height={block?.height || 600}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-              className={`w-full h-auto object-cover rounded-lg ${
-                block?.className
-              } ${block?.marginTop ? "mt-[30px] lg:mt-[72px]" : ""} ${
-                block?.marginBottom ? "mb-5 lg:mb-[70px]" : ""
-              }`}
+              className={`w-full h-auto object-cover rounded-lg ${block?.className
+                } ${block?.marginTop ? "mt-[30px] lg:mt-[72px]" : ""} ${block?.marginBottom ? "mb-5 lg:mb-[70px]" : ""
+                }`}
               priority={block?.priority || false}
               quality={50}
             />
@@ -56,7 +53,7 @@ const AboutServicesAndQuestions = ({
       case "h3":
         return (
           <H3 key={index} className={`${textBase} font-bold ${
-              block?.className ? block?.className : 'mb-[10px] md:mb-[15px]'} text-black`}>
+              block?.className ? block?.className : 'mb-[10px] md:mb-[15px]'} text-[#253238]`}>
             {block.text}
           </H3>
         );
@@ -69,7 +66,7 @@ const AboutServicesAndQuestions = ({
             variant="primarySmall"
             key={index}
             bold="font-normal"
-            className={`${textBase} ${block?.notMarginBottom? "":"mb-[15px] md:mb-[25px]"} ${block?.className? block?.className:""} text-black tracking-[0em]!`}
+            className={`${textBase} ${block?.notMarginBottom ? "" : "mb-[15px] md:mb-[25px]"} ${block?.className ? block?.className : ""} text-[#253238] tracking-[0em]!`}
           >
             <span dangerouslySetInnerHTML={{ __html: block.text }} />
           </Paragraph>
@@ -80,9 +77,8 @@ const AboutServicesAndQuestions = ({
           <Paragraph
             variant="primarySmall"
             key={index}
-            className={`${textBase} font-bold ${
-              block?.className ? block?.className : "mb-[5px] md:mb-2.5"
-            } text-[#253238]`}
+            className={`${textBase} font-bold ${block?.className ? block?.className : "mb-[5px] md:mb-2.5"
+              } text-[#253238]`}
           >
             {block.text}
           </Paragraph>
@@ -102,7 +98,7 @@ const AboutServicesAndQuestions = ({
 
       case "libold":
         return (
-         <ul key={index} className="mb-2.5 md:mb-[15px] list-disc pl-5 md:pl-8">
+          <ul key={index} className="mb-2.5 md:mb-[15px] list-disc pl-5 md:pl-8">
             <li className={`${textBase} font-bold`}>{block.heading}</li>
           </ul>
         );
@@ -124,7 +120,7 @@ const AboutServicesAndQuestions = ({
               <thead className="bg-gray-100">
                 <tr>
                   {block.tableHeaders.map((h, i) => (
-                    <th key={i} className="border p-3 text-left">
+                    <th key={i} className="border p-3 text-center">
                       {h}
                     </th>
                   ))}
@@ -136,7 +132,7 @@ const AboutServicesAndQuestions = ({
                     {row.map((cell, c) => (
                       <td
                         key={c}
-                        className={`border p-3 ${c === 0 ? "font-bold" : ""}`}
+                        className={`border p-3 ${c !== 0 ? "align-top" : "align-middle font-bold"}`}
                       >
                         {cell}
                       </td>
@@ -155,20 +151,20 @@ const AboutServicesAndQuestions = ({
 
   return (
     <div className="md:block px-[30px] pt-10 pb-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px]  xl:pt-[72px] xl:pb-[72px]">
-    <WrapperBGWidth>
-      <div className="container max-w-[1000px] mx-auto  ">
-        {contentBlocks.map(renderBlock)}
+      <WrapperBGWidth>
+        <div className="container max-w-[1000px] mx-auto  ">
+          {contentBlocks.map(renderBlock)}
 
-        {title && (
-          <button
-            onClick={handleScrollToBottom}
-            className="mt-6 bg-blue-600 text-white px-6 py-3 rounded"
-          >
-            {buttonText || "Get Quotes Now"}
-          </button>
-        )}
-      </div>
-    </WrapperBGWidth>
+          {title && (
+            <button
+              onClick={handleScrollToBottom}
+              className="mt-6 bg-blue-600 text-white px-6 py-3 rounded"
+            >
+              {buttonText || "Get Quotes Now"}
+            </button>
+          )}
+        </div>
+      </WrapperBGWidth>
     </div>
   );
 };

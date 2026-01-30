@@ -53,7 +53,7 @@ const BuyerRegistrationLandingPage = ({
     ? [2, 3, 6, 7, 8]
     : [0, 1, 2, 3, 4, 5, 7, 8];
 
-  // console.log("showConfirmModal", buyerStep)
+  console.log("showConfirmModal", buyerStep)
   const nextStep = () => {
     const currentIndex = stepFlow.indexOf(buyerStep);
     if (currentIndex < stepFlow.length - 1) {

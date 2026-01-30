@@ -29,7 +29,7 @@ function VettedSection({
           />
           <div className="mt-5 md:mt-6 lg:mt-12 flex flex-col">
             {paragraph.map((item, index) => (
-              <Paragraph className="tracking-[0em]!" bold="font-bold" variant="primarySmall" key={index}>
+              <Paragraph className="tracking-[0em]!" bold="font-bold" variant="secondary" key={index}>
                 {item}
               </Paragraph>
             ))}

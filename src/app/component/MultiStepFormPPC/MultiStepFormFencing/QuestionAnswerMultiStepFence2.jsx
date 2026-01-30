@@ -37,12 +37,12 @@ const QuestionAnswerMultiStepFence2 = ({
     parsedAnswers: Array.isArray(q.answer)
       ? q.answer
       : (() => {
-          try {
-            return JSON.parse(q.answer);
-          } catch (e) {
-            return [];
-          }
-        })(),
+        try {
+          return JSON.parse(q.answer);
+        } catch (e) {
+          return [];
+        }
+      })(),
   }));
 
   const questionIndexMap = {};
@@ -235,12 +235,19 @@ const QuestionAnswerMultiStepFence2 = ({
     }
   };
 
+  const removeQuestionsAfter = (questionIndex) => {  //added
+    const updatedAnswers = buyerRequest.questions.slice(0, questionIndex + 1);
+    dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+  };
+
+
   const handleBack = () => {
     setIsComingFromStep3(false);
     if (questionHistory.length > 1) {
       const newHistory = [...questionHistory];
       newHistory.pop();
       const prevIndex = newHistory[newHistory.length - 1];
+      removeQuestionsAfter(prevIndex);  //added
       setQuestionHistory(newHistory);
       setCurrentQuestion(prevIndex);
       const percentage = (100 * 2) / (totalQuestions * 3);
@@ -248,6 +255,7 @@ const QuestionAnswerMultiStepFence2 = ({
       currentQuestion === 1 &&
         setProgressPercentage((100 * 2) / (totalQuestions * 3));
     } else {
+      dispatch(setbuyerRequestData({ questions: [] }));  //added
       onBack();
     }
   };
@@ -323,7 +331,7 @@ const QuestionAnswerMultiStepFence2 = ({
                 <input
                   type={
                     formattedQuestions[currentQuestion]?.option_type ===
-                    "single"
+                      "single"
                       ? "radio"
                       : "checkbox"
                   }

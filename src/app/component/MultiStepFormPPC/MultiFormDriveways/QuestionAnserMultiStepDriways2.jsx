@@ -49,12 +49,12 @@ const QuestionAnserMultiStepDriways2 = ({
     parsedAnswers: Array.isArray(q.answer)
       ? q.answer
       : (() => {
-          try {
-            return JSON.parse(q.answer);
-          } catch (e) {
-            return [];
-          }
-        })(),
+        try {
+          return JSON.parse(q.answer);
+        } catch (e) {
+          return [];
+        }
+      })(),
   }));
 
   const questionIndexMap = {};
@@ -300,16 +300,25 @@ const QuestionAnserMultiStepDriways2 = ({
     setError("");
   };
 
+  const removeQuestionsAfter = (questionIndex) => {  //added
+    const updatedAnswers =
+      buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
+
+    dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+  };
+
   const handleBack = () => {
     setIsComingFromStep3(false);
     if (questionHistory.length > 1) {
       const newHistory = [...questionHistory];
       newHistory.pop();
       const prevIndex = newHistory[newHistory.length - 1];
+      removeQuestionsAfter(prevIndex);
       setQuestionHistory(newHistory);
       setCurrentQuestion(prevIndex);
       setTotalQuestionsAnswered((prev) => Math.max(1, prev - 1));
     } else {
+      dispatch(setbuyerRequestData({ questions: [] }));
       onBack();
     }
   };
@@ -385,7 +394,7 @@ const QuestionAnserMultiStepDriways2 = ({
                 <input
                   type={
                     formattedQuestions[currentQuestion]?.option_type ===
-                    "single"
+                      "single"
                       ? "radio"
                       : "checkbox"
                   }

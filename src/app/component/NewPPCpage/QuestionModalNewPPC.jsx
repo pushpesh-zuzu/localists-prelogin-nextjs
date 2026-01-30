@@ -385,19 +385,33 @@ const QuestionModalNewPPC = ({
             newHistory.pop();
             const prevIndex = newHistory[newHistory.length - 1];
             setQuestionHistory(newHistory);
+            setError("");
+
+            // setTimeout(() => {
+            //     setCurrentQuestion(prevIndex);
+            // }, 0);
+
+            // const currentQuestionNo = formattedQuestions[currentQuestion]?.question_no;
+            // const updatedAnswers = buyerRequest?.questions?.filter(
+            //     (q) => q.question_no !== currentQuestionNo
+            // ) || [];
+            // dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+            // setSelectedOption([]);
+            // setOtherText("");
 
             setTimeout(() => {
                 setCurrentQuestion(prevIndex);
-            }, 0);
-            setError("");
 
-            const currentQuestionNo = formattedQuestions[currentQuestion]?.question_no;
-            const updatedAnswers = buyerRequest?.questions?.filter(
-                (q) => q.question_no !== currentQuestionNo
-            ) || [];
-            dispatch(setbuyerRequestData({ questions: updatedAnswers }));
-            setSelectedOption([]);
-            setOtherText("");
+                // ✅ KEEP answers till previous step, remove future ones
+                const trimmedAnswers =
+                    buyerRequest?.questions?.slice(0, prevIndex) || [];
+
+                dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
+
+                // ✅ Clear UI state
+                setSelectedOption([]);
+                setOtherText("");
+            }, 0);
         } else {
             handleScrollToBottom();
         }

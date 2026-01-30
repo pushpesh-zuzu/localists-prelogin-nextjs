@@ -71,6 +71,12 @@ function NewPPCForm({ nextStep, serviceId }) {
         (inputValue, callback) => {
             if (searchTimeout.current) clearTimeout(searchTimeout.current);
 
+            if (!inputValue) {
+                lastSearchValue.current = "";
+                callback(serviceOptions); // show all services
+                return;
+            }
+
             if (lastSearchValue.current === inputValue) {
                 callback(serviceOptions);
                 return;
@@ -236,6 +242,10 @@ function NewPPCForm({ nextStep, serviceId }) {
                     menuIsOpen={menuIsOpen}
                     onMenuOpen={() => setMenuIsOpen(true)}
                     onMenuClose={() => setMenuIsOpen(false)}
+
+                    menuPortalTarget={typeof window !== "undefined" ? document.body : null}
+                    menuPosition="fixed"
+                    menuShouldScrollIntoView={false}
                 />
                 <Error>{errors.service}</Error>
 
@@ -332,5 +342,27 @@ const customStyles = (error) => ({
         boxShadow: "none",
         fontFamily: "Arial",
         cursor: "pointer"
+    }),
+
+    menu: (base) => ({
+        ...base,
+        zIndex: 9999,
+    }),
+
+    menuList: (base) => ({
+        ...base,
+        maxHeight: "180px",
+        overflowY: "auto",
+        paddingTop: 0,
+        paddingBottom: 0,
+    }),
+
+    option: (base, state) => ({
+        ...base,
+        fontSize: "14px",
+        padding: "10px 14px",
+        cursor: "pointer",
+        backgroundColor: state.isFocused ? "#f5f5f5" : "#fff",
+        color: "#253238",
     }),
 });
