@@ -27,12 +27,12 @@ export default function AveragePrice() {
               {/* Price Card 1 */}
               <div className="">
                 <Paragraph
-                  variant="primarySmall"
-                  className="md:mx-auto max-w-[110px]  min-[360px]:max-w-[126px] min-[360px]:min-w-[126px] min-[450px]:text-center min-[450px]:mx-auto md:text-center md:max-w-[160px] lg:max-w-full text-left lg:text-center"
+                  variant="VeryprimarySmall"
+                  className="md:mx-auto max-w-[110px]  min-[360px]:max-w-[120px] min-[360px]:min-w-[120px] min-[450px]:text-center min-[450px]:mx-auto md:text-center md:max-w-[160px] lg:max-w-full text-left lg:text-center"
                 >
                   For a small tree removal (under 25ft), the average cost is
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center md:text-center lg:text-center text-[#253238] mt-7 md:mt-3 lg:mt-3">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-left md:text-center lg:text-center text-[#253238] mt-7 md:mt-3 lg:mt-3">
                   £450
                 </p>
               </div>
@@ -40,12 +40,12 @@ export default function AveragePrice() {
               {/* Price Card 2 */}
               <div className="">
                 <Paragraph
-                  variant="primarySmall"
+                  variant="VeryprimarySmall"
                   className="tracking-[-0.03em]! md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto  md:text-center lg:text-center max-w-[164px] md:max-w-[220px] lg:min-w-[264px]"
                 >
                   For a medium stump removal under 15 inch diameter), the average cost is
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center md:text-center text-[#253238] mt-3">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-left md:text-center text-[#253238] mt-3">
                   £215
                 </p>
               </div>
@@ -56,12 +56,12 @@ export default function AveragePrice() {
               {/* Price Card 3 */}
               <div className="h-full">
                 <Paragraph
-                  variant="primarySmall"
+                  variant="VeryprimarySmall"
                   className="md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center max-w-[142px] md:max-w-[220px]  lg:max-w-[90%]"
                 >
                   Trimming or pruning a small tree (under 25ft) costs on average
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center md:text-center text-[#253238] max-[336px]:mt-[12px] mt-9 md:mt-3 sm:mt-4">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-left md:text-center text-[#253238] max-[336px]:mt-[12px] mt-6 md:mt-3 sm:mt-4">
                   £250
                 </p>
               </div>
@@ -69,12 +69,12 @@ export default function AveragePrice() {
               {/* Price Card 4 */}
               <div className="">
                 <Paragraph
-                  variant="primarySmall"
+                  variant="VeryprimarySmall"
                   className="md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center max-w-[150px] md:max-w-[220px] lg:min-w-[264px]"
                 >
                   For medium stump grinding (under 15 inch in diameter), the average cost is
                 </Paragraph>
-                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center md:text-center text-[#253238] mt-2.5 min-[331px]:mt-[18px] md:mt-3 mr-1 sm:mr-0">
+                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-left md:text-center text-[#253238] mt-2.5 min-[331px]:mt-[18px] md:mt-3 mr-1 sm:mr-0">
                   £115
                 </p>
               </div>
