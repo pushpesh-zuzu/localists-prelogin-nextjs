@@ -39,7 +39,7 @@ const AboutServicesAndQuestions = ({
               width={block?.width || 1000}
               height={block?.height || 600}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-              className={`w-full h-auto object-cover rounded-lg ${
+              className={`w-full h-auto object-cover rounded-[30px] ${
                 block?.className
               } ${block?.marginTop ? "mt-[30px] lg:mt-[72px]" : ""} ${
                 block?.marginBottom ? "mb-5 lg:mb-[70px]" : ""
