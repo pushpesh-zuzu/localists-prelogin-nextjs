@@ -71,7 +71,7 @@ function ArtificialGrassInstallationNearme() {
       />
       <VettedSection
         paragraph={VETTED_DATA_ARTIFICIAL_GRASS_NEARME}
-        vettedHeading1="Vetted landscape gardeners you can "
+        vettedHeading1="Verified artificial grass installers  "
         vettedHeading2="trust"
         breadcrumb={BREADCRUM_DATA_ARTIFICIAL_GRASS_NEARME}
       />
@@ -85,7 +85,7 @@ function ArtificialGrassInstallationNearme() {
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
-        heading1="Landscaping Specialists"
+        heading1="Artificial Grass Installers "
         heading2="in your area"
         tabData={ARTIFICIAL_GRASS_NEARME_TABDATA}
       />
