@@ -105,6 +105,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "p",
         text: "Fortunately, with Localists, that legwork is already done. Every professional in our network is pre-vetted, reviewed, insured, and trained. You don’t need to spend hours comparing credentials; just tell us what you need, and we’ll match you with trusted driveway specialists nearby.",
+        notMarginBottom: true,
     },
     {
         type: "image",
