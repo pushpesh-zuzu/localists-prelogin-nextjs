@@ -25,12 +25,6 @@ import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 import DrivewayPopularJobNearMe from "./DrivewayPopularJobNearMe";
 
-export const metadata = {
-    title: "Find Driveway Companies & Driveway Contractors Near Me - Localists",
-    description:
-        " Find the best local driveway installers and contractors near you. Need resin bound, gravel or tarmac driveways? Get free quotes from local specialists nearby.",
-};
-
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
     loading: () => (
         <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
