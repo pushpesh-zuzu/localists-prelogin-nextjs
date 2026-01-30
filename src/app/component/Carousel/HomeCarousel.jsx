@@ -267,7 +267,7 @@ export default function HomeGardenCarousel({
           )}
 
           {/* Dot Indicators */}
-          <div className="flex justify-center gap-1.5 lg:gap-[11px] mt-6">
+          <div className="flex justify-center gap-1.5 lg:gap-[11px] mt-6 lg:mt-9">
             {Array.from({ length: originalSlideCount }).map((_, index) => {
               const isMd =
                 typeof window !== "undefined" && window.innerWidth < 1024;

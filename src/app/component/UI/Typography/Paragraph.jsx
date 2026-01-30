@@ -24,6 +24,9 @@ export default function Paragraph({
         md:text-[14px] md:leading-[16px]
         lg:text-[16px] lg:leading-[20px]
         `,
+         VeryprimarySmall: `text-[12px] leading-[12px]
+        md:text-[16px] md:leading-[22px]
+        lg:text-[20px] lg:leading-[24px]`,
   };
 
   // Handle dangerouslySetInnerHTML

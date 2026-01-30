@@ -15,7 +15,7 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
   return (
     <WrapperBGWidth>
       {" "}
-      <div className="w-full px-2.5 sm:px-10 md:px-16 xl:px-[0px] lg:max-w-[1200px] mx-auto pb-10 xl:pb-[72px]">
+      <div className="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] lg:max-w-[1200px] mx-auto pb-10 xl:pb-[72px]">
         <NearmeH2Heading headdingblue="FAQ's" className="mb-5 md:mb-6 lg:mb-10" />
 
         <div className="space-y-0 border-2 lg:border-4 border-[#DBDFE4] rounded-[20px] overflow-hidden bg-white shadow-sm">
@@ -26,7 +26,7 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
             >
               <button
                 onClick={() => toggleItem(item.key)}
-                className="w-full flex items-center justify-between px-[30px] pb-[15px] pt-[15px] md:px-5 md:pb-[30px] md:pt-5 hover:bg-gray-50 transition-colors duration-200 text-left"
+                className="w-full flex items-center justify-between px-[10px] pb-[15px] pt-[15px] md:px-5 md:pb-[30px] md:pt-5 hover:bg-gray-50 transition-colors duration-200 text-left"
                 aria-expanded={openItem === item.key}
               >
                 <h5
@@ -54,7 +54,7 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="px-[30px] pb-[30px] md:px-[20px] md:pb-[30px]">
+                <div className="pl-2.5 pr-[30px] pb-[30px] md:px-[20px] md:pb-[30px]">
                   <p
                     bold="font-normal"
                     variant="secondary"

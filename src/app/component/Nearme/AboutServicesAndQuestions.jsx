@@ -42,6 +42,7 @@ const AboutServicesAndQuestions = ({
                 } ${block?.marginTop ? "mt-[30px] lg:mt-[72px]" : ""} ${block?.marginBottom ? "mb-5 lg:mb-[70px]" : ""
                 }`}
               priority={block?.priority || false}
+              quality={50}
             />
           </div>
         );
@@ -146,10 +147,10 @@ const AboutServicesAndQuestions = ({
   };
 
   return (
-    <div className="md:block px-2.5 pt-5 pb-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px]  xl:pt-[72px] xl:pb-[72px]">
-      <WrapperBGWidth>
-        <div className="container max-w-[1000px] mx-auto  ">
-          {contentBlocks.map(renderBlock)}
+    <div className="md:block px-[30px] pt-10 pb-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px]  xl:pt-[72px] xl:pb-[72px]">
+    <WrapperBGWidth>
+      <div className="container max-w-[1000px] mx-auto  ">
+        {contentBlocks.map(renderBlock)}
 
           {title && (
             <button

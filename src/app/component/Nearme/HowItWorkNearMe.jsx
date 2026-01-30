@@ -11,7 +11,7 @@ import H2 from "../UI/Typography/H2";
 function HowItWorkNearMe() {
   return (
     <WrapperBGWidth background={"white"}>
-      <section className="bg-white h-auto px-2.5 pt-12 pb-[30px] sm:px-10 md:px-16 md:pb-10 md:pt-0 xl:px-[145px] xl:pb-[72px]">
+      <section className="bg-white h-auto px-[30px] pt-12 pb-[30px] sm:px-10 md:px-16 md:pb-10 md:pt-0 xl:px-[145px] xl:pb-[72px]">
         <H2 className="text-[#00afe3] pb-[30px] md:pb-[35px] xl:pb-[47.89px]">
           How it <span className="text-[#253238]">Works.</span>{" "}
         </H2>
