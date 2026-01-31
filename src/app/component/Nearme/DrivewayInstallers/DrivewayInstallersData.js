@@ -41,27 +41,22 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "li",
         text: "Reliable local specialists: We match you with driveway installers who know your area inside and out. That means quicker service, helpful insight into regional building regulations, and smoother communication—even with the most unique local accents!",
-        className: "mr-5",
     },
     {
         type: "li",
         text: "Personalised quotes: Say goodbye to generic pricing. Tell us what you're looking for, and we'll connect you with installers who provide custom quotes, making it easy to compare options and secure the best value.",
-        className: "mr-5",
     },
     {
         type: "li",
         text: "Fast turnaround: Working to a specific schedule? Once matched, many professionals are ready to get started quickly and complete the project within your preferred timeframe.",
-        className: "mr-5",
     },
     {
         type: "li",
         text: "Flexible design options: Have a particular look or layout in mind? Share a few details about your project, and we’ll link you with the right contractors who can bring your vision to life.",
-        className: "mr-5",
     },
     {
         type: "li",
         text: `Ongoing maintenance support: Many installers offer more than just installation—they can handle repairs, upgrades, and ongoing maintenance to keep your driveway looking its best.`,
-        className: "mr-5",
     },
     {
         type: "image",
