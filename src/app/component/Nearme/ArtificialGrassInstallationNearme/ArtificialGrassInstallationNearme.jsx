@@ -5,18 +5,6 @@ import React from "react";
 // import PaddingWrapper from "../PaddingWrapper";
 import VettedSection from "../VettedSection";
 import AboutServicesAndQuestions from "../AboutServicesAndQuestions";
-// import {
-//   QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME,
-//   FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME,
-//   // ADVICEINSIGHT_ARTIFICIAL_NEARME,
-//   ARTIFICIAL_GRASS_NEARME_TABDATA,
-//   VETTED_DATA_ARTIFICIAL_GRASS_NEARME,
-//   BREADCRUM_DATA_ARTIFICIAL_NEARME,
-//   POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME,
-//   FEEDBACK_ARTIFICIAL_GRASS_NEARME,
-//   DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA,
-// } from "./ArtificialGrassInstallationNearmeData";
-// import DiscoverServices from "../../Home/DiscoverServices/DiscoverServices";
 // import Feature from "../Feature";
 import { FAQ } from "../FAQ";
 import PopularJobNearMe from "../PopularJobNearMe";
@@ -33,7 +21,16 @@ import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
-import { ARTIFICIAL_GRASS_NEARME_TABDATA, BREADCRUM_DATA_ARTIFICIAL_GRASS_NEARME, DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA, FEEDBACK_ARTIFICIAL_GRASS_NEARME, FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME, POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME, QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME, VETTED_DATA_ARTIFICIAL_GRASS_NEARME } from "./ArtificialGrassInstallationNearmeData";
+import {
+  ARTIFICIAL_GRASS_NEARME_TABDATA,
+  BREADCRUM_DATA_ARTIFICIAL_GRASS_NEARME,
+  DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA,
+  FEEDBACK_ARTIFICIAL_GRASS_NEARME,
+  FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME,
+  POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME,
+  QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME,
+  VETTED_DATA_ARTIFICIAL_GRASS_NEARME,
+} from "./ArtificialGrassInstallationNearmeData";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -43,8 +40,6 @@ const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   ),
   ssr: true,
 });
-
-// const FAQ = dynamic(() => import("../FAQ"), { ssr: false });
 
 const CloseBrowserAbandon = dynamic(
   () => import("../../common/CloseBrowserAbandon/CloseBrowserAbandon"),
@@ -56,15 +51,13 @@ function ArtificialGrassInstallationNearme() {
   return (
     <>
       <CloseBrowserAbandon />
-      <FAQScript
-        FAQ={FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME}
-      />
+      <FAQScript FAQ={FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME} />
       <HeroSectionNearMe
         heading1=" Find Artificial Grass Installers"
         heading2="Near You"
         description="Find the best artificial grass installers in your area, just enter your postcode and a few details for instant quotes"
         bannerImage="/nearme/Artificial/ArtificialGrassBanner.jpg"
-        bannerImageMobile="/nearme/Landscaping/landscapingMobile.webp"
+        bannerImageMobile="/nearme/Artificial/ArtificialGrassBannerMobile.webp"
         altText="Artificial grass installer landscaping a yard with artificial grass, measuring tap on grass."
         serviceId={54}
         serviceName="Artificial Grass Installation"
@@ -75,12 +68,14 @@ function ArtificialGrassInstallationNearme() {
         vettedHeading2="trust"
         breadcrumb={BREADCRUM_DATA_ARTIFICIAL_GRASS_NEARME}
       />
-              {/* popularImage="/nearme/Artificial/artificialPopularJobs.webp" */}
+      {/* popularImage="/nearme/Artificial/artificialPopularJobs.webp" */}
 
       <PopularJobNearMe
         services={POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME}
         popularImage="/nearme/Artificial/artificialPopularJobs.webp"
         altText="Grass fitter hand cutting artificial turf with sharp cutter"
+        mobileCardClass="w-[235px] min-[375px]:w-[270px] min-[430px]:w-[281px] min-[512px]:w-[350px] "
+
       />
       <HowItWorkNearMe />
       {/* <Feature /> */}

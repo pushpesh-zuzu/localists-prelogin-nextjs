@@ -6,7 +6,11 @@ import Image from "next/image";
 import PostCodeSection from "./AboutServicesAndQuestions/PostCodeSection";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import AveragePrice from "./AveragePrice";
+<<<<<<< HEAD
 import GutterPriceSection from "./GutterPriceSection";
+=======
+import PatioPricingTable from "./PatioServicesNearMe/PatioPricingTable";
+>>>>>>> a8017f9d5c0cf62825241d69f583bdef28525747
 
 const textBase =
   "font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em]!"
@@ -45,7 +49,7 @@ const AboutServicesAndQuestions = ({
                 } ${block?.marginTop ? "mt-[30px] lg:mt-[72px]" : ""} ${block?.marginBottom ? "mb-5 lg:mb-[70px]" : ""
                 }`}
               priority={block?.priority || false}
-              quality={50}
+              quality={70}
             />
           </div>
         );
@@ -73,7 +77,10 @@ const AboutServicesAndQuestions = ({
             <span dangerouslySetInnerHTML={{ __html: block.text }} />
           </Paragraph>
         );
-
+        case "patioPricingTable":
+          return(
+            <PatioPricingTable/>
+          )
       case "pbold":
         return (
           <Paragraph

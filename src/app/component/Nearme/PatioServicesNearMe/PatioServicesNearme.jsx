@@ -5,18 +5,6 @@ import React from "react";
 // import PaddingWrapper from "../PaddingWrapper";
 import VettedSection from "../VettedSection";
 import AboutServicesAndQuestions from "../AboutServicesAndQuestions";
-import {
-  QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME,
-  FREQUENTLY_DATA_LANDSCAPE_NEARME,
-  // ADVICEINSIGHT_LANDSCAPE_NEARME,
-  LANDSCAPE_NEARME_TABDATA,
-  VETTED_DATA_LANDSCAPE_NEARME,
-  BREADCRUM_DATA_LANDSCAPE_NEARME,
-  POPULAR_SERVICES_LANDSCAPE_NEARME,
-  FEEDBACK_LANDSCAPE_NEARME,
-  DISCOVER_LANDSCAPE_NEARME_DATA,
-} from "./LandscaperGardenNearmeData";
-// import DiscoverServices from "../../Home/DiscoverServices/DiscoverServices";
 // import Feature from "../Feature";
 import { FAQ } from "../FAQ";
 import PopularJobNearMe from "../PopularJobNearMe";
@@ -33,6 +21,16 @@ import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
+import {
+  PATIO_SERVICES_NEARME_TABDATA,
+  BREADCRUM_DATA_PATIO_SERVICES_NEARME,
+  DISCOVER_PATIO_SERVICES_NEARME_DATA,
+  FEEDBACK_PATIO_SERVICES_NEARME,
+  FREQUENTLY_DATA_PATIO_SERVICES_NEARME,
+  POPULAR_SERVICES_PATIO_SERVICES_NEARME,
+  QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME,
+  VETTED_DATA_PATIO_SERVICES_NEARME,
+} from "./PatioServicesData";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -43,63 +41,57 @@ const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   ssr: true,
 });
 
-// const FAQ = dynamic(() => import("../FAQ"), { ssr: false });
-
 const CloseBrowserAbandon = dynamic(
   () => import("../../common/CloseBrowserAbandon/CloseBrowserAbandon"),
   { ssr: false },
 );
 
-function LandscapeGardenNearme() {
+function PatioServicesNearme() {
   usePendingBuyerRedirect();
   return (
     <>
       <CloseBrowserAbandon />
-      <FAQScript
-        FAQ={FREQUENTLY_DATA_LANDSCAPE_NEARME}
-      />
+      <FAQScript FAQ={FREQUENTLY_DATA_PATIO_SERVICES_NEARME} />
       <HeroSectionNearMe
-        heading1=" Find Landscape Gardeners"
+        heading1="Find Patio Layers"
         heading2="Near You"
-        description="Find the best landscape gardeners near you! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss. "
-        bannerImage="/nearme/Landscaping/Landscapingbanner.webp"
-        bannerImageMobile="/nearme/Landscaping/landscapingMobile.webp"
-        altText="A Landscaper carefully laying a large concrete slab amongst a garden of flowers and grey pebble dash"
-        serviceId={43}
-        serviceName="Landscaping"
+        description="Find the best patio layers for your job, just enter your postcode and a few details for instant quotes."
+        bannerImage="/nearme/Patio/patioServicesNearme.webp"
+        bannerImageMobile="/nearme/Patio/patioServicesNearmeMobile.webp"
+        altText="Expert patio installer with gloves on, laying paver bricks on large patio"
+        serviceId={54}
+        serviceName="Patio Laying"
       />
       <VettedSection
-        paragraph={VETTED_DATA_LANDSCAPE_NEARME}
-        vettedHeading1="Vetted landscape gardeners you can "
+        paragraph={VETTED_DATA_PATIO_SERVICES_NEARME}
+        vettedHeading1="Verified patio layers you can "
         vettedHeading2="trust"
-        breadcrumb={BREADCRUM_DATA_LANDSCAPE_NEARME}
+        breadcrumb={BREADCRUM_DATA_PATIO_SERVICES_NEARME}
       />
+
       <PopularJobNearMe
-        services={POPULAR_SERVICES_LANDSCAPE_NEARME}
-        popularImage="/nearme/Landscaping/pathwayPopularJob.png"
-        altText="beautifully landscaped garden with pathway and decorative paving edges "
-        mobileCardClass="w-[221px] min-[390px]:w-[221px] min-[412px]:w-[307px] min-[440px]:w-[307px] min-[512px]:w-[350px]"
-        // desktopWidthClass='max-w-full'
-        classNameD='max-w-full min-[850]:max-w-[90%] lg:max-w-full'
+        services={POPULAR_SERVICES_PATIO_SERVICES_NEARME}
+        popularImage="/nearme/Patio/PatioServicesPopularJobs.webp"
+        altText="stone paver patio installation in progress with drainage installed"
       />
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
-        heading1="Landscaping Specialists"
+        heading1="Patio specialists " 
         heading2="in your area"
-        tabData={LANDSCAPE_NEARME_TABDATA}
-      />
-      <UserFeedbackNearMe2 feedbackData={FEEDBACK_LANDSCAPE_NEARME} />
+        tabData={PATIO_SERVICES_NEARME_TABDATA}
+      /> 
+      <UserFeedbackNearMe2 feedbackData={FEEDBACK_PATIO_SERVICES_NEARME} />
       {/* <PaddingWrapper> */}
       <AboutServicesAndQuestions
-        serviceId={43}
-        serviceName="Landscaping"
-        contentBlocks={QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME}
+        serviceId={54}
+        serviceName="Artificial Grass Installation"
+        contentBlocks={QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME}
       />
       {/* </PaddingWrapper> */}
-      <FAQ data={FREQUENTLY_DATA_LANDSCAPE_NEARME} />
+      <FAQ data={FREQUENTLY_DATA_PATIO_SERVICES_NEARME} />
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}
-      <DiscoverNearMe homeData={DISCOVER_LANDSCAPE_NEARME_DATA} />
+      <DiscoverNearMe homeData={DISCOVER_PATIO_SERVICES_NEARME_DATA} />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
       />
@@ -108,4 +100,4 @@ function LandscapeGardenNearme() {
   );
 }
 
-export default LandscapeGardenNearme;
+export default PatioServicesNearme;

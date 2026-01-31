@@ -1,5 +1,4 @@
 export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
- 
   {
     type: "h2",
     text: "Your shortcut to free landscape gardening quotes",
@@ -7,14 +6,14 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "Having work done on your property can significantly increase its value - especially on your garden. But hiring the wrong landscaper can leave you out of pocket and even de-value your properties value. That’s where we come in. At Localists, we do all the vetting for you, and make sure that only the best local landscapers are present on our platform. All of the landscape gardeners on our platform are put through a rigorous  vetting procedure, and we source all of their reviews from various review sites across the web and put it all in one convenient place for you. Just enter your postcode and a few details to get started!",
-    notMarginBottom:true
+    notMarginBottom: true,
   },
- {
+  {
     type: "image",
     src: "/nearme/Landscaping/natuaralGrassTurf.webp",
     alt: "landscaping expert installing natural grass turf in a home garden",
     marginBottom: true,
-    marginTop:true
+    marginTop: true,
   },
   {
     type: "h2",
@@ -23,7 +22,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
 
   {
     type: "p",
-    text: "Landscape gardening is more than just planting flowers. It’s the art and science of designing, creating, and maintaining outdoor spaces to make them functional, beautiful, and in harmony with their surroundings. ",
+    text: "Landscape gardening is more than just planting flowers. It’s the art and science of designing, creating, and maintaining outdoor spaces to make them functional, beautiful, and in harmony with their surroundings.",
   },
   {
     type: "p",
@@ -31,35 +30,35 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   },
   {
     type: "li",
-    text: "Local expertise - Local landscapers understand your region’s weather and soil conditions, helping you choose the right plants while ensuring compliance with local planning regulations.",
+    text: "Local expertise - Local landscapers understand your region’s weather and soil conditions, so they can help you make the right choice on plants. Plus, they can ensure you’re compliant with local planning regulations.",
   },
   {
     type: "li",
-    text: "Smart, lasting design - Landscape gardeners create gardens built to last and tailored to your lifestyle, advising against design choices that may cause issues later.",
+    text: "Smart, lasting design - Our landscape gardeners can construct a garden that's built to last and tailored to your lifestyle. Design features you think might work, can often be problematic later on. Our landscape gardeners will be able to advise you on these matters.",
   },
   {
     type: "li",
-    text: "Access to quality materials - Many landscape gardeners have long-term relationships with trade merchants, allowing them to source high-quality plants, stone, and timber at competitive prices.",
+    text: "Access to quality materials - Many of our landscape gardeners have long term business relationships with trade merchants and other quality suppliers. So they’re able to source high-quality plants, stone, and timber at competitive prices, that you might not have been able to source yourself.",
   },
   {
     type: "li",
-    text: "Avoid costly mistakes - Proper drainage, soil preparation, and plant selection help prevent expensive fixes that often arise from DIY landscaping.",
+    text: "Avoid costly mistakes - Proper drainage, soil preparation, and plant selection save you from expensive fixes later. Without a local landscaper, you run the risk of having to learn from those costly mistakes yourself.",
   },
   {
     type: "li",
-    text: "Boost property value - Professional landscaping can increase your property’s value, and experienced landscapers can advise on designs that add the most value.",
+    text: "Boost property value - Landscaping can often boost your property value, and some landscapers may be able to give you pointers on the types of design that can help boost your properties value.",
   },
   {
     type: "li",
-    text: "Full-service installation - Local landscapers can handle patios, decking, fencing, pathways, and lighting, saving you from learning multiple trades yourself.",
+    text: "Full-service installation - Our local landscapers are equipped to handle everything you desire for your garden. Be it patios, decking, fencing, pathways or lighting. Taking on a landscape gardening job yourself would require you to master multiple trades. Whereas most landscape gardeners will provide full-service installation.",
   },
   {
     type: "li",
-    text: "Seasonal care - Lawn care, hedge trimming, planting, and regular upkeep keep your garden looking its best throughout the year.",
+    text: "Seasonal care - Lawn care, hedge trimming, planting, and regular upkeep keep your garden looking its best year-round.",
   },
   {
     type: "li",
-    text: "Creative extras - Features like water features and bespoke decking, often avoided due to lack of experience, can be professionally designed and installed by local landscapers.",
+    text: "Creative extras - Features you may have avoided implementing yourself due to lack of experience can be implemented by our local landscape gardeners. With our landscapers, your dream of fancy water features and bespoke decking is now a reality.",
     className: "mb-0",
   },
   {
@@ -77,7 +76,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     type: "p",
     text: "When you hire through Localists, you’re not just picking a random name online. We’ve already put them through our rigorous registration process, so you can rest easy knowing you’ll only get the best landscape gardeners when you hire through us. We make it easy for you to check each landscape gardener's credentials and skills. You can also view things such as",
   },
- 
+
   {
     type: "li",
     text: "Their most recent projects",
@@ -93,7 +92,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     text: "Reviews sourced from various review sites",
     className: "mb-[0px]",
   },
- {
+  {
     type: "image",
     src: "/nearme/Landscaping/residentialProperty.webp",
     alt: "newly completed landscaping project in a residential property ",
@@ -111,7 +110,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "A landscaper, on the other hand, goes beyond maintenance. A landscape gardener or landscape architect can design and build outdoor spaces, often from the ground up. They handle both hard landscaping (paths, patios, walls) and soft landscaping (planting schemes, turfing). Many landscapers also provide maintenance services, so the line can blur.",
-    notMarginBottom:true
+    notMarginBottom: true,
   },
   {
     type: "image",
@@ -187,7 +186,6 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     text: "Many landscapers install features such as fire pits, raised beds, seating areas, water features, and lighting. These additions enhance both the usability and aesthetic of a garden.",
   },
 
-  
   {
     type: "h3",
     text: "Eco-friendly & sustainable sandscaping",
@@ -203,7 +201,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "Services may also include wildlife-focused landscaping such as rain gardens, pollinator-friendly planting, wildflower meadows, and foodscaping (edible gardens that blend with the landscape). These projects support biodiversity while adding beauty and function.",
-  notMarginBottom:true
+    notMarginBottom: true,
   },
   {
     type: "image",
@@ -224,14 +222,13 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "For example, a residential landscaping project might involve lawn installation, planting, and a simple patio area. A commercial landscaping project on the other hand, could require larger-scale groundwork, drainage, lighting, or structural features. This makes it more labour-intensive and expensive.",
-    notMarginBottom:true
+    notMarginBottom: true,
   },
 
   {
     type: "pbold",
     text: "However, on average in the UK, here’s what you can expect to spend:",
-        className: "my-[15px] md:my-[25px]",
-
+    className: "my-[15px] md:my-[25px]",
   },
   {
     type: "li",
@@ -251,9 +248,12 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   },
   {
     type: "p",
-    text: "For more accurate cost estimates, simply start your search at Localists today, and we will match you with trusted local landscape gardeners or gardening companies near you, who’ll provide free, no-obligation quotes tailored to your needs",
+    text: "For more accurate cost estimates, simply start your search at Localists today, and we will match you with trusted local landscape gardeners or gardening companies near you, who’ll provide free, no-obligation quotes tailored to your needs.",
   },
-  { type: "PostCodeSection",className:"mt-[30px] mb-0 lg:mt-[60px] lg:mb-[0px]" },
+  {
+    type: "PostCodeSection",
+    className: "mt-[30px] mb-0 lg:mt-[60px] lg:mb-[0px]",
+  },
 
   //  {
   //   type:"p",
@@ -430,7 +430,12 @@ export const FREQUENTLY_DATA_LANDSCAPE_NEARME = [
     key: "5",
     title: "Can you help with low-maintenance garden designs?",
     description: `
-      Absolutely. Many of our local patio layers and landscapers specialise in creating stylish gardens that are easy to care for. Think drought-tolerant plants, gravel beds, and minimal weeding.
+      Absolutely. Many of our local 
+      <a href="https://www.localists.com/en/gb/patio-layers-near-me" style="color:#00afe3; text-decoration:none;">
+        patio layers
+      </a> 
+      and landscapers specialise in creating stylish gardens that are easy to care for. Think drought-tolerant plants, gravel beds, and minimal weeding.
+
       `,
   },
   {

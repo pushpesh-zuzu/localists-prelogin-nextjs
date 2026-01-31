@@ -70,7 +70,7 @@ export default function SEO({
       )}
 
       {/* Conversion (can stay client-side) */}
-      {conversion && (
+      {/* {conversion && (
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -82,7 +82,7 @@ export default function SEO({
             `,
           }}
         />
-      )}
+      )} */}
     </>
   );
 }

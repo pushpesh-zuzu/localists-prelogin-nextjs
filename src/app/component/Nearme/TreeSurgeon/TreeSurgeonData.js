@@ -7,7 +7,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   },
   {
     type: "h2",
-    text: "How much does a tree surgeon cost",
+    text: "How much does a tree surgeon cost?",
   },
   {
     type: "p",

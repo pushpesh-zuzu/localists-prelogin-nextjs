@@ -79,6 +79,7 @@ function TreeSurgeon() {
         services={POPULAR_SERVICES}
         popularImage="/nearme/treeSurgeonNearmeRounded.webp"
         altText="a tree surgeon cutting the branches of an evergreen tree"
+        mobileCardClass="w-[225px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
       />
       <HowItWorkNearMe />
       {/* <Feature /> */}
