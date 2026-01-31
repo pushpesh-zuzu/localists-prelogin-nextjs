@@ -17,8 +17,8 @@ export default function AveragePrice() {
                 Average cost of tree surgery UK
               </H2>
 
-              <div className="hidden lg:flex mt-6 lg:mt-0 justify-center lg:justify-start">
-                <GetQuote text=" Get a real quote" />
+              <div className="hidden lg:flex mt-6 lg:mt-0 justify-center lg:justify-start ">
+                <GetQuote classGetQuote="py-[7px] xl:py-3 xl:px-[30px]" text=" Get a real quote" />
               </div>
             </div>
 
@@ -78,7 +78,7 @@ export default function AveragePrice() {
                   £115
                 </p>
               </div>
-              <div className="flex lg:hidden col-span-2 mt-5 md:mt-2.5 lg:mt-0 md:mb-[5px] lg:mb-0 justify-center">
+              <div className="flex lg:hidden col-span-2 mt-5 md:mt-2.5 lg:mt-0 md:mb-[5px] lg:mb-0 justify-center ">
                 <GetQuote text=" Get a real quote" />
               </div>
             </div>

@@ -14,7 +14,7 @@ export default function Paragraph({
         lg:text-[20px] lg:leading-[24px]`,
     secondary: `text-[16px] leading-[18px]
         md:text-[16px] md:leading-[16px]
-        lg:text-[20px] lg:leading-[24px]`,
+        lg:text-[20px] lg:leading-[26px]`,
 
     medium: ` text-[18px] leading-[22px]
         md:text-[16px] md:leading-[16px]

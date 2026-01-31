@@ -44,7 +44,7 @@ function HowItWorkNearMe() {
           />
         </div>
         <div className="flex justify-center">
-          <Button variant="secondary" onClick={()=>{handleScrollToBottom()}} className="cursor-pointer rounded-[94px] max-w-fit bg-[#10C87B] hover:bg-[#00aef3] text-white mt-[30px] px-4 py-2 lg:mt-[47px] md:py-1.5 md:px-4.5 lg:py-2 lg:px-8 ">
+          <Button variant="secondary" onClick={()=>{handleScrollToBottom()}} className="cursor-pointer rounded-[94px] max-w-fit bg-[#10C87B] hover:bg-[#00aef3] text-white mt-[30px] px-4 py-2 lg:mt-[47px] md:py-1.5 md:px-4.5 lg:py-1.5 lg:px-8  leading-normal!">
             Get Started
           </Button>
         </div>

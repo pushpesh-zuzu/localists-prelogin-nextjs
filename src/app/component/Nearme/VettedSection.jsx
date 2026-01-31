@@ -22,7 +22,7 @@ function VettedSection({
     <WrapperBGWidth>
       <div className="md:block p-[10px] min-[358px]:py-[35px] min-[358px]:px-[30px]  sm:px-10 md:px-16 md:py-10 xl:px-[120px] xl:pt-[71px] xl:pb-[72px]">
         <Breadcrumb items={breadcrumb} />
-        <div className="pt-4 lg:pt-10 lg:pt-[58px]">
+        <div className="pt-4 lg:pt-10 lg:pt-[58px] max-w-[99%] md:max-h-full">
           <NearmeH2Heading
             headdingblue={vettedHeading1}
             headingblack={vettedHeading2}
@@ -33,7 +33,7 @@ function VettedSection({
                 {item}
               </Paragraph>
             ))}
-            <div className="flex flex-wrap justify-center md:justify-start gap-[7px] gap-2.5 lg:gap-6 mb-2.5 mt-[30px] md:mt-[30px] lg:mt-12">
+            <div className="flex flex-wrap justify-center md:justify-start gap-[7px] gap-2.5 lg:gap-6 mt-[30px] md:mt-[30px] lg:mt-12">
               <GetQuote text={getQuoteText} />
               {/* <Button variant="secondary" className="max-w-fit px-[13px] py-[7px] xl:py-4 xl:px-[30px] rounded-full bg-white border-[1.78px] lg:border-4 border-black text-black shadow-[0_0_4px_rgba(0,0,0,0.1)]">
                 {buttonText}
