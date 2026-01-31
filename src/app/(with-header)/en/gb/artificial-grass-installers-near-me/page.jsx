@@ -13,7 +13,7 @@ function page() {
     <>
       <SEO
         canonicalPath="/en/gb/artificial-grass-installers-near-me"
-        bannerImage="/nearme/Landscaping/Landscapingbanner.webp"
+        bannerImage="/nearme/Artificial/ArtificialGrassBanner.jpg"
         breadcrumb={[
           { title: "Home & Garden", path: "/home" },
           { title: "Artificial Grass Installation", path: "/artificial-grass-installers-near-me" },

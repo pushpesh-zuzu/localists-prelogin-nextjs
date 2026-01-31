@@ -64,7 +64,7 @@ function ArtificialGrassInstallationNearme() {
       />
       <VettedSection
         paragraph={VETTED_DATA_ARTIFICIAL_GRASS_NEARME}
-        vettedHeading1="Verified artificial grass installers  "
+        vettedHeading1="Verified artificial grass installers you can "
         vettedHeading2="trust"
         breadcrumb={BREADCRUM_DATA_ARTIFICIAL_GRASS_NEARME}
       />
@@ -74,7 +74,7 @@ function ArtificialGrassInstallationNearme() {
         services={POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME}
         popularImage="/nearme/Artificial/artificialPopularJobs.webp"
         altText="Grass fitter hand cutting artificial turf with sharp cutter"
-        mobileCardClass="w-[235px] min-[375px]:w-[270px] min-[430px]:w-[281px] min-[512px]:w-[350px] "
+        mobileCardClass="w-[235px] min-[375px]:w-[270px] min-[430px]:w-[270px] min-[512px]:w-[350px] "
 
       />
       <HowItWorkNearMe />
