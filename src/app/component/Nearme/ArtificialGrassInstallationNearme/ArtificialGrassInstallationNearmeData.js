@@ -7,7 +7,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   },
   {
     type: "h2",
-    text: "Why hiring an artificial grass installer through Localists just  makes sense",
+    text: "Why hiring an artificial grass installer through Localists just makes sense",
   },
   {
     type: "p",
@@ -118,7 +118,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
 
   {
     type: "image",
-    src: "/nearme/Landscaping/natuaralGrassTurf.webp",
+    src: "/nearme/Artificial/grassInstallationPalving.webp",
     alt: "Professional installing artificial grass over paving ",
     marginTop: true,
     marginBottom: true,
@@ -164,7 +164,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
 
    {
     type: "image",
-    src: "/nearme/Landscaping/natuaralGrassTurf.webp",
+    src: "/nearme/Artificial/ArtificialGrassPathway.webp",
     alt: "newly installed artificial grass pathway",
     marginTop: true,
     marginBottom: true,
@@ -333,7 +333,7 @@ export const FEEDBACK_ARTIFICIAL_GRASS_NEARME = [
   {
     id: 2,
     text: "We were tired of mowing and dealing with patchy grass. Localists matched us with a fantastic installer who suggested the right type of turf for our shaded garden. It transformed the space completely. Definitely the best decision we made for our graden! This Miss loves it so much.",
-    name: "Christian T.",
+    name: "Christian T.,",
     location: "Bristol",
   },
   {
