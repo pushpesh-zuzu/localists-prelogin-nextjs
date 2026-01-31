@@ -74,6 +74,8 @@ function ArtificialGrassInstallationNearme() {
         services={POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME}
         popularImage="/nearme/Artificial/artificialPopularJobs.webp"
         altText="Grass fitter hand cutting artificial turf with sharp cutter"
+        mobileCardClass="w-[235px] min-[375px]:w-[281px] min-[430px]:w-[281px] min-[512px]:w-[350px] "
+
       />
       <HowItWorkNearMe />
       {/* <Feature /> */}
