@@ -24,7 +24,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   },
   {
     type: "li",
-    text: "Specialisation – Find experts who handle all types of artificial grass installation, from residential lawns and pet-friendly turf to sports surfaces, commercial spaces, and roof terraces.",
+    text: "Specialisation: Find experts who handle all types of artificial grass installation, from residential lawns and pet-friendly turf to sports surfaces, commercial spaces, and roof terraces.",
   },
   {
     type: "li",
@@ -36,7 +36,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   },
   {
     type: "li",
-    text: "Local expertise – Because installers are based near you, they understand the ground conditions and drainage issues common in your area, ensuring your artificial lawn is fitted with the right base, drainage, and finish to stay smooth, safe, and durable for years, whatever the weather.",
+    text: "Local expertise – Because installers are based near you, they understand the ground conditions and drainage issues common in your area. That means your artificial lawn won’t just look amazing on day one. It will be fitted with the right base, drainage, and finish to stay smooth, safe, and durable for years, whatever the weather.",
   },
   {
     type: "h3",
@@ -50,23 +50,23 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   },
   {
   type: "li",
-  text: "Ground preparation – The process starts with groundworks, where existing grass, weeds, or soil are removed to create a clean, stable foundation. Installers dig down and level the area, ensuring it’s firm and free from obstacles so the new lawn sits perfectly flat.",
+  text: "Ground preparation – It starts with groundworks. Existing grass, weeds, or soil are removed to create a clean, stable foundation. Installers may dig down and level the area, making sure it’s firm and free from obstacles, so your new lawn sits perfectly flat.",
 },
 {
   type: "li",
-  text: "Base layer – A sub-base of crushed stone or sharp sand is spread and compacted to provide stability, allow proper drainage, and prevent the grass from sinking or becoming uneven over time.",
+  text: "Base layer – A sub-base of crushed stone or sharp sand is spread and compacted. This gives stability, allows water to drain properly, and prevents the grass from sinking or becoming uneven over time.",
 },
 {
   type: "li",
-  text: "Weed membrane – A specialist membrane is laid to block weeds from growing up through the turf, keeping your artificial lawn neat and low-maintenance.",
+  text: "Weed membrane – A specialist membrane is laid to block weeds from growing up through the turf. This means your new lawn stays neat and maintenance-free.",
 },
 {
   type: "li",
-  text: "Laying the turf – The artificial grass is carefully rolled out, cut to fit around edges and corners, and securely fixed using adhesive or pins to ensure it stays in place in all weather conditions.",
+  text: "Laying the turf – The artificial grass is carefully rolled out, cut to shape around edges and corners, and then fixed in place with adhesive or pins. This ensures it stays secure in all weather conditions.",
 },
 {
   type: "li",
-  text: "Brushing & infill – To finish, the grass fibres are brushed upright for a natural appearance, and a layer of sand infill may be added for extra weight, stability, and softness underfoot.",
+  text: "Brushing & infill – To finish, the grass fibres are brushed upright for a natural look, and a layer of sand infill may be added for extra weight, stability, and softness underfoot.",
   className:'mb-0'
 },
 {
@@ -99,19 +99,19 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   },
   {
   type: "li",
-  text: "Do you have references or a portfolio? – Genuine examples of past work demonstrate quality and reliability, so always ask to see previous projects.",
+  text: "Do you have references or a portfolio? - Genuine examples of past work show quality and reliability. Always ask to see past work.",
 },
 {
   type: "li",
-  text: "What installation method will you use? – Installation approaches vary depending on soil type, drainage, and intended use such as lawns, pets, sports areas, or balconies. Sharing your intended use helps the installer recommend the best solution.",
+  text: "What installation method will you use? - There are different approaches depending on soil, drainage, or intended use (lawn, pets, sports, balconies, etc.). Mentioning your intended use will allow the grass installer to give you recommendations.",
 },
 {
   type: "li",
-  text: "How long will the project take? – Timelines can vary based on the size and complexity of the job, so it’s important to set clear expectations from the start.",
+  text: "How long will the project take? - Timelines can vary, so it helps to set clear expectations.",
 },
 {
   type: "li",
-  text: "Do you provide a guarantee? – A reliable installer should stand by their work and offer a warranty or guarantee for added peace of mind.",
+  text: "Do you provide a guarantee? - A good installer should stand by their work with some form of warranty.",
   className:'mb-0'
 
 },
@@ -129,15 +129,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   },
 {
   type: "p",
-  text: "The cost of artificial grass installation varies depending on the size of your lawn, the quality of turf you choose, and how much groundwork is required. For example, a small, flat garden with minimal preparation will usually cost less than a larger lawn that needs significant levelling, edging, or drainage work.",
+  text: "The cost of artificial grass installation varies depending on the size of your lawn, the quality of turf you choose, and how much groundwork is required. For example, a small, flat garden with minimal preparation will cost less than a large lawn that needs significant levelling, edging, or drainage work.",
 },
 {
   type: "p",
-  text: "Groundworks such as levelling, adding a sub-base, or fitting edging often make up a large part of the overall price, which is why it’s important to get a clear and detailed breakdown in your quote.",
+  text: "Groundworks (like levelling, adding a base layer, or fitting edging) often account for a big part of the price, so getting a clear breakdown in your quote is essential.",
 },
 {
   type: "p",
-  text: "With Localists, you can get free quotes instantly and compare prices from vetted artificial lawn installers near you, helping you find the right professional for your budget and project.",
+  text: "With Localists, you can get free quotes instantly and compare prices from vetted artificial lawn installers near you, ensuring you find the right fit for your budget and project.",
 },
 {
     type: "pbold",
@@ -146,15 +146,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   },
   {
   type: "li",
-  text: "Budget installation – From £60–£75 per m², including fitting. Ideal for smaller areas or temporary use.",
+  text: "Budget installation – From £60–£75 per m², including fitting. Best for smaller areas or temporary use.",
 },
 {
   type: "li",
-  text: "Mid-range installation – Around £80–£100 per m², offering a good balance of durability and a realistic appearance.",
+  text: "Mid-range installation – Around £80–£100 per m², offering a good balance of durability and realistic appearance.",
 },
 {
   type: "li",
-  text: "Premium installation – £100–£120+ per m², featuring high-quality turf with longer pile height, natural colour tones, and a luxurious feel.",
+  text: "Premium installation – £100–£120+ per m², for high-quality turf with longer pile height, natural tones, and a luxurious feel.",
 },
 {
     type: "p",
@@ -179,15 +179,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   },
   {
   type: "li",
-  text: "Listed buildings or conservation areas – If your property is in a protected area, there may be restrictions on making changes to your garden.",
+  text: "Listed buildings or conservation areas – If your property is in a protected area, there may be restrictions on changes to your garden.",
 },
 {
   type: "li",
-  text: "Front gardens with hard surfaces – Replacing natural grass with an impermeable surface that affects drainage may be subject to local regulations.",
+  text: "Front gardens with hard surfaces – If you’re replacing natural grass with an impermeable base that affects drainage, local regulations may apply.",
 },
 {
   type: "li",
-  text: "Large commercial or public projects – Schools, sports fields, and community spaces may require planning permission depending on the size and intended use.",
+  text: "Large commercial or public projects – Schools, sports fields, and community spaces may need planning consent depending on size and usage.",
 },
  {
     type: "p",
@@ -332,7 +332,7 @@ export const FEEDBACK_ARTIFICIAL_GRASS_NEARME = [
   },
   {
     id: 2,
-    text: "We were tired of mowing and dealing with patchy grass. Localists matched us with a fantastic installer who suggested the right type of turf for our shaded garden. It transformed the space completely. Definitely the best decision we made for our garden!",
+    text: "We were tired of mowing and dealing with patchy grass. Localists matched us with a fantastic installer who suggested the right type of turf for our shaded garden. It transformed the space completely. Definitely the best decision we made for our graden! This Miss loves it so much.",
     name: "Christian T.",
     location: "Bristol",
   },

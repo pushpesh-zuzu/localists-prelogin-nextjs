@@ -22,15 +22,15 @@ import DiscoverNearMe from "../DiscoverNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
 import {
-  ARTIFICIAL_GRASS_NEARME_TABDATA,
-  BREADCRUM_DATA_ARTIFICIAL_GRASS_NEARME,
-  DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA,
-  FEEDBACK_ARTIFICIAL_GRASS_NEARME,
-  FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME,
-  POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME,
-  QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME,
-  VETTED_DATA_ARTIFICIAL_GRASS_NEARME,
-} from "./ArtificialGrassInstallationNearmeData";
+  PATIO_SERVICES_NEARME_TABDATA,
+  BREADCRUM_DATA_PATIO_SERVICES_NEARME,
+  DISCOVER_PATIO_SERVICES_NEARME_DATA,
+  FEEDBACK_PATIO_SERVICES_NEARME,
+  FREQUENTLY_DATA_PATIO_SERVICES_NEARME,
+  POPULAR_SERVICES_PATIO_SERVICES_NEARME,
+  QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME,
+  VETTED_DATA_PATIO_SERVICES_NEARME,
+} from "./PatioServicesData";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -46,53 +46,52 @@ const CloseBrowserAbandon = dynamic(
   { ssr: false },
 );
 
-function ArtificialGrassInstallationNearme() {
+function PatioServicesNearme() {
   usePendingBuyerRedirect();
   return (
     <>
       <CloseBrowserAbandon />
-      <FAQScript FAQ={FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME} />
+      <FAQScript FAQ={FREQUENTLY_DATA_PATIO_SERVICES_NEARME} />
       <HeroSectionNearMe
-        heading1=" Find Artificial Grass Installers"
+        heading1="Find Patio Layers"
         heading2="Near You"
-        description="Find the best artificial grass installers in your area, just enter your postcode and a few details for instant quotes"
-        bannerImage="/nearme/Artificial/ArtificialGrassBanner.jpg"
-        bannerImageMobile="/nearme/Artificial/ArtificialGrassBannerMobile.webp"
-        altText="Artificial grass installer landscaping a yard with artificial grass, measuring tap on grass."
+        description="Find the best patio layers for your job, just enter your postcode and a few details for instant quotes."
+        bannerImage="/nearme/Patio/patioServicesNearme.webp"
+        bannerImageMobile="/nearme/Patio/patioServicesNearmeMobile.webp"
+        altText="Expert patio installer with gloves on, laying paver bricks on large patio"
         serviceId={54}
-        serviceName="Artificial Grass Installation"
+        serviceName="Patio Laying"
       />
       <VettedSection
-        paragraph={VETTED_DATA_ARTIFICIAL_GRASS_NEARME}
-        vettedHeading1="Verified artificial grass installers  "
+        paragraph={VETTED_DATA_PATIO_SERVICES_NEARME}
+        vettedHeading1="Verified patio layers you can "
         vettedHeading2="trust"
-        breadcrumb={BREADCRUM_DATA_ARTIFICIAL_GRASS_NEARME}
+        breadcrumb={BREADCRUM_DATA_PATIO_SERVICES_NEARME}
       />
-      {/* popularImage="/nearme/Artificial/artificialPopularJobs.webp" */}
 
       <PopularJobNearMe
-        services={POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME}
-        popularImage="/nearme/Artificial/artificialPopularJobs.webp"
-        altText="Grass fitter hand cutting artificial turf with sharp cutter"
+        services={POPULAR_SERVICES_PATIO_SERVICES_NEARME}
+        popularImage="/nearme/Patio/PatioServicesPopularJobs.webp"
+        altText="stone paver patio installation in progress with drainage installed"
       />
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
-        heading1="Artificial Grass Installers "
+        heading1="Patio specialists " 
         heading2="in your area"
-        tabData={ARTIFICIAL_GRASS_NEARME_TABDATA}
-      />
-      <UserFeedbackNearMe2 feedbackData={FEEDBACK_ARTIFICIAL_GRASS_NEARME} />
+        tabData={PATIO_SERVICES_NEARME_TABDATA}
+      /> 
+      <UserFeedbackNearMe2 feedbackData={FEEDBACK_PATIO_SERVICES_NEARME} />
       {/* <PaddingWrapper> */}
       <AboutServicesAndQuestions
         serviceId={54}
         serviceName="Artificial Grass Installation"
-        contentBlocks={QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME}
+        contentBlocks={QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME}
       />
       {/* </PaddingWrapper> */}
-      <FAQ data={FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME} />
+      <FAQ data={FREQUENTLY_DATA_PATIO_SERVICES_NEARME} />
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}
-      <DiscoverNearMe homeData={DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA} />
+      <DiscoverNearMe homeData={DISCOVER_PATIO_SERVICES_NEARME_DATA} />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
       />
@@ -101,4 +100,4 @@ function ArtificialGrassInstallationNearme() {
   );
 }
 
-export default ArtificialGrassInstallationNearme;
+export default PatioServicesNearme;
