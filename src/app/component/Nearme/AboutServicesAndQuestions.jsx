@@ -8,12 +8,14 @@ import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import AveragePrice from "./AveragePrice";
 
 const textBase =
-  "font-[Arial] tracking-[-0.03em] text-[16px] leading-[20px] md:text-[16px] md:leading-[16px] lg:text-[20px] lg:leading-[24px]";
+  "font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em]!"
 
 const AboutServicesAndQuestions = ({
   title,
   contentBlocks = [],
   buttonText,
+  serviceId=112,
+  serviceName="Tree Surgery"
 }) => {
   const renderBlock = (block, index) => {
     switch (block.type) {
@@ -50,12 +52,13 @@ const AboutServicesAndQuestions = ({
         return <AveragePrice key={index} />;
       case "h3":
         return (
-          <H3 key={index} className={`${textBase} font-bold mb-2 text-[#253238]`}>
+          <H3 key={index} className={`${textBase} font-bold ${
+              block?.className ? block?.className : 'mb-[10px] md:mb-[15px]'} text-[#253238]`}>
             {block.text}
           </H3>
         );
       case "PostCodeSection":
-        return <PostCodeSection key={index} />;
+        return <PostCodeSection serviceId={serviceId} serviceName={serviceName}  classNamePostCode={block?.className} key={index} />;
 
       case "p":
         return (
@@ -83,11 +86,11 @@ const AboutServicesAndQuestions = ({
 
       case "li":
         return (
-          <ul key={index} className="mb-2.5 md:mb-[15px] list-disc pl-5 md:pl-8">
+          <ul key={index} className={`${block?.className ? block?.className:'mb-2.5 md:mb-[15px]' } list-disc pl-5 md:pl-8`}>
             <li className={textBase}>
               {block.heading}
               {block.text && (
-                <span className="leading-[22px]" dangerouslySetInnerHTML={{ __html: block.text }} />
+                <span className="" dangerouslySetInnerHTML={{ __html: block.text }} />
               )}
             </li>
           </ul>

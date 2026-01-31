@@ -139,27 +139,27 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "li",
     text: "Insurance - This is also non-negotiable as it protects you and your property if something goes wrong.",
-    className: "mr-5",
+    // className: "mr-5",
   },
   {
     type: "li",
     text: "Reviews - Check reviews and recommendations from past clients to see how reliable they are in practice.",
-    className: "mr-5",
+    // className: "mr-5",
   },
   {
     type: "li",
     text: "Transparency - A good tree surgeon will be transparent: they’ll explain the work clearly, provide a written quote, and answer your questions before starting.",
-    className: "mr-5",
+    // className: "mr-5",
   },
   {
     type: "li",
     text: "Relevant experience - Having hands-on experience with the type of job you need is also a plus. Whether that’s caring for ornamental trees in your garden, managing large oaks on a commercial site, or maintaining multiple trees in public spaces.",
-    className: "mr-5",
+    // className: "mr-5",
   },
   {
     type: "li",
     text: `Professional bodies membership –  Having a membership to organisations such as the <a href='https://www.trees.org.uk/' target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>Arboricultural Association</a> often means they have to adhere to strict regulations and protocols.`,
-    className: "mr-5",
+    // className: "mr-5",
   },
 ];
 export const FREQUENTLY_DATA_TREE_SURGEON = {

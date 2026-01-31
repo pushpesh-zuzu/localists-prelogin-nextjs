@@ -60,7 +60,7 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
                     variant="secondary"
                     dangerouslySetInnerHTML={{ __html: item.description }}
                     className={`font-[Arial] faq-content text-[16px] 
-                            md:text-[16px] md:leading-[22px]
+                            md:text-[16px] leading-[20px]
                             lg:text-[20px] lg:leading-[24px] tracking-[0em]! font-normal md:max-w-[95%]`}
                   />
                 </div>
