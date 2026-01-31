@@ -17,7 +17,7 @@ export default function Page() {
         <>
             <SEO
                 canonicalPath="/en/gb/driveway-installers-near-me"
-                bannerImage="/nearme/treeSurgeon.webp"
+                bannerImage="/nearme/Driveway-Installation-Page.webp"
                 breadcrumb={[
                     { title: "Home", path: "/en/gb" },
                     { title: "Home & Garden", path: "/en/gb/home" },
