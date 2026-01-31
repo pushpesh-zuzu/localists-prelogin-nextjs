@@ -2,7 +2,7 @@ import React from 'react';
 
 const PatioPricingTable = () => {
   return (
-    <div className="w-full mx-auto">
+    <div className="w-full mx-auto mb-[15px] md:mb-[25px]">
       {/* Pricing Table */}
         <table className="w-full border-collapse">
           <tbody>

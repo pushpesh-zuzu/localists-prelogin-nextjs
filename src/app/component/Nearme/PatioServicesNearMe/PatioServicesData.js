@@ -15,24 +15,24 @@ export const QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME = [
   },
   {
     type: "li",
-    text: "Get at least three quotes – Prices can vary more than you expect, so comparing multiple quotes helps you understand what’s fair and spot any prices that are unusually high or suspiciously low.",
+    text: "Get at least three quotes – Prices can vary more than you think. Having a few quotes to compare gives you a better sense of what’s fair and helps you spot anyone who’s too high or suspiciously low.",
   },
   {
     type: "li",
-    text: "Ask for tailored design suggestions – A good local patio builder will offer creative ideas that suit your garden’s size, shape, and style, rather than simply agreeing to everything.",
+    text: "Ask for tailored design suggestions – A good local patio builder won’t just say “yes” to everything; they’ll offer creative ideas that work with your garden’s size, shape, and style.",
   },
   {
     type: "li",
-    text: "See real examples of past projects – Photos of completed patios in materials such as sandstone or porcelain help you assess the quality and finish before deciding.",
+    text: "See real examples of past projects – Photos speak volumes. Ask to see finished patios in materials you’re considering, like sandstone patios or porcelain patios, so you can judge the quality for yourself.",
   },
   {
     type: "li",
-    text: "Avoid paying everything upfront – A reliable patio installer will be comfortable with staged payments, so you only pay the full amount once you’re completely satisfied.",
+    text: "Avoid paying everything upfront – A trusted patio installer will be happy to work with staged payments, so you only pay in full when you’re completely satisfied.",
   },
   {
     type: "li",
-    text: "Check genuine local recommendations – Online reviews are helpful, but recommendations from people in your local area provide extra confidence that the contractor delivers on their promises.",
-    className:'mb-0'
+    text: "Check genuine local recommendations – It’s one thing to have online reviews, but hearing from someone in your own area gives extra peace of mind that the contractor delivers on their promises.",
+    className: "mb-0",
   },
   {
     type: "image",
@@ -145,12 +145,13 @@ export const QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME = [
     type: "p",
     text: "A simple gravel or concrete-style patio will generally cost less than a premium porcelain or sandstone finish. On average, you can expect to spend around £80–£120 per m² for materials and labour combined, or around £2,800 on a new complete patio installation ( This would be for a 15 m2 sandstone patio, installed by two patio installers over two days (around £290 per patio installer, per day. Though this figure can be significantly higher or slightly lower depending on your location. Here’s a rough guide based on popular options:",
   },
+  { type: "patioPricingTable" },
   {
     type: "p",
     text: "Labour typically makes up 50–70% of the cost, so location and contractor experience can also affect the final price. If you need a custom estimate, there’s no need to stress. Localists can connect you with local patio installers who’ll provide free, no-obligation quotes tailored to your garden, materials, and budget.",
+    notMarginBottom: true,
   },
 
-{type:"patioPricingTable"},
   {
     type: "image",
     src: "/nearme/Patio/residentialBuildings.webp",
@@ -188,7 +189,7 @@ export const QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME = [
   },
   {
     type: "li",
-    text: "Willingness to answer questions – A good contractor won’t rush you; they’ll take time to explain options, next steps and are happy to hold your hands throughout the project",
+    text: "Willingness to answer questions – A good contractor won’t rush you; they’ll take time to explain options, next steps and are happy to hold your hands throughout the project. ",
   },
   {
     type: "p",
@@ -202,7 +203,7 @@ export const FREQUENTLY_DATA_PATIO_SERVICES_NEARME = [
     key: "1",
     title: "How do I find a patio contractor near me?",
     description: `
-      Good news -  You’re already halfway there! Use Localists to search for reputable patio contractors wherever you are. Simply tell us your project vision, your location, and we'll match you with trusted professionals who can bring it to life. Pick your builder, get the ball rolling, and relax.
+      Good news - You’re already halfway there! Use Localists to search for reputable patio contractors wherever you are. Simply tell us your project vision, your location, and we'll match you with trusted professionals who can bring it to life. Pick your builder, get the ball rolling, and relax.
       `,
   },
   {
@@ -227,7 +228,6 @@ export const FREQUENTLY_DATA_PATIO_SERVICES_NEARME = [
       `,
   },
 ];
-
 
 export const ADVICEINSIGHT_PATIO_SERVICES_NEARME = [
   {
@@ -299,23 +299,22 @@ export const FEEDBACK_PATIO_SERVICES_NEARME = [
   {
     id: 1,
     text: "I used Localists to find a patio installer near me and couldn’t be happier. The contractor was friendly, turned up on time every day, and the work was flawless. My new sandstone patio completely transformed the garden. I’ve already recommended them to my neighbour!",
-    name: "Harry W.",
+    name: "Harry W.,",
     location: "Surrey",
   },
   {
     id: 2,
     text: "I needed a quick turnaround for a gravel patio before a family event. Localists matched me with a brilliant local patio builder who had great reviews. The quote was fair, and the job was finished ahead of schedule. Couldn’t ask for better service.",
-    name: "James R.",
+    name: "James R.,",
     location: "Manchester",
   },
   {
     id: 3,
     text: "After weeks of searching for patio contractors near me, I found Localists. Within the same day, I had three quotes from three different patio companies and picked the one that best suited my budget. The new porcelain patio looks incredible and has already made the garden our favourite spot.",
-    name: "Helen M.",
+    name: "Helen M.,",
     location: "London",
   },
 ];
-
 
 export const DISCOVER_PATIO_SERVICES_NEARME_DATA = [
   {

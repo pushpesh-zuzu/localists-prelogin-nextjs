@@ -13,7 +13,7 @@ function page() {
     <>
       <SEO
         canonicalPath="/en/gb/patio-layers-near-me"
-        bannerImage="/nearme/PaddingWrapperatio/patioServicesNearme.webp"
+        bannerImage="/nearme/Patio/patioServicesNearme.webp"
         breadcrumb={[
           { title: "Home & Garden", path: "/home" },
           { title: "Patio Installation", path: "/patio-layers-near-me" },
