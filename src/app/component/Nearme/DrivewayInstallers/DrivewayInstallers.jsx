@@ -51,6 +51,8 @@ function DrivewayInstallers() {
                 bannerImage="/nearme/Driveway-Installation-Page.webp"
                 bannerImageMobile="/nearme/Driveway-mobile.webp"
                 altText="New block paved Driveway being carefully Installed by a Driveway Installer"
+                serviceId={51}
+                serviceName="Driveway Installation"
             />
             <VettedSection
                 paragraph={VETTED_DATA_DRIVEWAY_INSTALLER}
@@ -70,7 +72,10 @@ function DrivewayInstallers() {
                 tabData={DRIVEWAY_INSTALLERS_TABDATA}
             />
             <UserFeedbackNearMe feedbackData={DRIVEWAY_INSTALLERS_FEEDBACK} />
-            <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
+            <AboutServicesAndQuestions
+                serviceId={51}
+                serviceName="Driveway Installation"
+                contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
             <div className="-mt-[15px] xl:-mt-[50px]">
                 <FAQ

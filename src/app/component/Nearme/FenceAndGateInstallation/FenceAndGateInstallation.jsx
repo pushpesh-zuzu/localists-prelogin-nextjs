@@ -51,6 +51,8 @@ function FenceAndGateInstallation() {
                 bannerImage="/nearme/Fencing-Contractors.webp"
                 bannerImageMobile="/nearme/fencing-contractor-mobile.webp"
                 altText="Worker drilling metal fence panel"
+                serviceId={49}
+                serviceName="Fence & Gate Installation"
             />
             <VettedSection
                 paragraph={VETTED_DATA_FENCE_AND_GATE}
@@ -70,7 +72,10 @@ function FenceAndGateInstallation() {
                 tabData={FENCE_AND_GATE_TABDATA}
             />
             <UserFeedbackNearMe feedbackData={FENCE_AND_GATE_FEEDBACK} />
-            <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
+            <AboutServicesAndQuestions
+                serviceId={49}
+                serviceName="Fence & Gate Installation"
+                contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
             <div className="-mt-[15px] xl:-mt-[50px]">
                 <FAQ
                     data={FREQUENTLY_DATA_FENCE_AND_GATE["fencing-contractors-near-me"]}
