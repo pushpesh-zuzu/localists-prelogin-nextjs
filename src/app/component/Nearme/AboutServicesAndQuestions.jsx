@@ -45,7 +45,7 @@ const AboutServicesAndQuestions = ({
                 } ${block?.marginTop ? "mt-[30px] lg:mt-[72px]" : ""} ${block?.marginBottom ? "mb-5 lg:mb-[70px]" : ""
                 }`}
               priority={block?.priority || false}
-              quality={50}
+              quality={70}
             />
           </div>
         );
