@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
     <>
       <SEO canonicalPath="/en/gb/privacy-policy"
         breadcrumb={[
-          { title: "Privacy Policy", path: "/en/gb" },
+          { title: "Home", path: "/en/gb" },
           { title: "Privacy Policy", path: "/en/gb/privacy-policy" },
         ]}
         conversion={true}

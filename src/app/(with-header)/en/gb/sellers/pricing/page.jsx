@@ -10,27 +10,6 @@ export const metadata = {
     title: "Pricing | Join Free & Connect with Customers - Localists",
     description:
         "Register free on Localists and get customer leads. Only pay a small fee to connect with the ones you want. Keep 100% of what you earn.",
-
-    alternates: {
-        // canonical: "https://dev2.localistsbooster.com/en/gb/sellers-pricing",
-        languages: {
-            "en-GB": "https://dev2.localistsbooster.com/en/gb/sellers-pricing"
-        },
-    },
-
-    openGraph: {
-        title: "Pricing | Join Free & Connect with Customers - Localists",
-        description:
-            "Register free on Localists and get customer leads. Only pay a small fee to connect with the ones you want. Keep 100% of what you earn.",
-    },
-    twitter: {
-        title: "Pricing | Join Free & Connect with Customers - Localists",
-        description:
-            "Register free on Localists and get customer leads. Only pay a small fee to connect with the ones you want. Keep 100% of what you earn.",
-        url: "https://dev2.localistsbooster.com/en/gb/sellers-pricing",
-        siteName: "Localists",
-        type: "website",
-    },
 };
 function page() {
     return (
@@ -38,7 +17,7 @@ function page() {
             <SEO
                 canonicalPath="/en/gb/sellers/pricing"
                 breadcrumb={[
-                    { title: "Pricing", path: "/en/gb" },
+                    { title: "Home", path: "/en/gb" },
                     { title: "Pricing", path: "/en/gb/sellers/pricing" },
                 ]}
                 conversion={true}

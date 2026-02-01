@@ -24,7 +24,7 @@ export default function Page() {
                 conversion={true}
                 canonicalPath="/en/gb/blog"
                 breadcrumb={[
-                    { title: "Blog", path: "/en/gb" },
+                    { title: "Home", path: "/en/gb" },
                     { title: "Blog", path: "/en/gb/blog" },
                 ]} />
             <CloseBrowserAbandon />

@@ -6,18 +6,6 @@ export const metadata = {
     title: "Get in Touch with Localists | Customer & Professional Support",
     description:
         "Have questions or need help? Contact Localists & speak with our team, find professionals, or join as a service provider. We’re here to help you connect.",
-    openGraph: {
-        title: "Get in Touch with Localists | Customer & Professional Support",
-        description:
-            "Have questions or need help? Contact Localists & speak with our team, find professionals, or join as a service provider. We’re here to help you connect.",
-        type: "website",
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "Get in Touch with Localists | Customer & Professional Support",
-        description:
-            "Have questions or need help? Contact Localists & speak with our team, find professionals, or join as a service provider. We’re here to help you connect.",
-    },
 };
 
 
@@ -28,7 +16,7 @@ export default function Page() {
             <SEO
                 canonicalPath="/en/gb/contact-us"
                 breadcrumb={[
-                    { title: "Contact us", path: "/en/gb" },
+                    { title: "Home", path: "/en/gb" },
                     { title: "Contact us", path: "/en/gb/contact-us" },
                 ]}
                 conversion={true}

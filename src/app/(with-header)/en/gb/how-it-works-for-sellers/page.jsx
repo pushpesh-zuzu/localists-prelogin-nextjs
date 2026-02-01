@@ -22,7 +22,7 @@ const page = () => {
       <SEO
         canonicalPath="/en/gb/how-it-works-for-customers"
         breadcrumb={[
-          { title: "How it works for sellers", path: "/en/gb" },
+          { title: "Home", path: "/en/gb" },
           { title: "How it works for sellers", path: "/en/gb/how-it-works-for-sellers" },
         ]}
         conversion={true}
