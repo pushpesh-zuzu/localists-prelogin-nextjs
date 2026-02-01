@@ -1,5 +1,3 @@
-// app/tree-surgeons-near-me/page.tsx
-
 import { Suspense } from "react";
 import SEO from "@/app/component/common/seo/SEO";
 import LoadingIndicator from "@/app/component/common/Loader/LoaderIndicatore";
