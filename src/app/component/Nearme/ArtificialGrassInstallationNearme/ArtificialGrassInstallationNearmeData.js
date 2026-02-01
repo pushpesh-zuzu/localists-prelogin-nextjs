@@ -194,9 +194,8 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
     text: "Many standard home installations don’t require a permit, but it’s always wise to check with your local council before starting, especially for larger or more unusual projects. Localists connects you with local artificial grass installation experts who understand not just the installation process, but also the local regulations that might apply in your area. Start your search now!",
   },
 
-    { type: "PostCodeSection", className: "my-[30px] lg:mt-[60px] lg:mb-[0px]" },
+    { type: "PostCodeSection", className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]" },
 
-  //  later we remove this
 
   
 ];

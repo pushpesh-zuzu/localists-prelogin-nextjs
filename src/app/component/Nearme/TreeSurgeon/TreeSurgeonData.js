@@ -160,6 +160,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     type: "li",
     text: `Professional bodies membership –  Having a membership to organisations such as the <a href='https://www.trees.org.uk/' target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>Arboricultural Association</a> often means they have to adhere to strict regulations and protocols.`,
     // className: "mr-5",
+    className:'mb-0'
   },
 ];
 export const FREQUENTLY_DATA_TREE_SURGEON = {

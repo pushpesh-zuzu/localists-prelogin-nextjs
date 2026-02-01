@@ -7,7 +7,7 @@ const PostCodeSearchField = dynamic(() => import("../PostCodeSearchField"), {
 });
 
 function PostCodeSection({
-  classNamePostCode = "mb-[30px] mt-5 lg:mt-[60px] lg:mb-[60px]",
+  classNamePostCode = "mb-[30px] mt-[30px] lg:mt-[60px] lg:mb-[60px]",
   serviceId = 112,
   serviceName = "Tree Surgery",
 }) {
