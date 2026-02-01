@@ -103,7 +103,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         heading: "Agricultural fencing:\u00A0",
         text: "Perfect for keeping your farming stock secure.",
     },
-    { type: "PostCodeSection" },
+    { type: "PostCodeSection", className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]" },
 ];
 
 export const FREQUENTLY_DATA_FENCE_AND_GATE = {

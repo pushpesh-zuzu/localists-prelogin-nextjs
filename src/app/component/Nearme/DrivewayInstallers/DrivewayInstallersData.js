@@ -17,6 +17,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         type: "pbold",
         text: "Hiring through Localists just makes sense.",
         // className: "my-[15px] md:my-[25px]",
+        className: "mb-0",
     },
     {
         type: "image",
@@ -57,6 +58,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "li",
         text: `Ongoing maintenance support: Many installers offer more than just installation—they can handle repairs, upgrades, and ongoing maintenance to keep your driveway looking its best.`,
+        className: "mb-0",
     },
     {
         type: "image",
@@ -149,7 +151,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         ]
 
     },
-    { type: "PostCodeSection" },
+    { type: "PostCodeSection", className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]" },
 
 ];
 

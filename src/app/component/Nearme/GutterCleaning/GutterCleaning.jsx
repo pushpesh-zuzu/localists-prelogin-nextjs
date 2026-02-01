@@ -77,11 +77,9 @@ function GutterCleaning() {
                 serviceName=""
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
-            <div className="-mt-[15px] xl:-mt-[50px]">
                 <FAQ
                     data={FREQUENTLY_DATA_GUTTER_CLEANING["gutter-cleaning-near-me"]}
                 />
-            </div>
 
             <DiscoverNearMe homeData={GUTTER_CLEANING_DATA} />
 
