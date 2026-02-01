@@ -196,7 +196,7 @@ export const QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME = [
     text: "Remember, all specialists here on Localists are vetted and verified, so you can skip the risky guesswork. We’ve already done the legwork - you just go ahead and choose a builder who feels right for your project.",
     notMarginBottom: true,
   },
-  { type: "PostCodeSection", className: "my-[30px] lg:mt-[60px] lg:mb-[0px]" },
+  { type: "PostCodeSection", className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]" },
 ];
 export const FREQUENTLY_DATA_PATIO_SERVICES_NEARME = [
   {

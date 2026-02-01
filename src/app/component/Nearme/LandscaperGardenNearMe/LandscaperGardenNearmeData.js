@@ -252,7 +252,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   },
   {
     type: "PostCodeSection",
-    className: "mt-[30px] mb-0 lg:mt-[60px] lg:mb-[0px]",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
   },
 
   //  {
