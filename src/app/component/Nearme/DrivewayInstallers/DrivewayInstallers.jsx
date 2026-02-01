@@ -77,11 +77,9 @@ function DrivewayInstallers() {
                 serviceName="Driveway Installation"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
-            <div className="-mt-[15px] xl:-mt-[50px]">
                 <FAQ
                     data={FREQUENTLY_DATA_DRIVEWAY_INSTALLERS["driveway-installers-near-me"]}
                 />
-            </div>
 
             <DiscoverNearMe homeData={DRIVEWAY_INSTALLERS_DATA} />
 

@@ -26,7 +26,12 @@ const AboutServicesAndQuestions = ({
           <NearmeH2Heading
             key={index}
             headdingblue={block.text}
-            className="mb-5 md:mb-[25px] max-w-[100%] md:max-w-full"
+            // className="mb-5 md:mb-[25px] max-w-[100%] md:max-w-full"
+            className={`max-w-[100%] md:max-w-full ${
+        block?.noMarginBottom
+          ? "mb-0"
+          : "mb-5 md:mb-[25px]"
+      }`}
           />
         );
       case "image":
@@ -74,10 +79,10 @@ const AboutServicesAndQuestions = ({
             <span dangerouslySetInnerHTML={{ __html: block.text }} />
           </Paragraph>
         );
-        case "patioPricingTable":
-          return(
-            <PatioPricingTable/>
-          )
+      case "patioPricingTable":
+        return (
+          <PatioPricingTable />
+        )
       case "pbold":
         return (
           <Paragraph
@@ -111,7 +116,12 @@ const AboutServicesAndQuestions = ({
 
       case "uili":
         return (
-          <ul key={index} className="mb-2.5 md:mb-[15px] list-disc pl-5 md:pl-8">
+          <ul key={index}
+          // className="list-disc pl-5 md:pl-8 mb-2.5 md:mb-[15px]"
+            className={`list-disc pl-5 md:pl-8 ${block?.noMarginBottom
+                ? "mb-0"
+                : "mb-2.5 md:mb-[15px]"
+              }`}>
             <li className={textBase}>
               <span className="font-bold">{block.heading}</span>{" "}
               <span dangerouslySetInnerHTML={{ __html: block.text }} />

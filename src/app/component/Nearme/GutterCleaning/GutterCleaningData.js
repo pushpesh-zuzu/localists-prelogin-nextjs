@@ -46,6 +46,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "h2",
         text: "What are the signs of clogged gutters?",
+        noMarginBottom: true
     },
     {
         type: "image",
@@ -69,7 +70,8 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "h2",
         text: "How much does gutter cleaning cost?",
-        // className: 'mt-[15px] lg:mt-[25px] mb-[10px] md:mb-[15px]'
+        noMarginBottom: true
+
     },
     {
         type: "image",
@@ -96,14 +98,14 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "h2",
         text: "Can you clean gutters yourself?",
-        // className: 'mt-[15px] lg:mt-[25px] mb-[10px] md:mb-[15px]'
+        noMarginBottom: true
     },
     {
         type: "image",
         src: "/nearme/gutter-cleaning1.webp",
         alt: "expert fixing some fittings after gutter cleaning",
         marginBottom: true,
-        marginTop: true
+        marginTop: true,
     },
     {
         type: "p",
@@ -142,7 +144,6 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "h2",
         text: "How to pick the right gutter cleaner",
-        // className: 'mt-[15px] lg:mt-[25px] mb-[10px] md:mb-[15px]'
     },
     {
         type: "p",
@@ -170,7 +171,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         type: "uili",
         heading: "Transparency\u00A0",
         text: "- A good cleaner will explain exactly what they’re doing and provide a clear written quote before starting. No surprises.",
-        marginTop: false,
+        noMarginBottom: true
     },
 ];
 
@@ -183,6 +184,7 @@ export const FREQUENTLY_DATA_GUTTER_CLEANING = {
       Generally, most properties benefit from a gutter clean atleast twice a year. Ideally, once in spring and again in autumn. These are the times when gutters are most likely to get clogged, either from falling blossom, leaves, or seasonal debris.
       <br /><br />
       On the other hand, if your building is close to tall trees, or you live somewhere that gets a lot of rainfall, you might need to do it more often. Regular checks mean you can catch blockages early and avoid the hassle of water damage later.
+      
       `,
         },
         {
