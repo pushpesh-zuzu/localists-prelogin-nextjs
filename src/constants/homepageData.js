@@ -104,7 +104,7 @@ export const carouselData1 = [
   },
   {
     id: 4,
-    title: "Accoutant",
+    title: "Accountant",
     image: "/homepage/image7.webp",
     isSpecial: false
   },
@@ -194,15 +194,39 @@ export const tabData = {
       "Plumbers in Birmingham",
     ],
     popular: [
-      "Landscapers near me",
-      "Patio Layers near me",
-      "Private Tutors near me",
-      "Personal Trainers near me",
-      "Landscapers near me",
-      "Patio Layers near me",
-      "Private Tutors near me",
-      "Fence & Gate Installers near me",
-    ],
+      {
+        title: "Landscapers Near Me",
+        url: "/en/gb/landscape-gardeners-near-me",
+    },
+     {
+        title: "Patio Layers near me",
+        url: "/en/gb/tree-surgeon-near-me",
+    },
+     {
+        title: "Private Tutors near me",
+        url: "",
+    },
+    {
+        title: "Personal Trainers near me",
+        url: "",
+    },
+    {
+        title: "Fence & Gate Installers near me",
+        url: "/en/gb/fencing-contractors-near-me",
+    },
+     {
+        title: "Driveway Installers near me",
+        url: "/en/gb/driveway-installers-near-me",
+    },
+     {
+        title: "Gutter Cleaners near me",
+        url: "/en/gb/gutter-cleaning-near-me",
+    },
+     {
+        title: "Artificial Grass Installers near me",
+        url: "/en/gb/artificial-grass-installers-near-me",
+    },
+          ],
     insight: [
       "Hiring Tips",
       "Roofing Safety",

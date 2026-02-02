@@ -54,7 +54,7 @@ function PopularCard() {
       id: 7,
       image: "/homepage/guttercleaning.webp",
       title: "Gutter Cleaning",
-      path: "en/gb/gutter-cleaning-near-me",
+      path: "/en/gb/gutter-cleaning-near-me",
     },
   ];
   return (

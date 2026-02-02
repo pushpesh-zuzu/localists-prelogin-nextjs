@@ -1,34 +1,55 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import { memo, useState } from "react";
-import { searchService } from "@/lib/store/searchSlice";
+// import { searchService } from "@/lib/store/searchSlice";
 import { useDispatch } from "react-redux";
 import dynamic from "next/dynamic";
 import H1 from "../../UI/Typography/H1";
 import Paragraph from "../../UI/Typography/Paragraph";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
-import SearchIcon from "../../common/icons/HomePageIcons/SearchIcon";
+// import SearchIcon from "../../common/icons/HomePageIcons/SearchIcon";
 import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 import Paragraph1 from "../../UI/Typography/Paragraph1";
 import TrustpioletIcon from "../../common/icons/HomePageIcons/TrustpioletIcon";
 import HeroSectionSearch from "./HeroSectionSearch";
-const SearchResults = dynamic(() => import("../../common/SearchResult"), {
-  ssr: false,
-  loading: () => <div className="hidden">Loading...</div>,
-});
+import Link from "next/link";
 
 const HeroSection = memo(function HeroSection() {
   const services = [
-    "Landscapers",
-    "Patio Layers",
-    "Private Tutors",
-    "Fence & Gate Installers",
-    "Personal Trainers",
-    "Painter Decorators",
-    "Tree Surgeons",
-    "Architects",
-    "Airport Transfers",
-    "Physics and Maths Tutors",
+    {
+      title: "Landscapers",
+      slug: "/en/gb/landscape-gardeners-near-me",
+    },
+    {
+      title: "Patio Layers",
+      slug: "/en/gb/patio-layers-near-me",
+    },
+    {
+      title: "Private Tutors",
+    },
+    {
+      title: "Fence & Gate Installers",
+      slug: "/en/gb/fencing-contractors-near-me",
+    },
+    {
+      title: "Personal Trainers",
+    },
+    {
+      title: "Painter Decorators",
+    },
+    {
+      title: "Tree Surgeons",
+      slug: "/en/gb/tree-surgeon-near-me",
+    },
+    {
+      title: "Architects",
+    },
+    {
+      title: "Airport Transfers",
+    },
+    {
+      title: "Physics and Maths Tutors",
+    },
   ];
 
   const [showAllServices, setShowAllServices] = useState(false);
@@ -76,34 +97,60 @@ const HeroSection = memo(function HeroSection() {
 
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
           <Paragraph1 className="text-white -tracking-[3%] pb-4 md:pb-4 lg:pb-[30px] text-shadow-[0px_0px_4px_0px_#00000040]">
-            Popular Services
+            Popular Services:
           </Paragraph1>
 
           <div className="hidden lg:flex flex-wrap gap-2 xl:gap-3">
-            {services.map((service) => (
-              <button
-                key={service}
-                className="border xl:border-2 border-white family-55  px-1.5 py-[5px] xl:px-3.5 xl:py-[7px] rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none"
-                aria-label={`Search for ${service}`}
-              >
-                <Paragraph>{service}</Paragraph>
-              </button>
-            ))}
+            {services.map((service) =>
+              service?.slug ? (
+                <a
+                  key={service.title}
+                  href={service.slug}
+                  className="border xl:border-2 border-white family-55  px-1.5 py-[5px] xl:px-3.5 xl:py-[7px] rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none"
+                  aria-label={`Search for ${service.title}`}
+                >
+                  <Paragraph>{service.title}</Paragraph>
+                </a>
+              ) : (
+                <button
+                  key={service.title}
+                  href={service.slug}
+                  className="border xl:border-2 border-white family-55  px-1.5 py-[5px] xl:px-3.5 xl:py-[7px] rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none"
+                  aria-label={`Search for ${service.title}`}
+                >
+                  <Paragraph>{service.title}</Paragraph>
+                </button>
+              ),
+            )}
           </div>
 
           <div className="md:hidden w-full">
             <div className="flex flex-wrap gap-2">
-              {displayedServices.map((service) => (
-                <button
-                  key={service}
-                  className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
-                  aria-label={`Search for ${service}`}
-                >
-                  <p className="text-base md:text-sm sm:text-[18px] font-[Arial] font-bold tracking-[-0.03em] ">
-                    {service}
-                  </p>
-                </button>
-              ))}
+              {displayedServices?.map((service) =>
+                service?.slug ? (
+                  <a
+                    key={service.title}
+                    href={service.slug}
+                    className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
+                    aria-label={`Search for ${service.title}`}
+                  >
+                    <p className="text-base md:text-sm sm:text-[18px] font-[Arial] font-bold tracking-[-0.03em] ">
+                      {service.title}
+                    </p>
+                  </a>
+                ) : (
+                  <button
+                    key={service.title}
+                    href={service.slug}
+                    className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
+                    aria-label={`Search for ${service.title}`}
+                  >
+                    <p className="text-base md:text-sm sm:text-[18px] font-[Arial] font-bold tracking-[-0.03em] ">
+                      {service.title}
+                    </p>
+                  </button>
+                ),
+              )}
             </div>
 
             {services.length > 5 && (
@@ -124,17 +171,30 @@ const HeroSection = memo(function HeroSection() {
           </div>
           <div className="hidden md:block lg:hidden w-full">
             <div className="flex flex-wrap gap-2">
-              {displayedServicesMediusScreen.map((service) => (
-                <button
-                  key={service}
-                  className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
-                  aria-label={`Search for ${service}`}
-                >
-                  <p className="text-base md:text-sm sm:text-[18px] font-[Arial] font-bold tracking-[-0.03em] ">
-                    {service}
-                  </p>
-                </button>
-              ))}
+              {displayedServicesMediusScreen.map((service) =>
+                service?.slug ? (
+                  <a
+                    key={service.title}
+                    href={service?.slug}
+                    className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
+                    aria-label={`Search for ${service.title}`}
+                  >
+                    <p className="text-base md:text-sm sm:text-[18px] font-[Arial] font-bold tracking-[-0.03em] ">
+                      {service.title}
+                    </p>
+                  </a>
+                ) : (
+                  <button
+                    key={service.title}
+                    className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
+                    aria-label={`Search for ${service.title}`}
+                  >
+                    <p className="text-base md:text-sm sm:text-[18px] font-[Arial] font-bold tracking-[-0.03em] ">
+                      {service.title}
+                    </p>
+                  </button>
+                ),
+              )}
             </div>
 
             {services.length > 5 && (

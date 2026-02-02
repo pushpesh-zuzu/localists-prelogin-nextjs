@@ -42,7 +42,7 @@ export default function MobileSlideInSearch({
     const handleServiceClick = (service) => {
         const route = serviceRouteMap[service.id];
         if (route) {
-            // router.push(`/${currentLang}/${currentCountry}${route}`);
+            router.push(`/${currentLang}/${currentCountry}${route}`);
             closeSearch();
         }
     };

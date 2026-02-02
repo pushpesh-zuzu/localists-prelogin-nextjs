@@ -19,13 +19,13 @@ export default function CarouselCard({ card }) {
 
           {
             card.slug ? (
-              <Link href={card.slug}>
+              <a href={card.slug}>
                 <button className="rounded-full cursor-pointer bg-black hover:bg-[#1b2326] text-white px-[18px] xl:px-[35px] text-base xl:text-[20px] -tracking-[3%] py-[3px] lg:py-[5px]">
                   View All
                 </button>
-              </Link>
+              </a>
             ) : (
-              <button className="rounded-full cursor-pointer bg-black hover:bg-[#1b2326] text-white px-[18px] xl:px-[35px] text-base xl:text-[20px] -tracking-[3%] py-[3px] lg:py-[5px]">
+              <button className="rounded-full bg-black hover:bg-[#1b2326] text-white px-[18px] xl:px-[35px] text-base xl:text-[20px] -tracking-[3%] py-[3px] lg:py-[5px]">
                 View All
               </button>
             )
@@ -37,7 +37,7 @@ export default function CarouselCard({ card }) {
 
   const CardContent = (
     <div className="select-none h-[213px] sm:h-[145px] lg:h-[200px] xl:h-[235px] relative flex justify-center">
-      <div className="relative cursor-pointer w-full h-full max-w-[281px] rounded-[20px] xl:rounded-[28px] overflow-hidden">
+      <div className={`relative ${card?.slug? 'cursor-pointer':''} w-full h-full max-w-[281px] rounded-[20px] xl:rounded-[28px] overflow-hidden`}>
         <Image
           src={card.image}
           alt={card.title}
@@ -66,9 +66,9 @@ export default function CarouselCard({ card }) {
   // If slug exists → clickable
   if (card.slug) {
     return (
-      <Link href={card.slug} className="block">
+      <a href={card.slug} className="block">
         {CardContent}
-      </Link>
+      </a>
     );
   }
 

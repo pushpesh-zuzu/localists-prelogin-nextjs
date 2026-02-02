@@ -4,9 +4,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { clearSearch, setSelectedSearchService } from "@/lib/store/searchSlice";
 import { useEffect } from "react";
 import { questionAnswerData } from "@/lib/store/buyerslice/buyerSlice";
-import LoaderIndicator from "./Loader/LoaderIndicatore";
+import LoaderIndicator from "../common/Loader/LoaderIndicatore";
+import { serviceRouteMap } from "@/utils/allServicesRoute";
+import { useRouter } from "next/navigation";
 
-export default function SearchResults({
+export default function SearchResultForHeader({
   setShow,
   searchQuery,
   setSearchQuery,
@@ -14,7 +16,7 @@ export default function SearchResults({
 }) {
   const { services, loading, error } = useSelector((state) => state.search);
   const dispatch = useDispatch();
-
+ const navigate = useRouter()
   useEffect(() => {
     if (searchQuery === "") {
       dispatch(clearSearch());
@@ -22,16 +24,21 @@ export default function SearchResults({
   }, [searchQuery, dispatch]);
 
   const handleServiceClick = (service) => {
-    dispatch(
-      setSelectedSearchService({
-        service: service.name,
-        id: service?.id || null,
-      })
-    );
-    setSearchQuery(service.name)
-    setSelectedService(service?.id)
+    // dispatch(
+    //   setSelectedSearchService({
+    //     service: service.name,
+    //     id: service?.id || null,
+    //   })
+    // );
+    // setSearchQuery(service.name)
+    // setSelectedService(service?.id)
     // setSearchQuery('');
     // setShow && setShow(true);
+    const matchedRoute = serviceRouteMap[service?.id];
+    if (matchedRoute) {
+      navigate.push(`/en/gb${matchedRoute}`); // go to the route
+      setSearchQuery('');
+    }
     dispatch(clearSearch());
 
 
@@ -41,7 +48,7 @@ export default function SearchResults({
 
   if (loading) {
     return (
-      <div className="absolute z-50 w-full bg-white shadow-lg rounded-lg p-4">
+      <div className="absolute top-full z-50 w-full bg-white shadow-lg rounded-lg p-4">
        <div className="flex justify-center"> <LoaderIndicator size="small"/></div>
       </div>
     );
@@ -59,7 +66,7 @@ export default function SearchResults({
   // Agar services hain
   if (services.length > 0) {
     return (
-      <div className="absolute z-50 w-full bg-white shadow-lg  rounded-lg  max-h-80 overflow-y-auto">
+      <div className="absolute top-full z-50 w-full bg-white shadow-lg  rounded-lg  max-h-80 overflow-y-auto">
         {services.map((service, index) => (
           <div
             key={index}

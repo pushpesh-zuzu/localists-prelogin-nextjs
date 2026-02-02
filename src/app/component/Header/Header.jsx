@@ -15,8 +15,9 @@ import { useRouter } from "next/navigation";
 import AuthenticatedHeader from "./AthenticatedHeader";
 import MobileSlideInSearch from "./MobileSlideInSearch";
 import LoaderIndicator from "../common/Loader/LoaderIndicatore";
+import Link from "next/link";
 
-const SearchResults = dynamic(() => import("../common/SearchResult"), {
+const SearchResultForHeader = dynamic(() => import("./SearchResultForHeader"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>
 });
@@ -58,8 +59,8 @@ export default function Header() {
         <WrapperBGWidth>
           <div className="hidden lg:flex justify-between items-center px-[11px] sm:pb-4 sm:pt-5 sm:px-6 md:px-[46.93] lg:px-12 xl:px-30 xl:pb-6 xl:pt-[18px] ">
             <div className="flex items-center space-x-4  md:space-x-[11px] lg:space-x-[21px] ">
-              <a
-                href="/"
+              <Link
+                href="/en/gb"
                 aria-label="Go to Localists homepage"
                 className="shrink-0"
               >
@@ -73,7 +74,7 @@ export default function Header() {
                   fetchPriority="high"
                   loading="eager"
                 />
-              </a>
+              </Link>
 
               <div className="flex items-center space-x-4 md:space-x-2 lg:space-x-2.5 lg:py-3">
                 <MegaMenu>
@@ -130,7 +131,7 @@ export default function Header() {
                   }}
                 />
                 {searchQuery.length ? (
-                  <SearchResults
+                  <SearchResultForHeader
                     searchQuery={searchQuery}
                     setSearchQuery={setSearchQuery}
                   />
