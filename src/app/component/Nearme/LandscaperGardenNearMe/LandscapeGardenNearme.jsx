@@ -33,6 +33,8 @@ import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
+import LandScapingGardenPopularJobs from "./LandScapingGardenPopularJobs";
+import HeroSectionLandscapingNearMe from "../HeroSectionLandscapingNearMe";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -55,10 +57,8 @@ function LandscapeGardenNearme() {
   return (
     <>
       <CloseBrowserAbandon />
-      <FAQScript
-        FAQ={FREQUENTLY_DATA_LANDSCAPE_NEARME}
-      />
-      <HeroSectionNearMe
+      <FAQScript FAQ={FREQUENTLY_DATA_LANDSCAPE_NEARME} />
+      <HeroSectionLandscapingNearMe
         heading1=" Find Landscape Gardeners"
         heading2="Near You"
         description="Find the best landscape gardeners near you! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss. "
@@ -74,13 +74,13 @@ function LandscapeGardenNearme() {
         vettedHeading2="trust"
         breadcrumb={BREADCRUM_DATA_LANDSCAPE_NEARME}
       />
-      <PopularJobNearMe
+      <LandScapingGardenPopularJobs
         services={POPULAR_SERVICES_LANDSCAPE_NEARME}
         popularImage="/nearme/Landscaping/pathwayPopularJob.png"
         altText="beautifully landscaped garden with pathway and decorative paving edges "
         mobileCardClass="w-[221px] min-[390px]:w-[221px] min-[412px]:w-[300px] min-[440px]:w-[307px] min-[512px]:w-[350px]"
         // desktopWidthClass='max-w-full'
-        classNameD='max-w-full min-[850]:max-w-[90%] lg:max-w-full'
+        classNameD="max-w-[65%] min-[850]:max-w-[80%]  lg:max-w-full"
       />
       <HowItWorkNearMe />
       {/* <Feature /> */}
