@@ -316,6 +316,8 @@ export const TREE_SURGEON_DATA = [
     image: "/homepage/image6.webp",
     isSpecial: true,
     bgColor: "bg-cyan-400",
+    slug:"/en/gb/home"
+
   },
   {
     id: 2,

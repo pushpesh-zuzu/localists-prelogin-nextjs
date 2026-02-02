@@ -14,14 +14,25 @@ function PopularCard() {
       id: 1,
       image: "/homepage/image16.webp",
       title: "Tree surgeon",
+      path: "/en/gb/tree-surgeon-near-me",
     },
-    { id: 2, image: "/homepage/image17.webp", title: "Landscapers" },
+    {
+      id: 2,
+      image: "/homepage/image17.webp",
+      title: "Landscapers",
+      path: "/en/gb/landscape-gardeners-near-me",
+    },
     {
       id: 3,
       image: "/homepage/image18.webp",
       title: "Personal Trainer",
     },
-    { id: 4, image: "/homepage/image19.webp", title: "Driveways" },
+    {
+      id: 4,
+      image: "/homepage/drivewayPopular.webp",
+      title: "Driveways",
+      path: "/en/gb/driveway-installers-near-me",
+    },
     // {
     //   id: 5,
     //   image: "/fenceinstallation.webp",
@@ -32,6 +43,19 @@ function PopularCard() {
     //   image: "/artificialinstallation.webp",
     //   title: "Artificial Grass Installation",
     // },
+
+    // {
+    //   id: 6,
+    //   image: "/homepage/patiolayer.webp",
+    //   title: "Patio Layer",
+    //   path: "/en/gb/patio-layers-near-me",
+    // },
+    {
+      id: 7,
+      image: "/homepage/guttercleaning.webp",
+      title: "Gutter Cleaning",
+      path: "en/gb/gutter-cleaning-near-me",
+    },
   ];
   return (
     <WrapperBGWidth>

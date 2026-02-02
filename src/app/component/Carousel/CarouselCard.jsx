@@ -1,10 +1,9 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import H3 from "../UI/Typography/H3";
 import H5 from "../UI/Typography/H5";
 import Link from "next/link";
-
 
 export default function CarouselCard({ card }) {
   if (card.isSpecial) {
@@ -16,13 +15,15 @@ export default function CarouselCard({ card }) {
  bg-[#7CD6F0] rounded-2xl xl:rounded-[28px] font-bold
   " >
         <div className="flex flex-col justify-center items-center gap-4">
-          <H3 className="leading-tight break-words">
-            {card.title}
-          </H3>
+          <H3 className="leading-tight break-words">{card.title}</H3>
 
-          <button className="rounded-full cursor-pointer bg-black hover:bg-[#1b2326] text-white px-[18px] xl:px-[35px] text-base xl:text-[20px] -tracking-[3%] py-[3px] lg:py-[5px]">
-            View All
-          </button>
+          <Link href={card?.slug ? card?.slug : ""}>
+            <button
+              className={`rounded-full ${card?.slug ? "cursor-pointer" : ""} bg-black hover:bg-[#1b2326] text-white px-[18px] xl:px-[35px] text-base xl:text-[20px] -tracking-[3%] py-[3px] lg:py-[5px]`}
+            >
+              View All
+            </button>
+          </Link>
         </div>
       </div>
     );
@@ -44,14 +45,17 @@ export default function CarouselCard({ card }) {
           priority
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
-        <H5 variant="medium" className="text-white w-[80%] absolute bottom-2 lg:bottom-4 left-1/2 -translate-x-1/2 text-center
+        <H5
+          variant="medium"
+          className="text-white w-[80%] absolute bottom-2 lg:bottom-4 left-1/2 -translate-x-1/2 text-center
         leading-[27px] md:leading-16px]! lg:leading-[25px]! md:line-clamp-4
-    lg:line-clamp-none">
+    lg:line-clamp-none"
+        >
           {card.title}
         </H5>
       </div>
     </div>
-  )
+  );
 
   // If slug exists → clickable
   if (card.slug) {
@@ -65,4 +69,3 @@ export default function CarouselCard({ card }) {
   // If slug NOT exists → render card normally
   return CardContent;
 }
-

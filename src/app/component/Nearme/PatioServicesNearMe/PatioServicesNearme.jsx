@@ -31,6 +31,7 @@ import {
   QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME,
   VETTED_DATA_PATIO_SERVICES_NEARME,
 } from "./PatioServicesData";
+import GetQuote from "../../common/GetQuotes/GetQuote";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -73,17 +74,16 @@ function PatioServicesNearme() {
         services={POPULAR_SERVICES_PATIO_SERVICES_NEARME}
         popularImage="/nearme/Patio/PatioServicesPopularJobs.webp"
         altText="stone paver patio installation in progress with drainage installed"
-        mobileCardClass='w-[241px] min-[440px]:w-[288px] min-[512px]:w-[331px]'
-        classNameD='md:max-w-[392px] xl:max-w-full'
-
+        mobileCardClass="w-[241px] min-[440px]:w-[288px] min-[512px]:w-[331px]"
+        classNameD="md:max-w-[392px] xl:max-w-full"
       />
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
-        heading1="Patio specialists " 
+        heading1="Patio Specialists "
         heading2="in your area"
         tabData={PATIO_SERVICES_NEARME_TABDATA}
-      /> 
+      />
       <UserFeedbackNearMe2 feedbackData={FEEDBACK_PATIO_SERVICES_NEARME} />
       {/* <PaddingWrapper> */}
       <AboutServicesAndQuestions
@@ -93,6 +93,12 @@ function PatioServicesNearme() {
       />
       {/* </PaddingWrapper> */}
       <FAQ data={FREQUENTLY_DATA_PATIO_SERVICES_NEARME} />
+      <div className={`flex justify-center mb-[15px] xl:mb-[25px]`}>
+        <GetQuote
+          variant="primary"
+          text={"Get Quotes From Patio Contractors Today"}
+        />
+      </div>
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}
       <DiscoverNearMe homeData={DISCOVER_PATIO_SERVICES_NEARME_DATA} />
       <NearmeMember

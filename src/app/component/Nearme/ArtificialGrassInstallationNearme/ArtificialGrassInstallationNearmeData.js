@@ -20,23 +20,23 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   },
   {
     type: "li",
-    text: "Trusted and vetted professionals – Every installer on Localists is carefully screened for skill, reliability, and customer satisfaction, so you only connect with genuine experts.",
+    text: "<strong>Trusted and vetted professionals</strong> – Every installer on Localists is carefully screened for skill, reliability, and customer satisfaction, so you only connect with genuine experts.",
   },
   {
     type: "li",
-    text: "Specialisation: Find experts who handle all types of artificial grass installation, from residential lawns and pet-friendly turf to sports surfaces, commercial spaces, and roof terraces.",
+    text: "<strong>Specialisation</strong> - Find experts who handle all types of artificial grass installation, from residential lawns and pet-friendly turf to sports surfaces, commercial spaces, and roof terraces.",
   },
   {
     type: "li",
-    text: "Easy from the start – Tell us what you need once, and get matched with artificial grass fitters near you ready to provide custom quotes.",
+    text: "<strong>Easy from the start</strong> – Tell us what you need once, and get matched with artificial grass fitters near you ready to provide custom quotes.",
   },
   {
     type: "li",
-    text: "Choice and transparency – Compare multiple installers, view real photos of their past work, and read genuine customer reviews before you decide.",
+    text: "<strong>Choice and transparency</strong> – Compare multiple installers, view real photos of their past work, and read genuine customer reviews before you decide.",
   },
   {
     type: "li",
-    text: "Local expertise – Because installers are based near you, they understand the ground conditions and drainage issues common in your area. That means your artificial lawn won’t just look amazing on day one. It will be fitted with the right base, drainage, and finish to stay smooth, safe, and durable for years, whatever the weather.",
+    text: "<strong>Local expertise</strong> – Because installers are based near you, they understand the ground conditions and drainage issues common in your area. That means your artificial lawn won’t just look amazing on day one. It will be fitted with the right base, drainage, and finish to stay smooth, safe, and durable for years, whatever the weather.",
   },
   {
     type: "h3",
@@ -50,23 +50,23 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   },
   {
     type: "li",
-    text: "Ground preparation – It starts with groundworks. Existing grass, weeds, or soil are removed to create a clean, stable foundation. Installers may dig down and level the area, making sure it’s firm and free from obstacles, so your new lawn sits perfectly flat.",
+    text: "<strong>Ground preparation</strong> – It starts with groundworks. Existing grass, weeds, or soil are removed to create a clean, stable foundation. Installers may dig down and level the area, making sure it’s firm and free from obstacles, so your new lawn sits perfectly flat.",
   },
   {
     type: "li",
-    text: "Base layer – A sub-base of crushed stone or sharp sand is spread and compacted. This gives stability, allows water to drain properly, and prevents the grass from sinking or becoming uneven over time.",
+    text: "<strong>Base layer</strong> – A sub-base of crushed stone or sharp sand is spread and compacted. This gives stability, allows water to drain properly, and prevents the grass from sinking or becoming uneven over time.",
   },
   {
     type: "li",
-    text: "Weed membrane – A specialist membrane is laid to block weeds from growing up through the turf. This means your new lawn stays neat and maintenance-free.",
+    text: "<strong>Weed membrane</strong> – A specialist membrane is laid to block weeds from growing up through the turf. This means your new lawn stays neat and maintenance-free.",
   },
   {
     type: "li",
-    text: "Laying the turf – The artificial grass is carefully rolled out, cut to shape around edges and corners, and then fixed in place with adhesive or pins. This ensures it stays secure in all weather conditions.",
+    text: "<strong>Laying the turf</strong> – The artificial grass is carefully rolled out, cut to shape around edges and corners, and then fixed in place with adhesive or pins. This ensures it stays secure in all weather conditions.",
   },
   {
     type: "li",
-    text: "Brushing & infill – To finish, the grass fibres are brushed upright for a natural look, and a layer of sand infill may be added for extra weight, stability, and softness underfoot.",
+    text: "<strong>Brushing & infill</strong> – To finish, the grass fibres are brushed upright for a natural look, and a layer of sand infill may be added for extra weight, stability, and softness underfoot.",
     className: "mb-0",
   },
   {
@@ -79,11 +79,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   {
     type: "h2",
     text: "Choosing the right expert near you ",
-  },
-  {
-    type: "p",
-    text: "While DIY installation is possible, getting the base and drainage right can be challenging. That’s why most people choose to hire professionals for the job. But how do you choose the right expert? Asking plenty of questions can help you get closer to picking the perfect artificial grass installer. ",
-    notMarginBottom: true,
+    noMarginBottom: true,
   },
   {
     type: "image",
@@ -92,6 +88,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
     marginBottom: true,
     marginTop: true,
   },
+  {
+    type: "p",
+    text: "While DIY installation is possible, getting the base and drainage right can be challenging. That’s why most people choose to hire professionals for the job. But how do you choose the right expert? Asking plenty of questions can help you get closer to picking the perfect artificial grass installer. ",
+  },
+
   {
     type: "pbold",
     text: "When comparing installers, it’s worth looking beyond just price. Consider asking:",
@@ -145,15 +146,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   },
   {
     type: "li",
-    text: "Budget installation – From £60–£75 per m², including fitting. Best for smaller areas or temporary use.",
+    text: "<strong>Budget installation</strong> – From £60–£75 per m², including fitting. Best for smaller areas or temporary use.",
   },
   {
     type: "li",
-    text: "Mid-range installation – Around £80–£100 per m², offering a good balance of durability and realistic appearance.",
+    text: "<strong>Mid-range installation</strong> – Around £80–£100 per m², offering a good balance of durability and realistic appearance.",
   },
   {
     type: "li",
-    text: "Premium installation – £100–£120+ per m², for high-quality turf with longer pile height, natural tones, and a luxurious feel.",
+    text: "<strong>Premium installation</strong> – £100–£120+ per m², for high-quality turf with longer pile height, natural tones, and a luxurious feel.",
   },
   {
     type: "p",
@@ -367,6 +368,7 @@ export const DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA = [
     image: "/homepage/image6.webp",
     isSpecial: true,
     bgColor: "bg-cyan-400",
+    slug: "/en/gb/home",
   },
   {
     id: 2,

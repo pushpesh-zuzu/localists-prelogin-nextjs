@@ -9,6 +9,7 @@ import {
 } from "@/constants/homepageData";
 import CarouselCard from "../../Carousel/CarouselCard";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
+import Link from "next/link";
 
 function DiscoverServices() {
   return (
@@ -22,7 +23,9 @@ function DiscoverServices() {
             <div className="flex lg:hidden justify-between pt-5 md:pt-0 pb-12 md:pb-10 xl:pb-10">
               <H2 className="text-[#00AFE3]">Home & Garden</H2>{" "}
               <button className="font-bold text-xs sm:text-base tracking-[0.03em] leading-[18px] whitespace-nowrap">
-                <span className="underline">See all</span>
+                <Link href="/en/gb/home">
+                  <span className="underline">See all</span>
+                </Link>
               </button>
             </div>
             <HomeGardenCarousel

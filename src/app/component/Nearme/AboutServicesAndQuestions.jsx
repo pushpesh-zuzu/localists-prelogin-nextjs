@@ -9,6 +9,7 @@ import AveragePrice from "./AveragePrice";
 import GutterPriceSection from "./GutterPriceSection";
 // import PatioPricingTable from "./PatioServicesNearMe/PatioPricingTable";
 import AveragePriceDynamic from "./AveragePriceDynamic";
+import GetQuote from "../common/GetQuotes/GetQuote";
 
 const textBase =
   "font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em]!"
@@ -79,6 +80,12 @@ const AboutServicesAndQuestions = ({
             <span dangerouslySetInnerHTML={{ __html: block.text }} />
           </Paragraph>
         );
+        case "getQuotesButton":
+          return(
+            <div className={`flex justify-center ${block.className? block.className : 'mt-[15px] xl:mt-[25px]'} `}>
+            <GetQuote variant="primary" text={block?.text} />
+          </div>
+          )
       case "patioPricingTable":
         return (
           // <PatioPricingTable/>

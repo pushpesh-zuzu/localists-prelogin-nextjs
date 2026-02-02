@@ -1,19 +1,17 @@
 export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
+    type: "image",
+    src: "/nearme/Landscaping/natuaralGrassTurf.webp",
+    alt: "landscaping expert installing natural grass turf in a home garden",
+    marginBottom: true,
+  },
+  {
     type: "h2",
     text: "Your shortcut to free landscape gardening quotes",
   },
   {
     type: "p",
     text: "Having work done on your property can significantly increase its value - especially on your garden. But hiring the wrong landscaper can leave you out of pocket and even de-value your properties value. That’s where we come in. At Localists, we do all the vetting for you, and make sure that only the best local landscapers are present on our platform. All of the landscape gardeners on our platform are put through a rigorous  vetting procedure, and we source all of their reviews from various review sites across the web and put it all in one convenient place for you. Just enter your postcode and a few details to get started!",
-    notMarginBottom: true,
-  },
-  {
-    type: "image",
-    src: "/nearme/Landscaping/natuaralGrassTurf.webp",
-    alt: "landscaping expert installing natural grass turf in a home garden",
-    marginBottom: true,
-    marginTop: true,
   },
   {
     type: "h2",
@@ -30,43 +28,35 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   },
   {
     type: "li",
-    text: "Local expertise - Local landscapers understand your region’s weather and soil conditions, so they can help you make the right choice on plants. Plus, they can ensure you’re compliant with local planning regulations.",
+    text: "<strong>Local expertise</strong> - Local landscapers understand your region's weather and soil conditions, so they can help you make the right choice on plants. Plus, they can ensure you’re compliant with local planning regulations.",
   },
   {
     type: "li",
-    text: "Smart, lasting design - Our landscape gardeners can construct a garden that's built to last and tailored to your lifestyle. Design features you think might work, can often be problematic later on. Our landscape gardeners will be able to advise you on these matters.",
+    text: "<strong>Smart, lasting design</strong> - Our landscape gardeners can construct a garden that's built to last and tailored to your lifestyle. Design features you think might work, can often be problematic later on. Our landscape gardeners will be able to advise you on these matters.",
   },
   {
     type: "li",
-    text: "Access to quality materials - Many of our landscape gardeners have long term business relationships with trade merchants and other quality suppliers. So they’re able to source high-quality plants, stone, and timber at competitive prices, that you might not have been able to source yourself.",
+    text: "<strong>Access to quality materials</strong> - Many of our landscape gardeners have long term business relationships with trade merchants and other quality suppliers. So they’re able to source high-quality plants, stone, and timber at competitive prices, that you might not have been able to source yourself.",
   },
   {
     type: "li",
-    text: "Avoid costly mistakes - Proper drainage, soil preparation, and plant selection save you from expensive fixes later. Without a local landscaper, you run the risk of having to learn from those costly mistakes yourself.",
+    text: "<strong>Avoid costly mistakes</strong> - Proper drainage, soil preparation, and plant selection save you from expensive fixes later. Without a local landscaper, you run the risk of having to learn from those costly mistakes yourself.",
   },
   {
     type: "li",
-    text: "Boost property value - Landscaping can often boost your property value, and some landscapers may be able to give you pointers on the types of design that can help boost your properties value.",
+    text: "<strong>Boost property value</strong> - Landscaping can often boost your property value, and some landscapers may be able to give you pointers on the types of design that can help boost your properties value.",
   },
   {
     type: "li",
-    text: "Full-service installation - Our local landscapers are equipped to handle everything you desire for your garden. Be it patios, decking, fencing, pathways or lighting. Taking on a landscape gardening job yourself would require you to master multiple trades. Whereas most landscape gardeners will provide full-service installation.",
+    text: "<strong>Full-service installation</strong> - Our local landscapers are equipped to handle everything you desire for your garden. Be it patios, decking, fencing, pathways or lighting. Taking on a landscape gardening job yourself would require you to master multiple trades. Whereas most landscape gardeners will provide full-service installation.",
   },
   {
     type: "li",
-    text: "Seasonal care - Lawn care, hedge trimming, planting, and regular upkeep keep your garden looking its best year-round.",
+    text: "<strong>Seasonal care</strong> - Lawn care, hedge trimming, planting, and regular upkeep keep your garden looking its best year-round.",
   },
   {
     type: "li",
-    text: "Creative extras - Features you may have avoided implementing yourself due to lack of experience can be implemented by our local landscape gardeners. With our landscapers, your dream of fancy water features and bespoke decking is now a reality.",
-    className: "mb-0",
-  },
-  {
-    type: "image",
-    src: "/nearme/Landscaping/dripIrigation.webp",
-    alt: "Drip irrigation system being installed by a professional landscaper",
-    marginTop: true,
-    marginBottom: true,
+    text: "<strong>Creative extras</strong> - Features you may have avoided implementing yourself due to lack of experience can be implemented by our local landscape gardeners. With our landscapers, your dream of fancy water features and bespoke decking is now a reality.",
   },
   {
     type: "h2",
@@ -94,8 +84,8 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   },
   {
     type: "image",
-    src: "/nearme/Landscaping/residentialProperty.webp",
-    alt: "newly completed landscaping project in a residential property ",
+    src: "/nearme/Landscaping/dripIrigation.webp",
+    alt: "Drip irrigation system being installed by a professional landscaper",
     marginTop: true,
     marginBottom: true,
   },
@@ -114,11 +104,12 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   },
   {
     type: "image",
-    src: "/nearme/Landscaping/plantingBeds.webp",
-    alt: "new landscape backgarden project with raised planting beds",
+    src: "/nearme/Landscaping/residentialProperty.webp",
+    alt: "newly completed landscaping project in a residential property ",
     marginTop: true,
     marginBottom: true,
   },
+    { type: "getQuotesButton", text: "Get Quotes Now", className:'mb-[15px] xl:mb-[25px]' },
   {
     type: "h2",
     text: "What are the different types of landscaping services?",
@@ -128,7 +119,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     text: "Whether you're doing a full garden makeover or just sprucing up sections of your outdoor space, the right landscape gardener can turn ideas into reality. ",
   },
   {
-    type: "pbold",
+    type: "p",
     text: "Here's a rundown of what landscape architect or landscape garden designers commonly offer:",
     className: "my-[15px] md:my-[25px]",
   },
@@ -184,6 +175,14 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "Many landscapers install features such as fire pits, raised beds, seating areas, water features, and lighting. These additions enhance both the usability and aesthetic of a garden.",
+    notMarginBottom: true,
+  },
+  {
+    type: "image",
+    src: "/nearme/Landscaping/plantingBeds.webp",
+    alt: "new landscape backgarden project with raised planting beds",
+    marginTop: true,
+    marginBottom: true,
   },
 
   {
@@ -201,7 +200,12 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "Services may also include wildlife-focused landscaping such as rain gardens, pollinator-friendly planting, wildflower meadows, and foodscaping (edible gardens that blend with the landscape). These projects support biodiversity while adding beauty and function.",
-    notMarginBottom: true,
+  },
+
+  {
+    type: "h2",
+    text: "How much does a landscape gardener cost?",
+    noMarginBottom: true,
   },
   {
     type: "image",
@@ -210,11 +214,6 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     marginTop: true,
     marginBottom: true,
   },
-  {
-    type: "h2",
-    text: "How much does a landscape gardener cost?",
-  },
-
   {
     type: "p",
     text: "The cost of landscaping depends on several factors - the size of your garden, the type of materials (sandstone vs. porcelain paving), the plants you choose, and even the level of detail in your design can make costs significantly higher or lower.",
@@ -226,7 +225,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   },
 
   {
-    type: "pbold",
+    type: "p",
     text: "However, on average in the UK, here’s what you can expect to spend:",
     className: "my-[15px] md:my-[25px]",
   },
@@ -255,147 +254,6 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
   },
 
-  //  {
-  //   type:"p",
-  //   text:""
-  // },
-  //   {
-  //   type: "h2",
-  //   text: "",
-  // },
-  // {
-  //   type: "p",
-  //   text: "",
-  // },
-  // {
-  //   type: "AveratePriceSection",
-  // },
-  // {
-  //   type: "h2",
-  //   text: "What does a tree surgeon do?",
-  // },
-  // {
-  //   type: "p",
-  //   text: "A tree surgeon, sometimes called an arborist, is a skilled professional whose work keeps trees healthy, safe, and integral to your landscape. Whether it’s shaping, pruning, or you’re looking for a complete tree removal, their skills ensure your outdoor space is well cared for.",
-  // },
-  // {
-  //   type: "p",
-  //   text: "Trees can become harmful when they’re diseased, unstable, or simply too large for their surroundings. For example, a tree with hidden rot at the base might look fine on the outside but could topple in a storm, damaging property or blocking a road. In other cases, overgrown branches might stretch into power lines, or roots can push up paving slabs and create trip hazards. This is where a tree surgeon’s expertise matters. They can spot these risks early and take action.",
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "Here are some of the key things a tree surgeon does:",
-  //   className: "my-[15px] md:my-[25px]",
-  // },
-  // { type: "pbold", text: "1. Tree health and safety checks" },
-  // {
-  //   type: "p",
-  //   text: "Before any work begins, a tree surgeon assesses the overall health and stability of your trees. They’re trained to spot early signs of disease, pest infestations, cracks, or hidden rot that most of us would overlook. ",
-  // },
-  // { type: "pbold", text: "2. Pruning, crown work & structural trimming" },
-  // {
-  //   type: "p",
-  //   text: "Pruning isn’t just about making a tree look neat. It’s about keeping it healthy and safe. Tree surgeons handle this carefully, making precise cuts to support long-term growth and stability. Whether it’s reducing the crown to let in more light, lifting branches to clear space around buildings, or removing overgrowth, tree surgeons know how to balance a tree’s structure.",
-  // },
-  // { type: "PostCodeSection" },
-  // {
-  //   type: "pbold",
-  //   text: "3. Safe tree removal",
-  // },
-  // {
-  //   type: "p",
-  //   text: "Sometimes a tree is simply too diseased, damaged, or unstable to save. In these cases, tree surgeons carry out removals safely using specialist climbing gear, cranes, ropes, and dismantling techniques. They know how to handle this professionally, keeping health and safety in mind, to prevent damage to people, property, or surrounding plants.",
-  //   className: "pb-[5px] md:pb-0",
-  // },
-
-  // {
-  //   type: "pbold",
-  //   text: "4. Stump grinding & root work",
-  // },
-  // {
-  //   type: "p",
-  //   text: "Taking down a tree is only half the job. The stump left behind can become a tripping hazard, attract pests, or sprout regrowth. Tree surgeons use professional stump grinders to remove it completely, making space for new planting, landscaping, or simply a tidy, safer garden.",
-  //   className: "pb-[5px] md:pb-0",
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "5.  Planting & conservation",
-  // },
-  // {
-  //   type: "p",
-  //   text: "Tree surgeons don’t just remove trees. They help plant them too. They can recommend the right species for your soil, plant them correctly and even transplant existing trees when needed.",
-  //   className: "pb-[5px] md:pb-0",
-  // },
-
-  // {
-  //   type: "pbold",
-  //   text: "6. Disease & pest management",
-  // },
-  // {
-  //   type: "p",
-  //   text: "Trees can suffer from pests, fungi, and decay. Tree surgeons identify these problems early and recommend treatments or interventions to prevent further spread.",
-  //   className: "pb-[5px] md:pb-0",
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "7. Emergency response",
-  // },
-  // {
-  //   type: "p",
-  //   text: "Storm damage or fallen branches can pose immediate risks. Tree surgeons are often called out in emergencies to make trees safe, clear debris, and restore access quickly.",
-  //   className: "pb-[5px] md:pb-0",
-  // },
-
-  // {
-  //   type: "pbold",
-  //   text: "8. Surveys & reports",
-  // },
-  // {
-  //   type: "p",
-  //   text: "For planning applications, insurance, or legal compliance, a tree surgeon (or arborist) can provide formal surveys and written reports to assess safety, preservation needs, or risks.",
-  //   notMarginBottom: true,
-  // },
-  // {
-  //   type: "image",
-  //   src: "/nearme/sergeondo.webp",
-  //   alt: "a tree surgeon hanging from a tree whilst pressing buttons on his chainsaw",
-  //   marginTop: true,
-  //   marginBottom: true,
-  // },
-  // {
-  //   type: "h2",
-  //   text: "How do I pick the right tree surgeon",
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "When choosing a tree surgeon, it’s important to look beyond price and focus on their training, safety standards, and experience. You can look out for one or more of the following:",
-  //   className: "mb-[15px] md:mb-[25px] ",
-  // },
-  // {
-  //   type: "li",
-  //   text: "Insurance - This is also non-negotiable as it protects you and your property if something goes wrong.",
-  //   className: "mr-5",
-  // },
-  // {
-  //   type: "li",
-  //   text: "Reviews - Check reviews and recommendations from past clients to see how reliable they are in practice.",
-  //   className: "mr-5",
-  // },
-  // {
-  //   type: "li",
-  //   text: "Transparency - A good tree surgeon will be transparent: they’ll explain the work clearly, provide a written quote, and answer your questions before starting.",
-  //   className: "mr-5",
-  // },
-  // {
-  //   type: "li",
-  //   text: "Relevant experience - Having hands-on experience with the type of job you need is also a plus. Whether that’s caring for ornamental trees in your garden, managing large oaks on a commercial site, or maintaining multiple trees in public spaces.",
-  //   className: "mr-5",
-  // },
-  // {
-  //   type: "li",
-  //   text: `Professional bodies membership –  Having a membership to organisations such as the <a href='https://www.trees.org.uk/' target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>Arboricultural Association</a> often means they have to adhere to strict regulations and protocols.`,
-  //   className: "mr-5",
-  // },
 ];
 export const FREQUENTLY_DATA_LANDSCAPE_NEARME = [
   {
@@ -431,7 +289,7 @@ export const FREQUENTLY_DATA_LANDSCAPE_NEARME = [
     title: "Can you help with low-maintenance garden designs?",
     description: `
       Absolutely. Many of our local 
-      <a href="https://www.localists.com/en/gb/patio-layers-near-me" style="color:#00afe3; text-decoration:none;">
+      <a href="https://dev-prelogin.localists.com/en/gb/patio-layers-near-me" style="color:#00afe3; text-decoration:none;">
         patio layers
       </a> 
       and landscapers specialise in creating stylish gardens that are easy to care for. Think drought-tolerant plants, gravel beds, and minimal weeding.
@@ -558,6 +416,7 @@ export const DISCOVER_LANDSCAPE_NEARME_DATA = [
     image: "/homepage/image6.webp",
     isSpecial: true,
     bgColor: "bg-cyan-400",
+    slug: "/en/gb/home",
   },
   {
     id: 2,

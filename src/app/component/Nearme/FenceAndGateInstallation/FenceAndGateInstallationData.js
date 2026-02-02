@@ -252,7 +252,9 @@ export const FENCE_AND_GATE_DATA = [
         title: "Home & Garden",
         image: "/homepage/image6.webp",
         isSpecial: true,
-        bgColor: "bg-cyan-400"
+        bgColor: "bg-cyan-400",
+        slug:"/en/gb/home"
+
     },
     {
         id: 2,
