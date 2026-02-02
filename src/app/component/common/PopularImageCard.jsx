@@ -2,12 +2,9 @@
 
 import Image from "next/image";
 import Paragraph from "../UI/Typography/Paragraph";
+import Link from "next/link";
 
-export default function PopularImageCard({
-  // path = "/tree-surgeon.webp",
-  // title,
-  card
-}) {
+export default function PopularImageCard({ card }) {
   return (
     <div
       className="relative h-[180px] w-[126px] md:h-[244px] md:w-48 lg:h-[300px] lg:w-[200px] xl:h-[380px] xl:w-[267px] bg-white rounded-[20px] md:rounded-[22px] lg:rounded-[24px] xl:rounded-[24.93px] overflow-hidden"
@@ -25,7 +22,7 @@ export default function PopularImageCard({
         <div className="relative w-full h-full overflow-hidden rounded-3xl">
           <Image
             src={card.image}
-          alt={card.title}
+            alt={card.title}
             fill
             className="object-cover"
             priority
@@ -37,18 +34,19 @@ export default function PopularImageCard({
       <Paragraph className="leading-4 pl-7 pt-5 xl:pt-8 text-white xl:pl-[35px]">
         {card.title}
       </Paragraph>
-
-      <button
-        className="
+      <Link href={card?.path ? card?.path : ""}>
+        <button
+          className={` ${card?.path ? "cursor-pointer" : ""}
           absolute flex items-center justify-center
           rounded-[175.75px] bg-white
           bottom-3 md:bottom-4 lg:bottom-5 xl:bottom-[39px]
-          left-1/2 -translate-x-1/2
+          left-[56%] -translate-x-1/2
           px-2 lg:px-[15px] py-.5 h-6 lg:h-10 -leading-[3px]
-        "
-      >
-        <Paragraph>Explore</Paragraph>
-      </button>
+        `}
+        >
+          <Paragraph>Explore</Paragraph>
+        </button>
+      </Link>
     </div>
   );
 }

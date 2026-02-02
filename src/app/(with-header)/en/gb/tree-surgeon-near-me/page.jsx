@@ -104,6 +104,7 @@ export default function Page() {
         canonicalPath="/en/gb/tree-surgeon-near-me"
         bannerImage="/nearme/treeSurgeon.webp"
         breadcrumb={[
+          { title: "Home", path: "/en/gb" },
           { title: "Home & Garden", path: "/home" },
           { title: "Tree Surgeons", path: "/tree-surgeon-near-me" },
         ]}

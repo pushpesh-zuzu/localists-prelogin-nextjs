@@ -31,6 +31,7 @@ import {
   QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME,
   VETTED_DATA_ARTIFICIAL_GRASS_NEARME,
 } from "./ArtificialGrassInstallationNearmeData";
+import GetQuote from "../../common/GetQuotes/GetQuote";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -76,9 +77,7 @@ function ArtificialGrassInstallationNearme() {
         popularImage="/nearme/Artificial/artificialPopularJobs.webp"
         altText="Grass fitter hand cutting artificial turf with sharp cutter"
         mobileCardClass="w-[235px] min-[375px]:w-[270px] min-[430px]:w-[270px] min-[512px]:w-[350px] "
-          classNameD='md:max-w-[396px] lg:max-w-[450px] xl:max-w-full'
-
-
+        classNameD="md:max-w-[396px] lg:max-w-[450px] xl:max-w-full"
       />
       <HowItWorkNearMe />
       {/* <Feature /> */}
@@ -96,6 +95,12 @@ function ArtificialGrassInstallationNearme() {
       />
       {/* </PaddingWrapper> */}
       <FAQ data={FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME} />
+      <div className={`flex justify-center mb-[15px] xl:mb-[25px]`}>
+        <GetQuote
+          variant="primary"
+          text={"Quotes From Artificial Installers Today"}
+        />
+      </div>
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}
       <DiscoverNearMe homeData={DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA} />
       <NearmeMember

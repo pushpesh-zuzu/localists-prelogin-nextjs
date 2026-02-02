@@ -20,101 +20,101 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   },
   {
     type: "li",
-    text: "Trusted and vetted professionals – Every installer on Localists is carefully screened for skill, reliability, and customer satisfaction, so you only connect with genuine experts.",
+    text: "<strong>Trusted and vetted professionals</strong> – Every installer on Localists is carefully screened for skill, reliability, and customer satisfaction, so you only connect with genuine experts.",
   },
   {
     type: "li",
-    text: "Specialisation: Find experts who handle all types of artificial grass installation, from residential lawns and pet-friendly turf to sports surfaces, commercial spaces, and roof terraces.",
+    text: "<strong>Specialisation</strong> - Find experts who handle all types of artificial grass installation, from residential lawns and pet-friendly turf to sports surfaces, commercial spaces, and roof terraces.",
   },
   {
     type: "li",
-    text: "Easy from the start – Tell us what you need once, and get matched with artificial grass fitters near you ready to provide custom quotes.",
+    text: "<strong>Easy from the start</strong> – Tell us what you need once, and get matched with artificial grass fitters near you ready to provide custom quotes.",
   },
   {
     type: "li",
-    text: "Choice and transparency – Compare multiple installers, view real photos of their past work, and read genuine customer reviews before you decide.",
+    text: "<strong>Choice and transparency</strong> – Compare multiple installers, view real photos of their past work, and read genuine customer reviews before you decide.",
   },
   {
     type: "li",
-    text: "Local expertise – Because installers are based near you, they understand the ground conditions and drainage issues common in your area. That means your artificial lawn won’t just look amazing on day one. It will be fitted with the right base, drainage, and finish to stay smooth, safe, and durable for years, whatever the weather.",
+    text: "<strong>Local expertise</strong> – Because installers are based near you, they understand the ground conditions and drainage issues common in your area. That means your artificial lawn won’t just look amazing on day one. It will be fitted with the right base, drainage, and finish to stay smooth, safe, and durable for years, whatever the weather.",
   },
   {
     type: "h3",
     text: "How to install artificial grass? ",
-    className:'mt-[15px] lg:mt-[25px] mb-[10px] md:mb-[15px]'
+    className: "mt-[15px] lg:mt-[25px] mb-[10px] md:mb-[15px]",
   },
-  
-{
+
+  {
     type: "p",
     text: "Installing artificial grass is more than just rolling out turf – it’s a process that requires skill, preparation, and the right materials for a long-lasting result. A typical artificial lawn installation involves:",
   },
   {
-  type: "li",
-  text: "Ground preparation – It starts with groundworks. Existing grass, weeds, or soil are removed to create a clean, stable foundation. Installers may dig down and level the area, making sure it’s firm and free from obstacles, so your new lawn sits perfectly flat.",
-},
-{
-  type: "li",
-  text: "Base layer – A sub-base of crushed stone or sharp sand is spread and compacted. This gives stability, allows water to drain properly, and prevents the grass from sinking or becoming uneven over time.",
-},
-{
-  type: "li",
-  text: "Weed membrane – A specialist membrane is laid to block weeds from growing up through the turf. This means your new lawn stays neat and maintenance-free.",
-},
-{
-  type: "li",
-  text: "Laying the turf – The artificial grass is carefully rolled out, cut to shape around edges and corners, and then fixed in place with adhesive or pins. This ensures it stays secure in all weather conditions.",
-},
-{
-  type: "li",
-  text: "Brushing & infill – To finish, the grass fibres are brushed upright for a natural look, and a layer of sand infill may be added for extra weight, stability, and softness underfoot.",
-  className:'mb-0'
-},
-{
+    type: "li",
+    text: "<strong>Ground preparation</strong> – It starts with groundworks. Existing grass, weeds, or soil are removed to create a clean, stable foundation. Installers may dig down and level the area, making sure it’s firm and free from obstacles, so your new lawn sits perfectly flat.",
+  },
+  {
+    type: "li",
+    text: "<strong>Base layer</strong> – A sub-base of crushed stone or sharp sand is spread and compacted. This gives stability, allows water to drain properly, and prevents the grass from sinking or becoming uneven over time.",
+  },
+  {
+    type: "li",
+    text: "<strong>Weed membrane</strong> – A specialist membrane is laid to block weeds from growing up through the turf. This means your new lawn stays neat and maintenance-free.",
+  },
+  {
+    type: "li",
+    text: "<strong>Laying the turf</strong> – The artificial grass is carefully rolled out, cut to shape around edges and corners, and then fixed in place with adhesive or pins. This ensures it stays secure in all weather conditions.",
+  },
+  {
+    type: "li",
+    text: "<strong>Brushing & infill</strong> – To finish, the grass fibres are brushed upright for a natural look, and a layer of sand infill may be added for extra weight, stability, and softness underfoot.",
+    className: "mb-0",
+  },
+  {
     type: "image",
     src: "/nearme/Artificial/polyurethane.webp",
     alt: "Man pouring polyurethane adhesive for strong bond artificial turf installation",
     marginBottom: true,
-    marginTop:true
+    marginTop: true,
   },
   {
     type: "h2",
     text: "Choosing the right expert near you ",
+    noMarginBottom: true,
   },
- {
-    type: "p",
-    text: "While DIY installation is possible, getting the base and drainage right can be challenging. That’s why most people choose to hire professionals for the job. But how do you choose the right expert? Asking plenty of questions can help you get closer to picking the perfect artificial grass installer. ",
-  notMarginBottom:true
-  },
-    {
+  {
     type: "image",
     src: "/nearme/Artificial/footballField.webp",
     alt: "artificial grass installation by expert installer on a small football field",
     marginBottom: true,
-    marginTop:true
+    marginTop: true,
   },
+  {
+    type: "p",
+    text: "While DIY installation is possible, getting the base and drainage right can be challenging. That’s why most people choose to hire professionals for the job. But how do you choose the right expert? Asking plenty of questions can help you get closer to picking the perfect artificial grass installer. ",
+  },
+
   {
     type: "pbold",
     text: "When comparing installers, it’s worth looking beyond just price. Consider asking:",
     className: "mb-[15px] md:mb-[25px]",
   },
   {
-  type: "li",
-  text: "Do you have references or a portfolio? - Genuine examples of past work show quality and reliability. Always ask to see past work.",
-},
-{
-  type: "li",
-  text: "What installation method will you use? - There are different approaches depending on soil, drainage, or intended use (lawn, pets, sports, balconies, etc.). Mentioning your intended use will allow the grass installer to give you recommendations.",
-},
-{
-  type: "li",
-  text: "How long will the project take? - Timelines can vary, so it helps to set clear expectations.",
-},
-{
-  type: "li",
-  text: "Do you provide a guarantee? - A good installer should stand by their work with some form of warranty.",
-  className:'mb-0'
-
-},
+    type: "li",
+    text: "Do you have references or a portfolio? - Genuine examples of past work show quality and reliability. Always ask to see past work.",
+  },
+  {
+    type: "li",
+    text: "What installation method will you use? - There are different approaches depending on soil, drainage, or intended use (lawn, pets, sports, balconies, etc.). Mentioning your intended use will allow the grass installer to give you recommendations.",
+  },
+  {
+    type: "li",
+    text: "How long will the project take? - Timelines can vary, so it helps to set clear expectations.",
+  },
+  {
+    type: "li",
+    text: "Do you provide a guarantee? - A good installer should stand by their work with some form of warranty.",
+    className: "mb-0",
+  },
 
   {
     type: "image",
@@ -123,81 +123,81 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
     marginTop: true,
     marginBottom: true,
   },
-    {
+  {
     type: "h2",
     text: "How much does it cost to install artificial grass?",
   },
-{
-  type: "p",
-  text: "The cost of artificial grass installation varies depending on the size of your lawn, the quality of turf you choose, and how much groundwork is required. For example, a small, flat garden with minimal preparation will cost less than a large lawn that needs significant levelling, edging, or drainage work.",
-},
-{
-  type: "p",
-  text: "Groundworks (like levelling, adding a base layer, or fitting edging) often account for a big part of the price, so getting a clear breakdown in your quote is essential.",
-},
-{
-  type: "p",
-  text: "With Localists, you can get free quotes instantly and compare prices from vetted artificial lawn installers near you, ensuring you find the right fit for your budget and project.",
-},
-{
+  {
+    type: "p",
+    text: "The cost of artificial grass installation varies depending on the size of your lawn, the quality of turf you choose, and how much groundwork is required. For example, a small, flat garden with minimal preparation will cost less than a large lawn that needs significant levelling, edging, or drainage work.",
+  },
+  {
+    type: "p",
+    text: "Groundworks (like levelling, adding a base layer, or fitting edging) often account for a big part of the price, so getting a clear breakdown in your quote is essential.",
+  },
+  {
+    type: "p",
+    text: "With Localists, you can get free quotes instantly and compare prices from vetted artificial lawn installers near you, ensuring you find the right fit for your budget and project.",
+  },
+  {
     type: "pbold",
     text: "As a guide:",
     className: "my-[15px] md:my-[25px]",
   },
   {
-  type: "li",
-  text: "Budget installation – From £60–£75 per m², including fitting. Best for smaller areas or temporary use.",
-},
-{
-  type: "li",
-  text: "Mid-range installation – Around £80–£100 per m², offering a good balance of durability and realistic appearance.",
-},
-{
-  type: "li",
-  text: "Premium installation – £100–£120+ per m², for high-quality turf with longer pile height, natural tones, and a luxurious feel.",
-},
-{
+    type: "li",
+    text: "<strong>Budget installation</strong> – From £60–£75 per m², including fitting. Best for smaller areas or temporary use.",
+  },
+  {
+    type: "li",
+    text: "<strong>Mid-range installation</strong> – Around £80–£100 per m², offering a good balance of durability and realistic appearance.",
+  },
+  {
+    type: "li",
+    text: "<strong>Premium installation</strong> – £100–£120+ per m², for high-quality turf with longer pile height, natural tones, and a luxurious feel.",
+  },
+  {
     type: "p",
     text: "On average, UK homeowners spend £2,000–£3,500 for a standard back garden. Larger commercial projects, pet-friendly lawns with advanced drainage, or bespoke designs can be significantly higher.",
-    notMarginBottom:true
+    notMarginBottom: true,
   },
 
-   {
+  {
     type: "image",
     src: "/nearme/Artificial/ArtificialGrassPathway.webp",
     alt: "newly installed artificial grass pathway",
     marginTop: true,
     marginBottom: true,
   },
-    {
+  {
     type: "h2",
     text: "Do I need a permit to install artificial grass?",
   },
-   {
+  {
     type: "p",
     text: "For most homeowners in the UK, installing artificial grass is considered a straightforward improvement — meaning no planning permission is required. However, there are exceptions where it’s best to double-check:",
   },
   {
-  type: "li",
-  text: "Listed buildings or conservation areas – If your property is in a protected area, there may be restrictions on changes to your garden.",
-},
-{
-  type: "li",
-  text: "Front gardens with hard surfaces – If you’re replacing natural grass with an impermeable base that affects drainage, local regulations may apply.",
-},
-{
-  type: "li",
-  text: "Large commercial or public projects – Schools, sports fields, and community spaces may need planning consent depending on size and usage.",
-},
- {
+    type: "li",
+    text: "Listed buildings or conservation areas – If your property is in a protected area, there may be restrictions on changes to your garden.",
+  },
+  {
+    type: "li",
+    text: "Front gardens with hard surfaces – If you’re replacing natural grass with an impermeable base that affects drainage, local regulations may apply.",
+  },
+  {
+    type: "li",
+    text: "Large commercial or public projects – Schools, sports fields, and community spaces may need planning consent depending on size and usage.",
+  },
+  {
     type: "p",
     text: "Many standard home installations don’t require a permit, but it’s always wise to check with your local council before starting, especially for larger or more unusual projects. Localists connects you with local artificial grass installation experts who understand not just the installation process, but also the local regulations that might apply in your area. Start your search now!",
   },
 
-    { type: "PostCodeSection", className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]" },
-
-
-  
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
 ];
 export const FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME = [
   {
@@ -247,7 +247,7 @@ export const FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME = [
       The terms are often used interchangeably. “Fake grass installation” is just a casual phrase, while “synthetic turf installation” usually refers to more advanced, realistic products often used in sports grounds or premium landscaping projects. Both create a green, low-maintenance lawn, but synthetic turf is generally the higher-quality option.
       `,
   },
-   {
+  {
     key: "7",
     title: "How do I maintain artificial grass after installation?",
     description: `
@@ -299,12 +299,30 @@ export const ARTIFICIAL_GRASS_NEARME_TABDATA = {
     "Artificial Grass Installers Bolton",
   ],
   popular: [
-    "Driveway Installers Near Me",
-    "Gardeners Near Me",
-    "Tree Surgeons Near Me",
-    "Architects Near Me",
-    "Gutter Cleaners Near Me",
-    "Fencing Contractors Near Me",
+    {
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
+    },
+    {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
+      title: "Tree Surgeons Near Me",
+      url: "/en/gb/tree-surgeon-near-me",
+    },
+    {
+      title: "Architects Near Me",
+      url: "",
+    },
+    {
+      title: "Gutter Cleaners Near Me",
+      url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Fencing Contractors Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
+    },
   ],
   insight: [],
 };
@@ -343,7 +361,6 @@ export const FEEDBACK_ARTIFICIAL_GRASS_NEARME = [
   },
 ];
 
-
 export const DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA = [
   {
     id: 1,
@@ -351,38 +368,49 @@ export const DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA = [
     image: "/homepage/image6.webp",
     isSpecial: true,
     bgColor: "bg-cyan-400",
+    slug: "/en/gb/home",
   },
   {
     id: 2,
     title: "Fence & Gate Installation",
     image: "/homepage/fenceandgate.webp",
     isSpecial: false,
+    slug: "/en/gb/fencing-contractors-near-me",
   },
   {
     id: 3,
+    title: "Driveway Installation",
+    image: "/homepage/driveway.webp",
+    isSpecial: false,
+    slug: "/en/gb/driveway-installers-near-me",
+  },
+  {
+    id: 4,
     title: "Landscaping",
     image: "/homepage/landscapingservice.webp",
     isSpecial: false,
+    slug: "/en/gb/landscape-gardeners-near-me",
   },
   {
-    id: 3,
+    id: 5,
     title: "Tree Surgery",
     image: "/homepage/treesurgery.webp",
     isSpecial: false,
+    slug: "/en/gb/tree-surgeon-near-me",
   },
- 
   {
-    id: 4,
+    id: 6,
     title: "Patio Layer",
-    image: "/homepage/patiolayer.webp", // Aapki image path
+    image: "/homepage/patiolayer.webp",
     isSpecial: false,
+    slug: "/en/gb/patio-layers-near-me",
   },
-
   {
-    id: 5,
+    id: 7,
     title: "Gutter Cleaning",
-    image: "/homepage/guttercleaning.webp", // Aapki image path
+    image: "/homepage/guttercleaning.webp",
     isSpecial: false,
+    slug: "/en/gb/gutter-cleaning-near-me",
   },
 ];
 export const BREADCRUM_DATA_ARTIFICIAL_GRASS_NEARME = [

@@ -6,6 +6,7 @@ import CarouselCard from "../Carousel/CarouselCard";
 import HomeGardenCarousel from "../Carousel/HomeCarousel";
 import H2 from "../UI/Typography/H2";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
+import Link from "next/link";
 
 function DiscoverNearMe({ homeData = [], businessData = [], eventData = [] }) {
   return (
@@ -22,7 +23,9 @@ function DiscoverNearMe({ homeData = [], businessData = [], eventData = [] }) {
                   Home & Garden
                 </h3>{" "}
                 <button className="font-bold text-xs sm:text-base tracking-[0.03em] leading-[18px] whitespace-nowrap">
-                  <span className="underline">See all</span>
+                  <Link href="/en/gb/home">
+                    <span className="underline">See all</span>
+                  </Link>
                 </button>
               </div>
               <HomeGardenCarousel

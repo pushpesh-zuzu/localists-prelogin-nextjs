@@ -15,23 +15,23 @@ export const QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME = [
   },
   {
     type: "li",
-    text: "Get at least three quotes – Prices can vary more than you think. Having a few quotes to compare gives you a better sense of what’s fair and helps you spot anyone who’s too high or suspiciously low.",
+    text: "<strong>Get at least three quotes</strong> – Prices can vary more than you think. Having a few quotes to compare gives you a better sense of what’s fair and helps you spot anyone who’s too high or suspiciously low.",
   },
   {
     type: "li",
-    text: "Ask for tailored design suggestions – A good local patio builder won’t just say “yes” to everything; they’ll offer creative ideas that work with your garden’s size, shape, and style.",
+    text: "<strong>Ask for tailored design suggestions</strong> – A good local patio builder won’t just say “yes” to everything; they’ll offer creative ideas that work with your garden’s size, shape, and style.",
   },
   {
     type: "li",
-    text: "See real examples of past projects – Photos speak volumes. Ask to see finished patios in materials you’re considering, like sandstone patios or porcelain patios, so you can judge the quality for yourself.",
+    text: "<strong>See real examples of past projects</strong> – Photos speak volumes. Ask to see finished patios in materials you’re considering, like sandstone patios or porcelain patios, so you can judge the quality for yourself.",
   },
   {
     type: "li",
-    text: "Avoid paying everything upfront – A trusted patio installer will be happy to work with staged payments, so you only pay in full when you’re completely satisfied.",
+    text: "<strong>Avoid paying everything upfront</strong> – A trusted patio installer will be happy to work with staged payments, so you only pay in full when you’re completely satisfied.",
   },
   {
     type: "li",
-    text: "Check genuine local recommendations – It’s one thing to have online reviews, but hearing from someone in your own area gives extra peace of mind that the contractor delivers on their promises.",
+    text: "<strong>Check genuine local recommendations</strong> – It’s one thing to have online reviews, but hearing from someone in your own area gives extra peace of mind that the contractor delivers on their promises.",
     className: "mb-0",
   },
   {
@@ -68,8 +68,8 @@ export const QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME = [
   {
     type: "li",
     text: "We source local contractors, with essential knowledge of the local area, climate and building regulations.",
-    className: "mb-0",
   },
+  { type: "getQuotesButton", text: "Get Quotes Now",calculatorLink:"" },
   {
     type: "image",
     src: "/nearme/Patio/lushGarden.webp",
@@ -145,27 +145,29 @@ export const QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME = [
     type: "p",
     text: "A simple gravel or concrete-style patio will generally cost less than a premium porcelain or sandstone finish. On average, you can expect to spend around £80–£120 per m² for materials and labour combined, or around £2,800 on a new complete patio installation ( This would be for a 15 m2 sandstone patio, installed by two patio installers over two days (around £290 per patio installer, per day. Though this figure can be significantly higher or slightly lower depending on your location. Here’s a rough guide based on popular options:",
     // notMarginBottom:true
-    className:"mb-[15px] md:mb-[0px]"
+    className: "mb-[15px] md:mb-[0px]",
   },
-  { type: "patioPricingTable",
-    priceCards : [
-    {
-      description: "The average cost of a gravel patio in the UK is",
-      price: "£50 "
-    },
-    {
-      description: "The average cost of a sand stone patio is",
-      price: "£110"
-    },
-    {
-      description: "The average cost of a concrete patio is",
-      price: "£80"
-    },
-    {
-      description: "The average cost of a porcelain patio is",
-      price: "£125"
-    }
-  ] },
+  {
+    type: "patioPricingTable",
+    priceCards: [
+      {
+        description: "The average cost of a gravel patio in the UK is",
+        price: "£50 ",
+      },
+      {
+        description: "The average cost of a sand stone patio is",
+        price: "£110",
+      },
+      {
+        description: "The average cost of a concrete patio is",
+        price: "£80",
+      },
+      {
+        description: "The average cost of a porcelain patio is",
+        price: "£125",
+      },
+    ],
+  },
   {
     type: "p",
     text: "Labour typically makes up 50–70% of the cost, so location and contractor experience can also affect the final price. If you need a custom estimate, there’s no need to stress. Localists can connect you with local patio installers who’ll provide free, no-obligation quotes tailored to your garden, materials, and budget.",
@@ -189,34 +191,37 @@ export const QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME = [
   },
   {
     type: "li",
-    text: "Experience and skill – They should be confident in working with materials that you intend to use for your project, whether it's sandstone, gravel, or concrete, and have a portfolio to prove it.",
+    text: "<strong>Experience and skill</strong> – They should be confident in working with materials that you intend to use for your project, whether it's sandstone, gravel, or concrete, and have a portfolio to prove it.",
   },
   {
     type: "li",
-    text: "Trustworthiness – Someone who communicates clearly, turns up on time, and delivers what they promise. They should also be ready to provide a written contract and clear timelines.",
+    text: "<strong>Trustworthiness</strong> – Someone who communicates clearly, turns up on time, and delivers what they promise. They should also be ready to provide a written contract and clear timelines.",
   },
   {
     type: "li",
-    text: "Knowledge – They can provide expert advice on what works best for your garden, soil, climate and even any local regulations you need to adhere to.",
+    text: "<strong>Knowledge</strong> – They can provide expert advice on what works best for your garden, soil, climate and even any local regulations you need to adhere to.",
   },
   {
     type: "li",
-    text: "Insurance and guarantees – This protects you if anything goes wrong.",
+    text: "<strong>Insurance and guarantees</strong> – This protects you if anything goes wrong.",
   },
   {
     type: "li",
-    text: "Good reputation – Positive feedback from previous clients speaks volumes. Ensure you look at testimonials from previous clients.",
+    text: "<strong>Good reputation</strong> – Positive feedback from previous clients speaks volumes. Ensure you look at testimonials from previous clients.",
   },
   {
     type: "li",
-    text: "Willingness to answer questions – A good contractor won’t rush you; they’ll take time to explain options, next steps and are happy to hold your hands throughout the project. ",
+    text: "<strong>Willingness to answer questions</strong> – A good contractor won’t rush you; they’ll take time to explain options, next steps and are happy to hold your hands throughout the project. ",
   },
   {
     type: "p",
     text: "Remember, all specialists here on Localists are vetted and verified, so you can skip the risky guesswork. We’ve already done the legwork - you just go ahead and choose a builder who feels right for your project.",
     notMarginBottom: true,
   },
-  { type: "PostCodeSection", className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]" },
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
 ];
 export const FREQUENTLY_DATA_PATIO_SERVICES_NEARME = [
   {
@@ -291,12 +296,30 @@ export const PATIO_SERVICES_NEARME_TABDATA = {
     "Patio Laying Bolton",
   ],
   popular: [
-    "Driveway Installers Near Me",
-    "Gardeners Near Me",
-    "Tree Surgeons Near Me",
-    "Architects Near Me",
-    "Gutter Cleaners Near Me",
-    "Fencing Contractors Near Me",
+    {
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
+    },
+    {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
+      title: "Tree Surgeons Near Me",
+      url: "/en/gb/tree-surgeon-near-me",
+    },
+    {
+      title: "Architects Near Me",
+      url: "",
+    },
+    {
+      title: "Gutter Cleaners Near Me",
+      url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Fencing Contractors Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
+    },
   ],
   insight: [],
 };
@@ -343,38 +366,49 @@ export const DISCOVER_PATIO_SERVICES_NEARME_DATA = [
     image: "/homepage/image6.webp",
     isSpecial: true,
     bgColor: "bg-cyan-400",
+    slug: "/en/gb/home",
   },
   {
     id: 2,
     title: "Fence & Gate Installation",
     image: "/homepage/fenceandgate.webp",
     isSpecial: false,
+    slug: "/en/gb/fencing-contractors-near-me",
   },
   {
     id: 3,
+    title: "Driveway Installation",
+    image: "/homepage/driveway.webp",
+    isSpecial: false,
+    slug: "/en/gb/driveway-installers-near-me",
+  },
+  {
+    id: 4,
     title: "Landscaping",
     image: "/homepage/landscapingservice.webp",
     isSpecial: false,
+    slug: "/en/gb/landscape-gardeners-near-me",
   },
   {
-    id: 3,
+    id: 5,
     title: "Tree Surgery",
     image: "/homepage/treesurgery.webp",
     isSpecial: false,
+    slug: "/en/gb/tree-surgeon-near-me",
   },
-
   {
-    id: 4,
-    title: "Patio Layer",
-    image: "/homepage/patiolayer.webp", // Aapki image path
+    id: 6,
+    title: "Artificial Grass Installation",
+    image: "/homepage/artificialgrassinstallation.webp",
     isSpecial: false,
+    slug: "/en/gb/artificial-grass-installers-near-me",
   },
-
   {
-    id: 5,
+    id: 7,
     title: "Gutter Cleaning",
-    image: "/homepage/guttercleaning.webp", // Aapki image path
+    image: "/homepage/guttercleaning.webp",
     isSpecial: false,
+    slug: "/en/gb/gutter-cleaning-near-me",
   },
 ];
 export const BREADCRUM_DATA_PATIO_SERVICES_NEARME = [

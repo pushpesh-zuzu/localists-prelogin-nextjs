@@ -15,8 +15,12 @@ function page() {
         canonicalPath="/en/gb/artificial-grass-installers-near-me"
         bannerImage="/nearme/Artificial/ArtificialGrassBanner.jpg"
         breadcrumb={[
+          { title: "Home", path: "/en/gb" },
           { title: "Home & Garden", path: "/home" },
-          { title: "Artificial Grass Installation", path: "/artificial-grass-installers-near-me" },
+          {
+            title: "Artificial Grass Installation",
+            path: "/artificial-grass-installers-near-me",
+          },
         ]}
         conversion={true}
       />

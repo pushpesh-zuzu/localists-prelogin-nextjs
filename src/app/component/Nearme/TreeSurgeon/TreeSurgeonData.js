@@ -7,7 +7,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   },
   {
     type: "h2",
-    text: "How much does a tree surgeon cost?",
+    text: "How much does a tree surgeon cost",
   },
   {
     type: "p",
@@ -44,7 +44,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     text: "Trees can become harmful when they’re diseased, unstable, or simply too large for their surroundings. For example, a tree with hidden rot at the base might look fine on the outside but could topple in a storm, damaging property or blocking a road. In other cases, overgrown branches might stretch into power lines, or roots can push up paving slabs and create trip hazards. This is where a tree surgeon’s expertise matters. They can spot these risks early and take action.",
   },
   {
-    type: "pbold",
+    type: "p",
     text: "Here are some of the key things a tree surgeon does:",
     className: "my-[15px] md:my-[25px]",
   },
@@ -66,7 +66,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "Sometimes a tree is simply too diseased, damaged, or unstable to save. In these cases, tree surgeons carry out removals safely using specialist climbing gear, cranes, ropes, and dismantling techniques. They know how to handle this professionally, keeping health and safety in mind, to prevent damage to people, property, or surrounding plants.",
-    className:"pb-[5px] md:pb-0"
+    className: "pb-[5px] md:pb-0",
   },
 
   {
@@ -76,8 +76,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "Taking down a tree is only half the job. The stump left behind can become a tripping hazard, attract pests, or sprout regrowth. Tree surgeons use professional stump grinders to remove it completely, making space for new planting, landscaping, or simply a tidy, safer garden.",
-        className:"pb-[5px] md:pb-0"
-
+    className: "pb-[5px] md:pb-0",
   },
   {
     type: "pbold",
@@ -86,8 +85,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "Tree surgeons don’t just remove trees. They help plant them too. They can recommend the right species for your soil, plant them correctly and even transplant existing trees when needed.",
-      className:"pb-[5px] md:pb-0"
-
+    className: "pb-[5px] md:pb-0",
   },
 
   {
@@ -97,8 +95,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "Trees can suffer from pests, fungi, and decay. Tree surgeons identify these problems early and recommend treatments or interventions to prevent further spread.",
-     className:"pb-[5px] md:pb-0"
-
+    className: "pb-[5px] md:pb-0",
   },
   {
     type: "pbold",
@@ -107,8 +104,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "Storm damage or fallen branches can pose immediate risks. Tree surgeons are often called out in emergencies to make trees safe, clear debris, and restore access quickly.",
-     className:"pb-[5px] md:pb-0"
-
+    className: "pb-[5px] md:pb-0",
   },
 
   {
@@ -138,29 +134,29 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   },
   {
     type: "li",
-    text: "Insurance - This is also non-negotiable as it protects you and your property if something goes wrong.",
+    text: "<strong>Insurance</strong> - This is also non-negotiable as it protects you and your property if something goes wrong.",
     // className: "mr-5",
   },
   {
     type: "li",
-    text: "Reviews - Check reviews and recommendations from past clients to see how reliable they are in practice.",
+    text: "<strong>Reviews</strong> - Check reviews and recommendations from past clients to see how reliable they are in practice.",
     // className: "mr-5",
   },
   {
     type: "li",
-    text: "Transparency - A good tree surgeon will be transparent: they’ll explain the work clearly, provide a written quote, and answer your questions before starting.",
+    text: "<strong>Transparency</strong> - A good tree surgeon will be transparent: they’ll explain the work clearly, provide a written quote, and answer your questions before starting.",
     // className: "mr-5",
   },
   {
     type: "li",
-    text: "Relevant experience - Having hands-on experience with the type of job you need is also a plus. Whether that’s caring for ornamental trees in your garden, managing large oaks on a commercial site, or maintaining multiple trees in public spaces.",
+    text: "<strong>Relevant experience</strong> - Having hands-on experience with the type of job you need is also a plus. Whether that’s caring for ornamental trees in your garden, managing large oaks on a commercial site, or maintaining multiple trees in public spaces.",
     // className: "mr-5",
   },
   {
     type: "li",
-    text: `Professional bodies membership –  Having a membership to organisations such as the <a href='https://www.trees.org.uk/' target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>Arboricultural Association</a> often means they have to adhere to strict regulations and protocols.`,
+    text: `<strong>Professional bodies membership</strong> –  Having a membership to organisations such as the <a href='https://www.trees.org.uk/' target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>Arboricultural Association</a> often means they have to adhere to strict regulations and protocols.`,
     // className: "mr-5",
-    className:'mb-0'
+    className: "mb-0",
   },
 ];
 export const FREQUENTLY_DATA_TREE_SURGEON = {
@@ -195,7 +191,6 @@ export const FREQUENTLY_DATA_TREE_SURGEON = {
       description: `
       Reducing a tree’s height (also called crown reduction) can cost anywhere between <strong>£150 and £500</strong>, depending on the size of the tree, how much needs to be reduced, and where you live. For example, reducing a very tall oak will cost more than trimming back a medium-sized birch. Tree surgeons usually visit first to assess and give a tailored quote.`,
     },
-  
   ],
 };
 export const TREE_SRUGEON_ADVICEINSIGHT = [
@@ -240,12 +235,30 @@ export const TREE_SURGEON_TABDATA = {
     "Tree Surgeons Bolton",
   ],
 popular: [
-  "Landscapers Near Me",
-  "Gardeners Near Me",
-  "Fence and Gate Installation Near Me",
-  "Architects Near Me",
-  "Gutter Cleaners Near Me",
-  "Artificial Grass Installers Near Me",
+    {
+        title: "Landscapers Near Me",
+        url: "/en/gb/landscape-gardeners-near-me",
+    },
+    {
+        title: "Gardeners Near Me",
+        url: "",
+    },
+    {
+        title: "Fence and Gate Installation Near Me",
+        url: "/en/gb/fencing-contractors-near-me",
+    },
+    {
+        title: "Architects Near Me",
+        url: "",
+    },
+    {
+        title: "Gutter Cleaners Near Me",
+        url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+        title: "Artificial Grass Installers Near Me",
+        url: "/en/gb/artificial-grass-installers-near-me",
+    },
 ],
   insight: [
     
@@ -300,39 +313,53 @@ export const TREE_SURGEON_DATA = [
   {
     id: 1,
     title: "Home & Garden",
-    image: "/homepage/image6.webp", 
-    isSpecial: true, 
-    bgColor: "bg-cyan-400"
+    image: "/homepage/image6.webp",
+    isSpecial: true,
+    bgColor: "bg-cyan-400",
+    slug:"/en/gb/home"
+
   },
   {
     id: 2,
     title: "Fence & Gate Installation",
-    image: "/homepage/fenceandgate.webp", 
-    isSpecial: false
+    image: "/homepage/fenceandgate.webp",
+    isSpecial: false,
+    slug: "/en/gb/fencing-contractors-near-me",
   },
-    {
+  {
     id: 3,
-    title: "Landscaping",
-    image: "/homepage/landscapingservice.webp", // Aapki image path
-    isSpecial: false
+    title: "Driveway Installation",
+    image: "/homepage/driveway.webp",
+    isSpecial: false,
+    slug: "/en/gb/driveway-installers-near-me",
   },
   {
     id: 4,
-    title: "Artificial Grass Installation",
-    image: "/homepage/artificialgrassinstallation.webp", 
-    isSpecial: false
+    title: "Landscaping",
+    image: "/homepage/landscapingservice.webp", // Aapki image path
+    isSpecial: false,
+    slug: "/en/gb/landscape-gardeners-near-me",
   },
   {
     id: 5,
+    title: "Artificial Grass Installation",
+    image: "/homepage/artificialgrassinstallation.webp",
+    isSpecial: false,
+    slug: "/en/gb/artificial-grass-installers-near-me",
+  },
+  {
+    id: 6,
     title: "Patio Layer",
     image: "/homepage/patiolayer.webp", // Aapki image path
-    isSpecial: false
+    isSpecial: false,
+    slug: "/en/gb/patio-layers-near-me",
   },
-  
-    {
-    id: 6,
+
+  {
+    id: 7,
     title: "Gutter Cleaning",
     image: "/homepage/guttercleaning.webp", // Aapki image path
-    isSpecial: false
+    isSpecial: false,
+    slug: "/en/gb/gutter-cleaning-near-me",
   },
 ];
