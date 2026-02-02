@@ -1,6 +1,10 @@
+"use client"
+
 import Image from "next/image";
 import H3 from "../UI/Typography/H3";
 import H5 from "../UI/Typography/H5";
+import Link from "next/link";
+
 
 export default function CarouselCard({ card }) {
   if (card.isSpecial) {
@@ -24,7 +28,7 @@ export default function CarouselCard({ card }) {
     );
   }
 
-  return (
+  const CardContent = (
     <div className="select-none h-[213px] sm:h-[145px] lg:h-[200px] xl:h-[235px] relative flex justify-center">
       <div className="relative cursor-pointer w-full h-full max-w-[281px] rounded-[20px] xl:rounded-[28px] overflow-hidden">
         <Image
@@ -47,5 +51,18 @@ export default function CarouselCard({ card }) {
         </H5>
       </div>
     </div>
-  );
+  )
+
+  // If slug exists → clickable
+  if (card.slug) {
+    return (
+      <Link href={card.slug} className="block">
+        {CardContent}
+      </Link>
+    );
+  }
+
+  // If slug NOT exists → render card normally
+  return CardContent;
 }
+

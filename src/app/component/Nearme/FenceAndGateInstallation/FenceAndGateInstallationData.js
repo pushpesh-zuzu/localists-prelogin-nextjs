@@ -28,7 +28,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         text: "Every day, hundreds of customers use Localists to source fencing contractors for their projects. Property managers, business owners, and homeowners alike use our service  to ensure they're getting the best quote, from someone who can do the job they want - right to the very last nail. All the professionals on our system are vetted to ensure you only get the best experts working on your fencing project.",
     },
     {
-        type: "pbold",
+        type: "p",
         text: "When you hire from Localists you get:",
         className: "my-[15px] md:my-[25px]",
     },
@@ -77,31 +77,37 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         heading: "Wooden fencing:\u00A0",
         text: "A classic, traditional option that adds charm and privacy.",
         marginTop: true,
+        noBold: true
     },
     {
         type: "uili",
         heading: "Metal or iron fencing:\u00A0",
         text: "Perfect for a strong, secure finish with peace of mind.",
+        noBold: true
     },
     {
         type: "uili",
         heading: "Vinyl fencing:\u00A0",
         text: "A low-maintenance option that’s easy to install and lasts for years.",
+        noBold: true
     },
     {
         type: "uili",
         heading: "Decorative garden fencing:\u00A0",
         text: "Add a personal touch to your garden with bespoke design options.",
+        noBold: true
     },
     {
         type: "uili",
         heading: "Security fencing:\u00A0",
         text: "Ideal for keeping properties safe and protected.",
+        noBold: true
     },
     {
         type: "uili",
         heading: "Agricultural fencing:\u00A0",
         text: "Perfect for keeping your farming stock secure.",
+        noBold: true
     },
     { type: "PostCodeSection", className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]" },
 ];
@@ -112,12 +118,9 @@ export const FREQUENTLY_DATA_FENCE_AND_GATE = {
             key: "1",
             title: "Which is the best fencing company near me?",
             description: `
-      On average, a 250ft gate installation will cost around £2000
-The cost of installing fences and gates can vary based on several factors - the size of your project, the materials you choose, and the type of fencing or gate you need (manual or automated, wooden or metal, decorative or security-focused).
-<br /><br />
-Naturally, more complex or custom installations will cost more, and the number of fences or gates you want to install will affect the final price too.
-<br /><br />
-When you connect with a professional through Localists, you’ll get clear, tailored quotes based on your specific needs. Your local fence installer can walk you through your options and help you choose the best solution to fit your budget and style.
+When looking for a fencing company, it’s important to find one that’s well-reviewed, fully insured and one that has a wide portfolio of projects. Reviews can be a good indicator as to what kind of professional you’re going to get - and with Localists you get all their reviews in one place!
+<br />
+Though it’s not completely necessary, looking at whether your fencing contractor is a member of regulatory bodies such as the association of fencing industries might also be an indicator of their quality. Rather than spending hours searching the internet, We bring all of the best fencing contractors to you. So you can get the best fencing companies for the best price!
       `,
         },
         {
@@ -126,7 +129,9 @@ When you connect with a professional through Localists, you’ll get clear, tail
             description: `
       On average, a 250ft gate installation will cost around £2000
 The cost of installing fences and gates can vary based on several factors - the size of your project, the materials you choose, and the type of fencing or gate you need (manual or automated, wooden or metal, decorative or security-focused).
+<br />
 Naturally, more complex or custom installations will cost more, and the number of fences or gates you want to install will affect the final price too.
+<br />
 When you connect with a professional through Localists, you’ll get clear, tailored quotes based on your specific needs. Your local fence installer can walk you through your options and help you choose the best solution to fit your budget and style.
 
       `,
@@ -161,12 +166,37 @@ export const FENCE_AND_GATE_TABDATA = {
         "Fencing Contractors Bolton",
     ],
     popular: [
-        "Driveway Installers Near Me",
-        "Gardeners Near Me",
-        "Tree Surgeons Near Me",
-        "Architects Near Me",
-        "Gutter Cleaners Near Me",
-        "Artificial Grass Installers Near Me",
+        // "Driveway Installers Near Me",
+        // "Gardeners Near Me",
+        // "Tree Surgeons Near Me",
+        // "Architects Near Me",
+        // "Gutter Cleaners Near Me",
+        // "Artificial Grass Installers Near Me",
+
+        {
+            title: "Driveway Installers Near Me",
+            url: "/en/gb/driveway-installers-near-me",
+        },
+        {
+            title: "Gardeners Near Me",
+            url: "",
+        },
+        {
+            title: "Tree Surgeons Near Me",
+            url: "/en/gb/tree-surgeon-near-me",
+        },
+        {
+            title: "Architects Near Me",
+            url: "",
+        },
+        {
+            title: "Gutter Cleaners Near Me",
+            url: "/en/gb/gutter-cleaning-near-me",
+        },
+        {
+            title: "Artificial Grass Installers Near Me",
+            url: "/en/gb/artificial-grass-installers-near-me",
+        },
     ],
     insight: [
 
@@ -226,33 +256,45 @@ export const FENCE_AND_GATE_DATA = [
     },
     {
         id: 2,
-        title: "Fence & Gate Installation",
-        image: "/homepage/fenceandgate.webp",
-        isSpecial: false
+        title: "Driveway Installation",
+        image: "/homepage/driveway.webp",
+        isSpecial: false,
+        slug: "/en/gb/driveway-installers-near-me",
     },
     {
         id: 3,
         title: "Landscaping",
         image: "/homepage/landscapingservice.webp", // Aapki image path
-        isSpecial: false
+        isSpecial: false,
+        slug: "/en/gb/landscape-gardeners-near-me",
     },
     {
         id: 4,
         title: "Artificial Grass Installation",
         image: "/homepage/artificialgrassinstallation.webp",
-        isSpecial: false
+        isSpecial: false,
+        slug: "/en/gb/artificial-grass-installers-near-me",
     },
     {
         id: 5,
         title: "Patio Layer",
         image: "/homepage/patiolayer.webp", // Aapki image path
-        isSpecial: false
+        isSpecial: false,
+        slug: "/en/gb/patio-layers-near-me",
     },
 
     {
         id: 6,
         title: "Gutter Cleaning",
         image: "/homepage/guttercleaning.webp", // Aapki image path
-        isSpecial: false
+        isSpecial: false,
+        slug: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+        id: 7,
+        title: "Tree Surgery",
+        image: "/homepage/treesurgery.webp",
+        isSpecial: false,
+        slug: "/en/gb/tree-surgeon-near-me",
     },
 ];

@@ -28,11 +28,10 @@ const AboutServicesAndQuestions = ({
             key={index}
             headdingblue={block.text}
             // className="mb-5 md:mb-[25px] max-w-[100%] md:max-w-full"
-            className={`max-w-[100%] md:max-w-full ${
-        block?.noMarginBottom
-          ? "mb-0"
-          : "mb-5 md:mb-[25px]"
-      }`}
+            className={`max-w-[100%] md:max-w-full ${block?.noMarginBottom
+              ? "mb-0"
+              : "mb-5 md:mb-[25px]"
+              }`}
           />
         );
       case "image":
@@ -127,13 +126,14 @@ const AboutServicesAndQuestions = ({
       case "uili":
         return (
           <ul key={index}
-          // className="list-disc pl-5 md:pl-8 mb-2.5 md:mb-[15px]"
+            // className="list-disc pl-5 md:pl-8 mb-2.5 md:mb-[15px]"
             className={`list-disc pl-5 md:pl-8 ${block?.noMarginBottom
-                ? "mb-0"
-                : "mb-2.5 md:mb-[15px]"
+              ? "mb-0"
+              : "mb-2.5 md:mb-[15px]"
               }`}>
             <li className={textBase}>
-              <span className="font-bold">{block.heading}</span>{" "}
+              <span className={`${block.noBold? "" : "font-bold"}`}>{block.heading}</span>
+              {block.noBold && " "}
               <span dangerouslySetInnerHTML={{ __html: block.text }} />
             </li>
           </ul>

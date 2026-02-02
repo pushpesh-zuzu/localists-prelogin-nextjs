@@ -39,6 +39,10 @@ function NewPPCForm({ nextStep, serviceId }) {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const [initialServiceLoaded, setInitialServiceLoaded] = useState(false);
 
+    const [inputValue, setInputValue] = useState("");
+    const [menuKey, setMenuKey] = useState(0);
+
+
     const searchTimeout = useRef(null);
     const lastSearchValue = useRef("");
 
@@ -68,26 +72,30 @@ function NewPPCForm({ nextStep, serviceId }) {
     }, [service, serviceId, initialServiceLoaded]);
 
     const loadOptions = useCallback(
-        (inputValue, callback) => {
-            if (searchTimeout.current) clearTimeout(searchTimeout.current);
+        (value, callback) => {
+            // if (searchTimeout.current) clearTimeout(searchTimeout.current);
 
-            if (!inputValue) {
-                lastSearchValue.current = "";
+            if (!value) {
+                // lastSearchValue.current = "";
+                dispatch(searchService({ search: "" }));
                 callback(serviceOptions); // show all services
                 return;
             }
 
-            if (lastSearchValue.current === inputValue) {
-                callback(serviceOptions);
-                return;
-            }
+            // if (lastSearchValue.current === inputValue) {
+            //     callback(serviceOptions);
+            //     return;
+            // }
 
-            lastSearchValue.current = inputValue;
+            // lastSearchValue.current = inputValue;
 
-            searchTimeout.current = setTimeout(() => {
-                dispatch(searchService({ search: inputValue || "" }));
-                setTimeout(() => callback(serviceOptions), 100);
-            }, 300);
+            dispatch(searchService({ search: value }));
+            callback(serviceOptions);
+
+            // searchTimeout.current = setTimeout(() => {
+            //     dispatch(searchService({ search: inputValue || "" }));
+            //     setTimeout(() => callback(serviceOptions), 100);
+            // }, 300);
         },
         [dispatch, serviceOptions]
     );
@@ -226,22 +234,39 @@ function NewPPCForm({ nextStep, serviceId }) {
                 {/* SERVICE */}
                 <Label>What Service Do You Need? *</Label>
                 <AsyncSelect
+                    key={menuKey}                     // 👈 FORCE RESET
                     instanceId="service-select"
-                    inputId="service-select-input"
+                    // inputId="service-select-input"
 
                     cacheOptions={false}
                     loadOptions={loadOptions}
                     defaultOptions={serviceOptions}
-                    options={serviceOptions}
-                    onChange={handleServiceChange}
+                    // options={serviceOptions}
+                    // onChange={handleServiceChange}
                     value={formData.service_name}
+                    inputValue={inputValue}
                     placeholder="Search for a service..."
                     isLoading={searchServiceLoader}
                     styles={customStyles(errors.service)}
+                    onInputChange={(value, action) => {
+                        if (action.action === "input-change") setInputValue(value);
+                    }}
+                    onChange={(option, action) => {
+                        if (action.action === "clear") {
+                            setInputValue("");
+                            handleServiceChange(null);
+
+                            dispatch(searchService({ search: "" })); // 👈 reload all
+                            setMenuKey((k) => k + 1);                // 👈 RESET AsyncSelect
+
+                            return;
+                        }
+                        handleServiceChange(option);
+                    }}
                     isClearable
-                    menuIsOpen={menuIsOpen}
-                    onMenuOpen={() => setMenuIsOpen(true)}
-                    onMenuClose={() => setMenuIsOpen(false)}
+                    // menuIsOpen={menuIsOpen}
+                    // onMenuOpen={() => setMenuIsOpen(true)}
+                    // onMenuClose={() => setMenuIsOpen(false)}
 
                     menuPortalTarget={typeof window !== "undefined" ? document.body : null}
                     menuPosition="fixed"
