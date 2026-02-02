@@ -32,6 +32,7 @@ import {
   VETTED_DATA_ARTIFICIAL_GRASS_NEARME,
 } from "./ArtificialGrassInstallationNearmeData";
 import GetQuote from "../../common/GetQuotes/GetQuote";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -49,6 +50,8 @@ const CloseBrowserAbandon = dynamic(
 
 function ArtificialGrassInstallationNearme() {
   usePendingBuyerRedirect();
+  useScrollToTop()
+  
   return (
     <>
       <CloseBrowserAbandon />

@@ -13,6 +13,8 @@ import PopularCategories from "@/app/component/category/popularCategories/CloneP
 import AllServiceLevel1 from "@/app/component/category/allServices/AllServiceLevel1";
 import GetQuotes from "@/app/component/common/GetQuotesForHome/GetQuotes";
 import Footer from "@/app/component/Footer/Footer";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 const endpointCategoryMap = {
     "financial-and-accounting": ["Accounting", "Bookkeeping Services"],
@@ -35,6 +37,8 @@ const endpointCategoryMap = {
 };
 
 export default function Page() {
+    usePendingBuyerRedirect();
+    useScrollToTop()
     const pathname = usePathname();
 
     const pathSegments = pathname.split("/").filter(Boolean);

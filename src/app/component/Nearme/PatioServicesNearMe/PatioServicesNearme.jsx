@@ -32,6 +32,7 @@ import {
   VETTED_DATA_PATIO_SERVICES_NEARME,
 } from "./PatioServicesData";
 import GetQuote from "../../common/GetQuotes/GetQuote";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -49,9 +50,11 @@ const CloseBrowserAbandon = dynamic(
 
 function PatioServicesNearme() {
   usePendingBuyerRedirect();
+  useScrollToTop()
+  
   return (
     <>
-      <CloseBrowserAbandon />
+      {typeof window !=='undefined' && <CloseBrowserAbandon />}
       <FAQScript FAQ={FREQUENTLY_DATA_PATIO_SERVICES_NEARME} />
       <HeroSectionNearMe
         heading1="Find Patio Layers"

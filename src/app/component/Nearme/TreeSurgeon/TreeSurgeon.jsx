@@ -32,12 +32,7 @@ import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
-
-export const metadata = {
-  title: "Find Quality Tree Surgeons Near Me | Localists",
-  description:
-    "Find fully qualified tree surgeons near me. Certified and skilled arborists. Safe tree removal & pruning. Get free quotes from local experts in your area.",
-};
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -57,9 +52,10 @@ const CloseBrowserAbandon = dynamic(
 
 function TreeSurgeon() {
   usePendingBuyerRedirect()
+  useScrollToTop()
   return (
     <>
-      <CloseBrowserAbandon />
+      {typeof window !=='undefined' && <CloseBrowserAbandon />}
       <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]} />
       <HeroSectionNearMe
         heading1="Find Tree Surgeons"
