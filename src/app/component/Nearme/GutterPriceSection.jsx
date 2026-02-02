@@ -23,7 +23,7 @@ export default function GutterPriceSection() {
                         </div>
 
                         {/* Right Section - Price Grid */}
-                        <div className=" xl:max-w-[57%] grid grid-cols-2 lg:grid-cols-2 gap-x-[14px] gap-y-5 lg:gap-x-5 px-[10px] min-[450px]:px-20 lg:px-0 pt-[23px] pb-[38px] lg:py-16 lg:pr-10">
+                        <div className=" xl:max-w-[57%] grid grid-cols-2 lg:grid-cols-2 gap-x-[14px] gap-y-5 lg:gap-x-5 px-[10px] min-[450px]:px-20 lg:px-0 pt-[23px] pb-[38px] lg:py-16 lg:pr-12">
                             {/* Price Card 1 */}
                             <div className="">
                                 <Paragraph
