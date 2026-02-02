@@ -41,7 +41,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "li",
         text: "Spotting early issues like loose joints, leaks, or rust before they become expensive repairs",
-        className: "mb-[15px] md:mb-[25px]",
+        className: "mb-[15px] md:mb-[50px]",
     },
     {
         type: "h2",
@@ -66,6 +66,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "p",
         text: "If you spot any of these issues, it’s best to arrange a professional gutter clearance before the problem turns into expensive damage.",
+        className: "mb-[15px] md:mb-[50px]",
     },
     {
         type: "h2",
