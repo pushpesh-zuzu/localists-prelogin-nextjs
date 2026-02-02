@@ -125,12 +125,12 @@ export default function AveragePriceDynamic({
           <p
             className="text-[12px] leading-[12px]
         lg:text-[16px] lg:leading-[16px]
-        lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[0em]! font-normal lg:font-bold"
+        lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[0em]! font-bold lg:font-bold"
           >
             {disclaimerText}{" "}
             <a
               href={calculatorLink}
-              className="underline font-normal md:font-bold text-[#00AFE3]"
+              className="underline font-bold md:font-bold text-[#00AFE3]"
             >
               {calculatorText}
             </a>
