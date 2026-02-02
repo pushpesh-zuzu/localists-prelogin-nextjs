@@ -77,7 +77,7 @@ export default function AveragePriceDynamic({
                 </Paragraph>
                 <p className=" text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3 ">
                   {priceCards[1].price}{" "}
-                  <span className="text-base">per &nbsp; m²</span>
+                  <span className="text-base xl:text-2xl">per &nbsp; m²</span>
                 </p>
               </div>
 
