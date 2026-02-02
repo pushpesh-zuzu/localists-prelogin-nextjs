@@ -37,7 +37,7 @@ export default function HireRelatedToServiceNearMe({
             <h2
               className="font-Inter font-black
                           tracking-[-0.03em]
-                          text-[30px] md:text-[35px] leading-[36px] md:leading-[38px]
+                          text-[30px] md:text-[35px] leading-[34px] md:leading-[38px]
                           lg:text-[50px] lg:leading-[55px] text-white md:whitespace-nowrap"
             >
               {heading1} <span className="text-[#253238]">{heading2}</span>
