@@ -27,7 +27,7 @@ function page() {
           </div>
         }
       >
-        <LandscapeGardenNearme />;
+        <LandscapeGardenNearme />
       </Suspense>
     </>
   );

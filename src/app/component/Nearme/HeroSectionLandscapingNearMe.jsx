@@ -8,22 +8,22 @@ import Image from "next/image";
 import ChevroliteDoubleDownIcon from "../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 import PostCodeSearchField from "./PostCodeSearchField";
 
-function HeroSectionNearMe({
+function HeroSectionLandscapingNearMe({
   heading1 = "Find Tree Surgeons",
-  headingMiddle='',
   heading2 = "Near You.",
   description = `Find the best tree surgeons for your job, just enter your postcode
               and a few details for instant quotes.`,
   bannerImage = "",
   bannerImageMobile = "",
   altText = "Tree Surgeon",
-  serviceId=112,
-  serviceName="Tree Surgery"
-  
+  serviceId = 112,
+  serviceName = "Tree Surgery",
+  containerHight = "relative w-full md:h-[375px] lg:h-[550px] xl:h-[570px] xl:max-h-[570px]",
+  desktopImageClass = "object-cover h-10 w-10 md:h-[375px] min-[900px]:h-[400px] lg:h-[550px] xl:h-[570px]",
 }) {
   return (
     <>
-      <div className="relative w-full md:h-[380px] lg:h-[513px] xl:h-[570px] max-h-[570px]">
+      <div className={`${containerHight}`}>
         <div className="absolute inset-0 hidden md:block z-0 w-full h-full">
           <Image
             src={bannerImage}
@@ -32,7 +32,7 @@ function HeroSectionNearMe({
             priority={true}
             fetchPriority="high"
             quality={90}
-            className="object-cover h-10 w-10 md:h-[380px] min-[900px]:h-[400px] lg:h-[513px] xl:h-[570px]"
+            className={desktopImageClass}
             sizes="(min-width: 768px) 100vw, 0px"
           />
         </div>
@@ -62,13 +62,16 @@ function HeroSectionNearMe({
               <H1 className="text-white block drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
                 <span>
                   {heading1}
-                  <span className="text-[#253238] block">{headingMiddle && <span className="text-white">{headingMiddle}</span>} {heading2}</span>
+                  <span className="text-[#253238] block">{heading2}</span>
                 </span>
               </H1>
-              <Paragraph1 className="tracking-[0em]! text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-[80%] sm:max-w-[60%] md:max-w-[450px] lg:max-w-[590px] text-white pt-[18px] md:pt-4 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
+              <Paragraph1 className="tracking-[0em]! text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] sm:max-w-[60%] md:max-w-[600px] lg:max-w-[700px] text-white pt-[18px] md:pt-3 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
                 {description}
               </Paragraph1>
-              <PostCodeSearchField serviceId={serviceId} serviceName={serviceName} />
+              <PostCodeSearchField
+                serviceId={serviceId}
+                serviceName={serviceName}
+              />
             </div>
             <div className="flex h-[12px] ml-auto mr-auto justify-center mb-3.5 mt-[30px] md:hidden relative z-1">
               {/* <ChevroliteDoubleDownIcon /> */}
@@ -80,4 +83,4 @@ function HeroSectionNearMe({
   );
 }
 
-export default HeroSectionNearMe;
+export default HeroSectionLandscapingNearMe;
