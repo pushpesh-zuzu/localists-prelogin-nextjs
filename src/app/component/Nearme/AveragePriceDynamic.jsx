@@ -2,29 +2,32 @@ import GetQuote from "../common/GetQuotes/GetQuote";
 import H2 from "../UI/Typography/H2";
 import Paragraph from "../UI/Typography/Paragraph";
 
-export default function AveragePriceDynamic({ 
+export default function AveragePriceDynamic({
   title = "Average cost of Patio Laying UK",
   priceCards = [
     {
       description: "For a small tree removal (under 25ft), the average cost is",
-      price: "£450"
+      price: "£450",
     },
     {
-      description: "For a medium stump removal under 15 inch diameter), the average cost is",
-      price: "£215"
+      description:
+        "For a medium stump removal under 15 inch diameter), the average cost is",
+      price: "£215",
     },
     {
-      description: "Trimming or pruning a small tree (under 25ft) costs on average",
-      price: "£250"
+      description:
+        "Trimming or pruning a small tree (under 25ft) costs on average",
+      price: "£250",
     },
     {
-      description: "For medium stump grinding (under 15 inch in diameter), the average cost is",
-      price: "£115"
-    }
+      description:
+        "For medium stump grinding (under 15 inch in diameter), the average cost is",
+      price: "£115",
+    },
   ],
   disclaimerText = "*costs are estimates only, to get a more specific estimate try our",
   calculatorText = "Patio Laying Calculator",
-  calculatorLink = "#"
+  calculatorLink = "#",
 }) {
   return (
     <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px] ">
@@ -41,12 +44,15 @@ export default function AveragePriceDynamic({
               </H2>
 
               <div className="hidden lg:flex mt-6 lg:mt-0 justify-center lg:justify-start ">
-                <GetQuote classGetQuote="py-[7px] xl:py-3 xl:px-[30px]" text=" Get a real quote" />
+                <GetQuote
+                  classGetQuote="py-[7px] xl:py-3 xl:px-[30px]"
+                  text=" Get a real quote"
+                />
               </div>
             </div>
 
             {/* Right Section - Price Grid */}
-            <div className=" xl:max-w-[57%] grid grid-cols-2 lg:grid-cols-2 gap-x-[14px] gap-y-5 lg:gap-x-5 px-[10px] min-[450px]:px-20 lg:px-0 pt-[23px] pb-[38px] lg:py-16 lg:pr-7">
+            <div className=" xl:max-w-[57%] grid grid-cols-2 lg:grid-cols-2 gap-x-[14px] gap-y-5 lg:gap-x-5 px-[10px] min-[450px]:px-16 lg:px-0 pt-[23px] pb-[38px] lg:py-16 lg:pr-7">
               {/* Price Card 1 */}
               <div className="">
                 <Paragraph
@@ -55,8 +61,9 @@ export default function AveragePriceDynamic({
                 >
                   {priceCards[0].description}
                 </Paragraph>
-                <p className="text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-center  md:text-center lg:text-center text-[#253238] lg:mt-3">
-                  {priceCards[0].price} <span className="text-base xl:text-2xl mr-[5%] min-[360px]:mr-[16%] min-[390px]:mr-[8%] md:mr-0">per &nbsp; m²</span>
+                <p className="text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center  md:text-center lg:text-center text-[#253238] lg:mt-3">
+                  {priceCards[0].price}{" "}
+                  <span className="text-base xl:text-2xl">per &nbsp; m²</span>
                 </p>
               </div>
 
@@ -68,8 +75,9 @@ export default function AveragePriceDynamic({
                 >
                   {priceCards[1].description}
                 </Paragraph>
-                <p className=" text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-center md:text-center text-[#253238] lg:mt-3 ">
-                  {priceCards[1].price} <span className="text-base xl:text-2xl mr-[5%] min-[360px]:mr-[12%] md:mr-0">per &nbsp; m²</span>
+                <p className=" text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3 ">
+                  {priceCards[1].price}{" "}
+                  <span className="text-base">per &nbsp; m²</span>
                 </p>
               </div>
 
@@ -84,8 +92,9 @@ export default function AveragePriceDynamic({
                 >
                   {priceCards[2].description}
                 </Paragraph>
-                <p className=" text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-center md:text-center text-[#253238]  lg:mt-3">
-                  {priceCards[2].price} <span className="text-base xl:text-2xl mr-[5%] min-[360px]:mr-[12%] min-[390px]:mr-[8%] md:mr-0">per &nbsp; m²</span>
+                <p className=" text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238]  lg:mt-3">
+                  {priceCards[2].price}{" "}
+                  <span className="text-base xl:text-2xl">per &nbsp; m²</span>
                 </p>
               </div>
 
@@ -97,12 +106,15 @@ export default function AveragePriceDynamic({
                 >
                   {priceCards[3].description}
                 </Paragraph>
-                <p className=" text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-center md:text-center text-[#253238] lg:mt-3">
-                  {priceCards[3].price} <span className="text-base xl:text-2xl  mr-[5%] min-[360px]:mr-[16%] md:mr-0 xl:-mr-1">per &nbsp; m²</span>
+                <p className=" text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3">
+                  {priceCards[3].price}{" "}
+                  <span className="text-base xl:text-2xl  xl:-mr-1">
+                    per &nbsp; m²
+                  </span>
                 </p>
               </div>
               <div className="flex lg:hidden col-span-2 mt-5 md:mt-2.5 lg:mt-0 md:mb-[5px] lg:mb-0 justify-center ">
-                <GetQuote text=" Get a real quote" />
+                <GetQuote variant="primary" text=" Get a real quote" />
               </div>
             </div>
           </div>
@@ -116,12 +128,14 @@ export default function AveragePriceDynamic({
         lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[0em]! font-normal lg:font-bold"
           >
             {disclaimerText}{" "}
-            <a href={calculatorLink} className="underline font-normal md:font-bold text-[#00AFE3]">
+            <a
+              href={calculatorLink}
+              className="underline font-normal md:font-bold text-[#00AFE3]"
+            >
               {calculatorText}
             </a>
           </p>
         </div>
-        
       </div>
     </div>
   );
