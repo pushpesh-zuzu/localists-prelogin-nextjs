@@ -80,7 +80,7 @@ export default function LandScapingGardenPopularJobs({
             width={400}
             height={600}
             fetchPriority="high"
-            className="hidden md:block w-auto h-[382px] lg:h-[380px] xl:h-[500px] xl:w-[400px] absolute md:-right-33 min-[900px]:-right-25! lg:-right-19! xl:-right-14! bottom-0 z-20 pointer-events-none"
+            className="hidden md:block w-auto h-[382px] lg:h-[380px] xl:h-[501.5px] xl:w-[400px] absolute md:-right-33 min-[900px]:-right-25! lg:-right-19! xl:-right-14! bottom-0 z-20 pointer-events-none"
           />
 
           <LogoIcon className="hidden md:block absolute -bottom-1 -right-10 xl:-right-13 w-[100px] h-6 lg:w-[140px] lg:h-8 xl:w-[200px] xl:h-12" />

@@ -291,13 +291,31 @@ export const PATIO_SERVICES_NEARME_TABDATA = {
     "Patio Laying Bolton",
   ],
   popular: [
-    "Driveway Installers Near Me",
-    "Gardeners Near Me",
-    "Tree Surgeons Near Me",
-    "Architects Near Me",
-    "Gutter Cleaners Near Me",
-    "Fencing Contractors Near Me",
-  ],
+    {
+        title: "Driveway Installers Near Me",
+        url: "/en/gb/driveway-installers-near-me",
+    },
+    {
+        title: "Gardeners Near Me",
+        url: "",
+    },
+    {
+        title: "Tree Surgeons Near Me",
+        url: "/en/gb/tree-surgeon-near-me",
+    },
+    {
+        title: "Architects Near Me",
+        url: "",
+    },
+    {
+        title: "Gutter Cleaners Near Me",
+        url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+        title: "Fencing Contractors Near Me",
+        url: "/en/gb/fencing-contractors-near-me",
+    },
+],
   insight: [],
 };
 
@@ -349,32 +367,42 @@ export const DISCOVER_PATIO_SERVICES_NEARME_DATA = [
     title: "Fence & Gate Installation",
     image: "/homepage/fenceandgate.webp",
     isSpecial: false,
+    slug: "/en/gb/fencing-contractors-near-me",
   },
   {
     id: 3,
+    title: "Driveway Installation",
+    image: "/homepage/driveway.webp",
+    isSpecial: false,
+    slug: "/en/gb/driveway-installers-near-me",
+  },
+  {
+    id: 4,
     title: "Landscaping",
     image: "/homepage/landscapingservice.webp",
     isSpecial: false,
+    slug: "/en/gb/landscape-gardeners-near-me",
   },
   {
-    id: 3,
+    id: 5,
     title: "Tree Surgery",
     image: "/homepage/treesurgery.webp",
     isSpecial: false,
+    slug: "/en/gb/tree-surgeon-near-me",
   },
-
   {
-    id: 4,
-    title: "Patio Layer",
-    image: "/homepage/patiolayer.webp", // Aapki image path
+    id: 6,
+    title: "Artificial Grass Installation",
+    image: "/homepage/artificialgrassinstallation.webp",
     isSpecial: false,
+    slug: "/en/gb/artificial-grass-installers-near-me",
   },
-
   {
-    id: 5,
+    id: 7,
     title: "Gutter Cleaning",
-    image: "/homepage/guttercleaning.webp", // Aapki image path
+    image: "/homepage/guttercleaning.webp",
     isSpecial: false,
+    slug: "/en/gb/gutter-cleaning-near-me",
   },
 ];
 export const BREADCRUM_DATA_PATIO_SERVICES_NEARME = [

@@ -489,12 +489,30 @@ export const LANDSCAPE_NEARME_TABDATA = {
     "Landscaping Specialists Bolton",
   ],
   popular: [
-    "Driveway Installers Near Me",
-    "Gardeners Near Me",
-    "Fence and Gate Installation Near Me",
-    "Architects Near Me",
-    "Gutter Cleaners Near Me",
-    "Artificial Grass Installers Near Me",
+    {
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
+    },
+    {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
+      title: "Fence and Gate Installation Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
+    },
+    {
+      title: "Architects Near Me",
+      url: "",
+    },
+    {
+      title: "Gutter Cleaners Near Me",
+      url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Artificial Grass Installers Near Me",
+      url: "/en/gb/artificial-grass-installers-near-me",
+    },
   ],
   insight: [],
 };
@@ -546,37 +564,42 @@ export const DISCOVER_LANDSCAPE_NEARME_DATA = [
     title: "Fence & Gate Installation",
     image: "/homepage/fenceandgate.webp",
     isSpecial: false,
+    slug: "/en/gb/fencing-contractors-near-me",
   },
-  // {
-  //   id: 3,
-  //   title: "Landscaping",
-  //   image: "/homepage/landscapingservice.webp", // Aapki image path
-  //   isSpecial: false,
-  // },
   {
     id: 3,
-    title: "Tree Surgery",
-    image: "/homepage/treesurgery.webp",
+    title: "Driveway Installation",
+    image: "/homepage/driveway.webp",
     isSpecial: false,
+    slug: "/en/gb/driveway-installers-near-me",
   },
   {
     id: 4,
-    title: "Artificial Grass Installation",
-    image: "/homepage/artificialgrassinstallation.webp",
+    title: "Tree Surgery",
+    image: "/homepage/treesurgery.webp",
     isSpecial: false,
+    slug: "/en/gb/tree-surgeon-near-me",
   },
   {
     id: 5,
-    title: "Patio Layer",
-    image: "/homepage/patiolayer.webp", // Aapki image path
+    title: "Artificial Grass Installation",
+    image: "/homepage/artificialgrassinstallation.webp",
     isSpecial: false,
+    slug: "/en/gb/artificial-grass-installers-near-me",
   },
-
   {
     id: 6,
-    title: "Gutter Cleaning",
-    image: "/homepage/guttercleaning.webp", // Aapki image path
+    title: "Patio Layer",
+    image: "/homepage/patiolayer.webp",
     isSpecial: false,
+    slug: "/en/gb/patio-layers-near-me",
+  },
+  {
+    id: 7,
+    title: "Gutter Cleaning",
+    image: "/homepage/guttercleaning.webp",
+    isSpecial: false,
+    slug: "/en/gb/gutter-cleaning-near-me",
   },
 ];
 export const BREADCRUM_DATA_LANDSCAPE_NEARME = [
