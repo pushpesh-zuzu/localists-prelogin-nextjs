@@ -79,7 +79,7 @@ export default function GutterPriceSection() {
                                 </p>
                             </div>
                             <div className="flex lg:hidden col-span-2 mt-5 md:mt-2.5 lg:mt-0 md:mb-[5px] lg:mb-0 justify-center ">
-                                <GetQuote text=" Get a real quote" />
+                                <GetQuote variant="primary" text=" Get a real quote" />
                             </div>
                         </div>
                     </div>

@@ -67,7 +67,7 @@ export default function HireRelatedToServiceNearMe({
           ))}
         </div>
         <div className="flex md:hidden justify-center pt-[30px]">
-          <Button className="mx-auto flex bg-black text-white px-[15px] py-2 rounded-full">
+          <Button className="mx-auto flex bg-[#253238] text-white px-[15px] py-2 rounded-full">
             Show More <ChevronDown />
           </Button>
         </div>
