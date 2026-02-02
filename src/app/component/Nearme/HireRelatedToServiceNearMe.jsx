@@ -3,17 +3,36 @@ import React, { useState } from "react";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import Button from "../UI/Typography/Button";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
-const JobButton = ({ title }) => (
-  <button
-    className="font-[Arial] border-2 xl:border-2 border-white font-bold text-[13px] -tracking-[3%] lg:text-[20px] 
+
+const JobButton = ({ title, url }) => {
+  if (url) {
+    return (
+      <Link href={url} className="inline-block">
+        <button
+          className="font-[Arial] border-2 xl:border-2 border-white font-bold text-[13px] -tracking-[3%] lg:text-[20px] 
                px-1.5 py-[5px] xl:px-5 xl:py-[4px] rounded-full text-white 
-               whitespace-nowrap focus:outline-none"
-    aria-label={`Search for ${title}`}
-  >
-    {title}
-  </button>
-);
+               whitespace-nowrap focus:outline-none cursor-pointer"
+          aria-label={`Search for ${title}`}
+        >
+          {title}
+        </button>
+      </Link>
+    )
+  }
+
+  return (
+    <button
+      className="font-[Arial] border-2 xl:border-2 border-white font-bold text-[13px] -tracking-[3%] lg:text-[20px] 
+               px-1.5 py-[5px] xl:px-5 xl:py-[4px] rounded-full text-white 
+               whitespace-nowrap focus:outline-none cursor-default"
+      aria-label={`Search for ${title}`}
+    >
+      {title}
+    </button>
+  )
+}
 
 export default function HireRelatedToServiceNearMe({
   heading1 = "Hire with",
@@ -47,11 +66,10 @@ export default function HireRelatedToServiceNearMe({
                 <button
                   key={tab.activtab}
                   onClick={() => handleClick(tab.activtab)}
-                  className={`${
-                    currentTab === tab.activtab
-                      ? "bg-[#253238] rounded-full transition-all duration-700 ease-in-out"
-                      : ""
-                  }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em]
+                  className={`${currentTab === tab.activtab
+                    ? "bg-[#253238] rounded-full transition-all duration-700 ease-in-out"
+                    : ""
+                    }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em]
                       text-[12px] md:text-[14px]
                       xl:text-[18px] py-[3px] sm:px-3 sm:py-1.5 xl:px-4 xl:py-[11px] cursor-pointer`}
                 >
@@ -62,9 +80,24 @@ export default function HireRelatedToServiceNearMe({
           </div>
         </header>
         <div className="flex flex-wrap gap-y-2 xl:gap-[24px] gap-2 lg:gap-[23.92px] w-full md:max-w-full">
-          {tabData[currentTab].map((title, i) => (
-            <JobButton key={i} title={title} />
-          ))}
+          {tabData[currentTab]?.map((item, i) => {
+            if (typeof item === "object") {
+              return (
+                <JobButton
+                  key={i}
+                  title={item.title}
+                  url={item.url}
+                />
+              );
+            }
+
+            return (
+              <JobButton
+                key={i}
+                title={item}
+              />
+            );
+          })}
         </div>
         <div className="flex md:hidden justify-center pt-[30px]">
           <Button className="mx-auto flex bg-[#253238] text-white px-[15px] py-2 rounded-full">

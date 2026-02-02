@@ -166,12 +166,37 @@ export const FENCE_AND_GATE_TABDATA = {
         "Fencing Contractors Bolton",
     ],
     popular: [
-        "Driveway Installers Near Me",
-        "Gardeners Near Me",
-        "Tree Surgeons Near Me",
-        "Architects Near Me",
-        "Gutter Cleaners Near Me",
-        "Artificial Grass Installers Near Me",
+        // "Driveway Installers Near Me",
+        // "Gardeners Near Me",
+        // "Tree Surgeons Near Me",
+        // "Architects Near Me",
+        // "Gutter Cleaners Near Me",
+        // "Artificial Grass Installers Near Me",
+
+        {
+            title: "Driveway Installers Near Me",
+            url: "/en/gb/driveway-installers-near-me",
+        },
+        {
+            title: "Gardeners Near Me",
+            url: "",
+        },
+        {
+            title: "Tree Surgeons Near Me",
+            url: "/en/gb/tree-surgeon-near-me",
+        },
+        {
+            title: "Architects Near Me",
+            url: "",
+        },
+        {
+            title: "Gutter Cleaners Near Me",
+            url: "/en/gb/gutter-cleaning-near-me",
+        },
+        {
+            title: "Artificial Grass Installers Near Me",
+            url: "/en/gb/artificial-grass-installers-near-me",
+        },
     ],
     insight: [
 

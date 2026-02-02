@@ -236,12 +236,38 @@ export const GUTTER_CLEANING_TABDATA = {
         "Gutter Cleaning Bolton",
     ],
     popular: [
-        "Driveway Installers Near Me",
-        "Gardeners Near Me",
-        "Tree Surgeons Near Me",
-        "Architects Near Me",
-        "Fencing Contractors Near Me",
-        "Artificial Grass Installers Near Me",
+
+        // "Driveway Installers Near Me",
+        // "Gardeners Near Me",
+        // "Tree Surgeons Near Me",
+        // "Architects Near Me",
+        // "Fencing Contractors Near Me",
+        // "Artificial Grass Installers Near Me",
+
+        {
+            title: "Driveway Installers Near Me",
+            url: "/en/gb/driveway-installers-near-me",
+        },
+        {
+            title: "Gardeners Near Me",
+            url: "",
+        },
+        {
+            title: "Tree Surgeons Near Me",
+            url: "/en/gb/tree-surgeon-near-me",
+        },
+        {
+            title: "Architects Near Me",
+            url: "",
+        },
+        {
+            title: "Fencing Contractors Near Me",
+            url: "/en/gb/fencing-contractors-near-me",
+        },
+        {
+            title: "Artificial Grass Installers Near Me",
+            url: "/en/gb/artificial-grass-installers-near-me",
+        },
     ],
     insight: [
 

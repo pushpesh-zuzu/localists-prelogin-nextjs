@@ -263,12 +263,37 @@ export const DRIVEWAY_INSTALLERS_TABDATA = {
         "Driveway Installers Bolton",
     ],
     popular: [
-        "Landscapers Near Me",
-        "Gardeners Near Me",
-        "Fence and Gate Installation Near Me",
-        "Architects Near Me",
-        "Gutter Cleaners Near Me",
-        "Artificial Grass Installers Near Me",
+        // "Landscapers Near Me",
+        // "Gardeners Near Me",
+        // "Fence and Gate Installation Near Me",
+        // "Architects Near Me",
+        // "Gutter Cleaners Near Me",
+        // "Artificial Grass Installers Near Me",
+
+        {
+            title: "Landscapers Near Me",
+            url: "/en/gb/landscape-gardeners-near-me",
+        },
+        {
+            title: "Gardeners Near Me",
+            url: "",
+        },
+        {
+            title: "Fencing Contractors Near Me",
+            url: "/en/gb/fencing-contractors-near-me",
+        },
+        {
+            title: "Architects Near Me",
+            url: "",
+        },
+        {
+            title: "Gutter Cleaners Near Me",
+            url: "/en/gb/gutter-cleaning-near-me",
+        },
+        {
+            title: "Artificial Grass Installers Near Me",
+            url: "/en/gb/artificial-grass-installers-near-me",
+        },
     ],
     insight: [
 
