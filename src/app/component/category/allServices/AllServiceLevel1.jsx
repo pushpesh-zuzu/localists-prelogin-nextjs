@@ -65,9 +65,9 @@ const AllServiceLevel1 = ({ data }) => {
                             </div>
                         )
                         return hasPath ? (
-                            <Link key={idx} href={servicePath}>
+                            <a key={idx} href={servicePath}>
                                 {Content}
-                            </Link>
+                            </a>
                         ) : (
                             <div key={idx}>{Content}</div>
                         );
