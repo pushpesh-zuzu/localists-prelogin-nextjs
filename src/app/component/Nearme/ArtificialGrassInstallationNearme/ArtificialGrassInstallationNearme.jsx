@@ -53,7 +53,8 @@ function ArtificialGrassInstallationNearme() {
       <CloseBrowserAbandon />
       <FAQScript FAQ={FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME} />
       <HeroSectionNearMe
-        heading1=" Find Artificial Grass Installers"
+        heading1=" Find Artificial Grass"
+        headingMiddle="Installers"
         heading2="Near You"
         description="Find the best artificial grass installers in your area, just enter your postcode and a few details for instant quotes"
         bannerImage="/nearme/Artificial/ArtificialGrassBanner.jpg"

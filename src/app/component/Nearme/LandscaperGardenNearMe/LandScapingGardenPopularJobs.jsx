@@ -40,7 +40,7 @@ export default function LandScapingGardenPopularJobs({
               variant="secondary"
               // style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
               className={`text-[16px] leading-[16px]
-                max-w-[60%] lg:max-w-full
+               max-w-full md:max-w-[60%] lg:max-w-full
                 md:text-[14px] md:leading-[16px]
                 lg:text-[20px] lg:leading-[24px] font-[Arial] font-bold
                 tracking-[0em]! l mb-5 md:mb-0 text-white  md:pb-4 xl:pb-[43px]`}
