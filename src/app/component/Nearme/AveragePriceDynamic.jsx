@@ -27,7 +27,7 @@ export default function AveragePriceDynamic({
   ],
   disclaimerText = "*costs are estimates only, to get a more specific estimate try our",
   calculatorText = "Patio Laying Calculator",
-  calculatorLink = "#",
+  calculatorLink = "",
 }) {
   return (
     <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px] ">
@@ -129,7 +129,7 @@ export default function AveragePriceDynamic({
           >
             {disclaimerText}{" "}
             <a
-              href={calculatorLink}
+              // href={calculatorLink ? calculatorLink : ''}
               className="underline font-bold md:font-bold text-[#00AFE3]"
             >
               {calculatorText}

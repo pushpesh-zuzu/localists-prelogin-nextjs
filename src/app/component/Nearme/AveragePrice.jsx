@@ -93,7 +93,7 @@ export default function AveragePrice() {
         lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[0em]! font-bold lg:font-bold"
           >
             *costs are estimates only, to get a more specific estimate try our{" "}
-            <a href="#" className="underline font-bold md:font-bold text-[#00AFE3]">
+            <a  className="underline font-bold md:font-bold text-[#00AFE3]">
               Tree Surgery Calculator
             </a>
           </p>
