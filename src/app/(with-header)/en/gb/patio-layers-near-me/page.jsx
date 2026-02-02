@@ -15,6 +15,7 @@ function page() {
         canonicalPath="/en/gb/patio-layers-near-me"
         bannerImage="/nearme/Patio/patioServicesNearme.webp"
         breadcrumb={[
+          { title: "Home", path: "/en/gb" },
           { title: "Home & Garden", path: "/home" },
           { title: "Patio Installation", path: "/patio-layers-near-me" },
         ]}

@@ -5,7 +5,6 @@ import Paragraph from "../UI/Typography/Paragraph";
 import Link from "next/link";
 
 export default function PopularImageCard({ card }) {
-  console.log(card, "card");
   return (
     <div
       className="relative h-[180px] w-[126px] md:h-[244px] md:w-48 lg:h-[300px] lg:w-[200px] xl:h-[380px] xl:w-[267px] bg-white rounded-[20px] md:rounded-[22px] lg:rounded-[24px] xl:rounded-[24.93px] overflow-hidden"

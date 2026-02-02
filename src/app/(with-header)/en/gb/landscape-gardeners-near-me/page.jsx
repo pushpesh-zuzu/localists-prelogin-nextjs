@@ -15,6 +15,7 @@ function page() {
         canonicalPath="/en/gb/landscape-gardeners-near-me"
         bannerImage="/nearme/Landscaping/Landscapingbanner.webp"
         breadcrumb={[
+          { title: "Home", path: "/en/gb" },
           { title: "Home & Garden", path: "/home" },
           { title: "Landscaping", path: "/landscape-gardeners-near-me" },
         ]}
