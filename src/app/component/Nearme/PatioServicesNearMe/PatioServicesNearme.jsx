@@ -59,7 +59,7 @@ function PatioServicesNearme() {
         bannerImage="/nearme/Patio/patioServicesNearme.webp"
         bannerImageMobile="/nearme/Patio/patioServicesNearmeMobile.webp"
         altText="Expert patio installer with gloves on, laying paver bricks on large patio"
-        serviceId={54}
+        serviceId={52}
         serviceName="Patio Laying"
       />
       <VettedSection
@@ -87,8 +87,8 @@ function PatioServicesNearme() {
       <UserFeedbackNearMe2 feedbackData={FEEDBACK_PATIO_SERVICES_NEARME} />
       {/* <PaddingWrapper> */}
       <AboutServicesAndQuestions
-        serviceId={54}
-        serviceName="Artificial Grass Installation"
+        serviceId={52}
+        serviceName="Patio Laying"
         contentBlocks={QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME}
       />
       {/* </PaddingWrapper> */}
