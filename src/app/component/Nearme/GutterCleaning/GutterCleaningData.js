@@ -22,7 +22,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         text: "What makes gutter blockages tricky is that they often build up silently, out of sight. You might not notice a problem until you’re suddenly dealing with damp patches, leaks, or costly repairs.",
     },
     {
-        type: "pbold",
+        type: "p",
         text: "Regular gutter cleaning helps by:",
         className: "my-[15px] md:my-[25px]",
     },
@@ -236,11 +236,11 @@ export const GUTTER_CLEANING_TABDATA = {
         "Gutter Cleaning Bolton",
     ],
     popular: [
-        "Landscapers Near Me",
+        "Driveway Installers Near Me",
         "Gardeners Near Me",
-        "Fence and Gate Installation Near Me",
+        "Tree Surgeons Near Me",
         "Architects Near Me",
-        "Gutter Cleaners Near Me",
+        "Fencing Contractors Near Me",
         "Artificial Grass Installers Near Me",
     ],
     insight: [
@@ -301,31 +301,42 @@ export const GUTTER_CLEANING_DATA = [
         id: 2,
         title: "Fence & Gate Installation",
         image: "/homepage/fenceandgate.webp",
-        isSpecial: false
+        isSpecial: false,
+        slug: "/en/gb/fencing-contractors-near-me",
     },
     {
         id: 3,
         title: "Landscaping",
         image: "/homepage/landscapingservice.webp", // Aapki image path
-        isSpecial: false
+        isSpecial: false,
+        slug: "/en/gb/landscape-gardeners-near-me",
     },
     {
         id: 4,
         title: "Artificial Grass Installation",
         image: "/homepage/artificialgrassinstallation.webp",
-        isSpecial: false
+        isSpecial: false,
+        slug: "/en/gb/artificial-grass-installers-near-me",
     },
     {
         id: 5,
         title: "Patio Layer",
         image: "/homepage/patiolayer.webp", // Aapki image path
-        isSpecial: false
+        isSpecial: false,
+        slug: "/en/gb/patio-layers-near-me",
     },
-
     {
         id: 6,
-        title: "Gutter Cleaning",
-        image: "/homepage/guttercleaning.webp", // Aapki image path
-        isSpecial: false
+        title: "Tree Surgery",
+        image: "/homepage/treesurgery.webp",
+        isSpecial: false,
+        slug: "/en/gb/tree-surgeon-near-me",
+    },
+    {
+        id: 7,
+        title: "Driveway Installation",
+        image: "/homepage/driveway.webp",
+        isSpecial: false,
+        slug: "/en/gb/driveway-installers-near-me",
     },
 ];

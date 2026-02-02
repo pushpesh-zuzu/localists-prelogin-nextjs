@@ -67,7 +67,7 @@ function GutterCleaning() {
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
-                heading1="Gutter cleaning experts"
+                heading1="Gutter Cleaning Experts"
                 heading2="in your area"
                 tabData={GUTTER_CLEANING_TABDATA}
             />

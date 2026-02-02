@@ -1,48 +1,105 @@
-import React from 'react';
+import GetQuote from "../common/GetQuotes/GetQuote";
+import H2 from "../UI/Typography/H2";
+import Paragraph from "../UI/Typography/Paragraph";
 
-const GutterPriceSection = () => {
+export default function GutterPriceSection() {
     return (
-        <div className="w-full mx-auto mb-[20px] md:mb-[25px] lg:mb-[35px]">
-            {/* Pricing Table */}
-            <table className="w-full border-collapse">
-                <tbody>
-                    {/* First Row */}
-                    <tr>
-                        <td
-                            rowSpan="2"
-                            className="border border-[#253238] p-4 font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em] w-[30%]"
-                        >
-                            <div className="flex flex-col h-full min-h-[200px] justify-start md:justify-between">
-                                <span className="mb-[90px] md:mb-0">
-                                    Average Cost of gutter cleaning is £150
-                                </span>
+        <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px] ">
+            <div className="w-full max-w-[1000px]">
+                <div
+                    className="w-full rounded-[30px] md:rounded-[25px]"
+                    style={{ backgroundColor: "#8BFFCF" }}
+                >
+                    <div className="flex flex-col lg:flex-row lg:gap-6">
+                        {/* Left Section - H2 and GetQuote */}
+                        <div className="flex flex-col justify-between px-2.5  pt-[30px] lg:pl-[38px]  lg:pt-[54px] lg:pb-[52px] lg:max-w-[35%] xl:max-w-full xl:min-w-[386px]">
+                            <H2 className="text-center  min-[460px]:mx-auto md:mx-0 md:max-w-full lg:text-left">
+                                Average Cost of gutter cleaning UK
+                            </H2>
 
-                                <span className="mt-[50px] md:mt-0">
-                                    Get real quotes now
-                                </span>
+                            <div className="hidden lg:flex mt-6 lg:mt-0 justify-center lg:justify-start ">
+                                <GetQuote classGetQuote="py-[7px] xl:py-3 xl:px-[30px]" text=" Get a real quote" />
                             </div>
-                        </td>
-                        <td className="border border-[#253238] p-4 font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em]">
-                            Average cost of gutter cleaning for a small terraced house is £85
-                        </td>
-                        <td className="border border-[#253238] p-4 font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em]">
-                            Average cost of gutter cleaning for a medium semi-detatched house is £125
-                        </td>
-                    </tr>
+                        </div>
 
-                    {/* Second Row */}
-                    <tr>
-                        <td className="border border-[#253238] p-4 font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em]">
-                            Average cost of gutter cleaning for a detached 4-bed property is £160
-                        </td>
-                        <td className="border border-[#253238] p-4 font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em]">
-                            Average cost for a 3 storey townhouse is £240
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        {/* Right Section - Price Grid */}
+                        <div className=" xl:max-w-[57%] grid grid-cols-2 lg:grid-cols-2 gap-x-[14px] gap-y-5 lg:gap-x-5 px-[10px] min-[450px]:px-20 lg:px-0 pt-[23px] pb-[38px] lg:py-16 lg:pr-7">
+                            {/* Price Card 1 */}
+                            <div className="">
+                                <Paragraph
+                                    variant="VeryprimarySmall"
+                                    className="max-[760px]:min-h-15 max-[760px]:max-h-15  max-[1023px]:min-h-20 max-[1023px]:max-h-20  md:mx-auto  text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center  md:max-w-[220px]  lg:max-w-[90%]  lg:text-center"
+                                >
+                                    Average cost of gutter cleaning for a small terraced house is
+                                </Paragraph>
+                                <p className="text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center  md:text-center lg:text-center text-[#253238] lg:mt-3">
+                                    £85
+                                </p>
+                            </div>
+
+                            {/* Price Card 2 */}
+                            <div className="">
+                                <Paragraph
+                                    variant="VeryprimarySmall"
+                                    className="max-[760px]:min-h-15 max-[760px]:max-h-15 max-[1023px]:min-h-20 max-[1023px]:max-h-20 tracking-[-0.03em]! md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto  md:text-center lg:text-center  md:max-w-[220px] lg:min-w-[264px]"
+                                >
+                                    Average cost of gutter cleaning for a medium semi-detatched house is
+                                </Paragraph>
+                                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center md:text-center text-[#253238] lg:mt-3 ">
+                                    £125
+                                </p>
+                            </div>
+
+                            {/* Divider Line */}
+                            <div className="col-span-2 border-t-[3.84px] border-[#253237] my-0"></div>
+
+                            {/* Price Card 3 */}
+                            <div className="h-full">
+                                <Paragraph
+                                    variant="VeryprimarySmall"
+                                    className="max-[760px]:min-h-15 max-[760px]:max-h-15 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center md:max-w-[220px] lg:max-w-[90%]"
+                                >
+                                    Average cost of gutter cleaning for a detached 4-bed property is
+                                </Paragraph>
+                                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center md:text-center text-[#253238]  lg:mt-3">
+                                    £160
+                                </p>
+                            </div>
+
+                            {/* Price Card 4 */}
+                            <div className="">
+                                <Paragraph
+                                    variant="VeryprimarySmall"
+                                    className="max-[760px]:min-h-15 max-[760px]:max-h-15 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center md:max-w-[220px] lg:min-w-[264px]"
+                                >
+                                    Average cost for a 3 storey townhouse is
+                                </Paragraph>
+                                <p className=" text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center md:text-center text-[#253238] lg:mt-8.5">
+                                    £240
+                                </p>
+                            </div>
+                            <div className="flex lg:hidden col-span-2 mt-5 md:mt-2.5 lg:mt-0 md:mb-[5px] lg:mb-0 justify-center ">
+                                <GetQuote text=" Get a real quote" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Disclaimer Text */}
+                <div className="mt-2.5 text-left lg:text-left">
+                    <p
+                        className="text-[12px] leading-[12px]
+        lg:text-[16px] lg:leading-[16px]
+        lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[0em]! font-normal lg:font-bold"
+                    >
+                        *costs are estimates only, to get a more specific estimate try our{" "}
+                        <a href="#" className="underline font-normal md:font-bold text-[#00AFE3]">
+                            Gutter Cleaning Calculator
+                        </a>
+                    </p>
+                </div>
+
+            </div>
         </div>
     );
-};
-
-export default GutterPriceSection;
+}

@@ -19,7 +19,7 @@ export default function Page() {
                 breadcrumb={[
                     { title: "Home", path: "/en/gb" },
                     { title: "Home & Garden", path: "/en/gb/home" },
-                    { title: "Driveway Installers", path: "/en/gb/driveway-installers-near-me" },
+                    { title: "Driveway Installation", path: "/en/gb/driveway-installers-near-me" },
                 ]}
                 conversion={true}
             />
