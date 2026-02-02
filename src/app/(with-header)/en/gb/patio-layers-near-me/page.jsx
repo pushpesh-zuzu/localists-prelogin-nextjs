@@ -27,7 +27,7 @@ function page() {
           </div>
         }
       >
-        <PatioServicesNearme />;
+        <PatioServicesNearme />
       </Suspense>
     </>
   );

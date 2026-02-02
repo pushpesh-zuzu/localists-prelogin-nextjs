@@ -79,7 +79,7 @@ export default function AveragePrice() {
                 </p>
               </div>
               <div className="flex lg:hidden col-span-2 mt-5 md:mt-2.5 lg:mt-0 md:mb-[5px] lg:mb-0 justify-center ">
-                <GetQuote text=" Get a real quote" />
+                <GetQuote variant="primary" text=" Get a real quote" />
               </div>
             </div>
           </div>
@@ -90,10 +90,10 @@ export default function AveragePrice() {
           <p
             className="text-[12px] leading-[12px]
         lg:text-[16px] lg:leading-[16px]
-        lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[0em]! font-normal lg:font-bold"
+        lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[0em]! font-bold lg:font-bold"
           >
             *costs are estimates only, to get a more specific estimate try our{" "}
-            <a href="#" className="underline font-normal md:font-bold text-[#00AFE3]">
+            <a href="#" className="underline font-bold md:font-bold text-[#00AFE3]">
               Tree Surgery Calculator
             </a>
           </p>
