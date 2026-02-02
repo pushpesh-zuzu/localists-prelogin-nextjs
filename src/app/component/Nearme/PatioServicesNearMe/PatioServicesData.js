@@ -144,8 +144,28 @@ export const QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME = [
   {
     type: "p",
     text: "A simple gravel or concrete-style patio will generally cost less than a premium porcelain or sandstone finish. On average, you can expect to spend around £80–£120 per m² for materials and labour combined, or around £2,800 on a new complete patio installation ( This would be for a 15 m2 sandstone patio, installed by two patio installers over two days (around £290 per patio installer, per day. Though this figure can be significantly higher or slightly lower depending on your location. Here’s a rough guide based on popular options:",
+    // notMarginBottom:true
+    className:"mb-[15px] md:mb-[0px]"
   },
-  { type: "patioPricingTable" },
+  { type: "patioPricingTable",
+    priceCards : [
+    {
+      description: "The average cost of a gravel patio in the UK is",
+      price: "£50 "
+    },
+    {
+      description: "The average cost of a sand stone patio is",
+      price: "£110"
+    },
+    {
+      description: "The average cost of a concrete patio is",
+      price: "£80"
+    },
+    {
+      description: "The average cost of a porcelain patio is",
+      price: "£125"
+    }
+  ] },
   {
     type: "p",
     text: "Labour typically makes up 50–70% of the cost, so location and contractor experience can also affect the final price. If you need a custom estimate, there’s no need to stress. Localists can connect you with local patio installers who’ll provide free, no-obligation quotes tailored to your garden, materials, and budget.",
