@@ -13,7 +13,7 @@ export default function DrivewayPopularJobNearMe({
     return (
         <WrapperBGWidth>
             <div className="md:block rounded-[20px] md:rounded-none mx-[30px] md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white  px-[17.5px] py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[100px]">
-                <div className="rounded-[30px] md:max-w-[600px] lg:max-w-[900px] xl:max-w-[1200px] md:h-[280px] lg:h-[380px] xl:h-[540px] relative overflow-visible">
+                <div className="rounded-[30px] md:max-w-[600px] lg:max-w-[900px] xl:max-w-[1200px] md:h-[320px] lg:h-[380px] xl:h-[540px] relative overflow-visible">
                     {/* 1️⃣ Shape background */}
                     <div
                         className="rounded-[20px] lg:rounded-[40px] absolute inset-0 bg-[#00AFE3]
@@ -50,7 +50,7 @@ export default function DrivewayPopularJobNearMe({
                                 </div>
                             </div>
                         </div>
-                        <div className="hidden md:flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4 md:max-w-[400px] xl:max-w-full">
+                        <div className="hidden md:flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4 md:max-w-[385px] xl:max-w-full">
                             {services.map((service) => (
                                 <ServicesButton
                                     mobileBorder="border-2"
@@ -77,7 +77,9 @@ export default function DrivewayPopularJobNearMe({
                         width={400}
                         height={600}
                         fetchPriority="high"
-                        className="hidden md:block w-auto h-[280px] lg:h-[380px] xl:h-[541px] xl:w-[450px] absolute md:-right-13 lg:-right-14 xl:-right-23 bottom-0 z-20 pointer-events-none"
+                        className="hidden md:block w-auto h-[280px] md:h-[320px] lg:h-[380px] xl:h-[541px] xl:w-[450px]
+                        absolute md:-right-19.5 lg:-right-14 xl:-right-22.5 bottom-0 z-20 pointer-events-none"
+
                     />
 
                     <LogoIcon className="hidden md:block absolute -bottom-1 -right-10 xl:-right-13 w-[100px] h-6 lg:w-[140px] lg:h-8 xl:w-[200px] xl:h-12" />
