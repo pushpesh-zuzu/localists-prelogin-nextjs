@@ -7,7 +7,8 @@ import PostCodeSection from "./AboutServicesAndQuestions/PostCodeSection";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import AveragePrice from "./AveragePrice";
 import GutterPriceSection from "./GutterPriceSection";
-import PatioPricingTable from "./PatioServicesNearMe/PatioPricingTable";
+// import PatioPricingTable from "./PatioServicesNearMe/PatioPricingTable";
+import AveragePriceDynamic from "./AveragePriceDynamic";
 
 const textBase =
   "font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em]!"
@@ -17,7 +18,7 @@ const AboutServicesAndQuestions = ({
   contentBlocks = [],
   buttonText,
   serviceId = 112,
-  serviceName = "Tree Surgery"
+  serviceName = "Tree Surgery",
 }) => {
   const renderBlock = (block, index) => {
     switch (block.type) {
@@ -74,10 +75,19 @@ const AboutServicesAndQuestions = ({
             <span dangerouslySetInnerHTML={{ __html: block.text }} />
           </Paragraph>
         );
-        case "patioPricingTable":
-          return(
-            <PatioPricingTable/>
-          )
+      case "patioPricingTable":
+        return (
+          // <PatioPricingTable/>
+          <AveragePriceDynamic
+            key={index}
+            title={block?.title}
+            priceCards={block?.priceCards}
+            disclaimerText={block?.disclaimerText}
+            calculatorText={block?.calculatorText}
+            calculatorLink={block?.calculatorLink}
+          />
+        );
+
       case "pbold":
         return (
           <Paragraph
