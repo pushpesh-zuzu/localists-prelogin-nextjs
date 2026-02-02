@@ -45,8 +45,7 @@ function FenceAndGateInstallation() {
             <CloseBrowserAbandon />
             <FAQScript FAQ={FREQUENTLY_DATA_FENCE_AND_GATE["fencing-contractors-near-me"]} />
             <HeroSectionNearMe
-                heading1="Find Fencing"
-                headingMiddle="Contractors"
+                heading1="Find Fencing Contractors"
                 heading2="Near You"
                 description="Find the best fencing contractors for your job, just enter your postcode and a few details for instant quotes."
                 bannerImage="/nearme/Fencing-Contractors.webp"
@@ -77,9 +76,9 @@ function FenceAndGateInstallation() {
                 serviceId={49}
                 serviceName="Fence & Gate Installation"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
-            <FAQ
-                data={FREQUENTLY_DATA_FENCE_AND_GATE["fencing-contractors-near-me"]}
-            />
+                <FAQ
+                    data={FREQUENTLY_DATA_FENCE_AND_GATE["fencing-contractors-near-me"]}
+                />
             <DiscoverNearMe homeData={FENCE_AND_GATE_DATA} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

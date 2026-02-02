@@ -22,8 +22,8 @@ import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
-import FenceGatePopularJobNearMe from "../FenceAndGateInstallation/FenceGatePopularJobNearMe";
 import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
+import GutterCleaningPopularJobNearMe from "./GutterCleaningPopularJobNearMe";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
     loading: () => (
@@ -60,7 +60,7 @@ function GutterCleaning() {
                 vettedHeading2="trust"
                 breadcrumb={BREADCRUM_DATA_GUTTER_CLEANING}
             />
-            <FenceGatePopularJobNearMe
+            <GutterCleaningPopularJobNearMe
                 services={POPULAR_SERVICES}
                 popularImage="/nearme/gutter-leaf.webp"
                 altText="expert gutter cleaning using specialist leaf blower equipment"
