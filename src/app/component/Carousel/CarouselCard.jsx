@@ -20,9 +20,19 @@ export default function CarouselCard({ card }) {
             {card.title}
           </H3>
 
-          <button className="rounded-full cursor-pointer bg-black hover:bg-[#1b2326] text-white px-[18px] xl:px-[35px] text-base xl:text-[20px] -tracking-[3%] py-[3px] lg:py-[5px]">
-            View All
-          </button>
+          {
+            card.slug ? (
+              <Link href={card.slug}>
+                <button className="rounded-full cursor-pointer bg-black hover:bg-[#1b2326] text-white px-[18px] xl:px-[35px] text-base xl:text-[20px] -tracking-[3%] py-[3px] lg:py-[5px]">
+                  View All
+                </button>
+              </Link>
+            ) : (
+              <button className="rounded-full cursor-pointer bg-black hover:bg-[#1b2326] text-white px-[18px] xl:px-[35px] text-base xl:text-[20px] -tracking-[3%] py-[3px] lg:py-[5px]">
+                View All
+              </button>
+            )
+          }
         </div>
       </div>
     );

@@ -46,9 +46,12 @@ const AllServiceLevel1 = ({ data }) => {
           "
                 >
                     {data?.map(({ name, path }, idx) => {
-                        // const servicePath = `/${currentLang}/${currentCountry}${path}`;
+                        const hasPath =
+                            typeof path === "string" && path.trim() !== "";
 
-                        return path ? (
+                        const servicePath = `/${currentLang}/${currentCountry}${path}`;
+
+                        const Content = (
                             <div
                                 key={idx}
                                 className="
@@ -60,19 +63,13 @@ const AllServiceLevel1 = ({ data }) => {
                   cursor-pointer
                 " > <Paragraph2>{name}</Paragraph2>
                             </div>
+                        )
+                        return hasPath ? (
+                            <Link key={idx} href={servicePath}>
+                                {Content}
+                            </Link>
                         ) : (
-                            <Paragraph2
-                                key={idx}
-                                className="
-                  bg-[#e3f6fc]
-                  px-[19px] py-[12px]
-                  rounded-full
-                  text-center
-                  text-black
-                  cursor-pointer
-                " >
-                                {name}
-                            </Paragraph2>
+                            <div key={idx}>{Content}</div>
                         );
                     })}
                 </div>

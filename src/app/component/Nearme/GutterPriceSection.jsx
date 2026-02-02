@@ -14,7 +14,7 @@ export default function GutterPriceSection() {
                         {/* Left Section - H2 and GetQuote */}
                         <div className="flex flex-col justify-between px-2.5  pt-[30px] lg:pl-[38px]  lg:pt-[54px] lg:pb-[52px] lg:max-w-[35%] xl:max-w-full xl:min-w-[386px]">
                             <H2 className="text-center  min-[460px]:mx-auto md:mx-0 md:max-w-full lg:text-left">
-                                Average Cost of gutter cleaning UK
+                                Average Cost of gutter cleaning is £150
                             </H2>
 
                             <div className="hidden lg:flex mt-6 lg:mt-0 justify-center lg:justify-start ">
