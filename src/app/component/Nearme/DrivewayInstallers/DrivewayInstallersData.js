@@ -179,9 +179,6 @@ export const FREQUENTLY_DATA_DRIVEWAY_INSTALLERS = {
       border: 1px solid #ccc;
       padding: 8px;
     }
-      .driveway-table th {
-        text-align: center;
-    }
     .driveway-table thead {
       background: #f5f5f5;
     }
