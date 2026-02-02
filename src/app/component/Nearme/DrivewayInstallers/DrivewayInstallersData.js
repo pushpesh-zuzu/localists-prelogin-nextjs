@@ -191,7 +191,6 @@ export const FREQUENTLY_DATA_DRIVEWAY_INSTALLERS = {
       }
     }
 
-   @media (hover: none) and (pointer: coarse) {
     .driveway-table th {
       text-align: left;
     }
@@ -202,7 +201,7 @@ export const FREQUENTLY_DATA_DRIVEWAY_INSTALLERS = {
       font-size: 16px;
       margin-top: 2px;
     }
-  }
+  
   </style>
 
   <div style="overflow-x:auto; margin-top:8px;">
