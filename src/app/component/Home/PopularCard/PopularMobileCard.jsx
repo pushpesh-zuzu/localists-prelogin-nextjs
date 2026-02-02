@@ -39,7 +39,7 @@ export default function PopularJobs() {
     <div className="w-full max-w-[430px] mx-auto bg-white">
       <div className="grid grid-cols-2 gap-5 mb-5 place-items-center">
         {jobs.map((job, index) =>
-          jobs?.path ? (
+          job?.path ? (
             <a
               href={job?.path}
               key={index}

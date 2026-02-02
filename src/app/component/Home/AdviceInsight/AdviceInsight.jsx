@@ -18,7 +18,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
 
         <div className="hidden md:block space-y-2 xl:space-y-6 xl:mb-8">
           <div className="grid grid-cols-3 sm:gap-2 lg:gap-[17px]">
-            <article className="col-span-1 relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer">
+            <article className="col-span-1 relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group ">
               <Image
                 src={articles[0].image}
                 alt={articles[0].title}
@@ -34,7 +34,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
               </h3>
             </article>
 
-            <article className="col-span-2 relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer">
+            <article className="col-span-2 relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group ">
               <Image
                 src={articles[1].image}
                 alt={articles[1].title}
@@ -55,7 +55,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
             {articles.slice(2).map((article, index) => (
               <article
                 key={article.id}
-                className="relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer"
+                className="relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group "
               >
                 <Image
                   src={article.image}
@@ -80,7 +80,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
 
         {/* Mobile Layout */}
         <div className="md:hidden space-y-1.5">
-          <article className="relative rounded-3xl overflow-hidden h-[297px] group cursor-pointer">
+          <article className="relative rounded-3xl overflow-hidden h-[297px] group ">
             <Image
               src={articles[1].image}
               alt={articles[1].title}
@@ -101,7 +101,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
 
           {/* Second Row - 2 Small Cards */}
           <div className="grid grid-cols-2 gap-1.5">
-            <article className="relative rounded-2xl overflow-hidden h-[120px] group cursor-pointer">
+            <article className="relative rounded-2xl overflow-hidden h-[120px] group ">
               <Image
                 src={articles[0].image}
                 alt={articles[0].title}
@@ -121,7 +121,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
               </h3>
             </article>
 
-            <article className="relative rounded-2xl overflow-hidden h-[120px] group cursor-pointer">
+            <article className="relative rounded-2xl overflow-hidden h-[120px] group ">
               <Image
                 src={articles[2].image}
                 alt={articles[2].title}

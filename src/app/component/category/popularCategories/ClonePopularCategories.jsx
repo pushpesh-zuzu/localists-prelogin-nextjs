@@ -60,6 +60,7 @@ const ClonePopularCategories = ({ data }) => {
                 max-[520px]:pb-[22px]
               " >
                             {row.path ? (
+                                <a href={row.path}>
                                 <Image
                                     src={row.image}
                                     alt={row.title}
@@ -67,6 +68,7 @@ const ClonePopularCategories = ({ data }) => {
                                     width={400}
                                     height={260}
                                 />
+                                </a>
                             ) : (
                                 <Image
                                     src={row.image}
@@ -96,7 +98,7 @@ const ClonePopularCategories = ({ data }) => {
                             )}
 
                             {row.path? (
-                                <Link href={`/${currentLang}/${currentCountry}/${row.path}`}>
+                                <a href={`/${currentLang}/${currentCountry}/${row.path}`}>
                                     <Button
                                         className="
                     w-full text-center
@@ -112,7 +114,7 @@ const ClonePopularCategories = ({ data }) => {
                   " >
                                         {row.title}
                                     </Button>
-                                </Link>
+                                </a>
                             ) : (
                                 <Button className="bg-[#00afe3] hover:bg-[#0096c4] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] cursor-pointer text-white rounded-[4.5px]">
                                     {row.title}
