@@ -123,10 +123,10 @@ export default function Header() {
                   className="text-base w-[207px] h-[34px]  px-2.5 py-2 font-bold bg-white border-[1.5px] border-[#CACACA] rounded-[100px] focus:outline-none"
                   value={searchQuery || ""}
                   onChange={(e) => {
-                    const query = e.target.value;
-                    setSearchQuery(query); // State update
-                    if (query.trim() !== "") {
-                      dispatch(searchService({ query }));
+                    const search = e.target.value;
+                    setSearchQuery(search); // State update
+                    if (search.trim() !== "") {
+                      dispatch(searchService({ search }));
                     }
                   }}
                 />
