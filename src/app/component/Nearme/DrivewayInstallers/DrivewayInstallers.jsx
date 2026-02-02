@@ -25,6 +25,7 @@ import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 import DrivewayPopularJobNearMe from "./DrivewayPopularJobNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
     loading: () => (

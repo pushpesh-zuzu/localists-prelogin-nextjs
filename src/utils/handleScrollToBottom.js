@@ -8,8 +8,9 @@ export const handleScrollToBottom = () => {
 
 export function useScrollToTop() {
   const pathname = usePathname();
-
+console.log('called use useScrollToTop')
   useEffect(() => {
-    window.scrollTo(0, 0);
+    typeof window !== undefined &&
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [pathname]);
 }

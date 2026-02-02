@@ -50,11 +50,11 @@ const CloseBrowserAbandon = dynamic(
 
 function ArtificialGrassInstallationNearme() {
   usePendingBuyerRedirect();
-  useScrollToTop()
-  
+  useScrollToTop();
+
   return (
     <>
-      <CloseBrowserAbandon />
+      {typeof window !== "undefined" && <CloseBrowserAbandon />}
       <FAQScript FAQ={FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME} />
       <HeroSectionNearMe
         heading1=" Find Artificial Grass"
