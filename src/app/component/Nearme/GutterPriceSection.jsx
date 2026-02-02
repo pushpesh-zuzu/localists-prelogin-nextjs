@@ -13,7 +13,7 @@ export default function GutterPriceSection() {
                     <div className="flex flex-col lg:flex-row lg:gap-6">
                         {/* Left Section - H2 and GetQuote */}
                         <div className="flex flex-col justify-between px-2.5  pt-[30px] lg:pl-[38px]  lg:pt-[54px] lg:pb-[52px] lg:max-w-[35%] xl:max-w-full xl:min-w-[386px]">
-                            <H2 variant="secondary" className="text-center  min-[460px]:mx-auto md:mx-0 md:max-w-full lg:text-left">
+                            <H2 variant="secondary" className="text-center min-[460px]:mx-auto md:mx-0 md:max-w-full lg:text-left">
                                 Average Cost of gutter cleaning is £150
                             </H2>
 
@@ -23,7 +23,7 @@ export default function GutterPriceSection() {
                         </div>
 
                         {/* Right Section - Price Grid */}
-                        <div className=" xl:max-w-[57%] grid grid-cols-2 lg:grid-cols-2 gap-x-[14px] gap-y-5 lg:gap-x-5 px-[10px] min-[450px]:px-20 lg:px-0 pt-[23px] pb-[38px] lg:py-16 lg:pr-7">
+                        <div className=" xl:max-w-[57%] grid grid-cols-2 lg:grid-cols-2 gap-x-[14px] gap-y-5 lg:gap-x-5 px-[10px] min-[450px]:px-20 lg:px-0 pt-[23px] pb-[38px] lg:py-16 lg:pr-10">
                             {/* Price Card 1 */}
                             <div className="">
                                 <Paragraph
