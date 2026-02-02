@@ -56,7 +56,7 @@ export default function AveragePriceDynamic({
                   {priceCards[0].description}
                 </Paragraph>
                 <p className="text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-center  md:text-center lg:text-center text-[#253238] lg:mt-3">
-                  {priceCards[0].price} <span className="text-base xl:text-2xl mr-[5%] md:mr-0">per &nbsp; m²</span>
+                  {priceCards[0].price} <span className="text-base xl:text-2xl mr-[5%] min-[360px]:mr-[16%] min-[390px]:mr-[8%] md:mr-0">per &nbsp; m²</span>
                 </p>
               </div>
 
@@ -69,7 +69,7 @@ export default function AveragePriceDynamic({
                   {priceCards[1].description}
                 </Paragraph>
                 <p className=" text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-center md:text-center text-[#253238] lg:mt-3 ">
-                  {priceCards[1].price} <span className="text-base xl:text-2xl mr-[5%] min-[360px]:mr-[16%] min-[390px]:mr-[8%] md:mr-0">per &nbsp; m²</span>
+                  {priceCards[1].price} <span className="text-base xl:text-2xl mr-[5%] min-[360px]:mr-[12%] md:mr-0">per &nbsp; m²</span>
                 </p>
               </div>
 
@@ -85,7 +85,7 @@ export default function AveragePriceDynamic({
                   {priceCards[2].description}
                 </Paragraph>
                 <p className=" text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-center md:text-center text-[#253238]  lg:mt-3">
-                  {priceCards[2].price} <span className="text-base xl:text-2xl mr-[5%] md:mr-0">per &nbsp; m²</span>
+                  {priceCards[2].price} <span className="text-base xl:text-2xl mr-[5%] min-[360px]:mr-[12%] min-[390px]:mr-[8%] md:mr-0">per &nbsp; m²</span>
                 </p>
               </div>
 
@@ -98,7 +98,7 @@ export default function AveragePriceDynamic({
                   {priceCards[3].description}
                 </Paragraph>
                 <p className=" text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-center md:text-center text-[#253238] lg:mt-3">
-                  {priceCards[3].price} <span className="text-base xl:text-2xl  mr-[5%] min-[360px]:mr-[16%] min-[390px]:mr-[8%] md:-mr-1">per &nbsp; m²</span>
+                  {priceCards[3].price} <span className="text-base xl:text-2xl  mr-[5%] min-[360px]:mr-[16%] md:mr-0 xl:-mr-1">per &nbsp; m²</span>
                 </p>
               </div>
               <div className="flex lg:hidden col-span-2 mt-5 md:mt-2.5 lg:mt-0 md:mb-[5px] lg:mb-0 justify-center ">
