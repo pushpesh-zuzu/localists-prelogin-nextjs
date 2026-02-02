@@ -95,12 +95,10 @@ const ClonePopularCategories = ({ data }) => {
                                 </span>
                             )}
 
-                            {row.path ? (
-                                <Button
-                                    href={""
-                                        // `/${currentLang}/${currentCountry}/${row.path}`
-                                    }
-                                    className="
+                            {row.path? (
+                                <Link href={`/${currentLang}/${currentCountry}/${row.path}`}>
+                                    <Button
+                                        className="
                     w-full text-center
                     text-white
                     font-extrabold text-[20px]
@@ -111,10 +109,10 @@ const ClonePopularCategories = ({ data }) => {
                     hover:bg-[#0096c4]
                     max-[880px]:text-[15px] max-[880px]:py-[8px]
                     max-[520px]:text-[14px]
-                  "
-                                >
-                                    {row.title}
-                                </Button>
+                  " >
+                                        {row.title}
+                                    </Button>
+                                </Link>
                             ) : (
                                 <Button className="bg-[#00afe3] hover:bg-[#0096c4] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] cursor-pointer text-white rounded-[4.5px]">
                                     {row.title}

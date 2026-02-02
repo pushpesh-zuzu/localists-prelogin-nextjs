@@ -190,6 +190,19 @@ export const FREQUENTLY_DATA_DRIVEWAY_INSTALLERS = {
         font-size: 18px;
       }
     }
+
+   @media (hover: none) and (pointer: coarse) {
+    .driveway-table th {
+      text-align: left;
+    }
+
+    .driveway-table th .per-unit {
+      display: block;
+      font-weight: normal;
+      font-size: 16px;
+      margin-top: 2px;
+    }
+  }
   </style>
 
   <div style="overflow-x:auto; margin-top:8px;">
@@ -350,8 +363,7 @@ export const DRIVEWAY_INSTALLERS_DATA = [
         image: "/homepage/image6.webp",
         isSpecial: true,
         bgColor: "bg-cyan-400",
-        slug:"/en/gb/home"
-
+        slug: "/en/gb/home",
     },
     {
         id: 2,

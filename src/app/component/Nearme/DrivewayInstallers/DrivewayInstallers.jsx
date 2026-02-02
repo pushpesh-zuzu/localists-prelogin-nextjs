@@ -45,7 +45,8 @@ function DrivewayInstallers() {
             <CloseBrowserAbandon />
             <FAQScript FAQ={FREQUENTLY_DATA_DRIVEWAY_INSTALLERS["driveway-installers-near-me"]} />
             <HeroSectionNearMe
-                heading1="Find Driveway Installers"
+                heading1="Find Driveway"
+                headingMiddle="Installers"
                 heading2="Near You"
                 description="Find the best driveway installers near you! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
                 bannerImage="/nearme/Driveway-Installation-Page.webp"
@@ -77,9 +78,9 @@ function DrivewayInstallers() {
                 serviceName="Driveway Installation"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
-                <FAQ
-                    data={FREQUENTLY_DATA_DRIVEWAY_INSTALLERS["driveway-installers-near-me"]}
-                />
+            <FAQ
+                data={FREQUENTLY_DATA_DRIVEWAY_INSTALLERS["driveway-installers-near-me"]}
+            />
 
             <DiscoverNearMe homeData={DRIVEWAY_INSTALLERS_DATA} />
 

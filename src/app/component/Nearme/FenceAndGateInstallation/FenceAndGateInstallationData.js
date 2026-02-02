@@ -128,6 +128,7 @@ Though it’s not completely necessary, looking at whether your fencing contract
             title: "How much does a fence and gate installation cost?",
             description: `
       On average, a 250ft gate installation will cost around £2000
+      <br />
 The cost of installing fences and gates can vary based on several factors - the size of your project, the materials you choose, and the type of fencing or gate you need (manual or automated, wooden or metal, decorative or security-focused).
 <br />
 Naturally, more complex or custom installations will cost more, and the number of fences or gates you want to install will affect the final price too.
@@ -253,8 +254,7 @@ export const FENCE_AND_GATE_DATA = [
         image: "/homepage/image6.webp",
         isSpecial: true,
         bgColor: "bg-cyan-400",
-        slug:"/en/gb/home"
-
+        slug: "/en/gb/home",
     },
     {
         id: 2,
