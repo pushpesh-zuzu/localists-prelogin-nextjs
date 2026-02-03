@@ -28,9 +28,11 @@ function Member() {
                 CH Joinery
               </p>
             </div>
-            <Button className="hidden md:inline-flex bg-[#253238] mt-2.75 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
+            <a href="/en/gb/sellers/create">
+            <Button className="hidden cursor-pointer md:inline-flex bg-[#253238] mt-2.75 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
               Become a member
             </Button>
+            </a>
           </>
         </div>
 
@@ -83,9 +85,9 @@ function Member() {
               </p>
             </div>
 
-            <button className="text-base font-bold py-1.5 px-4 max-w-fit mx-auto bg-[#253238] hover:bg-[#1a2328] text-white rounded-full transition-all duration-300 mt-4 w-full">
+            <a href="/en/gb/sellers/create" className="cursor-pointer text-base font-bold py-1.5 px-4 max-w-fit mx-auto bg-[#253238] hover:bg-[#1a2328] text-white rounded-full transition-all duration-300 mt-4 w-full">
               Become a member
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -237,7 +237,8 @@ export default function MegaMenu({ children }) {
                       className="flex items-center gap-3 flex-1"
                       onClick={(e) => {
                         if (isMobile && item?.subcategory?.length > 0) {
-                          e.preventDefault();
+                          // e.preventDefault();
+                          handleClose();
                         } else {
                           handleClose();
                         }

@@ -80,32 +80,12 @@ export default function Header() {
                 <MegaMenu>
                   <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
                     Explore Our Services
-                    {/* <Image
-                    src="/icons/downarrowblue.svg"
-                    alt="down-arrow"
-                    width={18}
-                    height={12}
-                    className="w-2 h-1.5 sm:w-3 sm:h-2 lg:w-[18px] lg:h-3 transition-transform duration-200"
-                    priority
-                    fetchPriority="high"
-                    loading="eager"
-                  /> */}
                     <ArrowDownBlue />
                   </button>
                 </MegaMenu>
 
                 <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
                   Advice
-                  {/* <Image
-                  src="/icons/downarrowblue.svg"
-                  alt="down-arrow"
-                  width={18}
-                  height={12}
-                  className="w-2 h-1.5 sm:w-3 sm:h-2 lg:w-[18px] lg:h-3 transition-transform duration-200"
-                  priority
-                  fetchPriority="high"
-                  loading="eager"
-                /> */}
                   <ArrowDownBlue />
                 </button>
               </div>
