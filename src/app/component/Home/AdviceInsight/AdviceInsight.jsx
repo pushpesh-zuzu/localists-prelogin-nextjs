@@ -144,7 +144,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
         </div>
 
         <div className="flex justify-center mt-6 xl:mt-12">
-          <Button className="bg-[#253238] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] text-white rounded-full">
+          <Button className="bg-[#253238] px-4.5 py-2 xl:py-[15px] md:px-9 xl:px-[66px] rounded-full text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
             Read More
           </Button>
         </div>
