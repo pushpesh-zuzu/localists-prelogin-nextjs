@@ -196,11 +196,11 @@ export const PHYSICS_AND_MATHS_FEEDBACK = [
 export const PHYSICS_AND_MATHS_DATA = [
     {
         id: 1,
-        title: "Home & Garden",
+        title: "Lesson & Training",
         image: "/homepage/image6.webp",
         isSpecial: true,
         bgColor: "bg-cyan-400",
-        slug: "/en/gb/home",
+        slug: "/en/gb/lessons-training",
     },
     {
         id: 2,
