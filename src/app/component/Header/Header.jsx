@@ -78,13 +78,13 @@ export default function Header() {
 
               <div className="flex items-center space-x-4 md:space-x-2 lg:space-x-2.5 lg:py-3">
                 <MegaMenu>
-                  <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
+                  <button className="cursor-pointer flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
                     Explore Our Services
                     <ArrowDownBlue />
                   </button>
                 </MegaMenu>
 
-                <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
+                <button className="cursor-pointer flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
                   Advice
                   <ArrowDownBlue />
                 </button>
