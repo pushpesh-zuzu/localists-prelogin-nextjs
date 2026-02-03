@@ -262,7 +262,7 @@ export default function MegaMenu({ children }) {
                           e.stopPropagation();
                           handleSubMenuOpen(item);
                         }}
-                        className="p-1"
+                        className="p-1 cursor-pointer"
                         aria-label={`View ${item.name} submenu`}
                       >
                         <svg width="8" height="12" viewBox="0 0 8 12" fill="none" aria-hidden="true">
