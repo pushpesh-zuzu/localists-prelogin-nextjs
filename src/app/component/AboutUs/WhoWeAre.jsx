@@ -9,15 +9,17 @@ function WhoWeAre() {
         <section className="w-full my-[48px] px-[20px] box-border flex flex-col
                         max-md:my-[32px] max-sm:my-[16px]">
 
-            <div className="w-full mx-auto px-[20px] max-md:px-0 max-sm:max-w-full mb-5">
-                <H2>
+<div className="max-w-full md:max-w-[76.5%]  mx-auto">
+
+            <div className=" px-[20px] max-md:px-0 mb-5">
+                <H2 className="text-left mx-auto">
                     <span className="text-[#00AFE3]">Who </span>
                     <span className="text-black">we are</span>
                 </H2>
             </div>
 
             <Paragraph2 className="
-                    w-full mx-auto px-[20px]
+                     mx-auto px-[20px]
     max-md:px-0
     max-sm:max-w-full
     text-[16px] leading-[20px]
@@ -30,7 +32,7 @@ function WhoWeAre() {
                 service providers across home, business, and lifestyle sectors via one
                 online platform.
             </Paragraph2>
-            <Paragraph2 className="max-w-[76.5%] w-full mx-auto px-[20px]
+            <Paragraph2 className=" w-full mx-auto px-[20px]
     max-md:px-0
     max-sm:max-w-full
     text-[16px] leading-[20px]
@@ -44,7 +46,7 @@ function WhoWeAre() {
                 local service providers ready and waiting to help you.
             </Paragraph2>
 
-            <Paragraph2 className="max-w-[76.5%] w-full mx-auto px-[20px]
+            <Paragraph2 className=" w-full mx-auto px-[20px]
     max-md:px-0
     max-sm:max-w-full font-normal
     text-[16px] leading-[20px]
@@ -57,7 +59,7 @@ function WhoWeAre() {
                 to change that.
             </Paragraph2>
 
-            <Paragraph2 className="max-w-[76.5%] w-full mx-auto px-[20px]
+            <Paragraph2 className=" w-full mx-auto px-[20px]
     max-md:px-0
     max-sm:max-w-full font-normal
     text-[16px] leading-[20px]
@@ -70,7 +72,7 @@ function WhoWeAre() {
             </Paragraph2>
 
             <div className="mt-[10px] text-[18px] leading-[32px] text-black
-                      max-w-[76.5%] w-full mx-auto px-[20px] flex flex-col
+                       w-full mx-auto px-[20px] flex flex-col
                       max-md:text-[16px] max-md:px-0
                       max-sm:max-w-full max-sm:leading-[26px]">
 
@@ -174,6 +176,8 @@ function WhoWeAre() {
                     quality, reliability, and peace of mind.
                 </Paragraph2>
             </div>
+            </div>
+
         </section>
     )
 }

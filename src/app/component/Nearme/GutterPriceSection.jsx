@@ -93,9 +93,9 @@ export default function GutterPriceSection() {
         lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[0em]! font-normal lg:font-bold"
                     >
                         *costs are estimates only, to get a more specific estimate try our{" "}
-                        <a href="#" className="underline font-normal md:font-bold text-[#00AFE3]">
+                        <span className="underline font-normal md:font-bold text-[#00AFE3]">
                             Gutter Cleaning Calculator
-                        </a>
+                        </span>
                     </p>
                 </div>
 
