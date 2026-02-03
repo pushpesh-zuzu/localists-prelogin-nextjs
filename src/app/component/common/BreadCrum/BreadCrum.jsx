@@ -7,7 +7,7 @@ export default function Breadcrumb({ items = [] }) {
     <nav className="flex items-center gap-1 sm:gap-2 lg:gap-[17px]">
       {/* Home Icon */}
       <Link
-        href="/"
+        href="/en/gb"
         className="flex items-center text-[#959B9E] hover:opacity-80 transition"
       >
         <HomeIcon size={22} className="h-4 w-4 md:h-[22px] md:w-4 lg:h-6 lg:w-[31px]" />
