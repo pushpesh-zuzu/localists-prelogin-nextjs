@@ -101,7 +101,7 @@ function ArtificialGrassInstallationNearme() {
       <div className={`flex justify-center mb-[15px] xl:mb-[25px]`}>
         <GetQuote
           variant="primary"
-          text={"Quotes From Artificial Installers Today"}
+          text={"Get Quotes From Artificial Installers Today"}
         />
       </div>
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}

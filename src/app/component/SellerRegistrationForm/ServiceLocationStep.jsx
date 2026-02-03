@@ -293,7 +293,7 @@ const ServiceLocationStep = ({
         </div>
 
         <Button1
-          className="max-w-fit max-[640]:mx-auto md:ml-auto"
+          className="cursor-pointer max-w-fit max-[640]:mx-auto md:ml-auto"
           disabled={isLoading}
           variant="secondary"
           onClick={validateAndProceed}
