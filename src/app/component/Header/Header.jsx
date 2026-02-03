@@ -128,32 +128,21 @@ export default function Header() {
                 role="group"
                 aria-label="User authentication"
               >
-                <button
-                  onClick={() => router.push("/en/gb/login")}
+                  <a
+                  href="/en/gb/login"
                   className="text-[14px] lg:text-base cursor-pointer font-normal text-[#1E2A2E] lg:py-[12.5px] md:px-1 lg:px-4 whitespace-nowrap"
                   aria-label="Login to your account"
                 >
                   Login
-                </button>
-                <button
+                </a>
+                 <a
+                  href="/en/gb/sellers/create"
                   className="flex items-center cursor-pointer font-bold gap-2 px-2.5 py-1.5 lg:px-5 lg:py-3 text-[14px] lg:text-[16px] text-white bg-[#00AEEF] rounded-full whitespace-nowrap"
                   aria-label="Sign up for new account"
-                  onClick={() => {
-                    router.push("/en/gb/sellers/create");
-                  }}
+                 
                 >
-                  {/* <Image
-                    src="/icons/signup.webp"
-                    alt="signup icon"
-                    width={16.71}
-                    height={18}
-                    className="w-2 h-2  lg:w-[16.71px] lg:h-[18px]"
-                    priority
-                    fetchPriority="high"
-                    loading="eager"
-                  /> */}
                   Join as a Professional
-                </button>
+                </a>
               </div>
             </nav>
           </div>
@@ -191,13 +180,13 @@ export default function Header() {
                 >
                   <SearchIcon className="h-4 w-4 md:h-[18px] md:w-[18px] mr-1 md:mr-1" />
                 </button>
-                <button
-                  onClick={() => router.push("/en/gb/login")}
+                <a
+                  href="/en/gb/login"
                   className="px-2.5 md:px-4 leading-4 py-[5.66px] text-[16px] font-medium text-white bg-[#00AEEF] rounded-full transition-colors duration-200"
                   aria-label="Login to your account"
                 >
                   Login
-                </button>
+                </a>
               </div>
             </>
           </div>
