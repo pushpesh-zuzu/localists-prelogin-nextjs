@@ -135,7 +135,7 @@ export const FREQUENTLY_DATA_TUTORS = {
             key: "4",
             title: "How much is a GCSE tutor per hour?",
             description: `
-      A GCSE tutor in the UK typically charges <strong>£25 - £40 per hour</strong>. Prices can vary depending on the subject, for example, <a style=color:#00afe3; href="/__LANG__/__COUNTRY__/physics-maths-tutors-near-me">physics and maths tutors</a> are often in higher demand and may cost slightly more. Tutors with lots of experience or proven exam results may also charge above average.
+      A GCSE tutor in the UK typically charges <strong>£25 - £40 per hour</strong>. Prices can vary depending on the subject, for example, <a style=color:#00afe3; href="/en/gb/physics-maths-tutors-near-me">physics and maths tutors</a> are often in higher demand and may cost slightly more. Tutors with lots of experience or proven exam results may also charge above average.
       `,
         },
         {
@@ -143,10 +143,11 @@ export const FREQUENTLY_DATA_TUTORS = {
             title: "Is online tutoring better than in-person?",
             description: `Whether online tutoring is better than in-person really depends on your needs and learning style. Neither is “better” overall. The best choice is the one that helps you feel comfortable, supported, and motivated to learn. Many tutors now offer both, so you can even mix and match.
       <br /> <br />
-      <ul>
-        <li><strong>Online tutoring</strong> offers flexibility, convenience, and sometimes lower costs. It also makes it easy to record lessons, share resources, and fit sessions around a busy schedule.</li>
-        <li><strong>In-person tutoring</strong> can feel more personal, with the benefit of face-to-face interaction and fewer distractions. Some students find it easier to stay engaged this way.</li>
-      </ul>
+
+        <li style="margin-left: 30px">
+        <strong>Online tutoring</strong> offers flexibility, convenience, and sometimes lower costs. It also makes it easy to record lessons, share resources, and fit sessions around a busy schedule.
+        </li>
+        <li style="margin-left: 30px"><strong>In-person tutoring</strong> can feel more personal, with the benefit of face-to-face interaction and fewer distractions. Some students find it easier to stay engaged this way.</li>
         <br />
       With Localists, you can find private tutors near you, in your local area, who offer both online service and in-person service. Simply start your search and we will send free no obligation quotes to your inbox in a matter of minutes.`,
         },
