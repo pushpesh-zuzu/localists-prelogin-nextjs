@@ -43,17 +43,11 @@ function HowItWork() {
             mw={"xs:w-full"}
           />
         </div>
-        <div className="flex justify-center">
-          <Button
-            variant="primary"
-            onClick={() => {
-              handleScrollToBottom();
-            }}
-            className="cursor-pointer rounded-full max-w-fit bg-[#10C87B] hover:bg-[#00aef3] text-white mt-6 lg:mt-[47px] px-8 md:px-4.5 lg:px-8 py-1.5 lg:py-2  leading-0"
-          >
-            Get Started
-          </Button>
-        </div>
+         <div className="flex justify-center">
+                  <Button variant="primary" onClick={() => { handleScrollToBottom() }} className="cursor-pointer rounded-full max-w-fit bg-[#10C87B] hover:bg-[#00aef3] text-white mt-[30px] lg:mt-[47px] px-[15px] py-2 xl:py-[15px] xl:px-7 leading-normal!">
+                    Get Started
+                  </Button>
+                </div>
       </section>
     </WrapperBGWidth>
   );
