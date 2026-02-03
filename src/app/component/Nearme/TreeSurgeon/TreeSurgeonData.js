@@ -128,7 +128,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     text: "How do I pick the right tree surgeon",
   },
   {
-    type: "pbold",
+    type: "p",
     text: "When choosing a tree surgeon, it’s important to look beyond price and focus on their training, safety standards, and experience. You can look out for one or more of the following:",
     className: "mb-[15px] md:mb-[25px] ",
   },

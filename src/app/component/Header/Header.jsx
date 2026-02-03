@@ -15,8 +15,9 @@ import { useRouter } from "next/navigation";
 import AuthenticatedHeader from "./AthenticatedHeader";
 import MobileSlideInSearch from "./MobileSlideInSearch";
 import LoaderIndicator from "../common/Loader/LoaderIndicatore";
+import Link from "next/link";
 
-const SearchResults = dynamic(() => import("../common/SearchResult"), {
+const SearchResultForHeader = dynamic(() => import("./SearchResultForHeader"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>
 });
@@ -58,8 +59,8 @@ export default function Header() {
         <WrapperBGWidth>
           <div className="hidden lg:flex justify-between items-center px-[11px] sm:pb-4 sm:pt-5 sm:px-6 md:px-[46.93] lg:px-12 xl:px-30 xl:pb-6 xl:pt-[18px] ">
             <div className="flex items-center space-x-4  md:space-x-[11px] lg:space-x-[21px] ">
-              <a
-                href="/"
+              <Link
+                href="/en/gb"
                 aria-label="Go to Localists homepage"
                 className="shrink-0"
               >
@@ -73,38 +74,18 @@ export default function Header() {
                   fetchPriority="high"
                   loading="eager"
                 />
-              </a>
+              </Link>
 
               <div className="flex items-center space-x-4 md:space-x-2 lg:space-x-2.5 lg:py-3">
                 <MegaMenu>
-                  <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
+                  <button className="cursor-pointer flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
                     Explore Our Services
-                    {/* <Image
-                    src="/icons/downarrowblue.svg"
-                    alt="down-arrow"
-                    width={18}
-                    height={12}
-                    className="w-2 h-1.5 sm:w-3 sm:h-2 lg:w-[18px] lg:h-3 transition-transform duration-200"
-                    priority
-                    fetchPriority="high"
-                    loading="eager"
-                  /> */}
                     <ArrowDownBlue />
                   </button>
                 </MegaMenu>
 
-                <button className="flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
+                <button className="cursor-pointer flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
                   Advice
-                  {/* <Image
-                  src="/icons/downarrowblue.svg"
-                  alt="down-arrow"
-                  width={18}
-                  height={12}
-                  className="w-2 h-1.5 sm:w-3 sm:h-2 lg:w-[18px] lg:h-3 transition-transform duration-200"
-                  priority
-                  fetchPriority="high"
-                  loading="eager"
-                /> */}
                   <ArrowDownBlue />
                 </button>
               </div>
@@ -122,15 +103,15 @@ export default function Header() {
                   className="text-base w-[207px] h-[34px]  px-2.5 py-2 font-bold bg-white border-[1.5px] border-[#CACACA] rounded-[100px] focus:outline-none"
                   value={searchQuery || ""}
                   onChange={(e) => {
-                    const query = e.target.value;
-                    setSearchQuery(query); // State update
-                    if (query.trim() !== "") {
-                      dispatch(searchService({ query }));
+                    const search = e.target.value;
+                    setSearchQuery(search); // State update
+                    if (search.trim() !== "") {
+                      dispatch(searchService({ search }));
                     }
                   }}
                 />
                 {searchQuery.length ? (
-                  <SearchResults
+                  <SearchResultForHeader
                     searchQuery={searchQuery}
                     setSearchQuery={setSearchQuery}
                   />

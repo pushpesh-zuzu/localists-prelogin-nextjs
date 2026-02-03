@@ -237,7 +237,8 @@ export default function MegaMenu({ children }) {
                       className="flex items-center gap-3 flex-1"
                       onClick={(e) => {
                         if (isMobile && item?.subcategory?.length > 0) {
-                          e.preventDefault();
+                          // e.preventDefault();
+                          handleClose();
                         } else {
                           handleClose();
                         }
@@ -261,7 +262,7 @@ export default function MegaMenu({ children }) {
                           e.stopPropagation();
                           handleSubMenuOpen(item);
                         }}
-                        className="p-1"
+                        className="p-1 cursor-pointer"
                         aria-label={`View ${item.name} submenu`}
                       >
                         <svg width="8" height="12" viewBox="0 0 8 12" fill="none" aria-hidden="true">
@@ -277,7 +278,7 @@ export default function MegaMenu({ children }) {
             <div className="p-4">
               <button
                 type="button"
-                className="flex items-center gap-2 mb-4 text-sm font-bold text-gray-600 hover:text-gray-900 transition-colors"
+                className="flex cursor-pointer items-center gap-2 mb-4 text-sm font-bold text-gray-600 hover:text-gray-900 transition-colors"
                 onClick={() => {
                   setShowSubMenu(false);
                   setSelectedCategory(null);

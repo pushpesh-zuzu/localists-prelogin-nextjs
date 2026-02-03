@@ -30,11 +30,23 @@ export default function PopularImageCard({ card }) {
           />
         </div>
       </div>
-
       <Paragraph className="leading-4 pl-7 pt-5 xl:pt-8 text-white xl:pl-[35px]">
         {card.title}
       </Paragraph>
-      <Link href={card?.path ? card?.path : ""}>
+      {card.path ? (
+        <a
+          href={card?.path ? card?.path : ""}
+          className={` ${card?.path ? "cursor-pointer" : ""}
+          absolute flex items-center justify-center
+          rounded-[175.75px] bg-white
+          bottom-3 md:bottom-4 lg:bottom-5 xl:bottom-[39px]
+          left-[56%] -translate-x-1/2
+          px-2 lg:px-[15px] py-.5 h-6 lg:h-10 -leading-[3px]
+        `}
+        >
+          <Paragraph>Explore</Paragraph>
+        </a>
+      ) : (
         <button
           className={` ${card?.path ? "cursor-pointer" : ""}
           absolute flex items-center justify-center
@@ -46,7 +58,7 @@ export default function PopularImageCard({ card }) {
         >
           <Paragraph>Explore</Paragraph>
         </button>
-      </Link>
+      )}{" "}
     </div>
   );
 }

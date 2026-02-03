@@ -178,7 +178,6 @@ function BuyerRegistration({
           nextStep={nextStep}
           previousStep={previousStep}
           onClose={handleClose}
-          formData={buyerRequest}
         />
       )}
       {buyerStep === 7 && (

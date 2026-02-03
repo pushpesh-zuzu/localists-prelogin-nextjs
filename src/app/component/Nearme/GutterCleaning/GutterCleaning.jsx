@@ -24,6 +24,8 @@ import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
 import GutterCleaningPopularJobNearMe from "./GutterCleaningPopularJobNearMe";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
     loading: () => (
@@ -40,6 +42,8 @@ const CloseBrowserAbandon = dynamic(
 );
 
 function GutterCleaning() {
+    usePendingBuyerRedirect();
+    useScrollToTop()
     return (
         <>
             <CloseBrowserAbandon />

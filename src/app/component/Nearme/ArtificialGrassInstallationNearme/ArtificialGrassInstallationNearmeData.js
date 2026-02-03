@@ -41,7 +41,14 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   {
     type: "h3",
     text: "How to install artificial grass? ",
-    className: "mt-[15px] lg:mt-[25px] mb-[10px] md:mb-[15px]",
+    className: "mt-[15px] lg:mt-[25px]",
+  },
+   {
+    type: "image",
+    src: "/nearme/Artificial/polyurethane.webp",
+    alt: "Man pouring polyurethane adhesive for strong bond artificial turf installation",
+    marginBottom: true,
+    marginTop: true,
   },
 
   {
@@ -67,14 +74,6 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   {
     type: "li",
     text: "<strong>Brushing & infill</strong> – To finish, the grass fibres are brushed upright for a natural look, and a layer of sand infill may be added for extra weight, stability, and softness underfoot.",
-    className: "mb-0",
-  },
-  {
-    type: "image",
-    src: "/nearme/Artificial/polyurethane.webp",
-    alt: "Man pouring polyurethane adhesive for strong bond artificial turf installation",
-    marginBottom: true,
-    marginTop: true,
   },
   {
     type: "h2",

@@ -35,6 +35,7 @@ import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
 import LandScapingGardenPopularJobs from "./LandScapingGardenPopularJobs";
 import HeroSectionLandscapingNearMe from "../HeroSectionLandscapingNearMe";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -54,9 +55,11 @@ const CloseBrowserAbandon = dynamic(
 
 function LandscapeGardenNearme() {
   usePendingBuyerRedirect();
+  useScrollToTop()
+  
   return (
     <>
-      <CloseBrowserAbandon />
+      {typeof window !=='undefined' && <CloseBrowserAbandon />}
       <FAQScript FAQ={FREQUENTLY_DATA_LANDSCAPE_NEARME} />
       <HeroSectionLandscapingNearMe
         heading1=" Find Landscape Gardeners"

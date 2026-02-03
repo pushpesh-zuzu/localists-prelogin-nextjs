@@ -368,7 +368,7 @@ function ServiceDetailsStep({
         </InputLabel>
 
         <div className="flex justify-between mt-6">
-          <Button1 variant="secondary" onClick={prevStep}>
+          <Button1 className="cursor-pointer" variant="secondary" onClick={prevStep}>
             Back
           </Button1>
           <Button1 variant="primary" onClick={handleCheck}>

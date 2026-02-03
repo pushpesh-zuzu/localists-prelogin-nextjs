@@ -32,6 +32,7 @@ import {
   VETTED_DATA_ARTIFICIAL_GRASS_NEARME,
 } from "./ArtificialGrassInstallationNearmeData";
 import GetQuote from "../../common/GetQuotes/GetQuote";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -49,9 +50,11 @@ const CloseBrowserAbandon = dynamic(
 
 function ArtificialGrassInstallationNearme() {
   usePendingBuyerRedirect();
+  useScrollToTop();
+
   return (
     <>
-      <CloseBrowserAbandon />
+      {typeof window !== "undefined" && <CloseBrowserAbandon />}
       <FAQScript FAQ={FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME} />
       <HeroSectionNearMe
         heading1=" Find Artificial Grass"
@@ -98,7 +101,7 @@ function ArtificialGrassInstallationNearme() {
       <div className={`flex justify-center mb-[15px] xl:mb-[25px]`}>
         <GetQuote
           variant="primary"
-          text={"Quotes From Artificial Installers Today"}
+          text={"Get Quotes From Artificial Installers Today"}
         />
       </div>
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}

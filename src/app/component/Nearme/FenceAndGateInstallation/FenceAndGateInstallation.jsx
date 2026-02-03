@@ -24,6 +24,8 @@ import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 import FenceGatePopularJobNearMe from "./FenceGatePopularJobNearMe";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
     loading: () => (
@@ -40,6 +42,8 @@ const CloseBrowserAbandon = dynamic(
 );
 
 function FenceAndGateInstallation() {
+     usePendingBuyerRedirect();
+     useScrollToTop()
     return (
         <>
             <CloseBrowserAbandon />

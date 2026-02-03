@@ -4,16 +4,33 @@ import H2 from "../../UI/Typography/H2";
 import Button from "../../UI/Typography/Button";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 
-const JobButton = ({ title }) => (
-  <button
-    className="font-[Arial] border-2 xl:border-2 border-white font-bold text-[12px] -tracking-[3%] lg:text-[20px] 
+const JobButton = ({ title, url }) => {
+  if (url) {
+    return (
+      <a href={url} className="inline-block">
+        <button
+          className="font-[Arial] border-2 xl:border-2 cursor-pointer border-white font-bold text-[12px] -tracking-[3%] lg:text-[20px] 
                px-1.5 py-[5px] xl:px-5 xl:py-1 rounded-full text-white 
                whitespace-nowrap focus:outline-none"
-    aria-label={`Search for ${title}`}
-  >
-    {title}
-  </button>
-);
+          aria-label={`Search for ${title}`}
+        >
+          {title}
+        </button>
+      </a>
+    );
+  }
+
+  return (
+    <button
+      className="font-[Arial] border-2 xl:border-2 border-white font-bold text-[13px] -tracking-[3%] lg:text-[20px] 
+               px-1.5 py-[5px] xl:px-5 xl:py-[4px] rounded-full text-white 
+               whitespace-nowrap focus:outline-none cursor-default"
+      aria-label={`Search for ${title}`}
+    >
+      {title}
+    </button>
+  );
+};
 
 export default function HireRelatedToService({
   heading1 = "Hire with",
@@ -62,9 +79,13 @@ export default function HireRelatedToService({
           </div>
         </header>
         <div className="flex flex-wrap gap-y-2 xl:gap-y-[23px] gap-3.5 lg:gap-[23px] w-full md:max-w-full">
-          {tabData[currentTab].map((title, i) => (
-            <JobButton key={i} title={title} />
-          ))}
+          {tabData[currentTab]?.map((item, i) => {
+            if (typeof item === "object") {
+              return <JobButton key={i} title={item.title} url={item.url} />;
+            }
+
+            return <JobButton key={i} title={item} />;
+          })}
         </div>
       </div>
     </WrapperBGWidth>

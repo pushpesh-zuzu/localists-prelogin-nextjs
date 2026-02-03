@@ -1,3 +1,5 @@
+"use client";
+import { handleScrollToBottom } from "@/utils/scroll";
 import HowItWorksCard from "../common/HowItWorkCard";
 import HowItWorkCompareIcon from "../common/icons/HomePageIcons/HowItWorkCompareIcon";
 import HowItWorkIconPencingIcon from "../common/icons/HomePageIcons/HowItWorkIconPencingIcon";
@@ -41,11 +43,11 @@ function HowItWork() {
             mw={"xs:w-full"}
           />
         </div>
-        <div className="hidden sm:flex justify-center">
-          <Button className="rounded-[94px]  bg-[#10C87B] text-white mt-6 px-8 lg:mt-12 md:py-1.5 md:px-4.5 lg:py-2 lg:px-8 ">
-            Get Started
-          </Button>
-        </div>
+         <div className="flex justify-center">
+                  <Button variant="primary" onClick={() => { handleScrollToBottom() }} className="cursor-pointer rounded-full max-w-fit bg-[#10C87B] hover:bg-[#00aef3] text-white mt-[30px] lg:mt-[47px] px-[15px] md:px-[18px] py-2 xl:py-[15px] xl:px-8 leading-normal!">
+                    Get Started
+                  </Button>
+                </div>
       </section>
     </WrapperBGWidth>
   );

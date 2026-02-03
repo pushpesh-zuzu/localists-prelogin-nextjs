@@ -30,9 +30,10 @@ function NearmeMember({ description = "" }) {
                 CH Joinery
               </p> */}
             </div>
-            <Button className="hidden md:inline-flex bg-[#253238] mt-3 lg:mt-9 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
+            <a href="/en/gb/sellers/create" className="hidden md:inline-flex font-[Arial] font-bold tracking-[-0.03em] bg-[#253238] text-base md:text-[16px] lg:text-[18px] leading-normal mt-3 lg:mt-9 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
               Become a member
-            </Button>
+            </a>
+            
           </>
         </div>
 
@@ -83,9 +84,9 @@ function NearmeMember({ description = "" }) {
               </p> */}
             </div>
 
-            <button className="text-base font-bold py-1.5 px-4 max-w-fit mx-auto bg-[#253238] hover:bg-[#1a2328] text-white rounded-full transition-all duration-300 mt-4 w-full">
+            <a href="/en/gb/sellers/create" className="cursor-pointer text-base font-bold py-1.5 px-4 max-w-fit mx-auto bg-[#253238] hover:bg-[#1a2328] text-white rounded-full transition-all duration-300 mt-4 w-full">
               Become a member
-            </button>
+            </a>
           </div>
         </div>
       </div>

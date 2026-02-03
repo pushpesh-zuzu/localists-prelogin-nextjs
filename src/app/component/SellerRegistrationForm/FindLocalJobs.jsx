@@ -200,7 +200,7 @@ const FindLocalJobs = () => {
           {/* BUTTON */}
           <button
             onClick={handleGetStarted}
-            className="absolute right-[7px] bottom-[7px] font-bold
+            className="absolute cursor-pointer right-[7px] bottom-[7px] font-bold
               bg-[#00AFE3] text-white font-[Arial] tracking-[-0.03em]
               px-[20px] py-[5px] rounded-[3px]
               hidden min-[481px]:block hover:bg-[#008cc0]"
