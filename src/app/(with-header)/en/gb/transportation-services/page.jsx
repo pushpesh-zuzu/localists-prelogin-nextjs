@@ -63,7 +63,7 @@ export default function Page() {
                 data={[
                     {
                         name: "Airport Transfers",
-                        path: "",
+                        path: "/airport-transfers-near-me",
                     },
                 ]}
             />
