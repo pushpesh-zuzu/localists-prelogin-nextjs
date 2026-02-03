@@ -74,7 +74,7 @@ function Tutors() {
             <FAQ
                 data={FREQUENTLY_DATA_TUTORS["tutors-near-me"]}
             />
-            <DiscoverNearMe homeData={TUTORS_DATA} />
+            <DiscoverNearMe title="Lesson & Training" homeData={TUTORS_DATA} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
             />

@@ -8,7 +8,7 @@ import H2 from "../UI/Typography/H2";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import Link from "next/link";
 
-function DiscoverNearMe({ homeData = [], businessData = [], eventData = [] }) {
+function DiscoverNearMe({ homeData = [], businessData = [], eventData = [], title }) {
   return (
     <WrapperBGWidth background={"#f7f7f7f7"}>
       <div className=" bg-[#f7f7f7f7] md:block px-[30px] py-5 sm:px-10 md:px-16 md:py-10 xl:px-[120px] pt-10 pb-10 xl:pt-[72px] xl:pb-[72px]">
@@ -19,8 +19,8 @@ function DiscoverNearMe({ homeData = [], businessData = [], eventData = [] }) {
           {homeData ? (
             <div>
               <div className="flex lg:hidden justify-between pt-5 md:pt-0 pb-12 md:pb-10 xl:pb-10">
-                <h3 className="font-Inter font-black tracking-[-0.03em] text-[30px] leading-[34px] md:text-[30px] md:leading-[35px] lg:text-[50px] lg:leading-[55px] text-[#00AFE3]">
-                  Home & Garden
+                <h3 className={`font-Inter font-black tracking-[-0.03em] ${title ? "text-[26px] leading-[30px]" : "text-[30px] leading-[34px]"} md:text-[30px] md:leading-[35px] lg:text-[50px] lg:leading-[55px] text-[#00AFE3]`}>
+                  {title || "Home & Garden"}
                 </h3>{" "}
                 <button className="font-bold text-xs sm:text-base tracking-[0.03em] leading-[18px] whitespace-nowrap">
                   <Link href="/en/gb/home">
