@@ -22,6 +22,8 @@ import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
     loading: () => (
@@ -38,6 +40,8 @@ const CloseBrowserAbandon = dynamic(
 );
 
 function Tutors() {
+    usePendingBuyerRedirect()
+    useScrollToTop()
     return (
         <>
             <CloseBrowserAbandon />
@@ -58,7 +62,7 @@ function Tutors() {
                 vettedHeading2="trust"
                 breadcrumb={BREADCRUM_DATA_TUTORS}
             />
-            
+
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
                 heading1="Tutors"
@@ -74,7 +78,7 @@ function Tutors() {
             <FAQ
                 data={FREQUENTLY_DATA_TUTORS["tutors-near-me"]}
             />
-            <DiscoverNearMe title="Lesson & Training" homeData={TUTORS_DATA} />
+            <DiscoverNearMe homeData={TUTORS_DATA} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
             />
