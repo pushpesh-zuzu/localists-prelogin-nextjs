@@ -206,22 +206,7 @@ export default function PopularCardCarousel({
                 style={{ left: "-5%" }}
                 className="lg:hidden absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 rounded-full z-10 hover:bg-gray-100"
               >
-                {/* <svg
-                  width="20"
-                  height="32"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Previous slide"
-                >
-                  <path
-                    d="M15 18L9 12L15 6"
-                    stroke="black"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg> */}
+               
                 <LeftArrowBlack />
               </button>
               <button
@@ -229,22 +214,8 @@ export default function PopularCardCarousel({
                 style={{ right: `-5%` }}
                 className="lg:hidden absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800  rounded-full z-10 hover:bg-gray-100"
               >
-                {/* <svg
-                  width="20"
-                  height="32"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Next slide"
-                >
-                  <path
-                    d="M9 18L15 12L9 6"
-                    stroke="black"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg> */}
+              
+              
                 <RightArrowBlack />
               </button>
             </>

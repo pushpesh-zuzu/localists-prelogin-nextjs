@@ -44,7 +44,7 @@ export const carouselData = [
   },
   {
     id: 7,
-    title: "Patio Layer",
+    title: "Patio Laying",
     image: "/homepage/patiolayer.webp", 
     isSpecial: false,
     slug: "/en/gb/patio-layers-near-me",
@@ -104,13 +104,13 @@ export const carouselData1 = [
   },
   {
     id: 4,
-    title: "Accountant",
+    title: "Accounting",
     image: "/homepage/image7.webp",
     isSpecial: false
   },
   {
     id: 5,
-    title: "Account Mananging",
+    title: "Bookkeeping",
     image: "/homepage/image6.webp",
     isSpecial: false
   }
@@ -138,15 +138,15 @@ export const carouselData3 = [
     image: "/homepage/image9.webp",
     isSpecial: false
   },
-  {
-    id: 4,
-    title: "Magicial",
-    image: "/homepage/image20.webp",
-    isSpecial: false
-  },
+  // {
+  //   id: 4,
+  //   title: "Magicial",
+  //   image: "/homepage/image20.webp",
+  //   isSpecial: false
+  // },
   {
     id: 5,
-    title: "Decoration",
+    title: "Wedding Decorations",
     image: "/homepage/image13.webp",
     isSpecial: false
   }

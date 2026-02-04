@@ -9,6 +9,10 @@ import FenceAndGateInstallationIcon from "../../common/icons/HomePageIcons/Fence
 import LandscapingIcon from "../../common/icons/HomePageIcons/LandscapingIcon";
 import ArtificialGrassInstallationIcon from "../../common/icons/HomePageIcons/ArtificialGrassInstallationIcon";
 import { useRouter } from "next/navigation";
+import DrivewayIcon from "../../common/icons/HomePageIcons/DrivewayIcon";
+import PatioLayingIcon from "../../common/icons/HomePageIcons/PatioLayingIcon";
+import LandscapingPopularJobsIcon from "../../common/icons/HomePageIcons/LandscapingPopularJobsIcon";
+import ArtificialGrassIcon from "../../common/icons/HomePageIcons/ArtificialGrassIcon";
 
 export default function PopularJobs() {
   const jobs = [
@@ -17,21 +21,44 @@ export default function PopularJobs() {
       image: <TreeIcon />,
       title: "Tree surgeon",
       path: "/en/gb/tree-surgeon-near-me",
+      margin: "mx-4",
     },
-
-    { id: 4, image: <RoofingIcon />, title: "Roofing" },
-    { id: 6, image: <PainterIcon />, title: "Painter & Decorator" },
     {
-      id: 2,
-      image: <AccountantIcon />,
-      title: "Accountants",
+      id: 6,
+      image: <FenceAndGateInstallationIcon />,
+      title: "Fence & Gates Installation",
+      path: "/en/gb/fencing-contractors-near-me",
+      margin: "mx-2.5",
+      path:'/en/gb/fencing-contractors-near-me'
     },
-    { id: 3, image: <ArchitectIcon />, title: "Architects & Planning" },
+    {
+      id: 4,
+      image: <DrivewayIcon />,
+      title: "Driveway Installation",
+      margin: "mx-2.5",
+      path: "/en/gb/driveway-installers-near-me"
+    },
     {
       id: 5,
-      image: <FenceAndGateInstallationIcon />,
-      title: "Fence & Gates",
-      path: "/en/gb/fencing-contractors-near-me",
+      image: <PatioLayingIcon />,
+      title: "Patio Laying",
+      margin: "mx-2.5",
+      path: "/en/gb/patio-layers-near-me",
+    },
+    {
+      id: 2,
+      image: <LandscapingPopularJobsIcon />,
+      title: "Landscaping",
+      margin: "mx-2.5",
+      path: "/en/gb/landscape-gardeners-near-me"
+    },
+    {
+      id: 3,
+      image: <ArtificialGrassIcon />,
+      title: "Artificial Grass Installation",
+      margin: "mx-0",
+      path:"/en/gb/artificial-grass-installers-near-me"
+      
     },
   ];
 
@@ -43,12 +70,12 @@ export default function PopularJobs() {
             <a
               href={job?.path}
               key={index}
-              className="bg-[#00AFE3] w-full max-w-[130px] min-h-[114px] py-2.5 flex flex-col justify-around text-center text-white rounded-3xl  hover:bg-cyan-500 transition-colors active:scale-95"
+              className="bg-[#00AFE3] w-full max-w-[140px] min-h-[114px] py-2.5 flex flex-col justify-around text-center text-white rounded-3xl  hover:bg-cyan-500 transition-colors active:scale-95"
             >
               <div className="flex justify-center pb-0.5">{job.image}</div>
               <span
                 style={{ textShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)" }}
-                className=" mx-2.5 flex justify-center font-bold text-[18px] leading-[18px]"
+                className={`${job?.margin} flex justify-center font-bold text-[18px] leading-[18px]`}
               >
                 {job.title}
               </span>
@@ -56,12 +83,12 @@ export default function PopularJobs() {
           ) : (
             <div
               key={index}
-              className="bg-[#00AFE3] w-full max-w-[130px] min-h-[114px] py-2.5 flex flex-col justify-around text-center text-white rounded-3xl  hover:bg-cyan-500 transition-colors active:scale-95"
+              className="bg-[#00AFE3] w-full max-w-[140px] min-h-[114px] py-2.5 flex flex-col justify-around text-center text-white rounded-3xl  hover:bg-cyan-500 transition-colors active:scale-95"
             >
               <div className="flex justify-center pb-0.5">{job.image}</div>
               <span
                 style={{ textShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)" }}
-                className=" mx-2.5 flex justify-center font-bold text-[18px] leading-[18px]"
+                className={`${job?.margin} flex justify-center font-bold text-[18px] leading-[18px]`}
               >
                 {job.title}
               </span>

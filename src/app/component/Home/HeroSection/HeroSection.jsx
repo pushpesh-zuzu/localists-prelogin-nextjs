@@ -25,11 +25,11 @@ const HeroSection = memo(function HeroSection() {
       slug: "/en/gb/patio-layers-near-me",
     },
     {
-      title: "Private Tutors",
-    },
-    {
       title: "Fence & Gate Installers",
       slug: "/en/gb/fencing-contractors-near-me",
+    },
+    {
+      title: "Private Tutors",
     },
     {
       title: "Personal Trainers",
@@ -66,17 +66,22 @@ const HeroSection = memo(function HeroSection() {
   return (
     <WrapperBGWidth background={"#00aeef"}>
       <section
-        className="flex flex-col lg:flex-row gap-[30px] lg:gap-[116px] min-h-[543px] sm:min-h-[376px] xl:min-h-[670px] bg-[#00AEEF] px-[31px] pt-10 pb-5 md:px-[60px] md:pt-[38px] md:pb-6 xl:px-[120px] xl:py-[72px]"
+        className="flex flex-col lg:flex-row gap-[40px] lg:gap-[72px] min-h-[543px] sm:min-h-[376px] xl:min-h-[670px] bg-[#00AEEF] px-[30px] pt-10 pb-5 md:px-[60px] md:pt-[38px] md:pb-6 xl:px-[120px] xl:py-[72px]"
         role="banner"
         aria-label="Hero section"
       >
         <div className="w-full lg:w-1/2 flex flex-col">
-          <TrustpioletIcon className="max-w-[184px] md:max-w-[177px] lg:max-w-[330px] lg:mb-7 max-h-12" />
+                        <TrustpioletIcon className="lg:min-h-[54px] max-h-[28px] max-w-[184px] md:max-w-[177px] lg:max-w-[360px] mb-[16.54px] md:mb-3 lg:mb-[30px] lg:max-h-12" />
+  
 
-          <H1 className="text-white block  text-shadow-[0_2.03px_2.03px_0_#0000001A]">
+          <h1 className="font-Inter font-black
+        tracking-[-0.03em]
+        text-[62px] leading-[62px]
+        md:text-[60px] md:leading-[55px]
+        lg:text-[81px] lg:leading-[75px] text-white block  text-shadow-[0_2.03px_2.03px_0_#0000001A]">
             <p className="md:hidden lg:block">
-              Find Local <span className="block">Services.</span>
-              <span className="text-[#253238] block">Fast.</span>
+              Find Local <span className="block whitespace-nowrap">Services. <span className="hidden md:inline-block text-[#253238]">Fast.</span></span>
+              <span className="block md:hidden text-[#253238]">Fast.</span>
             </p>
             <div className="hidden md:block lg:hidden ">
               Find Local{" "}
@@ -85,13 +90,15 @@ const HeroSection = memo(function HeroSection() {
                 &nbsp;<span className="text-[#253238] block">Fast.</span>
               </div>
             </div>
-          </H1>
-          <Paragraph1
+          </h1>
+          <p
             style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
-            className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
+            className="font-[Arial] font-bold tracking-[-0.03em] text-[28px] leading-[28px]
+                      sm:text-[28px] sm:leading-[28px]
+                      lg:text-[28px] lg:leading-[28px] max-w-full sm:max-w-full text-white pt-[20px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
           >
             Get instant quotes from local professionals.
-          </Paragraph1>
+          </p>
           <HeroSectionSearch />
         </div>
 

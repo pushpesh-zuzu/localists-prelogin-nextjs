@@ -3,9 +3,7 @@ import React from "react";
 import PopularImageCard from "../../common/PopularImageCard";
 import PopularJobs from "./PopularMobileCard";
 import H2 from "../../UI/Typography/H2";
-import HomeGardenCarousel from "../../Carousel/HomeCarousel";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
-import PaddingWrapper from "../../common/WrapperBGWidth/PaddingWrapper";
 import PopularCardCarousel from "../../Carousel/PopularCardCarousel";
 
 function PopularCard() {
@@ -24,8 +22,10 @@ function PopularCard() {
     },
     {
       id: 3,
-      image: "/homepage/image18.webp",
-      title: "Personal Trainer",
+      image: "/homepage/patiolayer.webp",
+      title: "Patio Laying",
+      path: "/en/gb/patio-layers-near-me",
+
     },
     {
       id: 4,
@@ -59,7 +59,7 @@ function PopularCard() {
   ];
   return (
     <WrapperBGWidth>
-      <PaddingWrapper className="h-full lg:min-h-[587px] xl:min-h-[657px] py-10 md:pt-6 md:pb-6 xl:pt-12 xl:pb-[78px]">
+      <div className="px-[30px] md:px-15 xl:px-[120px] h-full lg:min-h-[587px] xl:min-h-[657px] py-10 md:pt-6 md:pb-6 xl:pt-12 xl:pb-[78px]">
         <H2 className="text-[#00afe3] pb-10 lg:pb-7">
           Popular <span className="text-[#253238]">jobs.</span>
         </H2>
@@ -74,7 +74,7 @@ function PopularCard() {
         <div className="block md:hidden select-none">
           <PopularJobs />
         </div>
-      </PaddingWrapper>
+      </div>
     </WrapperBGWidth>
   );
 }

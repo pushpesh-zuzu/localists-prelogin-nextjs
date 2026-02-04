@@ -10,7 +10,7 @@ import { handleScrollToBottom } from "@/utils/scroll";
 function UserFeedback({ feedbackData = [] }) {
   return (
     <WrapperBGWidth background={"#edfcf8"}>
-      <div className="h-auto min-h-[400px] lg:min-h-[687px] px-2.5 py-12 sm:px-10 md:px-16 md:py-[38px] xl:px-[120px] lg:py-[72px] bg-[#EDFCF8]">
+      <div className="h-auto min-h-[400px] lg:min-h-[687px] px-[30px] py-12 sm:px-10 md:px-16 md:py-[38px] xl:px-[120px] lg:py-[72px] bg-[#EDFCF8]">
         <H2 className="text-[#00afe3] pb-10">
           Rated <span className="text-[#253238]">excellent.</span>
         </H2>
@@ -19,6 +19,7 @@ function UserFeedback({ feedbackData = [] }) {
             data={feedbackData}
             renderCard={(card) => <UserFeedbackCard item={card} />}
             showArrowAndDots={false}
+            mobileArrowSpacing={0}
           />
         </div>
         <div className="flex justify-center">

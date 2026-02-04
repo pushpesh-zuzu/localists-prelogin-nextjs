@@ -9,7 +9,7 @@ const JobButton = ({ title, url }) => {
     return (
       <a href={url} className="inline-block">
         <button
-          className="font-[Arial] border-2 xl:border-2 cursor-pointer border-white font-bold text-[12px] -tracking-[3%] lg:text-[20px] 
+          className="font-[Arial] border-2 xl:border-2 cursor-pointer border-white font-bold text-[13px] -tracking-[3%] lg:text-[20px] 
                px-1.5 py-[5px] xl:px-5 xl:py-1 rounded-full text-white 
                whitespace-nowrap focus:outline-none"
           aria-label={`Search for ${title}`}
@@ -48,7 +48,7 @@ export default function HireRelatedToService({
   ];
   return (
     <WrapperBGWidth background={"#00AFE3"}>
-      <div className="bg-[#00AFE3]  px-2.5 py-10 md:py-[50px] md:pl-16  xl:px-[120px] lg:py-[72px] w-full h-full">
+      <div className="bg-[#00AFE3]  px-7.5 py-10 md:py-[50px] md:pl-16  xl:px-[120px] lg:py-[72px] w-full h-full">
         <header className="mb-5 xl:mb-12">
           <div className="flex flex-wrap md:flex-col lg:flex-row xl:justify-between items-left gap-7.5 md:gap-6 xl:gap-12">
             <h2
@@ -67,9 +67,9 @@ export default function HireRelatedToService({
                   className={`${
                     currentTab === tab.activtab
                       ? "bg-[#253238] rounded-full transition-all duration-700 ease-in-out"
-                      : ""
-                  }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em]
-                      text-[12px] md:text-[14px]
+                      : "rounded-full"
+                  }  font-[Arial] font-bold text-white px-2 tracking-[-0.03em]
+                      text-[11px] md:text-[14px]
                       xl:text-[18px] py-[3px] sm:px-3 sm:py-1.5 xl:px-4 xl:py-[11px] cursor-pointer`}
                 >
                   {tab.lable}
