@@ -402,19 +402,19 @@ export const FEEDBACK_LANDSCAPE_NEARME = [
   {
     id: 1,
     text: "We needed our back garden completely re-landscaped with a new patio and lawn. The local landscaper we found through Localists was fantastic – clear quotes, turned up on time, and gave us design suggestions we hadn’t even thought of. The patio looks amazing, and the kids love the new grassed area. Couldn’t be happier.",
-    name: "Rebecca T",
+    name: "Rebecca",
     // location: "Hartlepool",
   },
   {
     id: 2,
     text: "Our space was overgrown and difficult to maintain. The landscaper handled everything – from clearing the site to installing raised beds, new fencing, and low-maintenance planting. They even built in a small water feature which has made the garden feel so peaceful. The whole process was stress-free and worth every penny.",
-    name: "Daniel M",
+    name: "Daniel",
     // location: "Salisbury",
   },
   {
     id: 3,
     text: "I only wanted some soft landscaping at first (new shrubs and borders), but the contractor also helped with drainage issues and suggested lighting that really makes the garden shine at night. They kept everything tidy, updated me throughout, and the price was fair. Highly recommend using Localists to find trusted landscapers.",
-    name: "Jamie K",
+    name: "Jamie",
     // location: "Bristol",
   },
 ];

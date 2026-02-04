@@ -345,19 +345,19 @@ export const FEEDBACK_ARTIFICIAL_GRASS_NEARME = [
   {
     id: 1,
     text: "Our local installer was brilliant! They removed our old turf, prepped the ground, and fitted a soft synthetic lawn the kids can play on year-round. Looks amazing and no mud!",
-    name: "Mason L",
+    name: "Mason",
     // location: "Birmingham",
   },
   {
     id: 2,
     text: "We were tired of mowing and dealing with patchy grass. Localists matched us with a fantastic installer who suggested the right type of turf for our shaded garden. It transformed the space completely. Definitely the best decision we made for our graden! This Miss loves it so much.",
-    name: "Christian T",
+    name: "Christian",
     // location: "Bristol",
   },
   {
     id: 3,
     text: "The whole installation only took two days. The artificial grass specialists we found through Localists were tidy, polite, and very professional. They left us with a garden that looks perfect every day. Couldn’t recommend them enough.",
-    name: "Georgina P",
+    name: "Georgina",
     // location: "Glasgow",
   },
 ];
