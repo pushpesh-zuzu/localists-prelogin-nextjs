@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Paragraph1 from "../UI/Typography/Paragraph1";
 import H1 from "../UI/Typography/H1";
-// import Button from "../UI/Typography/Button";
-import ChevroliteDoubleDownIcon from "../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
-import GetQuote from "../common/GetQuotes/GetQuote";
+import Button from "../UI/Typography/Button";
+// import GetQuote from "../common/GetQuotes/GetQuote";
 
 
 const insights = [
@@ -23,13 +22,42 @@ const insights = [
 
 export default function IndustryInsights() {
     const [showAll, setShowAll] = useState(false);
+    const [hasOverflow, setHasOverflow] = useState(false);
 
-    const mobileItems = showAll ? insights : insights.slice(0, 5);
-    const tabletItems = showAll ? insights : insights.slice(0, 10);
+    const contentRef = useRef(null);
 
+    const COLLAPSED_HEIGHT = {
+        mobile: 162,
+        tablet: 170,
+        desktop: 180,
+    };
+
+    useEffect(() => {
+        const el = contentRef.current;
+        if (!el || showAll) return;
+
+        const observer = new ResizeObserver(() => {
+            const width = window.innerWidth;
+
+            const limit =
+                width >= 1024
+                    ? COLLAPSED_HEIGHT.desktop
+                    : width >= 768
+                        ? COLLAPSED_HEIGHT.tablet
+                        : COLLAPSED_HEIGHT.mobile;
+
+            const TOLERANCE = 4;
+
+            setHasOverflow(el.scrollHeight > limit + TOLERANCE);
+        });
+
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, [showAll, insights.length]);
 
     return (
-        <section className="bg-[#05ACE3] py-12">
+        <section className="bg-[#05ACE3] py-12 h-auto
+    lg:min-h-[484px]">
             <div className="max-w-[1320px] mx-auto px-4 md:px-8 xl:px-0">
 
                 {/* TITLE – START POSITION */}
@@ -92,85 +120,57 @@ export default function IndustryInsights() {
                     ))}
                 </div>
 
-
-                {/* MOBILE */}
-                <div className="md:hidden w-full mt-5">
-                    <div className="flex flex-wrap gap-x-2 gap-y-3">
-                        {mobileItems.map((item) => (
-                            <button
-                                key={item}
-                                className="
-                border-2 border-white
-                px-3 py-0.5
-                rounded-full
-                text-white
-                hover:bg-white hover:text-[#00AEEF]
-                transition-all duration-200
-                whitespace-nowrap focus:outline-none
-              "
-                                aria-label={`Search for ${item}`}
-                            >
-                                <p className="text-base font-bold tracking-[-0.03em]">
-                                    {item}
-                                </p>
-                            </button>
-                        ))}
-                    </div>
-
-                    {insights.length > 5 && (
-                        <div className="flex justify-center mt-5">
-                            <button
+                <div
+                    ref={contentRef}
+                    className={`lg:hidden w-full mt-5
+            flex flex-wrap gap-x-2 gap-y-3
+            overflow-hidden transition-all duration-300
+            ${showAll ? "max-h-none" : "max-h-[162px] md:max-h-[170px] lg:max-h-[180px]"}`}
+                >
+                    {insights.map((item) => (
+                        <button
+                            key={item}
+                            className="border-2 border-white px-3 py-0.5
+              rounded-full text-white hover:bg-white
+              hover:text-[#00AEEF] transition-all
+              whitespace-nowrap focus:outline-none"
+                        >
+                            <p className="text-base font-bold tracking-[-0.03em]">
+                                {item}
+                            </p>
+                        </button>
+                    ))}
+                </div>
+                {
+                    hasOverflow && !showAll && (
+                        <div className="flex justify-center mt-6 xl:mt-12">
+                            <Button
+                                variant="primary"
                                 onClick={() => setShowAll(!showAll)}
-                                className="font-bold text-[12px] rounded-full transition-all duration-200 flex items-center justify-center"
-                            >
-                                <ChevroliteDoubleDownIcon />
-                            </button>
+                                className="py-[7px] xl:py-4 xl:px-[30px] cursor-pointer max-w-fit px-[13px]
+                                          hover:bg-[#253238] rounded-full bg-[#253238] text-white
+                                          shadow-[0_0_4px_rgba(0,0,0,0.1)]" >
+                                Show More
+                            </Button>
                         </div>
-                    )}
-                </div>
+                    )
+                }
 
-                {/* TABLET */}
-                <div className="hidden md:block lg:hidden w-full mt-7">
-                    <div className="flex flex-wrap gap-x-2 gap-y-4">
-                        {tabletItems.map((item) => (
-                            <button
-                                key={item}
-                                className="
-                border-2 border-white
-                px-3 py-0.5
-                rounded-full
-                text-white
-                hover:bg-white hover:text-[#00AEEF]
-                transition-all duration-200
-                whitespace-nowrap focus:outline-none
-              "
-                                aria-label={`Search for ${item}`}
+                {
+                    showAll && (
+                        <div className="flex justify-center mt-6 xl:mt-12">
+                            <Button
+                                variant="primary"
+                                onClick={() => setShowAll(false)}
+                                className="py-[7px] xl:py-4 xl:px-[30px] cursor-pointer px-[13px]
+                                 hover:bg-[#253238] rounded-full bg-[#253238] text-white
+                                 shadow-[0_0_4px_rgba(0,0,0,0.1)]"
                             >
-                                <p className="text-base font-bold tracking-[-0.03em]">
-                                    {item}
-                                </p>
-                            </button>
-                        ))}
-                    </div>
-
-                    {insights.length > 10 && (
-                        <div className="flex justify-center mt-5">
-                            <button
-                                onClick={() => setShowAll(!showAll)}
-                                className="font-bold text-[12px] rounded-full transition-all duration-200 flex items-center justify-center"
-                            >
-                                <ChevroliteDoubleDownIcon />
-                            </button>
+                                Show Less
+                            </Button>
                         </div>
-                    )}
-                </div>
-
-                <div className="flex justify-center mt-6 xl:mt-12">
-                    <GetQuote
-                        text="Show More"
-                        classGetQuote="py-[7px] xl:py-4 xl:px-[30px] hover:!bg-[#1b2326]"
-                    />
-                </div>
+                    )
+                }
 
             </div>
         </section>

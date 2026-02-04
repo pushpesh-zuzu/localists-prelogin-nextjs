@@ -75,15 +75,16 @@ function GutterCleaning() {
                 heading2="in your area"
                 tabData={GUTTER_CLEANING_TABDATA}
             />
-            <UserFeedbackNearMe2 feedbackData={GUTTER_CLEANING_FEEDBACK} />
+            <UserFeedbackNearMe2 feedbackData={GUTTER_CLEANING_FEEDBACK} serviceId=""
+                serviceName="" />
             <AboutServicesAndQuestions
                 serviceId=""
                 serviceName=""
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
-                <FAQ
-                    data={FREQUENTLY_DATA_GUTTER_CLEANING["gutter-cleaning-near-me"]}
-                />
+            <FAQ
+                data={FREQUENTLY_DATA_GUTTER_CLEANING["gutter-cleaning-near-me"]}
+            />
 
             <DiscoverNearMe homeData={GUTTER_CLEANING_DATA} />
 

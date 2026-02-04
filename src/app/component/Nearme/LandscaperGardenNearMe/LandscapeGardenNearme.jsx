@@ -56,10 +56,10 @@ const CloseBrowserAbandon = dynamic(
 function LandscapeGardenNearme() {
   usePendingBuyerRedirect();
   useScrollToTop()
-  
+
   return (
     <>
-      {typeof window !=='undefined' && <CloseBrowserAbandon />}
+      {typeof window !== 'undefined' && <CloseBrowserAbandon />}
       <FAQScript FAQ={FREQUENTLY_DATA_LANDSCAPE_NEARME} />
       <HeroSectionLandscapingNearMe
         heading1=" Find Landscape Gardeners"
@@ -92,7 +92,8 @@ function LandscapeGardenNearme() {
         heading2="in your area"
         tabData={LANDSCAPE_NEARME_TABDATA}
       />
-      <UserFeedbackNearMe2 feedbackData={FEEDBACK_LANDSCAPE_NEARME} />
+      <UserFeedbackNearMe2 feedbackData={FEEDBACK_LANDSCAPE_NEARME} serviceId={43}
+        serviceName="Landscaping" />
       {/* <PaddingWrapper> */}
       <AboutServicesAndQuestions
         serviceId={43}

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import Button from "../UI/Typography/Button";
 import { ChevronDown } from "lucide-react";
@@ -9,16 +9,22 @@ import Link from "next/link";
 const JobButton = ({ title, url }) => {
   if (url) {
     return (
-      <Link href={url} className="inline-block">
-        <button
-          className="font-[Arial] border-2 xl:border-2 border-white font-bold text-[13px] -tracking-[3%] lg:text-[20px] 
-               px-1.5 py-[5px] xl:px-5 xl:py-[4px] rounded-full text-white 
-               whitespace-nowrap focus:outline-none cursor-pointer"
+      <button
+        className="font-[Arial] border-2 xl:border-2 border-white
+        font-bold text-[13px] -tracking-[3%] lg:text-[20px]
+        px-1.5 py-[5px] xl:px-5 xl:py-[4px]
+        rounded-full text-white whitespace-nowrap
+        focus:outline-none cursor-pointer
+        pointer-events-none"
+      >
+        <Link
+          href={url}
+          className="pointer-events-auto"
           aria-label={`Search for ${title}`}
         >
           {title}
-        </button>
-      </Link>
+        </Link>
+      </button>
     )
   }
 
@@ -39,18 +45,57 @@ export default function HireRelatedToServiceNearMe({
   heading2 = "confidence",
   tabData = [],
 }) {
-  const [currentTab, setcurrentTab] = useState("popular");
+  const [currentTab, setcurrentTab] = useState("professionals");
+  const [showAll, setShowAll] = useState(false);
+  const [hasOverflow, setHasOverflow] = useState(false);
+
+  const contentRef = useRef(null);
+
   const handleClick = (activtab) => {
     setcurrentTab(activtab);
+    setShowAll(false);
   };
+
+  const COLLAPSED_HEIGHT = {
+    mobile: 156,
+    tablet: 170,
+    desktop: 180,
+  };
+
   const tabs = [
     { lable: "Popular Jobs", activtab: "popular" },
     { lable: "Find Professionals", activtab: "professionals" },
     { lable: "Advice & Insight", activtab: "insight" },
   ].filter((tab) => tabData?.[tab.activtab]?.length > 0);
+
+
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el || showAll) return;
+
+    const observer = new ResizeObserver(() => {
+      const width = window.innerWidth;
+      const limit =
+        width >= 1024
+          ? COLLAPSED_HEIGHT.desktop
+          : width >= 768
+            ? COLLAPSED_HEIGHT.tablet
+            : COLLAPSED_HEIGHT.mobile;
+
+      const TOLERANCE = 4;
+
+      setHasOverflow(el.scrollHeight > limit + TOLERANCE);
+    });
+
+    observer.observe(el);
+
+    return () => observer.disconnect();
+  }, [currentTab, tabData, showAll]);
+
   return (
     <WrapperBGWidth background={"#00AFE3"}>
-      <div className="bg-[#00AFE3] px-[30px]  md:px-16 py-[30px] md:py-[50px] lg:pl-16  xl:px-[120px] lg:py-[72px] w-full h-full">
+      <div className="bg-[#00AFE3] px-[30px]  md:px-16 py-[30px] md:py-[50px] lg:pl-16  xl:px-[120px] lg:py-[72px] w-full h-auto
+    lg:min-h-[484px]">
         <header className="mb-5 xl:mb-12">
           <div className="flex flex-wrap md:flex-col lg:flex-row xl:justify-between items-left gap-7.5 md:gap-6 xl:gap-12">
             <h2
@@ -79,7 +124,15 @@ export default function HireRelatedToServiceNearMe({
             </nav>
           </div>
         </header>
-        <div className="flex flex-wrap gap-y-2 xl:gap-[24px] gap-2 lg:gap-[23.92px] w-full md:max-w-full">
+        <div
+          ref={contentRef}
+          className={`flex flex-wrap gap-y-2 xl:gap-[24px] gap-2 lg:gap-[23.92px]
+            overflow-hidden transition-all duration-300
+           w-full md:max-w-full"
+            ${showAll
+              ? "max-h-none"
+              : "max-h-[156px] md:max-h-[170px] lg:max-h-[180px]"
+            }`}>
           {tabData[currentTab]?.map((item, i) => {
             if (typeof item === "object") {
               return (
@@ -99,11 +152,34 @@ export default function HireRelatedToServiceNearMe({
             );
           })}
         </div>
-        <div className="flex md:hidden justify-center pt-[30px]">
-          <Button className="mx-auto flex bg-[#253238] text-white px-[15px] py-2 rounded-full">
-            Show More <ChevronDown />
-          </Button>
-        </div>
+
+        {hasOverflow && !showAll && (
+          <div className="flex md:hidden justify-center pt-[30px]">
+            <Button
+              variant="primary"
+              onClick={() => setShowAll(!showAll)}
+              className="py-[7px] xl:py-4 xl:px-[30px] cursor-pointer max-w-fit px-[13px]
+                     hover:bg-[#253238] rounded-full bg-[#253238] text-white
+                     shadow-[0_0_4px_rgba(0,0,0,0.1)]"
+            >
+              Show More
+            </Button>
+          </div>
+        )}
+
+        {showAll && (
+          <div className="flex md:hidden justify-center pt-[30px]">
+            <Button
+              variant="primary"
+              onClick={() => setShowAll(false)}
+              className="py-[7px] xl:py-4 xl:px-[30px] cursor-pointer px-[13px]
+                     hover:bg-[#253238] rounded-full bg-[#253238] text-white
+                     shadow-[0_0_4px_rgba(0,0,0,0.1)]"
+            >
+              Show Less
+            </Button>
+          </div>
+        )}
       </div>
     </WrapperBGWidth>
   );

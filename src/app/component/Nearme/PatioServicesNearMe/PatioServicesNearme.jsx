@@ -51,10 +51,10 @@ const CloseBrowserAbandon = dynamic(
 function PatioServicesNearme() {
   usePendingBuyerRedirect();
   useScrollToTop()
-  
+
   return (
     <>
-      {typeof window !=='undefined' && <CloseBrowserAbandon />}
+      {typeof window !== 'undefined' && <CloseBrowserAbandon />}
       <FAQScript FAQ={FREQUENTLY_DATA_PATIO_SERVICES_NEARME} />
       <HeroSectionNearMe
         heading1="Find Patio Layers"
@@ -87,7 +87,8 @@ function PatioServicesNearme() {
         heading2="in your area"
         tabData={PATIO_SERVICES_NEARME_TABDATA}
       />
-      <UserFeedbackNearMe2 feedbackData={FEEDBACK_PATIO_SERVICES_NEARME} />
+      <UserFeedbackNearMe2 feedbackData={FEEDBACK_PATIO_SERVICES_NEARME} serviceId={52}
+        serviceName="Patio Laying" />
       {/* <PaddingWrapper> */}
       <AboutServicesAndQuestions
         serviceId={52}

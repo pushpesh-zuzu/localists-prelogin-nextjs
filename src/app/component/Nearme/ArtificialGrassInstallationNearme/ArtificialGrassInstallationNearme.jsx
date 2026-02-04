@@ -89,7 +89,8 @@ function ArtificialGrassInstallationNearme() {
         heading2="in your area"
         tabData={ARTIFICIAL_GRASS_NEARME_TABDATA}
       />
-      <UserFeedbackNearMe2 feedbackData={FEEDBACK_ARTIFICIAL_GRASS_NEARME} />
+      <UserFeedbackNearMe2 feedbackData={FEEDBACK_ARTIFICIAL_GRASS_NEARME} serviceId={54}
+        serviceName="Artificial Grass Installation" />
       {/* <PaddingWrapper> */}
       <AboutServicesAndQuestions
         serviceId={54}

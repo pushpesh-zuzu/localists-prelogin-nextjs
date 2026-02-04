@@ -109,7 +109,12 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     marginTop: true,
     marginBottom: true,
   },
-    { type: "getQuotesButton", text: "Get Quotes Now", className:'mb-[15px] xl:mb-[25px]' },
+  // { type: "getQuotesButton", text: "Get Quotes Now", className:'mb-[15px] xl:mb-[25px]' },
+  {
+    type: "PostCodeSection",
+    // className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    className: 'mb-[30px] xl:mb-[60px] mt-[15px] lg:mt-[0px]'
+  },
   {
     type: "h2",
     text: "What are the different types of landscaping services?",

@@ -42,9 +42,9 @@ const CloseBrowserAbandon = dynamic(
 );
 
 function DrivewayInstallers() {
-      usePendingBuyerRedirect();
-      useScrollToTop()
-    
+    usePendingBuyerRedirect();
+    useScrollToTop()
+
     return (
         <>
             <CloseBrowserAbandon />
@@ -77,7 +77,8 @@ function DrivewayInstallers() {
                 heading2="in your area"
                 tabData={DRIVEWAY_INSTALLERS_TABDATA}
             />
-            <UserFeedbackNearMe feedbackData={DRIVEWAY_INSTALLERS_FEEDBACK} />
+            <UserFeedbackNearMe feedbackData={DRIVEWAY_INSTALLERS_FEEDBACK} serviceId={51}
+                serviceName="Driveway Installation" />
             <AboutServicesAndQuestions
                 serviceId={51}
                 serviceName="Driveway Installation"

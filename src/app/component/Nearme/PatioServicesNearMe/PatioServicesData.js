@@ -69,7 +69,12 @@ export const QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME = [
     type: "li",
     text: "We source local contractors, with essential knowledge of the local area, climate and building regulations.",
   },
-  { type: "getQuotesButton", text: "Get Quotes Now",calculatorLink:"" },
+  // { type: "getQuotesButton", text: "Get Quotes Now",calculatorLink:"" },
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    // className:'mb-[15px] xl:mb-[25px]'
+  },
   {
     type: "image",
     src: "/nearme/Patio/lushGarden.webp",

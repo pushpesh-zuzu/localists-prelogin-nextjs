@@ -69,7 +69,8 @@ function Tutors() {
                 heading2="in your area"
                 tabData={TUTORS_TABDATA}
             />
-            <UserFeedbackNearMe feedbackData={TUTORS_FEEDBACK} />
+            <UserFeedbackNearMe feedbackData={TUTORS_FEEDBACK} serviceId=""
+                serviceName="Tutor" />
             <AboutServicesAndQuestions
                 serviceId=""
                 serviceName="Tutor"
