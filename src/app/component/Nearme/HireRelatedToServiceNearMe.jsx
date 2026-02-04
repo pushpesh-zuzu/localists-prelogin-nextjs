@@ -57,7 +57,7 @@ export default function HireRelatedToServiceNearMe({
   };
 
   const COLLAPSED_HEIGHT = {
-    mobile: 156,
+    mobile: 162,
     tablet: 170,
     desktop: 180,
   };
@@ -131,7 +131,7 @@ export default function HireRelatedToServiceNearMe({
            w-full md:max-w-full"
             ${showAll
               ? "max-h-none"
-              : "max-h-[156px] md:max-h-[170px] lg:max-h-[180px]"
+              : "max-h-[162px] md:max-h-[170px] lg:max-h-[180px]"
             }`}>
           {tabData[currentTab]?.map((item, i) => {
             if (typeof item === "object") {
