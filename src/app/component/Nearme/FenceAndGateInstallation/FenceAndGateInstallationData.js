@@ -1,5 +1,11 @@
 export const QUESTION_AND_ABOUT_SERVICE = [
     {
+        type: "image",
+        src: "/nearme/measument-tape.webp",
+        alt: "a specialist using a measuring tape on a fence",
+        marginBottom: true,
+    },
+    {
         type: "h2",
         text: "Find top-rated fencing contractors near you.",
     },
@@ -13,15 +19,9 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         notMarginBottom: true,
     },
     {
-        type: "image",
-        src: "/nearme/measument-tape.webp",
-        alt: "a specialist using a measuring tape on a fence",
-        marginBottom: true,
-        marginTop: true
-    },
-    {
         type: "h2",
         text: "Why hiring through Localists just makes sense.",
+        marginTop: true
     },
     {
         type: "p",
