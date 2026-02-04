@@ -89,13 +89,16 @@ function DiscoverServices() {
       px-6 py-6
       md:px-10 md:py-8
       flex flex-col lg:flex-row
-      items-start lg:items-center
-      justify-start lg:justify-center
+     items-center
+justify-center
       gap-10
     "
                 >
                     <div className="relative max-w-[254px] md:max-w-[246px] lg:max-w-[404px] w-full">
                         <input
+                            style={{
+                                boxShadow: "0px 12.56px 20.94px 0px #005974E5",
+                            }}
                             type="text"
                             placeholder="Search for a service"
                             className="
@@ -109,7 +112,6 @@ function DiscoverServices() {
           border-[1.5px] border-gray-300
           rounded-[100px]
           w-full
-          shadow-[0px_20px_40px_0px_rgba(0,0,0,0.5)]
           focus:outline-none
           text-left xl:mb-[30px]
         "
@@ -152,18 +154,25 @@ function DiscoverServices() {
 
                     <div
                         className="
-        text-white font-extrabold
-        tracking-[-0.03em]
-        text-left
-        text-[50px] leading-[55px] -mt-[20px] lg:mt-0
-      "
+    text-white font-extrabold
+    tracking-[-0.03em]
+    text-[25px] leading-[28px]
+    md:text-[30px] md:leading-[35px]
+    lg:text-[40px] lg:leading-[55px]
+    -mt-[20px] lg:mt-0
+    drop-shadow-[0_0px_3.67px_rgba(0,0,0,0.25)]
+    text-center
+    md:text-left
+  "
                     >
                         Free quotes, with zero
-                        <p className="block">obligation.</p>
-                        <div className="flex justify-start lg:justify-end mt-[15px] lg:mt-0">
+                        <p className="inline md:block"> obligation.</p>
+
+                        <div className="flex justify-center md:justify-end mt-[15px] lg:mt-0">
                             <LocationIcon />
                         </div>
                     </div>
+
                 </div>
             </div>
         </WrapperBGWidth>

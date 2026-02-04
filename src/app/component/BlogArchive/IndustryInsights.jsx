@@ -33,7 +33,7 @@ export default function IndustryInsights() {
 
                 {/* TITLE – START POSITION */}
                 <div className="w-full flex flex-col justify-center">
-                    <H1 className="text-white font-extrabold text-shadow-[0_2.03px_2.03px_0_#0000001A]">
+                    <H1 className="text-white font-extrabold drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
 
                         {/* Mobile & Desktop */}
                         <p className="md:hidden lg:block text-[32px] leading-[34px] xl:text-[50px] xl:leading-[52px]">
@@ -52,8 +52,8 @@ export default function IndustryInsights() {
                 </div>
 
                 <Paragraph1
-                    style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
-                    className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px]"
+                    className="tracking-[0em]! text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-full sm:max-w-[60%] md:max-w-[450px] lg:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px]
+                    "
                 >
                     Get the latest insights from industries you care about. Just click any
                     of the buttons below to get in depth expert{" "}
@@ -167,7 +167,7 @@ export default function IndustryInsights() {
                 </div>
 
                 <div className="flex justify-center mt-6 xl:mt-12">
-                    <Button className="bg-[#253238] hover:bg-[#1b2326] cursor-pointer px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] text-white rounded-full">
+                    <Button variant="primary" className="bg-[#253238] hover:bg-[#1b2326] cursor-pointer px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] text-white rounded-full">
                         Show More
                     </Button>
                 </div>

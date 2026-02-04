@@ -39,7 +39,7 @@ const HeroSection = memo(function HeroSection() {
       >
         {/* LEFT CONTENT */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center xl:ml-[43px] xl:pb-3">
-          <H1 className="text-white block text-shadow-[0_2.03px_2.03px_0_#0000001A]">
+          <H1 className="text-white block drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
             <p className="md:hidden lg:block">
               Advice & <span className="text-[#253238] block">insight.</span>
             </p>
@@ -52,8 +52,7 @@ const HeroSection = memo(function HeroSection() {
           </H1>
 
           <Paragraph1
-            style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
-            className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px]"
+            className="tracking-[0em]! text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-full sm:max-w-[60%] md:max-w-[450px] lg:max-w-[590px] text-white pt-[18px] md:pt-4 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
           >
             Get the latest advice, insight and news from{" "}
             <span className="lg:block">
@@ -68,7 +67,7 @@ const HeroSection = memo(function HeroSection() {
           <HeroSectionSearch />
 
           {/* SPACE BETWEEN SEARCH & SERVICES */}
-          <Paragraph1 className="text-white -tracking-[3%] mt-6 md:mt-8 lg:mt-15 pb-4 md:pb-4 lg:pb-[30px] text-shadow-[0px_0px_4px_0px_#00000040]">
+          <Paragraph1 className="text-white -tracking-[3%] mt-7 md:mt-8 lg:mt-15 pb-4 md:pb-4 lg:pb-[30px] text-shadow-[0px_0px_4px_0px_#00000040]">
             Browse Categories
           </Paragraph1>
 
