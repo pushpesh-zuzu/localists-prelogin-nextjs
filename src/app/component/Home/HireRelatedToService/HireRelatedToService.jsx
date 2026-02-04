@@ -44,7 +44,7 @@ export default function HireRelatedToService({
   heading2 = "confidence",
   tabData = [],
 }) {
-  const [currentTab, setcurrentTab] = useState("popular");
+  const [currentTab, setcurrentTab] = useState("professionals");
   const [showAll, setShowAll] = useState(false);
   const [hasOverflow, setHasOverflow] = useState(false);
 
