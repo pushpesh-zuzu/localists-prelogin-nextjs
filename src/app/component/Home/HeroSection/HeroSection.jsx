@@ -28,6 +28,10 @@ const HeroSection = memo(function HeroSection() {
       title: "Fence & Gate Installers",
       slug: "/en/gb/fencing-contractors-near-me",
     },
+     {
+      title: "Tree Surgeons",
+      slug: "/en/gb/tree-surgeon-near-me",
+    },
     {
       title: "Private Tutors",
     },
@@ -37,10 +41,7 @@ const HeroSection = memo(function HeroSection() {
     {
       title: "Painter Decorators",
     },
-    {
-      title: "Tree Surgeons",
-      slug: "/en/gb/tree-surgeon-near-me",
-    },
+    
     {
       title: "Architects",
     },

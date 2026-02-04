@@ -70,7 +70,7 @@ export default function PopularJobs() {
             <a
               href={job?.path}
               key={index}
-              className="bg-[#00AFE3] w-full max-w-[140px] min-h-[114px] py-2.5 flex flex-col justify-around text-center text-white rounded-3xl  hover:bg-cyan-500 transition-colors active:scale-95"
+              className="bg-[#00AFE3] w-full  min-h-[114px] py-2.5 flex flex-col justify-around text-center text-white rounded-3xl  hover:bg-cyan-500 transition-colors active:scale-95"
             >
               <div className="flex justify-center pb-0.5">{job.image}</div>
               <span
@@ -83,7 +83,7 @@ export default function PopularJobs() {
           ) : (
             <div
               key={index}
-              className="bg-[#00AFE3] w-full max-w-[140px] min-h-[114px] py-2.5 flex flex-col justify-around text-center text-white rounded-3xl  hover:bg-cyan-500 transition-colors active:scale-95"
+              className="bg-[#00AFE3] w-full  min-h-[114px] py-2.5 flex flex-col justify-around text-center text-white rounded-3xl  hover:bg-cyan-500 transition-colors active:scale-95"
             >
               <div className="flex justify-center pb-0.5">{job.image}</div>
               <span
