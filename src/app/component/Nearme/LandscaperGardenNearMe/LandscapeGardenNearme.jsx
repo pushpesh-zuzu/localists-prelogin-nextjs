@@ -88,7 +88,7 @@ function LandscapeGardenNearme() {
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
-        heading1="Landscaping Specialists"
+        heading1="Landscapers"
         heading2="in your area"
         tabData={LANDSCAPE_NEARME_TABDATA}
       />

@@ -328,8 +328,9 @@ export const ARTIFICIAL_GRASS_NEARME_TABDATA = {
 };
 
 export const VETTED_DATA_ARTIFICIAL_GRASS_NEARME = [
-  `Is mowing, watering and begging your lawn to look alive becoming tiresome? Then say hello to the grass that never quits.`,
-  `At Localists, we can help find the best artificial grass installers near you. So whether you’re after a low maintenance garden,  swanky commercial greenspace or you just want to be the envy of your neighbours, let us start your journey by finding vetted and verified grass installers near you.`,
+  `Is mowing, watering and begging your lawn to look alive becoming tiresome? Then say hello to the grass that never quits.
+  </br></br>
+  At Localists, we can help find the best artificial grass installers near you. So whether you’re after a low maintenance garden,  swanky commercial greenspace or you just want to be the envy of your neighbours, let us start your journey by finding vetted and verified grass installers near you.`,
 ];
 
 export const POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME = [

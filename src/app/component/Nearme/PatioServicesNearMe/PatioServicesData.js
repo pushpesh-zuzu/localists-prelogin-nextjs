@@ -330,9 +330,11 @@ export const PATIO_SERVICES_NEARME_TABDATA = {
 };
 
 export const VETTED_DATA_PATIO_SERVICES_NEARME = [
-  `Why sip your coffee on a boring patch of grass when you could lounge on a patio worthy of Instagram? We’ll connect you with local patio installers who can transform your back garden into the ultimate hangout spot, whether you’re into sunny brunches, starlit dinners, or you just want to be the envy of your neighbors.`,
-  `Whether you’re picturing a modern porcelain patio, a classic sandstone patio, or a budget-friendly gravel patio, we’ll help you find the right patio contractors for the job. Compare fair, transparent quotes and choose a professional who shares your vision.`,
-  `It’s free from start to finish!`,
+  `Why sip your coffee on a boring patch of grass when you could lounge on a patio worthy of Instagram? We’ll connect you with local patio installers who can transform your back garden into the ultimate hangout spot, whether you’re into sunny brunches, starlit dinners, or you just want to be the envy of your neighbors.
+  </br></br>
+  Whether you’re picturing a modern porcelain patio, a classic sandstone patio, or a budget-friendly gravel patio, we’ll help you find the right patio contractors for the job. Compare fair, transparent quotes and choose a professional who shares your vision.
+  </br></br>
+  It’s free from start to finish!`,
 ];
 
 export const POPULAR_SERVICES_PATIO_SERVICES_NEARME = [

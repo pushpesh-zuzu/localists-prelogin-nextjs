@@ -237,8 +237,9 @@ export const AIRPORT_TRANSPORT_TABDATA = {
   insight: [],
 };
 export const VETTED_DATA_AIRPORT_TRANSPORT = [
-  `Finding a taxi to (or from) the airport shouldn’t feel like solving a riddle. Whether you’re racing the clock, juggling luggage, or just trying not to spill your coffee, we’ll match you with reliable airport transfers near you. Stress-free, no guesswork—just smooth rides and easy goodbyes. Just don’t forget your passport!`,
-  `Wherever you’re headed, we’ll get you there - get free quotes now!`,
+  `Finding a taxi to (or from) the airport shouldn’t feel like solving a riddle. Whether you’re racing the clock, juggling luggage, or just trying not to spill your coffee, we’ll match you with reliable airport transfers near you. Stress-free, no guesswork—just smooth rides and easy goodbyes. Just don’t forget your passport!
+  </br></br>
+  Wherever you’re headed, we’ll get you there - get free quotes now!`,
 ];
 
 export const FEEDBACK_AIRPORT_TRANSPORT = [

@@ -205,9 +205,11 @@ export const FENCE_AND_GATE_TABDATA = {
 };
 
 export const VETTED_DATA_FENCE_AND_GATE = [
-    `Looking for a sturdy gate to keep things in (or out)? Or simply looking for a stylish  boundary for your castle?`,
-    `At Localists, we have a myriad of local fencing contractors that can deal with almost any fence and gate related request. Whether it's part of a new build property, you’re installing an automatic gate or just replacing an old fence. We have 100’s of experts that are vetted and verified, ready to deliver competitive quotes on your next fencing project. So no more shopping around for the best quote, we bring the quotes to you!`,
-    `No cost. No obligation. Just free quotes straight in your inbox!`,
+    `Looking for a sturdy gate to keep things in (or out)? Or simply looking for a stylish  boundary for your castle?
+    </br></br>
+    At Localists, we have a myriad of local fencing contractors that can deal with almost any fence and gate related request. Whether it's part of a new build property, you’re installing an automatic gate or just replacing an old fence. We have 100’s of experts that are vetted and verified, ready to deliver competitive quotes on your next fencing project. So no more shopping around for the best quote, we bring the quotes to you!
+    </br></br>
+    No cost. No obligation. Just free quotes straight in your inbox!`,
 ];
 
 export const BREADCRUM_DATA_FENCE_AND_GATE = [

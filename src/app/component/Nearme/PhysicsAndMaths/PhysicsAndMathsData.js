@@ -161,8 +161,9 @@ export const PHYSICS_AND_MATHS_TABDATA = {
 };
 
 export const VETTED_DATA_PHYSICS_AND_MATHS = [
-    `Struggling with equations, formulas, or problem-solving? Find the best, fully vetted and qualified physics and maths tutors who make learning easier and more enjoyable.`,
-    `At Localists, we connect you with professionals who have helped hundreds of students build confidence, whether you’re preparing for GCSEs, A-Levels, or studying at university. Rest assured, you’ll get the right guidance for your level. Just tell us what you need, and we’ll send free quotes from tutors near you, saving you hours of searching.`,
+    `Struggling with equations, formulas, or problem-solving? Find the best, fully vetted and qualified physics and maths tutors who make learning easier and more enjoyable.
+    </br></br>
+    At Localists, we connect you with professionals who have helped hundreds of students build confidence, whether you’re preparing for GCSEs, A-Levels, or studying at university. Rest assured, you’ll get the right guidance for your level. Just tell us what you need, and we’ll send free quotes from tutors near you, saving you hours of searching.`,
 ];
 
 export const BREADCRUM_DATA_PHYSICS_AND_MATHS = [

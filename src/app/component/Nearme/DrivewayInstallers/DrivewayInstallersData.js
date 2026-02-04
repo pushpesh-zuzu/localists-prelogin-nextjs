@@ -310,8 +310,9 @@ export const DRIVEWAY_INSTALLERS_TABDATA = {
 };
 
 export const VETTED_DATA_DRIVEWAY_INSTALLER = [
-    `Bumps in life? inevitable. Bumps in your driveway? fixable. If you're looking to smooth things over with your driveway and give your car the VIP treatment, then ditch the red carpet for a brand new tarmac, resin or block-paved driveway.`,
-    `At Localists, we connect you with local driveway contractors who can pamper your neglected driveway back into shape. Just give us a few details, and we'll get you up to 5 free quotes straight into your inbox. No cost. No obligation. No fuss. Just sit back and let us do the legwork for you.`,
+    `Bumps in life? inevitable. Bumps in your driveway? fixable. If you're looking to smooth things over with your driveway and give your car the VIP treatment, then ditch the red carpet for a brand new tarmac, resin or block-paved driveway.
+    </br></br>
+    At Localists, we connect you with local driveway contractors who can pamper your neglected driveway back into shape. Just give us a few details, and we'll get you up to 5 free quotes straight into your inbox. No cost. No obligation. No fuss. Just sit back and let us do the legwork for you.`,
 ];
 
 export const BREADCRUM_DATA_DRIVEWAY = [

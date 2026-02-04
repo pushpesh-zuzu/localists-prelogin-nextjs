@@ -200,8 +200,9 @@ export const TUTORS_TABDATA = {
 };
 
 export const VETTED_DATA_TUTORS = [
-    `Looking for extra learning support? Find a tutor who can turn late-night stress into lightbulb moments (and maybe even a few high-fives). Whether it’s algebra giving you attitude, French verbs doing backflips, or essays that just won’t behave—we’ll help you find a local tutor who makes learning click (and maybe even fun). We’ll send you free quotes from vetted tutors straight into your inbox.`,
-    `Your perfect tutor is just a few clicks away
+    `Looking for extra learning support? Find a tutor who can turn late-night stress into lightbulb moments (and maybe even a few high-fives). Whether it’s algebra giving you attitude, French verbs doing backflips, or essays that just won’t behave—we’ll help you find a local tutor who makes learning click (and maybe even fun). We’ll send you free quotes from vetted tutors straight into your inbox.
+    </br></br>
+    Your perfect tutor is just a few clicks away
 `,
 ];
 

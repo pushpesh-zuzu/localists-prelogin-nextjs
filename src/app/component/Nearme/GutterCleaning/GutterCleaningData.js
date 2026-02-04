@@ -276,8 +276,9 @@ export const GUTTER_CLEANING_TABDATA = {
 };
 
 export const VETTED_DATA_GUTTER_CLEANING = [
-    `If you’ve got more leaves in your gutter than you have on your trees, then you’re in the right place. We’ll help you find local gutter cleaners who can unclog, clear out, and keep the rain flowing where it should—without you trembling on a rickety ladder.`,
-    `Whether it’s a one-off clearance or regular maintenance, our experts will ensure your gutters are flowing freely and your property stays protected. Share your requirements, and we’ll send free quotes from trusted local cleaners.`,
+    `If you’ve got more leaves in your gutter than you have on your trees, then you’re in the right place. We’ll help you find local gutter cleaners who can unclog, clear out, and keep the rain flowing where it should—without you trembling on a rickety ladder.
+    </br></br>
+    Whether it’s a one-off clearance or regular maintenance, our experts will ensure your gutters are flowing freely and your property stays protected. Share your requirements, and we’ll send free quotes from trusted local cleaners.`,
 ];
 
 export const BREADCRUM_DATA_GUTTER_CLEANING = [

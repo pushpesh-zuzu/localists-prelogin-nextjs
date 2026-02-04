@@ -268,8 +268,9 @@ export const VETTED_DATA_TREE_SURGEON = [
   `Do you have a garden full of misbehaving trees? Whether its oaks leaning
         like they’ve had too many, or hedges with some boundary issues,
         Localists can help you find a local tree surgeon that can set things
-        straight.`,
-  `From precise pruning, to safe removals. We’ll connect you with vetted and verified tree surgeons near you, ensuring you have healthy trees, safer spaces and peace of mind - without the hassle.`,
+        straight.
+        </br></br>
+  From precise pruning, to safe removals. We’ll connect you with vetted and verified tree surgeons near you, ensuring you have healthy trees, safer spaces and peace of mind - without the hassle.`,
 ];
 
 export const BREADCRUM_DATA_TREESURGEON = [

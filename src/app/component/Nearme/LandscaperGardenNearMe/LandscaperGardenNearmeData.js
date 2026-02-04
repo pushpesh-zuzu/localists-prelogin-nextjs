@@ -339,17 +339,17 @@ export const ADVICEINSIGHT_LANDSCAPE_NEARME = [
 ];
 export const LANDSCAPE_NEARME_TABDATA = {
   professionals: [
-    "Landscaping Specialists North Yorkshire",
-    "Landscaping Specialists Liverpool",
-    "Landscaping Specialists Manchester",
-    "Landscaping Specialists Chester",
-    "Landscaping Specialists Leeds",
-    "Landscaping Specialists York",
-    "Landscaping Specialists Harrogate",
-    "Landscaping Specialists Cheshire",
-    "Landscaping Specialists Hull",
-    "Landscaping Specialists Stockport",
-    "Landscaping Specialists Bolton",
+    "Landscapers North Yorkshire",
+    "Landscapers Liverpool",
+    "Landscapers Manchester",
+    "Landscapers Chester",
+    "Landscapers Leeds",
+    "Landscapers York",
+    "Landscapers Harrogate",
+    "Landscapers Cheshire",
+    "Landscapers Hull",
+    "Landscapers Stockport",
+    "Landscapers Bolton",
   ],
   popular: [
     {
@@ -380,18 +380,20 @@ export const LANDSCAPE_NEARME_TABDATA = {
   insight: [],
 };
 export const VETTED_DATA_LANDSCAPE_NEARME = [
-  `Is your outdoor space looking more like a wild jungle than a pristine garden? We’ll connect you with landscapers near you who can tame the weeds and sculpt the shrubs to make your garden the envy of the neighbourhood.`,
-  `Our local landscapers give you competitive quotes to ensure you get the garden of your dreams. From sleek, modern layouts to classic cottage-style gardens bursting with greenery, we have 100's of vetted garden landscapers near you that can blend creativity with practical know-how. We will send you free quotes to compare, read reviews and proceed to hire.`,
-  `Fast, Easy, and No-Obligation - Start Now!`,
+  `Is your outdoor space looking more like a wild jungle than a pristine garden? We’ll connect you with landscapers near you who can tame the weeds and sculpt the shrubs to make your garden the envy of the neighbourhood.
+  </br></br>
+  Our local landscapers give you competitive quotes to ensure you get the garden of your dreams. From sleek, modern layouts to classic cottage-style gardens bursting with greenery, we have 100's of vetted garden landscapers near you that can blend creativity with practical know-how. We will send you free quotes to compare, read reviews and proceed to hire.
+  </br></br>
+  Fast, Easy, and No-Obligation - Start Now!`,
 ];
 
 export const POPULAR_SERVICES_LANDSCAPE_NEARME = [
-  "Lawn Installation & Turfing",
-  "Garden Landscaping",
-  "Patio & Paving Installation",
-  "Hedge Trimming & Pruning",
-  "Garden Path & Walkway Installation",
-  "Planting & Soft Landscaping",
+  "Irrigation systems",
+  "Turfing",
+  "Garden brickwork",
+  "Paving",
+  "Shed building",
+  "Sleepers",
 ];
 export const FEEDBACK_LANDSCAPE_NEARME = [
   {
