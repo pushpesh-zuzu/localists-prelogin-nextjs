@@ -93,10 +93,10 @@ const HeroSection = memo(function HeroSection() {
             </div>
           </h1>
           <p
-            style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
             className="font-[Arial] font-bold tracking-[-0.03em] text-[28px] leading-[28px]
                       sm:text-[28px] sm:leading-[28px]
-                      lg:text-[28px] lg:leading-[28px] max-w-full sm:max-w-full text-white pt-[20px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
+                      lg:text-[28px] lg:leading-[28px] max-w-full sm:max-w-full text-white pt-[20px] md:pt-2 lg:pt-[18px] text-shadow-[0px 0px 4px 0px #00000040]
+                      md:text-shadow-[0px 4px 4px 0px #00000026] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
           >
             Get instant quotes from local professionals.
           </p>
