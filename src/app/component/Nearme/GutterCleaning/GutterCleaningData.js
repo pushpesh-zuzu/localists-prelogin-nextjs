@@ -310,7 +310,7 @@ export const GUTTER_CLEANING_FEEDBACK = [
     {
         id: 3,
         text: "Quick, professional, and thorough. They even helped us identify a minor leak we didn’t know about. After the gutters were cleaned, I realised how much water had been overflowing during storms. Definitely worth using a vetted service instead of trying this ourselves!",
-        name: "Thomas Martin",
+        name: "Thomas",
         // location: "Liverpool",
     },
 ];
