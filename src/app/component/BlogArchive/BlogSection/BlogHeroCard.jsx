@@ -19,7 +19,7 @@ export default function BlogHeroCard({ title, image }) {
 
       <h3
         className="
-          absolute bottom-8 left-5 md:left-10 lg:left-7
+          absolute bottom-8 left-5 lg:left-7
           text-white font-Inter font-black
         tracking-[-0.03em]
         text-[24px] leading-[24px]
