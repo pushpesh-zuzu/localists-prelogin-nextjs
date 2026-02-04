@@ -41,12 +41,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "li",
         text: "Spotting early issues like loose joints, leaks, or rust before they become expensive repairs",
-        className: "mb-[15px] md:mb-[50px]",
-    },
-    {
-        type: "h2",
-        text: "What are the signs of clogged gutters?",
-        noMarginBottom: true
+        className: "mb-0",
     },
     {
         type: "image",
@@ -54,6 +49,10 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         alt: "professional gutter cleaning using a high-pressure washer to dislodge clogs",
         marginBottom: true,
         marginTop: true
+    },
+    {
+        type: "h2",
+        text: "What are the signs of clogged gutters?",
     },
     {
         type: "p",
@@ -66,13 +65,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "p",
         text: "If you spot any of these issues, it’s best to arrange a professional gutter clearance before the problem turns into expensive damage.",
-        className: "mb-[15px] md:mb-[50px]",
-    },
-    {
-        type: "h2",
-        text: "How much does gutter cleaning cost?",
-        noMarginBottom: true
-
+        notMarginBottom: true
     },
     {
         type: "image",
@@ -80,6 +73,10 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         alt: "expert clearing dead leaves from the gutter of a red roof with gloved hands",
         marginBottom: true,
         marginTop: true
+    },
+    {
+        type: "h2",
+        text: "How much does gutter cleaning cost?",
     },
     {
         type: "p",
@@ -95,18 +92,19 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     },
     {
         type: "GutterPriceSection",
-    },
-    {
-        type: "h2",
-        text: "Can you clean gutters yourself?",
-        noMarginBottom: true
+        // className: 'mb-0 mt-0'
     },
     {
         type: "image",
         src: "/nearme/gutter-cleaning1.webp",
         alt: "expert fixing some fittings after gutter cleaning",
         marginBottom: true,
-        marginTop: true,
+        // marginTop: true,
+    },
+    {
+        type: "h2",
+        text: "Can you clean gutters yourself?",
+        // noMarginBottom: true
     },
     {
         type: "p",

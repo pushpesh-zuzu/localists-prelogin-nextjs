@@ -49,7 +49,7 @@ export default function LandScapingGardenPopularJobs({
             </p>
 
             {/* 🔥 Centered Services Section */}
-            <div className=" flex md:hidden items-center justify-center">
+            <div className="flex md:hidden items-center justify-start">
               <div className={`${mobileCardClass}`}>
                 <div className={`flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4`}>
                   {services.map((service) => (

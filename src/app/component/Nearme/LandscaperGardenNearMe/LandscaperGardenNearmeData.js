@@ -16,6 +16,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "h2",
     text: "Benefits of hiring a local landscape gardener",
+    className: "mt-5 lg:mt-[72px]"
   },
 
   {
@@ -57,6 +58,14 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "li",
     text: "<strong>Creative extras</strong> - Features you may have avoided implementing yourself due to lack of experience can be implemented by our local landscape gardeners. With our landscapers, your dream of fancy water features and bespoke decking is now a reality.",
+    className: "mb-0"
+  },
+  {
+    type: "image",
+    src: "/nearme/Landscaping/dripIrigation.webp",
+    alt: "Drip irrigation system being installed by a professional landscaper",
+    marginTop: true,
+    marginBottom: true,
   },
   {
     type: "h2",
@@ -84,8 +93,8 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   },
   {
     type: "image",
-    src: "/nearme/Landscaping/dripIrigation.webp",
-    alt: "Drip irrigation system being installed by a professional landscaper",
+    src: "/nearme/Landscaping/residentialProperty.webp",
+    alt: "newly completed landscaping project in a residential property ",
     marginTop: true,
     marginBottom: true,
   },
@@ -102,18 +111,12 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     text: "A landscaper, on the other hand, goes beyond maintenance. A landscape gardener or landscape architect can design and build outdoor spaces, often from the ground up. They handle both hard landscaping (paths, patios, walls) and soft landscaping (planting schemes, turfing). Many landscapers also provide maintenance services, so the line can blur.",
     notMarginBottom: true,
   },
-  {
-    type: "image",
-    src: "/nearme/Landscaping/residentialProperty.webp",
-    alt: "newly completed landscaping project in a residential property ",
-    marginTop: true,
-    marginBottom: true,
-  },
   // { type: "getQuotesButton", text: "Get Quotes Now", className:'mb-[15px] xl:mb-[25px]' },
   {
     type: "PostCodeSection",
     // className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
-    className: 'mb-[30px] xl:mb-[60px] mt-[15px] lg:mt-[0px]'
+    className: 'mb-[30px] xl:mb-[60px] mt-[30px] lg:mt-[60px]'
+    // mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]
   },
   {
     type: "h2",
@@ -207,7 +210,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     text: "Services may also include wildlife-focused landscaping such as rain gardens, pollinator-friendly planting, wildflower meadows, and foodscaping (edible gardens that blend with the landscape). These projects support biodiversity while adding beauty and function.",
     notMarginBottom: true,
   },
- {
+  {
     type: "image",
     src: "/nearme/Landscaping/plantsAndFlowers.webp",
     alt: "Professional landscaper carefully placing different plants and flowers around site",
@@ -218,7 +221,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     type: "h2",
     text: "How much does a landscape gardener cost?",
   },
- 
+
   {
     type: "p",
     text: "The cost of landscaping depends on several factors - the size of your garden, the type of materials (sandstone vs. porcelain paving), the plants you choose, and even the level of detail in your design can make costs significantly higher or lower.",
@@ -399,20 +402,20 @@ export const FEEDBACK_LANDSCAPE_NEARME = [
   {
     id: 1,
     text: "We needed our back garden completely re-landscaped with a new patio and lawn. The local landscaper we found through Localists was fantastic – clear quotes, turned up on time, and gave us design suggestions we hadn’t even thought of. The patio looks amazing, and the kids love the new grassed area. Couldn’t be happier.",
-    name: "Rebecca T., ",
-    location: "Hartlepool",
+    name: "Rebecca T",
+    // location: "Hartlepool",
   },
   {
     id: 2,
     text: "Our space was overgrown and difficult to maintain. The landscaper handled everything – from clearing the site to installing raised beds, new fencing, and low-maintenance planting. They even built in a small water feature which has made the garden feel so peaceful. The whole process was stress-free and worth every penny.",
-    name: "Daniel M.,",
-    location: "Salisbury",
+    name: "Daniel M",
+    // location: "Salisbury",
   },
   {
     id: 3,
     text: "I only wanted some soft landscaping at first (new shrubs and borders), but the contractor also helped with drainage issues and suggested lighting that really makes the garden shine at night. They kept everything tidy, updated me throughout, and the price was fair. Highly recommend using Localists to find trusted landscapers.",
-    name: "Jamie K.,",
-    location: "Bristol",
+    name: "Jamie K",
+    // location: "Bristol",
   },
 ];
 

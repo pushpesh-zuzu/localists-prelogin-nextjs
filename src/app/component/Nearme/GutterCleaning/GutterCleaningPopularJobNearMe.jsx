@@ -37,8 +37,8 @@ export default function GutterCleaningPopularJobNearMe({
                         </p>
 
                         {/* 🔥 Centered Services Section */}
-                        <div className=" flex md:hidden items-center justify-center">
-                            <div className="w-[205px] min-[440px]:w-[302px] min-[512px]:w-[350px]">
+                        <div className=" flex md:hidden items-center justify-start">
+                            <div className="w-[265px] min-[440px]:w-[302px] min-[512px]:w-[350px]">
                                 <div className="flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4 md:max-w-[400px] xl:max-w-full">
                                     {services.map((service) => (
                                         <ServicesButton
