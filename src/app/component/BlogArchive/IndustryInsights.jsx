@@ -56,7 +56,7 @@ export default function IndustryInsights() {
                     className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px]"
                 >
                     Get the latest insights from industries you care about. Just click any
-                    of the buttons below to get in depth expert
+                    of the buttons below to get in depth expert{" "}
                     <span className="lg:block">
                         advice in whichever industry you select.
                     </span>

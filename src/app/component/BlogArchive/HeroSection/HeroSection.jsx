@@ -55,7 +55,7 @@ const HeroSection = memo(function HeroSection() {
             style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
             className="max-w-[204px] sm:max-w-full text-white pt-[18px] md:pt-2 lg:pt-[18px]"
           >
-            Get the latest advice, insight and news from
+            Get the latest advice, insight and news from{" "}
             <span className="lg:block">
               localists with our dedicated blog
             </span>
