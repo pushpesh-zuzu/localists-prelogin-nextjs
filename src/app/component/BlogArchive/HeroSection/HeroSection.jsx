@@ -40,15 +40,16 @@ const HeroSection = memo(function HeroSection() {
         {/* LEFT CONTENT */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center xl:ml-[43px] xl:pb-3">
           <H1 className="text-white block drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
-            <p className="md:hidden lg:block">
+            {/* Mobile */}
+            <p className="md:hidden">
               Advice & <span className="text-[#253238] block">insight.</span>
             </p>
-            <div className="hidden md:block lg:hidden">
-              Advice &
-              <div className="flex">
-                &nbsp;<span className="text-[#253238] block">Insight.</span>
-              </div>
-            </div>
+            <p className="hidden md:block lg:hidden">
+              Advice & <span className="text-[#253238] inline">Insight.</span>
+            </p>
+            <p className="hidden lg:block">
+              Advice & <span className="text-[#253238] block">insight.</span>
+            </p>
           </H1>
 
           <Paragraph1
@@ -63,7 +64,7 @@ const HeroSection = memo(function HeroSection() {
         </div>
 
         {/* RIGHT CONTENT */}
-       <div className="w-full lg:w-1/2 flex flex-col justify-center items-start -mt-[30px] lg:mt-0">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center items-start -mt-[30px] lg:mt-0">
           <HeroSectionSearch />
 
           {/* SPACE BETWEEN SEARCH & SERVICES */}

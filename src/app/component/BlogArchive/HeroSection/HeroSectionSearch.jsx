@@ -57,7 +57,7 @@ function HeroSectionSearch() {
           type="text"
           placeholder="Search..."
           id="search Attribute"
-          className="text-[#B3B3B3] font-bold px-4 py-2.5 md:px-6 md:py-2.5 xl:px-[43px] xl:py-4 mt-5 md:mt-6 xl:mt-[46px] text-base xl:text-[25px]! placeholder:text-base xl:placeholder:text-[25px]! bg-white border-[1.5px] border-gray-300 rounded-[100px] w-full focus:outline-none"
+          className="text-[#B3B3B3] font-bold px-4 py-2.5 md:px-6 md:py-2.5 xl:px-[43px] xl:py-4 mt-5 md:mt-6 xl:mt-[46px] text-base xl:text-[25px]! placeholder:text-base xl:placeholder:text-[25px]! bg-white rounded-[100px] w-full focus:outline-none"
           aria-label="Search for a service"
           value={searchQuery || ""}
           onChange={(e) => {

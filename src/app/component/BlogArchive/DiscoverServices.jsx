@@ -109,7 +109,6 @@ justify-center
           text-base xl:text-[25px]!
           placeholder:text-base xl:placeholder:text-[25px]!
           bg-white
-          border-[1.5px] border-gray-300
           rounded-[100px]
           w-full
           focus:outline-none
@@ -163,12 +162,11 @@ justify-center
     drop-shadow-[0_0px_3.67px_rgba(0,0,0,0.25)]
     text-center
     md:text-left
-  "
-                    >
+  " >
                         Free quotes, with zero
-                        <p className="inline md:block"> obligation.</p>
+                        <p className="inline lg:block"> obligation.</p>
 
-                        <div className="flex justify-center md:justify-end mt-[15px] lg:mt-0">
+                        <div className="flex justify-center lg:justify-end mt-[15px] lg:mt-0">
                             <LocationIcon />
                         </div>
                     </div>

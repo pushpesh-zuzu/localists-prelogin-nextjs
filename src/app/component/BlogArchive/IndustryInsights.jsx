@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Paragraph1 from "../UI/Typography/Paragraph1";
 import H1 from "../UI/Typography/H1";
-import Button from "../UI/Typography/Button";
+// import Button from "../UI/Typography/Button";
 import ChevroliteDoubleDownIcon from "../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
+import GetQuote from "../common/GetQuotes/GetQuote";
 
 
 const insights = [
@@ -43,9 +44,7 @@ export default function IndustryInsights() {
                         {/* Tablet only */}
                         <div className="hidden md:block lg:hidden text-[36px] leading-[38px]">
                             Industry
-                            <div className="flex">
-                                &nbsp;<span className="text-[#253238]">Insights.</span>
-                            </div>
+                            &nbsp;<span className="text-[#253238]">Insights.</span>
                         </div>
 
                     </H1>
@@ -167,9 +166,10 @@ export default function IndustryInsights() {
                 </div>
 
                 <div className="flex justify-center mt-6 xl:mt-12">
-                    <Button variant="primary" className="bg-[#253238] hover:bg-[#1b2326] cursor-pointer px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] text-white rounded-full">
-                        Show More
-                    </Button>
+                    <GetQuote
+                        text="Show More"
+                        classGetQuote="py-[7px] xl:py-4 xl:px-[30px] hover:!bg-[#1b2326]"
+                    />
                 </div>
 
             </div>

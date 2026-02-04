@@ -2,8 +2,9 @@
 
 import BlogCards from "./Blogcards";
 import BlogHeroCard from "./BlogHeroCard";
-import Button from "../../UI/Typography/Button";
+// import Button from "../../UI/Typography/Button";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
+import GetQuote from "../../common/GetQuotes/GetQuote";
 
 
 const blogs = [
@@ -43,7 +44,7 @@ const blogs = [
         title: "Rubber roofing cost in 2026: The full Breakdown",
         image: "/images/BlogPage/plates.webp",
     },
-     {
+    {
         title: "State vs tile roof: Which one is best for your home?",
         image: "/images/BlogPage/frame.webp",
     },
@@ -70,10 +71,13 @@ export default function BlogGridSection() {
                 </div>
 
                 <div className="flex justify-center mt-6 xl:mt-12">
-                    <Button variant="primary" className="bg-[#253238] cursor-pointer px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] text-white hover:bg-[#1b2326] rounded-full">
-                        Show More
-                    </Button>
+                    <GetQuote
+                        text="Show More"
+                        classGetQuote="py-[7px] xl:py-4 xl:px-[30px] hover:!bg-[#1b2326]"
+                    />
                 </div>
+
+
             </section>
         </WrapperBGWidth>
     );
