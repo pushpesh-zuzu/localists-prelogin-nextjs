@@ -28,7 +28,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
                 quality={85}
                 priority={false}
               />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
               <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base sm:leading-4 xl:leading-7 font-black xl:text-[25px] -tracking-[3%]">
                 {articles[0].title}
               </h3>
@@ -44,7 +44,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
                 quality={85}
                 priority
               />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
               <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base sm:leading-4 xl:leading-7 font-black xl:text-[25px] -tracking-[3%] xl:max-w-[79%]">
                 {articles[1].title}
               </h3>
@@ -67,7 +67,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
                   priority={false}
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
                 <h3
                   className={`absolute bottom-4 left-4 right-4 text-white text-sm md:text-base sm:leading-4 xl:leading-7 font-black xl:text-[25px] -tracking-[3%] xl:max-w-[80%]`}
                 >
@@ -90,7 +90,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
               quality={85}
               priority
             />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
             <h3
               className="absolute bottom-4 left-4 right-4 text-white leading-4 text-[12px]
               [@media(min-width:360px)]:text-[15px] font-black xl:text-[25px] -tracking-[3%]"
@@ -112,7 +112,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
                 priority={false}
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
               <h3
                 className="absolute bottom-4 leading-4 left-4 right-4 text-white text-[12px]
                             [@media(min-width:360px)]:text-[15px] font-black xl:text-[25px] -tracking-[3%] "
@@ -144,9 +144,11 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
         </div>
 
         <div className="flex justify-center mt-6 xl:mt-12">
-          <Button className="bg-[#253238] px-4.5 py-2 xl:py-[15px] md:px-9 xl:px-[66px] rounded-full text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+          <a href="/en/gb/blog">
+          <Button className="bg-[#253238] cursor-pointer hover:bg-[#00aef3] px-4.5 py-2 xl:py-[15px] md:px-9 xl:px-[66px] rounded-full text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
             Read More
           </Button>
+          </a>
         </div>
       </section>
     </WrapperBGWidth>

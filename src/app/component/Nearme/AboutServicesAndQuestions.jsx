@@ -32,9 +32,7 @@ const AboutServicesAndQuestions = ({
             className={`max-w-[100%] md:max-w-full ${block?.noMarginBottom
               ? "mb-0"
               : "mb-5 md:mb-[25px]"
-              }
-              ${block.marginTop? "mt-5 md:mt-[50px]" : "mt-0"}
-              `}
+              } ${block?.className? block?.className :""}`}
           />
         );
       case "image":

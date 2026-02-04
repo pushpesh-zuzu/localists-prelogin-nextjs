@@ -205,20 +205,20 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "Services may also include wildlife-focused landscaping such as rain gardens, pollinator-friendly planting, wildflower meadows, and foodscaping (edible gardens that blend with the landscape). These projects support biodiversity while adding beauty and function.",
+    notMarginBottom: true,
   },
-
-  {
-    type: "h2",
-    text: "How much does a landscape gardener cost?",
-    noMarginBottom: true,
-  },
-  {
+ {
     type: "image",
     src: "/nearme/Landscaping/plantsAndFlowers.webp",
     alt: "Professional landscaper carefully placing different plants and flowers around site",
     marginTop: true,
     marginBottom: true,
   },
+  {
+    type: "h2",
+    text: "How much does a landscape gardener cost?",
+  },
+ 
   {
     type: "p",
     text: "The cost of landscaping depends on several factors - the size of your garden, the type of materials (sandstone vs. porcelain paving), the plants you choose, and even the level of detail in your design can make costs significantly higher or lower.",

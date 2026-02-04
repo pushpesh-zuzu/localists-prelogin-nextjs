@@ -140,6 +140,14 @@ const Footer = () => {
                     About Localists
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/en/gb/blog"
+                    className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px]  xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
+                  >
+                    Blog
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -307,6 +315,12 @@ const Footer = () => {
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       About Localists
+                    </Link>
+                    <Link
+                      href="/en/gb/blog"
+                      className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
+                    >
+                      Blog
                     </Link>
                   </div>
                 )}

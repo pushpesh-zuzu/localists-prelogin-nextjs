@@ -69,7 +69,7 @@ export default function Header() {
                   alt="Localists - Local Service Provider Directory"
                   width={168}
                   height={38}
-                  className=" md:w-[89px] sm:h-5 lg:w-[168px] lg:h-7"
+                  className=" md:w-[89px] sm:h-5 lg:w-[147px] lg:h-7"
                   priority
                   fetchPriority="high"
                   loading="eager"

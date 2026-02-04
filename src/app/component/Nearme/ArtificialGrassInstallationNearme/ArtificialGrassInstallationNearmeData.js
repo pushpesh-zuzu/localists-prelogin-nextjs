@@ -37,18 +37,18 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   {
     type: "li",
     text: "<strong>Local expertise</strong> – Because installers are based near you, they understand the ground conditions and drainage issues common in your area. That means your artificial lawn won’t just look amazing on day one. It will be fitted with the right base, drainage, and finish to stay smooth, safe, and durable for years, whatever the weather.",
+    className:'mb-0'
   },
-  {
-    type: "h3",
-    text: "How to install artificial grass? ",
-    className: "mt-[15px] lg:mt-[25px]",
-  },
-   {
+    {
     type: "image",
     src: "/nearme/Artificial/polyurethane.webp",
     alt: "Man pouring polyurethane adhesive for strong bond artificial turf installation",
     marginBottom: true,
     marginTop: true,
+  },
+  {
+    type: "h3",
+    text: "How to install artificial grass? ",
   },
 
   {
@@ -74,19 +74,19 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   {
     type: "li",
     text: "<strong>Brushing & infill</strong> – To finish, the grass fibres are brushed upright for a natural look, and a layer of sand infill may be added for extra weight, stability, and softness underfoot.",
+  className:'mb-0'
   },
-  {
-    type: "h2",
-    text: "Choosing the right expert near you ",
-    noMarginBottom: true,
-  },
-  {
+   {
     type: "image",
     src: "/nearme/Artificial/footballField.webp",
     alt: "artificial grass installation by expert installer on a small football field",
     marginBottom: true,
     marginTop: true,
   },
+  {
+    type: "h2",
+    text: "Choosing the right expert near you ",
+  }, 
   {
     type: "p",
     text: "While DIY installation is possible, getting the base and drainage right can be challenging. That’s why most people choose to hire professionals for the job. But how do you choose the right expert? Asking plenty of questions can help you get closer to picking the perfect artificial grass installer. ",
