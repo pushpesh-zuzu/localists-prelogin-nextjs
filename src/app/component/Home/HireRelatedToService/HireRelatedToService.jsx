@@ -78,7 +78,7 @@ export default function HireRelatedToService({
             </nav>
           </div>
         </header>
-        <div className="flex flex-wrap gap-y-2 xl:gap-y-[23px] gap-3.5 lg:gap-[23px] w-full md:max-w-full">
+        <div className="flex flex-wrap gap-y-2 xl:gap-y-[23px] gap-2 lg:gap-[23px] w-full md:max-w-full">
           {tabData[currentTab]?.map((item, i) => {
             if (typeof item === "object") {
               return <JobButton key={i} title={item.title} url={item.url} />;

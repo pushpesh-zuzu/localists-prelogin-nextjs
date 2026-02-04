@@ -94,7 +94,7 @@ function HeroSectionSearch() {
           onClick={() => {
             handleSubmit();
           }}
-          className="absolute inset-y-0 top-3 xl:-top-4 right-[19px] xl:right-10 flex items-center "
+          className="absolute inset-y-0 top-3 md:top-1 xl:-top-4 right-[19px] xl:right-10 flex items-center "
         >
           <SearchIcon className="cursor-pointer w-6 h-6 md:w-5 md:h-5 lg:w-8 lg:h-8 mt-5 xl:mt-16" />
         </div>
