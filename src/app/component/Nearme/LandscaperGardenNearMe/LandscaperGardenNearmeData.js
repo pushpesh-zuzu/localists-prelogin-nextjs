@@ -115,8 +115,15 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "PostCodeSection",
     // className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
-    className: 'mb-[30px] xl:mb-[60px] mt-[30px] lg:mt-[60px]'
+    className: 'mb-0 mt-[30px] lg:mt-[60px]'
     // mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]
+  },
+  {
+    type: "image",
+    src: "/nearme/Landscaping/plantingBeds.webp",
+    alt: "new landscape backgarden project with raised planting beds",
+    marginTop: true,
+    marginBottom: true,
   },
   {
     type: "h2",
@@ -183,16 +190,8 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "Many landscapers install features such as fire pits, raised beds, seating areas, water features, and lighting. These additions enhance both the usability and aesthetic of a garden.",
-    notMarginBottom: true,
+    // notMarginBottom: true,
   },
-  {
-    type: "image",
-    src: "/nearme/Landscaping/plantingBeds.webp",
-    alt: "new landscape backgarden project with raised planting beds",
-    marginTop: true,
-    marginBottom: true,
-  },
-
   {
     type: "h3",
     text: "Eco-friendly & sustainable sandscaping",

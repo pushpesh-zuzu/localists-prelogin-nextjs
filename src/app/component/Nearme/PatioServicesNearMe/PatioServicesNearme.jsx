@@ -31,7 +31,7 @@ import {
   QUESTION_AND_ABOUT_SERVICE_PATIO_SERVICES_NEARME,
   VETTED_DATA_PATIO_SERVICES_NEARME,
 } from "./PatioServicesData";
-import GetQuote from "../../common/GetQuotes/GetQuote";
+// import GetQuote from "../../common/GetQuotes/GetQuote";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
@@ -97,12 +97,12 @@ function PatioServicesNearme() {
       />
       {/* </PaddingWrapper> */}
       <FAQ data={FREQUENTLY_DATA_PATIO_SERVICES_NEARME} />
-      <div className={`flex justify-center mb-[15px] xl:mb-[25px]`}>
+      {/* <div className={`flex justify-center mb-[15px] xl:mb-[25px]`}>
         <GetQuote
           variant="primary"
           text={"Get Quotes From Patio Contractors Today"}
         />
-      </div>
+      </div> */}
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}
       <DiscoverNearMe homeData={DISCOVER_PATIO_SERVICES_NEARME_DATA} />
       <NearmeMember
