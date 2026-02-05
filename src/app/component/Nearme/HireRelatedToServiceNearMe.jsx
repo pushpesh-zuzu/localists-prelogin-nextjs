@@ -63,8 +63,8 @@ export default function HireRelatedToServiceNearMe({
   };
 
   const tabs = [
-    { lable: "Popular Jobs", activtab: "popular" },
     { lable: "Find Professionals", activtab: "professionals" },
+    { lable: "Popular Jobs", activtab: "popular" },
     { lable: "Advice & Insight", activtab: "insight" },
   ].filter((tab) => tabData?.[tab.activtab]?.length > 0);
 
