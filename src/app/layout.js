@@ -36,8 +36,8 @@ export default function RootLayout({ children }) {
         <StoreProvider>
           {/* <Header /> */}
           {children}
-          {/* <TrackingScripts />
-          <NoscriptTags /> */}
+          {/* <TrackingScripts /> */}
+          <NoscriptTags />
 
           {/* Global Cookie Consent */}
             <SEO canonicalPath={'/en/gb'}/>
