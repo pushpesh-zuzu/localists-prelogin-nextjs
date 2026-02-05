@@ -416,7 +416,7 @@ export const FEEDBACK_LANDSCAPE_NEARME = [
     name: "Daniel M.",
     // location: "Bristol",
   },
-   {
+  {
     id: 4,
     text: "I only wanted some soft landscaping at first (new shrubs and borders), but the contractor also helped with drainage issues and suggested lighting that really makes the garden shine at night. They kept everything tidy, updated me throughout, and the price was fair. Highly recommend using Localists to find trusted landscapers.",
     name: "Jamie K.",
@@ -475,6 +475,13 @@ export const DISCOVER_LANDSCAPE_NEARME_DATA = [
     isSpecial: false,
     slug: "/en/gb/gutter-cleaning-near-me",
   },
+  {
+    id: 8,
+    title: "Roofing",
+    image: "/roofing.webp",
+    isSpecial: false,
+    slug: "/en/gb/roofers-near-me",
+  }
 ];
 export const BREADCRUM_DATA_LANDSCAPE_NEARME = [
   { title: "Home & Garden", path: "/en/gb/home" },

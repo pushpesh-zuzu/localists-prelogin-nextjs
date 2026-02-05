@@ -15,6 +15,7 @@ import {
   LandscapingSlider,
   PatioServicesSlider,
   TreeSurgeonSlider,
+  RoofingSlider
 } from "@/app/component/level3/imagesServices";
 
 // const CATEGORIES = [
@@ -143,6 +144,12 @@ const PopularCategoriesData = [
     title: "Gutter Cleaning",
     image: GutterCleanerSlider,
     path: "gutter-cleaning-near-me",
+  },
+  {
+    id: 8,
+    title: "Roofing",
+    image: RoofingSlider,
+    path: "roofers-near-me",
   },
 ];
 

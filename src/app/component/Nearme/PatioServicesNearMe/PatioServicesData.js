@@ -423,6 +423,13 @@ export const DISCOVER_PATIO_SERVICES_NEARME_DATA = [
     isSpecial: false,
     slug: "/en/gb/gutter-cleaning-near-me",
   },
+  {
+    id: 8,
+    title: "Roofing",
+    image: "/roofing.webp",
+    isSpecial: false,
+    slug: "/en/gb/roofers-near-me",
+  }
 ];
 export const BREADCRUM_DATA_PATIO_SERVICES_NEARME = [
   { title: "Home & Garden", path: "/en/gb/home" },

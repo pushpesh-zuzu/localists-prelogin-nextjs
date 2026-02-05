@@ -234,34 +234,34 @@ export const TREE_SURGEON_TABDATA = {
     "Tree Surgeons Stockport",
     "Tree Surgeons Bolton",
   ],
-popular: [
+  popular: [
     {
-        title: "Landscapers Near Me",
-        url: "/en/gb/landscape-gardeners-near-me",
+      title: "Landscapers Near Me",
+      url: "/en/gb/landscape-gardeners-near-me",
     },
     {
-        title: "Gardeners Near Me",
-        url: "",
+      title: "Gardeners Near Me",
+      url: "",
     },
     {
-        title: "Fence and Gate Installation Near Me",
-        url: "/en/gb/fencing-contractors-near-me",
+      title: "Fence and Gate Installation Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
     },
     {
-        title: "Architects Near Me",
-        url: "",
+      title: "Architects Near Me",
+      url: "",
     },
     {
-        title: "Gutter Cleaners Near Me",
-        url: "/en/gb/gutter-cleaning-near-me",
+      title: "Gutter Cleaners Near Me",
+      url: "/en/gb/gutter-cleaning-near-me",
     },
     {
-        title: "Artificial Grass Installers Near Me",
-        url: "/en/gb/artificial-grass-installers-near-me",
+      title: "Artificial Grass Installers Near Me",
+      url: "/en/gb/artificial-grass-installers-near-me",
     },
-],
+  ],
   insight: [
-    
+
   ],
 };
 export const VETTED_DATA_TREE_SURGEON = [
@@ -317,7 +317,7 @@ export const TREE_SURGEON_DATA = [
     image: "/homepage/image6.webp",
     isSpecial: true,
     bgColor: "bg-cyan-400",
-    slug:"/en/gb/home"
+    slug: "/en/gb/home"
 
   },
   {
@@ -363,4 +363,11 @@ export const TREE_SURGEON_DATA = [
     isSpecial: false,
     slug: "/en/gb/gutter-cleaning-near-me",
   },
+  {
+    id: 8,
+    title: "Roofing",
+    image: "/roofing.webp",
+    isSpecial: false,
+    slug: "/en/gb/roofers-near-me",
+  }
 ];

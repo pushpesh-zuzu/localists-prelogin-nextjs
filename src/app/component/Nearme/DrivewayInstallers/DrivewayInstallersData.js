@@ -288,16 +288,16 @@ export const DRIVEWAY_INSTALLERS_TABDATA = {
             url: "",
         },
         {
-            title: "Fencing Contractors Near Me",
-            url: "/en/gb/fencing-contractors-near-me",
-        },
-        {
             title: "Architects Near Me",
             url: "",
         },
         {
             title: "Gutter Cleaners Near Me",
             url: "/en/gb/gutter-cleaning-near-me",
+        },
+        {
+            title: "Fencing Contractors Near Me",
+            url: "/en/gb/fencing-contractors-near-me",
         },
         {
             title: "Artificial Grass Installers Near Me",
@@ -405,4 +405,11 @@ export const DRIVEWAY_INSTALLERS_DATA = [
         isSpecial: false,
         slug: "/en/gb/tree-surgeon-near-me",
     },
+    {
+        id: 8,
+        title: "Roofing",
+        image: "/roofing.webp",
+        isSpecial: false,
+        slug: "/en/gb/roofers-near-me",
+    }
 ];

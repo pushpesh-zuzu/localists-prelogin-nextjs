@@ -301,4 +301,11 @@ export const FENCE_AND_GATE_DATA = [
         isSpecial: false,
         slug: "/en/gb/tree-surgeon-near-me",
     },
+    {
+        id: 8,
+        title: "Roofing",
+        image: "/roofing.webp",
+        isSpecial: false,
+        slug: "/en/gb/roofers-near-me",
+    }
 ];
