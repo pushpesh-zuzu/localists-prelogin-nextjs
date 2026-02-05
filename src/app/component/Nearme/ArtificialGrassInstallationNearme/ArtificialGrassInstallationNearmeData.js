@@ -335,9 +335,9 @@ export const VETTED_DATA_ARTIFICIAL_GRASS_NEARME = [
 
 export const POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME = [
   "Re-Seaming",
+  "Weed Membrane Installation",
   "Replacement",
   "Sub-Base Installation",
-  "Weed Membrane Installation",
   "Edging & Border Installation",
   "Drainage System Installation",
 ];
