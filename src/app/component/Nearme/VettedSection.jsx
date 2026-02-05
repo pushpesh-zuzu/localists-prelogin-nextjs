@@ -32,7 +32,7 @@ function VettedSection({
               <Paragraph
                 key={index}
                 className="tracking-[0em]!"
-                bold="font-bold"
+                bold="font-normal"
                 variant="secondary"
               >
                 <span

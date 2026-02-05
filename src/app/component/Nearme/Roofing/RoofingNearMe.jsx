@@ -49,7 +49,7 @@ function RoofingNearMe() {
     return (
         <>
             <CloseBrowserAbandon />
-            {/* <FAQScript FAQ={FREQUENTLY_DATA_DRIVEWAY_INSTALLERS} /> */}
+            <FAQScript FAQ={FREQUENTLY_DATA_ROOFING} />
             <HeroSectionNearMe
                 heading1="Find Roofers"
                 heading2="Near You"
