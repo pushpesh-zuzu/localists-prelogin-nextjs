@@ -77,7 +77,8 @@ function PatioServicesNearme() {
         services={POPULAR_SERVICES_PATIO_SERVICES_NEARME}
         popularImage="/nearme/Patio/PatioServicesPopularJobs.webp"
         altText="stone paver patio installation in progress with drainage installed"
-        mobileCardClass="w-[302px] min-[440px]:w-[288px] min-[512px]:w-[331px]"
+        // mobileCardClass="w-[302px] min-[440px]:w-[288px] min-[512px]:w-[331px]"
+        mobileCardClass="w-full"
         classNameD="md:max-w-[392px] xl:max-w-full"
       />
       <HowItWorkNearMe />

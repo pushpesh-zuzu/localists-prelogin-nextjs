@@ -390,12 +390,12 @@ export const VETTED_DATA_LANDSCAPE_NEARME = [
 ];
 
 export const POPULAR_SERVICES_LANDSCAPE_NEARME = [
-  "Irrigation systems",
+  "Garden brickwork",
   "Turfing",
+  "Paving",
+  "Irrigation systems",
   "Sleepers",
   "Shed building",
-  "Paving",
-  "Garden brickwork",
 ];
 export const FEEDBACK_LANDSCAPE_NEARME = [
   {

@@ -28,6 +28,9 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="en">
+      <head>
+        <TrackingScripts />
+      </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning
       >
         <StoreProvider>

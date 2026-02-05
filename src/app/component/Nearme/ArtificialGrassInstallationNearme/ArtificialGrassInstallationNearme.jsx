@@ -79,7 +79,8 @@ function ArtificialGrassInstallationNearme() {
         services={POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME}
         popularImage="/nearme/Artificial/artificialPopularJobs.webp"
         altText="Grass fitter hand cutting artificial turf with sharp cutter"
-        mobileCardClass="w-[265px] min-[375px]:w-[270px] min-[430px]:w-[270px] min-[512px]:w-[350px] "
+        // mobileCardClass="w-[265px] min-[375px]:w-[270px] min-[430px]:w-[270px] min-[512px]:w-[350px] "
+        mobileCardClass='w-full'
         classNameD="md:max-w-[396px] lg:max-w-[450px] xl:max-w-full"
       />
       <HowItWorkNearMe />
