@@ -41,7 +41,7 @@ function LandingLandscapingPPC() {
   return (
     <>
       <CloseBrowserAbandon />
-      {isClient && (
+      {/* {isClient && (
         <div>
           {isDesktop ? (
             <NavigationDetectorDesktop />
@@ -49,7 +49,7 @@ function LandingLandscapingPPC() {
             <NavigationDetectorWithConfirmations />
           )}
         </div>
-      )}
+      )} */}
       <FindDetailAndBannerWrapper
         title={LANDING_TITLES_AND_META["landscaping_ppc"]?.title}
         paragraphs={LANDING_DETAIL_DATA["landscaping_ppc"].paragraphs}

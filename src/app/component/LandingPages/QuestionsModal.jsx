@@ -15,6 +15,7 @@ import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import { X } from "lucide-react";
 import Button1 from "../UI/Typography/Button1";
+import { extractAllParams } from "@/utils/decodeURLParams";
 
 const QuestionModal = ({
   questions = [],
@@ -27,7 +28,6 @@ const QuestionModal = ({
   isStartWithQuestionModal
 }) => {
   const dispatch = useDispatch();
-  const searchParams = useSearchParams();
   const { buyerRequest, requestLoader, citySerach, questionanswerData } =
     useSelector((state) => state.buyer);
   const { service } = useSelector((state) => state.findJobs);
@@ -41,14 +41,22 @@ const QuestionModal = ({
   const [questionHistory, setQuestionHistory] = useState([0]);
 
   // Get URL params
-  const campaignid = searchParams?.get("campaignid");
-  const keyword = searchParams?.get("keyword");
-  const gclid = searchParams?.get("gclid");
-  const campaign = searchParams?.get("utm_campaign");
-  const adGroup = searchParams?.get("AgId");
-  const targetID = searchParams?.get("utm_term");
-  const msclickid = searchParams?.get("utm_msclkid");
-  const utm_source = searchParams?.get("utm_source");
+    const { search } = useSearchParams();
+                const allParams =
+                    typeof window !== "undefined" &&
+             extractAllParams(search || window.location.search);
+             const campaignid = allParams.campaign_id || "";
+             const keyword = allParams.keyword || "";
+             const gclid = allParams.gclid || "";
+             const msclkid = allParams.msclkid || "";
+             const adgroup_id = allParams.adgroup_id;
+             const platform_source = allParams.source || "";
+             const campaign = allParams.campaign || "";
+             const adgroup = allParams.adgroup || "";
+             const matchtype = allParams.matchtype || "";
+             const device = allParams.device || "";
+             const loc_physical_ms = allParams.loc_physical_ms || "";
+             const utm_search_term = allParams.utm_search_term || "";
 
   useEffect(() => {
     if (questions.length > 0 && currentQuestion === -1) {
@@ -194,10 +202,14 @@ const QuestionModal = ({
         formData.append("campaignid", campaignid || "");
         formData.append("gclid", gclid || "");
         formData.append("campaign", campaign || "");
-        formData.append("adgroup", adGroup || "");
-        formData.append("targetid", targetID || "");
-        formData.append("msclickid", msclickid || "");
-        formData.append("utm_source", utm_source || "");
+        formData.append("adgroup", adgroup || "");
+        formData.append("msclickid", msclkid || "");
+        formData.append("adgroup_id", adgroup_id || "");
+        formData.append("matchtype", matchtype || "");
+        formData.append("device", device || "");
+        formData.append("loc_physical_ms", loc_physical_ms || "");
+        formData.append("utm_search_term", utm_search_term || "");
+        formData.append("platform_source", platform_source);
         formData.append("keyword", keyword || "");
         formData.append("entry_url", url);
         formData.append("user_ip_address", ip);

@@ -41,7 +41,7 @@ function LandingArtificialGrassInstallationAwin() {
   return (
     <>
       <CloseBrowserAbandon />
-      {isClient && (
+      {/* {isClient && (
         <div>
           {isDesktop ? (
             <NavigationDetectorDesktop />
@@ -49,7 +49,7 @@ function LandingArtificialGrassInstallationAwin() {
             <NavigationDetectorWithConfirmations />
           )}
         </div>
-      )}
+      )} */}
       <FindDetailAndBannerWrapper
         title={
           LANDING_TITLES_AND_META["artificial_grass_installation_ppc"]?.title

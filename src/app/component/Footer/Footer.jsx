@@ -12,6 +12,8 @@ import FacebookIcon from "../../../../public/ReactIcons/FacebookIcon";
 import InstagramIcon from "../../../../public/ReactIcons/InstagramIcon";
 import XIcon from "../../../../public/ReactIcons/XIcon";
 import LinkedInIcon from "../../../../public/ReactIcons/LinkedInIcon";
+import { getBarkToken } from "@/utils/CookiesHelper";
+import { showToast } from "@/utils";
 
 const Footer = () => {
   const [openSections, setOpenSections] = useState({
@@ -88,6 +90,14 @@ const Footer = () => {
                   <Link
                     href="/en/gb/login"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px] xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block"
+                    onClick={(e) => {
+                      if (getBarkToken()) {
+                        e.preventDefault();
+                        showToast("info", "You're already logged in.");
+                      } else {
+                        window.scrollTo(0, 0);
+                      }
+                    }}
                   >
                     Login
                   </Link>
@@ -120,6 +130,17 @@ const Footer = () => {
                   <Link
                     href="/en/gb/sellers/create"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px] xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
+                    onClick={(e) => {
+                        if (getBarkToken()) {
+                          e.preventDefault();
+                          showToast(
+                            "info",
+                            "You're already logged in. Please switch to seller and add your service.",
+                          );
+                        } else {
+                          window.scrollTo(0, 0);
+                        }
+                      }}
                   >
                     Join as a Professional
                   </Link>
@@ -191,10 +212,7 @@ const Footer = () => {
                   aria-label="Visit X page"
                   className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-[#EAEAEA] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-md"
                 >
-                  <XIcon
-                    bgColor="transparent"
-                    className="w-[35px] h-[35px]"
-                  />
+                  <XIcon bgColor="transparent" className="w-[35px] h-[35px]" />
                 </a>
 
                 {/* LinkedIn */}
@@ -211,7 +229,6 @@ const Footer = () => {
                   />
                 </a>
               </div>
-
 
               <CountryDropdown />
             </div>
@@ -248,6 +265,14 @@ const Footer = () => {
                     </Link>
                     <Link
                       href="/en/gb/login"
+                      onClick={(e) => {
+                        if (getBarkToken()) {
+                          e.preventDefault();
+                          showToast("info", "You're already logged in.");
+                        } else {
+                          window.scrollTo(0, 0);
+                        }
+                      }}
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       Login
@@ -287,6 +312,17 @@ const Footer = () => {
                     <Link
                       href="/en/gb/sellers/create"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
+                      onClick={(e) => {
+                        if (getBarkToken()) {
+                          e.preventDefault();
+                          showToast(
+                            "info",
+                            "You're already logged in. Please switch to seller and add your service.",
+                          );
+                        } else {
+                          window.scrollTo(0, 0);
+                        }
+                      }}
                     >
                       Join as a Professional
                     </Link>
@@ -331,16 +367,6 @@ const Footer = () => {
           <div className="mt-6 xl:mt-12 w-full border-t border-gray-300">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
               <div className="flex mx-auto items-center gap-1 text-[rgba(37, 50, 56, 1)] text-sm lg:text-base py-[11px]">
-                {/* <Image
-                  src="/icons/emailIcon.svg"
-                  alt="email icon"
-                  width={16}
-                  height={16}
-                  className="w-4 h-4"
-                  priority
-                  fetchPriority="high"
-                  loading="eager"
-                /> */}
                 <EmailIcon className="w-4 h-4 mt-1" />
                 <span>contact@localists.com</span>
               </div>
@@ -377,8 +403,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-
       </footer>
     </WrapperBGWidth>
   );

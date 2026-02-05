@@ -41,7 +41,7 @@ function LandingDriway() {
   return (
     <>
       <CloseBrowserAbandon />
-      {isClient && (
+      {/* {isClient && (
         <div>
           {isDesktop ? (
             <NavigationDetectorDesktop />
@@ -49,7 +49,7 @@ function LandingDriway() {
             <NavigationDetectorWithConfirmations />
           )}
         </div>
-      )}
+      )} */}
       <FindDetailAndBannerWrapper
         title={LANDING_TITLES_AND_META["driveways_ppc"]?.title}
         paragraphs={LANDING_DETAIL_DATA["driveways_ppc"].paragraphs}

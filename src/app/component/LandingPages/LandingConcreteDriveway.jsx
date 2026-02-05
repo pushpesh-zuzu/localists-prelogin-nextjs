@@ -41,7 +41,7 @@ function LandingConcreteDriveway() {
     return (
         <>
             <CloseBrowserAbandon />
-            {isClient && (
+            {/* {isClient && (
                 <div>
                     {isDesktop ? (
                         <NavigationDetectorDesktop />
@@ -49,7 +49,7 @@ function LandingConcreteDriveway() {
                         <NavigationDetectorWithConfirmations />
                     )}
                 </div>
-            )}
+            )} */}
             <FindDetailAndBannerWrapper
                 title={LANDING_TITLES_AND_META["concrete_driveways_ppc"]?.title}
                 paragraphs={LANDING_DETAIL_DATA["concrete_driveways_ppc"].paragraphs}

@@ -41,7 +41,7 @@ function LandingTarmacDriveway() {
     return (
         <>
             <CloseBrowserAbandon />
-            {isClient && (
+            {/* {isClient && (
                 <div>
                     {isDesktop ? (
                         <NavigationDetectorDesktop />
@@ -49,7 +49,7 @@ function LandingTarmacDriveway() {
                         <NavigationDetectorWithConfirmations />
                     )}
                 </div>
-            )}
+            )} */}
             <FindDetailAndBannerWrapper
                 title={LANDING_TITLES_AND_META["tarmac_driveways_ppc"]?.title}
                 paragraphs={LANDING_DETAIL_DATA["tarmac_driveways_ppc"].paragraphs}

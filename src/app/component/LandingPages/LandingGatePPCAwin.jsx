@@ -41,7 +41,7 @@ function LandingGatePPCAwin() {
     return (
         <>
             <CloseBrowserAbandon />
-            {isClient && (
+            {/* {isClient && (
                 <div>
                     {isDesktop ? (
                         <NavigationDetectorDesktop />
@@ -49,7 +49,7 @@ function LandingGatePPCAwin() {
                         <NavigationDetectorWithConfirmations />
                     )}
                 </div>
-            )}
+            )} */}
             <FindDetailAndBannerWrapper
                 title={LANDING_TITLES_AND_META["gates_ppc"]?.title}
                 paragraphs={LANDING_DETAIL_DATA["gates_ppc"].paragraphs}

@@ -41,7 +41,7 @@ function LandingBlockPavingDriveway() {
     return (
         <>
             <CloseBrowserAbandon />
-            {isClient && (
+            {/* {isClient && (
                 <div>
                     {isDesktop ? (
                         <NavigationDetectorDesktop />
@@ -49,7 +49,7 @@ function LandingBlockPavingDriveway() {
                         <NavigationDetectorWithConfirmations />
                     )}
                 </div>
-            )}
+            )} */}
             <FindDetailAndBannerWrapper
                 title={LANDING_TITLES_AND_META["block_paving_driveways_ppc"]?.title}
                 paragraphs={

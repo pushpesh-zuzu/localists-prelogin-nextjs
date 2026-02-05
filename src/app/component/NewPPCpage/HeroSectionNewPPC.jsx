@@ -86,7 +86,7 @@ export default function HeroSectionNewPPC({
 
     return (
         <section className="bg-[#E3F6FC]">
-            {localRequestId === null && (
+            {/* {localRequestId === null && (
                 <>
                     {typeof window !== "undefined" && window.innerWidth > 768 ? (
                         <Suspense fallback={null}>
@@ -97,7 +97,7 @@ export default function HeroSectionNewPPC({
                         </Suspense>
                     )}
                 </>
-            )}
+            )} */}
 
             {/* CONTAINER */}
             <div

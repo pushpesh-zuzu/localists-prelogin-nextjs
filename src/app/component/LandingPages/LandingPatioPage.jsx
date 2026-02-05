@@ -41,7 +41,7 @@ function LandingPatioPage() {
   return (
     <>
       <CloseBrowserAbandon />
-      {isClient && (
+      {/* {isClient && (
         <div>
           {isDesktop ? (
             <NavigationDetectorDesktop />
@@ -49,7 +49,7 @@ function LandingPatioPage() {
             <NavigationDetectorWithConfirmations />
           )}
         </div>
-      )}
+      )} */}
       <FindDetailAndBannerWrapper
         title={LANDING_TITLES_AND_META["patio_services_ppc"]?.title}
         paragraphs={LANDING_DETAIL_DATA["patio_services_ppc"].paragraphs}

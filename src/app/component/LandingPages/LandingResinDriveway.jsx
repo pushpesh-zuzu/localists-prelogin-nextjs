@@ -41,7 +41,7 @@ function LandingResinDriveway() {
     return (
         <>
             <CloseBrowserAbandon />
-            {isClient && (
+            {/* {isClient && (
                 <div>
                     {isDesktop ? (
                         <NavigationDetectorDesktop />
@@ -49,7 +49,7 @@ function LandingResinDriveway() {
                         <NavigationDetectorWithConfirmations />
                     )}
                 </div>
-            )}
+            )} */}
             <FindDetailAndBannerWrapper
                 title={LANDING_TITLES_AND_META["resin_driveways_ppc"]?.title}
                 paragraphs={LANDING_DETAIL_DATA["resin_driveways_ppc"].paragraphs}

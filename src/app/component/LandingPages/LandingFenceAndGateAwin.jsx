@@ -41,7 +41,7 @@ function LandingFenceAndGateAwin() {
   return (
     <>
       <CloseBrowserAbandon />
-      {isClient && (
+      {/* {isClient && (
         <div>
           {isDesktop ? (
             <NavigationDetectorDesktop />
@@ -49,7 +49,7 @@ function LandingFenceAndGateAwin() {
             <NavigationDetectorWithConfirmations />
           )}
         </div>
-      )}
+      )} */}
       <FindDetailAndBannerWrapper
         title={LANDING_TITLES_AND_META["fencing_ppc"]?.title}
         paragraphs={LANDING_DETAIL_DATA["fencing_ppc"].paragraphs}
