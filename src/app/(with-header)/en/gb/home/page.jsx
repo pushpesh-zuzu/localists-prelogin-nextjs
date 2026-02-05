@@ -33,6 +33,7 @@ const endpointCategoryMap = {
         "Artificial Grass Installation",
         "Tree Surgery",
         "Gutter Cleaning",
+        "Roofing"
     ],
 };
 
@@ -99,6 +100,7 @@ export default function Page() {
                         name: "Driveway Installation",
                         path: "/driveway-installers-near-me",
                     },
+                    { name: "Roofing", path: "/roofers-near-me" },
                     { name: "Patio Laying", path: "/patio-layers-near-me" },
                     { name: "Landscaping", path: "/landscape-gardeners-near-me" },
                     {
@@ -107,6 +109,7 @@ export default function Page() {
                     },
                     { name: "Tree Surgery", path: "/tree-surgeon-near-me" },
                     { name: "Gutter Cleaning", path: "/gutter-cleaning-near-me" },
+
                 ]}
             />
             <div className="mt-[5px] mb-3 flex justify-center">

@@ -4,15 +4,15 @@ import React from "react";
 import VettedSection from "../VettedSection";
 import AboutServicesAndQuestions from "../AboutServicesAndQuestions";
 import {
-    BREADCRUM_DATA_FENCE_AND_GATE,
-    FREQUENTLY_DATA_FENCE_AND_GATE,
+    BREADCRUM_DATA_ROOFERS,
+    FREQUENTLY_DATA_ROOFING,
     POPULAR_SERVICES,
     QUESTION_AND_ABOUT_SERVICE,
-    FENCE_AND_GATE_FEEDBACK,
-    FENCE_AND_GATE_DATA,
-    FENCE_AND_GATE_TABDATA,
-    VETTED_DATA_FENCE_AND_GATE,
-} from "./FenceAndGateInstallationData";
+    ROOFING_FEEDBACK,
+    ROOFING_DATA,
+    ROOFING_TABDATA,
+    VETTED_DATA_ROOFERS,
+} from "./RoofingData";
 import { FAQ } from "../FAQ";
 import NearmeMember from "../NearmeMember";
 import Footer from "../../Footer/Footer";
@@ -23,9 +23,10 @@ import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
-import FenceGatePopularJobNearMe from "./FenceGatePopularJobNearMe";
+// import DrivewayPopularJobNearMe from "./DrivewayPopularJobNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
+import FenceGatePopularJobNearMe from "../FenceAndGateInstallation/FenceGatePopularJobNearMe";
 import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
@@ -42,49 +43,52 @@ const CloseBrowserAbandon = dynamic(
     { ssr: false }
 );
 
-function FenceAndGateInstallation() {
+function RoofingNearMe() {
     usePendingBuyerRedirect();
     useScrollToTop()
     return (
         <>
             <CloseBrowserAbandon />
-            <FAQScript FAQ={FREQUENTLY_DATA_FENCE_AND_GATE["fencing-contractors-near-me"]} />
+            <FAQScript FAQ={FREQUENTLY_DATA_ROOFING} />
             <HeroSectionNearMe
-                heading1="Find Fencing Contractors"
+                heading1="Find Roofers"
                 heading2="Near You"
-                description="Find the best fencing contractors for your job, just enter your postcode and a few details for instant quotes."
-                bannerImage="/nearme/Fencing-Contractors.webp"
-                bannerImageMobile="/nearme/fencing-contractor-mobile.webp"
-                altText="Worker drilling metal fence panel"
-                serviceId={49}
-                serviceName="Fence & Gate Installation"
+                description="Find the best roofers near you! Just enter your postcode and a few details to get 5 free roofing quotes from local roofers in minutes!"
+                bannerImage="/nearme/Roofing/roofingbanner.webp"
+                bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
+                altText="Professional roofers roofing a new build with ceramic roof tiles"
+                serviceId={113}
+                serviceName="Roofing"
             />
             <VettedSection
-                paragraph={VETTED_DATA_FENCE_AND_GATE}
-                vettedHeading1="Vetted fence builders you can"
+                paragraph={VETTED_DATA_ROOFERS}
+                vettedHeading1="Vetted roofers you can"
                 vettedHeading2="trust"
-                breadcrumb={BREADCRUM_DATA_FENCE_AND_GATE}
+                breadcrumb={BREADCRUM_DATA_ROOFERS}
             />
             <FenceGatePopularJobNearMe
                 services={POPULAR_SERVICES}
-                popularImage="/nearme/fencing-fixing.webp"
-                altText="fencing contractor fixing a fence"
+                popularImage="/nearme/Roofing/roofslate.webp"
+                altText="two roofers installing slate tiles onto a brand new roof URL"
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
-                heading1="Fencing Contractors"
+                heading1="Roofers"
                 heading2="in your area"
-                tabData={FENCE_AND_GATE_TABDATA}
+                tabData={ROOFING_TABDATA}
             />
-            <UserFeedbackNearMe2 feedbackData={FENCE_AND_GATE_FEEDBACK} />
+            <UserFeedbackNearMe2 feedbackData={ROOFING_FEEDBACK} />
             <AboutServicesAndQuestions
-                serviceId={49}
-                serviceName="Fence & Gate Installation"
+                serviceId={113}
+                serviceName="Roofing"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
+
             <FAQ
-                data={FREQUENTLY_DATA_FENCE_AND_GATE["fencing-contractors-near-me"]}
+                data={FREQUENTLY_DATA_ROOFING}
             />
-            <DiscoverNearMe homeData={FENCE_AND_GATE_DATA} />
+
+            <DiscoverNearMe homeData={ROOFING_DATA} />
+
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
             />
@@ -93,4 +97,4 @@ function FenceAndGateInstallation() {
     );
 }
 
-export default FenceAndGateInstallation;
+export default RoofingNearMe;

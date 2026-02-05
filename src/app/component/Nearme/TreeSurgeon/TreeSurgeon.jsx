@@ -24,7 +24,7 @@ import NearmeMember from "../NearmeMember";
 import Footer from "../../Footer/Footer";
 import HowItWorkNearMe from "../HowItWorkNearMe";
 import HireRelatedToServiceNearMe from "../HireRelatedToServiceNearMe";
-import UserFeedbackNearMe from "../UserFeedbackNearMe";
+// import UserFeedbackNearMe from "../UserFeedbackNearMe";
 // import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 // import AdviceInsightNearMe from "../AdviceInsightNearMe";
 import dynamic from "next/dynamic";
@@ -33,6 +33,7 @@ import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
+import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -84,7 +85,7 @@ function TreeSurgeon() {
         heading2="in your area"
         tabData={TREE_SURGEON_TABDATA}
       />
-      <UserFeedbackNearMe feedbackData={TREE_SUREON_FEEDBACK} />
+      <UserFeedbackNearMe2 feedbackData={TREE_SUREON_FEEDBACK} />
       {/* <PaddingWrapper> */}
       <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
       {/* </PaddingWrapper> */}

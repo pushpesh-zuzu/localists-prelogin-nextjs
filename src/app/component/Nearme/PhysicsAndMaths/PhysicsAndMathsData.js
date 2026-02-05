@@ -174,23 +174,23 @@ export const BREADCRUM_DATA_PHYSICS_AND_MATHS = [
 export const PHYSICS_AND_MATHS_FEEDBACK = [
     {
         id: 1,
-        text: "Within minutes of submitting my request, I heard back from two local companies ready to help. Couldn’t have asked for a quicker service.",
-        name: "Amelia",
+        text: "My son was struggling with GCSE physics and maths and falling behind. The tutor broke everything down clearly and went at his pace. His grades have improved and he’s much less stressed about exams now.",
+        name: "Tom Garlick",
     },
     {
         id: 2,
-        text: "Had 3 quotes from local driveway installers, and got the work done the same day for less than originally quoted! Will definitely use again",
-        name: "Robert",
+        text: "After struggling with A-Level Physics, I found a tutor through Localists who explained concepts clearly and made revision enjoyable. My confidence and grades improved faster than I expected!",
+        name: "Williams M.",
     },
     {
         id: 3,
-        text: "Got instant quotes for my driveway -  and had the work done 2 weeks later. Can't fault them, will definitely use Localists again. ",
-        name: "Alan",
+        text: "My daughter neededI extra support for GCSE Maths and I found a brilliant tutor nearby, through Localists. They were patient, structured, and helped me understand problems instead of just giving answers. Highly recommend.",
+        name: "Margret R.",
     },
     {
         id: 4,
-        text: "Couldn't fault the service, saved me shopping around for a cheaper quote. Will definitely use again!",
-        name: "Tracey",
+        text: "Studying engineering at university, I needed help with advanced maths. Localists connected me with a tutor who was knowledgeable and approachable. Lessons were tailored to my pace and questions, which made all the difference.",
+        name: "Emily R.",
     },
 ];
 
@@ -246,4 +246,11 @@ export const PHYSICS_AND_MATHS_DATA = [
         isSpecial: false,
         slug: "/en/gb/tree-surgeon-near-me",
     },
+    {
+        id: 8,
+        title: "Roofing",
+        image: "/roofing.webp",
+        isSpecial: false,
+        slug: "/en/gb/roofers-near-me",
+    }
 ];

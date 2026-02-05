@@ -37,9 +37,9 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   {
     type: "li",
     text: "<strong>Local expertise</strong> – Because installers are based near you, they understand the ground conditions and drainage issues common in your area. That means your artificial lawn won’t just look amazing on day one. It will be fitted with the right base, drainage, and finish to stay smooth, safe, and durable for years, whatever the weather.",
-    className:'mb-0'
+    className: 'mb-0'
   },
-    {
+  {
     type: "image",
     src: "/nearme/Artificial/polyurethane.webp",
     alt: "Man pouring polyurethane adhesive for strong bond artificial turf installation",
@@ -74,9 +74,9 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   {
     type: "li",
     text: "<strong>Brushing & infill</strong> – To finish, the grass fibres are brushed upright for a natural look, and a layer of sand infill may be added for extra weight, stability, and softness underfoot.",
-  className:'mb-0'
+    className: 'mb-0'
   },
-   {
+  {
     type: "image",
     src: "/nearme/Artificial/footballField.webp",
     alt: "artificial grass installation by expert installer on a small football field",
@@ -86,7 +86,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   {
     type: "h2",
     text: "Choosing the right expert near you ",
-  }, 
+  },
   {
     type: "p",
     text: "While DIY installation is possible, getting the base and drainage right can be challenging. That’s why most people choose to hire professionals for the job. But how do you choose the right expert? Asking plenty of questions can help you get closer to picking the perfect artificial grass installer. ",
@@ -114,7 +114,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
     text: "Do you provide a guarantee? - A good installer should stand by their work with some form of warranty.",
     className: "mb-0",
   },
- {
+  {
     type: "PostCodeSection",
     className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
   },
@@ -194,10 +194,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ARTIFICIAL_GRASS_NEARME = [
   {
     type: "p",
     text: "Many standard home installations don’t require a permit, but it’s always wise to check with your local council before starting, especially for larger or more unusual projects. Localists connects you with local artificial grass installation experts who understand not just the installation process, but also the local regulations that might apply in your area. Start your search now!",
-    notMarginBottom:true
+    notMarginBottom: true
   },
 
- 
+
 ];
 export const FREQUENTLY_DATA_ARTIFICIAL_GRASS_NEARME = [
   {
@@ -335,8 +335,8 @@ export const VETTED_DATA_ARTIFICIAL_GRASS_NEARME = [
 
 export const POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME = [
   "Re-Seaming",
-  "Sub-Base Installation",
   "Replacement",
+  "Sub-Base Installation",
   "Weed Membrane Installation",
   "Edging & Border Installation",
   "Drainage System Installation",
@@ -344,20 +344,26 @@ export const POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME = [
 export const FEEDBACK_ARTIFICIAL_GRASS_NEARME = [
   {
     id: 1,
-    text: "Our local installer was brilliant! They removed our old turf, prepped the ground, and fitted a soft synthetic lawn the kids can play on year-round. Looks amazing and no mud!",
-    name: "Mason",
+    text: "Between the kids and the dog, the lawn was always a mess. Our neighbour recommended artificial grass and it’s honestly been brilliant. We found Zack and his team through Localists. The install was quick and done properly. Honestly should’ve done it years ago.",
+    name: "Patricia Hauge",
     // location: "Birmingham",
   },
   {
     id: 2,
-    text: "We were tired of mowing and dealing with patchy grass. Localists matched us with a fantastic installer who suggested the right type of turf for our shaded garden. It transformed the space completely. Definitely the best decision we made for our graden! This Miss loves it so much.",
-    name: "Christian",
+    text: "Our local installer was brilliant! They removed our old turf, prepped the ground, and fitted a soft synthetic lawn the kids can play on year-round. Looks amazing and no mud!",
+    name: "Mason L",
     // location: "Bristol",
   },
   {
     id: 3,
+    text: "We were tired of mowing and dealing with patchy grass. Localists matched us with a fantastic installer who suggested the right type of turf for our shaded garden. It transformed the space completely. Definitely the best decision we made for our graden! This Miss loves it so much.",
+    name: "Christian T.",
+    // location: "Glasgow",
+  },
+  {
+    id: 4,
     text: "The whole installation only took two days. The artificial grass specialists we found through Localists were tidy, polite, and very professional. They left us with a garden that looks perfect every day. Couldn’t recommend them enough.",
-    name: "Georgina",
+    name: "Georgina P.",
     // location: "Glasgow",
   },
 ];
@@ -413,8 +419,15 @@ export const DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA = [
     isSpecial: false,
     slug: "/en/gb/gutter-cleaning-near-me",
   },
+  {
+    id: 8,
+    title: "Roofing",
+    image: "/roofing.webp",
+    isSpecial: false,
+    slug: "/en/gb/roofers-near-me",
+  }
 ];
 export const BREADCRUM_DATA_ARTIFICIAL_GRASS_NEARME = [
-  { title: "Home & Garden", path: "/home" },
+  { title: "Home & Garden", path: "/en/gb/home" },
   { title: "Artificial Grass Installation" },
 ];

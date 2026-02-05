@@ -17,13 +17,14 @@ import NearmeMember from "../NearmeMember";
 import Footer from "../../Footer/Footer";
 import HowItWorkNearMe from "../HowItWorkNearMe";
 import HireRelatedToServiceNearMe from "../HireRelatedToServiceNearMe";
-import UserFeedbackNearMe from "../UserFeedbackNearMe";
+// import UserFeedbackNearMe from "../UserFeedbackNearMe";
 import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
+import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
 
 const HeroSectionPhysicsAndMaths = dynamic(() => import("../HeroSectionPhysicsAndMaths"), {
     loading: () => (
@@ -70,8 +71,7 @@ function PhysicsAndMaths() {
                 heading2="in your area"
                 tabData={PHYSICS_AND_MATHS_TABDATA}
             />
-            <UserFeedbackNearMe feedbackData={PHYSICS_AND_MATHS_FEEDBACK} serviceId=""
-                serviceName="Physics And Maths" />
+            <UserFeedbackNearMe2 feedbackData={PHYSICS_AND_MATHS_FEEDBACK} />
             <AboutServicesAndQuestions
                 serviceId=""
                 serviceName="Physics And Maths"

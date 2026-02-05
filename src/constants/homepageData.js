@@ -2,15 +2,15 @@ export const carouselData = [
   {
     id: 1,
     title: "Home & Garden",
-    image: "/homepage/image6.webp", 
-    isSpecial: true, 
+    image: "/homepage/image6.webp",
+    isSpecial: true,
     bgColor: "bg-cyan-400",
-    slug:"/en/gb/home"
+    slug: "/en/gb/home"
   },
   {
     id: 2,
     title: "Fence & Gate Installation",
-    image: "/homepage/fenceandgate.webp", 
+    image: "/homepage/fenceandgate.webp",
     isSpecial: false,
     slug: "/en/gb/fencing-contractors-near-me",
   },
@@ -31,21 +31,21 @@ export const carouselData = [
   {
     id: 5,
     title: "Tree Surgery",
-    image: "/homepage/treesurgery.webp", 
+    image: "/homepage/treesurgery.webp",
     isSpecial: false,
     slug: "/en/gb/tree-surgeon-near-me",
   },
   {
     id: 6,
     title: "Artificial Grass Installation",
-    image: "/homepage/artificialgrassinstallation.webp", 
+    image: "/homepage/artificialgrassinstallation.webp",
     isSpecial: false,
     slug: "/en/gb/artificial-grass-installers-near-me",
   },
   {
     id: 7,
     title: "Patio Laying",
-    image: "/homepage/patiolayer.webp", 
+    image: "/homepage/patiolayer.webp",
     isSpecial: false,
     slug: "/en/gb/patio-layers-near-me",
   },
@@ -56,12 +56,13 @@ export const carouselData = [
     isSpecial: false,
     slug: "/en/gb/gutter-cleaning-near-me",
   },
-  //  {
-  //   id: 6,
-  //   title: "Roofing",
-  //   image: "/roofing.webp", // Aapki image path
-  //   isSpecial: false
-  // }
+  {
+    id: 9,
+    title: "Roofing",
+    image: "/roofing.webp", // Aapki image path
+    isSpecial: false,
+    slug: "/en/gb/roofers-near-me",
+  }
 ];
 const servicesImages = [
   { id: 1, path: "/fenceandgate.webp", title: "Fence & Gate Installation" },
@@ -119,7 +120,7 @@ export const carouselData1 = [
 export const carouselData3 = [
   {
     id: 1,
-    title: "Weddings & Events",  
+    title: "Weddings & Events",
     image: "/homepage/image8.webp",
     isSpecial: true,
     bgColor: "bg-cyan-400"
@@ -152,113 +153,114 @@ export const carouselData3 = [
   }
 ];
 export const articles = [
-    {
-      id: 1,
-      title: "Top 10 Interior Design Trends in 2025",
-      image: "/homepage/image10.webp",
-    },
-    {
-      id: 2,
-      title: "How much does a painter and decorator cost in 2025?",
-      image: "/homepage/image14.webp",
-    },
-    {
-      id: 3,
-      title: "Top tips to create your own allotment",
-      image: "/homepage/image11.webp",
-    },
-    {
-      id: 4,
-      title: "The 2025 House Improvement Index",
-      image: "/homepage/image12.webp",
-    },
-    {
-      id: 5,
-      title: "The best place to book your wedding in 2025",
-      image: "/homepage/image13.webp",
-    },
-  ];
+  {
+    id: 1,
+    title: "Top 10 Interior Design Trends in 2025",
+    image: "/homepage/image10.webp",
+  },
+  {
+    id: 2,
+    title: "How much does a painter and decorator cost in 2025?",
+    image: "/homepage/image14.webp",
+  },
+  {
+    id: 3,
+    title: "Top tips to create your own allotment",
+    image: "/homepage/image11.webp",
+  },
+  {
+    id: 4,
+    title: "The 2025 House Improvement Index",
+    image: "/homepage/image12.webp",
+  },
+  {
+    id: 5,
+    title: "The best place to book your wedding in 2025",
+    image: "/homepage/image13.webp",
+  },
+];
 export const tabData = {
-    professionals: [
-      "Electricians in London",
-      "Roofers in Edinburgh",
-      "Roofers in Norwich",
-      "Plumbers in Birmingham",
-      "Electricians in London",
-      "Roofers in Edinburgh",
-      "Maths Tutor in Manchester",
-      "Garden Designers Cardiff",
-      "Patio Layers in Manchester",
-      "Gardeners in Wolverhampton",
-    ],
-    popular: [
-      {
-        title: "Landscapers Near Me",
-        url: "/en/gb/landscape-gardeners-near-me",
-    },
-     {
-        title: "Patio Layers near me",
-        url: "/en/gb/tree-surgeon-near-me",
-    },
-     {
-        title: "Gutter Cleaners near me",
-        url: "/en/gb/gutter-cleaning-near-me",
-    },
-     {
-        title: "Private Tutors near me",
-        url: "",
+  professionals: [
+    "Electricians in London",
+    "Roofers in Edinburgh",
+    "Maths Tutor in Manchester",
+    "Plumbers in Birmingham",
+    "Gardeners in Wolverhampton",
+    "Plumbers in Birmingham",
+    "Roofers in Norwich",
+    "Garden Designers Cardiff",
+    "Electricians in London",
+    "Roofers in Edinburgh",
+    "Patio Layers in Manchester",
+    "Plumbers in Birmingham",
+  ],
+  popular: [
+    {
+      title: "Landscapers Near Me",
+      url: "/en/gb/landscape-gardeners-near-me",
     },
     {
-        title: "Personal Trainers near me",
-        url: "",
+      title: "Patio Layers near me",
+      url: "/en/gb/tree-surgeon-near-me",
     },
     {
-       title: "Driveway Installers near me",
-       url: "/en/gb/driveway-installers-near-me",
-   },
-    {
-        title: "Fence & Gate Installers near me",
-        url: "/en/gb/fencing-contractors-near-me",
-    },
-    
-     {
-        title: "Artificial Grass Installers near me",
-        url: "/en/gb/artificial-grass-installers-near-me",
-    },
-          ],
-    insight: [
-      "Hiring Tips",
-      "Roofing Safety",
-      "Electrician Rates",
-      "Garden Design",
-      "Math Tutoring",
-      "Best Patio Materials",
-      "Interior Design",
-      "Home Renovation",
-      "Top Carpenters",
-      "Painting Techniques",
-      "DIY Gardening Hacks",
-    ],
-  };
-   export const feedbackData = [
-    {
-      id: 1,
-      text: "Within minutes of submitting my request, I heard back from two local companies ready to help. Couldn't have asked for a quicker service.",
-      name: "Amelia",
+      title: "Private Tutors near me",
+      url: "",
     },
     {
-      id: 2,
-      text: "Had 3 quotes from local tree surgeons, and got the work done the same day for less than originally quoted! Will definitely use again",
-      name: "Robert",
+      title: "Personal Trainers near me",
+      url: "",
     },
     {
-      id: 3,
-      text: "Got instant quotes for my driveway -  and had the work done 2 weeks later. Can't fault them, will definitely use Localists again.",
-      name: "Alan",
+      title: "Fence & Gate Installers near me",
+      url: "/en/gb/fencing-contractors-near-me",
     },
     {
-      id: 4,
-      text: "Couldn't fault the service, saved me shopping around for a cheaper quote. Will definitely use again!",
-      name: "Tracey",
+      title: "Driveway Installers near me",
+      url: "/en/gb/driveway-installers-near-me",
     },
-  ];
+    {
+      title: "Gutter Cleaners near me",
+      url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Artificial Grass Installers near me",
+      url: "/en/gb/artificial-grass-installers-near-me",
+    },
+  ],
+  insight: [
+    "Hiring Tips",
+    "Roofing Safety",
+    "Electrician Rates",
+    "Garden Design",
+    "Math Tutoring",
+    "Best Patio Materials",
+    "Interior Design",
+    "Home Renovation",
+    "Top Carpenters",
+    "Painting Techniques",
+    "DIY Gardening Hacks",
+  ],
+};
+export const feedbackData = [
+  {
+    id: 1,
+    text: "Within minutes of submitting my request, I heard back from two local companies ready to help. Couldn't have asked for a quicker service.",
+    name: "Amelia",
+  },
+  {
+    id: 2,
+    text: "Had 3 quotes from local tree surgeons, and got the work done the same day for less than originally quoted! Will definitely use again",
+    name: "Robert",
+  },
+  {
+    id: 3,
+    text: "Got instant quotes for my driveway -  and had the work done 2 weeks later. Can't fault them, will definitely use Localists again.",
+    name: "Alan",
+  },
+  {
+    id: 4,
+    text: "Couldn't fault the service, saved me shopping around for a cheaper quote. Will definitely use again!",
+    name: "Tracey",
+  },
+];

@@ -28,7 +28,7 @@ const cardData = [
   {
     title: "Our pricing promise",
     description:
-      "We’re so confident you’ll win business with your first credit pack, we’ll return all your credits if you don’t. No questions asked.",
+      "We're confident that we give you the best value for money leads on the market. With our verification process, you never need to worry about fake leads again!",
     image: newbusiness,
   },
 ];

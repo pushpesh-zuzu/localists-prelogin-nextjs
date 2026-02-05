@@ -288,16 +288,16 @@ export const DRIVEWAY_INSTALLERS_TABDATA = {
             url: "",
         },
         {
-            title: "Fencing Contractors Near Me",
-            url: "/en/gb/fencing-contractors-near-me",
-        },
-        {
             title: "Architects Near Me",
             url: "",
         },
         {
             title: "Gutter Cleaners Near Me",
             url: "/en/gb/gutter-cleaning-near-me",
+        },
+        {
+            title: "Fencing Contractors Near Me",
+            url: "/en/gb/fencing-contractors-near-me",
         },
         {
             title: "Artificial Grass Installers Near Me",
@@ -321,35 +321,35 @@ export const BREADCRUM_DATA_DRIVEWAY = [
 ];
 
 export const POPULAR_SERVICES = [
-    "Driveway resurfacing",
-    "Driveway repairs",
-    "Driveway drainage installation",
     "Driveway cleaning",
-    "Driveway sealing & resealing",
+    "Driveway repairs",
+    "Driveway resurfacing",
     "Driveway edging installation",
+    "Driveway drainage installation",
+    "Driveway sealing & resealing",
     "Driveway weed & moss removal",
 ];
 
 export const DRIVEWAY_INSTALLERS_FEEDBACK = [
     {
         id: 1,
-        text: "Within minutes of submitting my request, I heard back from two local companies ready to help. Couldn’t have asked for a quicker service.",
-        name: "Amelia",
+        text: "We recently had our driveway renovated by a company we found through Localists, and we couldn’t be happier with the results. The work was done quicker than expected and the finish looks spot on. Neighbours have already asked who did it.",
+        name: "Susan Page",
     },
     {
         id: 2,
-        text: "Had 3 quotes from local driveway installers, and got the work done the same day for less than originally quoted! Will definitely use again",
-        name: "Robert",
+        text: "I needed my old gravel driveway replaced with block paving, and within a day I had three quotes from local driveway contractors. The work was completed on time, and the quality is outstanding.",
+        name: "Rachel M.",
     },
     {
         id: 3,
-        text: "Got instant quotes for my driveway -  and had the work done 2 weeks later. Can't fault them, will definitely use Localists again. ",
-        name: "Alan",
+        text: "This was my first time getting a driveway installed, so I had no idea where to start. Localists connected me with a resin driveway specialist who walked me through every step. The result is stunning and completely changes the look of my home. ",
+        name: "James T.",
     },
     {
         id: 4,
-        text: "Couldn't fault the service, saved me shopping around for a cheaper quote. Will definitely use again!",
-        name: "Tracey",
+        text: "After a bad experience with a previous installer, I was hesitant to try again. But the contractor I found on Localists was professional, fast, and delivered exactly what I wanted. My new tarmac driveway looks fantastic and feels built to last.",
+        name: "Linda Stuart",
     },
 ];
 
@@ -405,4 +405,11 @@ export const DRIVEWAY_INSTALLERS_DATA = [
         isSpecial: false,
         slug: "/en/gb/tree-surgeon-near-me",
     },
+    {
+        id: 8,
+        title: "Roofing",
+        image: "/roofing.webp",
+        isSpecial: false,
+        slug: "/en/gb/roofers-near-me",
+    }
 ];
