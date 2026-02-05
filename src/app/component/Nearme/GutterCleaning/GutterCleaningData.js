@@ -287,9 +287,9 @@ export const BREADCRUM_DATA_GUTTER_CLEANING = [
 export const POPULAR_SERVICES = [
     "Downpipe Unblocking",
     "Leak Sealing",
-    "Leak Detection",
     "Gutter Flushing",
     "Leaf Guard Installation",
+    "Leak Detection",
     "Fascia & Soffit Cleaning",
     "Loose Bracket & Joint Fixing",
 ];

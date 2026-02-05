@@ -280,12 +280,12 @@ export const BREADCRUM_DATA_TREESURGEON = [
 
 export const POPULAR_SERVICES = [
   "Crown Reduction",
+  "Tree & Stump Removal",
   "Tree Removal",
   "Crown Thinning",
-  "Stump Grinding",
   "Tree Felling",
+  "Stump Grinding",
   "Stump Removal",
-  "Tree & Stump Removal",
 ];
 export const TREE_SUREON_FEEDBACK = [
   {

@@ -339,11 +339,11 @@ export const VETTED_DATA_PATIO_SERVICES_NEARME = [
 
 export const POPULAR_SERVICES_PATIO_SERVICES_NEARME = [
   "Patio Repairs",
-  "Patio Cleaning",
   "Patio Sealing",
+  "Patio Drainage Improvements",
+  "Patio Cleaning",
   "Joint Repointing",
   "Slab Replacement",
-  "Patio Drainage Improvements",
 ];
 export const FEEDBACK_PATIO_SERVICES_NEARME = [
   {
