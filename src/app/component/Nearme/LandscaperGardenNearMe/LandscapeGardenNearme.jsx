@@ -92,8 +92,7 @@ function LandscapeGardenNearme() {
         heading2="in your area"
         tabData={LANDSCAPE_NEARME_TABDATA}
       />
-      <UserFeedbackNearMe2 feedbackData={FEEDBACK_LANDSCAPE_NEARME} serviceId={43}
-        serviceName="Landscaping" />
+      <UserFeedbackNearMe2 feedbackData={FEEDBACK_LANDSCAPE_NEARME} />
       {/* <PaddingWrapper> */}
       <AboutServicesAndQuestions
         serviceId={43}

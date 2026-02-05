@@ -229,23 +229,23 @@ export const POPULAR_SERVICES = [
 export const FENCE_AND_GATE_FEEDBACK = [
     {
         id: 1,
-        text: "Within minutes of submitting my request, I heard back from two local companies ready to help. Couldn’t have asked for a quicker service.",
-        name: "Amelia",
+        text: "We had a new fence and side gate installed after the old one finally gave up. We found Jason through Localists. He turned up with two lads when he said they would, worked tidily, and even cleaned up after themselves.",
+        name: "Craig Martins",
     },
     {
         id: 2,
-        text: "Had 3 quotes from local driveway installers, and got the work done the same day for less than originally quoted! Will definitely use again",
-        name: "Robert",
+        text: "I found a fencing company near me, through Localists. The team helped to replace the panels along the back of my garden. They were on time, super tidy, and finished the job in just two days, and even cleaned up after themselves. I couldn’t be happier. Everything looks neat and solid. Already recommended them to my neighbour!",
+        name: "Alfie M.",
     },
     {
         id: 3,
-        text: "Got instant quotes for my driveway -  and had the work done 2 weeks later. Can't fault them, will definitely use Localists again. ",
-        name: "Alan",
+        text: "Booked through Localists for a full gate replacement and some side fencing. The local fencing contractor they matched me with was professional and gave me a fair quote. Work was completed ahead of schedule and with great attention to detail. Would 100% use this service again.",
+        name: "Chris T.",
     },
     {
         id: 4,
-        text: "Couldn't fault the service, saved me shopping around for a cheaper quote. Will definitely use again!",
-        name: "Tracey",
+        text: "Excellent service from start to finish. Localists helped me compare a few different installers, and I found someone local who did an amazing job on my driveway fencing. Polite, skilled, and no mess left behind.",
+        name: "Claire P.",
     },
 ];
 

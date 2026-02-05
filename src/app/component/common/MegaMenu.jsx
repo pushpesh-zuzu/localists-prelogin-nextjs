@@ -18,6 +18,7 @@ export const megaMenu = [
       { id: 43, name: "Landscaping", path: "landscape-gardeners-near-me" },
       { id: 44, name: "Tree Surgery", path: "tree-surgeon-near-me" },
       { id: 45, name: "Gutter Cleaning", path: "gutter-cleaning-near-me" },
+      { id: 113, name: "Roofing", path: "roofers-near-me" },
     ],
   },
   {
@@ -123,7 +124,7 @@ export default function MegaMenu({ children }) {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        popoverRef.current && 
+        popoverRef.current &&
         !popoverRef.current.contains(event.target) &&
         wrapperRef.current &&
         !wrapperRef.current.contains(event.target)
@@ -166,13 +167,13 @@ export default function MegaMenu({ children }) {
   }, []);
 
   return (
-    <div 
+    <div
       ref={wrapperRef}
       className="relative inline-block"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div 
+      <div
         onClick={() => {
           if (isMobile) {
             setIsOpen(!isOpen);
@@ -244,10 +245,10 @@ export default function MegaMenu({ children }) {
                         }
                       }}
                     >
-                      <Image 
-                        src={item.icon} 
-                        alt="" 
-                        width={20} 
+                      <Image
+                        src={item.icon}
+                        alt=""
+                        width={20}
                         height={20}
                         aria-hidden="true"
                       />
@@ -266,7 +267,7 @@ export default function MegaMenu({ children }) {
                         aria-label={`View ${item.name} submenu`}
                       >
                         <svg width="8" height="12" viewBox="0 0 8 12" fill="none" aria-hidden="true">
-                          <path d="M1 1L6 6L1 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                          <path d="M1 1L6 6L1 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         </svg>
                       </button>
                     )}
@@ -285,7 +286,7 @@ export default function MegaMenu({ children }) {
                 }}
               >
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                  <path d="M12 4L6 10L12 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M12 4L6 10L12 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 Back to Explore
               </button>
