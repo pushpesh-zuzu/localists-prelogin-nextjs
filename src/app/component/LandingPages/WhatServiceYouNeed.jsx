@@ -165,7 +165,7 @@ const WhatServiceYouNeed = ({
         const response = await dispatch(getCityName({ postcode: value }));
         const newResponse = response?.payload || response;
 
-        if (newResponse?.data?.city) {
+        if (newResponse?.data?.valid) {
           setPostalCodeValidate(true);
           setCity(newResponse.data.city);
           dispatch(setcitySerach(newResponse.data.city));
@@ -222,7 +222,7 @@ const WhatServiceYouNeed = ({
       const response = await dispatch(getCityName({ postcode: pincode }));
       const newResponse = response?.payload || response;
 
-      if (newResponse?.data?.city) {
+      if (newResponse?.data?.valid) {
         setPostalCodeValidate(true);
         setCity(newResponse.data.city);
         dispatch(setcitySerach(newResponse.data.city));
