@@ -56,13 +56,13 @@ export const carouselData = [
     isSpecial: false,
     slug: "/en/gb/gutter-cleaning-near-me",
   },
-  {
-    id: 9,
-    title: "Roofing",
-    image: "/roofing.webp", // Aapki image path
-    isSpecial: false,
-    slug: "/en/gb/roofers-near-me",
-  }
+  // {
+  //   id: 9,
+  //   title: "Roofing",
+  //   image: "/roofing.webp", // Aapki image path
+  //   isSpecial: false,
+  //   slug: "/en/gb/roofers-near-me",
+  // }
 ];
 const servicesImages = [
   { id: 1, path: "/fenceandgate.webp", title: "Fence & Gate Installation" },
