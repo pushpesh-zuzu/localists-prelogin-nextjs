@@ -63,14 +63,6 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "h2",
         text: "How much does a new roof cost?",
-        noMarginBottom: true
-    },
-    {
-        type: "image",
-        src: "/nearme/Roofing/roofspecialist.webp",
-        alt: "two roofing specialists installing asphalt shingles on roof",
-        marginBottom: true,
-        marginTop: true
     },
     {
         type: "h3",
@@ -79,6 +71,14 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "p",
         text: "The cost of hiring a roofer depends on several factors: the type of roof, its size, the materials used, and the complexity of the work. Labour costs are a significant part of the total, and hourly rates could be anywhere from £25 - £45 per hour. Smaller repairs and partial roofing, like patching, leak fixes, or tile replacement, you can expect to pay £150 - £500. Medium-sized reroofing or partial replacements generally range from £3,000 - £6,000.",
+        notMarginBottom: true
+    },
+    {
+        type: "image",
+        src: "/nearme/Roofing/roofspecialist.webp",
+        alt: "two roofing specialists installing asphalt shingles on roof",
+        marginBottom: true,
+        marginTop: true
     },
     {
         type: "pbold",
