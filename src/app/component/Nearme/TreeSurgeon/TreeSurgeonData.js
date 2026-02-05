@@ -274,16 +274,16 @@ export const VETTED_DATA_TREE_SURGEON = [
 ];
 
 export const BREADCRUM_DATA_TREESURGEON = [
-  { title: "Home & Garden", path: "/home" },
+  { title: "Home & Garden", path: "/en/gb/home" },
   { title: "Tree Surgeons" },
 ];
 
 export const POPULAR_SERVICES = [
   "Crown Reduction",
+  "Tree Removal",
   "Crown Thinning",
   "Stump Grinding",
   "Tree Felling",
-  "Tree Removal",
   "Stump Removal",
   "Tree & Stump Removal",
 ];

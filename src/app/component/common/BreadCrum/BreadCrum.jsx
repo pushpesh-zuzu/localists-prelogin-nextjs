@@ -4,7 +4,7 @@ import HomeIcon from "../icons/HomePageIcons/HomeIcon";
 
 export default function Breadcrumb({ items = [] }) {
   return (
-    <nav className="flex items-center gap-1 sm:gap-2 lg:gap-[17px]">
+    <nav className="flex items-center gap-0 sm:gap-2 lg:gap-[17px]">
       {/* Home Icon */}
       <Link
         href="/en/gb"
@@ -28,7 +28,7 @@ export default function Breadcrumb({ items = [] }) {
               // ACTIVE / CURRENT PAGE
               <span
                 className="
-                  font-inter font-[900] text-[12px] sm:text-[16px]
+                  font-inter font-[900] text-[12.5px] sm:text-[16px]
                   lg:text-[25px] leading-[13px] sm:leading-[16px] xl:leading-[25px]
                   tracking-[-0.03em]
                   text-[#253238]
@@ -40,7 +40,7 @@ export default function Breadcrumb({ items = [] }) {
               <Link
                 href={item.path}
                 className="
-                  font-inter font-[900] text-[12px] sm:text-[16px]
+                  font-inter font-[900] text-[12.5px] sm:text-[16px]
                   lg:text-[25px] leading-[13px] sm:leading-[16px] xl:leading-[25px]
                   tracking-[-0.03em]
                   text-[#959B9E]

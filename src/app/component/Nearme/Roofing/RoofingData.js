@@ -194,9 +194,9 @@ export const POPULAR_SERVICES = [
     "Roof Replacement",
     "Roof Repair",
     "Shingle replacement",
-    "Leadworks installation",
-    "Flashing",
     "Waterproofing",
+    "Flashing",
+    "Leadworks installation",
 ];
 
 export const ROOFING_FEEDBACK = [

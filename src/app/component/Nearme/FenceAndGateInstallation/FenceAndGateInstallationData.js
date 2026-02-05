@@ -220,9 +220,9 @@ export const BREADCRUM_DATA_FENCE_AND_GATE = [
 export const POPULAR_SERVICES = [
     "Fence Repairs",
     "Fence Replacements",
-    "Driveway gate installation",
     "Post replacement",
     "Concrete setting",
+    "Driveway gate installation",
     "Gate repairs & adjustments",
 ];
 

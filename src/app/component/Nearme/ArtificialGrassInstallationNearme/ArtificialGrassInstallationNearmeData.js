@@ -335,8 +335,8 @@ export const VETTED_DATA_ARTIFICIAL_GRASS_NEARME = [
 
 export const POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME = [
   "Re-Seaming",
-  "Sub-Base Installation",
   "Replacement",
+  "Sub-Base Installation",
   "Weed Membrane Installation",
   "Edging & Border Installation",
   "Drainage System Installation",
@@ -421,6 +421,6 @@ export const DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA = [
   },
 ];
 export const BREADCRUM_DATA_ARTIFICIAL_GRASS_NEARME = [
-  { title: "Home & Garden", path: "/home" },
+  { title: "Home & Garden", path: "/en/gb/home" },
   { title: "Artificial Grass Installation" },
 ];

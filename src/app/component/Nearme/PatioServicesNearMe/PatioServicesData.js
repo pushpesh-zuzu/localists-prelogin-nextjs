@@ -340,9 +340,9 @@ export const VETTED_DATA_PATIO_SERVICES_NEARME = [
 export const POPULAR_SERVICES_PATIO_SERVICES_NEARME = [
   "Patio Repairs",
   "Patio Cleaning",
-  "Slab Replacement",
-  "Joint Repointing",
   "Patio Sealing",
+  "Joint Repointing",
+  "Slab Replacement",
   "Patio Drainage Improvements",
 ];
 export const FEEDBACK_PATIO_SERVICES_NEARME = [
@@ -425,6 +425,6 @@ export const DISCOVER_PATIO_SERVICES_NEARME_DATA = [
   },
 ];
 export const BREADCRUM_DATA_PATIO_SERVICES_NEARME = [
-  { title: "Home & Garden", path: "/home" },
+  { title: "Home & Garden", path: "/en/gb/home" },
   { title: "Patio Installation" },
 ];

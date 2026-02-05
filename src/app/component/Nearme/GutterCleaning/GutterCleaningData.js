@@ -286,12 +286,12 @@ export const BREADCRUM_DATA_GUTTER_CLEANING = [
 
 export const POPULAR_SERVICES = [
     "Downpipe Unblocking",
-    "Loose Bracket & Joint Fixing",
     "Leak Sealing",
     "Leak Detection",
     "Gutter Flushing",
     "Leaf Guard Installation",
     "Fascia & Soffit Cleaning",
+    "Loose Bracket & Joint Fixing",
 ];
 
 export const GUTTER_CLEANING_FEEDBACK = [
