@@ -10,7 +10,7 @@ const JobButton = ({ title, url }) => {
     return (
       <button
         className="font-[Arial] border-2 xl:border-2 border-white
-        font-bold text-[12px] -tracking-[3%] lg:text-[20px]
+        font-bold text-[13px] -tracking-[3%] lg:text-[20px]
         px-1.5 py-[5px] xl:px-5 xl:py-1
         rounded-full text-white whitespace-nowrap
         focus:outline-none cursor-pointer
@@ -92,7 +92,7 @@ export default function HireRelatedToService({
 
   return (
     <WrapperBGWidth background={"#00AFE3"}>
-      <div className="bg-[#00AFE3]  px-2.5 py-10 md:py-[50px] md:pl-16  xl:px-[120px] lg:py-[72px] w-full h-auto
+      <div className="bg-[#00AFE3]  px-[30px] py-10 md:py-[50px] md:pl-16  xl:px-[120px] lg:py-[72px] w-full h-auto
     lg:min-h-[484px]">
         <header className="mb-5 xl:mb-12">
           <div className="flex flex-wrap md:flex-col lg:flex-row xl:justify-between items-left gap-7.5 md:gap-6 xl:gap-12">
@@ -104,16 +104,16 @@ export default function HireRelatedToService({
             >
               {heading1} <span className="text-[#023047]">{heading2}.</span>
             </h2>
-            <nav className="flex gap-1 sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap">
+            <nav className="flex  sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap">
               {tabs.map((tab, index) => (
                 <button
                   key={tab.activtab}
                   onClick={() => handleClick(tab.activtab)}
                   className={`${currentTab === tab.activtab
                     ? "bg-[#253238] rounded-full transition-all duration-700 ease-in-out"
-                    : ""
+                    : "rounded-full"
                     }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em]
-                      text-[12px] md:text-[14px]
+                      text-[11px] md:text-[14px]
                       xl:text-[18px] py-[3px] sm:px-3 sm:py-1.5 xl:px-4 xl:py-[11px] cursor-pointer`}
                 >
                   {tab.lable}
@@ -125,7 +125,7 @@ export default function HireRelatedToService({
         <div
           ref={contentRef}
           className={`
-            flex flex-wrap gap-y-2 xl:gap-y-[23px] gap-3.5 lg:gap-[23px]
+            flex flex-wrap gap-y-2 xl:gap-y-[23px] gap-2 lg:gap-[23px]
             w-full md:max-w-full
             overflow-hidden transition-all duration-300
             ${showAll

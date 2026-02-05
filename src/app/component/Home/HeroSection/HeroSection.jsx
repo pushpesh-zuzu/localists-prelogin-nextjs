@@ -77,7 +77,7 @@ const HeroSection = memo(function HeroSection() {
 
           <h1 className="font-Inter font-black
         tracking-[-0.03em]
-        text-[62px] leading-[62px]
+        text-[56.7px] leading-[57.7px]
         md:text-[60px] md:leading-[55px]
         lg:text-[81px] lg:leading-[75px] text-white block  text-shadow-[0_2.03px_2.03px_0_#0000001A]">
             <p className="md:hidden lg:block">
@@ -93,8 +93,7 @@ const HeroSection = memo(function HeroSection() {
             </div>
           </h1>
           <p
-            className="font-[Arial] font-bold tracking-[-0.03em] text-[28px] leading-[28px]
-                      sm:text-[28px] sm:leading-[28px]
+            className="font-[Arial] font-bold tracking-[-0.03em] text-[25.2px] leading-[25.2px]
                       lg:text-[28px] lg:leading-[28px] max-w-full sm:max-w-full text-white pt-[20px] md:pt-2 lg:pt-[18px] text-shadow-[0px 0px 4px 0px #00000040]
                       md:text-shadow-[0px 4px 4px 0px #00000026] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
           >

@@ -14,7 +14,7 @@ export default function HowItWorksCard({
       <div className="flex w-full flex-row gap-1 md:gap-4 lg:gap-5 md:flex-col items-center font-bold">
         <div>{iconSrc}</div>
         <p
-          className={`font-black tracking-tight3 text-[20px] lg:text-[32px] xl:text-[38px] leading-5 md:leading-6 lg:leading-[38px] text-left md:text-center -tracking-[3%]! ${mw} `}
+          className={`pr-[15px] md:pr-0 font-black tracking-tight3 text-[20px] lg:text-[32px] xl:text-[38px] leading-5 md:leading-6 lg:leading-[38px] text-left md:text-center -tracking-[3%]! ${mw} `}
         >
           {description}
         </p>

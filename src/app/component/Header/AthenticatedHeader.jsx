@@ -64,7 +64,8 @@ const AuthenticatedHeader = () => {
       const result = await dispatch(userLogout());
       if (result) {
         showToast("info", "Logout successful!");
-        router.push("/en/gb/login");
+        // router.push("/en/gb/login");
+        window.location.href = "/en/gb/login";
         localStorage.removeItem("pendingBuyerModal");
         dispatch(resetProgress());
       }

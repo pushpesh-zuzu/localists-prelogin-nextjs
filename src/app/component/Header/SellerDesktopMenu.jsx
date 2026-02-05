@@ -18,7 +18,7 @@ function SellerDesktopMenu({
     return (
     <>
       {isSeller && (
-        <div className="hidden lg:flex items-center justify-end gap-2.5">
+        <div className="hidden xl:flex items-center justify-end gap-2.5">
           {sellerLinks.map((link) => (
             <button
               key={link.href}
@@ -38,7 +38,7 @@ function SellerDesktopMenu({
       )}
 
       {/* Desktop Right Side - Notification Bell + User Dropdown (hidden on mobile) */}
-      <div className="hidden lg:flex items-center gap-5 pl-2.5">
+      <div className="hidden xl:flex items-center gap-5 pl-2.5">
         {/* Notifications - Only for Sellers */}
         {isSeller && (
           <div className="relative cursor-pointer mr-2" ref={wrapperRef}>

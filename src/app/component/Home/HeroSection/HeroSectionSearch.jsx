@@ -69,7 +69,7 @@ function HeroSectionSearch() {
           type="text"
           placeholder="Search for a service"
           id="search Attribute"
-          className="text-[#B3B3B3] font-bold px-4 py-2.5  shadow-[0px_20px_40px_0px_rgba(0,0,0,0.5)] md:px-6 md:py-2.5 xl:px-[43px] xl:py-[20px] mt-7.5 md:mt-6 xl:mt-[46px] text-base xl:text-[20px]! placeholder:text-base xl:placeholder:text-[20px]! bg-white  rounded-[100px] w-full focus:outline-none"
+          className="text-[#B3B3B3] font-bold px-4 py-3.5  shadow-[0px_20px_40px_0px_rgba(0,0,0,0.5)] md:px-6 md:py-3.5 lg:px-[43px] lg:py-[20px] mt-7.5 md:mt-6 xl:mt-[46px] text-base xl:text-[20px]! placeholder:text-base xl:placeholder:text-[20px]! bg-white  rounded-[100px] w-full focus:outline-none"
           aria-label="Search for a service"
           value={searchQuery || ""}
           onChange={(e) => {

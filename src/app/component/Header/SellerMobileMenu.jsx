@@ -13,14 +13,14 @@ function SellerMobileMenu({
       {/* Mobile Hamburger Menu Button - Only for Sellers */}
       {isSeller && (
         <button
-          className=" block lg:hidden"
+          className=" block xl:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
          <HamburgerIcon/>
         </button>
       )}
       {mobileMenuOpen && isSeller && (
-        <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg absolute right-[10%] w-[150px] top-[70%]">
+        <div className="xl:hidden bg-white border-t border-gray-200 shadow-lg absolute right-[10%] w-[150px] top-[70%]">
           <div className="px-4 py-3">
             {sellerLinks.map((link) => (
               <button

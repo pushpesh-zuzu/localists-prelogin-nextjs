@@ -182,16 +182,14 @@ export const tabData = {
     professionals: [
       "Electricians in London",
       "Roofers in Edinburgh",
-      "Maths Tutor in Manchester",
-      "Plumbers in Birmingham",
-      "Gardeners in Wolverhampton",
-      "Plumbers in Birmingham",
       "Roofers in Norwich",
-      "Garden Designers Cardiff",
+      "Plumbers in Birmingham",
       "Electricians in London",
       "Roofers in Edinburgh",
+      "Maths Tutor in Manchester",
+      "Garden Designers Cardiff",
       "Patio Layers in Manchester",
-      "Plumbers in Birmingham",
+      "Gardeners in Wolverhampton",
     ],
     popular: [
       {
@@ -203,6 +201,10 @@ export const tabData = {
         url: "/en/gb/tree-surgeon-near-me",
     },
      {
+        title: "Gutter Cleaners near me",
+        url: "/en/gb/gutter-cleaning-near-me",
+    },
+     {
         title: "Private Tutors near me",
         url: "",
     },
@@ -211,17 +213,14 @@ export const tabData = {
         url: "",
     },
     {
+       title: "Driveway Installers near me",
+       url: "/en/gb/driveway-installers-near-me",
+   },
+    {
         title: "Fence & Gate Installers near me",
         url: "/en/gb/fencing-contractors-near-me",
     },
-     {
-        title: "Driveway Installers near me",
-        url: "/en/gb/driveway-installers-near-me",
-    },
-     {
-        title: "Gutter Cleaners near me",
-        url: "/en/gb/gutter-cleaning-near-me",
-    },
+    
      {
         title: "Artificial Grass Installers near me",
         url: "/en/gb/artificial-grass-installers-near-me",
