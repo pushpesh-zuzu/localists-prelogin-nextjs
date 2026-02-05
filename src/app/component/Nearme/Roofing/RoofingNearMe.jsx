@@ -4,21 +4,21 @@ import React from "react";
 import VettedSection from "../VettedSection";
 import AboutServicesAndQuestions from "../AboutServicesAndQuestions";
 import {
-    BREADCRUM_DATA_DRIVEWAY,
-    FREQUENTLY_DATA_DRIVEWAY_INSTALLERS,
+    BREADCRUM_DATA_ROOFERS,
+    FREQUENTLY_DATA_ROOFING,
     POPULAR_SERVICES,
     QUESTION_AND_ABOUT_SERVICE,
-    DRIVEWAY_INSTALLERS_FEEDBACK,
-    DRIVEWAY_INSTALLERS_DATA,
-    DRIVEWAY_INSTALLERS_TABDATA,
-    VETTED_DATA_DRIVEWAY_INSTALLER,
+    ROOFING_FEEDBACK,
+    ROOFING_DATA,
+    ROOFING_TABDATA,
+    VETTED_DATA_ROOFERS,
 } from "./RoofingData";
 import { FAQ } from "../FAQ";
 import NearmeMember from "../NearmeMember";
 import Footer from "../../Footer/Footer";
 import HowItWorkNearMe from "../HowItWorkNearMe";
 import HireRelatedToServiceNearMe from "../HireRelatedToServiceNearMe";
-import UserFeedbackNearMe from "../UserFeedbackNearMe";
+// import UserFeedbackNearMe from "../UserFeedbackNearMe";
 import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
@@ -26,6 +26,8 @@ import DiscoverNearMe from "../DiscoverNearMe";
 // import DrivewayPopularJobNearMe from "./DrivewayPopularJobNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
+import FenceGatePopularJobNearMe from "../FenceAndGateInstallation/FenceGatePopularJobNearMe";
+import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
     loading: () => (
@@ -41,7 +43,7 @@ const CloseBrowserAbandon = dynamic(
     { ssr: false }
 );
 
-function DrivewayInstallers() {
+function RoofingNearMe() {
     usePendingBuyerRedirect();
     useScrollToTop()
     return (
@@ -52,48 +54,47 @@ function DrivewayInstallers() {
                 heading1="Find Roofers"
                 heading2="Near You"
                 description="Find the best roofers near you! Just enter your postcode and a few details to get 5 free roofing quotes from local roofers in minutes!"
-                bannerImage="/nearme/Driveway-Installation-Page.webp"
-                bannerImageMobile="/nearme/Driveway-mobile.webp"
+                bannerImage="/nearme/Roofing/roofingbanner.webp"
+                bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
                 altText="Professional roofers roofing a new build with ceramic roof tiles"
                 serviceId={113}
                 serviceName="Roofing"
             />
-            {/* <VettedSection
-                paragraph={VETTED_DATA_DRIVEWAY_INSTALLER}
-                vettedHeading1="Vetted driveway contractors you can"
+            <VettedSection
+                paragraph={VETTED_DATA_ROOFERS}
+                vettedHeading1="Vetted roofers you can"
                 vettedHeading2="trust"
-                breadcrumb={BREADCRUM_DATA_DRIVEWAY}
+                breadcrumb={BREADCRUM_DATA_ROOFERS}
             />
-            <DrivewayPopularJobNearMe
+            <FenceGatePopularJobNearMe
                 services={POPULAR_SERVICES}
-                popularImage="/nearme/preparing-install-pavers.webp"
-                altText="installer creating cement mix for block paving driveway installation"
+                popularImage="/nearme/Roofing/roofslate.webp"
+                altText="two roofers installing slate tiles onto a brand new roof URL"
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
-                heading1="Driveway Installers"
+                heading1="Roofers"
                 heading2="in your area"
-                tabData={DRIVEWAY_INSTALLERS_TABDATA}
+                tabData={ROOFING_TABDATA}
             />
-            <UserFeedbackNearMe feedbackData={DRIVEWAY_INSTALLERS_FEEDBACK} serviceId={51}
-                serviceName="Driveway Installation" />
+            <UserFeedbackNearMe2 feedbackData={ROOFING_FEEDBACK} />
             <AboutServicesAndQuestions
-                serviceId={51}
-                serviceName="Driveway Installation"
+                serviceId={113}
+                serviceName="Roofing"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
             <FAQ
-                data={FREQUENTLY_DATA_DRIVEWAY_INSTALLERS}
+                data={FREQUENTLY_DATA_ROOFING}
             />
 
-            <DiscoverNearMe homeData={DRIVEWAY_INSTALLERS_DATA} />
+            <DiscoverNearMe homeData={ROOFING_DATA} />
 
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
             />
-            <Footer /> */}
+            <Footer />
         </>
     );
 }
 
-export default DrivewayInstallers;
+export default RoofingNearMe;

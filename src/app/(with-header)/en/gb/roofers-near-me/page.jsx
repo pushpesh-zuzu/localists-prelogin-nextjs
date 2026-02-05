@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import SEO from "@/app/component/common/seo/SEO";
-import DrivewayInstallers from "@/app/component/Nearme/DrivewayInstallers/DrivewayInstallers";
 import LoadingIndicator from "@/app/component/common/Loader/LoaderIndicatore";
+import RoofingNearMe from "@/app/component/Nearme/Roofing/RoofingNearMe";
 
 export const metadata = {
     title: "Local Roofers Near Me | Get Free Quotes | Localists.com",
@@ -14,8 +14,8 @@ export default function Page() {
     return (
         <>
             <SEO
-                canonicalPath="/en/gb/driveway-installers-near-me"
-                bannerImage="/nearme/Driveway-Installation-Page.webp"
+                canonicalPath="/en/gb/roofers-near-me"
+                bannerImage="/nearme/Roofing/roofingbanner.webp"
                 breadcrumb={[
                     { title: "Home", path: "/en/gb" },
                     { title: "Home & Garden", path: "/en/gb/home" },
@@ -30,7 +30,7 @@ export default function Page() {
                     </div>
                 }
             >
-                <DrivewayInstallers />
+                <RoofingNearMe />
             </Suspense>
         </>
     );

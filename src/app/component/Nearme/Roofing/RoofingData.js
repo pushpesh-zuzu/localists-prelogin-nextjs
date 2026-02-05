@@ -1,206 +1,145 @@
 export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "image",
-        src: "/nearme/laying-slabs.webp",
-        alt: " a specialist laying slabs and pavement on gravel for new driveway",
+        src: "/nearme/Roofing/rooferneatly.webp",
+        alt: "Roofer neatly securing a a tile on top of a roof",
         marginBottom: true,
     },
     {
         type: "h2",
-        text: "Your shortcut to vetted and verified driveway installers",
+        text: "How do you pick the right roofer",
     },
     {
         type: "p",
-        text: "Getting work done on your property can significantly increase its value, but choosing the wrong driveway contractor can do the opposite and leave you out of pocket. And the last thing you need is Dominic Littlewood or Rogue Traders on your doorstep! That’s why, with Localists, we only connect you with vetted and trusted driveway contractors. With all their reviews from multiple platforms in one place, we make it easy for you to make the right decision for you and your driveway. With just a few details, we’ll connect you with high-quality, local driveway installers.",
-    },
-    {
-        type: "pbold",
-        text: "Hiring through Localists just makes sense.",
-        // className: "my-[15px] md:my-[25px]",
-        className: "mb-0",
-    },
-    {
-        type: "image",
-        src: "/nearme/residental-property.webp",
-        alt: "newly installed resin driveway in a residential property",
-        marginBottom: true,
-        marginTop: true
-    },
-    {
-        type: "h2",
-        text: "Why you should hire a driveway installer through Localists",
+        text: "Your roof is one of the most important parts of your home. Think of it as your homes shield to the elements, without it working properly you’ll face leaks, structural damage and safety hazards. To put it bluntly, when your roof doesn’t work - you’ll know about it (in most cases).",
     },
     {
         type: "p",
-        text: "Every day, hundreds of people turn to Localists to find trusted driveway installers for their latest projects. Property managers, business owners, and homeowners rely on us to secure the best quotes from skilled professionals who can deliver exactly what they need—right when they need it. All installers on our database are fully vetted and verified through our rigorous approval process - So you only get the best!",
+        text: "Finding the right roofer for the job is imperative to that shield working correctly. So we always recommend getting multiple quotes from multiple roofers. That’s why submitting your job through Localists can really help - because we’ll not only send you 5 free quotes from local roofers, but you’ll be able to see their full profile including work, insurance and more.",
     },
     {
-        type: "pbold",
-        text: "When you hire through Localists, you get:",
+        type: "p",
+        text: "If you want the right roofer, heres the things you ought to be looking out for:",
         className: "my-[15px] md:my-[25px]",
     },
     {
-        type: "li",
-        text: "Reliable local specialists: We match you with driveway installers who know your area inside and out. That means quicker service, helpful insight into regional building regulations, and smoother communication—even with the most unique local accents!",
+        type: "uili",
+        heading: "Trade memberships:\u00A0",
+        text: `Membership in recognised associations like the <a href="https://www.nfrc.co.uk/" style="color:#00afe3; text-decoration:underline;">NFRC</a> (the largest roofing trade association in the UK) shows they follow industry standards. Accreditations such as <a href="https://www.chas.co.uk/" style="color:#00afe3; text-decoration:underline;">CHAS</a> or an NVQ Level 2 in roofing or similar, is also worth looking out for.`,
+        marginTop: true,
+        noMarginBottom: true
     },
     {
-        type: "li",
-        text: "Personalised quotes: Say goodbye to generic pricing. Tell us what you're looking for, and we'll connect you with installers who provide custom quotes, making it easy to compare options and secure the best value.",
+        type: "uili",
+        heading: "Insurance:\u00A0",
+        text: "Public liability and employer’s liability insurance protect both your property and their team.",
+        noMarginBottom: true
     },
     {
-        type: "li",
-        text: "Fast turnaround: Working to a specific schedule? Once matched, many professionals are ready to get started quickly and complete the project within your preferred timeframe.",
+        type: "uili",
+        heading: "Proven track record:\u00A0",
+        text: "Check references or reviews to see how they’ve performed for past clients.",
+        noMarginBottom: true
     },
     {
-        type: "li",
-        text: "Flexible design options: Have a particular look or layout in mind? Share a few details about your project, and we’ll link you with the right contractors who can bring your vision to life.",
+        type: "uili",
+        heading: "Written estimates and warranties:\u00A0",
+        text: "A professional roofer will provide a clear, written quote and guarantees on their work and materials.",
+        noMarginBottom: true
     },
     {
-        type: "li",
-        text: `Ongoing maintenance support: Many installers offer more than just installation—they can handle repairs, upgrades, and ongoing maintenance to keep your driveway looking its best.`,
-        className: "mb-0",
+        type: "uili",
+        heading: "Proof of qualifications:\u00A0",
+        text: "Always ask for certificates or proof of training - they should be able to show they know what they’re doing.",
+        noMarginBottom: true
     },
     {
         type: "image",
-        src: "/nearme/tamping-machine.webp",
-        alt: "expert using tamping machine while laying a concrete driveway",
+        src: "/nearme/Roofing/roofrepair.webp",
+        alt: "Specialist on a roof repairing and replacing old roof with new one",
         marginBottom: true,
         marginTop: true
     },
     {
         type: "h2",
-        text: "What to look for in a driveway installation professional",
-    },
-    {
-        type: "p",
-        text: "If it’s your first time hiring a driveway installer, it’s natural to feel unsure about where to start. Even if you’ve hired a contractor before, finding someone you can fully trust these days isn’t always easy.",
-    },
-    {
-        type: "pbold",
-        text: "Reviews",
-    },
-    {
-        type: "p",
-        text: "A first point of call should be checking out their reviews. And our platform makes it even easier to check a company's reviews – as we source their reviews from multiple platforms for you to read all in one place.",
-    },
-    {
-        type: "pbold",
-        text: "Previous Projects",
-    },
-    {
-        type: "p",
-        text: "Ask to see photos of past projects so you can get a feel for their workmanship and style across different materials. Before committing, always ask for a clear, written quote that outlines costs and timelines. If any local or planning rules apply, an installer who understands regional planning requirements can save you delays or headaches.",
-    },
-    {
-        type: "pbold",
-        text: "Regulatory Bodies",
-    },
-    {
-        type: "p",
-        text: "Driveway companies that are members of certain regulatory bodies often have to adhere to strict guidelines. Check whether your driveway installer is a member of regulatory bodies such as <a href='https://www.asphaltuk.org/' target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>The Asphalt Industry Alliance</a> or <a href='https://www.britpave.org.uk/' target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>Britpave</a> can be an indicator of quality.",
-    },
-    {
-        type: "p",
-        text: "Fortunately, with Localists, that legwork is already done. Every professional in our network is pre-vetted, reviewed, insured, and trained. You don’t need to spend hours comparing credentials; just tell us what you need, and we’ll match you with trusted driveway specialists nearby.",
-        notMarginBottom: true,
+        text: "How much does a new roof cost?",
+        noMarginBottom: true
     },
     {
         type: "image",
-        src: "/nearme/home.webp",
-        alt: "newly installed tarmac driveway in a home",
+        src: "/nearme/Roofing/roofspecialist.webp",
+        alt: "two roofing specialists installing asphalt shingles on roof",
         marginBottom: true,
         marginTop: true
     },
     {
-        type: "h2",
-        text: "Pro’s and cons of each driveway surface",
+        type: "h3",
+        text: "On average cost of a new roof is £7,000 in the UK. The cost per sqm is usually falls within the range of £120 - £275.",
     },
     {
         type: "p",
-        text: "All of the driveway installers on our platform are able to give you advice on which driveway surface you should opt for. But if you want some quick pros and cons, check out the table below:",
+        text: "The cost of hiring a roofer depends on several factors: the type of roof, its size, the materials used, and the complexity of the work. Labour costs are a significant part of the total, and hourly rates could be anywhere from £25 - £45 per hour. Smaller repairs and partial roofing, like patching, leak fixes, or tile replacement, you can expect to pay £150 - £500. Medium-sized reroofing or partial replacements generally range from £3,000 - £6,000.",
     },
     {
-        type: "table",
-        tableHeaders: ["Driveway Type", "Pros", "Cons"],
-        rowData: [
-            [
-                "Resin bound driveway",
-                "Stylish, wide choice of colours and textures, permeable (reduces puddles), prevents weed growth, quick to install.",
-                "May need upkeep in high-traffic areas, quality depends on expert installation."
-            ],
-            [
-                "Tarmac driveway",
-                "Fast and simple to lay, very durable, low maintenance, cost-effective, handles heavy traffic.",
-                "Fewer design options, can soften in extreme heat."
-            ],
-            [
-                "Block paving / stone driveway",
-                "Premium look, versatile patterns, great for small or unusual shapes, frost-resistant surface.",
-                "Longer installation time, higher cost, freeze-thaw can affect joints."
-            ],
-            [
-                "Gravel driveway",
-                "Budget-friendly, great for long driveways, wide colour options, easy to replenish.",
-                "Needs regular raking and topping up, harder to clear snow, weeds without membrane."
-            ],
-            [
-                "Concrete driveway",
-                "Strong, long-lasting, low maintenance, can be coloured or patterned.",
-                "Can crack over time, repairs may be visible, less permeable unless modified."
-            ]
-        ]
-
+        type: "pbold",
+        text: "Roof types explained:",
+        className: "mb-[15px] md:mb-[25px]",
     },
-    { type: "PostCodeSection", className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]" },
+    {
+        type: "uili",
+        heading: "Flat roofs:\u00A0",
+        text: "Low-pitched or completely level roofs, often for extensions, garages, or small properties. A 30 - 40m² flat roof typically costs £2,500 - £7,000, depending on materials like felt, rubber, or composite.",
+    },
+    {
+        type: "uili",
+        heading: "Gable roofs:\u00A0",
+        text: "The classic “triangular” roofs with two sloping sides meeting at a ridge. Common on most homes, covering 60 - 70m², costing £6,500 - £16,000 for a full installation.",
+    },
+    {
+        type: "uili",
+        heading: "Hip roofs:\u00A0",
+        text: "Like gable roofs but with slopes on all four sides, making them more complex to build. Standard 60 - 70m² hip roofs can cost £8,000 - £18,000 due to additional labour and materials.",
+    },
+    { type: "PostCodeSection", className: "mb-[0px] mt-[30px] lg:mt-[72px] lg:mb-[0px]" },
 
 ];
 
-export const FREQUENTLY_DATA_DRIVEWAY_INSTALLERS = [
+export const FREQUENTLY_DATA_ROOFING = [
     {
         key: "1",
-        title: "How much does it cost to install a driveway?",
+        title: "How do I know if I’ve been given a fair price?",
         description: `
-      Driveway installation costs can vary widely depending on the surface material, size of your driveway, your location, and any extra features you’d like. For example, adding drainage, decorative edging, lighting, or electric gates will affect the total price. You can get free quotes from specialists here on Localists once you start your search. Depending on what you need, you’ll be provided a cost breakdown.
-      <br /><br />
-      As a general rule, the larger the driveway, the lower the cost per square metre — so it’s worth asking for quotes based on your exact dimensions. A typical full installation might cost around £4,500 across the UK and £4,800 in London.
-        <br /><br />
-    However, on average, here’s what you can expect to pay per square metre in the UK:
+      Always get at least three written quotes so you know what a fair price looks like. Check the roofer’s qualifications, ask for proof of insurance, and read previous client reviews. Never pay the full amount up front. Most reputable roofers or roofing companies will only ask for a deposit and then final payment on completion. Doing these checks can save you a lot of stress and money.
       `,
     },
     {
         key: "2",
-        title: "Do you need planning permission for a driveway?",
+        title: "What is the cheapest option for a new roof?",
         description: `
-      In most cases, planning permission may not be required to install or replace a driveway. However, if your new driveway is over 5 square metres and uses impermeable materials without a drainage solution, you’ll need permission under UK regulations. Smaller installations, or those using permeable surfaces such as gravel, permeable block paving, or porous asphalt, are generally exempt. If you’re unsure, Localists can connect you with a vetted driveway contractor near you who can advise on the latest rules in your area.
+      If you’re looking for a budget-friendly option, asphalt or felt roofing tends to be the most affordable. While it may not offer the longevity of tiles or slate, it’s a solid choice for smaller homes or temporary fixes. Just make sure it’s installed by a qualified roofer to avoid leaks or early wear.Depending on your situation, you can also benefit from government grants.
       `,
     },
     {
         key: "3",
-        title: "How long does it take to build a driveway?",
+        title: "What time of year is best and cheapest to replace a roof?",
         description: `
-      The time to build a driveway depends on its size, the surface material, and site conditions. On average, most driveway installations take 3 to 7 days from start to finish. For example, gravel driveways are often the quickest to install, while block paving or decorative stonework can take longer due to the precision involved. Weather conditions (especially for concrete), site preparation, and contractor availability can also affect the timeline. Hiring an experienced driveway installer through Localists ensures your project runs smoothly and on schedule.`,
-    },
-    {
-        key: "4",
-        title: "Which is the cheapest driveway to install?",
-        description: `
-      Gravel driveways are generally the most affordable to install, thanks to the low cost of materials and straightforward installation process. They’re also quick to lay and come in a wide range of colours and/or stone sizes. However, what they offer in affordability, they can lack in long-term durability compared to paved options. They do require periodic maintenance, such as topping up the gravel and keeping weeds at bay.`,
+      As John F Kennedy famously said: the time to repair a roof is when the sun is shining. That being said, if you do notice any small issues with your roof, it’s best to get them sorted straight away to prevent the problems from turning into even bigger problems.  Typically, from late spring to early autumn, the weather is more predictable - fewer rainy days, warmer temperatures, and longer daylight hours make it easier for roofers to work efficiently. However, if you’re looking to save money, consider booking your roof replacement during the off-season, usually in winter. Some roofers offer discounts during these quieter months, though the work may take a bit longer due to weather challenges. Balancing timing, cost, and weather conditions can help you plan the project more effectively.`,
     },
 ];
 
-export const DRIVEWAY_INSTALLERS_TABDATA = {
+export const ROOFING_TABDATA = {
     professionals: [
-        "Driveway Installers North Yorkshire",
-        "Driveway Installers Liverpool",
-        "Driveway Installers Manchester",
-        "Driveway Installers Chester",
-        "Driveway Installers Leeds",
-        "Driveway Installers York",
-        "Driveway Installers Harrogate",
-        "Driveway Installers Cheshire",
-        "Driveway Installers Hull",
-        "Driveway Installers Stockport",
-        "Driveway Installers Bolton",
+        "Roofers North Yorkshire",
+        "Roofers Liverpool",
+        "Roofers Manchester",
+        "Roofers Chester",
+        "Roofers Leeds",
+        "Roofers York",
+        "Roofers Harrogate",
+        "Roofers Cheshire",
+        "Roofers Hull",
+        "Roofers Stockport",
+        "Roofers Bolton",
     ],
     popular: [
         // "Landscapers Near Me",
@@ -240,51 +179,50 @@ export const DRIVEWAY_INSTALLERS_TABDATA = {
     ],
 };
 
-export const VETTED_DATA_DRIVEWAY_INSTALLER = [
-    `Bumps in life? inevitable. Bumps in your driveway? fixable. If you're looking to smooth things over with your driveway and give your car the VIP treatment, then ditch the red carpet for a brand new tarmac, resin or block-paved driveway.
+export const VETTED_DATA_ROOFERS = [
+    `At <Strong>Localists</Strong>, we make finding a reliable roofer as easy as looking up. Whether it’s a quick patch, a seasonal checkup, or a full replacement, we’ll connect you with trusted local pros who get the job done right - rain or shine.
     </br></br>
-    At Localists, we connect you with local driveway contractors who can pamper your neglected driveway back into shape. Just give us a few details, and we'll get you up to 5 free quotes straight into your inbox. No cost. No obligation. No fuss. Just sit back and let us do the legwork for you.`,
+    Just tell us what you need, and we’ll send free, no-obligation quotes straight to your inbox. All the roofers we recommend - local to you, vetted, and fully qualified for the job. No cost. No hassle, just free quotes straight into your inbox.`,
 ];
 
-export const BREADCRUM_DATA_DRIVEWAY = [
+export const BREADCRUM_DATA_ROOFERS = [
     { title: "Home & Garden", path: "/en/gb/home" },
-    { title: "Driveway Installation" },
+    { title: "Roofing" },
 ];
 
 export const POPULAR_SERVICES = [
-    "Driveway resurfacing",
-    "Driveway repairs",
-    "Driveway drainage installation",
-    "Driveway cleaning",
-    "Driveway sealing & resealing",
-    "Driveway edging installation",
-    "Driveway weed & moss removal",
+    "Roof Replacement",
+    "Roof Repair",
+    "Shingle replacement",
+    "Leadworks installation",
+    "Flashing",
+    "Waterproofing",
 ];
 
-export const DRIVEWAY_INSTALLERS_FEEDBACK = [
+export const ROOFING_FEEDBACK = [
     {
         id: 1,
-        text: "Within minutes of submitting my request, I heard back from two local companies ready to help. Couldn’t have asked for a quicker service.",
-        name: "Amelia",
+        text: "I never thought getting my roof repaired could be stress-free, but Localists made it so simple. The roofer they matched me with knew exactly what to do, arrived on time, and didn’t leave a mess behind. My roof feels solid and safe again!",
+        name: "Clare Donovan",
     },
     {
         id: 2,
-        text: "Had 3 quotes from local driveway installers, and got the work done the same day for less than originally quoted! Will definitely use again",
-        name: "Robert",
+        text: "I was worried about getting overcharged, but Localists provided different quotes from installers near me, and luckily, I was able to connect with a roofer who was upfront about costs and really worked with my budget. They fixed the leak in one day, and now I don’t have to stress every time it rains.",
+        name: "Omar Patel",
     },
     {
         id: 3,
-        text: "Got instant quotes for my driveway -  and had the work done 2 weeks later. Can't fault them, will definitely use Localists again. ",
-        name: "Alan",
+        text: "We’d been putting off our roof replacement for ages because we didn’t know who to trust. Localists made it easy. I got multiple quotes and picked someone who really knew their stuff. Excellent job, and the team were friendly too.",
+        name: "Fiona McAllister",
     },
-    {
-        id: 4,
-        text: "Couldn't fault the service, saved me shopping around for a cheaper quote. Will definitely use again!",
-        name: "Tracey",
-    },
+    // {
+    //     id: 4,
+    //     text: "Couldn't fault the service, saved me shopping around for a cheaper quote. Will definitely use again!",
+    //     name: "Tracey",
+    // },
 ];
 
-export const DRIVEWAY_INSTALLERS_DATA = [
+export const ROOFING_DATA = [
     {
         id: 1,
         title: "Home & Garden",
@@ -335,5 +273,12 @@ export const DRIVEWAY_INSTALLERS_DATA = [
         image: "/homepage/treesurgery.webp",
         isSpecial: false,
         slug: "/en/gb/tree-surgeon-near-me",
+    },
+    {
+        id: 8,
+        title: "Driveway Installation",
+        image: "/homepage/driveway.webp",
+        isSpecial: false,
+        slug: "/en/gb/driveway-installers-near-me",
     },
 ];
