@@ -322,12 +322,13 @@ export const BREADCRUM_DATA_DRIVEWAY = [
 
 export const POPULAR_SERVICES = [
     "Driveway cleaning",
-    "Driveway repairs",
     "Driveway resurfacing",
+    "Driveway repairs",
     "Driveway edging installation",
     "Driveway sealing & resealing",
     "Driveway drainage installation",
     "Driveway weed & moss removal",
+    "Driveway drainage installation",
 ];
 
 export const DRIVEWAY_INSTALLERS_FEEDBACK = [

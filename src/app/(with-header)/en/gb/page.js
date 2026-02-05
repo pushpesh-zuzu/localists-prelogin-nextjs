@@ -13,8 +13,8 @@ import React from 'react'
 
 function page() {
   return (
-      <main className="bg-white">
-         <CloseBrowserAbandon />
+    <main className="bg-white">
+      <CloseBrowserAbandon />
       <HeroSection />
       <PopularCard />
       <HowItWork />
@@ -24,7 +24,7 @@ function page() {
       <HireRelatedToService tabData={tabData} />
       <Member />
       <Footer />
-      </main>
+    </main>
   )
 }
 

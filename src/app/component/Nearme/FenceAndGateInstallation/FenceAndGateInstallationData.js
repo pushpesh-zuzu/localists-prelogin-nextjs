@@ -160,9 +160,9 @@ export const FENCE_AND_GATE_TABDATA = {
         "Fencing Contractors Chester",
         "Fencing Contractors Leeds",
         "Fencing Contractors York",
+        "Fencing Contractors Hull",
         "Fencing Contractors Harrogate",
         "Fencing Contractors Cheshire",
-        "Fencing Contractors Hull",
         "Fencing Contractors Stockport",
         "Fencing Contractors Bolton",
     ],
@@ -222,8 +222,8 @@ export const POPULAR_SERVICES = [
     "Fence Replacements",
     "Post replacement",
     "Concrete setting",
-    "Driveway gate installation",
     "Gate repairs & adjustments",
+    "Driveway gate installation",
 ];
 
 export const FENCE_AND_GATE_FEEDBACK = [
