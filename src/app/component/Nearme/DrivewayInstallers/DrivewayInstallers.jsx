@@ -18,7 +18,7 @@ import NearmeMember from "../NearmeMember";
 import Footer from "../../Footer/Footer";
 import HowItWorkNearMe from "../HowItWorkNearMe";
 import HireRelatedToServiceNearMe from "../HireRelatedToServiceNearMe";
-import UserFeedbackNearMe from "../UserFeedbackNearMe";
+// import UserFeedbackNearMe from "../UserFeedbackNearMe";
 import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
@@ -26,6 +26,7 @@ import DiscoverNearMe from "../DiscoverNearMe";
 import DrivewayPopularJobNearMe from "./DrivewayPopularJobNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
+import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
     loading: () => (
@@ -77,8 +78,7 @@ function DrivewayInstallers() {
                 heading2="in your area"
                 tabData={DRIVEWAY_INSTALLERS_TABDATA}
             />
-            <UserFeedbackNearMe feedbackData={DRIVEWAY_INSTALLERS_FEEDBACK} serviceId={51}
-                serviceName="Driveway Installation" />
+            <UserFeedbackNearMe2 feedbackData={DRIVEWAY_INSTALLERS_FEEDBACK} />
             <AboutServicesAndQuestions
                 serviceId={51}
                 serviceName="Driveway Installation"

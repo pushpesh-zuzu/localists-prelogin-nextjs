@@ -348,20 +348,26 @@ export const POPULAR_SERVICES_PATIO_SERVICES_NEARME = [
 export const FEEDBACK_PATIO_SERVICES_NEARME = [
   {
     id: 1,
-    text: "I used Localists to find a patio installer near me and couldn’t be happier. The contractor was friendly, turned up on time every day, and the work was flawless. My new sandstone patio completely transformed the garden. I’ve already recommended them to my neighbour!",
-    name: "Harry",
+    text: "We wanted to add a patio to our garden and Greg and his team did a brilliant job. They arrived early, cracked on with the work, and kept everything neat as they went. The end result looks great and we’re really pleased with it. Can’t fault them at all.",
+    name: "Sarah Cairns",
     // location: "Surrey",
   },
   {
     id: 2,
-    text: "I needed a quick turnaround for a gravel patio before a family event. Localists matched me with a brilliant local patio builder who had great reviews. The quote was fair, and the job was finished ahead of schedule. Couldn’t ask for better service.",
-    name: "James",
+    text: "I used Localists to find a patio installer near me and couldn’t be happier. The contractor was friendly, turned up on time every day, and the work was flawless. My new sandstone patio completely transformed the garden. I’ve already recommended them to my neighbour!",
+    name: "Harry W.",
     // location: "Manchester",
   },
   {
     id: 3,
+    text: "I needed a quick turnaround for a gravel patio before a family event. Localists matched me with a brilliant local patio builder who had great reviews. The quote was fair, and the job was finished ahead of schedule. Couldn’t ask for better service.",
+    name: "James R.",
+    // location: "London",
+  },
+  {
+    id: 4,
     text: "After weeks of searching for patio contractors near me, I found Localists. Within the same day, I had three quotes from three different patio companies and picked the one that best suited my budget. The new porcelain patio looks incredible and has already made the garden our favourite spot.",
-    name: "Helen",
+    name: "Helen M.",
     // location: "London",
   },
 ];

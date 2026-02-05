@@ -290,23 +290,23 @@ export const POPULAR_SERVICES = [
 export const TREE_SUREON_FEEDBACK = [
   {
     id: 1,
-    text: "Within minutes of submitting my request, I heard back from two local companies ready to help. Couldn’t have asked for a quicker service.",
-    name: "Amelia",
+    text: "Had a large tree that was getting too close to the house and making me nervous in high winds. The work was carried out safely and professionally, and everything was cleared away afterwards. No drama, no mess, just a job done right.",
+    name: "Freddie Dominic",
   },
   {
     id: 2,
-    text: "Had 3 quotes from local tree surgeons, and got the work done the same day for less than originally quoted! Will definitely use again",
-    name: "Robert",
+    text: "Localists connected me with a tree surgeon who removed a large oak safely and efficiently. Very professional and friendly, and they left my garden looking spotless.",
+    name: "Michael Hewitt",
   },
   {
     id: 3,
-    text: "Got instant quotes for my driveway -  and had the work done 2 weeks later. Can't fault them, will definitely use Localists again. ",
-    name: "Alan",
+    text: "We needed urgent pruning on some overgrown trees. Came on Localists to search for tree surgeons near me. Found Stuart, who was very responsive from first contact. He arrived right on time, explained everything clearly, and did a fantastic job.",
+    name: "Sarah Henshaw",
   },
   {
     id: 4,
-    text: "Couldn't fault the service, saved me shopping around for a cheaper quote. Will definitely use again!",
-    name: "Tracey",
+    text: "Excellent service! The tree surgeon handled a tricky removal without damaging anything nearby. I’d definitely use Localists again.",
+    name: "Tom H.",
   },
 ];
 

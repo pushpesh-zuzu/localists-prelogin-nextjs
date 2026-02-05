@@ -245,23 +245,23 @@ export const VETTED_DATA_AIRPORT_TRANSPORT = [
 export const FEEDBACK_AIRPORT_TRANSPORT = [
   {
     id: 1,
-    text: "Within minutes of submitting my request, I heard back from two local companies ready to help. Couldn’t have asked for a quicker service.",
-    name: "Amelia",
+    text: "Used this service for an early morning flight and couldn’t fault it. Picked up on time, clean car, and no rushing or stress. Made the whole start to the holiday much easier.",
+    name: "Anna Wright",
   },
   {
     id: 2,
-    text: "Had 3 quotes from local driveway installers, and got the work done the same day for less than originally quoted! Will definitely use again",
-    name: "Robert",
+    text: "Booked a private airport transfer through Localists and it was seamless. The driver was punctual, professional, and the car was spotless. I’ll definitely use them again!",
+    name: "Sofia M.",
   },
   {
     id: 3,
-    text: "Got instant quotes for my driveway -  and had the work done 2 weeks later. Can't fault them, will definitely use Localists again. ",
-    name: "Alan",
+    text: "We needed a group minibus for our family holiday. Localists matched us with a reliable driver who handled all the luggage and got us to the airport on time. Stress-free!",
+    name: "Tariq Hassan",
   },
   {
     id: 4,
-    text: "Couldn't fault the service, saved me shopping around for a cheaper quote. Will definitely use again!",
-    name: "Tracey",
+    text: "Our business team had to get to a conference on time. Localists connected us with a professional private transfer. Smooth, comfortable, and exactly on schedule.",
+    name: "Daniel Müller",
   },
 ];
 

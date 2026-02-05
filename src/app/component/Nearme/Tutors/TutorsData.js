@@ -214,23 +214,23 @@ export const BREADCRUM_DATA_TUTORS = [
 export const TUTORS_FEEDBACK = [
     {
         id: 1,
-        text: "Within minutes of submitting my request, I heard back from two local companies ready to help. Couldn’t have asked for a quicker service.",
-        name: "Amelia",
+        text: "My daughter needed extra help with confidence more than anything. So pleased with the tutor we found on the platform. She’s very patient, friendly, and explains things in a way that actually makes sense to my daughter. Definitely seen a real improvement from her recent exams.",
+        name: "Nina Grayson",
     },
     {
         id: 2,
-        text: "Had 3 quotes from local driveway installers, and got the work done the same day for less than originally quoted! Will definitely use again",
-        name: "Robert",
+        text: "We found a brilliant maths tutor for my son through Localists. She was patient, encouraging, and his grades have improved massively.",
+        name: "Sarah Martins",
     },
     {
         id: 3,
-        text: "Got instant quotes for my driveway -  and had the work done 2 weeks later. Can't fault them, will definitely use Localists again. ",
-        name: "Alan",
+        text: "I needed help with A-level chemistry, and Localists connected me with a fantastic tutor who explained everything clearly and boosted my confidence before exams.",
+        name: "Jason D",
     },
     {
         id: 4,
-        text: "Couldn't fault the service, saved me shopping around for a cheaper quote. Will definitely use again!",
-        name: "Tracey",
+        text: "The whole process was easy. I shared what I needed and had quotes from tutors within minutes. Highly recommend!",
+        name: "Priya K.",
     },
 ];
 

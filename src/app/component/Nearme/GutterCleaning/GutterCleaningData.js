@@ -297,20 +297,26 @@ export const POPULAR_SERVICES = [
 export const GUTTER_CLEANING_FEEDBACK = [
     {
         id: 1,
-        text: "Excellent service! The team cleared all our gutters quickly and professionally. They even pointed out a few problem areas I wouldn’t have noticed. Highly recommend Localists for anyone looking for reliable gutter cleaning.",
-        name: "Tom",
+        text: "Very reliable honest company. Booked in for a gutter cleaning just after noticing water pouring down the walls. Turned out they were completely blocked. All sorted quickly and showed us before and after photos. Really pleased with the service.",
+        name: "Sim Staurt",
         // location: "Blackburn",
     },
     {
         id: 2,
-        text: "Our building had severe blockages, and we were worried about water damage. Localists connected us with a great local gutter cleaning service. The team was friendly, arrived on time, and explained everything they were doing. Peace of mind knowing the job was done properly. Oh, and they left everything spotless!",
-        name: "Janis",
+        text: "Excellent service! The team cleared all our gutters quickly and professionally. They even pointed out a few problem areas I wouldn’t have noticed. Highly recommend Localists for anyone looking for reliable gutter cleaning.",
+        name: "Tom H.",
         // location: "Oxford",
     },
     {
         id: 3,
+        text: "Our building had severe blockages, and we were worried about water damage. Localists connected us with a great local gutter cleaning service. The team was friendly, arrived on time, and explained everything they were doing. Peace of mind knowing the job was done properly. Oh, and they left everything spotless!",
+        name: "Janis R.",
+        // location: "Liverpool",
+    },
+    {
+        id: 4,
         text: "Quick, professional, and thorough. They even helped us identify a minor leak we didn’t know about. After the gutters were cleaned, I realised how much water had been overflowing during storms. Definitely worth using a vetted service instead of trying this ourselves!",
-        name: "Thomas",
+        name: "Thomas Martin",
         // location: "Liverpool",
     },
 ];

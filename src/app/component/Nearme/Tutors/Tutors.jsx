@@ -17,13 +17,14 @@ import NearmeMember from "../NearmeMember";
 import Footer from "../../Footer/Footer";
 import HowItWorkNearMe from "../HowItWorkNearMe";
 import HireRelatedToServiceNearMe from "../HireRelatedToServiceNearMe";
-import UserFeedbackNearMe from "../UserFeedbackNearMe";
+// import UserFeedbackNearMe from "../UserFeedbackNearMe";
 import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
+import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
     loading: () => (
@@ -69,8 +70,7 @@ function Tutors() {
                 heading2="in your area"
                 tabData={TUTORS_TABDATA}
             />
-            <UserFeedbackNearMe feedbackData={TUTORS_FEEDBACK} serviceId=""
-                serviceName="Tutor" />
+            <UserFeedbackNearMe2 feedbackData={TUTORS_FEEDBACK} />
             <AboutServicesAndQuestions
                 serviceId=""
                 serviceName="Tutor"

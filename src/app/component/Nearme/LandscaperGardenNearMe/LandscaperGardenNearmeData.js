@@ -400,20 +400,26 @@ export const POPULAR_SERVICES_LANDSCAPE_NEARME = [
 export const FEEDBACK_LANDSCAPE_NEARME = [
   {
     id: 1,
-    text: "We needed our back garden completely re-landscaped with a new patio and lawn. The local landscaper we found through Localists was fantastic – clear quotes, turned up on time, and gave us design suggestions we hadn’t even thought of. The patio looks amazing, and the kids love the new grassed area. Couldn’t be happier.",
-    name: "Rebecca",
+    text: "Our back garden was basically grass, mud, and a dumping ground for random bits. Never really a place we could relax. The team came up with a sensible plan and everything looks exactly how we wanted. We’re out there most evenings now. Worth every penny.",
+    name: "Elena Roberts",
     // location: "Hartlepool",
   },
   {
     id: 2,
-    text: "Our space was overgrown and difficult to maintain. The landscaper handled everything – from clearing the site to installing raised beds, new fencing, and low-maintenance planting. They even built in a small water feature which has made the garden feel so peaceful. The whole process was stress-free and worth every penny.",
-    name: "Daniel",
+    text: "We needed our back garden completely re-landscaped with a new patio and lawn. The local landscaper we found through Localists was fantastic – clear quotes, turned up on time, and gave us design suggestions we hadn’t even thought of. The patio looks amazing, and the kids love the new grassed area. Couldn’t be happier.",
+    name: "Rebecca T.",
     // location: "Salisbury",
   },
   {
     id: 3,
+    text: "Our space was overgrown and difficult to maintain. The landscaper handled everything – from clearing the site to installing raised beds, new fencing, and low-maintenance planting. They even built in a small water feature which has made the garden feel so peaceful. The whole process was stress-free and worth every penny.",
+    name: "Daniel M.",
+    // location: "Bristol",
+  },
+   {
+    id: 4,
     text: "I only wanted some soft landscaping at first (new shrubs and borders), but the contractor also helped with drainage issues and suggested lighting that really makes the garden shine at night. They kept everything tidy, updated me throughout, and the price was fair. Highly recommend using Localists to find trusted landscapers.",
-    name: "Jamie",
+    name: "Jamie K.",
     // location: "Bristol",
   },
 ];
