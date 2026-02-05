@@ -81,8 +81,7 @@ function LandscapeGardenNearme() {
         services={POPULAR_SERVICES_LANDSCAPE_NEARME}
         popularImage="/nearme/Landscaping/pathwayPopularJob.png"
         altText="beautifully landscaped garden with pathway and decorative paving edges "
-        // mobileCardClass="w-[221px] min-[390px]:w-[221px] min-[412px]:w-[300px] min-[440px]:w-[307px] min-[512px]:w-[350px]"
-        mobileCardClass="w-full"
+        mobileCardClass="w-[285px] min-[390px]:w-[221px] min-[412px]:w-[300px] min-[440px]:w-[307px] min-[512px]:w-[350px]"
         // desktopWidthClass='max-w-full'
         classNameD="max-w-[65%] min-[850]:max-w-[80%]  lg:max-w-full"
       />
