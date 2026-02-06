@@ -10,6 +10,8 @@ import {
   setcitySerach,
 } from "@/lib/store/buyerslice/buyerSlice";
 import { setSelectedServiceId } from "@/lib/store/findjobslice";
+import { showToast } from "@/utils/toaster";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 const SearchResults = dynamic(() => import("../../common/SearchResult"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -19,7 +21,7 @@ const BuyerRegistration = dynamic(
   {
     ssr: false,
     loading: () => <div className="hidden">Loading...</div>,
-  }
+  },
 );
 function HeroSectionSearch() {
   const dispatch = useDispatch();
@@ -27,6 +29,8 @@ function HeroSectionSearch() {
   //     id: null,
   //     name: "",
   //   });
+  usePendingBuyerRedirect()
+  const [selectedService, setSelectedService] = useState('')
   const [searchQuery, setSearchQuery] = useState("");
   const [show, setShow] = useState(false);
   const handleClose = () => {
@@ -47,17 +51,28 @@ function HeroSectionSearch() {
       dispatch(setBuyerStep(7));
     }
   }, [dispatch]);
+
+ const handleSubmit = () => {
+  if (!selectedService) {
+    showToast("error", "Please select a service from the suggestions.");
+    return;
+  }
+  setShow(true);
+  setSearchQuery("");
+  setSelectedService("");
+};
+
   return (
     <>
-      <div className="relative max-w-[254px] md:max-w-[246px]  lg:max-w-[404px]">
+      <div className="relative w-full max-w-full md:max-w-[246px]  lg:max-w-[404px]">
         <input
-          style={{
-            boxShadow: "0px 12.56px 20.94px 0px #005974E5",
-          }}
+          // style={{
+          //   boxShadow: "0px 12.56px 20.94px 0px #005974E5",
+          // }}
           type="text"
           placeholder="Search..."
           id="search Attribute"
-          className="text-[#B3B3B3] font-bold px-4 py-2.5 md:px-6 md:py-2.5 xl:px-[43px] xl:py-4 mt-5 md:mt-6 xl:mt-[46px] text-base xl:text-[25px]! placeholder:text-base xl:placeholder:text-[25px]! bg-white rounded-[100px] w-full focus:outline-none"
+          className="text-[#B3B3B3] font-bold px-4 py-3.5  shadow-[0px_20px_40px_0px_rgba(0,0,0,0.5)] md:px-6 md:py-3.5 lg:px-[43px] lg:py-[20px] mt-7.5 md:mt-6 xl:mt-[46px] text-base xl:text-[20px]! placeholder:text-base xl:placeholder:text-[20px]! bg-white  rounded-[100px] w-full focus:outline-none"
           aria-label="Search for a service"
           value={searchQuery || ""}
           onChange={(e) => {
@@ -67,19 +82,25 @@ function HeroSectionSearch() {
               dispatch(searchService({ search }));
             }
           }}
+          
         />
         {searchQuery.length ? (
           <SearchResults
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
             setShow={setShow}
-            setSelectedServiceId={setSelectedServiceId}
+            setSelectedService={setSelectedService}
           />
         ) : (
           ""
         )}
-        <div className="absolute inset-y-0 top-0 xl:-top-4 right-[19px] xl:right-10 flex items-center pointer-events-none">
-          <SearchIcon className="w-6 h-6 md:w-5 md:h-5 lg:w-8 lg:h-8 mt-5 xl:mt-16" />
+        <div
+          onClick={() => {
+            handleSubmit();
+          }}
+          className="absolute inset-y-0 top-3 md:top-1 xl:-top-4 right-[19px] xl:right-10 flex items-center "
+        >
+          <SearchIcon className="cursor-pointer w-6 h-6 md:w-5 md:h-5 lg:w-8 lg:h-8 mt-5 xl:mt-16" />
         </div>
       </div>
       {show && (
@@ -88,8 +109,8 @@ function HeroSectionSearch() {
           service_Id={selectedSearchService?.id}
           serviceName={selectedSearchService?.service || ""}
           service_Name={selectedSearchService?.service || ""}
-        // postcode={pincode}
-        // postalCodeValidate={postalCodeValidate}
+          // postcode={pincode}
+          // postalCodeValidate={postalCodeValidate}
         />
       )}
     </>
