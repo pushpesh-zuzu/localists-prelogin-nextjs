@@ -154,17 +154,17 @@ When you connect with a professional through Localists, you’ll get clear, tail
 
 export const FENCE_AND_GATE_TABDATA = {
     professionals: [
-        "Fencing Contractors North Yorkshire",
-        "Fencing Contractors Liverpool",
-        "Fencing Contractors Manchester",
-        "Fencing Contractors Chester",
-        "Fencing Contractors Leeds",
         "Fencing Contractors York",
         "Fencing Contractors Hull",
-        "Fencing Contractors Harrogate",
+        "Fencing Contractors Leeds",
+        "Fencing Contractors Bolton",
+        "Fencing Contractors Chester",
         "Fencing Contractors Cheshire",
         "Fencing Contractors Stockport",
-        "Fencing Contractors Bolton",
+        "Fencing Contractors Liverpool",
+        "Fencing Contractors Harrogate",
+        "Fencing Contractors Manchester",
+        "Fencing Contractors North Yorkshire",
     ],
     popular: [
         // "Driveway Installers Near Me",
@@ -173,10 +173,9 @@ export const FENCE_AND_GATE_TABDATA = {
         // "Architects Near Me",
         // "Gutter Cleaners Near Me",
         // "Artificial Grass Installers Near Me",
-
         {
-            title: "Driveway Installers Near Me",
-            url: "/en/gb/driveway-installers-near-me",
+            title: "Gutter Cleaners Near Me",
+            url: "/en/gb/gutter-cleaning-near-me",
         },
         {
             title: "Gardeners Near Me",
@@ -191,8 +190,8 @@ export const FENCE_AND_GATE_TABDATA = {
             url: "",
         },
         {
-            title: "Gutter Cleaners Near Me",
-            url: "/en/gb/gutter-cleaning-near-me",
+            title: "Driveway Installers Near Me",
+            url: "/en/gb/driveway-installers-near-me",
         },
         {
             title: "Artificial Grass Installers Near Me",
@@ -218,12 +217,12 @@ export const BREADCRUM_DATA_FENCE_AND_GATE = [
 ];
 
 export const POPULAR_SERVICES = [
-    "Fence Repairs",
-    "Fence Replacements",
     "Post replacement",
     "Concrete setting",
-    "Gate repairs & adjustments",
+    "Fence Repairs",
+    "Fence Replacements",
     "Driveway gate installation",
+    "Gate repairs & adjustments",
 ];
 
 export const FENCE_AND_GATE_FEEDBACK = [

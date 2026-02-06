@@ -25,10 +25,12 @@ const HeroSection = memo(function HeroSection() {
       slug: "/en/gb/patio-layers-near-me",
     },
     {
-      title: "Fence & Gate Installers",
-      slug: "/en/gb/fencing-contractors-near-me",
+      title: "Architects",
     },
-     {
+    {
+      title: "Personal Trainers",
+    },
+    {
       title: "Tree Surgeons",
       slug: "/en/gb/tree-surgeon-near-me",
     },
@@ -36,17 +38,14 @@ const HeroSection = memo(function HeroSection() {
       title: "Private Tutors",
     },
     {
-      title: "Personal Trainers",
+      title: "Airport Transfers",
     },
     {
       title: "Painter Decorators",
     },
-    
     {
-      title: "Architects",
-    },
-    {
-      title: "Airport Transfers",
+      title: "Fence & Gate Installers",
+      slug: "/en/gb/fencing-contractors-near-me",
     },
     {
       title: "Physics and Maths Tutors",
@@ -72,8 +71,8 @@ const HeroSection = memo(function HeroSection() {
         aria-label="Hero section"
       >
         <div className="w-full lg:w-1/2 flex flex-col">
-                        <TrustpioletIcon className="lg:min-h-[54px] max-h-[28px] max-w-[184px] md:max-w-[177px] lg:max-w-[360px] mb-[16.54px] md:mb-3 lg:mb-[30px] lg:max-h-12" />
-  
+          <TrustpioletIcon className="lg:min-h-[54px] max-h-[28px] max-w-[184px] md:max-w-[177px] lg:max-w-[360px] mb-[16.54px] md:mb-3 lg:mb-[30px] lg:max-h-12" />
+
 
           <h1 className="font-Inter font-black
         tracking-[-0.03em]

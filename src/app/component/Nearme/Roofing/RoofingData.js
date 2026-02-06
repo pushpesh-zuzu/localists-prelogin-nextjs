@@ -66,7 +66,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     },
     {
         type: "h3",
-        text: "On average cost of a new roof is £7,000 in the UK. The cost per sqm is usually falls within the range of £120 - £275.",
+        text: "On average cost of a new roof is £7,000 in the UK. The cost per sqm  usually falls between £120 - £275 – with the type of roof and materials used (such as slate or clay tiles) largely affecting the price.",
     },
     {
         type: "p",
