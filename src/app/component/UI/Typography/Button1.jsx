@@ -89,7 +89,7 @@ const Button1 = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`${baseClasses} ${variants[variant]} ${className} cursor-pointer disabled:opacity-90`}
+      className={`${baseClasses} ${variants[variant]} ${className} cursor-pointer disabled:opacity-70`}
     >
       {children}
     </button>
