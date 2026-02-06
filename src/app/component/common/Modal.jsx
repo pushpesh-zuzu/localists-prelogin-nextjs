@@ -83,7 +83,7 @@ const Modal = ({
                 </Button1>
               </div>
             ) : onNext ? (
-              <div className="flex justify-center cursor-pointer">
+              <div className="flex justify-center">
                 <Button1
                   disabled={disabled}
                   variant="primary"
