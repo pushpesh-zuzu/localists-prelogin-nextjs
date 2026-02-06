@@ -41,23 +41,23 @@ const QuestionModal = ({
   const [questionHistory, setQuestionHistory] = useState([0]);
 
   // Get URL params
-    const { search } = useSearchParams();
-        const allParams =
-            typeof window !== "undefined" &&
-            extractAllParams(search || window.location.search);
-      const campaignid = allParams.campaign_id || "";
-      const keyword = allParams.keyword || "";
-      const gclid = allParams.gclid || "";
-      const msclkid = allParams.msclkid || "";
-      const adgroup_id = allParams.adgroup_id;
-      const platform_source = allParams.source || "";
-      const campaign = allParams.campaign || "";
-      const adgroup = allParams.adgroup || "";
-      const matchtype = allParams.matchtype || "";
-      const device = allParams.device || "";
-      const loc_physical_ms = allParams.loc_physical_ms || "";
-      const utm_search_term = allParams.utm_search_term || "";
-  
+  const { search } = useSearchParams();
+  const allParams =
+    typeof window !== "undefined" &&
+    extractAllParams(search || window.location.search);
+  const campaignid = allParams.campaign_id || "";
+  const keyword = allParams.keyword || "";
+  const gclid = allParams.gclid || "";
+  const msclkid = allParams.msclkid || "";
+  const adgroup_id = allParams.adgroup_id;
+  const platform_source = allParams.source || "";
+  const campaign = allParams.campaign || "";
+  const adgroup = allParams.adgroup || "";
+  const matchtype = allParams.matchtype || "";
+  const device = allParams.device || "";
+  const loc_physical_ms = allParams.loc_physical_ms || "";
+  const utm_search_term = allParams.utm_search_term || "";
+
   useEffect(() => {
     if (questions.length > 0 && currentQuestion === -1) {
       setCurrentQuestion(0);
@@ -101,12 +101,12 @@ const QuestionModal = ({
     parsedAnswers: Array.isArray(q.answer)
       ? q.answer
       : (() => {
-          try {
-            return JSON.parse(q.answer);
-          } catch (e) {
-            return [];
-          }
-        })(),
+        try {
+          return JSON.parse(q.answer);
+        } catch (e) {
+          return [];
+        }
+      })(),
   }));
 
   const questionIndexMap = {};
@@ -242,6 +242,12 @@ const QuestionModal = ({
       const newHistory = [...questionHistory];
       newHistory.pop();
       const prevIndex = newHistory[newHistory.length - 1];
+
+      const trimmedAnswers =
+        buyerRequest?.questions?.slice(0, prevIndex) || [];
+
+      dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
+
       setQuestionHistory(newHistory);
       setCurrentQuestion(prevIndex);
     } else {
@@ -318,7 +324,7 @@ const QuestionModal = ({
                         <input
                           type={
                             formattedQuestions[currentQuestion]?.option_type ===
-                            "single"
+                              "single"
                               ? "radio"
                               : "checkbox"
                           }
