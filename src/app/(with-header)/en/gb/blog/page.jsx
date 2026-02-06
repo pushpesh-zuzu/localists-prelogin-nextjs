@@ -36,8 +36,11 @@ export default function Page() {
             <IndustryInsights />
             <DiscoverNearMe homeData={BLOG_DATA} />
             <div className="px-2.5 sm:px-10 md:px-16 xl:px-[125px]">
-                <PostCodeSection serviceId={51}
-                    serviceName="Driveway Installation" />
+                <PostCodeSection
+                    classNamePostCode="mb-[30px] mt-[30px] lg:mt-[60px] lg:mb-[60px] lg:justify-center lg:gap-12"
+                    serviceId={51}
+                    serviceName="Driveway Installation"
+                />
             </div>
             {/* <DiscoverServices /> */}
             <Footer />
