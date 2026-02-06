@@ -69,6 +69,7 @@ function FenceAndGateInstallation() {
                 services={POPULAR_SERVICES}
                 popularImage="/nearme/fencing-fixing.webp"
                 altText="fencing contractor fixing a fence"
+                ctaLink="/en/gb/fence-multi-form-ppc"
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
