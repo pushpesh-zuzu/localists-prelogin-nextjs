@@ -8,16 +8,16 @@ import Button from "../UI/Typography/Button";
 
 
 const insights = [
-    "Fence & Gate Installation",
-    "Driveway Installation",
-    "Patio Services",
-    "Landscaping",
-    "Artificial Grass Installation",
     "Tree Surgeon",
+    "Landscaping",
+    "Tutoring",
+    "Physics and Maths",
     "Gutter Cleaning",
     "Airport Transfers",
-    "Physics and Maths",
-    "Tutoring"
+    "Driveway Installation",
+    "Patio Services",
+    "Fence & Gate Installation",
+    "Artificial Grass Installation",
 ];
 
 export default function IndustryInsights() {
@@ -125,7 +125,7 @@ export default function IndustryInsights() {
                     className={`lg:hidden w-full mt-5
             flex flex-wrap gap-x-2 gap-y-3
             overflow-hidden transition-all duration-300
-            ${showAll ? "max-h-none" : "max-h-[162px] md:max-h-[170px] lg:max-h-[180px]"}`}
+            ${showAll ? "max-h-none" : "max-h-[165px] md:max-h-[170px] lg:max-h-[180px]"}`}
                 >
                     {insights.map((item) => (
                         <button

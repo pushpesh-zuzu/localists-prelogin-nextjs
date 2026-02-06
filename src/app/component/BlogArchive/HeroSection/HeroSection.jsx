@@ -16,11 +16,11 @@ const SearchResults = dynamic(() => import("../../common/SearchResult"), {
 const HeroSection = memo(function HeroSection() {
   const services = [
     "All",
+    "News",
     "Cost Guides",
     "Expert Advice",
     "Case Studies",
     "Ideas",
-    "News",
     "How to guides",
   ];
 
