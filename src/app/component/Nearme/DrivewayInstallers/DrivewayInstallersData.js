@@ -324,8 +324,8 @@ export const POPULAR_SERVICES = [
     "Driveway repairs",
     "Driveway cleaning",
     "Driveway resurfacing",
-    "Driveway sealing & resealing",
     "Driveway edging installation",
+    "Driveway sealing & resealing",
     "Driveway drainage installation",
     "Driveway weed & moss removal",
 ];
