@@ -10,10 +10,10 @@ export const metadata = {
   title: "How It Works for Professionals & Businesses - Localists",
   description: "Learn how Localists connect you with ready-to-hire customers in your area. Get quality leads, grow your business, and boost your visibility online today.",
 
-  robots: {
-    index: false,
-    follow: false,
-  },
+  // robots: {
+  //   index: false,
+  //   follow: false,
+  // },
 };
 
 const page = () => {

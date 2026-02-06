@@ -11,7 +11,11 @@ export const metadata = {
         "Compare Free Quotes from Local Artificial Grass Companies | Localists",
     content:
         "Find trusted artificial grass companies near you. Compare free quotes, read reviews, and hire the best professionals for your garden project today.",
-};
+ robots: {
+    index: false,
+    follow: false,
+  },
+    };
 
 export default function Page() {
     return (

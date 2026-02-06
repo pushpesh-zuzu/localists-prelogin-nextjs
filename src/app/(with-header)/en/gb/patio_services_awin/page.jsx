@@ -10,7 +10,11 @@ export const metadata = {
     title: "Compare Free Quotes from Local Patio Companies | Localists",
     description:
         "Find trusted patio companies near you. Compare free quotes and hire the best experts for patio design, installation, and repairs – fast and easy!",
-};
+ robots: {
+    index: false,
+    follow: false,
+  },
+    };
 
 export default function Page() {
     return (
