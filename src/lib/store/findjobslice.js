@@ -169,6 +169,8 @@ export const registerUserData = (registerData) => {
         dispatch(setAuthToken(response?.data?.data?.remember_tokens));
         setCookie("barkToken", response?.data?.data?.remember_tokens);
         setCookie("barkUserToken", response?.data?.data);
+        setCookie('isRegistrationComplete',true)
+
         return response.data;
       } else {
         showToast(

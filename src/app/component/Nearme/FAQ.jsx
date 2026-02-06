@@ -29,7 +29,7 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
                 className="w-full flex items-center justify-between px-[10px] pb-[15px] pt-[15px] md:px-5 md:pb-[30px] md:pt-5 hover:bg-gray-50 transition-colors duration-200 text-left"
                 aria-expanded={openItem === item.key}
               >
-                <h5
+                <h4
                   className={`
                       flex-1 max-w-[90%] md:max-w-full
                       text-[20px] leading-[25px]
@@ -40,7 +40,7 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
                     `}
                 >
                   {item.title}
-                </h5>
+                </h4>
 
                 <span className="flex-shrink-0 cursor-pointer flex items-center justify-right">
                   {openItem === item.key ? <MinusIcon /> : <PlusIconFaq />}

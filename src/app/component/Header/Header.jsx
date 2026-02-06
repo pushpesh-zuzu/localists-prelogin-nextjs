@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchService } from "@/lib/store/searchSlice";
 import dynamic from "next/dynamic";
-import MegaMenu from "../common/MegaMenu";
+import MegaMenu, { megaMenu } from "../common/MegaMenu";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import ArrowDownBlue from "../common/icons/HomePageIcons/ArrowDownBlue";
 import SearchIcon from "../common/icons/HomePageIcons/SearchIcon";
@@ -19,7 +19,7 @@ import Link from "next/link";
 
 const SearchResultForHeader = dynamic(() => import("./SearchResultForHeader"), {
   ssr: false,
-  loading: () => <div className="hidden">Loading...</div>
+  loading: () => <div className="hidden">Loading...</div>,
 });
 
 export default function Header() {
@@ -29,9 +29,7 @@ export default function Header() {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const services = useSelector(
-    (state) => state.search?.services || []
-  );
+  const services = useSelector((state) => state.search?.services || []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,7 +44,6 @@ export default function Header() {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
 
   return getBarkToken() ? (
     <AuthenticatedHeader />
@@ -83,6 +80,19 @@ export default function Header() {
                     <ArrowDownBlue />
                   </button>
                 </MegaMenu>
+                <div style={{ display: "none" }}>
+                  {megaMenu.map((item, i) => (
+                    <div key={i}>
+                      <a href={`/en/gb/${item.path}`}>{item.name}</a>
+
+                      {item.subcategory?.map((sub, j) => (
+                        <div key={j}>
+                          <a href={`/en/gb/${sub.path}`}>{sub.name}</a>
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
 
                 <button className="cursor-pointer flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
                   Advice
@@ -128,18 +138,17 @@ export default function Header() {
                 role="group"
                 aria-label="User authentication"
               >
-                  <a
+                <a
                   href="/en/gb/login"
                   className="text-[14px] lg:text-base cursor-pointer font-normal text-[#1E2A2E] lg:py-[12.5px] md:px-1 lg:px-4 whitespace-nowrap"
                   aria-label="Login to your account"
                 >
                   Login
                 </a>
-                 <a
+                <a
                   href="/en/gb/sellers/create"
                   className="flex items-center cursor-pointer font-bold gap-2 px-2.5 py-1.5 lg:px-5 lg:py-3 text-[14px] lg:text-[16px] text-white bg-[#00AEEF] rounded-full whitespace-nowrap"
                   aria-label="Sign up for new account"
-                 
                 >
                   Join as a Professional
                 </a>
@@ -175,7 +184,9 @@ export default function Header() {
                 </a>
               </div>
               <div className="flex items-center space-x-[4.34px]">
-                <button type="button" aria-label="Search services"
+                <button
+                  type="button"
+                  aria-label="Search services"
                   onClick={() => setIsMobileSearchOpen(true)}
                 >
                   <SearchIcon className="h-4 w-4 md:h-[18px] md:w-[18px] mr-1 md:mr-1" />
