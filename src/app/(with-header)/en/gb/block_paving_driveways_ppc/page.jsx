@@ -10,7 +10,11 @@ export const metadata = {
     title: "Compare Free Block Paving Driveway Quotes | Localists",
     description:
         "Get free quotes from trusted local block paving driveway companies. Compare prices, read reviews, and hire top-rated professionals near you – quick and simple.",
-};
+    robots: {
+    index: false,
+    follow: false,
+  },
+    };
 
 export default function Page() {
     return (

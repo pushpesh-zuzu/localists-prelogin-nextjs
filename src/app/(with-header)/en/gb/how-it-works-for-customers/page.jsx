@@ -12,10 +12,6 @@ export const metadata = {
   title: "How It Works for Customers - Localists",
   description: "Find trusted local professionals fast with Localists.com. Enter your details, get up to 5 free quotes, compare, and save – no commission or hidden fees.",
 
-  robots: {
-    index: false,
-    follow: false,
-  },
 };
 
 export default function Page() {

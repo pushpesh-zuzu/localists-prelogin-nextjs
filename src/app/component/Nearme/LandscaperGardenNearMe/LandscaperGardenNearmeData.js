@@ -296,7 +296,7 @@ export const FREQUENTLY_DATA_LANDSCAPE_NEARME = [
     title: "Can you help with low-maintenance garden designs?",
     description: `
       Absolutely. Many of our local 
-      <a href="https://dev-prelogin.localists.com/en/gb/patio-layers-near-me" style="color:#00afe3; text-decoration:none;">
+      <a href="https://localists.com/en/gb/patio-layers-near-me" style="color:#00afe3; text-decoration:none;">
         patio layers
       </a> 
       and landscapers specialise in creating stylish gardens that are easy to care for. Think drought-tolerant plants, gravel beds, and minimal weeding.

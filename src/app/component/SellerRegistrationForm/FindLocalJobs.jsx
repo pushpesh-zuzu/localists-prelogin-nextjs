@@ -26,6 +26,7 @@ import LandscapIcon from "../../../../public/ReactIcons/LandscapIcon";
 import PatioIcon from "../../../../public/ReactIcons/PatioIcon";
 import RoofIcon from "../../../../public/ReactIcons/RoofIcon";
 import TreeSurgeryIcon from "../../../../public/ReactIcons/TreeSurgeruIcon";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 
 const CATEGORY_ICON_MAP = {
@@ -100,6 +101,8 @@ const FindLocalJobs = () => {
   );
 
   const handleGetStarted = () => {
+    const canContinue = checkAuthenticatedUser(router);
+                if (!canContinue) return;
     if (!selectedService) return;
     const slug = generateSlug(selectedService.name);
 
@@ -252,7 +255,15 @@ const FindLocalJobs = () => {
                 <Link
                   key={item.id}
                   href={`/${currentLang}/${currentCountry}/sellers/create-account/${slug}`}
-                  onClick={() => dispatch(setSelectedServiceId(item.id))}
+                  // onClick={() => dispatch(setSelectedServiceId(item.id))}
+                   onClick={(e) => {
+                    if (!checkAuthenticatedUser(router)) {
+                      e.preventDefault();
+                      return
+                    } else {
+                      dispatch(setSelectedServiceId(item.id))
+                    }
+                  }}
                   className="flex items-center gap-2"
                 >
                   {IconComponent ? (
