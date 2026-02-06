@@ -11,6 +11,8 @@ import {
 import BuyerRegistrationLandingPage from "./BuyerRegistrationLandingPage";
 import H2 from "../UI/Typography/H2";
 import { getBarkToken, getBarkUserData } from "@/utils/CookiesHelper";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
+import { useRouter } from "next/navigation";
 
 const SearchPostAndBanner = ({
   title = "",
@@ -22,6 +24,7 @@ const SearchPostAndBanner = ({
   welcomModalTitle,
   welcomModalButtonText,
 }) => {
+  const router = useRouter()
   const dispatch = useDispatch();
   const userToken = getBarkToken();
   const userData = getBarkUserData()
@@ -75,6 +78,8 @@ const SearchPostAndBanner = ({
   }, [dispatch]);
 
   const handleContinue = async () => {
+        const canContinue = checkAuthenticatedUser(router);
+        if (!canContinue) return;
     if (!pincode.trim()) {
       showToast("error", "Please enter a valid postcode or town.");
       return;

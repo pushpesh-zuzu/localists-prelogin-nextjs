@@ -27,8 +27,8 @@ const ThankuPage = () => {
       const pendingModal = JSON.parse(
         localStorage.getItem("pendingBuyerModal") || "null",
       );
-      localStorage.setItem("isRegistrationComplete", "false");
-      setCookie('isRegistrationComplete',false)
+      // localStorage.setItem("isRegistrationComplete", "false");
+      // setCookie('isRegistrationComplete',false)
 
       let redirectPath = "/";
 

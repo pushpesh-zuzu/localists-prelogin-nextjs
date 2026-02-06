@@ -15,11 +15,12 @@ import {
   setcitySerach,
   questionAnswerData,
 } from "@/lib/store/buyerslice/buyerSlice";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import { megaMenu } from "./MegaMenu";
 import { searchService, setService } from "@/lib/store/findjobslice";
 import { showToast } from "@/utils/toaster";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 function getNameFromSlug(slug, categoryList) {
   if (typeof slug !== "string" || !slug || !Array.isArray(categoryList))
@@ -39,6 +40,7 @@ const WhatServiceYouNeed = ({
   resetServiceTrigger,
   getService,
 }) => {
+  const router = useRouter()
   const [input, setInput] = useState("");
   const [selectedService, setSelectedService] = useState(null);
   const [pincode, setPincode] = useState("");
@@ -209,6 +211,9 @@ const WhatServiceYouNeed = ({
   };
 
   const handleContinue = useCallback(async () => {
+        const canContinue = checkAuthenticatedUser(router);
+        if (!canContinue) return;
+    
     let newErrors = { service: "", pincode: "" };
 
     if (!selectedService?.id) newErrors.service = "Please select a service!";

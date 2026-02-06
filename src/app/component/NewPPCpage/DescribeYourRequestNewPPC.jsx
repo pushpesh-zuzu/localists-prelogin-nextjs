@@ -72,7 +72,7 @@ const DescribeYourRequestNewPPC = () => {
             professional_letin: professionalLetin ? 1 : 0,
         };
 
-        localStorage.setItem("isRegistrationComplete", "true");
+        // localStorage.setItem("isRegistrationComplete", "true");
         dispatch(addDetailsRequestData(payload, router, requestId)).then((res) => {
             if (res?.success) {
                 showToast("success", res?.message || "Request submitted successfully");

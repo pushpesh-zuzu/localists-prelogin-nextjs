@@ -20,7 +20,7 @@ const extractRouteFromUrl = (url) => {
 const normalizePath = (path = "") => path.replace(/\/+$/, "");
 
 const usePendingBuyerRedirect = () => {
-  console.log("called use pending");
+  // console.log("called use pending");
   const router = useRouter();
   const pathname = usePathname();
   const dispatch = useDispatch();

@@ -27,10 +27,10 @@ const useRegistrationRedirect = () => {
 
     const isRegistrationComplete =
       localStorage.getItem("isRegistrationComplete");
-    const isRegisRegistrationSuccess = getCookie('isRegistrationComplete')
-    console.log(isRegisRegistrationSuccess,'isRegisRegistrationSuccess')
+    // const isRegisRegistrationSuccess = getCookie('isRegistrationComplete')
+    // console.log(isRegisRegistrationSuccess,'isRegisRegistrationSuccess')
     if (
-      isRegistrationComplete === "true" || isRegisRegistrationSuccess &&
+      isRegistrationComplete === "true"  &&
       userToken || registerToken
     ) {
       localStorage.setItem("isRegistrationComplete", "true");

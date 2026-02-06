@@ -4,7 +4,6 @@ import TooltipIcon from "../../common/icons/HomePageIcons/TooltipIcon";
 
 export default function PopularJobs({ jobs, setActiveTooltip, activeTooltip }) {
   const [showToolTip, setShowToolTip] = useState(false);
-  console.log(showToolTip, "showToolTip");
   return (
     <div
       onClick={(e) => {
