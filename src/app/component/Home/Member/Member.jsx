@@ -38,7 +38,7 @@ function Member() {
 
         <div className=" relative rounded-r-[36px] overflow-hidden">
           <Image
-            src="/homepage/memberFenceDesktop.webp"
+            src="/homepage/member.webp"
             alt="person giveing fencing service"
             priority
             fetchPriority="high"
@@ -53,7 +53,7 @@ function Member() {
       <div className="md:hidden rounded-[36px] overflow-hidden shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
         <div className="w-full  relative">
           <Image
-            src="/homepage/memberFenceMobile.webp"
+            src="/homepage/membermobile.webp"
             alt="person giveing fencing service"
             height={300}
             width={250}
