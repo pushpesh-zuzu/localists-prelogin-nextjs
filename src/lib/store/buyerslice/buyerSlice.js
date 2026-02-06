@@ -144,7 +144,6 @@ export const createRequestData = (requestData) => {
         dispatch(setRequestUserPhone(response.data.data?.phone));
         dispatch(setRequestId(response?.data?.data?.request_id));
         setCookie('requestId',response?.data?.data?.request_id, 10 / (24 * 60))
-        setCookie('isRegistrationComplete',true)
         return response.data;
       }
     } catch (error) {
@@ -379,6 +378,7 @@ export const addDetailsRequestData = (addDetailsData, router, requestId) => {
       );
 
       if (response) {
+          setCookie('isRegistrationComplete',true)
         dispatch(getbuyerrequestList());
         router.push(`/conversion/${requestId}`);
         // router.push('/conversion/${requestId}')

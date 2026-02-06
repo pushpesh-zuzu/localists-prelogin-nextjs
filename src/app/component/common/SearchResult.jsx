@@ -3,7 +3,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { clearSearch, setSelectedSearchService } from "@/lib/store/searchSlice";
 import { useEffect } from "react";
-import { questionAnswerData } from "@/lib/store/buyerslice/buyerSlice";
+import { questionAnswerData, setbuyerRequestData } from "@/lib/store/buyerslice/buyerSlice";
 import LoaderIndicator from "./Loader/LoaderIndicatore";
 
 export default function SearchResults({
@@ -28,6 +28,7 @@ export default function SearchResults({
         id: service?.id || null,
       })
     );
+    dispatch(setbuyerRequestData({ service_id: service?.id }));
     setSearchQuery(service.name)
     setSelectedService(service?.id)
     // setSearchQuery('');
