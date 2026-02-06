@@ -6,14 +6,37 @@ import ServicesButton from "../common/ServicesButton";
 import Paragraph1 from "../UI/Typography/Paragraph1";
 import LogoIcon from "../common/icons/HomePageIcons/LogoIcon";
 import Paragraph from "../UI/Typography/Paragraph";
+import Link from "next/link";
 
 export default function PopularJobNearMe({
   services = [],
   popularImage = "",
   altText = "",
-  mobileCardClass='w-[235px] min-[440px]:w-[302px] min-[512px]:w-[350px]',
-  classNameD='md:max-w-[400px] xl:max-w-full'
+  mobileCardClass = 'w-[235px] min-[440px]:w-[302px] min-[512px]:w-[350px]',
+  classNameD = 'md:max-w-[400px] xl:max-w-full',
+  ctaLink = ""
 }) {
+
+  const renderServiceButton = (service) => {
+    const button = (
+      <ServicesButton
+        service={service}
+        mobileBorder="border-2"
+        className={ctaLink ? "cursor-pointer" : ""}
+      />
+    );
+
+    // 👉 Only wrap with Link if ctaLink exists
+    return ctaLink ? (
+      <Link key={service} href={ctaLink} className="inline-block cursor-pointer">
+        {button}
+      </Link>
+    ) : (
+      <React.Fragment key={service}>{button}</React.Fragment>
+    );
+  };
+
+
   return (
     <WrapperBGWidth>
       {/* <div className="w-full max-w-[1200px] mx-auto aspect-[1200/590] relative">
@@ -52,24 +75,26 @@ export default function PopularJobNearMe({
             <div className=" flex md:hidden items-center justify-start">
               <div className={`${mobileCardClass}`}>
                 <div className={`flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4`}>
-                  {services.map((service) => (
+                  {/* {services.map((service) => (
                     <ServicesButton
                       key={service}
                       service={service}
                       mobileBorder="border-2"
                     />
-                  ))}
+                  ))} */}
+                  {services.map(renderServiceButton)}
                 </div>
               </div>
             </div>
             <div className={`hidden md:flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4 ${classNameD}`}>
-              {services.map((service) => (
+              {/* {services.map((service) => (
                 <ServicesButton
                   mobileBorder="border-2"
                   key={service}
                   service={service}
                 />
-              ))}
+              ))} */}
+              {services.map(renderServiceButton)}
             </div>
           </div>
 

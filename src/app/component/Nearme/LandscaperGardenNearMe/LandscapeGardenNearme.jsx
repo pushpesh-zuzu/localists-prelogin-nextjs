@@ -84,6 +84,7 @@ function LandscapeGardenNearme() {
         mobileCardClass="w-[285px] min-[390px]:w-[221px] min-[412px]:w-[300px] min-[440px]:w-[307px] min-[512px]:w-[350px]"
         // desktopWidthClass='max-w-full'
         classNameD="max-w-[65%] min-[850]:max-w-[80%]  lg:max-w-full"
+        ctaLink="/en/gb/landscaping-multi-form-ppc"
       />
       <HowItWorkNearMe />
       {/* <Feature /> */}

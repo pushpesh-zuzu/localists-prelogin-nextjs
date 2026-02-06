@@ -4,12 +4,36 @@ import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import Image from "next/image";
 import ServicesButton from "../../common/ServicesButton";
 import LogoIcon from "../../common/icons/HomePageIcons/LogoIcon";
+import Link from "next/link";
+
 
 export default function DrivewayPopularJobNearMe({
     services = [],
     popularImage = "",
     altText = "",
+    ctaLink = "",
 }) {
+
+    const renderServiceButton = (service) => {
+        const button = (
+            <ServicesButton
+                service={service}
+                mobileBorder="border-2"
+                className={ctaLink ? "cursor-pointer" : ""}
+            />
+        );
+
+        // 👉 Only wrap with Link if ctaLink exists
+        return ctaLink ? (
+            <Link key={service} href={ctaLink} className="inline-block cursor-pointer">
+                {button}
+            </Link>
+        ) : (
+            <React.Fragment key={service}>{button}</React.Fragment>
+        );
+    };
+
+
     return (
         <WrapperBGWidth>
             <div className="md:block rounded-[20px] md:rounded-none mx-[30px] md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white  px-[17.5px] py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[100px]">
@@ -25,15 +49,15 @@ export default function DrivewayPopularJobNearMe({
                         <H2 className="text-white mb-4 md:mb-0 md:pb-4 xl:pb-[35px]">
                             Popular Jobs.
                         </H2>
-                         <p
-              variant="secondary"
-              // style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
-              className={`text-[16px] leading-[16px]
+                        <p
+                            variant="secondary"
+                            // style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
+                            className={`text-[16px] leading-[16px]
                max-w-full md:max-w-[60%] lg:max-w-full
                 md:text-[14px] md:leading-[16px]
                 lg:text-[20px] lg:leading-[24px] font-[Arial] font-bold
                 tracking-[0em]! l mb-5 md:mb-0 text-white  md:pb-4 xl:pb-[43px]`}
-            >
+                        >
                             Click below to get a quote for the specific job you want
                         </p>
 
@@ -41,24 +65,26 @@ export default function DrivewayPopularJobNearMe({
                         <div className=" flex md:hidden items-center justify-start">
                             <div className="w-[280px] min-[440px]:w-[302px] min-[512px]:w-[350px]">
                                 <div className="flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4 md:max-w-[400px] xl:max-w-full">
-                                    {services.map((service) => (
+                                    {/* {services.map((service) => (
                                         <ServicesButton
                                             key={service}
                                             service={service}
                                             mobileBorder="border-2"
                                         />
-                                    ))}
+                                    ))} */}
+                                    {services.map(renderServiceButton)}
                                 </div>
                             </div>
                         </div>
                         <div className="hidden md:flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4 md:max-w-[310px] xl:max-w-full">
-                            {services.map((service) => (
+                            {/* {services.map((service) => (
                                 <ServicesButton
                                     mobileBorder="border-2"
                                     key={service}
                                     service={service}
                                 />
-                            ))}
+                            ))} */}
+                            {services.map(renderServiceButton)}
                         </div>
                     </div>
 

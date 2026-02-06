@@ -56,7 +56,7 @@ function TreeSurgeon() {
   useScrollToTop()
   return (
     <>
-      {typeof window !=='undefined' && <CloseBrowserAbandon />}
+      {typeof window !== 'undefined' && <CloseBrowserAbandon />}
       <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]} />
       <HeroSectionNearMe
         heading1="Find Tree Surgeons"
@@ -77,6 +77,7 @@ function TreeSurgeon() {
         popularImage="/nearme/treeSurgeonNearmeRounded.webp"
         altText="a tree surgeon cutting the branches of an evergreen tree"
         mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
+        ctaLink="/en/gb/tree-surgeon-multi-form-ppc"
       />
       <HowItWorkNearMe />
       {/* <Feature /> */}

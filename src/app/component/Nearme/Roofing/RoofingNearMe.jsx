@@ -70,6 +70,7 @@ function RoofingNearMe() {
                 services={POPULAR_SERVICES}
                 popularImage="/nearme/Roofing/roofslate.webp"
                 altText="two roofers installing slate tiles onto a brand new roof URL"
+                ctaLink="/en/gb/roofing-multi-form-ppc"
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
