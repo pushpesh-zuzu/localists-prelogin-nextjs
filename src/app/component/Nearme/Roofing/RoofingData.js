@@ -129,17 +129,17 @@ export const FREQUENTLY_DATA_ROOFING = [
 
 export const ROOFING_TABDATA = {
     professionals: [
-        "Roofers North Yorkshire",
-        "Roofers Liverpool",
-        "Roofers Manchester",
-        "Roofers Chester",
         "Roofers Leeds",
         "Roofers York",
-        "Roofers Harrogate",
-        "Roofers Cheshire",
         "Roofers Hull",
-        "Roofers Stockport",
         "Roofers Bolton",
+        "Roofers Chester",
+        "Roofers Cheshire",
+        "Roofers Harrogate",
+        "Roofers Liverpool",
+        "Roofers Manchester",
+        "Roofers Stockport",
+        "Roofers North Yorkshire",
     ],
     popular: [
         // "Landscapers Near Me",
@@ -158,16 +158,16 @@ export const ROOFING_TABDATA = {
             url: "",
         },
         {
-            title: "Fencing Contractors Near Me",
-            url: "/en/gb/fencing-contractors-near-me",
-        },
-        {
             title: "Architects Near Me",
             url: "",
         },
         {
             title: "Gutter Cleaners Near Me",
             url: "/en/gb/gutter-cleaning-near-me",
+        },
+        {
+            title: "Fencing Contractors Near Me",
+            url: "/en/gb/fencing-contractors-near-me",
         },
         {
             title: "Artificial Grass Installers Near Me",
@@ -193,10 +193,10 @@ export const BREADCRUM_DATA_ROOFERS = [
 export const POPULAR_SERVICES = [
     "Roof Replacement",
     "Roof Repair",
-    "Shingle replacement",
-    "Waterproofing",
     "Flashing",
     "Leadworks installation",
+    "Waterproofing",
+    "Shingle replacement",
 ];
 
 export const ROOFING_FEEDBACK = [

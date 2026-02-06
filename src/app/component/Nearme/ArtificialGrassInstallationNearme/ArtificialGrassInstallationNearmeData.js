@@ -286,27 +286,19 @@ export const ADVICEINSIGHT_ARTIFICIAL_GRASS_NEARME = [
 ];
 export const ARTIFICIAL_GRASS_NEARME_TABDATA = {
   professionals: [
-    "Artificial Grass Installers North Yorkshire",
-    "Artificial Grass Installers Liverpool",
-    "Artificial Grass Installers Manchester",
-    "Artificial Grass Installers Chester",
-    "Artificial Grass Installers Leeds",
-    "Artificial Grass Installers York",
-    "Artificial Grass Installers Harrogate",
-    "Artificial Grass Installers Cheshire",
     "Artificial Grass Installers Hull",
-    "Artificial Grass Installers Stockport",
+    "Artificial Grass Installers York",
+    "Artificial Grass Installers Leeds",
     "Artificial Grass Installers Bolton",
+    "Artificial Grass Installers Chester",
+    "Artificial Grass Installers Cheshire",
+    "Artificial Grass Installers Liverpool",
+    "Artificial Grass Installers Stockport",
+    "Artificial Grass Installers Harrogate",
+    "Artificial Grass Installers Manchester",
+    "Artificial Grass Installers North Yorkshire",
   ],
   popular: [
-    {
-      title: "Driveway Installers Near Me",
-      url: "/en/gb/driveway-installers-near-me",
-    },
-    {
-      title: "Gardeners Near Me",
-      url: "",
-    },
     {
       title: "Tree Surgeons Near Me",
       url: "/en/gb/tree-surgeon-near-me",
@@ -316,8 +308,16 @@ export const ARTIFICIAL_GRASS_NEARME_TABDATA = {
       url: "",
     },
     {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
       title: "Gutter Cleaners Near Me",
       url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
     },
     {
       title: "Fencing Contractors Near Me",
@@ -334,10 +334,10 @@ export const VETTED_DATA_ARTIFICIAL_GRASS_NEARME = [
 ];
 
 export const POPULAR_SERVICES_ARTIFICIAL_GRASS_NEARME = [
-  "Re-Seaming",
-  "Weed Membrane Installation",
   "Replacement",
   "Sub-Base Installation",
+  "Re-Seaming",
+  "Weed Membrane Installation",
   "Edging & Border Installation",
   "Drainage System Installation",
 ];

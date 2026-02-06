@@ -222,17 +222,17 @@ export const TREE_SRUGEON_ADVICEINSIGHT = [
 ];
 export const TREE_SURGEON_TABDATA = {
   professionals: [
-    "Tree Surgeons North Yorkshire",
-    "Tree Surgeons Liverpool",
-    "Tree Surgeons Manchester",
-    "Tree Surgeons Chester",
-    "Tree Surgeons Leeds",
-    "Tree Surgeons York",
-    "Tree Surgeons Harrogate",
-    "Tree Surgeons Cheshire",
     "Tree Surgeons Hull",
-    "Tree Surgeons Stockport",
+    "Tree Surgeons York",
+    "Tree Surgeons Leeds",
     "Tree Surgeons Bolton",
+    "Tree Surgeons Chester",
+    "Tree Surgeons Cheshire",
+    "Tree Surgeons Liverpool",
+    "Tree Surgeons Harrogate",
+    "Tree Surgeons Stockport",
+    "Tree Surgeons Manchester",
+    "Tree Surgeons North Yorkshire",
   ],
   popular: [
     {
@@ -242,10 +242,6 @@ export const TREE_SURGEON_TABDATA = {
     {
       title: "Gardeners Near Me",
       url: "",
-    },
-    {
-      title: "Fence and Gate Installation Near Me",
-      url: "/en/gb/fencing-contractors-near-me",
     },
     {
       title: "Architects Near Me",
@@ -258,6 +254,10 @@ export const TREE_SURGEON_TABDATA = {
     {
       title: "Artificial Grass Installers Near Me",
       url: "/en/gb/artificial-grass-installers-near-me",
+    },
+    {
+      title: "Fence and Gate Installation Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
     },
   ],
   insight: [
@@ -279,13 +279,13 @@ export const BREADCRUM_DATA_TREESURGEON = [
 ];
 
 export const POPULAR_SERVICES = [
-  "Crown Reduction",
-  "Tree & Stump Removal",
-  "Tree Removal",
-  "Crown Thinning",
   "Tree Felling",
   "Stump Grinding",
+  "Tree Removal",
+  "Crown Thinning",
   "Stump Removal",
+  "Crown Reduction",
+  "Tree & Stump Removal",
 ];
 export const TREE_SUREON_FEEDBACK = [
   {

@@ -259,17 +259,17 @@ export const FREQUENTLY_DATA_DRIVEWAY_INSTALLERS = {
 
 export const DRIVEWAY_INSTALLERS_TABDATA = {
     professionals: [
-        "Driveway Installers North Yorkshire",
-        "Driveway Installers Liverpool",
-        "Driveway Installers Manchester",
-        "Driveway Installers Chester",
-        "Driveway Installers Leeds",
-        "Driveway Installers York",
-        "Driveway Installers Harrogate",
-        "Driveway Installers Cheshire",
         "Driveway Installers Hull",
-        "Driveway Installers Stockport",
+        "Driveway Installers York",
+        "Driveway Installers Leeds",
         "Driveway Installers Bolton",
+        "Driveway Installers Chester",
+        "Driveway Installers Cheshire",
+        "Driveway Installers Liverpool",
+        "Driveway Installers Stockport",
+        "Driveway Installers Harrogate",
+        "Driveway Installers Manchester",
+        "Driveway Installers North Yorkshire",
     ],
     popular: [
         // "Landscapers Near Me",
@@ -321,13 +321,13 @@ export const BREADCRUM_DATA_DRIVEWAY = [
 ];
 
 export const POPULAR_SERVICES = [
+    "Driveway repairs",
     "Driveway cleaning",
     "Driveway resurfacing",
-    "Driveway repairs",
-    "Driveway edging installation",
     "Driveway sealing & resealing",
-    "Driveway weed & moss removal",
+    "Driveway edging installation",
     "Driveway drainage installation",
+    "Driveway weed & moss removal",
 ];
 
 export const DRIVEWAY_INSTALLERS_FEEDBACK = [

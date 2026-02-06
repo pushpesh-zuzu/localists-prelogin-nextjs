@@ -222,17 +222,17 @@ export const FREQUENTLY_DATA_GUTTER_CLEANING = {
 
 export const GUTTER_CLEANING_TABDATA = {
     professionals: [
-        "Gutter Cleaning North Yorkshire",
-        "Gutter Cleaning Liverpool",
-        "Gutter Cleaning Manchester",
-        "Gutter Cleaning Chester",
-        "Gutter Cleaning Leeds",
-        "Gutter Cleaning York",
-        "Gutter Cleaning Harrogate",
-        "Gutter Cleaning Cheshire",
         "Gutter Cleaning Hull",
-        "Gutter Cleaning Stockport",
+        "Gutter Cleaning York",
+        "Gutter Cleaning Leeds",
         "Gutter Cleaning Bolton",
+        "Gutter Cleaning Chester",
+        "Gutter Cleaning Cheshire",
+        "Gutter Cleaning Liverpool",
+        "Gutter Cleaning Harrogate",
+        "Gutter Cleaning Stockport",
+        "Gutter Cleaning Manchester",
+        "Gutter Cleaning North Yorkshire",
     ],
     popular: [
 
@@ -242,15 +242,6 @@ export const GUTTER_CLEANING_TABDATA = {
         // "Architects Near Me",
         // "Fencing Contractors Near Me",
         // "Artificial Grass Installers Near Me",
-
-        {
-            title: "Driveway Installers Near Me",
-            url: "/en/gb/driveway-installers-near-me",
-        },
-        {
-            title: "Gardeners Near Me",
-            url: "",
-        },
         {
             title: "Tree Surgeons Near Me",
             url: "/en/gb/tree-surgeon-near-me",
@@ -258,6 +249,14 @@ export const GUTTER_CLEANING_TABDATA = {
         {
             title: "Architects Near Me",
             url: "",
+        },
+        {
+            title: "Gardeners Near Me",
+            url: "",
+        },
+        {
+            title: "Driveway Installers Near Me",
+            url: "/en/gb/driveway-installers-near-me",
         },
         {
             title: "Fencing Contractors Near Me",

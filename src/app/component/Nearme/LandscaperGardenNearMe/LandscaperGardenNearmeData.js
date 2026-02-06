@@ -341,42 +341,43 @@ export const ADVICEINSIGHT_LANDSCAPE_NEARME = [
 ];
 export const LANDSCAPE_NEARME_TABDATA = {
   professionals: [
-    "Landscapers North Yorkshire",
-    "Landscapers Liverpool",
-    "Landscapers Manchester",
-    "Landscapers Chester",
-    "Landscapers Leeds",
     "Landscapers York",
-    "Landscapers Harrogate",
-    "Landscapers Cheshire",
     "Landscapers Hull",
-    "Landscapers Stockport",
+    "Landscapers Leeds",
     "Landscapers Bolton",
+    "Landscapers Chester",
+    "Landscapers Cheshire",
+    "Landscapers Liverpool",
+    "Landscapers Harrogate",
+    "Landscapers Stockport",
+    "Landscapers Manchester",
+    "Landscapers North Yorkshire",
   ],
   popular: [
     {
-      title: "Driveway Installers Near Me",
-      url: "/en/gb/driveway-installers-near-me",
+      title: "Gutter Cleaners Near Me",
+      url: "/en/gb/gutter-cleaning-near-me",
     },
+
     {
       title: "Gardeners Near Me",
       url: "",
-    },
-    {
-      title: "Fence and Gate Installation Near Me",
-      url: "/en/gb/fencing-contractors-near-me",
     },
     {
       title: "Architects Near Me",
       url: "",
     },
     {
-      title: "Gutter Cleaners Near Me",
-      url: "/en/gb/gutter-cleaning-near-me",
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
     },
     {
       title: "Artificial Grass Installers Near Me",
       url: "/en/gb/artificial-grass-installers-near-me",
+    },
+    {
+      title: "Fence and Gate Installation Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
     },
   ],
   insight: [],
@@ -391,11 +392,11 @@ export const VETTED_DATA_LANDSCAPE_NEARME = [
 
 export const POPULAR_SERVICES_LANDSCAPE_NEARME = [
   "Sleepers",
-  "Irrigation systems",
-  "Turfing",
-  "Shed building",
   "Garden brickwork",
   "Paving",
+  "Shed building",
+  "Turfing",
+  "Irrigation systems",
 ];
 export const FEEDBACK_LANDSCAPE_NEARME = [
   {

@@ -288,27 +288,19 @@ export const ADVICEINSIGHT_PATIO_SERVICES_NEARME = [
 ];
 export const PATIO_SERVICES_NEARME_TABDATA = {
   professionals: [
-    "Patio Laying North Yorkshire",
-    "Patio Laying Liverpool",
-    "Patio Laying Manchester",
-    "Patio Laying Chester",
-    "Patio Laying Leeds",
     "Patio Laying York",
-    "Patio Laying Harrogate",
-    "Patio Laying Cheshire",
     "Patio Laying Hull",
-    "Patio Laying Stockport",
+    "Patio Laying Leeds",
     "Patio Laying Bolton",
+    "Patio Laying Chester",
+    "Patio Laying Cheshire",
+    "Patio Laying Liverpool",
+    "Patio Laying Stockport",
+    "Patio Laying Harrogate",
+    "Patio Laying Manchester",
+    "Patio Laying North Yorkshire",
   ],
   popular: [
-    {
-      title: "Driveway Installers Near Me",
-      url: "/en/gb/driveway-installers-near-me",
-    },
-    {
-      title: "Gardeners Near Me",
-      url: "",
-    },
     {
       title: "Tree Surgeons Near Me",
       url: "/en/gb/tree-surgeon-near-me",
@@ -318,8 +310,16 @@ export const PATIO_SERVICES_NEARME_TABDATA = {
       url: "",
     },
     {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
       title: "Gutter Cleaners Near Me",
       url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
     },
     {
       title: "Fencing Contractors Near Me",
@@ -340,10 +340,10 @@ export const VETTED_DATA_PATIO_SERVICES_NEARME = [
 export const POPULAR_SERVICES_PATIO_SERVICES_NEARME = [
   "Patio Repairs",
   "Patio Sealing",
-  "Patio Drainage Improvements",
   "Patio Cleaning",
   "Joint Repointing",
   "Slab Replacement",
+  "Patio Drainage Improvements",
 ];
 export const FEEDBACK_PATIO_SERVICES_NEARME = [
   {
