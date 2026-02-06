@@ -69,7 +69,7 @@ export const userLogin = (loginData) => {
 
             setCookie("barkToken", data.remember_tokens);
             setCookie("barkUserToken", data);
-
+            setCookie('isRegistrationComplete',true)
             return res.data;
         } finally {
             dispatch(setLoginLoader(false));
@@ -239,10 +239,13 @@ export const fetchProfileFromMagicLink = (navigate) => {
 
             if (profileResponse.data) {
                 dispatch(setToken(profileResponse.data?.remember_tokens));
-                dispatch(setUserToken(profileResponse.data));
+                dispatch(setUserToken(profileResponse?.data));
                 dispatch(setCurrentUser(profileResponse.data?.user_type));
                 dispatch(setAuthToken(profileResponse.data?.remember_tokens));
-
+                setCookie('isRegistrationComplete',true)
+                setCookie("barkToken", profileResponse.data?.remember_tokens);
+                setCookie("barkUserToken", profileResponse?.data);
+                
                 axiosInstance.defaults.headers.common[
                     "Authorization"
                 ] = `Bearer ${profileResponse.data?.remember_tokens}`;

@@ -25,11 +25,18 @@ import QuestionAnswerMultiStep2 from "../QuestionAnswerMultiStep2";
 import PostcodeSearchLandscapingMultiform from "./PostcodeSearchLandscapingMultiform";
 import QuestionAnswerMultiStep from "./QuestionAnswerMultiStep";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
+import { useRouter } from "next/navigation";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 const MultiStepLandscaping = ({ isQuestionWithImage = false }) => {
   usePendingBuyerRedirect()
   const dispatch = useDispatch();
-
+ const router = useRouter();
+    
+    useEffect(() => {
+       const canContinue = checkAuthenticatedUser(router);
+          if (!canContinue) return;
+    }, [])
   const { questionanswerData, buyerStep, questionLoader, buyerRequest } =
     useSelector((state) => state.buyer);
 

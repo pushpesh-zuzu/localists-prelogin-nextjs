@@ -22,10 +22,18 @@ import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAb
 import HowItWorkNewPPC from "../../NewPPCpage/HowItWorkNewPPC";
 import Logo from "../../../../../public/ReactIcons/Logo";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
+import { useRouter } from "next/navigation";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 const MultiStepFormDriveways = ({ isQuestionWithImage = false }) => {
   usePendingBuyerRedirect()
   const dispatch = useDispatch();
+   const router = useRouter();
+      
+      useEffect(() => {
+         const canContinue = checkAuthenticatedUser(router);
+            if (!canContinue) return;
+      }, [])
   const { questionanswerData, buyerStep, questionLoader, buyerRequest } =
     useSelector((state) => state.buyer);
 

@@ -22,10 +22,18 @@ import PostSearchMultiStepFence from "./PostSearchMultiStepFence";
 import HowItWorkNewPPC from "../../NewPPCpage/HowItWorkNewPPC";
 import LogoIconMultiForm from "../LogoIconMultiForm";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
+import { useRouter } from "next/navigation";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
       usePendingBuyerRedirect()
   const dispatch = useDispatch();
+   const router = useRouter();
+      
+      useEffect(() => {
+         const canContinue = checkAuthenticatedUser(router);
+            if (!canContinue) return;
+      }, [])
   const { questionanswerData, buyerStep, questionLoader, buyerRequest } =
     useSelector((state) => state.buyer);
 

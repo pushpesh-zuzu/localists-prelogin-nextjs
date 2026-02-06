@@ -19,10 +19,16 @@ import Paragraph2 from "@/app/component/UI/Typography/Paragraph2";
 import Footer from "../../Footer/Footer";
 import Loader from "../Loader/Loader";
 import LoaderIndicator from "../Loader/LoaderIndicatore";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 export default function LoginForm({ passwordless }) {
-
     const router = useRouter();
+    
+    useEffect(() => {
+       const canContinue = checkAuthenticatedUser(router);
+          if (!canContinue) return;
+    }, [])
+    
     const searchParams = useSearchParams();
     const dispatch = useDispatch();
     const { lang, country } = useParams();
@@ -76,7 +82,8 @@ export default function LoginForm({ passwordless }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+       const canContinue = checkAuthenticatedUser(router);
+          if (!canContinue) return;
         const { email, password } = formData;
         const newErrors = {};
 
