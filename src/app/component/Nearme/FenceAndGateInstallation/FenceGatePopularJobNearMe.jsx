@@ -45,6 +45,7 @@ export default function FenceGatePopularJobNearMe({
                                             key={service}
                                             service={service}
                                             mobileBorder="border-2"
+                                            onClick={() => handleServiceClick(service.url)}
                                         />
                                     ))}
                                 </div>

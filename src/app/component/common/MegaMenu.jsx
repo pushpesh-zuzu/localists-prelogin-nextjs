@@ -228,34 +228,33 @@ export default function MegaMenu({ children }) {
                       }
                     }}
                     onClick={() => {
-                      if (isMobile && item?.subcategory?.length > 0) {
+                      if (item?.subcategory?.length > 0) {
                         handleSubMenuOpen(item);
                       }
                     }}
                   >
-                    <Link
-                      href={`/${currentLang}/${currentCountry}/${item.path}`}
-                      className="flex items-center gap-3 flex-1"
-                      onClick={(e) => {
-                        if (isMobile && item?.subcategory?.length > 0) {
-                          // e.preventDefault();
+                    <div className="flex items-center gap-3 flex-1">
+                      <Link
+                        href={`/${currentLang}/${currentCountry}/${item.path}`}
+                        onClick={(e) => {
+                          e.stopPropagation(); // 🔑
                           handleClose();
-                        } else {
-                          handleClose();
-                        }
-                      }}
-                    >
-                      <Image
-                        src={item.icon}
-                        alt=""
-                        width={20}
-                        height={20}
-                        aria-hidden="true"
-                      />
-                      <span className="text-sm font-bold text-gray-700 group-hover:text-gray-900">
-                        {item.name}
-                      </span>
-                    </Link>
+                        }}
+                        className="flex items-center gap-3"
+                      >
+                        <Image
+                          src={item.icon}
+                          alt=""
+                          width={20}
+                          height={20}
+                          aria-hidden="true"
+                        />
+                        <span className="text-sm font-bold text-gray-700 group-hover:text-gray-900">
+                          {item.name}
+                        </span>
+                      </Link>
+                    </div>
+
                     {item?.subcategory?.length > 0 && (
                       <button
                         type="button"
