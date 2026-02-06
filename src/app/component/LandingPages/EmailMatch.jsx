@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "../common/Modal";
 import InputField from "../UI/Inputs/InputField";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
     checkEmailIdApi,
     setbuyerRequestData,
@@ -17,6 +17,7 @@ import useUserInfo from "@/utils/getUserIp";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import Paragraph from "../UI/Typography/Paragraph2";
 import { extractAllParams } from "@/utils/decodeURLParams";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 function EmailMatch({
     onClose,
@@ -30,6 +31,7 @@ function EmailMatch({
 
 }) {
     const dispatch = useDispatch();
+    const router = useRouter()
     const { buyerRequest, citySerach, requestLoader } = useSelector(
         (state) => state.buyer
     );
@@ -136,6 +138,8 @@ function EmailMatch({
     };
 
     const handleSubmit = () => {
+            const canContinue = checkAuthenticatedUser(router);
+            if (!canContinue) return;
         const newErrors = {
             email: !isPPCPages && (!email || !validateEmail(email)),
             name: !name.trim(),

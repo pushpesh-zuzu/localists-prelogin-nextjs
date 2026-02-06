@@ -22,10 +22,18 @@ import QuestionAnswerMultiStepTreeSurgeon from "./QuestionAnswerMultiStepTreeSur
 import NameEmailTreeSurgeon from "./NameEmailMultiStepForm";
 import MultiStepDescribeYourRequest from "../../common/MultiStepFormPPC/MultiStepDescribeYourRequest";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
+import { useRouter } from "next/navigation";
 
 const MultiStepTreeSurgeon = ({ isQuestionWithImage = false, serviceId=null }) => {
   const dispatch = useDispatch();
   usePendingBuyerRedirect()
+   const router = useRouter();
+      
+      useEffect(() => {
+         const canContinue = checkAuthenticatedUser(router);
+            if (!canContinue) return;
+      }, [])
   const { questionanswerData, buyerStep, questionLoader, buyerRequest } =
     useSelector((state) => state.buyer);
 

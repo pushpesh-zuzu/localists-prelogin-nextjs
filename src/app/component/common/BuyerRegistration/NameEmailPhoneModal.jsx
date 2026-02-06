@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "../Modal";
 import InputField from "../../UI/Inputs/InputField";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
   checkEmailIdApi,
   setbuyerRequestData,
@@ -16,6 +16,7 @@ import useUserInfo from "@/utils/getUserIp";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import Paragraph from "../../UI/Typography/Paragraph";
 import { extractAllParams } from "@/utils/decodeURLParams";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 function NameEmailPhoneModal({
   onClose,
@@ -28,6 +29,7 @@ function NameEmailPhoneModal({
   hideCloseButton = false,
   
 }) {
+  const router = useRouter()
   const dispatch = useDispatch();
   const { buyerRequest, citySerach, requestLoader } = useSelector(
     (state) => state.buyer
@@ -135,6 +137,8 @@ function NameEmailPhoneModal({
   };
 
   const handleSubmit = () => {
+    const canContinue = checkAuthenticatedUser(router);
+    if (!canContinue) return;
     const newErrors = {
       email: !isPPCPages && (!email || !validateEmail(email)),
       name: !name.trim(),

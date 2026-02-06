@@ -13,8 +13,12 @@ import Paragraph1 from "../../UI/Typography/Paragraph1";
 import TrustpioletIcon from "../../common/icons/HomePageIcons/TrustpioletIcon";
 import HeroSectionSearch from "./HeroSectionSearch";
 import Link from "next/link";
+import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 const HeroSection = memo(function HeroSection() {
+  usePendingBuyerRedirect()
+    useScrollToTop()
   const services = [
     {
       title: "Landscapers",

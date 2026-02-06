@@ -23,6 +23,8 @@ import QuestionAnserMultiStepRoofingNew2 from "./QuestionAnserMultiStepRoofingNe
 import PostcodeSearchRoofing from "./PostcodeSearchRoofing";
 import QuestionAnswerMultiStepRoofingNew from "./QuestionAnswerMultiStepRoofingNew";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
+import { useRouter } from "next/navigation";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 const MultiStepRoofing = ({
   isQuestionWithImage = false,
@@ -31,6 +33,12 @@ const MultiStepRoofing = ({
 }) => {
   const dispatch = useDispatch();
   usePendingBuyerRedirect()
+   const router = useRouter();
+      
+      useEffect(() => {
+         const canContinue = checkAuthenticatedUser(router);
+            if (!canContinue) return;
+      }, [])
   const { questionanswerData, buyerStep } = useSelector((state) => state.buyer);
   const { progressPercentage, removeQuestionByNumber, setProgressPercentage } =
     useProgress(serviceId);

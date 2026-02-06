@@ -16,6 +16,8 @@ import { useEmailCheck } from "@/hooks/emailExist";
 import { handleScrollToBottom } from "@/utils/handleScrollToBottom"
 import LoaderIndicator from "../common/Loader/LoaderIndicatore";
 import H4 from "../UI/Typography/H4";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
+import { useRouter } from "next/navigation";
 
 const AsyncSelect = dynamic(
     () => import("react-select/async"),
@@ -24,6 +26,7 @@ const AsyncSelect = dynamic(
 
 function NewPPCForm({ nextStep, serviceId }) {
     const dispatch = useDispatch();
+    const router = useRouter()
     const { buyerRequest, questionLoader } = useSelector((s) => s.buyer);
     const { searchServiceLoader, service } = useSelector((s) => s.findJobs);
 
@@ -160,7 +163,8 @@ function NewPPCForm({ nextStep, serviceId }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        const canContinue = checkAuthenticatedUser(router);
+          if (!canContinue) return;
         const formErrors = validateForm();
         if (Object.keys(formErrors).length > 0) {
             setErrors(formErrors);

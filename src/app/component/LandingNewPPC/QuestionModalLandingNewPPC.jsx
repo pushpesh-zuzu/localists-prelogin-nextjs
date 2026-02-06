@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
   setbuyerRequestData,
   clearSetbuyerRequestData,
@@ -17,6 +17,7 @@ import QuestionModalBanner from "../common/BuyerRegistration/QuestionModalBanner
 import InputField from "../UI/Inputs/InputField";
 import Button1 from "../UI/Typography/Button1";
 import { extractAllParams } from "@/utils/decodeURLParams";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 const QuestionModalLandingNewPPC = ({
   questions = [],
@@ -28,6 +29,7 @@ const QuestionModalLandingNewPPC = ({
   setShowConfirmModal,
   isStartWithQuestionModal = false,
 }) => {
+  const router = useRouter()
   const dispatch = useDispatch();
   const { buyerRequest, requestLoader, citySerach, questionanswerData } =
     useSelector((state) => state.buyer);
@@ -132,6 +134,9 @@ const QuestionModalLandingNewPPC = ({
   };
 
   const handleNext = () => {
+    const canContinue = checkAuthenticatedUser(router);
+    if (!canContinue) return;
+
     if (selectedOption.length === 0) {
       setError("Please select at least one option.");
       return;

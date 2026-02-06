@@ -27,6 +27,8 @@ export default function SearchResultForHeader({
     function handleClickOutside(event) {
       if (serviceRef.current && !serviceRef.current.contains(event.target)) {
         dispatch(clearSearch()); // hide the box
+        setSearchQuery('')
+        
       }
     }
 
