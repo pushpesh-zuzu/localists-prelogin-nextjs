@@ -16,6 +16,7 @@ import { setCreateRequestToken, setRequestData } from "../buyerslice/buyerSlice"
 import { clearCompanyData } from "../companyJobSlice";
 import { safeLocalStorage } from "@/utils/localStorage";
 import { BASE_IMAGE_URL } from "@/utils";
+import { extractEssentialUserData } from "@/utils/extractEssentialUserData";
 
 /* -------------------------------------
    Helpers (SSR-safe)
@@ -55,15 +56,15 @@ export const userLogin = (loginData) => {
     dispatch(setLoginLoader(true));
     try {
       const response = await axiosInstance.post(`users/login`, loginData);
-        console.log(response,'response login data')
-        localStorage.setItem('userDataLocalTesing',JSON.stringify(response))
+        // console.log(response,'response login data')
+        // localStorage.setItem('userDataLocalTesing',JSON.stringify(response))
       if (response?.data?.success) {
         dispatch(setToken(response?.data?.data?.remember_tokens));
         dispatch(setUserToken(response?.data?.data));
         dispatch(setCurrentUser(response?.data?.data?.user_type));
         dispatch(setAuthToken(response?.data?.data?.remember_tokens));
         setCookie("barkToken", response?.data?.data?.remember_tokens);
-        setCookie("barkUserToken", response?.data?.data);
+        setCookie("barkUserToken", extractEssentialUserData(response?.data?.data));
         setCookie('isRegistrationComplete',true)
         return response.data;
       } else {
@@ -244,7 +245,7 @@ export const fetchProfileFromMagicLink = (navigate) => {
                 dispatch(setAuthToken(profileResponse.data?.remember_tokens));
                 setCookie('isRegistrationComplete',true)
                 setCookie("barkToken", profileResponse.data?.remember_tokens);
-                setCookie("barkUserToken", profileResponse?.data);
+                setCookie("barkUserToken", extractEssentialUserData(profileResponse?.data));
                 
                 axiosInstance.defaults.headers.common[
                     "Authorization"

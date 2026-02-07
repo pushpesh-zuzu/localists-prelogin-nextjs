@@ -9,6 +9,7 @@ import {
   setCookie,
 } from "@/utils/CookiesHelper";
 import { setRegisterData, setRegisterToken } from "../findjobslice";
+import { extractEssentialUserData } from "@/utils/extractEssentialUserData";
 // import { setToken } from "../authSlice";
 // import { updateLocalStorageValue } from "@/utils";
 // import { safeLocalStorage } from "@/utils/localStorage";
@@ -446,7 +447,7 @@ export const verifyPhoneNumberData = (verifyData) => {
       );
       if (response?.data?.success) {
         setCookie("barkToken", response?.data?.data?.remember_tokens);
-        setCookie("barkUserToken", response?.data?.data);
+        setCookie("barkUserToken", extractEssentialUserData(response?.data?.data));
         dispatch(setRequestData(response?.data?.data));
         dispatch(setCreateRequestToken(response?.data?.data?.remember_tokens));
         // dispatch(setRegisterData(response?.data?.data));

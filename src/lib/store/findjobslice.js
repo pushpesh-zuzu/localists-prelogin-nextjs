@@ -11,6 +11,7 @@ import {
 } from "@/utils/CookiesHelper";
 import { fetchCompanyDetails } from "./companyJobSlice";
 import { showToastWithLink } from "@/hooks/showToastWithLink";
+import { extractEssentialUserData } from "@/utils/extractEssentialUserData";
 // import { changeSequenceServices } from "@/utils/allservices";
 // import { safeLocalStorage } from "@/utils/localStorage";
 
@@ -168,7 +169,7 @@ export const registerUserData = (registerData) => {
         dispatch(setRegisterToken(response?.data?.data?.remember_tokens));
         dispatch(setAuthToken(response?.data?.data?.remember_tokens));
         setCookie("barkToken", response?.data?.data?.remember_tokens);
-        setCookie("barkUserToken", response?.data?.data);
+        setCookie("barkUserToken", extractEssentialUserData(response?.data?.data));
         setCookie('isRegistrationComplete',true)
 
         return response.data;
@@ -476,7 +477,7 @@ const findJobSlice = createSlice({
       state.registerData = action.payload;
       // localStorage will be used later
       // safeLocalStorage.setItem("registerDataToken", JSON.stringify(action.payload));
-      setCookie("barkUserToken", action.payload);
+      setCookie("barkUserToken", extractEssentialUserData(action.payload));  
     },
     setErrorMessage(state, action) {
       state.errorMessage = action.payload;
