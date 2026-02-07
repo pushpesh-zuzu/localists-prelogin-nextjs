@@ -64,9 +64,9 @@ export default function LoginForm({ passwordless }) {
                         document.cookie = "token=logged-in; path=/";
 
                         if (res.profileData.active_status === 1) {
-                            router.replace("/en/gb/sellers/leads");
+                            router.replace("/sellers/leads");
                         } else if (res.profileData.active_status === 2) {
-                            router.replace("/en/gb/buyers/create");
+                            router.replace("/buyers/create");
                         }
                     }
                 })
