@@ -15,7 +15,7 @@ import React from 'react'
 function page() {
   return (
     <main className="bg-white">
-      <Script type="application/ld+json">
+      <script type="application/ld+json">
               {
                 `{
                 "@context": "https://schema.org",
@@ -86,7 +86,7 @@ function page() {
                 ]
                   }`
               }
-              </Script>
+              </script>
       <CloseBrowserAbandon />
       <HeroSection />
       <PopularCard />

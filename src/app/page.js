@@ -21,7 +21,7 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="bg-white">
-      <Script type="application/ld+json">
+      <script type="application/ld+json">
         {
           `{
           "@context": "https://schema.org",
@@ -92,7 +92,7 @@ export default function Home() {
           ]
             }`
         }
-        </Script>
+        </script>
       <CloseBrowserAbandon />
       {/* <div suppressHydrationWarning> */}
         <Header />
