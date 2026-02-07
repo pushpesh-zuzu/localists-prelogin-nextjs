@@ -77,7 +77,7 @@ function buildCookieString({
   sameSite = COOKIE_SAMESITE,
   secure = COOKIE_IS_SECURE,
 }) {
-  let str = `${encode(name)}=${encode(value)}; Path=${path};`;
+  let str = `${name}=${value}; Path=${path};`;
   if (expires) str += ` Expires=${expires.toUTCString()};`;
   if (sameSite) str += ` SameSite=${sameSite};`;
   if (secure) str += ` Secure;`;
@@ -332,7 +332,7 @@ export function clearCookies() {
     "requestToken",
     "createRequestToken",
     "registerTokens",
-    "isRegistrationComplete"
+    "isRegistrationComplete",
   ];
   cookiesToClear.forEach(clearSpecificCookie);
 
