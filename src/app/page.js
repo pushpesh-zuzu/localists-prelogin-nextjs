@@ -30,7 +30,7 @@ export default function Home() {
               "@type": "Organization",
               "name": "Localists",
               "url": "https://www.localists.com/en/gb/",
-              "logo": "https://www.localists.com/assets/logo-CQuAsOMd.png",
+              "logo": "https://www.localists.com/logodesktop.svg",
               "sameAs": [
                 "https://www.facebook.com/localistsuk/",
                 "https://www.instagram.com/localists_official/",
@@ -51,7 +51,7 @@ export default function Home() {
             {
               "@type": "LocalBusiness",
               "name": "Localists",
-              "image": "https://www.localists.com/assets/logo-CQuAsOMd.png",
+              "image": "https://www.localists.com/logodesktop.svg",
               "url": "https://www.localists.com/en/gb/",
               "telephone": "01544 303 020",
               "address": {
