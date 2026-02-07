@@ -212,7 +212,7 @@ export const fetchProfileFromMagicLink = (navigate) => {
                 throw new Error("Invalid client_id format");
             }
 
-            const api = `${BASE_IMAGE_URL}/users/get-seller-profile`;
+            const api = `${BASE_IMAGE_URL}users/get-seller-profile`;
 
             const res = await fetch(api, {
                 method: "POST",
