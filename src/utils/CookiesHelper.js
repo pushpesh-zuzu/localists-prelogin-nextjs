@@ -77,7 +77,7 @@ function buildCookieString({
   sameSite = COOKIE_SAMESITE,
   secure = COOKIE_IS_SECURE,
 }) {
-  let str = `${name}=${value}; Path=${path};`;
+  let str = `${encode(name)}=${encode(value)}; Path=${path};`;
   if (expires) str += ` Expires=${expires.toUTCString()};`;
   if (sameSite) str += ` SameSite=${sameSite};`;
   if (secure) str += ` Secure;`;
