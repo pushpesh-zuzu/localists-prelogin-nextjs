@@ -1,6 +1,6 @@
 "use client";
 // import Image from "next/image";
-import { memo, useEffect, useState } from "react";
+import { memo, Suspense, useState } from "react";
 // import { searchService } from "@/lib/store/searchSlice";
 import { useDispatch } from "react-redux";
 import dynamic from "next/dynamic";
@@ -15,9 +15,7 @@ import HeroSectionSearch from "./HeroSectionSearch";
 import Link from "next/link";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
-import { useRouter, useSearchParams } from "next/navigation";
-import { extractAllParams } from "@/utils/decodeURLParams";
-import { showToast } from "@/utils";
+import QueryToastHandler from "../../common/QueryToastHandler/QueryToastHandler";
 
 const HeroSection = memo(function HeroSection() {
   usePendingBuyerRedirect()
@@ -58,28 +56,7 @@ const HeroSection = memo(function HeroSection() {
       title: "Physics and Maths Tutors",
     },
   ];
- const router = useRouter();
-  const search = useSearchParams();
 
-const allParams =
-          typeof window !== "undefined" &&
-          extractAllParams(search || window.location.search);
-
-          // console.log(allParams,'status')
-  useEffect(() => {
-    if (allParams?.message && allParams?.status !== null) {
-      const decodedMessage = decodeURIComponent(
-      allParams.message.replace(/\+/g, " ")
-    );
-      if (allParams?.status === 'true') {
-        showToast('success',decodedMessage);
-        router.push("/en/gb");
-      } else if (allParams?.status === 'false') {
-        showToast('error',decodedMessage);
-        router.push("/en/gb");
-      }
-    }
-  }, [allParams?.status, allParams?.message, router]);
   const [showAllServices, setShowAllServices] = useState(false);
   const displayedServices = showAllServices ? services : services.slice(0, 5);
   const displayedServicesMediusScreen = showAllServices
@@ -93,6 +70,9 @@ const allParams =
 
   return (
     <WrapperBGWidth background={"#00aeef"}>
+       <Suspense fallback={null}>
+        <QueryToastHandler />
+      </Suspense>
       <section
         className="flex flex-col lg:flex-row gap-[40px] lg:gap-[72px] min-h-[543px] sm:min-h-[376px] xl:min-h-[670px] bg-[#00AEEF] px-[30px] pt-10 pb-5 md:px-[60px] md:pt-[38px] md:pb-6 xl:px-[120px] xl:py-[72px]"
         role="banner"
