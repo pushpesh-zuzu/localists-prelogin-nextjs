@@ -51,30 +51,30 @@ const initialState = {
 ------------------------------------- */
 
 export const userLogin = (loginData) => {
-    return async (dispatch) => {
-        dispatch(setLoginLoader(true));
-        try {
-            const res = await axiosInstance.post("/users/login", loginData);
-
-            if (!res?.data?.success) {
-                throw new Error(res?.data?.message || "Login failed");
-            }
-
-            const data = res.data.data;
-
-            dispatch(setToken(data.remember_tokens));
-            dispatch(setUserToken(data));
-            dispatch(setCurrentUser(data.user_type));
-            dispatch(setAuthToken(data.remember_tokens));
-
-            setCookie("barkToken", data.remember_tokens);
-            setCookie("barkUserToken", data);
-            setCookie('isRegistrationComplete',true)
-            return res.data;
-        } finally {
-            dispatch(setLoginLoader(false));
-        }
-    };
+  return async (dispatch) => {
+    dispatch(setLoginLoader(true));
+    try {
+      const response = await axiosInstance.post(`users/login`, loginData);
+        console.log(response,'response login data')
+        localStorage.setItem('userDataLocalTesing',JSON.stringify(response))
+      if (response?.data?.success) {
+        dispatch(setToken(response?.data?.data?.remember_tokens));
+        dispatch(setUserToken(response?.data?.data));
+        dispatch(setCurrentUser(response?.data?.data?.user_type));
+        dispatch(setAuthToken(response?.data?.data?.remember_tokens));
+        setCookie("barkToken", response?.data?.data?.remember_tokens);
+        setCookie("barkUserToken", response?.data?.data);
+        setCookie('isRegistrationComplete',true)
+        return response.data;
+      } else {
+        throw new Error(response?.data?.message || "Login failed");
+      }
+    } catch (error) {
+      throw error;
+    } finally {
+      dispatch(setLoginLoader(false));
+    }
+  };
 };
 
 export const sendPasswordlessLink = (data) => {
