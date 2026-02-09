@@ -85,6 +85,8 @@ function NameEmailPhoneModal({
   };
 
   const handleEmailChange = (e) => {
+    const canContinue = checkAuthenticatedUser(router);
+    if (!canContinue) return;   
     setEmail(e.target.value);
     setErrors((prev) => ({ ...prev, email: "" }));
     dispatch(
