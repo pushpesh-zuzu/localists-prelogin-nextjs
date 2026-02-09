@@ -125,24 +125,24 @@ const CustomerSuccessStoriesData = [
     image: StefanWesley,
     description:
       "Localists brought us our biggest client. Now, most of our new work comes through the platform, it’s been such a game changer for my business.",
-    name: "Sarah Patel, ",
+    name: "Stefan Wesley",
     company: "Web Designer",
-  },
-  {
-    id: 2,
-    image: RichardGray,
-    description:
-      "Over 80% of my home gardening contracts started here. The clients come to me, and I get to choose who I want to work with.",
-    name: "James Turner",
-    company: "Home & Garden Services",
   },
   {
     id: 3,
     image: LeanneOsbourne,
     description:
       "It’s hands-down the most effective way I’ve found to grow. Consistent leads, reliable clients, and real results.",
-    name: "Sheila C,",
+    name: "Leanne Osbourne,",
     company: "Personal Trainer",
+  },
+  {
+    id: 2,
+    image: RichardGray,
+    description:
+      "Over 80% of my home gardening contracts started here. The clients come to me, and I get to choose who I want to work with.",
+    name: "Richard Gray",
+    company: "Home & Garden Services",
   },
 ];
 

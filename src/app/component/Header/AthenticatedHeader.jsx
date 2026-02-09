@@ -17,7 +17,7 @@ import { getNotificationList, markNotificationsAsRead } from "@/lib/store/seller
 const AuthenticatedHeader = () => {
   const dispatch = useDispatch();
   const { registerData } = useSelector((state) => state.findJobs);
-  const userToken = getBarkUserData()?.id;
+  const userToken = getBarkUserData();
   const notifications = useSelector(
     (state) => state.notification?.notificationList,
   );

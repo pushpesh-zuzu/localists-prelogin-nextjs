@@ -63,7 +63,7 @@ function ServiceDetailsStep({
       errors.phone = "";
       return;
     } else if (formData.phone.length < 11) {
-      showToast("error", "Please Enter at least 11 number");
+      showToast("error", "Please enter 11 digit phone number.");
     } else if (!phoneCheck) {
       showToast("error", "Please Enter Correct Number");
     } else {

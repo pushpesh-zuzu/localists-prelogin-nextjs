@@ -38,9 +38,9 @@ function OtherServiceStep({
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [show, setShow] = useState(false);
   const [errors, setErrors] = useState({});
-  const [randomFallback] = useState(
-    () => Math.floor(Math.random() * (45 - 35 + 1)) + 35
-  );
+ const [randomFallback] = useState(
+  () => Math.floor(Math.random() * (20 - 15 + 1)) + 15
+);
   const [isLoading, setIsLoading] = useState(false);
   const [expandedRadius, setExpandedRadius] = useState(0);
 
