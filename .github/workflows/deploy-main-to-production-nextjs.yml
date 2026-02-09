@@ -1,4 +1,4 @@
-name: Deploy main → production (Postlogin vite)
+name: Deploy main → production (Prelogin vite)
 
 on:
   workflow_dispatch: #mannual trigger
