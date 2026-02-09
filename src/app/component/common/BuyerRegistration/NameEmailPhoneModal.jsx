@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "../Modal";
 import InputField from "../../UI/Inputs/InputField";
@@ -50,7 +50,7 @@ function NameEmailPhoneModal({
   const device = allParams.device || "";
   const loc_physical_ms = allParams.loc_physical_ms || "";
   const utm_search_term = allParams.utm_search_term || "";
-
+  const emailCooldownRef = useRef(false);
   const [name, setName] = useState(buyerRequest?.name || "");
   const [email, setEmail] = useState(buyerRequest?.email || "");
   const [phone, setPhone] = useState(buyerRequest?.phone || "");
@@ -85,8 +85,18 @@ function NameEmailPhoneModal({
   };
 
   const handleEmailChange = (e) => {
+    if (emailCooldownRef.current) return;
+
     const canContinue = checkAuthenticatedUser(router);
-    if (!canContinue) return;   
+
+    if (!canContinue) {
+      emailCooldownRef.current = true;
+      setTimeout(() => {
+        emailCooldownRef.current = false;
+      }, 2000);
+      return;
+    }
+
     setEmail(e.target.value);
     setErrors((prev) => ({ ...prev, email: "" }));
     dispatch(
