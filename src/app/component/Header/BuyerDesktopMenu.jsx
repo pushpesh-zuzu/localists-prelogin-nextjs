@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { getBarkToken, getBarkUserData } from "@/utils/CookiesHelper";
 import DownArrowSoldiDown from "../../../../public/ReactIcons/DownArrowSoldiDown";
 import HamburgerIcon from "./HumbergeIcon";
+import { useSelector, useDispatch } from "react-redux";
+import { updateProfileData } from "@/lib/store/buyerslice/buyerSlice";
 
 function BuyerDesktopMenu({
   isBuyer,
@@ -15,6 +17,19 @@ function BuyerDesktopMenu({
   mobileMenuOpen,
   pathname,
 }) {
+  const dispatch = useDispatch();
+  const profileData = useSelector(
+    (state) => state.buyer.getuploadImg
+  );
+  const userName = profileData?.[0]?.name || "";
+
+  // console.log("userName", userName, getBarkUserData())
+
+  useEffect(() => {
+    dispatch(updateProfileData());
+  }, [dispatch]);
+
+
   return (
     <div className="flex items-center gap-[10px] lg:gap-5">
       {/* Mobile Hamburger Button */}
@@ -36,11 +51,10 @@ function BuyerDesktopMenu({
                 router.push("/buyers/create");
                 setMobileMenuOpen(false);
               }}
-              className={`block whitespace-nowrap max-w-fit mx-auto leading-6 text-xs text-center w-full border-b-2 border-[#00afe3] pb-[5px] ${
-                pathname === "/buyers/create"
-                  ? "text-[#00aef3] bg-blue-50"
-                  : "text-gray-700 "
-              }`}
+              className={`block whitespace-nowrap max-w-fit mx-auto leading-6 text-xs text-center w-full border-b-2 border-[#00afe3] pb-[5px] ${pathname === "/buyers/create"
+                ? "text-[#00aef3] bg-blue-50"
+                : "text-gray-700 "
+                }`}
             >
               My Request
             </button>
@@ -66,7 +80,8 @@ function BuyerDesktopMenu({
             onClick={() => setUserDropdownOpen(!userDropdownOpen)}
           >
             <span className="text-[#1e2a2e] text-[16px] font-medium tracking-[0.01em]">
-              {getBarkUserData()?.name}
+              {/* {getBarkUserData()?.name} */}
+              {userName}
             </span>
             {/* <ChevronDown className="w-4 h-4 text-gray-500" /> */}
             <DownArrowSoldiDown />
@@ -74,7 +89,7 @@ function BuyerDesktopMenu({
 
           {/* User Dropdown Menu */}
           {userDropdownOpen && (
-            <div className={`absolute right-2  lg:${isBuyer? '-right-[36px]': '-right-[16px]'} mt-1 z-50`}>
+            <div className={`absolute right-2  lg:${isBuyer ? '-right-[36px]' : '-right-[16px]'} mt-1 z-50`}>
               <div className="relative bg-white rounded-lg p-3 shadow-[0_10px_24px_0_rgba(0,0,0,0.12),0_6px_12px_-4px_rgba(0,0,0,0.16),0_14px_40px_10px_rgba(0,0,0,0.08)]">
                 {/* Arrow */}
                 <div className="absolute -top-1 left-[90%] md:left-[80%]   xl:left-[70%] -translate-x-1/2 w-2 h-2 bg-white rotate-45"></div>

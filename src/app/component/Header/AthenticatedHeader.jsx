@@ -27,6 +27,8 @@ const AuthenticatedHeader = () => {
   ).length;
 
   const lastId = useSelector((state) => state.notification?.lastId);
+  const userId = userToken?.id || registerData?.id;
+
 
   const router = useRouter();
   const pathname = usePathname();
@@ -73,23 +75,42 @@ const AuthenticatedHeader = () => {
       console.error("Logout Error:", error);
     }
   };
+  // useEffect(() => {
+  //   const payload = {
+  //     user_id: userToken?.id || registerData?.id || "",
+  //   };
+  //   if (payload.user_id) {
+  //     dispatch(getNotificationList(payload));
+
+  //     const intervalId = setInterval(() => {
+  //       dispatch(getNotificationList(payload));
+  //     }, 30000);
+
+  //     return () => clearInterval(intervalId);
+  //   }
+  // }, [dispatch, userToken, registerData]);
+
+  // console.log("qqqqqqqqqq", document.visibilityState)
+
+
   useEffect(() => {
-    const payload = {
-      user_id: userToken?.id || registerData?.id || "",
-    };
-    if (payload.user_id) {
-      dispatch(getNotificationList(payload));
+    if (!userId) return;
 
-      const intervalId = setInterval(() => {
+    const payload = { user_id: userId };
+
+    dispatch(getNotificationList(payload));
+
+    const intervalId = setInterval(() => {
+      if (document.visibilityState === "visible") {
         dispatch(getNotificationList(payload));
-      }, 30000);
+      }
+    }, 30000);
 
-      return () => clearInterval(intervalId);
-    }
-  }, [dispatch, userToken, registerData]);
+    return () => clearInterval(intervalId);
+  }, [dispatch, userId]);
 
   const handleMarkAllAsRead = () => {
-    const userId = userToken?.id || registerData?.id;
+    // const userId = userToken?.id || registerData?.id;
     if (!userId || unreadCount === 0) return;
 
     dispatch(
