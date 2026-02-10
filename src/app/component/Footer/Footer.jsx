@@ -56,7 +56,7 @@ const Footer = () => {
                 <p className="font-bold text-gray-900 text-[20px] md:text-sm xl:text-lg">
                   Need Help?
                 </p>
-                <Link href="/en/gb/contact-us">
+                <Link target="_blank" href="/en/gb/contact-us">
                   <button className="bg-[#00afe3] hover:bg-[#0096c4] text-white px-6 py-2 rounded-sm shadow-[0px_0px_3.96px_0px_#0000001A] text-base font-bold md:text-sm whitespace-nowrap xl:text-sm  transition-colors duration-200 shadow-sm cursor-pointer">
                     Contact Us
                   </button>
@@ -72,6 +72,7 @@ const Footer = () => {
               <ul className="space-y-3 sm:text-[9px] xl:text-[17px]">
                 <li>
                   <Link
+                    target="_blank"
                     href="/en/gb"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px]  xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
@@ -80,6 +81,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
+                    target="_blank"
                     href="/en/gb/how-it-works-for-customers"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px] xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
@@ -88,6 +90,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
+                    target="_blank"
                     href="/en/gb/login"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px] xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block"
                     onClick={(e) => {
@@ -112,6 +115,7 @@ const Footer = () => {
               <ul className="space-y-3 sm:text-[9px] xl:text-[17px]">
                 <li>
                   <Link
+                    target="_blank"
                     href="/en/gb/how-it-works-for-sellers"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px] xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
@@ -120,6 +124,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
+                    target="_blank"
                     href="/en/gb/sellers/pricing"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px] xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
@@ -128,19 +133,20 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
+                    target="_blank"
                     href="/en/gb/sellers/create"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px] xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                     onClick={(e) => {
-                        if (getBarkToken()) {
-                          e.preventDefault();
-                          showToast(
-                            "info",
-                            "You're already logged in. Please switch to seller and add your service.",
-                          );
-                        } else {
-                          window.scrollTo(0, 0);
-                        }
-                      }}
+                      if (getBarkToken()) {
+                        e.preventDefault();
+                        showToast(
+                          "info",
+                          "You're already logged in. Please switch to seller and add your service.",
+                        );
+                      } else {
+                        window.scrollTo(0, 0);
+                      }
+                    }}
                   >
                     Join as a Professional
                   </Link>
@@ -155,6 +161,7 @@ const Footer = () => {
               <ul className="space-y-3 sm:text-[9px] xl:text-[17px]">
                 <li>
                   <Link
+                    target="_blank"
                     href="/en/gb/about-us"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px]  xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
@@ -163,6 +170,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
+                    target="_blank"
                     href="/en/gb/blog"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px]  xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                   >
@@ -252,18 +260,21 @@ const Footer = () => {
                 {openSections.customers && (
                   <div className="mt-3 space-y-2 pl-4">
                     <Link
+                      target="_blank"
                       href="/en/gb"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       Find a Professional
                     </Link>
                     <Link
+                      target="_blank"
                       href="/en/gb/how-it-works-for-customers"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       How it works
                     </Link>
                     <Link
+                      target="_blank"
                       href="/en/gb/login"
                       onClick={(e) => {
                         if (getBarkToken()) {
@@ -298,18 +309,21 @@ const Footer = () => {
                 {openSections.professionals && (
                   <div className="mt-3 space-y-2 pl-4">
                     <Link
+                      target="_blank"
                       href="/en/gb/how-it-works-for-sellers"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       How it works
                     </Link>
                     <Link
+                      target="_blank"
                       href="/en/gb/sellers/pricing"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       Pricing
                     </Link>
                     <Link
+                      target="_blank"
                       href="/en/gb/sellers/create"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                       onClick={(e) => {
@@ -347,12 +361,14 @@ const Footer = () => {
                 {openSections.about && (
                   <div className="mt-3 space-y-2 pl-4">
                     <Link
+                      target="_blank"
                       href="/en/gb/about-us"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
                       About Localists
                     </Link>
                     <Link
+                      target="_blank"
                       href="/en/gb/blog"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                     >
@@ -380,6 +396,7 @@ const Footer = () => {
               <p className="mx-auto text-[rgba(37, 50, 56, 1)] text-xs lg:text-[12px]">
                 © 2026 Localists.{" "}
                 <Link
+                  target="_blank"
                   href="/en/gb/terms"
                   className="text-[#253238] hover:underline"
                 >
@@ -387,6 +404,7 @@ const Footer = () => {
                 </Link>{" "}
                 /{" "}
                 <Link
+                  target="_blank"
                   href="/en/gb/cookie-policy"
                   className="text-[#253238] hover:underline"
                 >
@@ -394,6 +412,7 @@ const Footer = () => {
                 </Link>{" "}
                 /{" "}
                 <Link
+                  target="_blank"
                   href="/en/gb/privacy-policy"
                   className="text-[#253238] hover:underline"
                 >
