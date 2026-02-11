@@ -194,7 +194,7 @@ export function getRegisterTokens() {
 // ------------------------------------------------------------------
 // CLEAR SPECIFIC COOKIE - tries host-only and domain variants
 // ------------------------------------------------------------------
-export function clearSpecificCookie(name) {
+function clearSpecificCookie(name) {
   if (!isBrowser()) return;
 
   const hostname = window.location.hostname;

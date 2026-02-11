@@ -14,9 +14,9 @@ import QuestionModalNearme from "./QuestionModalNearme";
 import ModalsWithCloseButton from "../../common/ModalsWithCloseButton";
 import NameEmailNearMe from "./NameEmailNearMe";
 import OTPVerificationMultiStep from "../../common/MultiStepFormPPC/OTPVerificationMultiStep";
+import MultiStepDescribeYourRequest from "../../common/MultiStepFormPPC/MultiStepDescribeYourRequest";
 import CardLayoutWrapperNearme from "./CardLayoutWrapperNearme";
 import PhoneNumberNearMe from "./PhoneNumberNearMe";
-import DescribeYourRequestNearMe from "./DescribeYourRequestNearMe";
 
 function BuyerRegistrationNearMe({
   closeModal,
@@ -196,14 +196,14 @@ function BuyerRegistrationNearMe({
       )}
 
       {buyerStep === 7 && (
-        <ModalsWithCloseButton className="mt-[45px] md:mt-[90px] z-[9999] ">
-          <div className="rounded-[55px] z-[9999] overflow-hidden border-2 border-gray-300 bg-white ">
+        <ModalsWithCloseButton className="mt-[50px] md:mt-[90px]">
+          <div className="rounded-[55px] border-2 border-gray-300 bg-white overflow-hidden">
             <CardLayoutWrapperNearme
               className1={false}
               showBackButton={false}
               showButton={false}
             >
-              <DescribeYourRequestNearMe/>
+              <MultiStepDescribeYourRequest />
             </CardLayoutWrapperNearme>
           </div>
         </ModalsWithCloseButton>

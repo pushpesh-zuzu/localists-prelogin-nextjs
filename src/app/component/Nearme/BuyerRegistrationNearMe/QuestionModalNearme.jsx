@@ -383,8 +383,6 @@ const QuestionModalNearme = ({
       }
       showProgressBar
       value={progressPercentage}
-      fixedHeight
-      className1="py-7.5 px-5 md:py-7.5 md:px-12"
     >
       {currentQuestion === 0 && isQuestionWithImage && (
         <BannerImagesQuestion serviceName={serviceName} />
@@ -394,20 +392,20 @@ const QuestionModalNearme = ({
         <h2
           style={{
             textAlign: isQuestionWithImage ? "center" : "left",
-            maxWidth: "88%",
+            maxWidth: "83%",
             marginLeft: isQuestionWithImage ? "auto" : "",
             marginRight: isQuestionWithImage ? "auto" : "",
             marginBottom: isQuestionWithImage ? "auto" : "",
             marginBottom: "10px",
           }}
-          className="font-extrabold text-[20px] leading-7 md:text-[26px] md:leading-8 mb-[10px] max-w-[544px] "
+          className="text-[20px] font-extrabold leading-[32px] mb-[10px] max-w-[544px] md:text-[26px] md:font-bold"
         >
           {formattedQuestions[currentQuestion]?.questions}
         </h2>
       )}
 
-        <div className="flex flex-col gap-3 mb-4">
-          {formattedQuestions[currentQuestion]?.parsedAnswers.map(
+      <div className={`flex flex-col gap-3 mb-4 ${currentQuestion === 0 ?'max-h-[20vh]':'max-h-[30vh]' }  overflow-auto`}>
+        {formattedQuestions[currentQuestion]?.parsedAnswers.map(
           (opt, index) => {
             const isSelected = selectedOption.includes(opt.option);
             return (
