@@ -17,6 +17,7 @@ import OTPVerificationMultiStep from "../../common/MultiStepFormPPC/OTPVerificat
 import MultiStepDescribeYourRequest from "../../common/MultiStepFormPPC/MultiStepDescribeYourRequest";
 import CardLayoutWrapperNearme from "./CardLayoutWrapperNearme";
 import PhoneNumberNearMe from "./PhoneNumberNearMe";
+import DescribeYourRequestNearMe from "./DescribeYourMatchesNearMe";
 
 function BuyerRegistrationNearMe({
   closeModal,
@@ -123,7 +124,7 @@ function BuyerRegistrationNearMe({
         <ModalsWithCloseButton
           className="mt-[50px] md:mt-[140px]"
           onClose={handleCloseWithConfirm}
-          className2="max-w-[590px] md:min-w-[590px]"
+          className2="max-w-[90%] md:min-w-[590px]"
         >
           <QuestionModalNearme
             questions={questionanswerData}
@@ -203,7 +204,8 @@ function BuyerRegistrationNearMe({
               showBackButton={false}
               showButton={false}
             >
-              <MultiStepDescribeYourRequest />
+              {/* <MultiStepDescribeYourRequest /> */}
+              <DescribeYourRequestNearMe />
             </CardLayoutWrapperNearme>
           </div>
         </ModalsWithCloseButton>
