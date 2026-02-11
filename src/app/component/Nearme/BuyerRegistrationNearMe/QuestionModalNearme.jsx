@@ -253,7 +253,7 @@ const QuestionModalNearme = ({
     setTotalQuestionsAnswered((prev) => Math.min(prev + 1, 7));
 
     let nextIndex = null;
-    if (nextQ === "6") {
+    if (nextQ === "last") {
       onNext();
       return;
     } else if (nextQ === "last") {
