@@ -18,28 +18,34 @@ const CardLayoutWrapperNearme = ({
   showProgressBar = false,
   value = 0,
   buyerStep = 1,
-  className1 = true,
+  className1 = "",
+  fixedHeight = false, // ✅ sirf jahan zarurat ho wahan true karo
 }) => {
   return (
     <div
-      className={`flex justify-center items-center ${className1 ? "min-h-[600px]  max-h-[600xp]" : ""} bg-white rounded-[10px] w-full ${
-        NameEmailContainer ? "max-w-[85%] mx-auto h-fit " : ""
+      className={`flex justify-center items-center ${className1 ? "" : ""} bg-white rounded-[10px] w-full ${
+        NameEmailContainer ? "max-w-[92%] m-auto h-fit " : ""
       } max-[480px]:items-start ${
-        NameEmailContainer ? "max-[480px]:w-[82%]" : ""
+        NameEmailContainer ? "min-[480px]:w-[82%]" : ""
       }`}
     >
       <div
-        className={`bg-white ${className1 ? "max-h-[500px] min-h-[500px]" : ""} rounded-xl p-5 text-center w-full`}
+        className={`bg-white ${className1 ? className1 : "p-5"} rounded-xl  text-center w-full ${
+          fixedHeight ? "flex flex-col h-[560px] md:h-[580px]" : ""
+        }`}
       >
         {showProgressBar && (
-          <div className="mt-10 mb-6 md:mt-6 md:mb-6">
+          <div className={`mt-8 mb-8 md:mt-8 md:mb-8 pr-1 md:pr-4 ${fixedHeight ? "flex-shrink-0" : ""}`}>
             <ProgressBarLandingPage value={value} buyerStep={buyerStep} />
           </div>
         )}
+
         {title && (
           <h2
             style={{ color: titlePrimary ? "#00afe3" : "#000" }}
-            className={`font-extrabold text-[20px] md:text-[26px] leading-8 max-w-[530px] ${
+            className={`font-extrabold text-[20px] leading-7 md:text-[26px] md:leading-8 max-w-[530px] ${
+              fixedHeight ? "flex-shrink-0" : ""
+            } ${
               headingCenter
                 ? "text-center mb-7 mx-auto"
                 : "text-left mb-[15px] mr-auto"
@@ -55,16 +61,23 @@ const CardLayoutWrapperNearme = ({
               textAlign: headingCenter ? "center" : "left",
               marginBottom: "20px",
             }}
-            className="font-normal text-base leading-[22px] text-center max-[768px]:text-[15px] max-[768px]:mb-8 max-[480px]:text-sm max-[480px]:mb-7"
+            className={`font-normal text-base leading-[22px] text-center max-[768px]:text-[15px] max-[768px]:mb-8 max-[480px]:text-sm max-[480px]:mb-7 ${
+              fixedHeight ? "flex-shrink-0" : ""
+            }`}
           >
             {subtitle}
           </p>
         )}
 
-        {children}
+        {/* fixedHeight=true → scroll wala div, false → seedha children */}
+        {fixedHeight ? (
+          <div className="flex-1 overflow-y-auto min-h-0">{children}</div>
+        ) : (
+          children
+        )}
 
         {showButton && (
-          <div className="flex gap-3 items-center mt-10 max-[768px]:mt-8 max-[768px]:gap-[10px] max-[480px]:mt-7 max-[480px]:gap-2">
+          <div className={`flex gap-3 items-center mt-10 max-[768px]:mt-8 max-[768px]:gap-[10px] max-[480px]:mt-7 max-[480px]:gap-2 ${fixedHeight ? "flex-shrink-0" : ""}`}>
             {showBackButton && (
               <button
                 className="w-[71px] h-[50px] bg-[#f5f5f5] text-[#333] border-2 border-[#e1e5e9] rounded-lg text-xl font-semibold cursor-pointer transition-all duration-300 flex items-center justify-center hover:bg-[#e9e9e9] hover:border-[#ccc] active:translate-y-[1px] max-[768px]:w-[52px] max-[768px]:h-[52px] max-[768px]:text-lg max-[480px]:w-12 max-[480px]:h-12 max-[480px]:text-base"

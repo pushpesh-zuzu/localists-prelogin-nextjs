@@ -11,6 +11,7 @@ import { validateUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
 import { useSearchParams } from "next/navigation";
 import { extractAllParams } from "@/utils/decodeURLParams";
 import CardLayoutWrapperNearme from "./CardLayoutWrapperNearme";
+import { getCookie } from "@/utils/CookiesHelper";
 
 const PhoneNumberNearMe = ({
   nextStep,
@@ -48,7 +49,8 @@ const PhoneNumberNearMe = ({
   });
   const { ip, url } = useUserInfo();
   const [mobileErrorMessage, setMobileErrorMessage] = useState("");
-
+  const userId = getCookie("userId");
+  console.log(userId, "userIduserId");
   const handlePhoneChange = (e) => {
     const value = e.target.value.replace(/\D/g, ""); // remove all non-digits
     if (value.length <= 11) {
@@ -140,7 +142,7 @@ const PhoneNumberNearMe = ({
     } else {
       const formData = new FormData();
       formData.append("phone", phone);
-      formData.append("user_id", requestUserId);
+      formData.append("user_id", requestUserId ? requestUserId : userId);
       dispatch(updateMobile(formData))
         .then((result) => {
           if (result) {
