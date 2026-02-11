@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import {  CheckIcon, Loader2 } from "lucide-react";
-import { useDispatch, useSelector } from "react-redux";
+import { CheckIcon, Loader2 } from "lucide-react";
+import { useDispatch } from "react-redux";
 import { getCityName, setbuyerRequestData, setBuyerStep, setcitySerach } from "@/lib/store/buyerslice/buyerSlice";
 import { setSelectedServiceId } from "@/lib/store/findjobslice";
-import BuyerRegistrationNearMe from "./BuyerRegistrationNearMe/BuyerRegistrationNearMe";
+import BuyerRegistration from "../../common/BuyerRegistration/BuyerRegistration";
 
-function PostCodeSearchField({
+function PostCodeSearchFieldBlog({
   placeholder = "Enter Postcode",
   buttonText = "Go",
   debounceMs = 500,
@@ -47,7 +47,6 @@ function PostCodeSearchField({
           setIsValid(true);
           setCity(newResponse.data.city);
           dispatch(setcitySerach(newResponse.data.city));
-          dispatch(setbuyerRequestData({postcode:newResponse?.data?.postcode}))
           setError("");
 
           // Notify parent component - validation success
@@ -198,7 +197,7 @@ function PostCodeSearchField({
       )}
       </div>
       {show && (
-        <BuyerRegistrationNearMe
+        <BuyerRegistration
           closeModal={handleClose}
           service_Id={serviceId}
           postcode={postcode}
@@ -210,4 +209,4 @@ function PostCodeSearchField({
   );
 }
 
-export default PostCodeSearchField;
+export default PostCodeSearchFieldBlog;
