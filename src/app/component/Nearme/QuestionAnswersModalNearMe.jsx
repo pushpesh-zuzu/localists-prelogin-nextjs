@@ -389,13 +389,16 @@ const QuestionAnswersModalNearMe = ({
                                 error && <p className="text-xs text-red-600 flex items-start mt-1.5">{error}</p>}
                             {/* Fixed Buttons - Always visible */}
                             <div className="flex-shrink-0 mt-6 flex justify-between">
-                                {questionHistory.length > 0 && (
+                                {currentQuestion > 0 ? (
                                     <Button1
                                         variant="secondary"
                                         onClick={handleBack}
+                                        className="cursor-pointer  border-none disabled:opacity-50"
                                     >
                                         Back
                                     </Button1>
+                                ) : (
+                                    <div className="w-20"></div>
                                 )}
                                 <Button1
                                     variant="primary"

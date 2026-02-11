@@ -16,7 +16,7 @@ import DemoNameAndEmail from "./DemoNameAndEmail";
 import DemoPhoneNumber from "./DemoPhoneNumber";
 // import ReEnterMobileNumber from "../../../../../public/questions/ReEnterMobileNumber";
 
-function BuyerRegistrationNearMe({
+function BuyerRegistrationNearMe1({
     closeModal,
     postcode,
     city,
@@ -218,4 +218,4 @@ function BuyerRegistrationNearMe({
     );
 }
 
-export default BuyerRegistrationNearMe;
+export default BuyerRegistrationNearMe1;

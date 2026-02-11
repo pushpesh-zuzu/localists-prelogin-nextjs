@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getCityName, setbuyerRequestData, setBuyerStep, setcitySerach } from "@/lib/store/buyerslice/buyerSlice";
 import BuyerRegistration from "../common/BuyerRegistration/BuyerRegistration";
 import { setSelectedServiceId } from "@/lib/store/findjobslice";
-import BuyerRegistrationNearMe from "./BuyerRegistrationNearMe";
+import BuyerRegistrationNearMe from "./BuyerRegistrationNearMe1";
+import BuyerRegistrationNearMe1 from "./BuyerRegistrationNearMe1";
 
 function PostCodeSearchField({
   placeholder = "Enter Postcode",
@@ -207,7 +208,7 @@ function PostCodeSearchField({
         />
       )} */}
       {show && (
-        <BuyerRegistrationNearMe
+        <BuyerRegistrationNearMe1
           closeModal={handleClose}
           service_Id={serviceId}
           postcode={postcode}
