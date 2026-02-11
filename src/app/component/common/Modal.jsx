@@ -4,6 +4,7 @@ import { X } from "lucide-react";
 import Button1 from "../UI/Typography/Button1";
 import H4 from "../UI/Typography/H4";
 import LoaderIndicator from "./Loader/LoaderIndicatore";
+import { createPortal } from "react-dom";
 
 const Modal = ({
   isOpen,
@@ -24,13 +25,15 @@ const Modal = ({
   radius = "rounded-none",
   nextButtonClassName = "",
   disabled = false,
+  usePortal = false,
+
 }) => {
   if (!isOpen) return null;
 
-  return (
+  const modalContent = (
     <div
       className={`fixed inset-0 to-5% ${zIndex} flex items-center justify-center bg-[#00000080]`}
-      // onClick={onClose}
+    // onClick={onClose}
     >
       <div
         className={`relative w-full ${maxWidth} ${maxHeight} py-4 bg-white shadow-2xl flex flex-col ${radius} overflow-hidden`}
@@ -105,6 +108,7 @@ const Modal = ({
       </div>
     </div>
   );
+  return usePortal ? createPortal(modalContent, document.body) : modalContent;
 };
 
 export default Modal;
