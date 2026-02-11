@@ -395,6 +395,8 @@ const QuestionModalNearme = ({
         }
         showProgressBar
         value={progressPercentage}
+        fixedHeight={true}
+        className1="py-7.5 px-5 md:py-7.5 md:px-12"
       >
         {currentQuestion === 0 && isQuestionWithImage && (
           <BannerImagesQuestion serviceName={serviceName} />
@@ -416,7 +418,7 @@ const QuestionModalNearme = ({
           </h2>
         )}
 
-        <div ref={optionsRef} className={`flex flex-col gap-3 mb-4 ${currentQuestion === 0 ? 'max-h-[20vh]' : 'max-h-[30vh]'}  overflow-auto`}>
+        <div ref={optionsRef} className="flex flex-col gap-3 mb-4">
           {formattedQuestions[currentQuestion]?.parsedAnswers.map(
             (opt, index) => {
               const isSelected = selectedOption.includes(opt.option);
