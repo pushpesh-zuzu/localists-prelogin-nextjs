@@ -406,13 +406,13 @@ const QuestionModalNearme = ({
           <h2
             style={{
               textAlign: isQuestionWithImage ? "center" : "left",
-              maxWidth: "83%",
+              maxWidth: "88%",
               marginLeft: isQuestionWithImage ? "auto" : "",
               marginRight: isQuestionWithImage ? "auto" : "",
               marginBottom: isQuestionWithImage ? "auto" : "",
               marginBottom: "10px",
             }}
-            className="text-[20px] font-extrabold leading-[32px] mb-[10px] max-w-[544px] md:text-[26px] md:font-bold"
+            className="font-extrabold text-[20px] leading-7 md:text-[26px] md:leading-8 mb-[10px] max-w-[544px] "
           >
             {formattedQuestions[currentQuestion]?.questions}
           </h2>
