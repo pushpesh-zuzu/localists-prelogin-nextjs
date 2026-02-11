@@ -1,13 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { CheckIcon, Loader2 } from "lucide-react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getCityName, setbuyerRequestData, setBuyerStep, setcitySerach } from "@/lib/store/buyerslice/buyerSlice";
 import { setSelectedServiceId } from "@/lib/store/findjobslice";
-import BuyerRegistrationNearMe from "./BuyerRegistrationNearMe/BuyerRegistrationNearMe";
-// import BuyerRegistrationNearMe1 from "./BuyerRegistrationNearMe1";
+import BuyerRegistration from "../../common/BuyerRegistration/BuyerRegistration";
 
-function PostCodeSearchField({
+function PostCodeSearchFieldBlog({
   placeholder = "Enter Postcode",
   buttonText = "Go",
   debounceMs = 500,
@@ -18,8 +17,8 @@ function PostCodeSearchField({
   onSubmit,
   margin = true,
   buttonBg = "bg-[#7DD5F1]",
-  serviceId = 112,
-  serviceName = "Tree Surgery"
+  serviceId=112,
+  serviceName="Tree Surgery"
 }) {
   const [postcode, setPostcode] = useState("");
   const [isValidating, setIsValidating] = useState(false);
@@ -48,7 +47,6 @@ function PostCodeSearchField({
           setIsValid(true);
           setCity(newResponse.data.city);
           dispatch(setcitySerach(newResponse.data.city));
-          dispatch(setbuyerRequestData({ postcode: newResponse?.data?.postcode }))
           setError("");
 
           // Notify parent component - validation success
@@ -111,7 +109,7 @@ function PostCodeSearchField({
         isValid,
       });
     }
-    setShow(true);
+     setShow(true);
 
   };
 
@@ -120,29 +118,30 @@ function PostCodeSearchField({
       handleSubmit();
     }
   };
-  const handleClose = () => {
+    const handleClose = () => {
     setShow(false);
     setPostcode("")
   };
 
-  useEffect(() => {
-    const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
-    if (pendingModal?.shouldOpen) {
-      setSelectedServiceId({
-        id: pendingModal.serviceId,
-        name: pendingModal.serviceName,
-      });
-      dispatch(setbuyerRequestData(pendingModal.buyerRequest));
-      dispatch(setcitySerach(pendingModal.city));
-      setShow(true);
-      dispatch(setBuyerStep(7));
-    }
-  }, [dispatch]);
+   useEffect(() => {
+      const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
+      if (pendingModal?.shouldOpen) {
+        setSelectedServiceId({
+          id: pendingModal.serviceId,
+          name: pendingModal.serviceName,
+        });
+        dispatch(setbuyerRequestData(pendingModal.buyerRequest));
+        dispatch(setcitySerach(pendingModal.city));
+        setShow(true);
+        dispatch(setBuyerStep(7));
+      }
+    }, [dispatch]);
   return (
     <>
       <div
-        className={`relative max-w-[260px] md:max-w-[280px] lg:max-w-[416px] ${margin ? "mt-5 md:mt-6 lg:mt-[40px]" : ""
-          }`}
+        className={`relative max-w-[260px] md:max-w-[280px] lg:max-w-[416px] ${
+          margin ? "mt-5 md:mt-6 lg:mt-[40px]" : ""
+        }`}
       >
         <div
           className="flex items-center bg-white rounded-full overflow-hidden "
@@ -184,21 +183,21 @@ function PostCodeSearchField({
           <button
             type="button"
             onClick={handleSubmit}
-
+            
             className={` ${buttonBg} cursor-pointer min-w-[62px] lg:min-w-[100px] font-bold pl-3.5 pr-5 py-[11px] hover:bg-[#00aef3]  lg:pl-[22px] lg:pr-6 lg:py-4 text-white focus:outline-none text-base lg:text-[25px]!`}
           >
             {buttonText}
           </button>
         </div>
 
-        {error && (
-          <p className="ml-[5%] text-left text-red-500 text-sm mt-2 max-w-[254px] md:max-w-[246px] lg:max-w-[404px]">
-            {error}
-          </p>
-        )}
+      {error && (
+        <p className="ml-[5%] text-left text-red-500 text-sm mt-2 max-w-[254px] md:max-w-[246px] lg:max-w-[404px]">
+          {error}
+        </p>
+      )}
       </div>
       {show && (
-        <BuyerRegistrationNearMe
+        <BuyerRegistration
           closeModal={handleClose}
           service_Id={serviceId}
           postcode={postcode}
@@ -206,17 +205,8 @@ function PostCodeSearchField({
           service_Name={serviceName}
         />
       )}
-      {/* {show && (
-        <BuyerRegistrationNearMe1
-          closeModal={handleClose}
-          service_Id={serviceId}
-          postcode={postcode}
-          serviceName={serviceName}
-          service_Name={serviceName}
-        />
-      )} */}
     </>
   );
 }
 
-export default PostCodeSearchField;
+export default PostCodeSearchFieldBlog;
