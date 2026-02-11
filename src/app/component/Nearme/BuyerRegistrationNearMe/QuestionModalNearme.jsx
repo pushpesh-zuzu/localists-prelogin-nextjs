@@ -33,7 +33,7 @@ const QuestionModalNearme = ({
   const [otherText, setOtherText] = useState("");
   const [error, setError] = useState("");
 
-  const optionsRef = useRef(null);
+  const questionContainerRef = useRef(null);
 
   const totalQuestions = questions?.length || 1;
 
@@ -81,6 +81,12 @@ const QuestionModalNearme = ({
           : ""
       );
     }
+
+    questionContainerRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
     handleScrollToBottom();
   }, [currentQuestion, buyerRequest, questions]);
   //   useEffect(() => {
@@ -123,6 +129,10 @@ const QuestionModalNearme = ({
   const handleNextCheckBox = async () => {
     if (selectedOption.length === 0) {
       setError("Please select at least one option.");
+      // questionContainerRef.current?.scrollIntoView({
+      //   behavior: 'smooth',
+      //   block: 'end'
+      // });
       return;
     }
 
@@ -358,14 +368,7 @@ const QuestionModalNearme = ({
     setError("");
   }, [currentQuestion]);
 
-  useEffect(() => {
-    if (optionsRef.current) {
-      optionsRef.current.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  }, [currentQuestion]);
+
 
 
   return loading ? (
@@ -393,6 +396,7 @@ const QuestionModalNearme = ({
               : ""
             : ""
         }
+        question1={currentQuestion===0 ? formattedQuestions[currentQuestion]?.questions :''}
         showProgressBar
         value={progressPercentage}
         fixedHeight={true}
@@ -402,23 +406,7 @@ const QuestionModalNearme = ({
           <BannerImagesQuestion serviceName={serviceName} />
         )}
 
-        {currentQuestion === 0 && (
-          <h2
-            style={{
-              textAlign: isQuestionWithImage ? "center" : "left",
-              maxWidth: "88%",
-              marginLeft: isQuestionWithImage ? "auto" : "",
-              marginRight: isQuestionWithImage ? "auto" : "",
-              marginBottom: isQuestionWithImage ? "auto" : "",
-              marginBottom: "10px",
-            }}
-            className="font-extrabold text-[20px] leading-7 md:text-[26px] md:leading-8 mb-[10px] max-w-[544px] "
-          >
-            {formattedQuestions[currentQuestion]?.questions}
-          </h2>
-        )}
-
-        <div ref={optionsRef} className="flex flex-col gap-3 mb-4">
+        <div ref={questionContainerRef} className="flex flex-col gap-3 mb-4">
           {formattedQuestions[currentQuestion]?.parsedAnswers.map(
             (opt, index) => {
               const isSelected = selectedOption.includes(opt.option);

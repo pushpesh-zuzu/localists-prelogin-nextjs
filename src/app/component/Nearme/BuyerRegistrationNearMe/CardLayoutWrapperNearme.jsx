@@ -20,19 +20,20 @@ const CardLayoutWrapperNearme = ({
   buyerStep = 1,
   className1 = "",
   fixedHeight = false,
+  scrollRef,
+  isQuestionWithImage = false,
+  question1=''
 }) => {
   return (
     <div
-      className={`flex justify-center items-center ${className1 ? "" : ""} bg-white rounded-[10px] w-full ${
-        NameEmailContainer ? "max-w-[92%] m-auto h-fit " : ""
-      } max-[480px]:items-start ${
-        NameEmailContainer ? "min-[480px]:w-[82%]" : ""
-      }`}
+      ref={scrollRef}
+      className={`flex justify-center items-center ${className1 ? "" : ""} bg-white rounded-[10px] w-full ${NameEmailContainer ? "max-w-[92%] m-auto h-fit " : ""
+        } max-[480px]:items-start ${NameEmailContainer ? "min-[480px]:w-[82%]" : ""
+        }`}
     >
       <div
-        className={`bg-white ${className1 ? className1 : "p-5"} rounded-xl  text-center w-full ${
-          fixedHeight ? "flex flex-col h-[560px] md:h-[580px]" : ""
-        }`}
+        className={`bg-white ${className1 ? className1 : "p-5"} rounded-xl  text-center w-full ${fixedHeight ? "flex flex-col h-[560px] md:h-[580px]" : ""
+          }`}
       >
         {showProgressBar && (
           <div className={`mt-8 mb-8 md:mt-8 md:mb-8 pr-1 md:pr-4 ${fixedHeight ? "flex-shrink-0" : ""}`}>
@@ -43,13 +44,11 @@ const CardLayoutWrapperNearme = ({
         {title && (
           <h2
             style={{ color: titlePrimary ? "#00afe3" : "#000" }}
-            className={`font-extrabold text-[20px] leading-7 md:text-[26px] md:leading-8 max-w-[530px] ${
-              fixedHeight ? "flex-shrink-0" : ""
-            } ${
-              headingCenter
+            className={`font-extrabold text-[20px] leading-7 md:text-[26px] md:leading-8 max-w-[530px] ${fixedHeight ? "flex-shrink-0" : ""
+              } ${headingCenter
                 ? "text-center mb-7 mx-auto"
                 : "text-left mb-[15px] mr-auto"
-            } max-[768px]:text-xl max-[768px]:mb-[14px]`}
+              } max-[768px]:text-xl max-[768px]:mb-[14px]`}
           >
             {title}
           </h2>
@@ -61,14 +60,26 @@ const CardLayoutWrapperNearme = ({
               textAlign: headingCenter ? "center" : "left",
               marginBottom: "20px",
             }}
-            className={`font-normal text-base leading-[22px] text-center max-[768px]:text-[15px] max-[768px]:mb-8 max-[480px]:text-sm max-[480px]:mb-7 ${
-              fixedHeight ? "flex-shrink-0" : ""
-            }`}
+            className={`font-normal text-base leading-[22px] text-center max-[768px]:text-[15px] max-[768px]:mb-8 max-[480px]:text-sm max-[480px]:mb-7 ${fixedHeight ? "flex-shrink-0" : ""
+              }`}
           >
             {subtitle}
           </p>
         )}
 
+        {question1 && <h2
+          style={{
+            textAlign: isQuestionWithImage ? "center" : "left",
+            maxWidth: "88%",
+            marginLeft: isQuestionWithImage ? "auto" : "",
+            marginRight: isQuestionWithImage ? "auto" : "",
+            marginBottom: isQuestionWithImage ? "auto" : "",
+            marginBottom: "15px",
+          }}
+          className="font-extrabold text-[20px] leading-7 md:text-[26px] md:leading-8 mb-[10px] max-w-[544px] "
+        >
+          {question1}
+        </h2>}
         {/* fixedHeight=true → scroll wala div, false → seedha children */}
         {fixedHeight ? (
           <div className="flex-1 overflow-y-auto min-h-0">{children}</div>

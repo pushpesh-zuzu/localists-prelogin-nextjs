@@ -124,7 +124,7 @@ function BuyerRegistrationNearMe({
         <ModalsWithCloseButton
           className="mt-[50px] md:mt-[140px]"
           onClose={handleCloseWithConfirm}
-          className2="max-w-[90%] md:max-w-[590px] md:min-w-[590px]"
+          className2="max-w-[90%] min-w-[90%] md:max-w-[590px] md:min-w-[590px]"
         >
           <QuestionModalNearme
             questions={questionanswerData}

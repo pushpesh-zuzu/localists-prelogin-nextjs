@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getCityName, setbuyerRequestData, setBuyerStep, setcitySerach } from "@/lib/store/buyerslice/buyerSlice";
 import { setSelectedServiceId } from "@/lib/store/findjobslice";
 import BuyerRegistrationNearMe from "./BuyerRegistrationNearMe/BuyerRegistrationNearMe";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
+import { useRouter } from "next/navigation";
 // import BuyerRegistrationNearMe1 from "./BuyerRegistrationNearMe1";
 
 function PostCodeSearchField({
@@ -28,6 +30,7 @@ function PostCodeSearchField({
   const [error, setError] = useState("");
   const [show, setShow] = useState(false);
   const dispatch = useDispatch();
+  const router = useRouter();
   // Debounced API validation
   useEffect(() => {
     if (!postcode.trim() || postcode.length < 3) {
@@ -93,6 +96,9 @@ function PostCodeSearchField({
   };
 
   const handleSubmit = () => {
+    const canContinue = checkAuthenticatedUser(router);
+    if (!canContinue) return;
+
     if (!postcode.trim()) {
       setError("Please enter a valid postcode!");
       return;
@@ -191,12 +197,12 @@ function PostCodeSearchField({
           </button>
         </div>
 
-      {error && (
+        {error && (
           <p className="ml-[5%] absolute text-left text-red-600 text-base mt-2 max-w-[254px] md:max-w-[246px] lg:max-w-[404px]">
-          {error}
-        </p>
+            {error}
+          </p>
         )}
-      </div>    
+      </div>
       {show && (
         <BuyerRegistrationNearMe
           closeModal={handleClose}
