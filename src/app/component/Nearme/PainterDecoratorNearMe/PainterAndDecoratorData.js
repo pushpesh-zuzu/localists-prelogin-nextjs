@@ -11,7 +11,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     },
     {
         type: "p",
-        text: "When it comes to painting, local really is better.",
+        text: "When it comes to painting, local really <i>is</i> better.",
     },
     {
         type: "p",
@@ -136,7 +136,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     },
     {
         type: "p",
-        text: "Ah, the million-pound question “How long before you can actually move your sofa back against the wall?”",
+        text: "Ah, the million-pound question “<i>How long before you can actually move your sofa back against the wall?”</i>",
     },
     {
         type: "p",
@@ -178,31 +178,35 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         text: `<strong>Ask for proof of insurance.</strong>
                 </br></br>
                 It’s rare, but accidents happen, and insurance means you’re covered.`,
+        className: "mb-3.5 md:mb-[25px]"
     },
     {
         type: "li",
         text: `<strong>Check their reviews or photos.</strong>
                 </br></br>
                 A good decorator is proud to show off their past work (and no, not just one blurry picture).`,
+        className: "mb-3.5 md:mb-[25px]"
     },
     {
         type: "li",
         text: `<strong>Confirm what’s included.</strong>
                 </br></br>
                 Does the price include materials? Prep work? Two coats? Clarify it now, not later.`,
+        className: "mb-3.5 md:mb-[25px]"
     },
     {
         type: "li",
         text: `<strong>Agree on colours early.</strong>
                 </br></br>
                 You don’t want to discover “Soft Cloud” looks suspiciously like “Baby Blue” halfway through.`,
+        className: "mb-3.5 md:mb-[25px]"
     },
     {
         type: "li",
         text: `<strong>Accreditations and Trade memberships.</strong>
                 </br></br>
                 Make sure you check if your painter and decorator is accredited by or a member of trusted bodies like the <a href="https://paintingdecoratingassociation.co.uk/" style="color:#00afe3; text-decoration:underline;">Painting and Decorating Association</a> or <a href="https://www.duluxselectdecorators.co.uk/" style="color:#00afe3; text-decoration:underline;">Dulux Select Decorators.</a>`,
-                className:"mb-0"
+        className: "mb-0"
     },
     { type: "PostCodeSection", className: "mb-[0px] mt-[30px] lg:mt-[72px] lg:mb-[0px]" },
 
