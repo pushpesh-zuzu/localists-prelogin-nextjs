@@ -23,7 +23,7 @@ export default function ModalsWithCloseButton({
 
       <div
         className={`relative z-[1000000] ${className} ${className2}
-        rounded-[55px] overflow-hidden shadow-xl`}
+        rounded-[55px] border-2 border-gray-300  overflow-hidden shadow-xl`}
         onClick={(e) => e.stopPropagation()}
       >
         {onClose && (
