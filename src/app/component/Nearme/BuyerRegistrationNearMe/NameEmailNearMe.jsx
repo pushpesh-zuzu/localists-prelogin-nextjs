@@ -150,7 +150,7 @@ const NameEmailNearMe = ({
   }, [isEmailAvailable]);
 
   return (
-    <BackgroundWrapperNameEmailNearMe className="md:max-w-[100%] min-h-[560px] md:min-h-[580px] rounded-[50px] border-2 border-gray-300">
+    <BackgroundWrapperNameEmailNearMe className="md:max-w-[100%] min-h-[560px] md:min-h-[580px] rounded-[50px]">
       <CardLayoutWrapperNearme
         title={
           isBannerText
