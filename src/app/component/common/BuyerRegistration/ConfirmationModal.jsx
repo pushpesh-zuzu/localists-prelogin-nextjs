@@ -35,18 +35,18 @@ const ConfirmationModal = ({
   const urlString = typeof window !== "undefined" ? window.location.search : "";
   const { ip, url } = useUserInfo();
   const allParams = extractAllParams(urlString || search);
-    const campaignid = allParams.campaign_id || "";
-    const keyword = allParams.keyword || "";
-    const gclid = allParams.gclid || "";
-    const msclkid = allParams.msclkid || "";
-    const adgroup_id = allParams.adgroup_id;
-    const platform_source = allParams.source || "";
-    const campaign = allParams.campaign || "";
-    const adgroup = allParams.adgroup || "";
-    const matchtype = allParams.matchtype || "";
-    const device = allParams.device || "";
-    const loc_physical_ms = allParams.loc_physical_ms || "";
-    const utm_search_term = allParams.utm_search_term || "";
+  const campaignid = allParams.campaign_id || "";
+  const keyword = allParams.keyword || "";
+  const gclid = allParams.gclid || "";
+  const msclkid = allParams.msclkid || "";
+  const adgroup_id = allParams.adgroup_id;
+  const platform_source = allParams.source || "";
+  const campaign = allParams.campaign || "";
+  const adgroup = allParams.adgroup || "";
+  const matchtype = allParams.matchtype || "";
+  const device = allParams.device || "";
+  const loc_physical_ms = allParams.loc_physical_ms || "";
+  const utm_search_term = allParams.utm_search_term || "";
 
 
   // Handle body overflow
@@ -133,6 +133,9 @@ const ConfirmationModal = ({
       padding="p-0"
       showButtons={false}
       radius="rounded-[20px]"
+      zIndex="z-[1000005]"
+      usePortal={true}   // THIS IS THE KEY
+
     >
       <div className="bg-white w-full rounded-[20px] overflow-hidden px-6 py-9 text-center md:px-12 md:py-12">
         {/* Header */}

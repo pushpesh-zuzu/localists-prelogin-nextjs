@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { handleScrollToBottom } from "@/utils/scroll";
 import BannerImagesQuestion from "../../common/MultiStepFormPPC/BannerImagesQuestion";
@@ -32,6 +32,8 @@ const QuestionModalNearme = ({
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [otherText, setOtherText] = useState("");
   const [error, setError] = useState("");
+
+  const questionContainerRef = useRef(null);
 
   const totalQuestions = questions?.length || 1;
 
@@ -79,23 +81,29 @@ const QuestionModalNearme = ({
           : ""
       );
     }
+
+    questionContainerRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
     handleScrollToBottom();
   }, [currentQuestion, buyerRequest, questions]);
-//   useEffect(() => {
-//     if (buyerRequest && Array.isArray(buyerRequest.questions)) {
-//       const hasSpecialAnswer = buyerRequest.questions.some(
-//         (q) =>
-//           q?.ans === "Replace the current driveway" ||
-//           q?.ans === "Business or Commercial Premises"
-//       );
+  //   useEffect(() => {
+  //     if (buyerRequest && Array.isArray(buyerRequest.questions)) {
+  //       const hasSpecialAnswer = buyerRequest.questions.some(
+  //         (q) =>
+  //           q?.ans === "Replace the current driveway" ||
+  //           q?.ans === "Business or Commercial Premises"
+  //       );
 
-//       if (hasSpecialAnswer) {
-//         SpecialFlowPercentage(70);
-//       } else {
-//         SpecialFlowPercentage(90);
-//       }
-//     }
-//   }, [buyerRequest]);
+  //       if (hasSpecialAnswer) {
+  //         SpecialFlowPercentage(70);
+  //       } else {
+  //         SpecialFlowPercentage(90);
+  //       }
+  //     }
+  //   }, [buyerRequest]);
 
   const handleOptionChange = (e) => {
     const { value, checked } = e.target;
@@ -118,9 +126,13 @@ const QuestionModalNearme = ({
     }
   };
 
-  const handleNextCheckBox = async () => {  
+  const handleNextCheckBox = async () => {
     if (selectedOption.length === 0) {
       setError("Please select at least one option.");
+      // questionContainerRef.current?.scrollIntoView({
+      //   behavior: 'smooth',
+      //   block: 'end'
+      // });
       return;
     }
 
@@ -356,62 +368,52 @@ const QuestionModalNearme = ({
     setError("");
   }, [currentQuestion]);
 
+
+
+
   return loading ? (
     <Loader />
   ) : (
     <div className="border-2 border-gray-300 rounded-[50px] overflow-hidden">
 
-    <CardLayoutWrapperNearme
-      title={
-        currentQuestion === 0
-          ? !isQuestionWithImage
-            ? "Welcome to Localists!"
+      <CardLayoutWrapperNearme
+        title={
+          currentQuestion === 0
+            ? !isQuestionWithImage
+              ? "Welcome to Localists!"
+              : ""
+            : formattedQuestions[currentQuestion]?.questions
+        }
+        onButtonClick={handleNextCheckBox}
+        onBackClick={handleBack}
+        showBackButton={currentQuestion === 0 ? false : true}
+        buttonText="Next"
+        headingCenter={currentQuestion === 0 ? false : true}
+        subtitle={
+          currentQuestion === 0
+            ? !isQuestionWithImage
+              ? `To find the ideal ${serviceName} for your project, simply complete the quick form below.`
+              : ""
             : ""
-          : formattedQuestions[currentQuestion]?.questions
-      }
-      onButtonClick={handleNextCheckBox}
-      onBackClick={handleBack}
-      showBackButton={currentQuestion === 0 ? false : true}
-      buttonText="Next"
-      headingCenter={currentQuestion === 0 ? false : true}
-      subtitle={
-        currentQuestion === 0
-          ? !isQuestionWithImage
-            ? `To find the ideal ${serviceName} for your project, simply complete the quick form below.`
-            : ""
-          : ""
-      }
-      showProgressBar
-      value={progressPercentage}
-    >
-      {currentQuestion === 0 && isQuestionWithImage && (
-        <BannerImagesQuestion serviceName={serviceName} />
-      )}
+        }
+        question1={currentQuestion===0 ? formattedQuestions[currentQuestion]?.questions :''}
+        showProgressBar
+        value={progressPercentage}
+        fixedHeight={true}
+        className1="py-7.5 px-5 md:py-7.5 md:px-12"
+      >
+        {currentQuestion === 0 && isQuestionWithImage && (
+          <BannerImagesQuestion serviceName={serviceName} />
+        )}
 
-      {currentQuestion === 0 && (
-        <h2
-          style={{
-            textAlign: isQuestionWithImage ? "center" : "left",
-            maxWidth: "83%",
-            marginLeft: isQuestionWithImage ? "auto" : "",
-            marginRight: isQuestionWithImage ? "auto" : "",
-            marginBottom: isQuestionWithImage ? "auto" : "",
-            marginBottom: "10px",
-          }}
-          className="text-[20px] font-extrabold leading-[32px] mb-[10px] max-w-[544px] md:text-[26px] md:font-bold"
-        >
-          {formattedQuestions[currentQuestion]?.questions}
-        </h2>
-      )}
-
-      <div className={`flex flex-col gap-3 mb-4 ${currentQuestion === 0 ?'max-h-[20vh]':'max-h-[30vh]' }  overflow-auto`}>
-        {formattedQuestions[currentQuestion]?.parsedAnswers.map(
-          (opt, index) => {
-            const isSelected = selectedOption.includes(opt.option);
-            return (
-              <label
-                key={index}
-                className={`
+        <div ref={questionContainerRef} className="flex flex-col gap-3 mb-4">
+          {formattedQuestions[currentQuestion]?.parsedAnswers.map(
+            (opt, index) => {
+              const isSelected = selectedOption.includes(opt.option);
+              return (
+                <label
+                  key={index}
+                  className={`
                   flex items-start gap-3 
                   border-2 ${isSelected ? "border-[#0096c4] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)]" : "border-[#e1e5e9]"} 
                   rounded px-4 py-3 
@@ -424,48 +426,48 @@ const QuestionModalNearme = ({
                   md:text-[15px] md:py-[14px]
                   sm:text-[14px] sm:py-3 sm:gap-2.5
                 `}
-              >
-                <input
-                  type={
-                    formattedQuestions[currentQuestion]?.option_type ===
-                      "single"
-                      ? "radio"
-                      : "checkbox"
-                  }
-                  name="surveyOption"
-                  value={opt.option}
-                  checked={selectedOption.includes(opt.option)}
-                  onChange={handleOptionChange}
-                  onClick={(e) => {
-                    const isSingle =
+                >
+                  <input
+                    type={
                       formattedQuestions[currentQuestion]?.option_type ===
-                      "single";
-                    if (
-                      isSingle &&
-                      selectedOption.includes(opt.option) &&
-                      opt.option !== "Something else (please describe)"
-                    ) {
-                      handleNext([e.target.value]);
+                        "single"
+                        ? "radio"
+                        : "checkbox"
                     }
-                  }}
-                  className="mt-1 flex-shrink-0 h-[14px] w-[14px]"
-                />
-                <span className="inline-block break-words leading-[1.4]">
-                  {opt.option}
-                </span>
-              </label>
-            );
-          },
-        )}
+                    name="surveyOption"
+                    value={opt.option}
+                    checked={selectedOption.includes(opt.option)}
+                    onChange={handleOptionChange}
+                    onClick={(e) => {
+                      const isSingle =
+                        formattedQuestions[currentQuestion]?.option_type ===
+                        "single";
+                      if (
+                        isSingle &&
+                        selectedOption.includes(opt.option) &&
+                        opt.option !== "Something else (please describe)"
+                      ) {
+                        handleNext([e.target.value]);
+                      }
+                    }}
+                    className="mt-1 flex-shrink-0 h-[14px] w-[14px]"
+                  />
+                  <span className="inline-block break-words leading-[1.4]">
+                    {opt.option}
+                  </span>
+                </label>
+              );
+            },
+          )}
 
-        {formattedQuestions[currentQuestion]?.answer?.includes(
-          "Something else (please describe)",
-        ) &&
-          selectedOption.includes("Something else (please describe)") && (
-            <input
-              type="text"
-              placeholder="Please enter...."
-              className="
+          {formattedQuestions[currentQuestion]?.answer?.includes(
+            "Something else (please describe)",
+          ) &&
+            selectedOption.includes("Something else (please describe)") && (
+              <input
+                type="text"
+                placeholder="Please enter...."
+                className="
                 w-full px-3 py-3 
                 text-[16px] 
                 border border-[#d9d9d9] 
@@ -479,18 +481,18 @@ const QuestionModalNearme = ({
                 md:text-[15px] md:h-[44px]
                 sm:w-full sm:py-[10.5px] sm:px-3 sm:text-[16px] sm:h-auto sm:mt-3
               "
-              value={otherText}
-              onChange={(e) => {
-                setOtherText(e.target.value);
-              }}
-            />
-          )}
-      </div>
+                value={otherText}
+                onChange={(e) => {
+                  setOtherText(e.target.value);
+                }}
+              />
+            )}
+        </div>
 
-      {error && (
-        <p className="text-[#ff4d4f] text-[14px] text-left mt-2">{error}</p>
-      )}
-    </CardLayoutWrapperNearme>
+        {error && (
+          <p className="text-[#ff4d4f] text-[14px] text-left mt-2">{error}</p>
+        )}
+      </CardLayoutWrapperNearme>
     </div>
   );
 };

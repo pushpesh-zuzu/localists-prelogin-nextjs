@@ -1,37 +1,44 @@
 "use client";
 
 import { X } from "lucide-react";
+import { createPortal } from "react-dom";
+// import { useEffect, useState } from "react";
+
 export default function ModalsWithCloseButton({
   isOpen = true,
   onClose,
   children,
   className = "mt-[50px] md:mt-[90px]",
-  className2 = "max-w-[590px]",
+  className2 = "max-w-[590px] w-full",
 }) {
+
   if (!isOpen) return null;
 
-  return (
-    <div
-      className={`${className} fixed inset-0 z-49 flex items-center rounded-[100px] justify-center`}
-      // onClick={onClose}
-    >
+  return createPortal(
+    <div className="fixed inset-0 z-[999999] flex items-center rounded-[100px] justify-center pb-0 md:pb-10 ">
       <div
-        className={`relative ${className2} rounded-[55px] z-49  p-4`}
+        className="absolute inset-0"
+      // onClick={onClose}
+      />
+
+      <div
+        className={`relative z-[1000000] ${className} ${className2}
+        rounded-[55px] overflow-hidden shadow-xl`}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Close Button */}
         {onClose && (
           <button
             onClick={onClose}
-            className="absolute right-10 top-8 flex h-8 w-8 items-center justify-center rounded-lg text-zinc-400 transition-all  hover:text-zinc-600 cursor-pointer"
+            className="absolute cursor-pointer right-6 top-6 z-10 text-zinc-400 hover:text-zinc-600"
             aria-label="Close modal"
           >
-            <X strokeWidth={4} />
+            <X strokeWidth={3} />
           </button>
         )}
-        {/* Children */}
+
         {children}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
