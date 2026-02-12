@@ -69,7 +69,7 @@ function ArtificialGrassInstallationNearme() {
       />
       <VettedSection
         paragraph={VETTED_DATA_ARTIFICIAL_GRASS_NEARME}
-        vettedHeading1="Verified artificial grass installers you can "
+        vettedHeading1="Verified artificial grass installers you can"
         vettedHeading2="trust"
         breadcrumb={BREADCRUM_DATA_ARTIFICIAL_GRASS_NEARME}
       />

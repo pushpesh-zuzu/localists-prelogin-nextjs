@@ -19,6 +19,7 @@ export const megaMenu = [
       { id: 44, name: "Tree Surgery", path: "tree-surgeon-near-me" },
       { id: 45, name: "Gutter Cleaning", path: "gutter-cleaning-near-me" },
       { id: 113, name: "Roofing", path: "roofers-near-me" },
+      { id: 46, name: "Painter and Decorator", path: "painter-and-decorator-near-me" },
     ],
   },
   {
