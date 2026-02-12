@@ -42,11 +42,10 @@ const CloseBrowserAbandon = dynamic(
     () => import("../../common/CloseBrowserAbandon/CloseBrowserAbandon"),
     { ssr: false }
 );
-  const userId = getCookie("userId")
-console.log(userId,'userId')
 function FenceAndGateInstallation() {
     usePendingBuyerRedirect();
     useScrollToTop()
+    const userId = getCookie("userId")
     return (
         <>
             <CloseBrowserAbandon />

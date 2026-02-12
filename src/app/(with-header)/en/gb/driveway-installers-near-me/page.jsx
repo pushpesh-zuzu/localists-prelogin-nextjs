@@ -17,9 +17,9 @@ export default function Page() {
                 canonicalPath="/en/gb/driveway-installers-near-me"
                 bannerImage="/nearme/Driveway-Installation-Page.webp"
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
-                    { title: "Home & Garden", path: "/en/gb/home" },
-                    { title: "Driveway Installation", path: "/en/gb/driveway-installers-near-me" },
+                    { title: "Home", path: "en/gb" },
+                    { title: "Home & Garden", path: "en/gb/home" },
+                    { title: "Driveway Installation", path: "en/gb/driveway-installers-near-me" },
                 ]}
                 conversion={true}
             />

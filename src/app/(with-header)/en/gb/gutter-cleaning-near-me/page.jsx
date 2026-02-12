@@ -17,9 +17,9 @@ export default function Page() {
                 canonicalPath="/en/gb/gutter-cleaning-near-me"
                 bannerImage="/nearme/Gutter-Cleaning.webp"
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
-                    { title: "Home & Garden", path: "/en/gb/home" },
-                    { title: "Gutter Cleaning", path: "/en/gb/gutter-cleaning-near-me" },
+                    { title: "Home", path: "en/gb" },
+                    { title: "Home & Garden", path: "en/gb/home" },
+                    { title: "Gutter Cleaning", path: "en/gb/gutter-cleaning-near-me" },
                 ]}
                 conversion={true}
             />

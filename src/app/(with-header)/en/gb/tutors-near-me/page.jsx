@@ -17,9 +17,9 @@ export default function Page() {
                 canonicalPath="/en/gb/tutors-near-me"
                 bannerImage="/nearme/tutors.webp"
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
-                    { title: "Lessons & Training", path: "/en/gb/lessons-training" },
-                    { title: "Tutors", path: "/en/gb/tutors-near-me" },
+                    { title: "Home", path: "en/gb" },
+                    { title: "Lessons & Training", path: "en/gb/lessons-training" },
+                    { title: "Tutors", path: "en/gb/tutors-near-me" },
                 ]}
                 conversion={true}
             />

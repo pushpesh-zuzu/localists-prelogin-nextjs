@@ -17,9 +17,9 @@ export default function Page() {
                 canonicalPath="/en/gb/physics-maths-tutors-near-me"
                 bannerImage="/nearme/physics-maths.webp"
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
-                    { title: "Lessons & Training", path: "/en/gb/lessons-training" },
-                    { title: "Physics and Maths", path: "/en/gb/physics-maths-tutors-near-me" },
+                    { title: "Home", path: "en/gb" },
+                    { title: "Lessons & Training", path: "en/gb/lessons-training" },
+                    { title: "Physics and Maths", path: "en/gb/physics-maths-tutors-near-me" },
                 ]}
                 conversion={true}
             />
