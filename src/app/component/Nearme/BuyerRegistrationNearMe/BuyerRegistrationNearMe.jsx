@@ -160,7 +160,7 @@ function BuyerRegistrationNearMe({
       )}
 
       {buyerStep === 3 && (
-        <ModalsWithCloseButton onClose={handleCloseWithConfirm} className2="max-w-[90%] md:max-[590px] w-full">
+        <ModalsWithCloseButton onClose={handleCloseWithConfirm} className2="max-w-[90%] md:max-[590px]">
           <div className="py-10 rounded-[55px]  bg-white">
             <PhoneNumberNearMe
               nextStep={nextStep}
@@ -174,7 +174,7 @@ function BuyerRegistrationNearMe({
       )}
 
       {buyerStep === 4 && (
-        <ModalsWithCloseButton className2="max-w-[90%] md:max-[590px] w-full">
+        <ModalsWithCloseButton className2="max-w-[90%] md:max-[590px]">
           <div className="rounded-[55px]  bg-white overflow-hidden">
             <CardLayoutWrapperNearme showButton={false} className1={false}>
               <OTPVerificationMultiStep
@@ -198,7 +198,7 @@ function BuyerRegistrationNearMe({
       )}
 
       {buyerStep === 7 && (
-        <ModalsWithCloseButton className="mt-[50px] md:mt-[90px]" className2="max-w-[90%] md:max-[590px] w-full">
+        <ModalsWithCloseButton className="mt-[50px] md:mt-[90px]" className2="max-w-[90%] md:max-[590px]">
           <div className="rounded-[55px]  bg-white overflow-hidden">
             <CardLayoutWrapperNearme
               className1={false}
