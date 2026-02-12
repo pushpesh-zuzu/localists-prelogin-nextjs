@@ -1,4 +1,5 @@
 import CloseBrowserAbandon from '@/app/component/common/CloseBrowserAbandon/CloseBrowserAbandon'
+import SEO from '@/app/component/common/seo/SEO'
 import Footer from '@/app/component/Footer/Footer'
 import AdviceInsight from '@/app/component/Home/AdviceInsight/AdviceInsight'
 import DiscoverServices from '@/app/component/Home/DiscoverServices/DiscoverServices'
@@ -16,8 +17,8 @@ function page() {
   return (
     <main className="bg-white">
       <script type="application/ld+json">
-              {
-                `{
+        {
+          `{
                 "@context": "https://schema.org",
                 "@graph": [
                   {
@@ -85,8 +86,9 @@ function page() {
                   }
                 ]
                   }`
-              }
-              </script>
+        }
+      </script>
+      <SEO canonicalPath={'/en/gb'} />
       <CloseBrowserAbandon />
       <HeroSection />
       <PopularCard />

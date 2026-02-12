@@ -1,7 +1,5 @@
 "use client"
 
-import { usePathname } from "next/navigation";
-
 const BASE_URL =
   process.env.NEXT_PUBLIC_CANNONICAL_SITE_URL || "https://dev-prelogin.localists.com";
 
@@ -11,11 +9,16 @@ export default function SEO({
   conversion,
   canonicalPath,
 }) {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
-  const finalPath = canonicalPath || pathname;
+  if (!canonicalPath) {
+    return null;
+  }
+
+  // const finalPath = canonicalPath ? canonicalPath : "";
+
   const normalizedPath =
-    finalPath !== "/" ? finalPath.replace(/\/$/, "") : finalPath;
+    canonicalPath !== "/" ? canonicalPath.replace(/\/$/, "") : canonicalPath;
 
   const canonicalUrl = `${BASE_URL}${normalizedPath}`;
 

@@ -11,9 +11,9 @@ import { headers } from "next/headers";
 
 export async function generateMetadata() {
 
-const isProductionDomain =
+  const isProductionDomain =
     process.env.NEXT_PUBLIC_SITE_HOST === "localists.com" || false;
-console.log(isProductionDomain,'isProductionDomain')
+  console.log(isProductionDomain, 'isProductionDomain')
   return {
     title: "Localists.com: Find Trusted Local Services and Professionals",
     description:
@@ -33,7 +33,7 @@ const inter = Inter({
 });
 
 export default function RootLayout({ children }) {
-  
+
   return (
     <html lang="en">
       <head>
@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
           <NoscriptTags />
 
           {/* Global Cookie Consent */}
-            <SEO canonicalPath={'/en/gb'}/>
+          <SEO />
           <CookieConsent />
 
           <ToastProvider />
