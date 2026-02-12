@@ -374,7 +374,7 @@ const QuestionModalNearme = ({
   return loading ? (
     <Loader />
   ) : (
-    <div className="border-2 border-gray-300 rounded-[50px] overflow-hidden">
+    <div className="border-2 border-[#BEBEBE] rounded-[50px] overflow-hidden">
 
       <CardLayoutWrapperNearme
         title={
