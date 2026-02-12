@@ -35,7 +35,7 @@ export default function SEO({
   return (
     <>
       {/* Canonical */}
-      {/* <link rel="canonical" href={canonicalUrl} /> */}
+      <link rel="canonical" href={canonicalUrl} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
 
