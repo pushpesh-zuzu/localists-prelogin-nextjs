@@ -148,7 +148,7 @@ function BuyerRegistrationNearMe({
       )}
 
       {buyerStep === 2 && (
-        <ModalsWithCloseButton className="mt-[50px] md:mt-[140px]" className2="max-w-[90%] min-w-[90%] md:max-w-[590px] md:min-w-[590px]" onClose={handleCloseWithConfirm}>
+        <ModalsWithCloseButton border="" className="mt-[50px] md:mt-[140px]" className2="max-w-[90%] min-w-[90%] md:max-w-[590px] md:min-w-[590px]" onClose={handleCloseWithConfirm}>
           <NameEmailNearMe
             nextStep={nextStep}
             onBack={previousStep}
