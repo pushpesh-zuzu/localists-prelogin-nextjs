@@ -78,26 +78,22 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "p",
         text: "Here’s what they usually handle:",
-        // notMarginBottom: true
     },
     {
         type: "uili",
         heading: "Preparation:\u00A0",
         text: `Sanding, filling, and priming walls so the paint looks smooth and lasts longer.`,
         marginTop: true,
-        noMarginBottom: true
     },
     {
         type: "uili",
         heading: "Painting:\u00A0",
         text: "Ceilings, walls, trims, doors; indoors or outdoors.",
-        noMarginBottom: true
     },
     {
         type: "uili",
         heading: "Wallpapering:\u00A0",
         text: "From delicate florals to bold murals that make guests say “wow”",
-        noMarginBottom: true
     },
     {
         type: "uili",
@@ -152,11 +148,12 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     },
     {
         type: "li",
-        text: `Exterior jobs: A bit at the mercy of the weather gods, but typically up to a week or slightly more if the sun’s not playing ball.
-        </br></br>
-        A professional decorator will always spell it out in their quote, from prep work to drying times, right down to those sneaky “final touch-up” days when they come back to make everything picture-perfect.
-        `,
-        className: "mb-0"
+        text: `Exterior jobs: A bit at the mercy of the weather gods, but typically up to a week or slightly more if the sun’s not playing ball.`,
+    },
+    {
+        type: "p",
+        text: "A professional decorator will always spell it out in their quote, from prep work to drying times, right down to those sneaky “final touch-up” days when they come back to make everything picture-perfect",
+        notMarginBottom: true
     },
     {
         type: "image",

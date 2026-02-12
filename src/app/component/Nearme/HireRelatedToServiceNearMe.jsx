@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import Button from "../UI/Typography/Button";
-import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 
 
@@ -44,6 +43,7 @@ export default function HireRelatedToServiceNearMe({
   heading1 = "Hire with",
   heading2 = "confidence",
   tabData = [],
+  headingMiddle = "",
 }) {
   const [currentTab, setcurrentTab] = useState("professionals");
   const [showAll, setShowAll] = useState(false);
@@ -58,8 +58,8 @@ export default function HireRelatedToServiceNearMe({
 
   const COLLAPSED_HEIGHT = {
     mobile: 162,
-    tablet: 170,
-    desktop: 180,
+    tablet: 163,
+    desktop: 239,
   };
 
   const tabs = [
@@ -95,7 +95,7 @@ export default function HireRelatedToServiceNearMe({
   return (
     <WrapperBGWidth background={"#00AFE3"}>
       <div className="bg-[#00AFE3] px-[30px]  md:px-16 py-[30px] md:py-[50px] lg:pl-16  xl:px-[120px] lg:py-[72px] w-full h-auto
-    lg:min-h-[484px]">
+    lg:h-[484px]">
         <header className="mb-5 xl:mb-12">
           <div className="flex flex-wrap md:flex-col lg:flex-row xl:justify-between items-left gap-7.5 md:gap-6 xl:gap-12">
             <h2
@@ -104,7 +104,19 @@ export default function HireRelatedToServiceNearMe({
                           text-[30px] md:text-[35px] leading-[34px] md:leading-[38px]
                           lg:text-[50px] lg:leading-[55px] text-white md:whitespace-nowrap"
             >
-              {heading1} <span className="text-[#253238]">{heading2}</span>
+              {/* {heading1} <span className="text-[#253238]">{heading2}</span> */}
+              {heading1}
+              {headingMiddle && ` ${headingMiddle}`}
+
+              {headingMiddle ? (
+                <span className="block break-words text-[#253238]">
+                  {heading2}
+                </span>
+              ) : (
+                <span className="text-[#253238]">
+                  {" "}{heading2}
+                </span>
+              )}
             </h2>
             <nav className="flex gap-1 sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap">
               {tabs.map((tab, index) => (
@@ -131,7 +143,7 @@ export default function HireRelatedToServiceNearMe({
            w-full md:max-w-full"
             ${showAll
               ? "max-h-none"
-              : "max-h-[162px] md:max-h-[170px] lg:max-h-[180px]"
+              : "max-h-[162px] md:max-h-[163px] lg:max-h-[239px]"
             }`}>
           {tabData[currentTab]?.map((item, i) => {
             if (typeof item === "object") {

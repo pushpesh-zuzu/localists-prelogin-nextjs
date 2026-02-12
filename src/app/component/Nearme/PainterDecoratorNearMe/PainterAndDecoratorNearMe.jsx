@@ -18,12 +18,10 @@ import NearmeMember from "../NearmeMember";
 import Footer from "../../Footer/Footer";
 import HowItWorkNearMe from "../HowItWorkNearMe";
 import HireRelatedToServiceNearMe from "../HireRelatedToServiceNearMe";
-// import UserFeedbackNearMe from "../UserFeedbackNearMe";
 import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
-// import DrivewayPopularJobNearMe from "./DrivewayPopularJobNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import FenceGatePopularJobNearMe from "../FenceAndGateInstallation/FenceGatePopularJobNearMe";
@@ -75,7 +73,8 @@ function PainterAndDecoratorNearMe() {
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
-                heading1="Painting and Decorating Experts"
+                heading1="Painting and Decorating"
+                headingMiddle="Experts"
                 heading2="in your area"
                 tabData={PAINTER_DECORATOR_TABDATA}
             />
