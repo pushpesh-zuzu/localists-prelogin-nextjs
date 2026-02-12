@@ -49,7 +49,7 @@ function FenceAndGateInstallation() {
     useScrollToTop()
     return (
         <>
-            {userId !=='' && userId !==null && <CloseBrowserAbandon />}
+            <CloseBrowserAbandon />
             <FAQScript FAQ={FREQUENTLY_DATA_FENCE_AND_GATE["fencing-contractors-near-me"]} />
             <HeroSectionNearMe
                 heading1="Find Fencing Contractors"
