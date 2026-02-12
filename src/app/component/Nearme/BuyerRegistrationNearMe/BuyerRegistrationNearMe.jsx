@@ -14,7 +14,7 @@ import QuestionModalNearme from "./QuestionModalNearme";
 import ModalsWithCloseButton from "../../common/ModalsWithCloseButton";
 import NameEmailNearMe from "./NameEmailNearMe";
 import OTPVerificationMultiStep from "../../common/MultiStepFormPPC/OTPVerificationMultiStep";
-import MultiStepDescribeYourRequest from "../../common/MultiStepFormPPC/MultiStepDescribeYourRequest";
+// import MultiStepDescribeYourRequest from "../../common/MultiStepFormPPC/MultiStepDescribeYourRequest";
 import CardLayoutWrapperNearme from "./CardLayoutWrapperNearme";
 import PhoneNumberNearMe from "./PhoneNumberNearMe";
 import DescribeYourRequestNearMe from "./DescribeYourMatchesNearMe";
@@ -122,6 +122,7 @@ function BuyerRegistrationNearMe({
     <>
       {buyerStep === 1 && (
         <ModalsWithCloseButton
+          open={questionanswerData.length > 0 ? true : false}
           className="mt-[50px] md:mt-[140px]"
           onClose={handleCloseWithConfirm}
           className2="max-w-[90%] min-w-[90%] md:max-w-[590px] md:min-w-[590px]"
