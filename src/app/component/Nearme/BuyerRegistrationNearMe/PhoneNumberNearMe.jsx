@@ -179,9 +179,10 @@ const PhoneNumberNearMe = ({
       showBackButton={true}
       disableNextButton={requestLoader || isSubmitting}
       loader={requestLoader || isSubmitting}
-      className1={false}
+      // fixedHeight
+      className1={'py-7.5 px-5 md:py-7.5 md:px-12'}
     >
-      <div className="mb-2">
+      <div className="mb-2 min-h-[290px] md:min-h-[300px] ">
         <div
           className={`flex flex-col items-start w-full ${errors?.phone ? "mb-1" : "mb-4"}`}
         >
@@ -215,9 +216,9 @@ const PhoneNumberNearMe = ({
           )}
         </div>
 
-        <p className="mt-7 text-gray-700 text-center">
+        <p className="mt-7 md:mt-10 text-gray-700 text-center text-[19px] md:text-[22px] min-w-[120px] md:min-w-[485px] w-full">
           We can only send a passcode to a{" "}
-          <strong className="font-extrabold">MOBILE NUMBER</strong>, not a{" "}
+          <br/><strong className="font-extrabold">MOBILE NUMBER</strong>, not a{" "}
           <strong className="font-extrabold">LANDLINE</strong>
         </p>
 
@@ -227,14 +228,15 @@ const PhoneNumberNearMe = ({
           max-w-fit
           font-normal
           rounded-md
-          text-base
-          py-2 px-3
+          text-[20px]
+          md:text-2xl
+          py-2 px-3 md:py-2 md:px-[78.5px]
           mx-auto
-          mt-7
+          mt-7 md:mt-10
           text-center
         "
         >
-          We only use this to match you with trusted professionals.
+          We only use this to match <span className="block">you with trusted professionals.</span>
         </p>
       </div>
     </CardLayoutWrapperNearme>

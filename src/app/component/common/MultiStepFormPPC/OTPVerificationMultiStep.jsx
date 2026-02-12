@@ -17,6 +17,7 @@ const OTPVerificationMultiStep = ({
   isThankuPageOnlyShow = false,
   setUpdateNumberStep,
   onBack,
+  className="p-6"
 }) => {
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [timer, setTimer] = useState(60);
@@ -182,7 +183,7 @@ const OTPVerificationMultiStep = ({
   };
 
   return (
-    <div className="p-6 ">
+    <div className={`${className}`}>
       <h2 className="font-extrabold text-lg md:text-lg sm:text-lg text-center text-black mb-5">
         OTP Verification
       </h2>

@@ -22,7 +22,8 @@ const CardLayoutWrapperNearme = ({
   fixedHeight = false,
   scrollRef,
   isQuestionWithImage = false,
-  question1=''
+  question1='',
+  fixedHeightClass ='flex flex-col h-[560px] md:h-[580px]'
 }) => {
   return (
     <div
@@ -32,7 +33,7 @@ const CardLayoutWrapperNearme = ({
         }`}
     >
       <div
-        className={`bg-white ${className1 ? className1 : "p-5"} rounded-xl  text-center w-full ${fixedHeight ? "flex flex-col h-[560px] md:h-[580px]" : ""
+        className={`bg-white ${className1 ? className1 : "p-5"} rounded-xl  text-center w-full ${fixedHeight ? fixedHeightClass : ""
           }`}
       >
         {showProgressBar && (
