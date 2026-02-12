@@ -13,11 +13,11 @@ export default function SEO({
 }) {
   const pathname = usePathname();
 
-  const finalPath = canonicalPath || pathname;
+  const finalPath = pathname;
   const normalizedPath =
     finalPath !== "/" ? finalPath.replace(/\/$/, "") : finalPath;
 
-  const canonicalUrl = `${BASE_URL}${normalizedPath}`;
+  const canonicalUrl = `${BASE_URL.replace(/\/$/, "")}${normalizedPath}`;
 
   const breadcrumbList = breadcrumb.map((item, index) => ({
     "@type": "ListItem",
@@ -35,7 +35,7 @@ export default function SEO({
   return (
     <>
       {/* Canonical */}
-      <link rel="canonical" href={canonicalUrl} />
+      {/* <link rel="canonical" href={canonicalUrl} /> */}
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
 
@@ -70,7 +70,7 @@ export default function SEO({
       )}
 
       {/* Conversion (can stay client-side) */}
-      {/* {conversion && (
+      {conversion && (
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -82,7 +82,7 @@ export default function SEO({
             `,
           }}
         />
-      )} */}
+      )}
     </>
   );
 }
