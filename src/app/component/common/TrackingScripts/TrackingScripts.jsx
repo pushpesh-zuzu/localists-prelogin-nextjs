@@ -2,7 +2,7 @@ const TrackingScripts = () => {
   return (
     <>
       {/* Step 1: Bing UET Tracking */}
-      <script
+      {/* <script
         dangerouslySetInnerHTML={{
           __html: `
             (function(w,d,t,r,u){
@@ -21,10 +21,10 @@ const TrackingScripts = () => {
             })(window,document,"script","//bat.bing.com/bat.js","uetq");
           `,
         }}
-      />
-      
+      /> */}
+
       {/* Step 2: Bing Consent */}
-      <script
+      {/* <script
         dangerouslySetInnerHTML={{
           __html: `
             window.uetq = window.uetq || [];
@@ -37,10 +37,10 @@ const TrackingScripts = () => {
             });
           `,
         }}
-      />
-      
+      /> */}
+
       {/* Step 3: Google Delayed Loader (Google Ads + GA4) */}
-      <script
+      {/* <script
         dangerouslySetInnerHTML={{
           __html: `
             function loadTrackingScripts() {
@@ -82,10 +82,10 @@ const TrackingScripts = () => {
             });
           `,
         }}
-      />
-      
+      /> */}
+
       {/* Step 4: Facebook SDK */}
-      <script
+      {/* <script
         dangerouslySetInnerHTML={{
           __html: `
             window.fbAsyncInit = function () {
@@ -108,10 +108,10 @@ const TrackingScripts = () => {
             }(document, 'script', 'facebook-jssdk'));
           `,
         }}
-      />
-      
+      /> */}
+
       {/* Step 5: Image Enhancement Script */}
-      <script
+      {/* <script
         dangerouslySetInnerHTML={{
           __html: `
             (function() {
@@ -164,10 +164,10 @@ const TrackingScripts = () => {
             })();
           `,
         }}
-      />
-      
+      /> */}
+
       {/* Step 6: Hotjar */}
-      <script
+      {/* <script
         dangerouslySetInnerHTML={{
           __html: `
             (function(h,o,t,j,a,r){
@@ -180,10 +180,10 @@ const TrackingScripts = () => {
             })(window,document,"https://static.hotjar.com/c/hotjar-",".js?sv=");
           `,
         }}
-      />
-      
+      /> */}
+
       {/* Step 7: Google Tag Manager */}
-      <script
+      {/* <script
         dangerouslySetInnerHTML={{
           __html: `
             (function(w,d,s,l,i){
@@ -197,10 +197,10 @@ const TrackingScripts = () => {
             })(window,document,'script','dataLayer','GTM-TKD2TB3J');
           `,
         }}
-      />
-      
+      /> */}
+
       {/* Step 8: Facebook Pixel */}
-      <script
+      {/* <script
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s){
@@ -216,9 +216,45 @@ const TrackingScripts = () => {
             fbq('track','PageView');
           `,
         }}
-      />
+      /> */}
+      {/* <!-- Google Tag Manager --> */}
+      <script>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TKD2TB3J');`}
+      </script>
+
+      {/* <!-- facebook Meta Pixel Code --> */}
+      <script>
+        {`      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "2857559571119727");
+      fbq("track", "PageView");`}
+      </script>
     </>
-  )
-}
+  );
+};
 
 export default TrackingScripts;
