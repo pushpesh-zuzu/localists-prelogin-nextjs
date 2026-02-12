@@ -17,9 +17,9 @@ export default function Page() {
                 canonicalPath="/en/gb/roofers-near-me"
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
+                    { title: "Home", path: "en/gb" },
                     { title: "Home & Garden", path: "/en/gb/home" },
-                    { title: "Roofing", path: "/en/gb/roofers-near-me" },
+                    { title: "Roofing", path: "en/gb/roofers-near-me" },
                 ]}
                 conversion={true}
             />

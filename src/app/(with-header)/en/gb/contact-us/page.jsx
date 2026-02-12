@@ -16,8 +16,8 @@ export default function Page() {
             <SEO
                 canonicalPath="/en/gb/contact-us"
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
-                    { title: "Contact us", path: "/en/gb/contact-us" },
+                    { title: "Home", path: "en/gb" },
+                    { title: "Contact us", path: "en/gb/contact-us" },
                 ]}
                 conversion={true}
             />

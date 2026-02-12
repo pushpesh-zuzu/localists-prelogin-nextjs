@@ -173,6 +173,7 @@ export const registerQuoteCustomer = (customerData) => {
         // console.log("ammmmmmmmm", response.data.data?.user_id)
         dispatch(setRequestUserId(response.data.data?.user_id));
         dispatch(setRequestUserPhone(response.data.data?.phone));
+        setCookie('userId',response.data.data?.user_id)
         return response.data;
       }
     } catch (error) {

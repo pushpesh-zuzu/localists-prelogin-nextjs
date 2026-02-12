@@ -122,7 +122,7 @@ function BuyerRegistrationNearMe({
     <>
       {buyerStep === 1 && (
         <ModalsWithCloseButton
-          open={questionanswerData.length > 0 ? true : false}
+          isOpen ={questionanswerData.length}
           className="mt-[50px] md:mt-[140px]"
           onClose={handleCloseWithConfirm}
           className2="max-w-[90%] min-w-[90%] md:max-w-[590px] md:min-w-[590px]"
@@ -148,7 +148,7 @@ function BuyerRegistrationNearMe({
       )}
 
       {buyerStep === 2 && (
-        <ModalsWithCloseButton onClose={handleCloseWithConfirm}>
+        <ModalsWithCloseButton border="" className="mt-[50px] md:mt-[140px]" className2="max-w-[90%] min-w-[90%] md:max-w-[590px] md:min-w-[590px]" onClose={handleCloseWithConfirm}>
           <NameEmailNearMe
             nextStep={nextStep}
             onBack={previousStep}
@@ -160,8 +160,8 @@ function BuyerRegistrationNearMe({
       )}
 
       {buyerStep === 3 && (
-        <ModalsWithCloseButton onClose={handleCloseWithConfirm} className2="max-w-[90%] md:max-[590px] w-full">
-          <div className="py-10 rounded-[55px] border-2 border-gray-300 bg-white">
+        <ModalsWithCloseButton className="mt-[50px] md:mt-[140px]" onClose={handleCloseWithConfirm} className2="max-w-[90%] md:max-[590px]">
+          <div className="py-10 md:py-[35px] rounded-[55px]  bg-white">
             <PhoneNumberNearMe
               nextStep={nextStep}
               onBack={previousStep}
@@ -174,10 +174,11 @@ function BuyerRegistrationNearMe({
       )}
 
       {buyerStep === 4 && (
-        <ModalsWithCloseButton className2="max-w-[90%] md:max-[590px] w-full">
-          <div className="rounded-[55px] border-2 border-gray-300 bg-white overflow-hidden">
+        <ModalsWithCloseButton className="-mt-[14px] md:mt-[140px]" className2="max-w-[90%] md:max-[590px]">
+          <div className="rounded-[55px]  bg-white overflow-hidden">
             <CardLayoutWrapperNearme showButton={false} className1={false}>
               <OTPVerificationMultiStep
+                className="px-6 py-[17px] md:min-w-[540px]"
                 open
                 nextStep={nextStep}
                 onBack={previousStep}
@@ -198,8 +199,8 @@ function BuyerRegistrationNearMe({
       )}
 
       {buyerStep === 7 && (
-        <ModalsWithCloseButton className="mt-[50px] md:mt-[90px]" className2="max-w-[90%] md:max-[590px] w-full">
-          <div className="rounded-[55px] border-2 border-gray-300 bg-white overflow-hidden">
+        <ModalsWithCloseButton className="mt-[50px] md:mt-[90px]" className2="max-w-[90%] md:max-w-[590px]">
+          <div className="rounded-[55px]  bg-white overflow-hidden">
             <CardLayoutWrapperNearme
               className1={false}
               showBackButton={false}

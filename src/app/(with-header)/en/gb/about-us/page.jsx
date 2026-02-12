@@ -20,8 +20,8 @@ export default function Page() {
                 bannerImage="./images/MainBanners"
                 canonicalPath="/en/gb/about-us"
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
-                    { title: "About Us", path: "/en/gb/about-us" },
+                    { title: "Home", path: "en/gb" },
+                    { title: "About Us", path: "en/gb/about-us" },
                 ]}
                 conversion={true}
             />

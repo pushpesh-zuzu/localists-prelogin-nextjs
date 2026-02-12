@@ -19,8 +19,8 @@ export default function Page() {
                 canonicalPath="/en/gb/transportation-services"
                 bannerImage={LessonsAndTraining}
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
-                    { title: "Lessons & Training", path: "/en/gb/lessons-training" },
+                    { title: "Home", path: "en/gb" },
+                    { title: "Lessons & Training", path: "en/gb/lessons-training" },
                 ]}
                 conversion={true}
             />

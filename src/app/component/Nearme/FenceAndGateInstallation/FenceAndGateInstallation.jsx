@@ -27,6 +27,7 @@ import FenceGatePopularJobNearMe from "./FenceGatePopularJobNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
+import { getCookie } from "@/utils/CookiesHelper";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
     loading: () => (
@@ -41,10 +42,10 @@ const CloseBrowserAbandon = dynamic(
     () => import("../../common/CloseBrowserAbandon/CloseBrowserAbandon"),
     { ssr: false }
 );
-
 function FenceAndGateInstallation() {
     usePendingBuyerRedirect();
     useScrollToTop()
+    const userId = getCookie("userId")
     return (
         <>
             <CloseBrowserAbandon />

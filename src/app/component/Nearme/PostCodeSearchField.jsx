@@ -198,7 +198,7 @@ function PostCodeSearchField({
         </div>
 
         {error && (
-          <p className="ml-[5%] absolute text-left text-red-600 text-base mt-2 max-w-[254px] md:max-w-[246px] lg:max-w-[404px]">
+          <p className="ml-[5%] absolute  text-left whitespace-nowrap text-red-600 text-base mt-1 max-w-[254px] md:max-w-[246px] lg:max-w-[404px]">
             {error}
           </p>
         )}

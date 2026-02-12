@@ -150,7 +150,7 @@ const NameEmailNearMe = ({
   }, [isEmailAvailable]);
 
   return (
-    <BackgroundWrapperNameEmailNearMe className="md:max-w-[100%] min-h-[80vh] md:min-h-[70vh] rounded-[50px] border-2 border-gray-300">
+    <BackgroundWrapperNameEmailNearMe className="md:max-w-[100%] min-h-[560px] md:min-h-[580px] rounded-[50px]">
       <CardLayoutWrapperNearme
         title={
           isBannerText
@@ -164,7 +164,9 @@ const NameEmailNearMe = ({
         disableNextButton={searchServiceLoader || isInitialLoading}
         loader={searchServiceLoader}
         NameEmailContainer={true}
-        className1={false}
+        className1={'py-7.5 px-5 md:py-7.5 md:px-12'}
+        // fixedHeight={true}
+        fixedHeightClass="flex flex-col max-h-[350px] md:max-h-[590px]"
       >
         {isInitialLoading ? (
           <LoaderWithTextMultiStepForm

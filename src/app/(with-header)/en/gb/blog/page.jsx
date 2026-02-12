@@ -28,8 +28,8 @@ export default function Page() {
                 conversion={true}
                 canonicalPath="/en/gb/blog"
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
-                    { title: "Blog", path: "/en/gb/blog" },
+                    { title: "Home", path: "en/gb" },
+                    { title: "Blog", path: "en/gb/blog" },
                 ]} />
             <CloseBrowserAbandon />
             <HeroSection />

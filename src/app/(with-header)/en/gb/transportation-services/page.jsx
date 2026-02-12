@@ -14,11 +14,6 @@ export const metadata = {
     title: "Transportation Services Near Me | Find Local Professionals - Localists",
     description:
         "Find reliable transportation services near you. Get free quotes for removals, airport transfers, coach hire and more.",
-
-    robots: {
-        index: false,
-        follow: false,
-    },
 };
 
 
@@ -30,8 +25,8 @@ export default function Page() {
                 canonicalPath="/en/gb/transportation-services"
                 bannerImage={TransportBanner}
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
-                    { title: "Transportation Services", path: "/en/gb/transportation-services" },
+                    { title: "Home", path: "en/gb" },
+                    { title: "Transportation Services", path: "en/gb/transportation-services" },
                 ]}
                 conversion={true}
             />

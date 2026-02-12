@@ -14,9 +14,9 @@ export default function Page() {
         canonicalPath="/en/gb/airport-transfers-near-me"
         bannerImage="/nearme/AirportTransport/airportTransportBanner.webp"
         breadcrumb={[
-          { title: "Home", path: "/en/gb" },
-          { title: "Transportation Services", path: "/transportation-services" },
-          { title: "Airport Transfers", path: "/airport-transfers-near-me" },
+          { title: "Home", path: "en/gb" },
+          { title: "Transportation Services", path: "en/gb/transportation-services" },
+          { title: "Airport Transfers", path: "en/gb/airport-transfers-near-me" },
         ]}
         conversion={true}
       />

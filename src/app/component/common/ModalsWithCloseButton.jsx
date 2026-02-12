@@ -10,6 +10,7 @@ export default function ModalsWithCloseButton({
   children,
   className = "mt-[50px] md:mt-[90px]",
   className2 = "max-w-[590px] w-full",
+  border='border-2 border-[#BEBEBE] shadow-xl '
 }) {
 
   if (!isOpen) return null;
@@ -22,8 +23,8 @@ export default function ModalsWithCloseButton({
       />
 
       <div
-        className={`relative z-[1000000] border-2 border-gray-300 ${className} ${className2}
-        rounded-[55px] overflow-hidden shadow-xl`}
+        className={`relative z-[1000000] ${className} ${className2}
+        rounded-[55px] ${border} overflow-hidden `}
         onClick={(e) => e.stopPropagation()}
       >
         {onClose && (

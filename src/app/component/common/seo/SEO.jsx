@@ -1,7 +1,7 @@
 "use client"
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_CANNONICAL_SITE_URL || "https://dev-prelogin.localists.com";
+  process.env.NEXT_PUBLIC_CANNONICAL_SITE_URL || "https://localists.com/";
 
 export default function SEO({
   breadcrumb = [],
@@ -20,13 +20,13 @@ export default function SEO({
   const normalizedPath =
     canonicalPath !== "/" ? canonicalPath.replace(/\/$/, "") : canonicalPath;
 
-  const canonicalUrl = `${BASE_URL}${normalizedPath}`;
+  const canonicalUrl = `${BASE_URL.replace(/\/$/, "")}${normalizedPath}`;
 
   const breadcrumbList = breadcrumb.map((item, index) => ({
     "@type": "ListItem",
     position: index + 1,
     name: item.title,
-    item: `${BASE_URL}${item.path}`,
+    item: `${BASE_URL}/${item.path}`,
   }));
 
   const breadcrumbJsonLd = {
@@ -73,7 +73,7 @@ export default function SEO({
       )}
 
       {/* Conversion (can stay client-side) */}
-      {/* {conversion && (
+      {conversion && (
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -85,7 +85,7 @@ export default function SEO({
             `,
           }}
         />
-      )} */}
+      )}
     </>
   );
 }

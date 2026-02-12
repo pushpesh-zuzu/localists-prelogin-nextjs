@@ -17,7 +17,6 @@ import RadioButton from "@/app/component/UI/Inputs/RadioButton";
 import Button1 from "@/app/component/UI/Typography/Button1";
 import Paragraph2 from "@/app/component/UI/Typography/Paragraph2";
 import Footer from "../../Footer/Footer";
-import Loader from "../Loader/Loader";
 import LoaderIndicator from "../Loader/LoaderIndicatore";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
@@ -25,7 +24,7 @@ export default function LoginForm({ passwordless }) {
     const router = useRouter();
     
     useEffect(() => {
-       const canContinue = checkAuthenticatedUser(router);
+       const canContinue = typeof window !=="undefined" && checkAuthenticatedUser(router);
           if (!canContinue) return;
     }, [])
     

@@ -17,9 +17,9 @@ export default function Page() {
                 canonicalPath="/en/gb/painter-and-decorator-near-me"
                 bannerImage="/nearme/painter/Painter.webp"
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
-                    { title: "Home & Garden", path: "/en/gb/home" },
-                    { title: "Painter and Decorator", path: "/en/gb/painter-and-decorator-near-me" },
+                    { title: "Home", path: "en/gb" },
+                    { title: "Home & Garden", path: "en/gb/home" },
+                    { title: "Painter and Decorator", path: "en/gb/painter-and-decorator-near-me" },
                 ]}
                 conversion={true}
             />

@@ -17,9 +17,9 @@ export default function Page() {
                 canonicalPath="/en/gb/fencing-contractors-near-me"
                 bannerImage="/nearme/Fencing-Contractors.webp"
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
-                    { title: "Home & Garden", path: "/en/gb/home" },
-                    { title: "Fence & Gate Installation", path: "/en/gb/fencing-contractors-near-me" },
+                    { title: "Home", path: "en/gb" },
+                    { title: "Home & Garden", path: "en/gb/home" },
+                    { title: "Fence & Gate Installation", path: "en/gb/fencing-contractors-near-me" },
                 ]}
                 conversion={true}
             />

@@ -58,8 +58,8 @@ export default function Page() {
                 canonicalPath="/en/gb/home"
                 bannerImage={Home}
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
-                    { title: "Home & Garden", path: "/en/gb/home" },
+                    { title: "Home", path: "en/gb" },
+                    { title: "Home & Garden", path: "en/gb/home" },
                 ]}
                 conversion={true}
             />

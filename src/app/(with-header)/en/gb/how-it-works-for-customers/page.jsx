@@ -20,8 +20,8 @@ export default function Page() {
       <SEO
         canonicalPath="/en/gb/how-it-works-for-customers"
         breadcrumb={[
-          { title: "How it works for customers", path: "/en/gb" },
-          { title: "How it works for customers", path: "/en/gb/how-it-works-for-customers" },
+          { title: "How it works for customers", path: "en/gb" },
+          { title: "How it works for customers", path: "en/gb/how-it-works-for-customers" },
         ]}
         conversion={true}
       />

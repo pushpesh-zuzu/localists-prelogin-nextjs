@@ -282,8 +282,8 @@ function page() {
         <>
             <SEO canonicalPath="/en/gb/cookie-policy"
                 breadcrumb={[
-                    { title: "Home", path: "/en/gb" },
-                    { title: "Cookie Policy", path: "/en/gb/cookie-policy" },
+                    { title: "Home", path: "en/gb" },
+                    { title: "Cookie Policy", path: "en/gb/cookie-policy" },
                 ]}
                 conversion={true}
             />
