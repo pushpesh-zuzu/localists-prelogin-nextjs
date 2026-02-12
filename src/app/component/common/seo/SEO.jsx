@@ -23,7 +23,7 @@ export default function SEO({
     "@type": "ListItem",
     position: index + 1,
     name: item.title,
-    item: `${BASE_URL}${item.path}`,
+    item: `${BASE_URL}/${item.path}`,
   }));
 
   const breadcrumbJsonLd = {
