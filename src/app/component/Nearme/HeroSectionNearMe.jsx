@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
-import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import TrustpioletIcon from "../common/icons/HomePageIcons/TrustpioletIcon";
 import Paragraph1 from "../UI/Typography/Paragraph1";
 import H1 from "../UI/Typography/H1";
 import Image from "next/image";
-import ChevroliteDoubleDownIcon from "../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 import PostCodeSearchField from "./PostCodeSearchField";
 
 function HeroSectionNearMe({
