@@ -198,7 +198,7 @@ function BuyerRegistrationNearMe({
       )}
 
       {buyerStep === 7 && (
-        <ModalsWithCloseButton className="mt-[50px] md:mt-[90px]" className2="max-w-[90%] md:max-[590px]">
+        <ModalsWithCloseButton className="mt-[50px] md:mt-[90px]" className2="max-w-[90%] md:max-w-[590px]">
           <div className="rounded-[55px]  bg-white overflow-hidden">
             <CardLayoutWrapperNearme
               className1={false}

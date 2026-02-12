@@ -9,6 +9,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { showToast } from "@/utils";
 import BackButtonOTP from "../icons/Registration/BackButtonOTP";
 import { formatUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
+import { getCookie } from "@/utils/CookiesHelper";
 
 const OTPVerificationMultiStep = ({
   open,
@@ -19,7 +20,7 @@ const OTPVerificationMultiStep = ({
 }) => {
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [timer, setTimer] = useState(60);
-
+  const userId = getCookie("userId")
   const inputRefs = useRef([]);
   const dispatch = useDispatch();
   const router = useRouter();
@@ -103,7 +104,7 @@ const OTPVerificationMultiStep = ({
     const data = {
       user_id: requestUserId,
       otp: enteredOtp,
-      request_id: requestId,
+      request_id: requestId? requestId : userId,
     };
 
     dispatch(verifyPhoneNumberData(data)).then((result) => {
@@ -127,6 +128,7 @@ const OTPVerificationMultiStep = ({
         dispatch(createRequestData(formData)).then((res) => {
           if (res?.success) {
             showToast("success", res?.message);
+            // clearSpecificCookie("userId")
             const localePattern = /^[a-z]{2}$/i;
             if (isThankuPageOnlyShow) {
               const modalData = {
