@@ -27,6 +27,7 @@ import FenceGatePopularJobNearMe from "./FenceGatePopularJobNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
+import { getCookie } from "@/utils/CookiesHelper";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
     loading: () => (
@@ -41,13 +42,14 @@ const CloseBrowserAbandon = dynamic(
     () => import("../../common/CloseBrowserAbandon/CloseBrowserAbandon"),
     { ssr: false }
 );
-
+  const userId = getCookie("userId")
+console.log(userId,'userId')
 function FenceAndGateInstallation() {
     usePendingBuyerRedirect();
     useScrollToTop()
     return (
         <>
-            <CloseBrowserAbandon />
+            {userId !=='' && userId !==null && <CloseBrowserAbandon />}
             <FAQScript FAQ={FREQUENTLY_DATA_FENCE_AND_GATE["fencing-contractors-near-me"]} />
             <HeroSectionNearMe
                 heading1="Find Fencing Contractors"
