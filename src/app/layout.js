@@ -8,6 +8,7 @@ import { ToastProvider } from "@/utils/toaster";
 import CookieConsent from "./component/common/CookieConsent/CookieConsent";
 import SEO from "./component/common/seo/SEO";
 import { headers } from "next/headers";
+import GTMProvider from "./component/GTMProvider";
 
 export async function generateMetadata() {
 
@@ -36,16 +37,16 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <TrackingScripts />
-      </head>
+      </head> */}
       <body className={`${inter.className} antialiased`} suppressHydrationWarning
       >
         <StoreProvider>
-          {/* <Header /> */}
-          {children}
-          {/* <TrackingScripts /> */}
+          <GTMProvider />
+          <TrackingScripts />
           <NoscriptTags />
+          {children}
 
           {/* Global Cookie Consent */}
           <SEO />
