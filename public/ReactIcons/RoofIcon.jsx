@@ -3,7 +3,7 @@ const RoofIcon = ({
 }) => {
     return (
         <svg width={size} height={size} viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_11436_9036)">
+            <g clipPath="url(#clip0_11436_9036)">
                 <path d="M7.54688 11.7914V9.50781H9.83049V11.7914H7.54688ZM8.30808 11.0302H9.06929V10.269H8.30808V11.0302Z" fill="black" />
                 <path d="M10.1719 11.7914V9.50781H12.4555V11.7914H10.1719ZM10.9331 11.0302H11.6943V10.269H10.9331V11.0302Z" fill="black" />
                 <path d="M7.54688 14.4164V12.1328H9.83049V14.4164H7.54688ZM8.30808 13.6552H9.06929V12.894H8.30808V13.6552Z" fill="black" />

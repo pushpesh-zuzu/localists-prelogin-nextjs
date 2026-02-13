@@ -1,9 +1,12 @@
+import Script from "next/script";
 
 const TrackingScripts = () => {
   return (
     <>
       {/* Step 7: Google Tag Manager */}
-      <script
+      <Script
+        id="gtm-script"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             (function(w,d,s,l,i){
@@ -18,9 +21,11 @@ const TrackingScripts = () => {
           `,
         }}
       />
-      
+
       {/* Step 8: Facebook Pixel */}
-      <script
+      <Script
+        id="facebook-pixel"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s){

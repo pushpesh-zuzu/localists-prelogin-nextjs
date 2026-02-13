@@ -25,7 +25,6 @@ import DiscoverNearMe from "../DiscoverNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import FenceGatePopularJobNearMe from "../FenceAndGateInstallation/FenceGatePopularJobNearMe";
-import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
 import UserFeedbackNearMe from "../UserFeedbackNearMe";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {

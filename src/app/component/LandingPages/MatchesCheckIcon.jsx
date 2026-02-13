@@ -19,7 +19,7 @@ const MatchesCheckIcon = ({
         height="15"
         stroke={strokeColor}
       />
-      <path d="M4 8.6902L6.66667 11.3569L12 5.64258" stroke="white" strokeWidth="1.14286" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M4 8.6902L6.66667 11.3569L12 5.64258" stroke="white" strokeWidth="1.14286" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
 };

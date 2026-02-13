@@ -294,12 +294,12 @@ export const BREADCRUM_DATA_PERSONAL_TRAINERS = [
 ];
 
 export const POPULAR_SERVICES = [
-    "fitness",
-    "training plan",
-    "female coaching",
-    "muscle toning",
+    "Fitness",
+    "Training plan",
+    "Female coaching",
+    "Muscle toning",
     "Strength and conditioning",
-    "fat loss",
+    "Fat loss",
     "Home visit personal training",
 ];
 

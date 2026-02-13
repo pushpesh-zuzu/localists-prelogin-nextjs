@@ -119,12 +119,12 @@ export default function HireRelatedToServiceNearMe({
               )}
             </h2>
             <nav className="flex gap-1 sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap">
-              {tabs.map((tab, index) => (
+              {/* {tabs.map((tab, index) => (
                 <button
                   key={tab.activtab}
                   onClick={() => handleClick(tab.activtab)}
                   className={`${currentTab === tab.activtab
-                    ? "bg-[#253238] rounded-full transition-all duration-700 ease-in-out"
+                    ? "border-2 border-white rounded-full"
                     : ""
                     }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em]
                       text-[12px] md:text-[14px]
@@ -132,7 +132,30 @@ export default function HireRelatedToServiceNearMe({
                 >
                   {tab.lable}
                 </button>
-              ))}
+              ))} */}
+
+              {tabs.map((tab) => {
+                const isActive = currentTab === tab.activtab;
+                return (
+                  <div
+                    key={tab.activtab}
+                    className={`${isActive
+                      ? "border-2 border-white rounded-full"
+                      : ""
+                      }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em]
+                      text-[12px] md:text-[14px]
+                      xl:text-[18px] py-[3px] sm:px-3 sm:py-1.5 xl:px-4 xl:py-[11px]`}
+                  >
+                    <span
+                      onClick={() => handleClick(tab.activtab)}
+                      className="cursor-pointer pointer-events-auto"
+                      aria-label={`Open ${tab.lable}`}
+                    >
+                      {tab.lable}
+                    </span>
+                  </div>
+                );
+              })}
             </nav>
           </div>
         </header>

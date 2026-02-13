@@ -104,21 +104,32 @@ export default function HireRelatedToService({
             >
               {heading1} <span className="text-[#023047]">{heading2}.</span>
             </h2>
-            <nav className="flex  sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap">
-              {tabs.map((tab, index) => (
-                <button
-                  key={tab.activtab}
-                  onClick={() => handleClick(tab.activtab)}
-                  className={`${currentTab === tab.activtab
-                    ? "bg-[#253238] rounded-full transition-all duration-700 ease-in-out"
-                    : "rounded-full"
-                    }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em]
-                      text-[11px] md:text-[14px]
-                      xl:text-[18px] py-[3px] sm:px-3 sm:py-1.5 xl:px-4 xl:py-[11px] cursor-pointer`}
-                >
-                  {tab.lable}
-                </button>
-              ))}
+            <nav className="flex sm:gap-4 md:gap-4 xl:gap-7 items-center flex-wrap">
+              {tabs.map((tab) => {
+                const isActive = currentTab === tab.activtab;
+                return (
+                  <div
+                    key={tab.activtab}
+                    className={`
+          font-[Arial] font-bold text-white tracking-[-0.03em]
+          text-[11px] md:text-[14px] xl:text-[18px]
+          px-2.5 sm:px-3 xl:px-4
+          py-[3px] sm:py-1.5 xl:py-[11px]
+          rounded-full
+          ${isActive ? "border-2 border-white" : ""}
+          pointer-events-none
+        `}
+                  >
+                    <span
+                      onClick={() => handleClick(tab.activtab)}
+                      className="cursor-pointer pointer-events-auto"
+                      aria-label={`Open ${tab.lable}`}
+                    >
+                      {tab.lable}
+                    </span>
+                  </div>
+                );
+              })}
             </nav>
           </div>
         </header>
