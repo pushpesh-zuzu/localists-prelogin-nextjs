@@ -37,15 +37,15 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      {/* <head>
+      <head>
         <TrackingScripts />
-      </head> */}
+      </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning
       >
         <StoreProvider>
           <GTMProvider />
-          <TrackingScripts />
           <NoscriptTags />
+          {/* <TrackingScripts /> */}
           {children}
 
           {/* Global Cookie Consent */}
