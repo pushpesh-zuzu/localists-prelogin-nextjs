@@ -5,9 +5,9 @@ import TrackingScripts from "./component/common/TrackingScripts/TrackingScripts"
 import "./globals.css";
 import StoreProvider from "./StoreProvider";
 import { ToastProvider } from "@/utils/toaster";
-import CookieConsent from "./component/common/CookieConsent/CookieConsent";
+// import CookieConsent from "./component/common/CookieConsent/CookieConsent";
 import SEO from "./component/common/seo/SEO";
-import { headers } from "next/headers";
+// import { headers } from "next/headers";
 
 export async function generateMetadata() {
 
@@ -29,11 +29,17 @@ export async function generateMetadata() {
 }
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter",
+  // variable: "--font-inter",
+  display: "swap",   // allows instant text paint
+  preload: true,    // improves LCP
 });
 
-export default function RootLayout({ children }) {
+const CookieConsent = dynamic(
+  () => import("./component/common/CookieConsent/CookieConsent"),
+  { ssr: false }
+);
 
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
