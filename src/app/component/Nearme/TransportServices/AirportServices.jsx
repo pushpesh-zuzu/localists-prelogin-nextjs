@@ -54,6 +54,8 @@ function AirportServices() {
         bannerImage="/nearme/AirportTransport/airportTransportBanner.webp"
         bannerImageMobile="/nearme/AirportTransport/airportmobile.webp"
         altText="Airport Transfer"
+        serviceId=""
+        serviceName=""
       />
       <VettedSection
         paragraph={VETTED_DATA_AIRPORT_TRANSPORT}
@@ -68,7 +70,10 @@ function AirportServices() {
         tabData={AIRPORT_TRANSPORT_TABDATA}
       />
       <UserFeedbackNearMe feedbackData={FEEDBACK_AIRPORT_TRANSPORT} />
-      <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE_AIRPORT_TRANSPORT} />
+      <AboutServicesAndQuestions
+        serviceId=""
+        serviceName=""
+        contentBlocks={QUESTION_AND_ABOUT_SERVICE_AIRPORT_TRANSPORT} />
       <FAQ data={FREQUENTLY_DATA_AIRPORT_TRANSPORT} />
       <DiscoverNearMe homeData={DISCOVER_AIRPORT_TRANSPORT_DATA} />
       <NearmeMember
