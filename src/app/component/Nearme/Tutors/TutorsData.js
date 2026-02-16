@@ -157,16 +157,16 @@ export const FREQUENTLY_DATA_TUTORS = {
 export const TUTORS_TABDATA = {
     professionals: [
         "Tutors North Yorkshire",
+        "Tutors and Maths Tutor York",
+        "Tutors and Maths Tutor Hull",
+        "Tutors and Maths Tutor Leeds",
+        "Tutors and Maths Tutor Bolton",
+        "Tutors and Maths Tutor Chester",
+        "Tutors and Maths Tutor Cheshire",
+        "Tutors and Maths Tutor Harrogate",
+        "Tutors and Maths Tutor Stockport",
         "Tutors and Maths Tutor Liverpool",
         "Tutors and Maths Tutor Manchester",
-        "Tutors and Maths Tutor Chester",
-        "Tutors and Maths Tutor Leeds",
-        "Tutors and Maths Tutor York",
-        "Tutors and Maths Tutor Harrogate",
-        "Tutors and Maths Tutor Cheshire",
-        "Tutors and Maths Tutor Hull",
-        "Tutors and Maths Tutor Stockport",
-        "Tutors and Maths Tutor Bolton",
     ],
     popular: [
         {
@@ -178,16 +178,16 @@ export const TUTORS_TABDATA = {
             url: "",
         },
         {
-            title: "Fencing Contractors Near Me",
-            url: "/en/gb/fencing-contractors-near-me",
-        },
-        {
             title: "Architects Near Me",
             url: "",
         },
         {
             title: "Gutter Cleaners Near Me",
             url: "/en/gb/gutter-cleaning-near-me",
+        },
+        {
+            title: "Fencing Contractors Near Me",
+            url: "/en/gb/fencing-contractors-near-me",
         },
         {
             title: "Artificial Grass Installers Near Me",

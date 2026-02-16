@@ -67,9 +67,11 @@ function PhysicsAndMaths() {
 
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
-                heading1="Physics and Maths Tutors"
+                heading1="Physics and Maths"
+                headingMiddle="Tutors"
                 heading2="in your area"
                 tabData={PHYSICS_AND_MATHS_TABDATA}
+                heightClass="lg:h-[546px]"
             />
             <UserFeedbackNearMe2 feedbackData={PHYSICS_AND_MATHS_FEEDBACK} />
             <AboutServicesAndQuestions

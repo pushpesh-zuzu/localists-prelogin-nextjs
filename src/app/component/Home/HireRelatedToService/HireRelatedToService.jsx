@@ -8,7 +8,8 @@ import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 const JobButton = ({ title, url }) => {
   if (url) {
     return (
-      <button
+      <div
+        aria-label={`Search for ${title}`}
         className="font-[Arial] border-2 xl:border-2 border-white
         font-bold text-[13px] -tracking-[3%] lg:text-[20px]
         px-1.5 py-[5px] xl:px-5 xl:py-1
@@ -19,23 +20,22 @@ const JobButton = ({ title, url }) => {
         <a
           href={url}
           className="pointer-events-auto"
-          aria-label={`Search for ${title}`}
         >
           {title}
         </a>
-      </button>
+      </div>
     );
   }
 
   return (
-    <button
+    <div
       className="font-[Arial] border-2 xl:border-2 border-white font-bold text-[13px] -tracking-[3%] lg:text-[20px] 
                px-1.5 py-[5px] xl:px-5 xl:py-[4px] rounded-full text-white 
                whitespace-nowrap focus:outline-none cursor-default"
       aria-label={`Search for ${title}`}
     >
       {title}
-    </button>
+    </div>
   );
 };
 

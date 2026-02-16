@@ -57,7 +57,9 @@ function page() {
   return (
     <main className="bg-white">
       <Script
+        id="ld-json"
         type="application/ld+json"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",

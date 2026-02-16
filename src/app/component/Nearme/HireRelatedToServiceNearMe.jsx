@@ -8,7 +8,8 @@ import Link from "next/link";
 const JobButton = ({ title, url }) => {
   if (url) {
     return (
-      <button
+      <div
+        aria-label={`Search for ${title}`}
         className="font-[Arial] border-2 xl:border-2 border-white
         font-bold text-[13px] -tracking-[3%] lg:text-[20px]
         px-1.5 py-[5px] xl:px-5 xl:py-[4px]
@@ -19,23 +20,22 @@ const JobButton = ({ title, url }) => {
         <Link
           href={url}
           className="pointer-events-auto"
-          aria-label={`Search for ${title}`}
         >
           {title}
         </Link>
-      </button>
+      </div>
     )
   }
 
   return (
-    <button
+    <div
       className="font-[Arial] border-2 xl:border-2 border-white font-bold text-[13px] -tracking-[3%] lg:text-[20px] 
                px-1.5 py-[5px] xl:px-5 xl:py-[4px] rounded-full text-white 
                whitespace-nowrap focus:outline-none cursor-default"
       aria-label={`Search for ${title}`}
     >
       {title}
-    </button>
+    </div>
   )
 }
 
@@ -59,7 +59,7 @@ export default function HireRelatedToServiceNearMe({
 
   const COLLAPSED_HEIGHT = {
     mobile: 162,
-    tablet: 163,
+    tablet: 196,
     desktop: 239,
   };
 
@@ -95,8 +95,7 @@ export default function HireRelatedToServiceNearMe({
 
   return (
     <WrapperBGWidth background={"#00AFE3"}>
-      <div className={`bg-[#00AFE3] px-[30px] md:px-16 py-[30px] md:py-[50px] lg:pl-16 xl:px-[120px] lg:py-[72px] w-full h-auto
-    ${heightClass}`}>
+      <div className={`bg-[#00AFE3] px-[30px] md:px-16 py-[30px] md:py-[50px] lg:pl-16 xl:px-[120px] lg:py-[72px] w-full h-auto md:h-auto ${heightClass}`}>
         <header className="mb-5 xl:mb-12">
           <div className="flex flex-wrap md:flex-col lg:flex-row xl:justify-between items-left gap-7.5 md:gap-6 xl:gap-12">
             <h2
@@ -110,7 +109,8 @@ export default function HireRelatedToServiceNearMe({
               {headingMiddle && ` ${headingMiddle}`}
 
               {headingMiddle ? (
-                <span className="block break-words text-[#253238]">
+                <span className="md:block break-words text-[#253238]">
+                  {" "}
                   {heading2}
                 </span>
               ) : (
@@ -167,7 +167,7 @@ export default function HireRelatedToServiceNearMe({
            w-full md:max-w-full"
             ${showAll
               ? "max-h-none"
-              : "max-h-[162px] md:max-h-[163px] lg:max-h-[239px]"
+              : "max-h-[162px] md:max-h-[196px] lg:max-h-[239px]"
             }`}>
           {tabData[currentTab]?.map((item, i) => {
             if (typeof item === "object") {
