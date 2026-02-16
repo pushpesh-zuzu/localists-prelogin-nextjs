@@ -77,6 +77,7 @@ function PainterAndDecoratorNearMe() {
                 headingMiddle="Experts"
                 heading2="in your area"
                 tabData={PAINTER_DECORATOR_TABDATA}
+                heightClass="lg:h-[546px]"
             />
             <UserFeedbackNearMe2 feedbackData={PAINTER_DECORATOR_FEEDBACK} />
             <AboutServicesAndQuestions
