@@ -5,7 +5,7 @@ import TrackingScripts from "./component/common/TrackingScripts/TrackingScripts"
 import "./globals.css";
 import StoreProvider from "./StoreProvider";
 import { ToastProvider } from "@/utils/toaster";
-// import CookieConsent from "./component/common/CookieConsent/CookieConsent";
+import CookieConsent from "./component/common/CookieConsent/CookieConsent";
 import SEO from "./component/common/seo/SEO";
 // import { headers } from "next/headers";
 
@@ -33,11 +33,6 @@ const inter = Inter({
   display: "swap",   // allows instant text paint
   preload: true,    // improves LCP
 });
-
-const CookieConsent = dynamic(
-  () => import("./component/common/CookieConsent/CookieConsent"),
-  { ssr: false }
-);
 
 export default function RootLayout({ children }) {
   return (

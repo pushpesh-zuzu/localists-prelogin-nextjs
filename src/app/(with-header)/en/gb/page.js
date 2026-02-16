@@ -2,7 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import Script from "next/script";
 
-// import CloseBrowserAbandon from '@/app/component/common/CloseBrowserAbandon/CloseBrowserAbandon'
+import CloseBrowserAbandon from '@/app/component/common/CloseBrowserAbandon/CloseBrowserAbandon'
 import SEO from '@/app/component/common/seo/SEO'
 import Footer from '@/app/component/Footer/Footer'
 // import AdviceInsight from '@/app/component/Home/AdviceInsight/AdviceInsight'
@@ -14,6 +14,7 @@ import Member from '@/app/component/Home/Member/Member'
 import PopularCard from '@/app/component/Home/PopularCard/PopularCard'
 // import UserFeedback from '@/app/component/Home/UserFeedback/UserFeedback'
 import { articles, feedbackData, tabData } from '@/constants/homepageData'
+import LoaderIndicator from "@/app/component/common/Loader/LoaderIndicatore";
 
 
 const UserFeedback = dynamic(
@@ -52,11 +53,6 @@ const HireRelatedToService = dynamic(
   }
 );
 
-const CloseBrowserAbandon = dynamic(
-  () => import(
-    "@/app/component/common/CloseBrowserAbandon/CloseBrowserAbandon"),
-  { ssr: false }
-);
 
 function page() {
   return (
