@@ -1,5 +1,5 @@
 "use client";
-import { memo, Suspense, useState } from "react";
+import { Suspense, useState } from "react";
 import Paragraph from "../../UI/Typography/Paragraph";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
@@ -9,6 +9,7 @@ import HeroSectionSearch from "./HeroSectionSearch";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import QueryToastHandler from "../../common/QueryToastHandler/QueryToastHandler";
+import HeroParagraphText from "./HeroParagraphText";
 
 export default function HeroSection() {
   usePendingBuyerRedirect()
@@ -87,11 +88,7 @@ export default function HeroSection() {
               </div>
             </div>
           </h1>
-          <p
-            className="font-[Arial] font-bold tracking-[-0.03em] text-[25.2px] leading-[25.2px]
-                      lg:text-[28px] lg:leading-[28px] text-white pt-[20px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
-            Get instant quotes from local professionals.
-          </p>
+          <HeroParagraphText />
           <HeroSectionSearch />
         </div>
 
