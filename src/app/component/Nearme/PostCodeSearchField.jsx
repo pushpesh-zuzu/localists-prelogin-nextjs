@@ -1,13 +1,29 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { CheckIcon, Loader2 } from "lucide-react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getCityName, setbuyerRequestData, setBuyerStep, setcitySerach } from "@/lib/store/buyerslice/buyerSlice";
 import { setSelectedServiceId } from "@/lib/store/findjobslice";
-import BuyerRegistrationNearMe from "./BuyerRegistrationNearMe/BuyerRegistrationNearMe";
+// import BuyerRegistrationNearMe from "./BuyerRegistrationNearMe/BuyerRegistrationNearMe";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 import { useRouter } from "next/navigation";
+import LoaderIndicator from "../common/Loader/LoaderIndicatore";
 // import BuyerRegistrationNearMe1 from "./BuyerRegistrationNearMe1";
+
+
+const BuyerRegistrationNearMe = dynamic(
+  () => import("./BuyerRegistrationNearMe/BuyerRegistrationNearMe"),
+  {
+    loading: () => (
+      <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
+        <LoaderIndicator size="large" />
+      </div>
+    ),
+    ssr: true,
+  }
+);
+
 
 function PostCodeSearchField({
   placeholder = "Enter Postcode",
@@ -31,6 +47,7 @@ function PostCodeSearchField({
   const [show, setShow] = useState(false);
   const dispatch = useDispatch();
   const router = useRouter();
+
   // Debounced API validation
   useEffect(() => {
     if (!postcode.trim() || postcode.length < 3) {
@@ -106,6 +123,11 @@ function PostCodeSearchField({
 
     if (!isValid) {
       setError("Please enter a valid postcode!");
+      return;
+    }
+
+    if (!serviceId) {
+      setError("Coming soon!");
       return;
     }
 

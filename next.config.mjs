@@ -1,5 +1,5 @@
 // next.config.mjs
-import protectedRoutes from "./src/utils/protectedRoutes.js";
+import protectedRoutes from "./src/utils/protectedRoutes.mjs";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

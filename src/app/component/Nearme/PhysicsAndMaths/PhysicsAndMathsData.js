@@ -117,17 +117,17 @@ export const FREQUENTLY_DATA_PHYSICS_AND_MATHS = {
 
 export const PHYSICS_AND_MATHS_TABDATA = {
     professionals: [
-        "Physics and Maths Tutor North Yorkshire",
-        "Physics and Maths Tutor Liverpool",
-        "Physics and Maths Tutor Manchester",
-        "Physics and Maths Tutor Chester",
-        "Physics and Maths Tutor Leeds",
-        "Physics and Maths Tutor York",
-        "Physics and Maths Tutor Harrogate",
-        "Physics and Maths Tutor Cheshire",
         "Physics and Maths Tutor Hull",
-        "Physics and Maths Tutor Stockport",
+        "Physics and Maths Tutor York",
+        "Physics and Maths Tutor Leeds",
         "Physics and Maths Tutor Bolton",
+        "Physics and Maths Tutor Chester",
+        "Physics and Maths Tutor Cheshire",
+        "Physics and Maths Tutor Liverpool",
+        "Physics and Maths Tutor Stockport",
+        "Physics and Maths Tutor Harrogate",
+        "Physics and Maths Tutor Manchester",
+        "Physics and Maths Tutor North Yorkshire",
     ],
     popular: [
         {
@@ -139,16 +139,16 @@ export const PHYSICS_AND_MATHS_TABDATA = {
             url: "",
         },
         {
-            title: "Fencing Contractors Near Me",
-            url: "/en/gb/fencing-contractors-near-me",
-        },
-        {
             title: "Architects Near Me",
             url: "",
         },
         {
             title: "Gutter Cleaners Near Me",
             url: "/en/gb/gutter-cleaning-near-me",
+        },
+        {
+            title: "Fencing Contractors Near Me",
+            url: "/en/gb/fencing-contractors-near-me",
         },
         {
             title: "Artificial Grass Installers Near Me",

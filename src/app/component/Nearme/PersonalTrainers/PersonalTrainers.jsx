@@ -4,15 +4,15 @@ import React from "react";
 import VettedSection from "../VettedSection";
 import AboutServicesAndQuestions from "../AboutServicesAndQuestions";
 import {
-    BREADCRUM_DATA_PAINTER_DECORATOR,
-    FREQUENTLY_DATA_PAINTER_DECORATOR,
+    BREADCRUM_DATA_PERSONAL_TRAINERS,
+    FREQUENTLY_DATA_PERSONAL_TRAINERS,
     POPULAR_SERVICES,
     QUESTION_AND_ABOUT_SERVICE,
-    PAINTER_DECORATOR_FEEDBACK,
-    PAINTER_DECORATOR_DATA,
-    PAINTER_DECORATOR_TABDATA,
-    VETTED_DATA_PAINTER_DECORATOR,
-} from "./PainterAndDecoratorData";
+    PERSONAL_TRAINERS_FEEDBACK,
+    PERSONAL_TRAINERS_DATA,
+    PERSONAL_TRAINERS_TABDATA,
+    VETTED_DATA_PERSONAL_TRAINERS,
+} from "./PersonalTrainersData";
 import { FAQ } from "../FAQ";
 import NearmeMember from "../NearmeMember";
 import Footer from "../../Footer/Footer";
@@ -25,7 +25,7 @@ import DiscoverNearMe from "../DiscoverNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import FenceGatePopularJobNearMe from "../FenceAndGateInstallation/FenceGatePopularJobNearMe";
-import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
+import UserFeedbackNearMe from "../UserFeedbackNearMe";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
     loading: () => (
@@ -47,49 +47,47 @@ function PainterAndDecoratorNearMe() {
     return (
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon />}
-            <FAQScript FAQ={FREQUENTLY_DATA_PAINTER_DECORATOR} />
+            <FAQScript FAQ={FREQUENTLY_DATA_PERSONAL_TRAINERS} />
             <HeroSectionNearMe
-                heading1="Find Painters And"
-                headingMiddle="Decorators"
+                heading1="Find Personal"
+                headingMiddle="Trainers"
                 heading2="Near You"
-                description="Find reliable painters and decorators in your area. Enter your postcode and a few details to receive instant quotes."
-                bannerImage="/nearme/painter/Painter.webp"
-                bannerImageMobile="/nearme/painter/painter-mobile.webp"
-                altText="Painter pouring paint into a paint tray with clips roller"
+                description="Find the best personal trainers near you! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
+                bannerImage="/nearme/personaltrainers/personaltrainers.webp"
+                bannerImageMobile="/nearme/personaltrainers/trainersmobile.webp"
+                altText="Personal trainer is showing a customer how to do correct lunges"
                 serviceId=""
                 serviceName=""
             />
             <VettedSection
-                paragraph={VETTED_DATA_PAINTER_DECORATOR}
-                vettedHeading1="Vetted painters and decorators you can"
+                paragraph={VETTED_DATA_PERSONAL_TRAINERS}
+                vettedHeading1="Vetted personal trainers you can"
                 vettedHeading2="trust"
-                breadcrumb={BREADCRUM_DATA_PAINTER_DECORATOR}
+                breadcrumb={BREADCRUM_DATA_PERSONAL_TRAINERS}
             />
             <FenceGatePopularJobNearMe
                 services={POPULAR_SERVICES}
-                popularImage="/nearme/painter/paintTray.webp"
-                altText="Decorator with a tray full of magnolia dipping his brush in ready to paint the walls"
+                popularImage="/nearme/personaltrainers/wightlift.webp"
+                altText="WEIGHT LIFTER CHALKING HIS HAND, KNEELING DOWN TO COMPLETE A BARBELL DEADLIFT."
                 ctaLink=""
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
-                heading1="Painting and Decorating"
-                headingMiddle="Experts"
+                heading1="Personal Trainers"
                 heading2="in your area"
-                tabData={PAINTER_DECORATOR_TABDATA}
-                heightClass="lg:h-[546px]"
+                tabData={PERSONAL_TRAINERS_TABDATA}
             />
-            <UserFeedbackNearMe2 feedbackData={PAINTER_DECORATOR_FEEDBACK} />
+            <UserFeedbackNearMe feedbackData={PERSONAL_TRAINERS_FEEDBACK} />
             <AboutServicesAndQuestions
                 serviceId=""
                 serviceName=""
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
             <FAQ
-                data={FREQUENTLY_DATA_PAINTER_DECORATOR}
+                data={FREQUENTLY_DATA_PERSONAL_TRAINERS}
             />
 
-            <DiscoverNearMe homeData={PAINTER_DECORATOR_DATA} />
+            <DiscoverNearMe homeData={PERSONAL_TRAINERS_DATA} />
 
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

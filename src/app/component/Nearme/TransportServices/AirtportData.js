@@ -196,17 +196,17 @@ export const FREQUENTLY_DATA_AIRPORT_TRANSPORT = [
 ];
 export const AIRPORT_TRANSPORT_TABDATA = {
   professionals: [
-    "Airport Transfer North Yorkshire",
+    "Airport Transfer Hull",
+    "Airport Transfer York",
+    "Airport Transfer Leeds",
+    "Airport Transfer Bolton",
+    "Airport Transfer Chester",
+    "Airport Transfer Cheshire",
+    "Airport Transfer Harrogate",
+    "Airport Transfer Stockport",
     "Airport Transfer Liverpool",
     "Airport Transfer Manchester",
-    "Airport Transfer Chester",
-    "Airport Transfer Leeds",
-    "Airport Transfer York",
-    "Airport Transfer Harrogate",
-    "Airport Transfer Cheshire",
-    "Airport Transfer Hull",
-    "Airport Transfer Stockport",
-    "Airport Transfer Bolton",
+    "Airport Transfer North Yorkshire",
   ],
   popular: [
     {
@@ -218,16 +218,16 @@ export const AIRPORT_TRANSPORT_TABDATA = {
       url: "",
     },
     {
-      title: "Fence and Gate Installation Near Me",
-      url: "/en/gb/fencing-contractors-near-me",
-    },
-    {
       title: "Architects Near Me",
       url: "",
     },
     {
       title: "Gutter Cleaners Near Me",
       url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Fence and Gate Installation Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
     },
     {
       title: "Artificial Grass Installers Near Me",
