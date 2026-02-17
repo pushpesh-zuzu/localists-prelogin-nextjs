@@ -50,7 +50,7 @@ export default function SEO({
       )}
 
       {/* ✅ VISIBLE breadcrumb HTML */}
-      {breadcrumb.length > 0 && (
+      {/* {breadcrumb.length > 0 && (
         <nav aria-label="Breadcrumb">
           <ol className="hidden">
             {breadcrumb.map((item, index) => (
@@ -60,7 +60,7 @@ export default function SEO({
             ))}
           </ol>
         </nav>
-      )}
+      )} */}
 
       {/* ✅ JSON-LD rendered in HTML */}
       {breadcrumb.length > 0 && (

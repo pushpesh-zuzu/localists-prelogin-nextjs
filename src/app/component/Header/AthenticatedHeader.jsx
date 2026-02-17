@@ -175,7 +175,7 @@ const AuthenticatedHeader = () => {
     >
       <div className="flex justify-between items-center p-2.5 md:py-[18px] md:px-[30px] lg:pl-10 lg:pr-6 lg:pt-[10px] lg:pb-[24px] xl:px-[88px] xl:pb-6 xl:pt-[18px]">
         {/* Logo */}
-        <a href="/" aria-label="Go to Localists homepage" className="shrink-0">
+        <a href="/en/gb" aria-label="Go to Localists homepage" className="shrink-0">
           <LogoIcon className="w-[90px] md:w-[115px] lg:w-[125px] xl:h-[38px] xl:w-[195px]" />
         </a>
         <div className="flex gap-2.5">
