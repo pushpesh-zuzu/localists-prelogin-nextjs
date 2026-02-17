@@ -1,15 +1,24 @@
 "use client";
 import { Suspense, useState } from "react";
+import dynamic from "next/dynamic";
 import Paragraph from "../../UI/Typography/Paragraph";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 import Paragraph1 from "../../UI/Typography/Paragraph1";
 import TrustpioletIcon from "../../common/icons/HomePageIcons/TrustpioletIcon";
-import HeroSectionSearch from "./HeroSectionSearch";
+// import HeroSectionSearch from "./HeroSectionSearch";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import QueryToastHandler from "../../common/QueryToastHandler/QueryToastHandler";
 import HeroParagraphText from "./HeroParagraphText";
+
+const HeroSectionSearch = dynamic(
+  () => import("./HeroSectionSearch"),
+  {
+    ssr: false,
+    loading: () => <div className="hidden">Loading...</div>,
+  }
+);
 
 export default function HeroSection() {
   usePendingBuyerRedirect()
@@ -68,7 +77,9 @@ export default function HeroSection() {
         aria-label="Hero section"
       >
         <div className="w-full lg:w-1/2 flex flex-col">
-          <TrustpioletIcon className="lg:min-h-[54px] max-h-[28px] max-w-[184px] md:max-w-[177px] lg:max-w-[360px] mb-[16.54px] md:mb-3 lg:mb-[30px] lg:max-h-12" />
+          {typeof window !== "undefined" && (
+            <TrustpioletIcon className="lg:min-h-[54px] max-h-[28px] max-w-[184px] md:max-w-[177px] lg:max-w-[360px] mb-[16.54px] md:mb-3 lg:mb-[30px] lg:max-h-12" />
+          )}
 
 
           <h1 className="font-Inter font-black
