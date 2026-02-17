@@ -31,7 +31,6 @@ const inter = Inter({
   subsets: ["latin"],
   // variable: "--font-inter",
   display: "swap",   // allows instant text paint
-  preload: true,    // improves LCP
 });
 
 export default function RootLayout({ children }) {
