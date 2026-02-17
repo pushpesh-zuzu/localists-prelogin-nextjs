@@ -32,11 +32,11 @@ const Modal = ({
 
   const modalContent = (
     <div
-      className={`fixed inset-0 to-5% ${zIndex} flex items-center justify-center bg-[#00000080]`}
+      className={`fixed inset-0 ${zIndex} flex items-center justify-center bg-[#00000080]`}
     // onClick={onClose}
     >
       <div
-        className={`relative w-full ${maxWidth} ${maxHeight} py-4 bg-white shadow-2xl flex flex-col ${radius} overflow-hidden`}
+        className={`relative w-full mt-[5%] ${maxWidth} ${maxHeight} py-4 bg-white shadow-2xl flex flex-col ${radius} overflow-hidden`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
