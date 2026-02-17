@@ -8,21 +8,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {/* async CSS loading for next css chunks */}
-          {/* <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                document.addEventListener("DOMContentLoaded", function () {
-                  const links = [...document.querySelectorAll("link[rel=stylesheet]")];
-                  links.forEach(link => {
-                    link.media = "print";
-                    link.onload = () => link.media = "all";
-                  });
-                });
-              `
-            }}
-          /> */}
 
-          <Script
+          {/* <Script
             id="defer-css"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
@@ -34,7 +21,7 @@ class MyDocument extends Document {
         }
       });
       `,
-            }} />
+            }} /> */}
         </Head>
         <body>
           <Main />
