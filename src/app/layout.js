@@ -36,21 +36,19 @@ const inter = Inter({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <TrackingScripts />
-      </head>
+      </head> */}
       <body className={`${inter.className} antialiased`} suppressHydrationWarning
       >
         <StoreProvider>
           {/* <Header /> */}
-          {children}
-          {/* <TrackingScripts /> */}
           <NoscriptTags />
-
+          {children}
+          <TrackingScripts />
           {/* Global Cookie Consent */}
           <SEO />
           <CookieConsent />
-
           <ToastProvider />
         </StoreProvider>
       </body>
