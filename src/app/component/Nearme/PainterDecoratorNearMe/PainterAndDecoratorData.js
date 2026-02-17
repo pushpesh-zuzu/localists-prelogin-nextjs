@@ -19,7 +19,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     },
     {
         type: "p",
-        text: "By choosing local, you ge:",
+        text: "By choosing local, you get:",
     },
     {
         type: "uili",
