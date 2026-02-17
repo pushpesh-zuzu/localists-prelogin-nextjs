@@ -41,6 +41,8 @@ export default function SEO({
       <link rel="canonical" href={canonicalUrl} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
+      <link rel="alternate" href={canonicalUrl} hreflang="en-gb" />
+      <link rel="alternate" href={canonicalUrl} hreflang="x-default" />
 
       {bannerImage && (
         <>
