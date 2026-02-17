@@ -45,7 +45,7 @@ export default function DrivewayPopularJobNearMe({
                     />
 
                     {/* 2️⃣ Normal content layer */}
-                    <div className="relative z-10 h-full pt-[30px] md:pt-[37px] xl:pt-[0px] md:pb-[24px] xl:pb-0 md:px-8 xl:px-15 flex flex-col md:justify-center max-w-full lg:max-w-[70%]">
+                    <div className="relative z-9 h-full pt-[30px] md:pt-[37px] xl:pt-[0px] md:pb-[24px] xl:pb-0 md:px-8 xl:px-15 flex flex-col md:justify-center max-w-full lg:max-w-[70%]">
                         <H2 className="text-white mb-4 md:mb-0 md:pb-4 xl:pb-[35px]">
                             Popular Jobs.
                         </H2>
@@ -105,7 +105,7 @@ export default function DrivewayPopularJobNearMe({
                         height={600}
                         fetchPriority="high"
                         className="hidden md:block w-auto h-[280px] md:h-[402px] lg:h-[380px] xl:h-[541px] xl:w-[450px]
-                        absolute md:-right-36.5 lg:-right-14 xl:-right-22.5 bottom-0 z-20 pointer-events-none"
+                        absolute md:-right-36.5 lg:-right-14 xl:-right-22.5 bottom-0 z-[18px] pointer-events-none"
 
                     />
 

@@ -56,7 +56,7 @@ export default function LandScapingGardenPopularJobs({
           />
 
           {/* 2️⃣ Normal content layer */}
-          <div className="relative z-10 h-full pt-[30px] md:pt-[37px] xl:pt-[0px] md:pb-[24px] xl:pb-0 md:px-8 xl:px-15 flex flex-col md:justify-center max-w-full lg:max-w-[70%]">
+          <div className="relative z-9 h-full pt-[30px] md:pt-[37px] xl:pt-[0px] md:pb-[24px] xl:pb-0 md:px-8 xl:px-15 flex flex-col md:justify-center max-w-full lg:max-w-[70%]">
             <H2 className="text-white mb-4 md:mb-0 md:pb-4 xl:pb-[35px]">
               Popular Jobs.
             </H2>
@@ -106,7 +106,7 @@ export default function LandScapingGardenPopularJobs({
             width={400}
             height={600}
             fetchPriority="high"
-            className="hidden md:block w-auto h-[382px] lg:h-[380px] xl:h-[501.5px] xl:w-[400px] absolute md:-right-33 min-[900px]:-right-25! lg:-right-19! xl:-right-14! bottom-0 z-20 pointer-events-none"
+            className="hidden md:block w-auto h-[382px] lg:h-[380px] xl:h-[501.5px] xl:w-[400px] absolute md:-right-33 min-[900px]:-right-25! lg:-right-19! xl:-right-14! bottom-0 z-[18px] pointer-events-none"
           />
 
           <LogoIcon className="hidden md:block absolute -bottom-1 -right-10 xl:-right-13 w-[100px] h-6 lg:w-[140px] lg:h-8 xl:w-[200px] xl:h-12" />
