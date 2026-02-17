@@ -304,7 +304,7 @@ export const POPULAR_SERVICES = [
     "Wallpapering",
     "Fence painting",
     "External Wall painting",
-    "Window & DOOR PAINTING",
+    "Window & Door Painting",
 ];
 
 export const PAINTER_DECORATOR_FEEDBACK = [
@@ -316,12 +316,17 @@ export const PAINTER_DECORATOR_FEEDBACK = [
     {
         id: 2,
         text: "I compared a few quotes through Localists and ended up saving over £200 on my hallway and kitchen repaint. The process was quick, easy, and completely stress-free.",
-        name: "Marcus Jonathan",
+        name: "Marcus J",
     },
     {
         id: 3,
         text: "Localists made finding a reliable painter near me so simple. No chasing quotes, no confusing prices - just professional decorators who did exactly what they promised.",
         name: "Amira T.",
+    },
+     {
+        id: 4,
+        text: "I needed some external painting done on my garage. Already had some quotes but went on Localists and got a far better price. Very pleased with the results!",
+        name: "Jane S",
     },
 ];
 

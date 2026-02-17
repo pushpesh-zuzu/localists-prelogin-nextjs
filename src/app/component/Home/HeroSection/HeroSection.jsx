@@ -47,6 +47,7 @@ const HeroSection = memo(function HeroSection() {
     },
     {
       title: "Painter Decorators",
+      slug: "/en/gb/painter-and-decorator-near-me",
     },
     {
       title: "Fence & Gate Installers",
