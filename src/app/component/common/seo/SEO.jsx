@@ -43,10 +43,14 @@ export default function SEO({
       <meta property="og:type" content="website" />
 
       {bannerImage && (
-        <meta
-          property="og:image"
-          content={`${BASE_URL}${bannerImage?.src ?? bannerImage}`}
-        />
+        <>
+        <meta 
+        property="og:image" 
+        content={`${BASE_URL}${bannerImage?.src ?? bannerImage}`} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:type" content="website" />
+          </>
       )}
 
       {/* ✅ VISIBLE breadcrumb HTML */}
