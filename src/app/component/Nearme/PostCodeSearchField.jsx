@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { CheckIcon, Loader2 } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { getCityName, setbuyerRequestData, setBuyerStep, setcitySerach } from "@/lib/store/buyerslice/buyerSlice";
@@ -8,21 +8,22 @@ import { setSelectedServiceId } from "@/lib/store/findjobslice";
 // import BuyerRegistrationNearMe from "./BuyerRegistrationNearMe/BuyerRegistrationNearMe";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 import { useRouter } from "next/navigation";
-import LoaderIndicator from "../common/Loader/LoaderIndicatore";
+// import LoaderIndicator from "../common/Loader/LoaderIndicatore";
+import BuyerRegistration from "../common/BuyerRegistration/BuyerRegistration";
 // import BuyerRegistrationNearMe1 from "./BuyerRegistrationNearMe1";
 
 
-const BuyerRegistrationNearMe = dynamic(
-  () => import("./BuyerRegistrationNearMe/BuyerRegistrationNearMe"),
-  {
-    loading: () => (
-      <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
-        <LoaderIndicator size="large" />
-      </div>
-    ),
-    ssr: true,
-  }
-);
+// const BuyerRegistrationNearMe = dynamic(
+//   () => import("./BuyerRegistrationNearMe/BuyerRegistrationNearMe"),
+//   {
+//     loading: () => (
+//       <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
+//         <LoaderIndicator size="large" />
+//       </div>
+//     ),
+//     ssr: true,
+//   }
+// );
 
 
 function PostCodeSearchField({
@@ -225,8 +226,8 @@ function PostCodeSearchField({
           </p>
         )}
       </div>
-      {show && (
-        <BuyerRegistrationNearMe
+       {show && (
+        <BuyerRegistration
           closeModal={handleClose}
           service_Id={serviceId}
           postcode={postcode}
@@ -234,6 +235,15 @@ function PostCodeSearchField({
           service_Name={serviceName}
         />
       )}
+      {/* {show && (
+        <BuyerRegistrationNearMe
+          closeModal={handleClose}
+          service_Id={serviceId}
+          postcode={postcode}
+          serviceName={serviceName}
+          service_Name={serviceName}
+        />
+      )} */}
       {/* {show && (
         <BuyerRegistrationNearMe1
           closeModal={handleClose}
