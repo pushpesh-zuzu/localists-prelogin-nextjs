@@ -15,7 +15,7 @@ export async function generateMetadata() {
     process.env.NEXT_PUBLIC_CANNONICAL_SITE_URL === "localists.com" || false;
 
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_CANNONICAL_SITE_URL),
+    // metadataBase: new URL(process.env.NEXT_PUBLIC_CANNONICAL_SITE_URL),
     title: "Localists.com: Find Trusted Local Services and Professionals",
     description:
       "Connect with verified local experts through Localists.com. Find trusted professionals, compare quotes, and hire the best for your project—quick, easy, and free.",
@@ -24,7 +24,6 @@ export async function generateMetadata() {
     },
 
     alternates: {
-      canonical: "/en/gb",
       languages: {
         "en-GB": "/en/gb",
       },
