@@ -316,7 +316,7 @@ export const PAINTER_DECORATOR_FEEDBACK = [
     {
         id: 2,
         text: "I compared a few quotes through Localists and ended up saving over £200 on my hallway and kitchen repaint. The process was quick, easy, and completely stress-free.",
-        name: "Marcus J",
+        name: "Marcus J.",
     },
     {
         id: 3,
@@ -326,7 +326,7 @@ export const PAINTER_DECORATOR_FEEDBACK = [
      {
         id: 4,
         text: "I needed some external painting done on my garage. Already had some quotes but went on Localists and got a far better price. Very pleased with the results!",
-        name: "Jane S",
+        name: "Jane S.",
     },
 ];
 
