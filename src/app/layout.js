@@ -12,31 +12,45 @@ import SEO from "./component/common/seo/SEO";
 export async function generateMetadata() {
 
   const isProductionDomain =
-    process.env.NEXT_PUBLIC_SITE_HOST === "localists.com" || false;
-  console.log(isProductionDomain, 'isProductionDomain')
+    process.env.NEXT_PUBLIC_CANNONICAL_SITE_URL === "localists.com" || false;
+
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_CANNONICAL_SITE_URL),
     title: "Localists.com: Find Trusted Local Services and Professionals",
     description:
       "Connect with verified local experts through Localists.com. Find trusted professionals, compare quotes, and hire the best for your project—quick, easy, and free.",
     icons: {
       icon: "/favicon.ico",
     },
+
+    alternates: {
+      canonical: "/en/gb",
+      languages: {
+        "en-GB": "/en/gb",
+      },
+    },
+
+    openGraph: {
+      locale: "en_GB",
+    },
+
     robots: {
       index: isProductionDomain,
-      // follow: isProductionDomain,
+      follow: isProductionDomain,
     },
   };
 }
+
+
 const inter = Inter({
   subsets: ["latin"],
   // variable: "--font-inter",
   display: "swap",   // allows instant text paint
-  preload: true,    // improves LCP
 });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en-GB" suppressHydrationWarning>
       <head>
         <TrackingScripts />
       </head>
