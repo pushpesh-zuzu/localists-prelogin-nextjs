@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import NavigationArrows from "../common/CarouselLeftRightIcon";
 import LeftArrowBlack from "../common/icons/HomePageIcons/LeftArrowBlack";
@@ -48,6 +48,7 @@ export default function PopularCardCarousel({
     align: "center",
     loop: true,
   });
+  const nextButtonRef = useRef(null);
 
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [selectedIndexMd, setSelectedIndexMd] = useState(0);
@@ -149,6 +150,23 @@ export default function PopularCardCarousel({
     };
   }, [emblaApiMobile, onInitMobile, onSelectMobile]);
 
+  useEffect(() => {
+  if (!emblaApi) return;
+
+  let count = 0;
+  const interval = setInterval(() => {
+    if (count < 5) {
+      nextButtonRef.current?.click();
+      console.log('clicked')
+      count++;
+    } else {
+      clearInterval(interval);
+    }
+  }, 20);
+
+  return () => clearInterval(interval);
+}, [emblaApi]);
+
   return (
     <div className="w-full">
       {/* Desktop/Tablet View */}
@@ -157,6 +175,7 @@ export default function PopularCardCarousel({
           {/* Navigation Arrows */}
           <div className="hidden lg:flex justify-end items-end mb-3.5 mr-[1%]">
             <NavigationArrows
+             nextButtonRef={nextButtonRef}
               onPrev={scrollPrev}
               onNext={scrollNext}
               canScrollPrev={canScrollPrev}
