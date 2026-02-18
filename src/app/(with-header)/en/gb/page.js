@@ -9,7 +9,7 @@ import Footer from '@/app/component/Footer/Footer'
 import DiscoverServices from '@/app/component/Home/DiscoverServices/DiscoverServices'
 import HeroSection from '@/app/component/Home/HeroSection/HeroSection'
 // import HireRelatedToService from '@/app/component/Home/HireRelatedToService/HireRelatedToService'
-import HowItWork from '@/app/component/Home/HowItWork'
+// import HowItWork from '@/app/component/Home/HowItWork'
 import Member from '@/app/component/Home/Member/Member'
 import PopularCard from '@/app/component/Home/PopularCard/PopularCard'
 // import UserFeedback from '@/app/component/Home/UserFeedback/UserFeedback'
@@ -53,6 +53,17 @@ const HireRelatedToService = dynamic(
   }
 );
 
+const HowItWork = dynamic(
+  () => import("@/app/component/Home/HowItWork"),
+  {
+    loading: () => (
+      <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
+        <LoaderIndicator size="large" />
+      </div>
+    ),
+    ssr: true,
+  }
+);
 function page() {
   return (
     <main className="bg-white">
