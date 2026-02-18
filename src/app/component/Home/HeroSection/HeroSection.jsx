@@ -28,6 +28,7 @@ export default function HeroSection() {
     },
     {
       title: "Personal Trainers",
+      slug:"/en/gb/personal-trainers-near-me"
     },
     {
       title: "Tree Surgeons",
@@ -41,6 +42,7 @@ export default function HeroSection() {
     },
     {
       title: "Painter Decorators",
+      slug: "/en/gb/painter-and-decorator-near-me",
     },
     {
       title: "Fence & Gate Installers",

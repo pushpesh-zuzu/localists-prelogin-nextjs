@@ -64,6 +64,7 @@ const HowItWork = dynamic(
     ssr: true,
   }
 );
+
 function page() {
   return (
     <main className="bg-white">

@@ -171,13 +171,14 @@ const PhoneNumberMultiStepForm = ({
 
   return (
     <CardLayoutWrapper
-      title="Just one more thing…"
+      title="Please Enter Your Mobile Telephone Number"
       onButtonClick={handleSubmit}
       onBackClick={handleBackClick}
       buttonText="Compare quotes now"
       showBackButton={true}
       disableNextButton={requestLoader || isSubmitting}
       loader={requestLoader || isSubmitting}
+      titleWidth='max-w-full'
     >
       <div className="mb-2">
         <div
@@ -213,11 +214,11 @@ const PhoneNumberMultiStepForm = ({
           )}
         </div>
 
-        <p className="mt-7 text-gray-700 text-center">
+        {/* <p className="mt-7 text-gray-700 text-center">
           We can only send a passcode to a{" "}
           <strong className="font-extrabold">MOBILE NUMBER</strong>, not a{" "}
           <strong className="font-extrabold">LANDLINE</strong>
-        </p>
+        </p> */}
 
         <p
           className="

@@ -40,16 +40,22 @@ export default function SEO({
       <link rel="canonical" href={canonicalUrl} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
+      <link rel="alternate" href={canonicalUrl} hreflang="en-gb" />
+      <link rel="alternate" href={canonicalUrl} hreflang="x-default" />
 
       {bannerImage && (
-        <meta
-          property="og:image"
-          content={`${BASE_URL}${bannerImage?.src ?? bannerImage}`}
-        />
+        <>
+        <meta 
+        property="og:image" 
+        content={`${BASE_URL}${bannerImage?.src ?? bannerImage}`} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:type" content="website" />
+          </>
       )}
 
       {/* ✅ VISIBLE breadcrumb HTML */}
-      {breadcrumb.length > 0 && (
+      {/* {breadcrumb.length > 0 && (
         <nav aria-label="Breadcrumb">
           <ol className="hidden">
             {breadcrumb.map((item, index) => (
@@ -59,7 +65,7 @@ export default function SEO({
             ))}
           </ol>
         </nav>
-      )}
+      )} */}
 
       {/* ✅ JSON-LD rendered in HTML */}
       {breadcrumb.length > 0 && (

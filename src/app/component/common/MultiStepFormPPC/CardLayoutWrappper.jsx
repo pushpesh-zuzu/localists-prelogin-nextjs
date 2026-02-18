@@ -14,6 +14,7 @@ const CardLayoutWrapper = ({
   headingCenter = true,
   titlePrimary = false,
   NameEmailContainer = false,
+  titleWidth='max-w-[530px]'
 }) => {
   return (
     <div
@@ -27,7 +28,7 @@ const CardLayoutWrapper = ({
         {title && (
           <h2
             style={{ color: titlePrimary ? "#00afe3" : "#000" }}
-            className={`font-extrabold text-[20px] md:text-[26px] leading-8 max-w-[530px] ${
+            className={`font-extrabold text-[20px] md:text-[26px] leading-8 ${titleWidth} ${
               headingCenter
                 ? "text-center mb-7 mx-auto"
                 : "text-left mb-[15px] mr-auto"

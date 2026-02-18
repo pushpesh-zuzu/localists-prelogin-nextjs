@@ -312,12 +312,12 @@ export const PERSONAL_TRAINERS_FEEDBACK = [
     {
         id: 2,
         text: "My trainer comes to my home twice a week, so convenient. He brings the equipment and makes every workout different.",
-        name: "Anna Gregory",
+        name: "Anna G.",
     },
     {
         id: 3,
         text: "I booked an online personal trainer for flexibility. The plans are great and I can fit workouts into my schedule.",
-        name: "Roland Cliff",
+        name: "Roland C.",
     },
     {
         id: 4,
