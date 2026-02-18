@@ -215,17 +215,17 @@ export const TUTORS_FEEDBACK = [
     {
         id: 1,
         text: "My daughter needed extra help with confidence more than anything. So pleased with the tutor we found on the platform. She’s very patient, friendly, and explains things in a way that actually makes sense to my daughter. Definitely seen a real improvement from her recent exams.",
-        name: "Nina Grayson",
+        name: "Nina G.",
     },
     {
         id: 2,
         text: "We found a brilliant maths tutor for my son through Localists. She was patient, encouraging, and his grades have improved massively.",
-        name: "Sarah Martins",
+        name: "Sarah M.",
     },
     {
         id: 3,
         text: "I needed help with A-level chemistry, and Localists connected me with a fantastic tutor who explained everything clearly and boosted my confidence before exams.",
-        name: "Jason D",
+        name: "Jason D.",
     },
     {
         id: 4,

@@ -42,9 +42,11 @@ const HeroSection = memo(function HeroSection() {
     },
     {
       title: "Private Tutors",
+      slug:"/en/gb/tutors-near-me"
     },
     {
       title: "Airport Transfers",
+      slug:"/en/gb/airport-transfers-near-me"
     },
     {
       title: "Painter Decorators",
@@ -56,6 +58,7 @@ const HeroSection = memo(function HeroSection() {
     },
     {
       title: "Physics and Maths Tutors",
+      slug:"/en/gb/physics-maths-tutors-near-me"
     },
   ];
 

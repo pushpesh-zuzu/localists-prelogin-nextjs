@@ -349,7 +349,7 @@ export const FEEDBACK_PATIO_SERVICES_NEARME = [
   {
     id: 1,
     text: "We wanted to add a patio to our garden and Greg and his team did a brilliant job. They arrived early, cracked on with the work, and kept everything neat as they went. The end result looks great and we’re really pleased with it. Can’t fault them at all.",
-    name: "Sarah Cairns",
+    name: "Sarah C.",
     // location: "Surrey",
   },
   {

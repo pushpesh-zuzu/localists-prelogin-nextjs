@@ -345,13 +345,13 @@ export const FEEDBACK_ARTIFICIAL_GRASS_NEARME = [
   {
     id: 1,
     text: "Between the kids and the dog, the lawn was always a mess. Our neighbour recommended artificial grass and it’s honestly been brilliant. We found Zack and his team through Localists. The install was quick and done properly. Honestly should’ve done it years ago.",
-    name: "Patricia Hauge",
+    name: "Patricia H.",
     // location: "Birmingham",
   },
   {
     id: 2,
     text: "Our local installer was brilliant! They removed our old turf, prepped the ground, and fitted a soft synthetic lawn the kids can play on year-round. Looks amazing and no mud!",
-    name: "Mason L",
+    name: "Mason L.",
     // location: "Bristol",
   },
   {

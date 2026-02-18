@@ -246,7 +246,7 @@ export const FEEDBACK_AIRPORT_TRANSPORT = [
   {
     id: 1,
     text: "Used this service for an early morning flight and couldn’t fault it. Picked up on time, clean car, and no rushing or stress. Made the whole start to the holiday much easier.",
-    name: "Anna Wright",
+    name: "Anna W.",
   },
   {
     id: 2,
@@ -256,12 +256,12 @@ export const FEEDBACK_AIRPORT_TRANSPORT = [
   {
     id: 3,
     text: "We needed a group minibus for our family holiday. Localists matched us with a reliable driver who handled all the luggage and got us to the airport on time. Stress-free!",
-    name: "Tariq Hassan",
+    name: "Tariq H.",
   },
   {
     id: 4,
     text: "Our business team had to get to a conference on time. Localists connected us with a professional private transfer. Smooth, comfortable, and exactly on schedule.",
-    name: "Daniel Müller",
+    name: "Daniel M.",
   },
 ];
 
