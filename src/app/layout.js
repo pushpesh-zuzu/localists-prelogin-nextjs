@@ -12,8 +12,7 @@ import SEO from "./component/common/seo/SEO";
 export async function generateMetadata() {
 
   const isProductionDomain =
-    process.env.NEXT_PUBLIC_CANNONICAL_SITE_URL === "localists.com" || false;
-
+    process.env.NEXT_PUBLIC_SITE_HOST === "localists.com" || false;
   return {
     metadataBase: new URL(process.env.NEXT_PUBLIC_CANNONICAL_SITE_URL),
     title: "Localists.com: Find Trusted Local Services and Professionals",
