@@ -402,7 +402,7 @@ export const FEEDBACK_LANDSCAPE_NEARME = [
   {
     id: 1,
     text: "Our back garden was basically grass, mud, and a dumping ground for random bits. Never really a place we could relax. The team came up with a sensible plan and everything looks exactly how we wanted. We’re out there most evenings now. Worth every penny.",
-    name: "Elena Roberts",
+    name: "Elena R.",
     // location: "Hartlepool",
   },
   {
