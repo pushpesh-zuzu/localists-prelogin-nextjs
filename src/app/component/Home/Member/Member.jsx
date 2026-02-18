@@ -10,7 +10,7 @@ function Member() {
         <div className="w-[340] md:h-[300px] lg:h-[512px] lg:w-[690px] bg-[#00AFE3] rounded-l-[36px] flex flex-col justify-start px-[34px] pt-[19px] lg:pt-[37px] pb-8 lg:px-[63px] ">
           <>
             <H3
-              style={{ textShadow: "0px 1.95px 1.95px #0000000D",  }}
+              style={{ textShadow: "0px 1.95px 1.95px #0000000D", }}
               className="hidden md:block text-white font-bold font-[Arial] leading-7 xl:leading-[42px] lg:pr-8"
             >
               “What I like about Localists is the quality of leads I get. I
@@ -27,9 +27,9 @@ function Member() {
               </p>
             </div>
             <a href="/en/gb/sellers/create">
-            <Button className="hidden cursor-pointer md:inline-flex bg-[#253238] mt-2.75 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
-              Become a member
-            </Button>
+              <Button className="hidden cursor-pointer md:inline-flex bg-[#253238] mt-2.75 md:py-1.5 md:px-3.5 lg:py-[13px] lg:px-[21px] text-white rounded-full max-w-fit">
+                Become a member
+              </Button>
             </a>
           </>
         </div>
@@ -39,8 +39,8 @@ function Member() {
             src="/homepage/member.webp"
             alt="person giveing fencing service"
             priority
-            fetchPriority="high"
-            loading="eager"
+            // fetchPriority="high"
+            // loading="eager"
             height={512}
             width={521}
             className="w-[273px] h-[300px] lg:w-[521px] lg:h-[512px]"
@@ -57,8 +57,8 @@ function Member() {
             width={250}
             priority
             className="h-[220] w-xl"
-            fetchPriority="high"
-            loading="eager"
+          // fetchPriority="high"
+          // loading="eager"
           />
         </div>
 
@@ -67,7 +67,7 @@ function Member() {
             <h3
               className="font-[Arial] text-[20px] 
             tracking-[-0.03em] text-white font-bold leading-[22px]"
-              style={{ textShadow: "0px 1.95px 1.95px #0000000D",  }}
+              style={{ textShadow: "0px 1.95px 1.95px #0000000D", }}
             >
               “What I like about Localists is the quality of leads I get. I
               spend less money on Localists than I have done on other platforms,

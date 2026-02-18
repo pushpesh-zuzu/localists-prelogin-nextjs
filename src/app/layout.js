@@ -60,13 +60,8 @@ export default function RootLayout({ children }) {
           {/* <Header /> */}
           <NoscriptTags />
           {children}
+          {/* <TrackingScripts /> */}
           {/* Global Cookie Consent */}
-          {/* ✅ Cookie placeholder (CLS FIX – DO NOT REMOVE) */}
-          <div
-            id="cookie-placeholder"
-            className="h-[80px] md:h-[100px]"
-          />
-
           <SEO />
           <CookieConsent />
           <ToastProvider />

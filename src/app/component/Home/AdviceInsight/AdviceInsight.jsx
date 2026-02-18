@@ -26,7 +26,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw"
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                 quality={85}
-                priority={false}
+                // priority={false}
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
               <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base sm:leading-4 xl:leading-7 font-black xl:text-[25px] -tracking-[3%]">
@@ -42,7 +42,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 66vw, 50vw"
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                 quality={85}
-                priority
+                // priority
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
               <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base sm:leading-4 xl:leading-7 font-black xl:text-[25px] -tracking-[3%] xl:max-w-[79%]">
@@ -64,8 +64,8 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw"
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   quality={85}
-                  priority={false}
-                  loading="lazy"
+                  // priority={false}
+                  // loading="lazy"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
                 <h3
@@ -88,7 +88,7 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
               sizes="100vw"
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               quality={85}
-              priority
+              // priority
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
             <h3
@@ -109,8 +109,8 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
                 sizes="50vw"
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                 quality={85}
-                priority={false}
-                loading="lazy"
+                // priority={false}
+                // loading="lazy"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
               <h3
@@ -129,8 +129,8 @@ function AdviceInsight({ articles = [], maxWidth = false }) {
                 sizes="50vw"
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                 quality={85}
-                priority={false}
-                loading="lazy"
+                // priority={false}
+                // loading="lazy"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
               <h3
