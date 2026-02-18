@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NavigationArrows({ onPrev, onNext, canScrollPrev, canScrollNext }) {
+function NavigationArrows({ onPrev, onNext, canScrollPrev, canScrollNext, nextButtonRef=null }) {
   return (
     <div className='rounded-full bg-[#7CD6F0] w-[77px] h-[47px] flex items-center justify-between px-3'>
       <button 
@@ -15,6 +15,7 @@ function NavigationArrows({ onPrev, onNext, canScrollPrev, canScrollNext }) {
       </button>
       
       <button 
+        ref={nextButtonRef}
         onClick={onNext}
         disabled={!canScrollNext}
         className="disabled:opacity-30 cursor-pointer disabled:cursor-default"
