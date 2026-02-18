@@ -16,7 +16,7 @@ export default function Page() {
     return (
         <main className="bg-white">
             <SEO
-                canonicalPath="/en/gb/transportation-services"
+                canonicalPath="/en/gb/lessons-training"
                 bannerImage={LessonsAndTraining}
                 breadcrumb={[
                     { title: "Home", path: "en/gb" },

@@ -20,7 +20,7 @@ const page = () => {
   return (
     <main>
       <SEO
-        canonicalPath="/en/gb/how-it-works-for-customers"
+        canonicalPath="/en/gb/how-it-works-for-sellers"
         breadcrumb={[
           { title: "Home", path: "en/gb" },
           { title: "How it works for sellers", path: "en/gb/how-it-works-for-sellers" },
