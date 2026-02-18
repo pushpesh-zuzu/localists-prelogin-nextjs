@@ -297,7 +297,7 @@ export const GUTTER_CLEANING_FEEDBACK = [
     {
         id: 1,
         text: "Very reliable honest company. Booked in for a gutter cleaning just after noticing water pouring down the walls. Turned out they were completely blocked. All sorted quickly and showed us before and after photos. Really pleased with the service.",
-        name: "Sim Staurt",
+        name: "Sim S.",
         // location: "Blackburn",
     },
     {
@@ -315,7 +315,7 @@ export const GUTTER_CLEANING_FEEDBACK = [
     {
         id: 4,
         text: "Quick, professional, and thorough. They even helped us identify a minor leak we didn’t know about. After the gutters were cleaned, I realised how much water had been overflowing during storms. Definitely worth using a vetted service instead of trying this ourselves!",
-        name: "Thomas Martin",
+        name: "Thomas M.",
         // location: "Liverpool",
     },
 ];

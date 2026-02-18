@@ -1,6 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import SearchIcon from "../../common/icons/HomePageIcons/SearchIcon";
 import { searchService } from "@/lib/store/searchSlice";
@@ -25,10 +25,7 @@ const BuyerRegistration = dynamic(
 );
 function HeroSectionSearch() {
   const dispatch = useDispatch();
-  //  const [selectedServiceId, setSelectedServiceId] = useState({
-  //     id: null,
-  //     name: "",
-  //   });
+  const inputRef = useRef(null);
   usePendingBuyerRedirect()
   const [selectedService, setSelectedService] = useState('')
   const [searchQuery, setSearchQuery] = useState("");
@@ -62,10 +59,19 @@ function HeroSectionSearch() {
   setSelectedService("");
 };
 
+useEffect(() => {
+  const timer = setTimeout(() => {
+    inputRef.current?.focus();
+  }, 50);
+  return () => clearTimeout(timer);
+}, []);
+
+
   return (
     <>
       <div className="relative max-w-full md:max-w-[246px]  lg:max-w-[404px]">
         <input
+          ref={inputRef}
           type="text"
           placeholder="Search for a service"
           id="search Attribute"

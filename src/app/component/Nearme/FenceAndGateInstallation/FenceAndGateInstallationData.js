@@ -258,7 +258,7 @@ export const FENCE_AND_GATE_FEEDBACK = [
     {
         id: 1,
         text: "We had a new fence and side gate installed after the old one finally gave up. We found Jason through Localists. He turned up with two lads when he said they would, worked tidily, and even cleaned up after themselves.",
-        name: "Craig Martins",
+        name: "Craig M.",
     },
     {
         id: 2,

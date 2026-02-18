@@ -334,7 +334,7 @@ export const DRIVEWAY_INSTALLERS_FEEDBACK = [
     {
         id: 1,
         text: "We recently had our driveway renovated by a company we found through Localists, and we couldn’t be happier with the results. The work was done quicker than expected and the finish looks spot on. Neighbours have already asked who did it.",
-        name: "Susan Page",
+        name: "Susan P.",
     },
     {
         id: 2,
@@ -349,7 +349,7 @@ export const DRIVEWAY_INSTALLERS_FEEDBACK = [
     {
         id: 4,
         text: "After a bad experience with a previous installer, I was hesitant to try again. But the contractor I found on Localists was professional, fast, and delivered exactly what I wanted. My new tarmac driveway looks fantastic and feels built to last.",
-        name: "Linda Stuart",
+        name: "Linda S.",
     },
 ];
 

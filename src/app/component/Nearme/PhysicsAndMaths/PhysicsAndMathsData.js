@@ -175,7 +175,7 @@ export const PHYSICS_AND_MATHS_FEEDBACK = [
     {
         id: 1,
         text: "My son was struggling with GCSE physics and maths and falling behind. The tutor broke everything down clearly and went at his pace. His grades have improved and he’s much less stressed about exams now.",
-        name: "Tom Garlick",
+        name: "Tom G.",
     },
     {
         id: 2,
