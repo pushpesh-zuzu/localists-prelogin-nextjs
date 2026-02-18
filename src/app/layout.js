@@ -22,11 +22,11 @@ export async function generateMetadata() {
       icon: "/favicon.ico",
     },
 
-    alternates: {
-      languages: {
-        "en-GB": "/en/gb",
-      },
-    },
+    // alternates: {
+    //   languages: {
+    //     "en-GB": "/en/gb",
+    //   },
+    // },
 
     openGraph: {
       locale: "en_GB",

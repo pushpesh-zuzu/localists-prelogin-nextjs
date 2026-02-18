@@ -6,7 +6,7 @@ export function middleware(request) {
   if (pathname === "/") {
     const url = request.nextUrl.clone();
     url.pathname = "/en/gb/";
-    return NextResponse.redirect(url);
+    return NextResponse.redirect(url, { status: 301 });
   }
 
   return NextResponse.next();
