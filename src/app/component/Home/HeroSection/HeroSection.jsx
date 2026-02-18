@@ -1,7 +1,7 @@
 "use client";
 import { Suspense, useState } from "react";
 import Paragraph from "../../UI/Typography/Paragraph";
-import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
+// import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 import Paragraph1 from "../../UI/Typography/Paragraph1";
 import TrustpioletIcon from "../../common/icons/HomePageIcons/TrustpioletIcon";
@@ -10,6 +10,13 @@ import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import QueryToastHandler from "../../common/QueryToastHandler/QueryToastHandler";
 import HeroParagraphText from "./HeroParagraphText";
+import dynamic from "next/dynamic";
+
+
+const WrapperBGWidth = dynamic(
+  () => import("../../common/WrapperBGWidth/WrapperBGWidth")
+);
+
 
 export default function HeroSection() {
   usePendingBuyerRedirect()
@@ -28,7 +35,6 @@ export default function HeroSection() {
     },
     {
       title: "Personal Trainers",
-      slug:"/en/gb/personal-trainers-near-me"
     },
     {
       title: "Tree Surgeons",
@@ -44,7 +50,6 @@ export default function HeroSection() {
     },
     {
       title: "Painter Decorators",
-      slug: "/en/gb/painter-and-decorator-near-me",
     },
     {
       title: "Fence & Gate Installers",
