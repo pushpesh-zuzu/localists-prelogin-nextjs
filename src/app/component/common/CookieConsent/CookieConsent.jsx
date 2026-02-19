@@ -13,8 +13,11 @@ const CookieConsent = () => {
 
         const userConsent = getCookie("user-consent");
 
-        if (!userConsent) {
-            setTimeout(() => setShowBanner(true), 6000);
+        // if (!userConsent) {
+        //     setTimeout(() => setShowBanner(true), 1000);
+        // }
+        if(!userConsent){
+            setShowBanner(true)
         }
 
 
