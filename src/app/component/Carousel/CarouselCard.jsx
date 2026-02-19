@@ -51,14 +51,16 @@ export default function CarouselCard({ card }) {
           priority
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
-        <H5
-          variant="medium"
-          className="text-white w-[80%] absolute bottom-2 lg:bottom-4 left-1/2 -translate-x-1/2 text-center
+        <h4
+          className="font-Inter font-black
+        tracking-[-0.03em] text-[24px]
+        md:text-[16px] 
+        lg:text-[25px] text-white w-[80%] absolute bottom-2 lg:bottom-4 left-1/2 -translate-x-1/2 text-center
         leading-[27px] md:leading-16px]! lg:leading-[25px]! md:line-clamp-4
-    lg:line-clamp-none"
+        lg:line-clamp-none"
         >
           {card.title}
-        </H5>
+        </h4>
       </div>
     </div>
   );
