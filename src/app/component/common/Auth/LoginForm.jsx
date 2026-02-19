@@ -22,12 +22,12 @@ import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 export default function LoginForm({ passwordless }) {
     const router = useRouter();
-
+    
     useEffect(() => {
-        const canContinue = typeof window !== "undefined" && checkAuthenticatedUser(router);
-        if (!canContinue) return;
+       const canContinue = typeof window !=="undefined" && checkAuthenticatedUser(router);
+          if (!canContinue) return;
     }, [])
-
+    
     const searchParams = useSearchParams();
     const dispatch = useDispatch();
     const { lang, country } = useParams();
@@ -81,8 +81,8 @@ export default function LoginForm({ passwordless }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const canContinue = checkAuthenticatedUser(router);
-        if (!canContinue) return;
+       const canContinue = checkAuthenticatedUser(router);
+          if (!canContinue) return;
         const { email, password } = formData;
         const newErrors = {};
 
@@ -142,8 +142,8 @@ export default function LoginForm({ passwordless }) {
     return (
         <>
             <div className={`flex flex-col items-center justify-center pt-[60px] pb-[50px] gap-[51px] max-md:gap-[35px] max-sm:gap-[20px] ${passwordless
-                ? ""
-                : "min-h-screen"
+                    ? ""
+                    : "min-h-screen"
                 }`}>
                 <SEO conversion />
                 {/* LOGIN BOX */}
@@ -152,7 +152,7 @@ export default function LoginForm({ passwordless }) {
         max-md:px-[30px] max-md:pt-[10px] max-md:pb-[30px]
         max-sm:px-[20px] max-sm:pb-[20px] rounded-[20px]
       ">
-                    <h1 aria-hidden="true" className="mb-6 mt-4 font-Inter font-black
+                    <h1 className="mb-6 mt-4 font-Inter font-black
         tracking-[-0.03em]
         text-[30px] leading-[32px]
         md:text-[35px] md:leading-[32px]
@@ -211,7 +211,7 @@ export default function LoginForm({ passwordless }) {
     max-sm:h-[40px] max-sm:text-[12px]
             " >
                             {(loginLoader || passwordlessLoader) ? (
-                                <LoaderIndicator background="white" size="small" />
+                                <LoaderIndicator background="white" size="small"/>
                             ) : passwordless ? (
                                 "Send"
                             ) : (

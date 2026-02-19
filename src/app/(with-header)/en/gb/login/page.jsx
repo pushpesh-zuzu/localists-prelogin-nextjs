@@ -11,9 +11,9 @@ export const metadata = {
 
 export default function LoginPage() {
     return (
-        <Suspense fallback={null}>
+        <>
             <h1 className="hidden">Login</h1>
             <LoginForm passwordless={false} />
-        </Suspense>
+        </>
     );
 }
