@@ -1,7 +1,7 @@
 "use client";
 import { Suspense, useState } from "react";
 import Paragraph from "../../UI/Typography/Paragraph";
-import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
+// import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 import Paragraph1 from "../../UI/Typography/Paragraph1";
 import TrustpioletIcon from "../../common/icons/HomePageIcons/TrustpioletIcon";
