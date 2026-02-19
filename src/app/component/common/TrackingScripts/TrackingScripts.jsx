@@ -7,7 +7,7 @@ const TrackingScripts = () => {
       {/* Step 7: Google Tag Manager */}
       <Script
         id="gtm-script"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             (function(w,d,s,l,i){
@@ -26,7 +26,7 @@ const TrackingScripts = () => {
       {/* Step 8: Facebook Pixel */}
       <Script
         id="facebook-pixel"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s){
