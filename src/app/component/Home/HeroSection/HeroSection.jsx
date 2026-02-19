@@ -80,7 +80,7 @@ export default function HeroSection() {
           <TrustpioletIcon className="lg:min-h-[54px] max-h-[28px] max-w-[184px] md:max-w-[177px] lg:max-w-[360px] mb-[16.54px] md:mb-3 lg:mb-[30px] lg:max-h-12" />
 
 
-          <h1 className="font-Inter font-black
+          <h1 className="font-Inter font-black min-h-[150px]
         tracking-[-0.03em]
         text-[56.7px] leading-[57.7px]
         md:text-[60px] md:leading-[55px]
@@ -101,7 +101,7 @@ export default function HeroSection() {
           <HeroSectionSearch />
         </div>
 
-        <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
+        <div className="w-full min-w-[256px] min-h-[256px] xl:min-w-[604px] lg:w-1/2 flex flex-col justify-center items-start">
           <Paragraph1 className="text-white pb-4 md:pb-4 lg:pb-[30px] text-shadow-[0px_0px_4px_0px_#00000040]">
             Popular Services:
           </Paragraph1>

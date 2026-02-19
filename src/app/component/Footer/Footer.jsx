@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import CountryDropdown from "./CountryDropdown";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import EmailIcon from "../common/icons/HomePageIcons/EmailIcon";
@@ -14,6 +13,7 @@ import XIcon from "../../../../public/ReactIcons/XIcon";
 import LinkedInIcon from "../../../../public/ReactIcons/LinkedInIcon";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import { showToast } from "@/utils";
+import Logo from "../../../../public/ReactIcons/Logo";
 
 const Footer = () => {
   const [openSections, setOpenSections] = useState({
@@ -36,17 +36,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1.25fr_1fr_1fr_1fr_1fr] lg:grid-cols-[1.25fr_1fr_1fr_1fr_1fr] gap-4 xl:gap-8 lg:gap-12">
             {/* Logo and Description - Always visible */}
             <div className="lg:col-span-1 text-center md:text-left flex flex-col items-center md:items-start">
-              <Image
-                src="/logodesktop.svg"
-                alt="Localists - Local Service Provider Directory"
-                width={168}
-                height={38}
-                className="mb-[16.66px] w-[168px] h-[41px] md:w-[89px] md:h-6 lg:w-[156px] lg:h-[39px]"
-                priority
-                fetchPriority="high"
-                loading="eager"
-              />
-
+              <Logo className="mb-[16.66px] w-[168px] h-[41px] md:w-[89px] md:h-6 lg:w-[156px] lg:h-[39px]" />
               <p className="hidden md:block text-[rgba(37, 50, 56, 1)] text-[12px]  lg:text-base mb-6 leading-relaxed">
                 Localists is the world’s fastest-growing marketplace, and we
                 have no intention of slowing down any time soon.
@@ -57,7 +47,7 @@ const Footer = () => {
                   Need Help?
                 </p>
                 <Link target="_blank" href="/en/gb/contact-us">
-                  <button className="bg-[#00afe3] hover:bg-[#0096c4] text-white px-6 py-2 rounded-sm shadow-[0px_0px_3.96px_0px_#0000001A] text-base font-bold md:text-sm whitespace-nowrap xl:text-sm  transition-colors duration-200 shadow-sm cursor-pointer">
+                  <button aria-label="contact-button" className="bg-[#00afe3] hover:bg-[#0096c4] text-white px-6 py-2 rounded-sm shadow-[0px_0px_3.96px_0px_#0000001A] text-base font-bold md:text-sm whitespace-nowrap xl:text-sm  transition-colors duration-200 shadow-sm cursor-pointer">
                     Contact Us
                   </button>
                 </Link>
@@ -247,6 +237,7 @@ const Footer = () => {
                 <button
                   onClick={() => toggleSection("customers")}
                   className="px-5 flex justify-between items-center w-full text-left font-black text-[20px]"
+                  aria-label="accordial-toggle"
                 >
                   For Customers
                   <span className="text-[#00afe3] text-xs">
@@ -296,6 +287,7 @@ const Footer = () => {
                 <button
                   onClick={() => toggleSection("professionals")}
                   className="px-5 flex justify-between items-center w-full text-left font-black text-[20px]"
+                  aria-label="accordial-toggle"
                 >
                   For Professionals
                   <span className="text-[#00afe3] text-xs">
@@ -348,6 +340,7 @@ const Footer = () => {
                 <button
                   onClick={() => toggleSection("about")}
                   className="px-5 flex justify-between items-center w-full text-left font-black text-[20px]"
+                  aria-label="accordial-toggle"
                 >
                   About
                   <span className="text-[#00afe3] text-xs">
