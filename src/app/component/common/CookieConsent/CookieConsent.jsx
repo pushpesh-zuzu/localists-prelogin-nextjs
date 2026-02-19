@@ -12,18 +12,21 @@ const CookieConsent = () => {
         if (typeof window === "undefined") return;
 
         const userConsent = getCookie("user-consent");
+            let timer;
 
-        // if (!userConsent) {
-        //     setTimeout(() => setShowBanner(true), 1000);
-        // }
-        if(!userConsent){
-            setShowBanner(true)
+        if (!userConsent) {
+            timer = setTimeout(() => setShowBanner(true), 3000);
         }
 
+            window.uetq = window.uetq || [];
+            window.uetq.push("consent", "default", {
+                ad_storage: "denied",
+            });
 
-        window.uetq = window.uetq || [];
-        window.uetq.push("consent", "default", { ad_storage: "denied" });
-    }, []);
+            return () => {
+                if (timer) clearTimeout(timer);
+            };
+            }, []);
 
     const handleAcceptAll = () => {
         setCookie("user-consent", "granted", 365);
