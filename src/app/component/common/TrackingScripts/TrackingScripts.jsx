@@ -7,7 +7,7 @@ const TrackingScripts = () => {
       {/* Step 7: Google Tag Manager */}
       <Script
         id="gtm-script"
-        strategy="beforeInteractive"
+        strategy="worker"
         dangerouslySetInnerHTML={{
           __html: `
             (function(w,d,s,l,i){
