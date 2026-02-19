@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import H2 from "../../UI/Typography/H2";
-import HomeGardenCarousel from "../../Carousel/HomeCarousel";
+// import HomeGardenCarousel from "../../Carousel/HomeCarousel";
 import {
   carouselData,
   carouselData1,
@@ -10,6 +10,21 @@ import {
 import CarouselCard from "../../Carousel/CarouselCard";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
+
+const HomeGardenCarousel = dynamic(
+  () => import("../../Carousel/HomeCarousel"),
+  {
+    loading: () => (
+      <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
+        <LoaderIndicator size="large" />
+      </div>
+    ),
+    ssr: false
+  }
+);
+
 
 function DiscoverServices() {
   return (

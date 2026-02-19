@@ -1,22 +1,21 @@
 "use client";
 import { Suspense, useState } from "react";
 import Paragraph from "../../UI/Typography/Paragraph";
-// import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
+import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 import Paragraph1 from "../../UI/Typography/Paragraph1";
 import TrustpioletIcon from "../../common/icons/HomePageIcons/TrustpioletIcon";
 import HeroSectionSearch from "./HeroSectionSearch";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
-import QueryToastHandler from "../../common/QueryToastHandler/QueryToastHandler";
+// import QueryToastHandler from "../../common/QueryToastHandler/QueryToastHandler";
 import HeroParagraphText from "./HeroParagraphText";
 import dynamic from "next/dynamic";
 
-
-const WrapperBGWidth = dynamic(
-  () => import("../../common/WrapperBGWidth/WrapperBGWidth")
+const QueryToastHandler = dynamic(
+  () => import("../../common/QueryToastHandler/QueryToastHandler"),
+  { ssr: false }
 );
-
 
 export default function HeroSection() {
   usePendingBuyerRedirect()
@@ -42,11 +41,11 @@ export default function HeroSection() {
     },
     {
       title: "Private Tutors",
-      slug:"/en/gb/tutors-near-me"
+      slug: "/en/gb/tutors-near-me"
     },
     {
       title: "Airport Transfers",
-      slug:"/en/gb/airport-transfers-near-me"
+      slug: "/en/gb/airport-transfers-near-me"
     },
     {
       title: "Painter Decorators",
@@ -57,7 +56,7 @@ export default function HeroSection() {
     },
     {
       title: "Physics and Maths Tutors",
-      slug:"/en/gb/physics-maths-tutors-near-me"
+      slug: "/en/gb/physics-maths-tutors-near-me"
     },
   ];
 

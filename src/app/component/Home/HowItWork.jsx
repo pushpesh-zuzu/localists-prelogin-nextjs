@@ -1,12 +1,12 @@
-"use client";
-import { handleScrollToBottom } from "@/utils/scroll";
+// import { handleScrollToBottom } from "@/utils/scroll";
 import HowItWorksCard from "../common/HowItWorkCard";
 import HowItWorkCompareIcon from "../common/icons/HomePageIcons/HowItWorkCompareIcon";
 import HowItWorkIconPencingIcon from "../common/icons/HomePageIcons/HowItWorkIconPencingIcon";
 import HowItWorkUserIcon from "../common/icons/HomePageIcons/HowItWorkUserIcon";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
-import Button from "../UI/Typography/Button";
+// import Button from "../UI/Typography/Button";
 import H2 from "../UI/Typography/H2";
+import HowItWorkCTA from "./HowItWorkCTA";
 
 function HowItWork() {
   return (
@@ -43,11 +43,12 @@ function HowItWork() {
             mw={"xs:w-full"}
           />
         </div>
-         <div className="flex justify-center">
-                  <Button variant="primary" onClick={() => { handleScrollToBottom() }} className="cursor-pointer rounded-full max-w-fit bg-[#10C87B] hover:bg-[#00aef3] text-white mt-[30px] lg:mt-[47px] px-[15px] md:px-[18px] py-2 xl:py-[15px] xl:px-8 leading-normal!">
-                    Get Started
-                  </Button>
-                </div>
+        {/* <div className="flex justify-center">
+          <Button variant="primary" onClick={() => { handleScrollToBottom() }} className="cursor-pointer rounded-full max-w-fit bg-[#10C87B] hover:bg-[#00aef3] text-white mt-[30px] lg:mt-[47px] px-[15px] md:px-[18px] py-2 xl:py-[15px] xl:px-8 leading-normal!">
+            Get Started
+          </Button>
+        </div> */}
+        <HowItWorkCTA />
       </section>
     </WrapperBGWidth>
   );
