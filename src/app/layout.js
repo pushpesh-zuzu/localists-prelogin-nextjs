@@ -7,6 +7,7 @@ import StoreProvider from "./StoreProvider";
 import { ToastProvider } from "@/utils/toaster";
 import CookieConsent from "./component/common/CookieConsent/CookieConsent";
 import SEO from "./component/common/seo/SEO";
+import Script from "next/script";
 // import { headers } from "next/headers";
 
 export async function generateMetadata() {
@@ -40,11 +41,10 @@ export async function generateMetadata() {
   };
 }
 
-
 const inter = Inter({
   subsets: ["latin"],
   // variable: "--font-inter",
-  display: "swap",   // allows instant text paint
+  display: "swap", // allows instant text paint
 });
 
 export default function RootLayout({ children }) {
@@ -53,14 +53,31 @@ export default function RootLayout({ children }) {
       <head>
         <TrackingScripts />
       </head>
-      <body className={`${inter.className} antialiased`} suppressHydrationWarning
+      <body
+        className={`${inter.className} antialiased`}
+        suppressHydrationWarning
       >
         <StoreProvider>
           {/* <Header /> */}
           {children}
           {/* <TrackingScripts /> */}
           <NoscriptTags />
+          <Script id="lazyload-options" strategy="afterInteractive">
+            {`
+            window.lazyLoadOptions = {
+              elements_selector: ".lazy",
+              threshold: 300
+            };
+          `}
+          </Script>
 
+          {/* Vanilla LazyLoad (non-blocking) */}
+          <Script
+            src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"
+            strategy="afterInteractive"
+          />
+
+          <Script src="/fallback-loader.js" strategy="afterInteractive" />
           {/* Global Cookie Consent */}
           <SEO />
           <CookieConsent />

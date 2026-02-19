@@ -40,7 +40,7 @@ export default function CarouselCard({ card }) {
       <div className={`relative ${card?.slug? 'cursor-pointer':''} w-full h-full max-w-[281px] rounded-[20px] xl:rounded-[28px] overflow-hidden`}>
         <Image
           src={card.image}
-          alt={card.title}
+          alt={card.title || 'Service Images'}
           fill
           className="w-[244px] h-[213px] md:w-[180px] md:h-[132px] xl:w-[297px] max-w-[281px] xl:h-[248px]
           "

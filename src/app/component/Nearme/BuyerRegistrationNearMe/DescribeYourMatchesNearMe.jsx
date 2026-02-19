@@ -134,7 +134,7 @@ const DescribeYourRequestNearMe = ({
     return (
       <div className="fixed left-1/2 top-[60%] flex w-[90%] max-w-[500px] -translate-x-1/2 -translate-y-1/2 flex-col overflow-auto bg-white px-5 py-4 text-center max-[480px]:h-[80vh] max-[350px]:w-[80%] max-[350px]:px-4 max-[350px]:py-3">
         <div className="flex items-center justify-center">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-gray-200 border-t-[#00afe3]"></div>
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-gray-200 border-t-[#00afe3]" aria-label="loaders"></div>
         </div>
       </div>
     );

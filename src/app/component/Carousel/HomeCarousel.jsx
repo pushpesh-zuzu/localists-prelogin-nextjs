@@ -326,6 +326,7 @@ export default function HomeGardenCarousel({
           onClick={scrollNextMobile}
           style={{ right: `${mobileArrowSpacing}px` }}
           className="absolute top-[40%]  -translate-y-1/2 bg-transparent text-gray-800  rounded-full z-10 hover:bg-gray-100"
+          aria-label="next slide"
         >
           
           <RightArrowBlack className="h-7 w-5"/>
