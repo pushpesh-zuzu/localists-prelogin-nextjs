@@ -51,7 +51,7 @@ function PopularCard() {
           Popular <span className="text-[#253238]">jobs.</span>
         </H2>
 
-        <div className="hidden md:block select-none">
+        <div className="hidden md:block select-none min-h-[300px]">
           <PopularCardCarousel
             data={popularData}
             renderCard={(card) => <PopularImageCard card={card} />}

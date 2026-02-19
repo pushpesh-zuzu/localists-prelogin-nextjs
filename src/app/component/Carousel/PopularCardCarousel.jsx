@@ -17,14 +17,18 @@ export default function PopularCardCarousel({
   const scrollableCards = data.filter((card) => !card.isSpecial);
   const MIN_SLIDES_FOR_LOOP = 6;
 
+  // const loopableCards =
+  //   scrollableCards.length === 0
+  //     ? []
+  //     : scrollableCards.length >= MIN_SLIDES_FOR_LOOP
+  //     ? scrollableCards
+  //     : Array.from({
+  //         length: Math.ceil(MIN_SLIDES_FOR_LOOP / scrollableCards.length),
+  //       }).flatMap(() => scrollableCards);
   const loopableCards =
-    scrollableCards.length === 0
-      ? []
-      : scrollableCards.length >= MIN_SLIDES_FOR_LOOP
-      ? scrollableCards
-      : Array.from({
-          length: Math.ceil(MIN_SLIDES_FOR_LOOP / scrollableCards.length),
-        }).flatMap(() => scrollableCards);
+  scrollableCards.length === 0
+    ? []
+    : [...scrollableCards, ...scrollableCards];
 
   const specialCardData = data.find((card) => card.isSpecial);
 
