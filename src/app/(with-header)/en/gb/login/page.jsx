@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import LoginForm from "@/app/component/common/Auth/LoginForm";
 
 export const metadata = {
@@ -6,13 +5,14 @@ export const metadata = {
     description:
         "Log in to your Localists account to manage leads, connect with customers, and grow your business with trusted local opportunities.",
 
-    // robots: false,
+    robots: false,
 };
 
 export default function LoginPage() {
     return (
-        <Suspense fallback={null}>
+        <>
+            <h1 className="sr-only">Login</h1>
             <LoginForm passwordless={false} />
-        </Suspense>
+        </>
     );
 }
