@@ -51,8 +51,19 @@ export default function CarouselCard({ card }) {
           priority
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
+         <h3
+          className="block md:hidden font-Inter font-black
+        tracking-[-0.03em] text-[24px]
+        md:text-[16px] 
+        lg:text-[25px] text-white w-[80%] absolute bottom-2 lg:bottom-4 left-1/2 -translate-x-1/2 text-center
+        leading-[27px] md:leading-16px]! lg:leading-[25px]! md:line-clamp-4
+        lg:line-clamp-none"
+        >
+          {card.title}
+        </h3>
+
         <h4
-          className="font-Inter font-black
+          className="hidden md:block font-Inter font-black
         tracking-[-0.03em] text-[24px]
         md:text-[16px] 
         lg:text-[25px] text-white w-[80%] absolute bottom-2 lg:bottom-4 left-1/2 -translate-x-1/2 text-center
