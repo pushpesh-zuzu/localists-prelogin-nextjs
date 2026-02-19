@@ -15,7 +15,7 @@ const CookieConsent = () => {
             let timer;
 
         if (!userConsent) {
-            timer = setTimeout(() => setShowBanner(true), 3000);
+            timer = setTimeout(() => setShowBanner(true), 6000);
         }
 
             window.uetq = window.uetq || [];
