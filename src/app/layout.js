@@ -7,7 +7,6 @@ import StoreProvider from "./StoreProvider";
 import { ToastProvider } from "@/utils/toaster";
 // import CookieConsent from "./component/common/CookieConsent/CookieConsent";
 import SEO from "./component/common/seo/SEO";
-import Script from "next/script";
 // import { headers } from "next/headers";
 
 export async function generateMetadata() {
@@ -59,21 +58,6 @@ export default function RootLayout({ children }) {
           {/* <Header /> */}
           <NoscriptTags />
           {children}
-
-          <Script id="lazyload-options" strategy="afterInteractive">
-            {`
-            window.lazyLoadOptions = {
-              elements_selector: ".lazy",
-              threshold: 300
-            };
-          `}
-          </Script>
-
-          {/* Vanilla LazyLoad (non-blocking) */}
-          <Script
-            src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"
-            strategy="afterInteractive"
-          />
           {/* <TrackingScripts /> */}
           {/* Global Cookie Consent */}
           <SEO />
