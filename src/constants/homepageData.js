@@ -199,15 +199,15 @@ export const tabData = {
     },
      {
         title: "Patio Layers near me",
-        url: "/en/gb/tree-surgeon-near-me",
+        url: "/en/gb/patio-layers-near-me",
     },
       {
         title: "Private Tutors near me",
-        url: "",
+        url: "/en/gb/tutors-near-me",
     },
     {
-      title: "Patio Layers near me",
-      url: "/en/gb/tree-surgeon-near-me",
+      title: "Roofers near me",
+      url: "/en/gb/roofers-near-me",
     },
      {
         title: "Gutter Cleaners near me",
