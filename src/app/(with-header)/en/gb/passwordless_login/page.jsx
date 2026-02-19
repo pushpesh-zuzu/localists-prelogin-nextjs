@@ -1,5 +1,19 @@
-import { Suspense } from "react";
-import LoginForm from "@/app/component/common/Auth/LoginForm";
+// import LoginForm from "@/app/component/common/Auth/LoginForm";
+import LoaderIndicator from "@/app/component/common/Loader/LoaderIndicatore";
+import dynamic from "next/dynamic";
+
+
+const LoginForm = dynamic(
+  () => import("@/app/component/common/Auth/LoginForm"),
+  {
+    loading: () => (
+      <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
+        <LoaderIndicator size="large" />
+      </div>
+    ),
+    ssr: true
+  }
+);
 
 export const metadata = {
   title: "Localists Login | Access Your Account",
@@ -12,8 +26,9 @@ export const metadata = {
 
 export default function PasswordlessLoginPage() {
   return (
-    <Suspense fallback={null}>
+    <>
+      <h1 className="hidden">Passwordless login</h1>
       <LoginForm passwordless />
-    </Suspense>
+    </>
   );
 }

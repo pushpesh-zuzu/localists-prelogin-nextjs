@@ -5,7 +5,7 @@ import TrackingScripts from "./component/common/TrackingScripts/TrackingScripts"
 import "./globals.css";
 import StoreProvider from "./StoreProvider";
 import { ToastProvider } from "@/utils/toaster";
-import CookieConsent from "./component/common/CookieConsent/CookieConsent";
+// import CookieConsent from "./component/common/CookieConsent/CookieConsent";
 import SEO from "./component/common/seo/SEO";
 import Script from "next/script";
 // import { headers } from "next/headers";
@@ -13,8 +13,7 @@ import Script from "next/script";
 export async function generateMetadata() {
 
   const isProductionDomain =
-    process.env.NEXT_PUBLIC_CANNONICAL_SITE_URL === "localists.com" || false;
-
+    process.env.NEXT_PUBLIC_SITE_HOST === "localists.com" || false;
   return {
     // metadataBase: new URL(process.env.NEXT_PUBLIC_CANNONICAL_SITE_URL),
     title: "Localists.com: Find Trusted Local Services and Professionals",
@@ -59,29 +58,12 @@ export default function RootLayout({ children }) {
       >
         <StoreProvider>
           {/* <Header /> */}
+          <NoscriptTags />
           {children}
           {/* <TrackingScripts /> */}
-          <NoscriptTags />
-          <Script id="lazyload-options" strategy="afterInteractive">
-            {`
-            window.lazyLoadOptions = {
-              elements_selector: ".lazy",
-              threshold: 300
-            };
-          `}
-          </Script>
-
-          {/* Vanilla LazyLoad (non-blocking) */}
-          <Script
-            src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"
-            strategy="afterInteractive"
-          />
-
-          <Script src="/fallback-loader.js" strategy="afterInteractive" />
           {/* Global Cookie Consent */}
           <SEO />
-          <CookieConsent />
-
+          {/* <CookieConsent /> */}
           <ToastProvider />
         </StoreProvider>
       </body>

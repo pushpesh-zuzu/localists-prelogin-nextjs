@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import Image from "next/image";
 import H3 from "../UI/Typography/H3";
@@ -48,7 +48,7 @@ export default function CarouselCard({ card }) {
                (max-width: 1024px) 133px,
                (max-width: 1280px) 195px,
                297px"
-          priority
+          // priority
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
          <h3

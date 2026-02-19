@@ -1,25 +1,25 @@
 "use client";
-// import Image from "next/image";
-import { memo, Suspense, useState } from "react";
-// import { searchService } from "@/lib/store/searchSlice";
-import { useDispatch } from "react-redux";
-// import dynamic from "next/dynamic";
-// import H1 from "../../UI/Typography/H1";
+import { Suspense, useState } from "react";
 import Paragraph from "../../UI/Typography/Paragraph";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
-// import SearchIcon from "../../common/icons/HomePageIcons/SearchIcon";
 import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 import Paragraph1 from "../../UI/Typography/Paragraph1";
 import TrustpioletIcon from "../../common/icons/HomePageIcons/TrustpioletIcon";
 import HeroSectionSearch from "./HeroSectionSearch";
-// import Link from "next/link";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
-import QueryToastHandler from "../../common/QueryToastHandler/QueryToastHandler";
+// import QueryToastHandler from "../../common/QueryToastHandler/QueryToastHandler";
+import HeroParagraphText from "./HeroParagraphText";
+import dynamic from "next/dynamic";
 
-const HeroSection = memo(function HeroSection() {
+const QueryToastHandler = dynamic(
+  () => import("../../common/QueryToastHandler/QueryToastHandler"),
+  { ssr: false }
+);
+
+export default function HeroSection() {
   usePendingBuyerRedirect()
-    useScrollToTop()
+  useScrollToTop()
   const services = [
     {
       title: "Landscapers",
@@ -34,7 +34,6 @@ const HeroSection = memo(function HeroSection() {
     },
     {
       title: "Personal Trainers",
-      slug:"/en/gb/personal-trainers-near-me"
     },
     {
       title: "Tree Surgeons",
@@ -42,15 +41,14 @@ const HeroSection = memo(function HeroSection() {
     },
     {
       title: "Private Tutors",
-      slug:"/en/gb/tutors-near-me"
+      slug: "/en/gb/tutors-near-me"
     },
     {
       title: "Airport Transfers",
-      slug:"/en/gb/airport-transfers-near-me"
+      slug: "/en/gb/airport-transfers-near-me"
     },
     {
       title: "Painter Decorators",
-      slug: "/en/gb/painter-and-decorator-near-me",
     },
     {
       title: "Fence & Gate Installers",
@@ -58,7 +56,7 @@ const HeroSection = memo(function HeroSection() {
     },
     {
       title: "Physics and Maths Tutors",
-      slug:"/en/gb/physics-maths-tutors-near-me"
+      slug: "/en/gb/physics-maths-tutors-near-me"
     },
   ];
 
@@ -68,14 +66,9 @@ const HeroSection = memo(function HeroSection() {
     ? services
     : services.slice(0, 9);
 
-  const dispatch = useDispatch();
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const [Show, setShow] = useState(false);
-
   return (
     <WrapperBGWidth background={"#00aeef"}>
-       <Suspense fallback={null}>
+      <Suspense fallback={null}>
         <QueryToastHandler />
       </Suspense>
       <section
@@ -96,7 +89,7 @@ const HeroSection = memo(function HeroSection() {
               Find Local <span className="block whitespace-nowrap">Services. <span className="hidden md:inline-block text-[#253238]">Fast.</span></span>
               <span className="block md:hidden text-[#253238]">Fast.</span>
             </p>
-            <div className="hidden md:block lg:hidden ">
+            <div className="hidden md:block lg:hidden">
               Find Local{" "}
               <div className="flex">
                 <span className="block">Services.</span>
@@ -104,18 +97,12 @@ const HeroSection = memo(function HeroSection() {
               </div>
             </div>
           </h1>
-          <p
-            className="font-[Arial] font-bold tracking-[-0.03em] text-[25.2px] leading-[25.2px]
-                      lg:text-[28px] lg:leading-[28px] max-w-full sm:max-w-full text-white pt-[20px] md:pt-2 lg:pt-[18px] text-shadow-[0px 0px 4px 0px #00000040]
-                      md:text-shadow-[0px 4px 4px 0px #00000026] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
-          >
-            Get instant quotes from local professionals.
-          </p>
+          <HeroParagraphText />
           <HeroSectionSearch />
         </div>
 
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
-          <Paragraph1 className="text-white -tracking-[3%] pb-4 md:pb-4 lg:pb-[30px] text-shadow-[0px_0px_4px_0px_#00000040]">
+          <Paragraph1 className="text-white pb-4 md:pb-4 lg:pb-[30px] text-shadow-[0px_0px_4px_0px_#00000040]">
             Popular Services:
           </Paragraph1>
 
@@ -205,7 +192,7 @@ const HeroSection = memo(function HeroSection() {
                 ) : (
                   <button
                     key={service.title}
-                    className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none "
+                    className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none"
                     aria-label={`Search for ${service.title}`}
                   >
                     <p className="text-base md:text-sm sm:text-[18px] font-[Arial] font-bold tracking-[-0.03em] ">
@@ -219,7 +206,7 @@ const HeroSection = memo(function HeroSection() {
             {services.length > 5 && (
               <div className="flex justify-center mt-5">
                 <button
-                  className=" font-bold text-[12px] rounded-full transition-all duration-200 flex items-center justify-center"
+                  className="font-bold text-[12px] rounded-full transition-all duration-200 flex items-center justify-center"
                   onClick={() => setShowAllServices(!showAllServices)}
                   aria-label={
                     showAllServices
@@ -236,6 +223,4 @@ const HeroSection = memo(function HeroSection() {
       </section>
     </WrapperBGWidth>
   );
-});
-
-export default HeroSection;
+};

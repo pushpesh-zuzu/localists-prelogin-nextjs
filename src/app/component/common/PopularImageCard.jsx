@@ -1,8 +1,6 @@
-"use client";
 
 import Image from "next/image";
 import Paragraph from "../UI/Typography/Paragraph";
-import Link from "next/link";
 
 export default function PopularImageCard({ card }) {
   return (
@@ -25,7 +23,7 @@ export default function PopularImageCard({ card }) {
             alt={card.title}
             fill
             className="object-cover"
-            priority
+            // priority
             sizes="(max-width: 768px) 90px, (max-width: 1024px) 133px, (max-width: 1280px) 195px, 250px"
           />
         </div>
