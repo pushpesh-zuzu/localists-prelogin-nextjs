@@ -1,13 +1,11 @@
 import React from "react";
-import H2 from "../UI/Typography/H2";
 import Paragraph from "../UI/Typography/Paragraph";
 import GetQuote from "../common/GetQuotes/GetQuote";
-import Button1 from "../UI/Typography/Button1";
 import NearmeH2Heading from "./NearmeH2Heading";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
-import PaddingWrapper from "./PaddingWrapper";
 import Breadcrumb from "../common/BreadCrum/BreadCrum";
 import Button from "../UI/Typography/Button";
+import UserIcon from "../common/icons/LocationIcons/UserIcon";
 
 function VettedSection({
   isSingular = false,
@@ -17,6 +15,7 @@ function VettedSection({
   breadcrumb = [],
   buttonText = "View Tree Surgeons",
   getQuoteText = "Get your Quote",
+  extraButton= false
 }) {
   return (
     <WrapperBGWidth>
@@ -41,6 +40,7 @@ function VettedSection({
             ))}
             <div className="flex flex-wrap justify-center md:justify-start gap-[7px] gap-2.5 lg:gap-6 mb-2.5 mt-[30px] md:mt-[30px] lg:mt-12">
               <GetQuote variant="primary" text={getQuoteText} />
+              {extraButton && <Button variant="primary" className="py-[7px] xl:py-4 xl:px-[30px] cursor-pointer max-w-fit px-[13px]  hover:bg-[#00afe3]  rounded-full border-1 flex flex-row justify-center items-center gap-1 md:gap-[13px]"><UserIcon className="h-[18px] w-[18px] md:h-6 md:w-6" />View Roofers</Button>}
             </div>
           </div>
         </div>

@@ -45,8 +45,9 @@ export default function HireRelatedToServiceNearMe({
   tabData = [],
   headingMiddle = "",
   heightClass = "lg:h-[484px]",
+  activeTabkey="professionals"
 }) {
-  const [currentTab, setcurrentTab] = useState("professionals");
+  const [currentTab, setcurrentTab] = useState(activeTabkey);
   const [showAll, setShowAll] = useState(false);
   const [hasOverflow, setHasOverflow] = useState(false);
 
@@ -67,6 +68,8 @@ export default function HireRelatedToServiceNearMe({
     { lable: "Find Professionals", activtab: "professionals" },
     { lable: "Popular Jobs", activtab: "popular" },
     { lable: "Advice & Insight", activtab: "insight" },
+    { lable: "Related Service", activtab: "related" },
+    { lable: "Find Out More", activtab: "findMore" },
   ].filter((tab) => tabData?.[tab.activtab]?.length > 0);
 
 
