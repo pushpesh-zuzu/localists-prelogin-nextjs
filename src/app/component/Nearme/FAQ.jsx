@@ -5,7 +5,13 @@ import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import PlusIconFaq from "../common/icons/NearMe/PlusIconFaq";
 import MinusIcon from "../common/icons/NearMe/MinusIcon";
 
-export const FAQ = ({ data, defaultOpen="1" }) => {
+export const FAQ = ({
+  data,
+  defaultOpen = "1",
+  headdingblue = "FAQ's",
+  headingblack = "",
+  containerClass = "w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] lg:max-w-[1200px] mx-auto pb-10 xl:pb-[72px]",
+}) => {
   const [openItem, setOpenItem] = useState(defaultOpen || null);
 
   const toggleItem = (key) => {
@@ -15,8 +21,12 @@ export const FAQ = ({ data, defaultOpen="1" }) => {
   return (
     <WrapperBGWidth>
       {" "}
-      <div className="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] lg:max-w-[1200px] mx-auto pb-10 xl:pb-[72px]">
-        <NearmeH2Heading headdingblue="FAQ's" className="mb-5 md:mb-6 lg:mb-10" />
+      <div className={containerClass}>
+        <NearmeH2Heading
+          headdingblue={headdingblue}
+          headingblack={headingblack}
+          className="mb-5 md:mb-6 lg:mb-10"
+        />
 
         <div className="space-y-0 border-2 lg:border-4 border-[#DBDFE4] rounded-[20px] overflow-hidden bg-white shadow-sm">
           {data.map((item, index) => (

@@ -1,11 +1,11 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import TreeSurgeonInChester from '@/app/component/LocationPages/TreeSurgeonInChester/TreeSurgeonInChester'
+import RoofersInChester from '@/app/component/LocationPages/RoofersInChester/RoofersInChester';
 import React, { Suspense } from 'react'
 export const metadata = {
-  title: "Find Quality Tree Surgeons in Chester | Localists",
+  title: "Find Trusted Roofers Chester | Localists.com",
   description:
-    "Find fully qualified tree surgeons in Chester. Certified and skilled arborists. Safe tree removal & pruning. Get free quotes from local experts in your area.",
+    "Looking for reliable roofers in Chester? Get up to 5 free, no-obligation quotes from trusted local specialists for repairs, replacements, and installations.",
 };
 function page() {
   return (
@@ -25,7 +25,7 @@ function page() {
         </div>}
       >
 
-        <TreeSurgeonInChester />
+        <RoofersInChester />
       </Suspense></>
   )
 }
