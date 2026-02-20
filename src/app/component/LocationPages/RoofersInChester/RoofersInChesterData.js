@@ -79,8 +79,11 @@ export const QUESTION_AND_ABOUT_SERVICE_CHESTER = [
     type:"p",
     text:"Already know what needs doing? Use our Job Value Estimator for a quick, tailored cost estimate; no guesswork required."
   },
-  {type:'h2',
-    text:"What Should Be Included in Your Roofing Quote"
+  {
+    type:'h2',
+    text:"What Should Be Included in Your Roofing Quote",
+    className: "mt-5 lg:mt-[72px]"
+
   },
   {
    type:"p",
@@ -112,7 +115,8 @@ export const QUESTION_AND_ABOUT_SERVICE_CHESTER = [
   },
   {
     type:"h2",
-    text:"Find the Right Roofer in Chester for the Job"
+    text:"Find the Right Roofer in Chester for the Job",
+    className: "mt-5 lg:mt-[72px]"
   },
   {
     type:"p",
@@ -163,149 +167,7 @@ export const QUESTION_AND_ABOUT_SERVICE_CHESTER = [
     text:"No matter the job, finding a roofer with the right skills ensures your home stays dry, safe, and looking great without the stress.",
     notMarginBottom:true
   },
-  //  completion after delete beleo
-  // {
-  //   type: "p",
-  //   text: "Here are some of the key things a tree surgeon does:",
-  //   className: "my-[15px] md:my-[25px]",
-  // },
-  // { type: "pbold", text: "1. Tree health and safety checks" },
-  // {
-  //   type: "p",
-  //   text: "Before any work begins, a tree surgeon assesses the overall health and stability of your trees. They’re trained to spot early signs of disease, pest infestations, cracks, or hidden rot that most of us would overlook. ",
-  // },
-  // { type: "pbold", text: "2. Pruning, crown work & structural trimming" },
-  // {
-  //   type: "p",
-  //   text: "Pruning isn’t just about making a tree look neat. It’s about keeping it healthy and safe. Tree surgeons handle this carefully, making precise cuts to support long-term growth and stability. Whether it’s reducing the crown to let in more light, lifting branches to clear space around buildings, or removing overgrowth, tree surgeons know how to balance a tree’s structure.",
-  // },
-  // { type: "PostCodeSectionLocation" },
-  // {
-  //   type: "pbold",
-  //   text: "3. Safe tree removal",
-  // },
-  // {
-  //   type: "p",
-  //   text: "Sometimes a tree is simply too diseased, damaged, or unstable to save. In these cases, tree surgeons carry out removals safely using specialist climbing gear, cranes, ropes, and dismantling techniques. They know how to handle this professionally, keeping health and safety in mind, to prevent damage to people, property, or surrounding plants.",
-  //   className: "pb-[5px] md:pb-0",
-  // },
-
-  // {
-  //   type: "pbold",
-  //   text: "4. Stump grinding & root work",
-  // },
-  // {
-  //   type: "p",
-  //   text: "Taking down a tree is only half the job. The stump left behind can become a tripping hazard, attract pests, or sprout regrowth. Tree surgeons use professional stump grinders to remove it completely, making space for new planting, landscaping, or simply a tidy, safer garden.",
-  //   className: "pb-[5px] md:pb-0",
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "5.  Planting & conservation",
-  // },
-  // {
-  //   type: "p",
-  //   text: "Tree surgeons don’t just remove trees. They help plant them too. They can recommend the right species for your soil, plant them correctly and even transplant existing trees when needed.",
-  //   className: "pb-[5px] md:pb-0",
-  // },
-
-  // {
-  //   type: "pbold",
-  //   text: "6. Disease & pest management",
-  // },
-  // {
-  //   type: "p",
-  //   text: "Trees can suffer from pests, fungi, and decay. Tree surgeons identify these problems early and recommend treatments or interventions to prevent further spread.",
-  //   className: "pb-[5px] md:pb-0",
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "7. Emergency response",
-  // },
-  // {
-  //   type: "p",
-  //   text: "Storm damage or fallen branches can pose immediate risks. Tree surgeons are often called out in emergencies to make trees safe, clear debris, and restore access quickly.",
-  //   className: "pb-[5px] md:pb-0",
-  // },
-
-  // {
-  //   type: "pbold",
-  //   text: "8. Surveys & reports",
-  // },
-  // {
-  //   type: "p",
-  //   text: "For planning applications, insurance, or legal compliance, a tree surgeon (or arborist) can provide formal surveys and written reports to assess safety, preservation needs, or risks.",
-  // },
-  // {
-  //   type: "h2",
-  //   text: "How much does a tree surgeon cost",
-  // },
-  // {
-  //   type: "p",
-  //   text: "The cost of hiring a tree surgeon depends on several factors, including the size and type of tree, the complexity of the job, and your location. Small pruning jobs for garden trees are generally less expensive. However, removing large or hazardous trees requires more time, equipment, and expertise, which increases the cost. Also, in terms of location, specialists in larger cities like Manchester or high-demand areas may charge more than those in rural regions.",
-  // },
-  // {
-  //   type: "p",
-  //   text: "Other considerations that can affect pricing include accessibility (how easy it is to reach the tree), whether stump removal is needed, and if the job requires special safety equipment or multiple hands on site.",
-  // },
-  // {
-  //   type:"p",
-  //   text:"At Localists, you don’t need to guess or spend hours searching for reliable tree surgeons. Simply submit your requirements and receive free quotes from qualified local experts in your inbox. You can then compare prices, experience, and availability, and choose what fits your needs.",
-  // },
-  // {
-  //   type: "AveratePriceSection",
-  // },
-  // {
-  //   type: "h2",
-  //   text: "Why hire a professional tree surgeon?",
-  // },
-  // {
-  //   type: "p",
-  //   text: "Tree work might look simple on the surface. After all, anyone can pick up a saw or climb a ladder and do some cutting. But in reality, it’s one of the most hazardous types of outdoor work you can attempt without training.",
-  // },
-  // {
-  //   type: "p",
-  //   text: "DIY tree removal or pruning does look like a money-saver, but may potentially lead to more problems down the line. For instance, without the right tools and know-how, you risk damaging your property, falling off a tree and injuring yourself, or harming the tree so badly it never recovers.",
-  // },
-  // {
-  //   type: "p",
-  //   text: "This is where a professional tree surgeon makes all the difference. Trained in tree biology, safety, and sustainability, they can spot weaknesses and prune or remove branches without risking people, property, and the environment.",
-  // },
-  // {
-  //   type: "h2",
-  //   text: "How do I pick the right tree surgeon",
-  // },
-  // {
-  //   type: "p",
-  //   text: "When choosing a tree surgeon, it’s important to look beyond price and focus on their training, safety standards, and experience. You can look out for one or more of the following:",
-  //   className: "mb-[15px] md:mb-[25px] ",
-  // },
-  // {
-  //   type: "li",
-  //   text: "<strong>Insurance</strong> - This is also non-negotiable as it protects you and your property if something goes wrong.",
-  //   // className: "mr-5",
-  // },
-  // {
-  //   type: "li",
-  //   text: "<strong>Reviews</strong> - Check reviews and recommendations from past clients to see how reliable they are in practice.",
-  //   // className: "mr-5",
-  // },
-  // {
-  //   type: "li",
-  //   text: "<strong>Transparency</strong> - A good tree surgeon will be transparent: they’ll explain the work clearly, provide a written quote, and answer your questions before starting.",
-  //   // className: "mr-5",
-  // },
-  // {
-  //   type: "li",
-  //   text: "<strong>Relevant experience</strong> - Having hands-on experience with the type of job you need is also a plus. Whether that’s caring for ornamental trees in your garden, managing large oaks on a commercial site, or maintaining multiple trees in public spaces.",
-  //   // className: "mr-5",
-  // },
-  // {
-  //   type: "li",
-  //   text: `<strong>Professional bodies membership</strong> –  Having a membership to organisations such as the <a href='https://www.trees.org.uk/' target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>Arboricultural Association</a> often means they have to adhere to strict regulations and protocols.`,
-  //   // className: "mr-5",
-  //   className: "mb-0",
-  // },
+ 
 ];
 export const FREQUENTLY_DATA_TREE_SURGEON_CHESTER = [
   {
@@ -461,26 +323,23 @@ export const TREE_SUREON_FEEDBACK_CHESTER = [
   {
     id: 1,
     text: "A sudden leak had me stressing, but the roofer arrived quickly, explained everything clearly, and fixed it without any fuss. Brilliant service!",
-    location:"Chester",
-    name: "Isolde Fenton,",
+    name: "Isolde F.",
   },
   {
     id: 2,
     text: "Needed a full pitched roof replacement and was nervous about costs. The team gave a clear quote, finished on time, and left everything spotless. Highly recommend!",
-    name: "Callum Bristow,",
-    location:"Chester"
+    name: "Callum B.",
   },
   {
     id: 3,
     text: "We had our flat roof resealed and it couldn’t have gone smoother. Friendly team, no hidden costs, and a job done properly.",
-    name: "Anwen Keating,",
-    location:"Chester"
+    name: "Anwen K.",
 
   },
   {
     id: 4,
     text: "I needed a roof installing and already had 2 quotes. But had far better quotes from Localists. Job was done sooner than expected. Thanks to craig and the team",
-    name: "Matthew C",
+    name: "Matthew C.",
   },
 ];
 
