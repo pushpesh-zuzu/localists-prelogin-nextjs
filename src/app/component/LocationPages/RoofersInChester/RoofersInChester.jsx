@@ -28,7 +28,7 @@ function RoofersInChester() {
   return (
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon />}
-      {/* <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]} /> */}
+      <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON_CHESTER} />
       <HeroSectionNearMe
         heading1="Roofers"
         heading2="Chester"
