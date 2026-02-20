@@ -7,7 +7,7 @@ import StoreProvider from "./StoreProvider";
 import { ToastProvider } from "@/utils/toaster";
 // import CookieConsent from "./component/common/CookieConsent/CookieConsent";
 import SEO from "./component/common/seo/SEO";
-import Script from "next/script";
+// import Script from "next/script";
 // import { headers } from "next/headers";
 
 export async function generateMetadata() {
