@@ -36,8 +36,10 @@ function RoofersInChester() {
         description="Find the best roofers in Chester! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
-        altText="Tree Surgeon Hanging From a Tree trimming branches with a chainsaw"
+        altText="Professional roofers roofing a new build with ceramic roof tiles"
         blackHeadinginline="inline"
+        serviceId={113}
+        serviceName="Roofing"
       />
       <VettedSection
         paragraph={VETTED_DATA_TREE_SURGEON_CHESTER}
@@ -55,6 +57,8 @@ function RoofersInChester() {
       />
       {/* <HowItWorkNearMe /> */}
       <AboutServicesAndQuestions
+        serviceId={113}
+        serviceName="Roofing" 
         contentBlocks={QUESTION_AND_ABOUT_SERVICE_CHESTER}
       />
       {/* <AdviceInsightNearMe
