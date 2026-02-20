@@ -21,6 +21,7 @@ import { FAQ } from "../../Nearme/FAQ";
 import UserFeedbackNearMe2 from "../../Nearme/UserFeedbackNearMe2";
 // import DiscoverNearMe from "../../Nearme/DiscoverNearMe";
 import NearmeMember from "../../Nearme/NearmeMember";
+import FAQScript from "../../common/seo/FAQScript";
 // import HireRelatedToServiceNearMe from "../../Nearme/HireRelatedToServiceNearMe";
 // import AdviceInsightNearMe from "../../Nearme/AdviceInsightNearMe";
 
