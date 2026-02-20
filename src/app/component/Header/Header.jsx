@@ -16,6 +16,7 @@ import AuthenticatedHeader from "./AthenticatedHeader";
 import MobileSlideInSearch from "./MobileSlideInSearch";
 import LoaderIndicator from "../common/Loader/LoaderIndicatore";
 import Link from "next/link";
+import Logo from "../../../../public/ReactIcons/Logo";
 
 const SearchResultForHeader = dynamic(() => import("./SearchResultForHeader"), {
   ssr: false,
@@ -61,16 +62,7 @@ export default function Header() {
                 aria-label="Go to Localists homepage"
                 className="shrink-0"
               >
-                <Image
-                  src="/logodesktop.svg"
-                  alt="Localists - Local Service Provider Directory"
-                  width={168}
-                  height={38}
-                  className=" md:w-[89px] sm:h-5 lg:w-[147px] lg:h-7"
-                  priority
-                  fetchPriority="high"
-                  loading="eager"
-                />
+                <Logo className="md:w-[89px] sm:h-5 lg:w-[147px] lg:h-7"/>
               </Link>
 
               <div className="flex items-center space-x-4 md:space-x-2 lg:space-x-2.5 lg:py-3">
@@ -170,17 +162,7 @@ export default function Header() {
                   aria-label="Go to Localists homepage"
                   className="shrink-0"
                 >
-                  <Image
-                    src="/logo.webp"
-                    alt="Localists - Local Service Provider Directory"
-                    width={103}
-                    height={25}
-                    className="w-[103px] h-[25px] md:w-[133px] md:w-8 ml-[25%]"
-                    priority
-                    fetchPriority="high"
-                    loading="eager"
-                    layout="intrinsic"
-                  />
+                  <Logo className="w-[103px] h-[25px] md:w-[133px] md:w-8 ml-[25%]"/>
                 </a>
               </div>
               <div className="flex items-center space-x-[4.34px]">

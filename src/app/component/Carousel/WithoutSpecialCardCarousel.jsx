@@ -15,14 +15,18 @@ export default function WithoutSpecialCardCarousel({
 }) {
   const MIN_SLIDES_FOR_LOOP = 6;
 
-  const loopableCards =
-    data.length === 0
-      ? []
-      : data.length >= MIN_SLIDES_FOR_LOOP
-      ? data
-      : Array.from({
-          length: Math.ceil(MIN_SLIDES_FOR_LOOP / data.length),
-        }).flatMap(() => data);
+  // const loopableCards =
+  //   data.length === 0
+  //     ? []
+  //     : data.length >= MIN_SLIDES_FOR_LOOP
+  //     ? data
+  //     : Array.from({
+  //         length: Math.ceil(MIN_SLIDES_FOR_LOOP / data.length),
+  //       }).flatMap(() => data);
+    const loopableCards =
+  data.length === 0
+    ? []
+    : [...data, ...data];
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",

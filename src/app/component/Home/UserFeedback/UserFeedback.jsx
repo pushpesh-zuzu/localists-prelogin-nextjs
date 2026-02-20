@@ -6,6 +6,20 @@ import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import UserFeedbackCard from "./UserFeedbackCard";
 import WithoutSpecialCardCarousel from "../../Carousel/WithoutSpecialCardCarousel";
 import { handleScrollToBottom } from "@/utils/scroll";
+// import dynamic from "next/dynamic";
+// import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
+
+// const WithoutSpecialCardCarousel = dynamic(
+//   () => import("../../Carousel/WithoutSpecialCardCarousel"),
+//   {
+//     loading: () => (
+//       <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
+//         <LoaderIndicator size="large" />
+//       </div>
+//     ),
+//     ssr: false
+//   }
+// );
 
 function UserFeedback({ feedbackData = [] }) {
   return (

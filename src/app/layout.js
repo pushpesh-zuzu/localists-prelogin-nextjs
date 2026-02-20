@@ -5,8 +5,9 @@ import TrackingScripts from "./component/common/TrackingScripts/TrackingScripts"
 import "./globals.css";
 import StoreProvider from "./StoreProvider";
 import { ToastProvider } from "@/utils/toaster";
-import CookieConsent from "./component/common/CookieConsent/CookieConsent";
+// import CookieConsent from "./component/common/CookieConsent/CookieConsent";
 import SEO from "./component/common/seo/SEO";
+import Script from "next/script";
 // import { headers } from "next/headers";
 
 export async function generateMetadata() {
@@ -39,11 +40,10 @@ export async function generateMetadata() {
   };
 }
 
-
 const inter = Inter({
   subsets: ["latin"],
   // variable: "--font-inter",
-  display: "swap",   // allows instant text paint
+  display: "swap", // allows instant text paint
 });
 
 export default function RootLayout({ children }) {
@@ -52,18 +52,18 @@ export default function RootLayout({ children }) {
       <head>
         <TrackingScripts />
       </head>
-      <body className={`${inter.className} antialiased`} suppressHydrationWarning
+      <body
+        className={`${inter.className} antialiased`}
+        suppressHydrationWarning
       >
         <StoreProvider>
           {/* <Header /> */}
+          <NoscriptTags />
           {children}
           {/* <TrackingScripts /> */}
-          <NoscriptTags />
-
           {/* Global Cookie Consent */}
           <SEO />
-          <CookieConsent />
-
+          {/* <CookieConsent /> */}
           <ToastProvider />
         </StoreProvider>
       </body>

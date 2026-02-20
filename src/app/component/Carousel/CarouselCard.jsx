@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import Image from "next/image";
 import H3 from "../UI/Typography/H3";
@@ -40,7 +40,7 @@ export default function CarouselCard({ card }) {
       <div className={`relative ${card?.slug? 'cursor-pointer':''} w-full h-full max-w-[281px] rounded-[20px] xl:rounded-[28px] overflow-hidden`}>
         <Image
           src={card.image}
-          alt={card.title}
+          alt={card.title || 'Service Images'}
           fill
           className="w-[244px] h-[213px] md:w-[180px] md:h-[132px] xl:w-[297px] max-w-[281px] xl:h-[248px]
           "
@@ -48,17 +48,30 @@ export default function CarouselCard({ card }) {
                (max-width: 1024px) 133px,
                (max-width: 1280px) 195px,
                297px"
-          priority
+          // priority
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
-        <H5
-          variant="medium"
-          className="text-white w-[80%] absolute bottom-2 lg:bottom-4 left-1/2 -translate-x-1/2 text-center
+         <h3
+          className="block md:hidden font-Inter font-black
+        tracking-[-0.03em] text-[24px]
+        md:text-[16px] 
+        lg:text-[25px] text-white w-[80%] absolute bottom-2 lg:bottom-4 left-1/2 -translate-x-1/2 text-center
         leading-[27px] md:leading-16px]! lg:leading-[25px]! md:line-clamp-4
-    lg:line-clamp-none"
+        lg:line-clamp-none"
         >
           {card.title}
-        </H5>
+        </h3>
+
+        <h4
+          className="hidden md:block font-Inter font-black
+        tracking-[-0.03em] text-[24px]
+        md:text-[16px] 
+        lg:text-[25px] text-white w-[80%] absolute bottom-2 lg:bottom-4 left-1/2 -translate-x-1/2 text-center
+        leading-[27px] md:leading-16px]! lg:leading-[25px]! md:line-clamp-4
+        lg:line-clamp-none"
+        >
+          {card.title}
+        </h4>
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-"use client"
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_CANNONICAL_SITE_URL || "https://localists.com/";

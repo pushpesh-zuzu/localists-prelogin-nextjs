@@ -90,6 +90,7 @@ export default function MobileSlideInSearch({
                     <button
                         onClick={closeSearch}
                         className="flex h-8 w-8 items-center justify-center rounded-full hover:bg-[#F3F3F3]"
+                        aria-label="search icons"
                     >
                         <ArrowLeft className="h-5 w-5 text-[#253238]" />
                     </button>

@@ -17,14 +17,18 @@ export default function PopularCardCarousel({
   const scrollableCards = data.filter((card) => !card.isSpecial);
   const MIN_SLIDES_FOR_LOOP = 6;
 
+  // const loopableCards =
+  //   scrollableCards.length === 0
+  //     ? []
+  //     : scrollableCards.length >= MIN_SLIDES_FOR_LOOP
+  //     ? scrollableCards
+  //     : Array.from({
+  //         length: Math.ceil(MIN_SLIDES_FOR_LOOP / scrollableCards.length),
+  //       }).flatMap(() => scrollableCards);
   const loopableCards =
-    scrollableCards.length === 0
-      ? []
-      : scrollableCards.length >= MIN_SLIDES_FOR_LOOP
-      ? scrollableCards
-      : Array.from({
-          length: Math.ceil(MIN_SLIDES_FOR_LOOP / scrollableCards.length),
-        }).flatMap(() => scrollableCards);
+  scrollableCards.length === 0
+    ? []
+    : [...scrollableCards, ...scrollableCards];
 
   const specialCardData = data.find((card) => card.isSpecial);
 
@@ -306,46 +310,17 @@ export default function PopularCardCarousel({
           onClick={scrollPrevMobile}
           style={{ left: `${mobileArrowSpacing - 1}px` }}
           className="absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 rounded-full z-10 hover:bg-gray-100"
+           aria-label="Previous slide"
         >
-          {/* <svg
-            width="20"
-            height="32"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-label="Previous slide"
-          >
-            <path
-              d="M15 18L9 12L15 6"
-              stroke="black"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg> */}
+
           <LeftArrowBlack />
         </button>
         <button
           onClick={scrollNextMobile}
           style={{ right: `${mobileArrowSpacing}px` }}
           className="absolute top-[40%]  -translate-y-1/2 bg-transparent text-gray-800  rounded-full z-10 hover:bg-gray-100"
+           aria-label="next slide"
         >
-          {/* <svg
-            width="20"
-            height="32"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-label="Next slide"
-          >
-            <path
-              d="M9 18L15 12L9 6"
-              stroke="black"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg> */}
           <RightArrowBlack />
         </button>
 
