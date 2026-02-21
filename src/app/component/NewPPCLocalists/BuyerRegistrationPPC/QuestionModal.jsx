@@ -295,7 +295,6 @@ const QuestionModal = ({
             setError("Please select at least one option");
             return;
         }
-        console.log("selectedOption", selected)
         if (hasOtherOptionSelected(selected) && otherText.trim() === "") {
             setError("Please enter a value for 'Other' option");
             return;

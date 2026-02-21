@@ -115,7 +115,7 @@ const OTPVerification = ({
                 showToast("success", result?.message);
 
                 const formData = new FormData();
-                formData.append("service_id", buyerRequest?.serviceId || "");
+                formData.append("service_id", serviceId || buyerRequest?.serviceId || "");
                 formData.append("postcode", buyerRequest?.postcode || "");
                 formData.append("city", citySerach || "");
                 formData.append("phone", buyerRequest?.phone || "");
@@ -139,7 +139,7 @@ const OTPVerification = ({
                                 step: 7,
                                 buyerRequest: buyerRequest,
                                 city: citySerach,
-                                serviceId: buyerRequest?.service_id,
+                                serviceId: serviceId ? serviceId : buyerRequest?.service_id,
                                 // baseRedirectPath: lastSegment ? lastSegment : "root",
                                 baseRedirectPath: localePattern.test(lastSegment) ? "root" : lastSegment
                             };

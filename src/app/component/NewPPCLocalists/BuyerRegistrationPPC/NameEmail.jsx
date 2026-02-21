@@ -93,7 +93,6 @@ const NameEmail = ({ nextStep, isPPCPages = false, onBack }) => {
   };
 
   useEffect(() => {
-    console.log(isEmailAvailable, "sss");
     if (!isEmailAvailable) {
       setEmail("");
       dispatch(
