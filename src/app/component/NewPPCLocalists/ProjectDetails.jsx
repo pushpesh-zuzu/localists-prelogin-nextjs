@@ -16,17 +16,16 @@ const projectImages = [
 function ProjectDetails() {
     return (
         <div
-            className="
+            className="bg-[#f5f7fa]
         flex flex-col items-center justify-center
-        text-center gap-[20px] px-[145px] pb-[72px]
+        text-center gap-[20px] px-[145px] pt-[48px] pb-[72px]
         max-[880px]:px-[60px] max-[880px]:pb-[40px]
         max-[520px]:px-[30px] max-[520px]:pb-[30px]"
         >
-            <H2 variant="secondary" className="md:mb-2 lg:mb-4">
+            <H2 variant="secondary" className="">
                 We've Completed{" "}
                 <span className="text-[#00afe3]">Over 2,700 Projects</span>
             </H2>
-
             <p
                 className="
           font-[Arial] tracking-[-0.03em]
