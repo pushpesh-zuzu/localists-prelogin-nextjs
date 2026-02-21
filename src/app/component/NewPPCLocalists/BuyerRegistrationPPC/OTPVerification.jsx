@@ -18,7 +18,8 @@ const OTPVerification = ({
     isThankuPageOnlyShow = false,
     setUpdateNumberStep,
     onBack,
-    className = "p-6"
+    className = "p-6",
+    serviceId
 }) => {
     const [otp, setOtp] = useState(["", "", "", ""]);
     const [timer, setTimer] = useState(60);
@@ -114,7 +115,7 @@ const OTPVerification = ({
                 showToast("success", result?.message);
 
                 const formData = new FormData();
-                formData.append("service_id", buyerRequest?.service_id || "");
+                formData.append("service_id", buyerRequest?.serviceId || "");
                 formData.append("postcode", buyerRequest?.postcode || "");
                 formData.append("city", citySerach || "");
                 formData.append("phone", buyerRequest?.phone || "");

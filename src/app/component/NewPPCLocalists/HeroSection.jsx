@@ -156,6 +156,7 @@ function HeroSection({
                                 open
                                 nextStep={nextStep}
                                 onBack={prevStep}
+                                serviceId={serviceId}
                                 isThankuPageOnlyShow
                                 setUpdateNumberStep={setUpdateNumberStep}
                             />
