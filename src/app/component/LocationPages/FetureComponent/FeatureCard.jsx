@@ -30,17 +30,19 @@ export default function FeatureCard({index, featured = false }) {
             : ""
         }`}
       >
-        {featured && (
-          <div
-            className="absolute z-40 -top-9.5 lg:-top-12.5 md:-left-[7px] left-[31%] rounded-tl-[20px] rounded-tr-[20px] font-[Arial] font-black 
-          tracking-[-0.03em]
-          text-[14px]
-          md:text-[16px]
-          lg:text-[25px] bg-[#10C87B] text-white px-8 py-1.5 md:px-4.5 lg:px-8"
-          >
-            FEATURED
-          </div>
-        )}
+       {featured && (
+  <div
+    className="absolute z-40 -top-9.5 lg:-top-12.5 md:-left-[7px] 
+    left-1/2 -translate-x-1/2 md:translate-x-0
+    rounded-tl-[20px] rounded-tr-[20px] font-[Arial] font-black 
+    tracking-[-0.03em]
+    text-[14px]
+    md:text-[16px]
+    lg:text-[25px] bg-[#10C87B] text-white px-8 py-1.5 md:px-4.5 lg:px-8"
+  >
+    FEATURED
+  </div>
+)}
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           {/* LEFT */}
           <div className="flex items-start max-[768px]:justify-between md:gap-4">
