@@ -443,7 +443,7 @@ const QuestionModal = ({
         <>
             <style jsx global>{keyframesCSS}</style>
             <FormWrapper>
-                <div className="pt-[20px] md:pt-[60px] pb-[20px] px-[10px] w-[780px] max-w-full mx-auto text-center flex justify-center">
+                <div className="pt-[20px] md:pt-[30px] lg:pt-[60px] pb-[20px] px-[10px] w-[780px] max-w-full mx-auto text-center flex justify-center">
                     <H3 className="text-[#00afe3] !font-medium">
                         {title}
                     </H3>

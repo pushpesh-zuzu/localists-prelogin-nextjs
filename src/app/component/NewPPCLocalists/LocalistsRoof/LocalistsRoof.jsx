@@ -59,8 +59,8 @@ function LocalistsRoof() {
             />
             <UserFeedback feedbackData={ROOFING_FEEDBACK} />
             <HowItWork />
-            <div className='md:px-[84px] px:0'>
-            <PopularCategories data={filteredCategories} />
+            <div className="lg:px-[84px] md:px-[30px] px-0 [&>*]:!pt-0">
+                <PopularCategories data={filteredCategories} />
             </div>
             <Member
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
