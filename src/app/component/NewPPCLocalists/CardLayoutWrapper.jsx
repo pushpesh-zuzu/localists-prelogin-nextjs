@@ -29,7 +29,7 @@ const CardLayoutWrapper = ({
         <div
             className={`
     flex justify-center items-center bg-white rounded-[20px]
-    ${OtpContainer ? "w-fit mx-auto h-fit py-5" : "w-full"}
+    ${OtpContainer ? "w-fit mx-auto h-fit py-5" : ""}
     ${NameEmailContainer ? "w-[85%] mx-auto h-fit py-5" : ""}
     max-[480px]:items-start
     ${NameEmailContainer ? "max-[480px]:w-[82%]" : ""}
