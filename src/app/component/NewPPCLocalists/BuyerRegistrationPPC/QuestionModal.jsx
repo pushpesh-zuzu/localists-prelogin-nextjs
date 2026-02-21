@@ -555,7 +555,7 @@ const QuestionModal = ({
                                                                     src={opt.image}
                                                                     alt={opt.label}
                                                                     className={`
-                                                                    w-full md:h-[120px] h-auto
+                                                                    w-full lg:h-[120px] h-auto
                                                                     cursor-pointer
                                                              transition-all duration-200 ease-in-out
                                                                     hover:-translate-y-[3px]
