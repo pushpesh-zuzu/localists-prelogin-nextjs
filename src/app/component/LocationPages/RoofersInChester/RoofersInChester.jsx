@@ -5,10 +5,10 @@ import {
   FREQUENTLY_DATA_TREE_SURGEON_CHESTER,
   POPULAR_SERVICES_CHESTER,
   QUESTION_AND_ABOUT_SERVICE_CHESTER,
-  // TREE_SRUGEON_ADVICEINSIGHT_CHESTER,
+  TREE_SRUGEON_ADVICEINSIGHT_CHESTER,
   TREE_SUREON_FEEDBACK_CHESTER,
-  // TREE_SURGEON_DATA_CHESTER,
-  // TREE_SURGEON_TABDATA_CHESTER,
+  TREE_SURGEON_DATA_CHESTER,
+  TREE_SURGEON_TABDATA_CHESTER,
   VETTED_DATA_TREE_SURGEON_CHESTER,
 } from "./RoofersInChesterData";
 import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
@@ -19,11 +19,11 @@ import Footer from "../../Footer/Footer";
 import AboutServicesAndQuestions from "../../Nearme/AboutServicesAndQuestions";
 import { FAQ } from "../../Nearme/FAQ";
 import UserFeedbackNearMe2 from "../../Nearme/UserFeedbackNearMe2";
-// import DiscoverNearMe from "../../Nearme/DiscoverNearMe";
+import DiscoverNearMe from "../../Nearme/DiscoverNearMe";
 import NearmeMember from "../../Nearme/NearmeMember";
 import FAQScript from "../../common/seo/FAQScript";
-// import HireRelatedToServiceNearMe from "../../Nearme/HireRelatedToServiceNearMe";
-// import AdviceInsightNearMe from "../../Nearme/AdviceInsightNearMe";
+import HireRelatedToServiceNearMe from "../../Nearme/HireRelatedToServiceNearMe";
+import AdviceInsightNearMe from "../../Nearme/AdviceInsightNearMe";
 
 function RoofersInChester() {
   return (
@@ -51,7 +51,7 @@ function RoofersInChester() {
       <PopularJobNearMe
         services={POPULAR_SERVICES_CHESTER}
         popularImage="/nearme/Roofing/roofslate.webp"
-        altText="a tree surgeon cutting the branches of an evergreen tree"
+       altText="two roofers installing slate tiles onto a brand new roof URL"
         mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
         paddingClass="px-[17.5px] py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[0px]"
       />
@@ -61,10 +61,10 @@ function RoofersInChester() {
         serviceName="Roofing" 
         contentBlocks={QUESTION_AND_ABOUT_SERVICE_CHESTER}
       />
-      {/* <AdviceInsightNearMe
+      <AdviceInsightNearMe
         articles={TREE_SRUGEON_ADVICEINSIGHT_CHESTER}
         padding="px-7.5 pb-[70px] pt-[0px] sm:px-10 md:px-16 md:pb-10 md:pt-0 xl:px-[120px] lg:pt-[0px] lg:pb-[72px]"
-      /> */}
+      />
       <FAQ
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px]  mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
         headdingblue="Frequently Asked Questions About "
@@ -73,13 +73,13 @@ function RoofersInChester() {
       />
       <UserFeedbackNearMe2 feedbackData={TREE_SUREON_FEEDBACK_CHESTER} />
 
-      {/* <DiscoverNearMe homeData={TREE_SURGEON_DATA_CHESTER} /> */}
-      {/* <HireRelatedToServiceNearMe
+      <DiscoverNearMe homeData={TREE_SURGEON_DATA_CHESTER} />
+      <HireRelatedToServiceNearMe
         heading1="Hire with"
         heading2="confidence."
         tabData={TREE_SURGEON_TABDATA_CHESTER}
         activeTabkey="popular"
-      /> */}
+      />
       <NearmeMember
         // mobileImage="/location/tree_surgeon_member_location_mobile.webp"
         // desktopImage="/location/tree_surgeon_member_location_desktop.webp"

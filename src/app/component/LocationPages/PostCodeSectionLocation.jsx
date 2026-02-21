@@ -21,7 +21,7 @@ function PostCodeSectionLocation({
     >
       <div
         className="flex flex-col gap-6
-        lg:flex-row lg:items-center lg:justify-between"
+        xl:flex-row lg:items-center lg:justify-between"
       >
         <p
           className="block lg:hidden text-center
@@ -60,7 +60,7 @@ function PostCodeSectionLocation({
           Free quotes. Zero obligation.
         </p>
       </div>
-      <div className="flex justify-center md:justify-end mt-[30px] md:mt-2.5">
+      <div className="flex justify-center xl:justify-end mt-[30px] xl:mt-2.5">
         <LogoWhiteIcon className="h-[28px] w-[153px] md:h-auto md:w-auto"/>
         </div>
     </div>

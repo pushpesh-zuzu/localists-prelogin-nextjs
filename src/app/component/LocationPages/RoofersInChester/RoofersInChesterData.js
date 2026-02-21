@@ -23,6 +23,7 @@ export const QUESTION_AND_ABOUT_SERVICE_CHESTER = [
     type: "p",
     text: "General roof repairs cost £750 on average but this can go increase or decrease based on the complexity of the job and scale of the damage. Small leaks, cracked tiles, or early signs of wear can cost anywhere between £350 and £1,450 to repair. Catching these early can save you from much bigger bills later."
   },
+  { type: "PostCodeSectionLocation" },
   {
     type: "pbold",
     text: "Flat roof repairs"
@@ -226,70 +227,45 @@ export const TREE_SRUGEON_ADVICEINSIGHT_CHESTER = [
 ];
 export const TREE_SURGEON_TABDATA_CHESTER = {
   popular: [
-    {
-      title: "Landscapers Near Me",
-      url: "/en/gb/landscape-gardeners-near-me",
-    },
-    {
-      title: "Plumbers Near Me",
-      url: "",
-    },
-    {
-      title: "Maths Tutor in Manchester",
-      url: "",
-    },
-    {
-      title: "Plumbers in Birmingham",
-      url: "",
-    },
-    {
-      title: "Gardeners in Wolverhampton",
-      url: "",
-    },
-    {
-      title: "Plumbers in Birmingham",
-      url: "",
-    },
-    {
-      title: "Roofers in Norwich",
-      url: "",
-    },
-    {
-      title: "Garden Designers in Cardiff",
-      url: "",
-    },
-    {
-      title: "Electricians in London",
-      url: "",
-    },
-    {
-      title: "Roofers in Edinburgh",
-      url: "",
-    },
-    {
-      title: "Patio Layers in Manchester",
-      url: "",
-    },
-    {
-      title: "Plumbers in Birmingham",
-      url: "",
-    },
+      {
+            title: "Landscapers Near Me",
+            url: "/en/gb/landscape-gardeners-near-me",
+        },
+        {
+            title: "Gardeners Near Me",
+            url: "",
+        },
+        {
+            title: "Architects Near Me",
+            url: "",
+        },
+        {
+            title: "Gutter Cleaners Near Me",
+            url: "/en/gb/gutter-cleaning-near-me",
+        },
+        {
+            title: "Fencing Contractors Near Me",
+            url: "/en/gb/fencing-contractors-near-me",
+        },
+        {
+            title: "Artificial Grass Installers Near Me",
+            url: "/en/gb/artificial-grass-installers-near-me",
+        },
   ],
   related: [
-    "Tree Surgeons Hull",
-    "Tree Surgeons York",
-    "Tree Surgeons Leeds",
-    "Tree Surgeons Bolton",
-    "Tree Surgeons Chester",
-    "Tree Surgeons Cheshire",
-    "Tree Surgeons Liverpool",
-    "Tree Surgeons Harrogate",
-    "Tree Surgeons Stockport",
-    "Tree Surgeons Manchester",
-    "Tree Surgeons North Yorkshire",
+   "Roofers Leeds",
+        "Roofers York",
+        "Roofers Hull",
+        "Roofers Bolton",
+        "Roofers Chester",
+        "Roofers Cheshire",
+        "Roofers Harrogate",
+        "Roofers Liverpool",
+        "Roofers Manchester",
+        "Roofers Stockport",
+        "Roofers North Yorkshire",
   ],
-  findMore: ["xyz"],
-  // insight: [],
+  findMore: [],
 };
 export const VETTED_DATA_TREE_SURGEON_CHESTER = [
   `Roofs are great  at staying out of sight and out of mind - right up until they decide to cause a scene. One day everything’s fine, the next there’s a suspicious drip, a tile that’s gone AWOL, or rain setting up camp where it definitely doesn’t belong.
