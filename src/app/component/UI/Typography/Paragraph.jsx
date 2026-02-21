@@ -27,6 +27,10 @@ export default function Paragraph({
          VeryprimarySmall: `text-[12px] leading-[12px]
         md:text-[16px] md:leading-[22px]
         lg:text-[20px] lg:leading-[24px]`,
+
+         optional: `text-[16px] leading-[18px]
+        md:text-[18px] md:leading-[20px]
+        lg:text-[20px] lg:leading-[22px]`,
   };
 
   // Handle dangerouslySetInnerHTML
