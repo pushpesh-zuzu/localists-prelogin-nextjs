@@ -173,7 +173,7 @@ const PhoneNumber = ({
     };
 
     return (
-        <FormWrapper>
+        <FormWrapper className="px-[20px] md:px-0 py-4 md:py-5">
             <CardLayoutWrapper
                 title="Please Enter Your Mobile Telephone Number"
                 onButtonClick={handleSubmit}
@@ -217,12 +217,6 @@ const PhoneNumber = ({
                             </span>
                         )}
                     </div>
-
-                    {/* <p className="mt-7 text-gray-700 text-center">
-          We can only send a passcode to a{" "}
-          <strong className="font-extrabold">MOBILE NUMBER</strong>, not a{" "}
-          <strong className="font-extrabold">LANDLINE</strong>
-        </p> */}
 
                     <p
                         className="

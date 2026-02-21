@@ -1,8 +1,8 @@
-export default function FormWrapper({ children, paddingInline }) {
+export default function FormWrapper({ children, className }) {
   return (
     <div
       className={`
-        ${paddingInline}
+        ${className}
          w-[970px]
         bg-white
         rounded-[20px]
