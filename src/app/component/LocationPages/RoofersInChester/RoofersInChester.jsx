@@ -24,6 +24,7 @@ import NearmeMember from "../../Nearme/NearmeMember";
 import FAQScript from "../../common/seo/FAQScript";
 import HireRelatedToServiceNearMe from "../../Nearme/HireRelatedToServiceNearMe";
 import AdviceInsightNearMe from "../../Nearme/AdviceInsightNearMe";
+import Feature from "../FetureComponent/Feature";
 
 function RoofersInChester() {
   return (
@@ -61,9 +62,10 @@ function RoofersInChester() {
         serviceName="Roofing" 
         contentBlocks={QUESTION_AND_ABOUT_SERVICE_CHESTER}
       />
+      <Feature/>
       <AdviceInsightNearMe
         articles={TREE_SRUGEON_ADVICEINSIGHT_CHESTER}
-        padding="px-7.5 pb-[70px] pt-[0px] sm:px-10 md:px-16 md:pb-10 md:pt-0 xl:px-[120px] lg:pt-[0px] lg:pb-[72px]"
+        padding="px-7.5 py-[70px] sm:px-10 md:px-16 md:py-10  xl:px-[120px]  lg:py-[72px]"
       />
       <FAQ
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px]  mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
