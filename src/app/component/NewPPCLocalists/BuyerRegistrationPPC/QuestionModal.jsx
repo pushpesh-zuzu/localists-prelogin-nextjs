@@ -433,7 +433,7 @@ const QuestionModal = ({
     // console.log("formattedQuestions", imageQuestionData)
 
     const modalOverlayClass = "relative top-0 left-0 w-full flex items-center justify-center";
-    const modalContentClass = `bg-white px-[20px] pt-[15px] pb-[23px] px-[110px] w-full text-center text-[#253238] transition-all duration-300 ease-in-out ${isAnimating
+    const modalContentClass = `bg-white px-[20px] pt-[25px] pb-[23px] md:px-[110px] w-full text-center text-[#253238] transition-all duration-300 ease-in-out ${isAnimating
         ? animationDirection === "next"
             ? "[animation:slideOutLeft_0.3s_ease-in_forwards]"
             : "[animation:slideOutRight_0.3s_ease-in_forwards]"
@@ -453,12 +453,12 @@ const QuestionModal = ({
         <>
             <style jsx global>{keyframesCSS}</style>
             <FormWrapper>
-                <div className="pt-[60px] pb-[20px] px-[10px] w-[780px] max-w-full mx-auto text-center flex justify-center">
+                <div className="pt-[30px] md:pt-[60px] pb-[20px] px-[10px] w-[780px] max-w-full mx-auto text-center flex justify-center">
                     <H3 className="text-[#00afe3] !font-medium">
                         {title}
                     </H3>
                 </div>
-                <div className="mt-4 h-[3px] w-[400px] overflow-hidden bg-[#EDEDED] max-w-full mx-auto flex justify-start">
+                <div className="mt-4 h-[3px] w-[250px] md:w-[400px] overflow-hidden bg-[#EDEDED] max-w-full mx-auto flex justify-start">
                     <div
                         className="bg-[#00afe3] transition-all duration-500 ease-out pt-[10px] pb-[30px]"
                         style={{ width: `${progressPercent}%` }}
@@ -480,7 +480,7 @@ const QuestionModal = ({
                                                 ? ""
                                                 : ""
                                             : (
-                                                <div className="max-[768px]:mt-[-30px] text-[#00afe3]">
+                                                <div className="mt-0 md:mt-[15px] text-[#00afe3]">
                                                     {questions[currentQuestion]?.questions}
                                                 </div>
                                             )
@@ -565,7 +565,7 @@ const QuestionModal = ({
                                                                     src={opt.image}
                                                                     alt={opt.label}
                                                                     className={`
-                                                                    w-full h-[140px]
+                                                                    w-full h-auto
                                                                     cursor-pointer
                                                              transition-all duration-200 ease-in-out
                                                                     hover:-translate-y-[3px]

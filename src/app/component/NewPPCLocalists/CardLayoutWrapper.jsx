@@ -34,7 +34,7 @@ const CardLayoutWrapper = ({
       `}
         >
 
-            <div className={`bg-white rounded-[20px] mt-[20px] ${NameEmailContainer ? "w-[85%] mx-auto h-fit" : ""}`}>
+            <div className={`bg-white rounded-[20px] mt-[20px ${NameEmailContainer ? "w-[85%] mx-auto h-fit" : ""}`}>
                 {titleHeading && (
                     <H4 className="mb-[20px] leading-[26px] md:leading-[16px] lg:leading-[30px] max-[768px]:mb-[15px] text-[#253238] text-center">
                         {titleHeading}
@@ -109,7 +109,7 @@ const CardLayoutWrapper = ({
                   max-[768px]:w-[52px]
                   max-[768px]:h-[52px]
 
-                  max-[480px]:w-[48px]
+                  max-[480px]:w-[70px]
                   max-[480px]:h-[48px]
                 `}
                             >

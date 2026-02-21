@@ -14,6 +14,10 @@ import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { handleScrollToBottom } from "@/utils/handleScrollToBottom";
 import PostcodeSearch from "./BuyerRegistrationPPC/PostcodeSearch";
 import NameEmail from "./BuyerRegistrationPPC/NameEmail";
+import PhoneNumber from "./BuyerRegistrationPPC/PhoneNumber";
+import OTPVerification from "./BuyerRegistrationPPC/OTPVerification";
+import CardLayoutWrapper from "./CardLayoutWrapper";
+import DescribeYourRequest from "./BuyerRegistrationPPC/DescribeYourRequest";
 
 function HeroSection({
     title = "",
@@ -34,8 +38,9 @@ function HeroSection({
         useSelector((state) => state.buyer);
 
     const [localRequestId, setLocalRequestId] = useState(null);
-    const [reEnterMobile, setReEnterMobile] = useState(2);
+    const [updateNumberStep, setUpdateNumberStep] = useState(2);
     const [backButtonTriggered, setBackButtonTriggered] = useState(false);
+
 
     const stepFlow = [1, 2, 3, 4, 5, 6];
     const isAdminOrRemembered = authToken || userToken?.remember_tokens;
@@ -132,6 +137,38 @@ function HeroSection({
                             onBack={prevStep}
                             isStartWithQuestionModal={true}
                         />
+                    )}
+
+                    {buyerStep === 4 && (
+                        <PhoneNumber
+                            nextStep={nextStep}
+                            onBack={prevStep}
+                            serviceId={serviceId}
+                            setUpdateNumberStep={setUpdateNumberStep}
+                            updateNumberStep={updateNumberStep}
+                            setLocalRequestId={setLocalRequestId}
+                        />
+                    )}
+
+                    {buyerStep === 5 && (
+                        <CardLayoutWrapper showButton={false}>
+                            <OTPVerification
+                                open
+                                nextStep={nextStep}
+                                onBack={prevStep}
+                                isThankuPageOnlyShow
+                                setUpdateNumberStep={setUpdateNumberStep}
+                            />
+                        </CardLayoutWrapper>
+                    )}
+
+                    {buyerStep === 6 && (
+                        <CardLayoutWrapper
+                            showBackButton={false}
+                            showButton={false}
+                        >
+                            <DescribeYourRequest />
+                        </CardLayoutWrapper>
                     )}
                 </div>
             </div>
