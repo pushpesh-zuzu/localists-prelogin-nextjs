@@ -34,7 +34,7 @@ export function FetureSearchBox() {
       >
         <input
           placeholder="Enter Postcode"
-          className="text-left text-sm w-[50%] md:w-[80%] text-[#253238] outline-none placeholder:text-gray-400"
+          className="text-left text-sm w-[80%] md:w-[80%] text-[#253238] outline-none placeholder:text-gray-400"
         />
         <SearchIcon className="h-4 w-4 absolute top-[35%] right-4" />
       </div>
