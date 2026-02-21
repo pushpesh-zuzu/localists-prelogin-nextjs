@@ -24,26 +24,27 @@ function Header() {
                         </div>
 
                         {/* Right Ratings */}
-                        <div className="flex items-center justify-center gap-3.5 md:gap-5 mt-1 md:mt-0">
-                            <Image
-                                src="/newppc/checkimage.png"
-                                alt="Localists Checkatrade Rating"
-                                width={193}
-                                height={70}
-                                priority
-                                className="h-auto w-auto max-h-[65px] md:max-h-[70px] xl:max-h-[70px]
-               rounded-[5px] md:shadow-[2px_2px_5px_0_#707070] shadow-[0_1px_5px_#0003]"
-                            />
-
-                            <Image
-                                src="/newppc/googlestar.png"
-                                alt="Localists Google Rating"
-                                width={193}
-                                height={70}
-                                priority
-                                className="h-auto w-auto max-h-[65px] md:max-h-[70px] xl:max-h-[70px]
-               rounded-[5px] md:shadow-[2px_2px_5px_0_#707070] shadow-[0_1px_5px_#0003]"
-                            />
+                        <div className="flex items-center justify-center gap-3 md:gap-5 mt-1 md:mt-0">
+                            <div className="relative w-[160px] md:w-[170px] h-[65px] md:h-[70px] xl:h-[70px]">
+                                <Image
+                                    src="/newppc/checkimage.webp"
+                                    alt="Localists Checkatrade Rating"
+                                    fill
+                                    priority
+                                    sizes="(max-width: 768px) 160px, 170px"
+                                    className="rounded-[5px] md:shadow-[2px_2px_5px_0_#707070] shadow-[0_1px_5px_#0003]"
+                                />
+                            </div>
+                            <div className="relative w-[160px] md:w-[170px] h-[65px] md:h-[70px] xl:h-[70px]">
+                                <Image
+                                    src="/newppc/googlestar.webp"
+                                    alt="Localists Google Rating"
+                                    fill
+                                    priority
+                                    sizes="(max-width: 768px) 160px, 170px"
+                                    className="rounded-[5px] md:shadow-[2px_2px_5px_0_#707070] shadow-[0_1px_5px_#0003]"
+                                />
+                            </div>
                         </div>
                     </div>
 
