@@ -185,7 +185,7 @@ const OTPVerification = ({
     };
 
     return (
-        <FormWrapper>
+        <FormWrapper className="lg:pt-2">
             <div className={`${className}`}>
                 <h2 className="font-extrabold text-lg md:text-lg sm:text-lg text-center text-black mb-5">
                     OTP Verification

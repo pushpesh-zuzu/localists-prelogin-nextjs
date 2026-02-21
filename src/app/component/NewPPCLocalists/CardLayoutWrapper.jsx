@@ -23,19 +23,20 @@ const CardLayoutWrapper = ({
     NameEmailContainer = false,
     titleHeading = "",
     buttonWrapperClassName = "",
-    OtpContainer = false
+    OtpContainer = false,
+    phonenumber = false
 }) => {
     return (
         <div
             className={`
     flex justify-center items-center bg-white rounded-[20px]
-    ${OtpContainer ? "w-fit mx-auto h-fit py-5" : ""}
-    ${NameEmailContainer ? "w-[85%] mx-auto h-fit py-5" : ""}
+    ${OtpContainer ? "w-fit mx-auto" : ""}
+    ${phonenumber? "md:w-[60%] mx-auto" : ""}
+    ${NameEmailContainer ? "w-[85%] mx-auto h-fit py-5 mt-2 md:mt-6" : ""}
     max-[480px]:items-start
-    ${NameEmailContainer ? "max-[480px]:w-[82%]" : ""}
-  `}
-        >
-            <div className={`bg-white rounded-[20px] mt-[20px ${NameEmailContainer ? "w-[85%] md:w-[60%] mx-auto h-fit" : ""}`}>
+    ${NameEmailContainer ? "max-[480px]:w-[95%]" : ""}
+  `}>
+            <div className={`bg-white rounded-[20px] mt-0 md:mt-[10px] ${NameEmailContainer ? "w-[85%] md:w-[60%] mx-auto h-fit" : ""}`}>
                 {titleHeading && (
                     <H4 className="mb-[20px] leading-[26px] md:leading-[16px] lg:leading-[30px] max-[768px]:mb-[15px] text-[#253238] text-center">
                         {titleHeading}
@@ -99,7 +100,7 @@ const CardLayoutWrapper = ({
                   w-[71px] h-[50px]
                   bg-[#f5f5f5]
                   border-2 border-[#e1e5e9]
-                  rounded-[10px] cursor-pointer
+                  rounded-lg cursor-pointer
                   flex items-center justify-center
                   transition-all duration-300
                   active:translate-y-[1px] gap-[5px]
@@ -126,7 +127,7 @@ const CardLayoutWrapper = ({
                             className={`
                 flex-1 h-[50px]
                 bg-[#00afe3] text-white
-                rounded-[20px] hover:bg-[#0096C4] font-bold
+                rounded-lg hover:bg-[#0096C4] font-bold
                 transition-colors duration-300
                 cursor-pointer
                 active:translate-y-[1px]

@@ -7,7 +7,7 @@ import {
     setbuyerRequestData,
 } from "@/lib/store/buyerslice/buyerSlice";
 import { extractAllParams } from "@/utils/decodeURLParams";
-import { handleScrollToBottom } from "@/utils/handleScrollToBottom";
+// import { handleScrollToBottom } from "@/utils/handleScrollToBottom";
 
 import FormWrapper from "../FormWrapper";
 import CardLayoutWrapper from "../CardLayoutWrapper";
@@ -170,8 +170,8 @@ const QuestionModal = ({
 
     const totalQuestions = questions?.length;
     const progressPercent =
-        totalQuestions > 1
-            ? (currentQuestion / (totalQuestions - 1)) * 100
+        totalQuestions > 0
+            ? ((currentQuestion + 1) / totalQuestions) * 100
             : 0;
 
     const hasOtherOptionSelected = (options) =>
@@ -381,7 +381,7 @@ const QuestionModal = ({
                 setOtherText("");
             }, 0);
         } else {
-            handleScrollToBottom();
+            // handleScrollToBottom();
         }
     };
 
@@ -410,7 +410,7 @@ const QuestionModal = ({
 
     useEffect(() => {
         if (typeof window !== "undefined" && window.innerWidth < 768) {
-            handleScrollToBottom();
+            // handleScrollToBottom();
         }
         if (optionsContainerRef.current) {
             optionsContainerRef.current.scrollTop = 0;
@@ -443,12 +443,12 @@ const QuestionModal = ({
         <>
             <style jsx global>{keyframesCSS}</style>
             <FormWrapper>
-                <div className="pt-[30px] md:pt-[60px] pb-[20px] px-[10px] w-[780px] max-w-full mx-auto text-center flex justify-center">
+                <div className="pt-[20px] md:pt-[60px] pb-[20px] px-[10px] w-[780px] max-w-full mx-auto text-center flex justify-center">
                     <H3 className="text-[#00afe3] !font-medium">
                         {title}
                     </H3>
                 </div>
-                <div className="mt-4 h-[3px] w-[250px] md:w-[400px] overflow-hidden bg-[#EDEDED] max-w-full mx-auto flex justify-start">
+                <div className="mt-0 md:mt-4 h-[3px] w-[250px] md:w-[400px] overflow-hidden bg-[#EDEDED] max-w-full mx-auto flex justify-start">
                     <div
                         className="bg-[#00afe3] transition-all duration-500 ease-out pt-[10px] pb-[30px]"
                         style={{ width: `${progressPercent}%` }}

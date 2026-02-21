@@ -7,8 +7,7 @@ function Header() {
         <header>
             <div
                 className="w-full top-0 left-0 border-b border-[#DEDEDE] bg-white z-50"
-                role="banner"
-            >
+                role="banner">
                 <WrapperBGWidth>
                     <div className="flex flex-col md:flex-row items-center md:items-center justify-between md:px-[70px] lg:px-12 xl:px-61.5 pt-1 pb-2 md:pt-2.5 md:pb-2.5 xl:pt-[10px] xl:pb-3">
 

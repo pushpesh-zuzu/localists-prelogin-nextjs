@@ -96,7 +96,7 @@ const DescribeYourRequest = () => {
     };
 
     return (
-        <FormWrapper className="py-2">
+        <FormWrapper className="pb-[20px] pt-[20px] lg:pt-[40px] px-[20px] md:px-[30px] lg:px-0">
             <div className="max-w-[500px] relative mx-auto">
                 {buyerStep === 10 ? (
                     <div className="flex justify-center items-center py-10">

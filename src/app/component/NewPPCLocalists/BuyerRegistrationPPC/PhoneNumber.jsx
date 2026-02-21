@@ -173,7 +173,7 @@ const PhoneNumber = ({
     };
 
     return (
-        <FormWrapper className="px-[20px] md:px-0 py-4 md:py-5">
+        <FormWrapper className="px-[20px] md:px-15 lg:pt-[40px] pt-[20px] pb-[20px]">
             <CardLayoutWrapper
                 title="Please Enter Your Mobile Telephone Number"
                 onButtonClick={handleSubmit}
@@ -183,6 +183,7 @@ const PhoneNumber = ({
                 disableNextButton={requestLoader || isSubmitting}
                 loader={requestLoader || isSubmitting}
                 titleWidth='max-w-full'
+                phonenumber={true}
             >
                 <div className="mb-2">
                     <div
