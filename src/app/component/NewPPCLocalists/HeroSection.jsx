@@ -151,7 +151,7 @@ function HeroSection({
                     )}
 
                     {buyerStep === 5 && (
-                        <CardLayoutWrapper showButton={false}>
+                        <CardLayoutWrapper OtpContainer={true} showButton={false}>
                             <OTPVerification
                                 open
                                 nextStep={nextStep}

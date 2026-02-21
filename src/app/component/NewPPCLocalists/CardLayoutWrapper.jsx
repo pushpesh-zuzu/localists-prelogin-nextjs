@@ -23,15 +23,18 @@ const CardLayoutWrapper = ({
     NameEmailContainer = false,
     titleHeading = "",
     buttonWrapperClassName = "",
+    OtpContainer = false
 }) => {
     return (
         <div
             className={`
-        flex justify-center items-center bg-white rounded-[10px] w-full
-        ${NameEmailContainer ? "w-[85%] mx-auto h-fit py-5" : ""}
-        max-[480px]:items-start
-        ${NameEmailContainer ? "max-[480px]:w-[82%]" : ""}
-      `} >
+    flex justify-center items-center bg-white rounded-[20px]
+    ${OtpContainer ? "w-fit mx-auto h-fit py-5" : "w-full"}
+    ${NameEmailContainer ? "w-[85%] mx-auto h-fit py-5" : ""}
+    max-[480px]:items-start
+    ${NameEmailContainer ? "max-[480px]:w-[82%]" : ""}
+  `}
+        >
             <div className={`bg-white rounded-[20px] mt-[20px ${NameEmailContainer ? "w-[85%] md:w-[60%] mx-auto h-fit" : ""}`}>
                 {titleHeading && (
                     <H4 className="mb-[20px] leading-[26px] md:leading-[16px] lg:leading-[30px] max-[768px]:mb-[15px] text-[#253238] text-center">
