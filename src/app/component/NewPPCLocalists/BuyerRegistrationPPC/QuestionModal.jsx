@@ -8,12 +8,13 @@ import {
 } from "@/lib/store/buyerslice/buyerSlice";
 import { extractAllParams } from "@/utils/decodeURLParams";
 // import { handleScrollToBottom } from "@/utils/handleScrollToBottom";
-
 import FormWrapper from "../FormWrapper";
 import CardLayoutWrapper from "../CardLayoutWrapper";
 import H3 from "../../UI/Typography/H3";
 import H4 from "../../UI/Typography/H4";
 import RoofOptionsIconsData from "../LocalistsRoof/RoofOptionsIconsData";
+import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
+
 
 const keyframesCSS = `
 @keyframes slideInRight {
@@ -50,17 +51,6 @@ const keyframesCSS = `
 }
 `;
 
-const CustomSpinner = ({ size = "large" }) => (
-    <div
-        className={`inline-block rounded-full border-4 border-solid border-gray-200 border-t-blue-500 flex ${size === "large" ? "h-12 w-12" : "h-8 w-8"
-            } animate-spin`}
-        role="status"
-        aria-label="Loading"
-    >
-        <span className="sr-only">Loading...</span>
-    </div>
-);
-
 const QuestionModal = ({
     title,
     questions = [],
@@ -92,8 +82,6 @@ const QuestionModal = ({
         backButtonTriggered && setSelectedOption([''])
     }, [backButtonTriggered])
 
-    const hasInitializedRef = useRef(false);
-
     useEffect(() => {
         if (questions.length > 0 && currentQuestion === -1) {
             setCurrentQuestion(0);
@@ -111,7 +99,8 @@ const QuestionModal = ({
         if (
             questions.length > 0 &&
             buyerRequest?.questions?.length > 0 &&
-            !hasInitializedRef.current
+            questionHistory.length === 1 && // only initialize once
+            currentQuestion === 0
         ) {
             const savedQuestions = buyerRequest.questions;
             const reconstructedHistory = [0];
@@ -125,23 +114,18 @@ const QuestionModal = ({
                 }
             });
 
-            const lastQuestionNo = savedQuestions[savedQuestions.length - 1]?.question_no;
-            const lastQuestionIndex = questionIndexMap[lastQuestionNo];
+            const lastQuestionNo =
+                savedQuestions[savedQuestions.length - 1]?.question_no;
+
+            const lastQuestionIndex =
+                questionIndexMap[lastQuestionNo];
 
             if (lastQuestionIndex !== undefined) {
                 setQuestionHistory(reconstructedHistory);
                 setCurrentQuestion(lastQuestionIndex);
             }
-
-            hasInitializedRef.current = true;
         }
-    }, [questions, buyerRequest?.questions]);
-
-    useEffect(() => {
-        return () => {
-            hasInitializedRef.current = false;
-        };
-    }, []);
+    }, [questions]);
 
     useEffect(() => {
         if (questions.length > 0 && buyerRequest?.questions?.length > 0) {
@@ -458,7 +442,8 @@ const QuestionModal = ({
                     <div className={modalContentClass}>
                         {questions.length === 0 ? (
                             <div className={loaderContainerClass}>
-                                <CustomSpinner size="large" />
+                                {/* <CustomSpinner size="large" /> */}
+                                <LoaderIndicator size="large" />
                             </div>
                         ) : questions.length > 0 ? (
                             <>
