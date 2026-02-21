@@ -76,16 +76,7 @@ const QuestionModal = ({
         typeof window !== "undefined" &&
         extractAllParams(searchParams ? searchParams.toString() : window.location.search);
 
-    const campaignid = allParams.gad_campaignid || "";
-    const keyword = allParams.keyword || "";
-    const gclid = allParams.gclid || "";
-    const campaign = allParams.utm_campaign || "";
-    const adGroup = allParams.AgId || "";
-    const targetID = allParams.utm_term || "";
-    const msclickid = allParams.utm_msclkid || "";
-    const utm_source = allParams.utm_source || "";
     const optionsContainerRef = useRef(null);
-
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [selectedOption, setSelectedOption] = useState([]);
@@ -545,7 +536,7 @@ const QuestionModal = ({
                                                                         setSelectedOption([opt.label]);
                                                                         setTimeout(() => {
                                                                             handleNext([opt.label]);
-                                                                        }, 150);
+                                                                        }, 200);
                                                                     } else {
                                                                         // checkbox behaviour
                                                                         if (isSelected) {
@@ -564,7 +555,7 @@ const QuestionModal = ({
                                                                     src={opt.image}
                                                                     alt={opt.label}
                                                                     className={`
-                                                                    w-full h-auto
+                                                                    w-full md:h-[120px] h-auto
                                                                     cursor-pointer
                                                              transition-all duration-200 ease-in-out
                                                                     hover:-translate-y-[3px]

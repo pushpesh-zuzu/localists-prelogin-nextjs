@@ -107,7 +107,7 @@ function HeroSection({
                     {description}
                 </Paragraph1>
                 <div className="pt-[40px] pb-0 flex justify-center">
-                    {buyerStep === 6 && (
+                    {buyerStep === 1 && (
                         <Suspense fallback={null}>
                             <QuestionModal
                                 title={title}
@@ -163,7 +163,7 @@ function HeroSection({
                         </CardLayoutWrapper>
                     )}
 
-                    {buyerStep === 1 && (
+                    {buyerStep === 6 && (
                         <CardLayoutWrapper
                             showBackButton={false}
                             showButton={false}
