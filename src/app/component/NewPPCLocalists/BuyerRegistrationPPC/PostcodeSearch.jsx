@@ -101,8 +101,8 @@ const PostcodeSearch = ({
     };
     return (
         <>
-            <FormWrapper>
-                <div className="pt-[60px] pb-[20px] px-[10px] w-[780px] max-w-full mx-auto text-center flex justify-center">
+            <FormWrapper paddingInline="px-[20px] md:px-0">
+                <div className="pt-[30px] md:pt-[60px] pb-[20px] w-[780px] max-w-full mx-auto text-center flex justify-center">
                     <H3 className="text-[#00afe3] !font-medium">
                         Get quotes from verified {titleHeading} you can trust
                     </H3>

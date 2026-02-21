@@ -52,7 +52,7 @@ const keyframesCSS = `
 
 const CustomSpinner = ({ size = "large" }) => (
     <div
-        className={`inline-block rounded-full border-4 border-solid border-gray-200 border-t-blue-500 ${size === "large" ? "h-12 w-12" : "h-8 w-8"
+        className={`inline-block rounded-full border-4 border-solid border-gray-200 border-t-blue-500 flex ${size === "large" ? "h-12 w-12" : "h-8 w-8"
             } animate-spin`}
         role="status"
         aria-label="Loading"
@@ -441,7 +441,7 @@ const QuestionModal = ({
             ? "[animation:slideInRight_0.3s_ease-out_forwards]"
             : "[animation:slideInLeft_0.3s_ease-out_forwards]"
         }`;
-    const loaderContainerClass = "flex justify-center items-center mx-auto min-h-[320px] max-w-[300px] w-[300px]";
+    const loaderContainerClass = "flex items-center justify-center w-full h-full";
     const noQuestionClass = "flex justify-center items-center h-[200px] text-base text-[#253238]";
     const optionsContainerClass = `flex flex-col mt-3 gap-[12px] pt-[20px] overflow-auto max-h-[50vh] transition-all duration-300 ${isAnimating ? "[animation:fadeIn_0.3s_ease-out_forwards]" : ""}`;
     const optionClass = "flex items-center gap-[8px] border-2 border-[#e1e5e9] px-[15px] py-[10px] cursor-pointer font-semibold rounded-[3px] text-[#253238] text-start hover:bg-gray-50 transition-colors duration-200 font-[Arial] tracking-[-0.03em] leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
