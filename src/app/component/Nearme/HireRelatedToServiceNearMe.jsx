@@ -44,7 +44,7 @@ export default function HireRelatedToServiceNearMe({
   heading2 = "confidence",
   tabData = [],
   headingMiddle = "",
-  heightClass = "lg:h-[484px]",
+  heightClass = "min-h-[440px] h-auto md:h-auto lg:h-[484px]",
   activeTabkey="professionals"
 }) {
   const [currentTab, setcurrentTab] = useState(activeTabkey);
@@ -98,7 +98,7 @@ export default function HireRelatedToServiceNearMe({
 
   return (
     <WrapperBGWidth background={"#00AFE3"}>
-      <div className={`bg-[#00AFE3] px-[30px] md:px-16 py-[30px] md:py-[50px] lg:pl-16 xl:px-[120px] lg:py-[72px] w-full h-auto md:h-auto ${heightClass}`}>
+      <div className={`bg-[#00AFE3] px-[30px] md:px-16 py-[30px] md:py-[50px] lg:pl-16 xl:px-[120px] lg:py-[72px]  w-full ${heightClass}`}>
         <header className="mb-5 xl:mb-12">
           <div className="flex flex-wrap md:flex-col lg:flex-row xl:justify-between items-left gap-7.5 md:gap-6 xl:gap-12">
             <h2
@@ -163,15 +163,17 @@ export default function HireRelatedToServiceNearMe({
             </nav>
           </div>
         </header>
-        <div
-          ref={contentRef}
-          className={`flex flex-wrap gap-y-2 xl:gap-[24px] gap-2 lg:gap-[23.92px]
-            overflow-hidden transition-all duration-300
-           w-full md:max-w-full"
-            ${showAll
-              ? "max-h-none"
-              : "max-h-[162px] md:max-h-[196px] lg:max-h-[239px]"
-            }`}>
+       <div
+  ref={contentRef}
+  className={`flex flex-wrap content-start
+    gap-y-2 xl:gap-[24px] gap-2 lg:gap-[23.92px]
+    overflow-hidden transition-all duration-300
+    w-full md:max-w-full
+    ${showAll
+      ? "max-h-none"
+      : "max-h-[162px] min-h-[162px] md:max-h-[196px] md:min-h-[196px]  lg:min-h-[239px] lg:max-h-[239px]"
+    }`}
+>
           {tabData[currentTab]?.map((item, i) => {
             if (typeof item === "object") {
               return (
@@ -193,7 +195,7 @@ export default function HireRelatedToServiceNearMe({
         </div>
 
         {hasOverflow && !showAll && (
-          <div className="flex md:hidden justify-center pt-[30px]">
+          <div className="flex md:hidden justify-center pt-[20px]">
             <Button
               variant="primary"
               onClick={() => setShowAll(!showAll)}
@@ -207,7 +209,7 @@ export default function HireRelatedToServiceNearMe({
         )}
 
         {showAll && (
-          <div className="flex md:hidden justify-center pt-[30px]">
+          <div className="flex md:hidden justify-center pt-[20px]">
             <Button
               variant="primary"
               onClick={() => setShowAll(false)}
