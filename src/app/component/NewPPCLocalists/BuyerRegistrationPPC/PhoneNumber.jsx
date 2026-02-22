@@ -172,8 +172,12 @@ const PhoneNumber = ({
         onBack();
     };
 
+     {/* pt-[20px] md:pt-[30px] lg:pt-[60px] pb-[20px] px-[10px] */ }
+          {/* className="max-w-[780px] mx-auto w-full */ }
+
     return (
-        <FormWrapper className="px-[20px] md:px-15 lg:pt-[40px] pt-[20px] pb-[20px]">
+        <FormWrapper>
+            <div className="px-[20px] lg:px-10 pt-[20px] md:pt-[30px] lg:pt-[60px] pb-[20px]">
             <CardLayoutWrapper
                 title="Please Enter Your Mobile Telephone Number"
                 onButtonClick={handleSubmit}
@@ -236,6 +240,7 @@ const PhoneNumber = ({
                     </p>
                 </div>
             </CardLayoutWrapper>
+            </div>
         </FormWrapper>
     );
 };

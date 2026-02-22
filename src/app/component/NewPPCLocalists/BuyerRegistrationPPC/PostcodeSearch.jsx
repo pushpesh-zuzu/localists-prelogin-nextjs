@@ -99,10 +99,11 @@ const PostcodeSearch = ({
     const handleBack = () => {
         prevStep();
     };
+    
     return (
-        <>
-            <FormWrapper className="px-[20px] md:px-0">
-                <div className="pt-[20px] md:pt-[60px] pb-[20px] w-[780px] max-w-full mx-auto text-center flex justify-center">
+        <FormWrapper>
+            <div className="max-w-[780px] mx-auto w-full px-[20px] lg:px-0">
+                <div className="pt-[20px] md:pt-[30px] lg:pt-[60px] pb-[20px] text-center flex justify-center lg:px-[10px] px-0">
                     <H3 className="text-[#00afe3] !font-medium">
                         Get quotes from verified {titleHeading} you can trust
                     </H3>
@@ -148,8 +149,8 @@ const PostcodeSearch = ({
                         )}
                     </CardLayoutWrapper>
                 </div>
-            </FormWrapper>
-        </>
+            </div>
+        </FormWrapper>
     );
 };
 

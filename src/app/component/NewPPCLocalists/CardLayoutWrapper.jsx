@@ -26,17 +26,17 @@ const CardLayoutWrapper = ({
     OtpContainer = false,
     phonenumber = false
 }) => {
+     
     return (
         <div
             className={`
     flex justify-center items-center bg-white rounded-[20px]
     ${OtpContainer ? "w-fit mx-auto" : ""}
-    ${phonenumber? "md:w-[60%] mx-auto" : ""}
-    ${NameEmailContainer ? "w-[85%] mx-auto h-fit py-5 mt-2 md:mt-6" : ""}
+    ${phonenumber? "lg:w-[60%] md:w-[80%] mx-auto" : ""}
+    ${NameEmailContainer ? "w-[85%] mx-auto h-fit py-5 mt-3 md:mt-6 max-[480px]:w-[95%]" : ""}
     max-[480px]:items-start
-    ${NameEmailContainer ? "max-[480px]:w-[95%]" : ""}
   `}>
-            <div className={`bg-white rounded-[20px] mt-0 md:mt-[10px] ${NameEmailContainer ? "w-[85%] md:w-[60%] mx-auto h-fit" : ""}`}>
+            <div className={`bg-white rounded-[20px] ${NameEmailContainer ? "w-[85%] md:w-[80%] mx-auto h-fit" : ""}`}>
                 {titleHeading && (
                     <H4 className="mb-[20px] leading-[26px] md:leading-[16px] lg:leading-[30px] max-[768px]:mb-[15px] text-[#253238] text-center">
                         {titleHeading}
@@ -49,7 +49,7 @@ const CardLayoutWrapper = ({
                         className={`
               mx-auto text-center
               ${titlePrimary ? "text-[#00afe3]" : "text-[#00afe3]"}
-              mb-[20px]
+              pb-[10px]
             `}
                     >
                         {title}

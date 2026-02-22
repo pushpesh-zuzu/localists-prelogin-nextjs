@@ -102,8 +102,7 @@ function HeroSection({
             text-white
             pt-[18px] md:pt-4 lg:pt-[20px]
             drop-shadow-[0_0_4px_rgba(0,0,0,0.25)]
-          "
-                >
+          ">
                     {description}
                 </Paragraph1>
                 <div className="pt-[40px] pb-0 flex justify-center">

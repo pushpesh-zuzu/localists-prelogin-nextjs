@@ -407,7 +407,7 @@ const QuestionModal = ({
     // console.log("formattedQuestions", imageQuestionData)
 
     const modalOverlayClass = "relative top-0 left-0 w-full flex items-center justify-center";
-    const modalContentClass = `bg-white px-[20px] pt-[25px] pb-[23px] md:px-[110px] w-full text-center text-[#253238] transition-all duration-300 ease-in-out ${isAnimating
+    const modalContentClass = `bg-white px-[20px] pb-[23px] md:px-[110px] w-full text-center text-[#253238] transition-all duration-300 ease-in-out ${isAnimating
         ? animationDirection === "next"
             ? "[animation:slideOutLeft_0.3s_ease-in_forwards]"
             : "[animation:slideOutRight_0.3s_ease-in_forwards]"
@@ -415,131 +415,140 @@ const QuestionModal = ({
             ? "[animation:slideInRight_0.3s_ease-out_forwards]"
             : "[animation:slideInLeft_0.3s_ease-out_forwards]"
         }`;
-    const loaderContainerClass = "flex items-center justify-center w-full h-full";
+    const loaderContainerClass = "flex items-center justify-center w-full h-full pt-[20px]";
     const noQuestionClass = "flex justify-center items-center h-[200px] text-base text-[#253238]";
-    const optionsContainerClass = `flex flex-col mt-3 gap-[12px] pt-[20px] overflow-auto max-h-[50vh] transition-all duration-300 ${isAnimating ? "[animation:fadeIn_0.3s_ease-out_forwards]" : ""}`;
+    const optionsContainerClass = `flex flex-col gap-[12px] md:pt-[25px] pt-[20px] transition-all duration-300 ${isAnimating ? "[animation:fadeIn_0.3s_ease-out_forwards]" : ""}`;
     const optionClass = "flex items-center gap-[8px] border-2 border-[#e1e5e9] px-[15px] py-[10px] cursor-pointer font-semibold rounded-[3px] text-[#253238] text-start hover:bg-gray-50 transition-colors duration-200 font-[Arial] tracking-[-0.03em] leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
     const inputClass = "w-full font-[Arial] tra cking-[-0.03em] px-[10.5px] py-[10px] border border-[#d9d9d9] outline-none rounded-[3px] disabled:opacity-50 leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
     const errorMessageClass = "text-red-500 text-sm mt-2 text-left";
-    const question1Class = "w-full mb-[15px] text-[#253238]";
+    const question1Class = "w-full pb-[10px] text-[#253238]";
 
     return (
         <>
             <style jsx global>{keyframesCSS}</style>
             <FormWrapper>
-                <div className="pt-[20px] md:pt-[30px] lg:pt-[60px] pb-[20px] px-[10px] w-[780px] max-w-full mx-auto text-center flex justify-center">
-                    <H3 className="text-[#00afe3] !font-medium">
-                        {title}
-                    </H3>
-                </div>
-                <div className="mt-0 md:mt-4 h-[3px] w-[250px] md:w-[400px] overflow-hidden bg-[#EDEDED] max-w-full mx-auto flex justify-start">
-                    <div
-                        className="bg-[#00afe3] transition-all duration-500 ease-out pt-[10px] pb-[30px]"
-                        style={{ width: `${progressPercent}%` }}
-                    ></div>
-                </div>
-                <div className={modalOverlayClass} onClick={(e) => e.stopPropagation()}>
-                    <div className={modalContentClass}>
-                        {questions.length === 0 ? (
-                            <div className={loaderContainerClass}>
-                                {/* <CustomSpinner size="large" /> */}
-                                <LoaderIndicator size="large" />
-                            </div>
-                        ) : questions.length > 0 ? (
+                <div className="max-w-[780px] mx-auto w-full">
+                    {
+                        questions.length > 0 && (
                             <>
-                                <CardLayoutWrapper
-                                    loader={requestLoader}
-                                    title={
-                                        currentQuestion === 0
-                                            ? !isQuestionWithImage
-                                                ? ""
-                                                : ""
-                                            : (
-                                                <div className="mt-0 md:mt-[15px] text-[#00afe3]">
-                                                    {questions[currentQuestion]?.questions}
-                                                </div>
-                                            )
-                                    }
-                                    // onButtonClick={
-                                    //     imageQuestionData &&
-                                    //         questions[currentQuestion]?.option_type === "single"
-                                    //         ? undefined
-                                    //         : handleNextCheckBox
-                                    // }
-                                    onButtonClick={() => {
-                                        const isSingle = questions[currentQuestion]?.option_type === "single";
-
-                                        if (isSingle) {
-                                            handleNext(selectedOption);
-                                        } else {
-                                            handleNextCheckBox();
+                                <div className="pt-[20px] md:pt-[30px] lg:pt-[60px] pb-[20px] px-[10px] text-center ">
+                                    <H3 className="text-[#00afe3] !font-medium">
+                                        {title}
+                                    </H3>
+                                </div>
+                                <div className="w-[250px] md:w-[400px] mx-auto pt-[10px] pb-[30px]">
+                                    <div className="bg-[#EDEDED] h-[3px]">
+                                        <div
+                                            className="bg-[#00afe3] transition-all duration-500 ease-out h-[3px]"
+                                            style={{ width: `${progressPercent}%` }}
+                                        />
+                                    </div>
+                                </div>
+                            </>
+                        )
+                    }
+                    <div className={modalOverlayClass} onClick={(e) => e.stopPropagation()}>
+                        <div className={modalContentClass}>
+                            {questions.length === 0 ? (
+                                <div className={loaderContainerClass}>
+                                    {/* <CustomSpinner size="large" /> */}
+                                    <LoaderIndicator size="large" />
+                                </div>
+                            ) : questions.length > 0 ? (
+                                <>
+                                    <CardLayoutWrapper
+                                        loader={requestLoader}
+                                        title={
+                                            currentQuestion === 0
+                                                ? !isQuestionWithImage
+                                                    ? ""
+                                                    : ""
+                                                : (
+                                                    <div className="text-[#00afe3]">
+                                                        {questions[currentQuestion]?.questions}
+                                                    </div>
+                                                )
                                         }
-                                    }}
-                                    onBackClick={handleBack}
-                                    showButton={currentQuestion === 0 ? false : true}
-                                    showBackButton={currentQuestion === 0 ? false : true}
-                                    buttonText={
-                                        imageQuestionData &&
-                                            questions[currentQuestion]?.option_type === "single"
-                                            ? undefined
-                                            : "Next"
-                                    }
-                                    headingCenter={currentQuestion === 0 ? false : true}
-                                    subtitle={
-                                        currentQuestion === 0
-                                            ? !isQuestionWithImage
-                                                ? ""
-                                                : ""
-                                            : ""
-                                    }
-                                >
-                                    {currentQuestion === 0 && (
-                                        <H4
-                                            className={`${question1Class} !text-[#00afe3] ${isQuestionWithImage ? "text-center" : "text-center"
-                                                }`}
-                                        >
-                                            {formattedQuestions[currentQuestion]?.questions}
-                                        </H4>
-                                    )}
-                                    <div ref={optionsContainerRef} className={optionsContainerClass}>
-                                        {imageQuestionData ? (
-                                            <>
-                                                <div className="grid grid-cols-3 gap-[10px] max-w-[600px] mx-auto p-0">
-                                                    {imageQuestionData.options.map((opt) => {
-                                                        const isSelected = selectedOption.includes(opt.label);
-                                                        const isSingle =
-                                                            questions[currentQuestion]?.option_type === "single";
+                                        // onButtonClick={
+                                        //     imageQuestionData &&
+                                        //         questions[currentQuestion]?.option_type === "single"
+                                        //         ? undefined
+                                        //         : handleNextCheckBox
+                                        // }
+                                        onButtonClick={() => {
+                                            const isSingle = questions[currentQuestion]?.option_type === "single";
 
-                                                        return (
-                                                            <button
-                                                                key={opt.label}
-                                                                type="button"
-                                                                disabled={isAnimating || requestLoader}
-                                                                onClick={() => {
-                                                                    setError("");
-                                                                    if (isSingle) {
-                                                                        setSelectedOption([opt.label]);
-                                                                        setTimeout(() => {
-                                                                            handleNext([opt.label]);
-                                                                        }, 200);
-                                                                    } else {
-                                                                        // checkbox behaviour
-                                                                        if (isSelected) {
-                                                                            setSelectedOption((prev) =>
-                                                                                prev.filter((item) => item !== opt.label)
-                                                                            );
+                                            if (isSingle) {
+                                                handleNext(selectedOption);
+                                            } else {
+                                                handleNextCheckBox();
+                                            }
+                                        }}
+                                        onBackClick={handleBack}
+                                        showButton={currentQuestion === 0 ? false : true}
+                                        showBackButton={currentQuestion === 0 ? false : true}
+                                        buttonText={
+                                            imageQuestionData &&
+                                                questions[currentQuestion]?.option_type === "single"
+                                                ? undefined
+                                                : "Next"
+                                        }
+                                        headingCenter={currentQuestion === 0 ? false : true}
+                                        subtitle={
+                                            currentQuestion === 0
+                                                ? !isQuestionWithImage
+                                                    ? ""
+                                                    : ""
+                                                : ""
+                                        }
+                                    >
+                                        {currentQuestion === 0 && (
+                                            <H4
+                                                className={`${question1Class} !text-[#00afe3] ${isQuestionWithImage ? "text-center" : "text-center"
+                                                    }`}
+                                            >
+                                                {formattedQuestions[currentQuestion]?.questions}
+                                            </H4>
+                                        )}
+                                        <div ref={optionsContainerRef} className={optionsContainerClass}>
+                                            {imageQuestionData ? (
+                                                <>
+                                                    <div className="grid grid-cols-3 gap-[10px] overflow-auto max-h-[50vh]">
+                                                        {imageQuestionData.options.map((opt) => {
+                                                            const isSelected = selectedOption.includes(opt.label);
+                                                            const isSingle =
+                                                                questions[currentQuestion]?.option_type === "single";
+
+                                                            return (
+                                                                <button
+                                                                    key={opt.label}
+                                                                    type="button"
+                                                                    disabled={isAnimating || requestLoader}
+                                                                    onClick={() => {
+                                                                        setError("");
+                                                                        if (isSingle) {
+                                                                            setSelectedOption([opt.label]);
+                                                                            setTimeout(() => {
+                                                                                handleNext([opt.label]);
+                                                                            }, 200);
                                                                         } else {
-                                                                            setSelectedOption((prev) => [...prev, opt.label]);
+                                                                            // checkbox behaviour
+                                                                            if (isSelected) {
+                                                                                setSelectedOption((prev) =>
+                                                                                    prev.filter((item) => item !== opt.label)
+                                                                                );
+                                                                            } else {
+                                                                                setSelectedOption((prev) => [...prev, opt.label]);
+                                                                            }
                                                                         }
-                                                                    }
-                                                                }}
-                                                                className="relative p-0 m-0 border-0 bg-transparent focus:outline-none"
-                                                            >
-                                                                {/* IMAGE */}
-                                                                <img
-                                                                    src={opt.image}
-                                                                    alt={opt.label}
-                                                                    className={`
+                                                                    }}
+                                                                    className="relative p-0 m-0 border-0 bg-transparent focus:outline-none"
+                                                                >
+                                                                    {/* IMAGE */}
+                                                                    <img
+                                                                        src={opt.image}
+                                                                        alt={opt.label}
+                                                                        className={`
                                                                     w-full lg:h-[120px] h-[80px]
                                                                     cursor-pointer
                                                              transition-all duration-200 ease-in-out
@@ -547,70 +556,71 @@ const QuestionModal = ({
                                                                          ${isSelected ? "-translate-y-[3px]" : ""}
                                                                                              `} />
 
-                                                                {!isSingle && (
-                                                                    <div className="absolute top-2 left-2">
-                                                                        <input
-                                                                            type="checkbox"
-                                                                            checked={isSelected}
-                                                                            readOnly
-                                                                            className="w-4 h-4 accent-[#00afe3] cursor-pointer"
-                                                                        />
-                                                                    </div>
-                                                                )}
-                                                            </button>
-                                                        );
-                                                    })}
-                                                </div>
-                                                {selectedOption.includes(
-                                                    "Something else (please describe)"
-                                                ) && (
-                                                        <div className="">
-                                                            <input
-                                                                type="text"
-                                                                placeholder="Please Enter..."
-                                                                className={inputClass}
-                                                                value={otherText}
-                                                                onChange={(e) => {
-                                                                    setOtherText(e.target.value);
-                                                                    if (error) setError("");
-                                                                }} disabled={isAnimating}
-                                                            />
-                                                        </div>
+                                                                    {!isSingle && (
+                                                                        <div className="absolute top-2 left-2">
+                                                                            <input
+                                                                                type="checkbox"
+                                                                                checked={isSelected}
+                                                                                readOnly
+                                                                                className="w-4 h-4 accent-[#00afe3] cursor-pointer"
+                                                                            />
+                                                                        </div>
+                                                                    )}
+                                                                </button>
+                                                            );
+                                                        })}
+                                                    </div>
+                                                    {selectedOption.includes(
+                                                        "Something else (please describe)"
+                                                    ) && (
+                                                            <div className="">
+                                                                <input
+                                                                    type="text"
+                                                                    placeholder="Please Enter..."
+                                                                    className={inputClass}
+                                                                    value={otherText}
+                                                                    onChange={(e) => {
+                                                                        setOtherText(e.target.value);
+                                                                        if (error) setError("");
+                                                                    }} disabled={isAnimating}
+                                                                />
+                                                            </div>
+                                                        )}
+                                                </>
+                                            ) : (
+                                                <>
+                                                    {formattedQuestions[currentQuestion]?.parsedAnswers.map(
+                                                        (opt, index) => (
+                                                            <label key={index} className={optionClass}>
+                                                                <input
+                                                                    type={
+                                                                        formattedQuestions[currentQuestion]?.option_type === "single"
+                                                                            ? "radio"
+                                                                            : "checkbox"
+                                                                    }
+                                                                    name="surveyOption"
+                                                                    value={opt.option}
+                                                                    checked={selectedOption.includes(opt.option)}
+                                                                    onChange={handleOptionChange}
+                                                                    disabled={isAnimating || requestLoader}
+                                                                    className="mt-0 flex-shrink-0 h-4 w-4"
+                                                                />
+                                                                <span className="break-words">{opt.label}</span>
+                                                            </label>
+                                                        )
                                                     )}
-                                            </>
-                                        ) : (
-                                            <>
-                                                {formattedQuestions[currentQuestion]?.parsedAnswers.map(
-                                                    (opt, index) => (
-                                                        <label key={index} className={optionClass}>
-                                                            <input
-                                                                type={
-                                                                    formattedQuestions[currentQuestion]?.option_type === "single"
-                                                                        ? "radio"
-                                                                        : "checkbox"
-                                                                }
-                                                                name="surveyOption"
-                                                                value={opt.option}
-                                                                checked={selectedOption.includes(opt.option)}
-                                                                onChange={handleOptionChange}
-                                                                disabled={isAnimating || requestLoader}
-                                                                className="mt-0 flex-shrink-0 h-4 w-4"
-                                                            />
-                                                            <span className="break-words">{opt.label}</span>
-                                                        </label>
-                                                    )
-                                                )}
-                                            </>
-                                        )}
-                                    </div>
-                                    {error && <p className={errorMessageClass}>{error}</p>}
-                                </CardLayoutWrapper>
-                            </>
-                        ) : (
-                            <div className={noQuestionClass}>
-                                <h2>No questions available</h2>
-                            </div>
-                        )}
+                                                </>
+                                            )}
+                                        </div>
+                                        {error && <p className={errorMessageClass}>{error}</p>}
+                                    </CardLayoutWrapper>
+                                </>
+                            ) : (
+                                <div className={noQuestionClass}>
+                                    <h2>No questions available</h2>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </FormWrapper>

@@ -1,8 +1,7 @@
-export default function FormWrapper({ children, className }) {
+export default function FormWrapper({ children }) {
   return (
     <div
       className={`
-        ${className}
          w-[970px]
         bg-white
         rounded-[20px]

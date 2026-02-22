@@ -96,8 +96,8 @@ const DescribeYourRequest = () => {
     };
 
     return (
-        <FormWrapper className="pb-[20px] pt-[20px] lg:pt-[40px] px-[20px] md:px-[30px] lg:px-0">
-            <div className="max-w-[500px] relative mx-auto">
+        <FormWrapper>
+            <div className="pt-[20px] md:pt-[30px] lg:pt-[60px] pb-[20px] px-[20px] md:px-[30px] lg:px-0 max-w-[500px] relative mx-auto">
                 {buyerStep === 10 ? (
                     <div className="flex justify-center items-center py-10">
                         <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
