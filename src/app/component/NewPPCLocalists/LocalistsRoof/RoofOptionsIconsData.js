@@ -1,20 +1,57 @@
+import InstallNewRoof from "../../../../../public/newppc/InstallNewRoof";
+import ReplaceYourCurrentRoof from "../../../../../public/newppc/ReplaceYourCurrentRoof";
+import RepairCurrentRoof from "../../../../../public/newppc/RepairCurrentRoof";
+import IOwnTheProperty from "../../../../../public/newppc/IOwnTheProperty";
+import BuyingTheProperty from "../../../../../public/newppc/BuyingTheProperty";
+import RentingTheProperty from "../../../../../public/newppc/RentingTheProperty";
+import SomethingElse from "../../../../../public/newppc/SomethingElse";
+import ResidentalHome from "../../../../../public/newppc/ResidentalHome";
+import CommercialProperty from "../../../../../public/newppc/CommercialProperty";
+import Garage from "../../../../../public/newppc/Garage";
+import MobileHome from "../../../../../public/newppc/MobileHome";
+import chimney from "../../../../../public/newppc/Chimney";
+import Windows from "../../../../../public/newppc/Windows";
+import SolarPanels from "../../../../../public/newppc/SolarPanels";
+import Pipes from "../../../../../public/newppc/Pipes";
+import SatelliteDishes from "../../../../../public/newppc/SatelliteDishes";
+import Vents from "../../../../../public/newppc/Vents";
+import NoObstruction from "../../../../../public/newppc/NoObstruction";
+import OneStores from "../../../../../public/newppc/OneStores";
+import TwoStorys from "../../../../../public/newppc/TwoStorys";
+import ThreeStorys from "../../../../../public/newppc/ThreeStorys";
+import FourStorysMore from "../../../../../public/newppc/FourStorysMore";
+import ImReadtToHire from "../../../../../public/newppc/ImReadyToHire";
+import DefinatilyHire from "../../../../../public/newppc/DefinatelyHire";
+import SureHire from "../../../../../public/newppc/SureHire";
+import WillPosibleHire from "../../../../../public/newppc/WillPosibleHire";
+import Searching from "../../../../../public/newppc/Searching";
+import Asap from "../../../../../public/newppc/Asap";
+import WithAWeek from "../../../../../public/newppc/WithAWeek";
+import WithAMonth from "../../../../../public/newppc/WithAMonth";
+import NextMonth from "../../../../../public/newppc/NextMonth";
+import WaterDamage from "../../../../../public/newppc/WaterDamage";
+import DamageTiles from "../../../../../public/newppc/DamageTiles";
+import RottedWood from "../../../../../public/newppc/RottedWood";
+import RoofFlashing from "../../../../../public/newppc/RoofFlasing";
+import chimneyRepair from "../../../../../public/newppc/ChimneyRepair";
+
 const RoofOptionsIconsData = [
     {
         question_no: 1,
         options: [
             {
                 optionId: 1,
-                image: "/newppc/install.webp",
+                icon: InstallNewRoof,
                 label: "Install a new roof",
             },
             {
                 optionId: 2,
-                image: "/newppc/replace.webp",
+                icon: ReplaceYourCurrentRoof,
                 label: "Replace your current roof",
             },
             {
                 optionId: 3,
-                image: "/newppc/repair.webp",
+                icon: RepairCurrentRoof,
                 label: "Repair current roof",
             },
         ],
@@ -24,22 +61,22 @@ const RoofOptionsIconsData = [
         options: [
             {
                 optionId: 1,
-                image: "/newppc/ownproperty.webp",
+                icon: IOwnTheProperty,
                 label: "I own the property",
             },
             {
                 optionId: 2,
-                image: "/newppc/buyingproperty.webp",
+                icon: BuyingTheProperty,
                 label: "I am buying the property",
             },
             {
                 optionId: 3,
-                image: "/newppc/rentproperty.webp",
+                icon: RentingTheProperty,
                 label: "I Am renting the property",
             },
             {
                 optionId: 4,
-                image: "/newppc/somethingelse.webp",
+                icon: SomethingElse,
                 label: "Something else (please describe)",
             },
         ],
@@ -49,22 +86,22 @@ const RoofOptionsIconsData = [
         options: [
             {
                 optionId: 1,
-                image: "/newppc/residental.webp",
+                icon: ResidentalHome,
                 label: "Residential Home",
             },
             {
                 optionId: 2,
-                image: "/newppc/commercial.webp",
+                icon: CommercialProperty,
                 label: "Commercial Property",
             },
             {
                 optionId: 3,
-                image: "/newppc/garage.webp",
+                icon: Garage,
                 label: "Garage",
             },
             {
                 optionId: 4,
-                image: "/newppc/mobilehome.webp",
+                icon: MobileHome,
                 label: "Mobile Home",
             },
         ],
@@ -73,37 +110,37 @@ const RoofOptionsIconsData = [
         options: [
             {
                 optionId: 1,
-                image: "/newppc/windows.webp",
+                icon: Windows,
                 label: "Windows",
             },
             {
                 optionId: 2,
-                image: "/newppc/chimney.webp",
+                icon: chimney,
                 label: "Chimney",
             },
             {
                 optionId: 3,
-                image: "/newppc/solar.webp",
+                icon: SolarPanels,
                 label: "Solar Panels",
             },
             {
                 optionId: 4,
-                image: "/newppc/pipes.webp",
+                icon: Pipes,
                 label: "Pipes",
             },
             {
                 optionId: 5,
-                image: "/newppc/satelite.webp",
+                icon: SatelliteDishes,
                 label: "Satellite dishes or Antennas",
             },
             {
                 optionId: 6,
-                image: "/newppc/vents.webp",
+                icon: Vents,
                 label: "Vents",
             },
             {
                 optionId: 7,
-                image: "/newppc/obstraction.webp",
+                icon: NoObstruction,
                 label: "No obstructions",
             },
         ],
@@ -112,22 +149,22 @@ const RoofOptionsIconsData = [
         options: [
             {
                 optionId: 1,
-                image: "/newppc/1store.webp",
+                icon: OneStores,
                 label: "1 Storey",
             },
             {
                 optionId: 2,
-                image: "/newppc/2store.webp",
+                icon: TwoStorys,
                 label: "2 Storeys",
             },
             {
                 optionId: 3,
-                image: "/newppc/3store.webp",
+                icon: ThreeStorys,
                 label: "3 Storeys",
             },
             {
                 optionId: 4,
-                image: "/newppc/4more.webp",
+                icon: FourStorysMore,
                 label: "4 Storeys or more",
             },
         ],
@@ -136,32 +173,32 @@ const RoofOptionsIconsData = [
         options: [
             {
                 optionId: 1,
-                image: "/newppc/readyhire.webp",
+                icon: ImReadtToHire,
                 label: "I'm ready to hire someone now",
             },
             {
                 optionId: 2,
-                image: "/newppc/defhire.webp",
+                icon: DefinatilyHire,
                 label: "I'm definitely going to hire someone",
             },
             {
                 optionId: 3,
-                image: "/newppc/quite.webp",
+                icon: SureHire,
                 label: "I'm quite sure im going to hire someone",
             },
             {
                 optionId: 4,
-                image: "/newppc/posshire.webp",
+                icon: WillPosibleHire,
                 label: "I will possibly hire someone",
             },
             {
                 optionId: 5,
-                image: "/newppc/search.webp",
+                icon: Searching,
                 label: "I'm researching",
             },
             {
                 optionId: 6,
-                image: "/newppc/somethingelse.webp",
+                icon: SomethingElse,
                 label: "Something else (please describe)",
             },
         ],
@@ -170,27 +207,27 @@ const RoofOptionsIconsData = [
         options: [
             {
                 optionId: 1,
-                image: "/newppc/asap.webp",
+                icon: Asap,
                 label: "ASAP",
             },
             {
                 optionId: 2,
-                image: "/newppc/week.webp",
+                icon: WithAWeek,
                 label: "Within a week",
             },
             {
                 optionId: 3,
-                image: "/newppc/month.webp",
+                icon: WithAMonth,
                 label: "Within a month",
             },
             {
-                optionId: 3,
-                image: "/newppc/nextmonth.webp",
+                optionId: 4,
+                icon: NextMonth,
                 label: "In the next 2-3 months",
             },
             {
-                optionId: 3,
-                image: "/newppc/somethingelse.webp",
+                optionId: 5,
+                icon: SomethingElse,
                 label: "Something else (please describe)",
             },
 
@@ -200,27 +237,27 @@ const RoofOptionsIconsData = [
         options: [
             {
                 optionId: 1,
-                image: "/newppc/water.webp",
+                icon: WaterDamage,
                 label: "Water damage/leaks",
             },
             {
                 optionId: 2,
-                image: "/newppc/damage.webp",
+                icon: DamageTiles,
                 label: "Missing/damaged tiles",
             },
             {
                 optionId: 3,
-                image: "/newppc/wood.webp",
+                icon: RottedWood,
                 label: "Rotted Wood",
             },
             {
                 optionId: 4,
-                image: "/newppc/roofissue.webp",
+                icon: RoofFlashing,
                 label: "Roof flashing issues",
             },
             {
                 optionId: 5,
-                image: "/newppc/chirepair.webp",
+                icon: chimneyRepair,
                 label: "Chimney Repair",
             },
         ],

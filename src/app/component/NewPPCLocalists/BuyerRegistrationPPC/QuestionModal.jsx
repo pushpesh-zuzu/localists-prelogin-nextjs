@@ -407,7 +407,7 @@ const QuestionModal = ({
     // console.log("formattedQuestions", imageQuestionData)
 
     const modalOverlayClass = "relative top-0 left-0 w-full flex items-center justify-center";
-    const modalContentClass = `bg-white px-[20px] pb-[23px] md:px-[110px] w-full text-center text-[#253238] transition-all duration-300 ease-in-out ${isAnimating
+    const modalContentClass = `bg-white px-[20px] lg:pb-[20px] pb-[10px] md:px-[110px] w-full text-center text-[#253238] transition-all duration-300 ease-in-out ${isAnimating
         ? animationDirection === "next"
             ? "[animation:slideOutLeft_0.3s_ease-in_forwards]"
             : "[animation:slideOutRight_0.3s_ease-in_forwards]"
@@ -417,7 +417,7 @@ const QuestionModal = ({
         }`;
     const loaderContainerClass = "flex items-center justify-center w-full h-full pt-[20px]";
     const noQuestionClass = "flex justify-center items-center h-[200px] text-base text-[#253238]";
-    const optionsContainerClass = `flex flex-col gap-[12px] md:pt-[25px] pt-[20px] transition-all duration-300 ${isAnimating ? "[animation:fadeIn_0.3s_ease-out_forwards]" : ""}`;
+    const optionsContainerClass = `flex flex-col gap-[12px] lg:pt-[25px] md:pt-0 transition-all duration-300 ${isAnimating ? "[animation:fadeIn_0.3s_ease-out_forwards]" : ""}`;
     const optionClass = "flex items-center gap-[8px] border-2 border-[#e1e5e9] px-[15px] py-[10px] cursor-pointer font-semibold rounded-[3px] text-[#253238] text-start hover:bg-gray-50 transition-colors duration-200 font-[Arial] tracking-[-0.03em] leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
     const inputClass = "w-full font-[Arial] tra cking-[-0.03em] px-[10.5px] py-[10px] border border-[#d9d9d9] outline-none rounded-[3px] disabled:opacity-50 leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
     const errorMessageClass = "text-red-500 text-sm mt-2 text-left";
@@ -513,12 +513,12 @@ const QuestionModal = ({
                                         <div ref={optionsContainerRef} className={optionsContainerClass}>
                                             {imageQuestionData ? (
                                                 <>
-                                                    <div className="grid grid-cols-3 gap-[10px] overflow-auto max-h-[50vh]">
+                                                    <div className="grid grid-cols-3 gap-[10px]  w-fit mx-auto">
                                                         {imageQuestionData.options.map((opt) => {
                                                             const isSelected = selectedOption.includes(opt.label);
                                                             const isSingle =
                                                                 questions[currentQuestion]?.option_type === "single";
-
+                                                            const Icon = opt.icon;
                                                             return (
                                                                 <button
                                                                     key={opt.label}
@@ -542,22 +542,20 @@ const QuestionModal = ({
                                                                             }
                                                                         }
                                                                     }}
-                                                                    className="relative p-0 m-0 border-0 bg-transparent focus:outline-none"
-                                                                >
-                                                                    {/* IMAGE */}
-                                                                    <img
-                                                                        src={opt.image}
-                                                                        alt={opt.label}
-                                                                        className={`
-                                                                    w-full lg:h-[120px] h-[80px]
-                                                                    cursor-pointer
-                                                             transition-all duration-200 ease-in-out
-                                                                    hover:-translate-y-[3px]
-                                                                         ${isSelected ? "-translate-y-[3px]" : ""}
-                                                                                             `} />
+                                                                    className={`relative
+                                                                    flex items-center justify-center
+                                                                            w-full
+                                                                             cursor-pointer
+                                                                            h-[65px] md-[75px] pt-[40px] pb-[20px] md:pb-[10px] md:mt-[5px] lg:pb-[0px] lg:pt-0 lg:h-[120px]
+                                                                            transition-all duration-200 ease-in-out
+                                                                                    hover:-translate-y-[3px]
+                                                                            ${isSelected ? "border-[#00afe3] -translate-y-[3px]" : ""}
+                                                                            `} >
+                                                                    {/* icon */}
+                                                                    <Icon className="w-full h-full max-w-[48px] max-h-[48px]" />
 
                                                                     {!isSingle && (
-                                                                        <div className="absolute top-2 left-2">
+                                                                        <div className="absolute top-3 left-2">
                                                                             <input
                                                                                 type="checkbox"
                                                                                 checked={isSelected}
