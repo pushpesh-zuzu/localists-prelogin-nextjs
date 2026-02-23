@@ -407,7 +407,7 @@ const QuestionModal = ({
     // console.log("formattedQuestions", imageQuestionData)
 
     const modalOverlayClass = "relative top-0 left-0 w-full flex items-center justify-center";
-    const modalContentClass = `bg-white px-[20px] lg:pb-[20px] pb-[10px] md:px-[110px] w-full text-center text-[#253238] transition-all duration-300 ease-in-out ${isAnimating
+    const modalContentClass = `bg-white px-[20px] pb-[20px] md:px-[110px] w-full text-center text-[#253238] transition-all duration-300 ease-in-out ${isAnimating
         ? animationDirection === "next"
             ? "[animation:slideOutLeft_0.3s_ease-in_forwards]"
             : "[animation:slideOutRight_0.3s_ease-in_forwards]"
@@ -546,7 +546,7 @@ const QuestionModal = ({
                                                                     flex items-center justify-center
                                                                             w-full
                                                                              cursor-pointer
-                                                                            h-[65px] md-[75px] pt-[40px] pb-[40px] md:mt-[5px] lg:pb-[0px] lg:pt-0 lg:h-[120px]
+                                                                            h-[61px] md:h-[62px] md:mt-2 pt-[40px] ${currentQuestion === 0? "pb-[30px] md:pb-[35px] lg:pb-[15px]": "pb-[20px] lg:pb-[0px]"} lg:pb-[0px] lg:pt-0 lg:h-[107px]
                                                                             transition-all duration-200 ease-in-out
                                                                                     hover:-translate-y-[3px]
                                                                             ${isSelected ? "border-[#00afe3] -translate-y-[3px]" : ""}
@@ -555,7 +555,7 @@ const QuestionModal = ({
                                                                     <Icon className="w-full h-full max-w-[48px] max-h-[48px]" />
 
                                                                     {!isSingle && (
-                                                                        <div className="absolute top-3 left-2">
+                                                                        <div className="absolute top-4 md:top-3 left-2">
                                                                             <input
                                                                                 type="checkbox"
                                                                                 checked={isSelected}
