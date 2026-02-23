@@ -8,7 +8,7 @@ function page() {
     return (
         <>
             <SEO
-                canonicalPath="/en/gb/localists-roof"
+                canonicalPath="/en/gb/localists-roofing"
                 bannerImage="/newppc/roofbanner.webp"
                 conversion={true}
             />

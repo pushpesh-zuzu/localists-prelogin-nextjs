@@ -2,18 +2,7 @@ import React from "react";
 import Image from "next/image";
 import H2 from "../UI/Typography/H2";
 
-const projectImages = [
-    "/roofing.webp",
-    "/nearme/Roofing/rooferneatly.webp",
-    "/nearme/Roofing/roofrepair.webp",
-    "/nearme/Roofing/roofspecialist.webp",
-    "/nearme/Roofing/rooferneatly.webp",
-    "/nearme/Roofing/roofspecialist.webp",
-    "/nearme/Roofing/roofrepair.webp",
-    "/roofing.webp",
-];
-
-function ProjectDetails() {
+function ProjectDetails({ projectImages = [] }) {
     return (
         <div
             className="bg-[#f5f7fa]

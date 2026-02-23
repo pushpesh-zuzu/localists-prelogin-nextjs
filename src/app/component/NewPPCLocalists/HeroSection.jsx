@@ -27,7 +27,8 @@ function HeroSection({
     altText = "",
     serviceId,
     serviceName,
-    questionDescription = ""
+    questionDescription = "",
+    OptionsIconsData
 }) {
     usePendingBuyerRedirect()
     const dispatch = useDispatch();
@@ -92,7 +93,7 @@ function HeroSection({
             <div className="absolute inset-0 bg-black/80" />
 
             {/* Content */}
-            <div className="relative z-10 w-full text-center pt-[40px] pb-[100px]">
+            <div className="relative z-10 w-full text-center pt-[20px] md:pt-[40px] pb-[20px] md:pb-[100px]">
                 <H1 className="text-white drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
                     {heading}
                 </H1>
@@ -105,7 +106,7 @@ function HeroSection({
           ">
                     {description}
                 </Paragraph1>
-                <div className="pt-[40px] pb-0 flex justify-center">
+                <div className="pt-[20px] md:pt-[40px] pb-0 flex justify-center">
                     {buyerStep === 1 && (
                         <Suspense fallback={null}>
                             <QuestionModal
@@ -118,6 +119,7 @@ function HeroSection({
                                 description={questionDescription}
                                 backButtonTriggered={backButtonTriggered}
                                 prevStep={prevStep}
+                                OptionsIconsData={OptionsIconsData}
                             />
                         </Suspense>
                     )}

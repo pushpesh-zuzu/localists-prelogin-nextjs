@@ -12,10 +12,9 @@ function RateExperience() {
         md:flex md:flex-row md:items-center md:justify-between
         px-4 md:px-[70px] lg:px-61.5 xl:px-61.5
         pt-[10px] pb-[10px]
-      "
-            >
+      ">
                 {/* Item 1 */}
-                <div className="flex items-center gap-2 text-white justify-center md:justify-start leading-none">
+                <div className="flex items-center gap-2 text-white justify-center md:justify-start leading-none mr-4.5 md:mr-0">
                     <Home size={21} />
                     <Paragraph variant="optional" bold="font-normal">
                         10
@@ -35,7 +34,7 @@ function RateExperience() {
 
                 {/* Item 3 */}
                 <div className="flex items-center gap-2 text-white justify-center md:justify-start leading-none">
-                    <Star size={21} />
+                    <Star size={21} fill="white" />
                     <Paragraph variant="optional" bold="font-normal">
                         10 Year Guarantee
                     </Paragraph>

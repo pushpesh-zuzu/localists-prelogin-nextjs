@@ -12,7 +12,6 @@ import FormWrapper from "../FormWrapper";
 import CardLayoutWrapper from "../CardLayoutWrapper";
 import H3 from "../../UI/Typography/H3";
 import H4 from "../../UI/Typography/H4";
-import RoofOptionsIconsData from "../LocalistsRoof/RoofOptionsIconsData";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 
 
@@ -56,7 +55,8 @@ const QuestionModal = ({
     questions = [],
     nextStep,
     isQuestionWithImage = false,
-    backButtonTriggered
+    backButtonTriggered,
+    OptionsIconsData
 }) => {
     const dispatch = useDispatch();
     const { buyerRequest, requestLoader, citySerach, questionLoader } =
@@ -401,7 +401,7 @@ const QuestionModal = ({
         }
     }, [currentQuestion]);
 
-    const imageQuestionData = RoofOptionsIconsData.find(
+    const imageQuestionData = OptionsIconsData.find(
         (q) => q.question_no === currentQuestion + 1
     );
     // console.log("formattedQuestions", imageQuestionData)
@@ -422,6 +422,8 @@ const QuestionModal = ({
     const inputClass = "w-full font-[Arial] tra cking-[-0.03em] px-[10.5px] py-[10px] border border-[#d9d9d9] outline-none rounded-[3px] disabled:opacity-50 leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
     const errorMessageClass = "text-red-500 text-sm mt-2 text-left";
     const question1Class = "w-full pb-[10px] text-[#253238]";
+
+    console.log("currentQuestion", questions[currentQuestion])
 
     return (
         <>
@@ -485,7 +487,7 @@ const QuestionModal = ({
                                             }
                                         }}
                                         onBackClick={handleBack}
-                                        showButton={currentQuestion === 0 ? false : true}
+                                        // showButton={currentQuestion === 0 ? false : true}
                                         showBackButton={currentQuestion === 0 ? false : true}
                                         buttonText={
                                             imageQuestionData &&
@@ -546,7 +548,7 @@ const QuestionModal = ({
                                                                     flex items-center justify-center
                                                                             w-full
                                                                              cursor-pointer
-                                                                            h-[61px] md:h-[62px] md:mt-2 pt-[40px] ${currentQuestion === 0? "pb-[30px] md:pb-[35px] lg:pb-[15px]": "pb-[20px] lg:pb-[0px]"} lg:pb-[0px] lg:pt-0 lg:h-[107px]
+                                                                            h-[61px] md:h-[62px] md:mt-2 pt-[40px] ${currentQuestion === 0 ? "pb-[30px] md:pb-[35px]" : "pb-[20px]"} lg:pb-[0px] lg:pt-0 lg:h-[107px]
                                                                             transition-all duration-200 ease-in-out
                                                                                     hover:-translate-y-[3px]
                                                                             ${isSelected ? "border-[#00afe3] -translate-y-[3px]" : ""}
