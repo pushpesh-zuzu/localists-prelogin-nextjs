@@ -546,7 +546,7 @@ const QuestionModal = ({
                                                                     flex items-center justify-center
                                                                             w-full
                                                                              cursor-pointer
-                                                                            h-[65px] md-[75px] pt-[40px] pb-[20px] md:pb-[10px] md:mt-[5px] lg:pb-[0px] lg:pt-0 lg:h-[120px]
+                                                                            h-[65px] md-[75px] pt-[40px] pb-[40px] md:mt-[5px] lg:pb-[0px] lg:pt-0 lg:h-[120px]
                                                                             transition-all duration-200 ease-in-out
                                                                                     hover:-translate-y-[3px]
                                                                             ${isSelected ? "border-[#00afe3] -translate-y-[3px]" : ""}
