@@ -555,7 +555,7 @@ const QuestionModal = ({
                                                                     <Icon className="w-full h-full max-w-[48px] max-h-[48px]" />
 
                                                                     {!isSingle && (
-                                                                        <div className="absolute top-4 md:top-3 left-2">
+                                                                        <div className="absolute top-4 md:top-3 left-1.5 md:left-2">
                                                                             <input
                                                                                 type="checkbox"
                                                                                 checked={isSelected}
