@@ -15,7 +15,7 @@ function Header() {
                         <div className="flex items-center">
                             <Image
                                 src="/newppc/rooflogo.svg"
-                                alt="First Response Localists Roofing"
+                                alt="Localists Roofing"
                                 width={200}
                                 height={101}
                                 priority

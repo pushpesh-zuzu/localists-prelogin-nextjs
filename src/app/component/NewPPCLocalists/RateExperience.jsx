@@ -9,7 +9,7 @@ function RateExperience() {
         grid grid-cols-2 md:gap-3 gap-2
         md:flex md:flex-row md:items-center md:justify-between
         px-4 md:px-[70px] xl:px-61.5
-        pt-2 pb-2 md:pt-2.5 md:pb-2.5 xl:pt-[5px] xl:pb-2
+        pt-[10px] pb-[10px]
         bg-[#00aeef]
       "
         >

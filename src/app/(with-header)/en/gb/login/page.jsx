@@ -1,5 +1,6 @@
 // import LoginForm from "@/app/component/common/Auth/LoginForm";
 import LoaderIndicator from "@/app/component/common/Loader/LoaderIndicatore";
+import SEO from "@/app/component/common/seo/SEO";
 import dynamic from "next/dynamic";
 
 
@@ -26,6 +27,10 @@ export const metadata = {
 export default function LoginPage() {
     return (
         <>
+            <SEO
+                canonicalPath="/en/gb/login"
+                conversion={true}
+            />
             <h1 className="hidden">Login</h1>
             <LoginForm passwordless={false} />
         </>
