@@ -80,6 +80,8 @@ function TreeSurgeonInChester() {
         heading2="confidence."
         tabData={TREE_SURGEON_TABDATA_CHESTER}
         activeTabkey="popular"
+        heightClass="min-h-[400px] h-auto md:h-auto lg:h-[546px]"
+ 
       />
       <NearmeMember
         mobileImage="/location/tree_surgeon_member_location_mobile.webp"
