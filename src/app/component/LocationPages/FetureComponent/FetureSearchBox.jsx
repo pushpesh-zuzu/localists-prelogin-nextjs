@@ -161,14 +161,14 @@ export function FetureSearchBox({
         </div>
 
         {/* SEARCH BOX */}
-        <div className="relative md:mt-4 max-w-[50%] md:max-w-full md:w-[200px] flex items-center rounded-full bg-white px-4 py-2 shadow-[0px_11.93px_19.89px_0px_#29292980]">
+        <div className="relative md:mt-4 max-w-[55%] md:max-w-full md:w-[200px] flex items-center rounded-full bg-white px-4 py-2 shadow-[0px_11.93px_19.89px_0px_#29292980]">
           <input
             value={postcode}
             onChange={handleChange}
             onKeyDown={handleKeyPress}
             placeholder="Enter Postcode"
             autoComplete="off"
-            className="flex-1 text-sm max-w-[80%] text-[#253238] outline-none placeholder:text-gray-400"
+            className="flex-1 text-sm max-w-[85%] text-[#253238] outline-none placeholder:text-gray-400"
           />
 
           {/* Validation Icons */}
@@ -193,7 +193,7 @@ export function FetureSearchBox({
         </div>
 
         {/* ERROR */}
-        {error && <p className="absolute text-red-500 text-xs mt-1">{error}</p>}
+        {error && <p className="absolute max-[768px]:top-[5.5%] max-[768px]:right-[11%] text-red-500 text-xs mt-1">{error}</p>}
       </div>
 
       {/* MODAL */}

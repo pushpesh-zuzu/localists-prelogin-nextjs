@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useRef } from "react";  // ✅ useRef add kiya
+import { useState, useRef } from "react"; // ✅ useRef add kiya
 import FeatureCard from "./FeatureCard";
 import { FetureSearchBox } from "./FetureSearchBox";
 import Button1 from "../../UI/Typography/Button1";
 
-export default function FetureCardList() {
+export default function FetureCardList({ serviceId, serviceName }) {
   const cards = [
     { id: 1, featured: true },
     { id: 2 },
@@ -24,7 +24,7 @@ export default function FetureCardList() {
   const [visibleCount, setVisibleCount] = useState(STEP);
   const [enableInnerScroll, setEnableInnerScroll] = useState(false);
   const [activeFeture, setActiveFeture] = useState(0);
-  const newItemRef = useRef(null);  // ✅ ref banaya
+  const newItemRef = useRef(null); // ✅ ref banaya
 
   const handleShowMore = () => {
     setVisibleCount((prev) => prev + STEP);
@@ -35,7 +35,10 @@ export default function FetureCardList() {
 
     // ✅ Naye pehle item pe scroll
     setTimeout(() => {
-      newItemRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      newItemRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }, 100);
   };
 
@@ -43,7 +46,7 @@ export default function FetureCardList() {
 
   return (
     <div className="mx-auto max-w-[1115px] px-[30px] py-[40px] md:py-[50px] md:px-16  xl:px-[120px] lg:py-[72px]">
-      <FetureSearchBox />
+      <FetureSearchBox serviceId={serviceId} serviceName={serviceName} />
 
       {/* Card Container */}
       <div
@@ -54,7 +57,10 @@ export default function FetureCardList() {
         <div className="flex flex-col gap-4 md:gap-12">
           {visibleCards.map((card, index) => (
             // ✅ Sirf pehle naye item pe ref wali div lagayi
-            <div key={card.id} ref={index === visibleCount - STEP ? newItemRef : null}>
+            <div
+              key={card.id}
+              ref={index === visibleCount - STEP ? newItemRef : null}
+            >
               <FeatureCard
                 index={index}
                 featured={index === activeFeture}
