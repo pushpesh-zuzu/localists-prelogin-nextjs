@@ -42,7 +42,7 @@ export default function FetureCardList() {
   const visibleCards = cards.slice(0, visibleCount);
 
   return (
-    <div className="mx-auto max-w-[1115px]  px-[10px]  py-[40px] md:py-[50px] md:px-16  xl:px-[120px] lg:py-[72px]">
+    <div className="mx-auto max-w-[1115px] px-[30px] py-[40px] md:py-[50px] md:px-16  xl:px-[120px] lg:py-[72px]">
       <FetureSearchBox />
 
       {/* Card Container */}

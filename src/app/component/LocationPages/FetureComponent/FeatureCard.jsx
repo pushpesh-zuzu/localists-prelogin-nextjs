@@ -55,11 +55,11 @@ export default function FeatureCard({
         <div className="z-50 relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           {/* LEFT */}
           <div className="flex items-start max-[768px]:justify-between md:gap-4">
-            <GalleryIcon className="h-22 w-22 md:h-24 md:w-24" />
+            <GalleryIcon className="h-20 w-20 md:h-24 md:w-24" />
 
             <div className="my-auto flex flex-col gap-1">
               <h5
-                className="text-[18.8px] leading-[21.7px]
+                className="text-[16px] leading-[16px]
         md:text-[25px] md:leading-[25px]
         lg:text-[25px] lg:leading-[25px]  font-Inter font-black
         tracking-[-0.03em]"
@@ -70,7 +70,7 @@ export default function FeatureCard({
               <div className="flex items-center gap-2 text-sm">
                 <div className="flex text-emerald-500">
                   {[1, 2, 3, 4, 5].map((i) => (
-                  <StarIconFeature className="h-[21px] w-[21px] md:h-[30px] md:w-[30px]"/>
+                  <StarIconFeature className="h-[16px] w-[16px] md:h-[30px] md:w-[30px]"/>
                   ))}
                 </div>
                 <span className="text-[14.46px] md:text-[20px] tracking-[-0.03em] font-[Arial] text-[#253238]">
