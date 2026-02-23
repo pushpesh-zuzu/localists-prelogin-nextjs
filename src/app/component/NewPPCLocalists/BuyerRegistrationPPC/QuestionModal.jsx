@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "next/navigation";
 import {
@@ -423,8 +423,21 @@ const QuestionModal = ({
     const errorMessageClass = "text-red-500 text-sm mt-2 text-left";
     const question1Class = "w-full pb-[10px] text-[#253238]";
 
-    console.log("currentQuestion", questions[currentQuestion])
+    const hasOtherOption = useMemo(() => {
+        const rawAnswer = questions[currentQuestion]?.answer;
+        if (!rawAnswer) return false;
 
+        const parsed =
+            typeof rawAnswer === "string"
+                ? JSON.parse(rawAnswer)
+                : rawAnswer;
+
+        return parsed.some(
+            (item) => item.option === "Something else (please describe)"
+        );
+    }, [questions, currentQuestion]);
+
+    
     return (
         <>
             <style jsx global>{keyframesCSS}</style>
@@ -487,7 +500,7 @@ const QuestionModal = ({
                                             }
                                         }}
                                         onBackClick={handleBack}
-                                        // showButton={currentQuestion === 0 ? false : true}
+                                        showButton={hasOtherOption}
                                         showBackButton={currentQuestion === 0 ? false : true}
                                         buttonText={
                                             imageQuestionData &&
@@ -548,7 +561,7 @@ const QuestionModal = ({
                                                                     flex items-center justify-center
                                                                             w-full
                                                                              cursor-pointer
-                                                                            h-[61px] md:h-[62px] md:mt-2 pt-[40px] ${currentQuestion === 0 ? "pb-[30px] md:pb-[35px]" : "pb-[20px]"} lg:pb-[0px] lg:pt-0 lg:h-[107px]
+                                                                            h-[61px] md:h-[62px] md:mt-2 pt-[40px] ${currentQuestion === 0 ? "pb-[30px] md:pb-[35px] lg:pb-[15px]" : "pb-[20px] lg:pb-[0px]"} lg:pt-0 lg:h-[107px]
                                                                             transition-all duration-200 ease-in-out
                                                                                     hover:-translate-y-[3px]
                                                                             ${isSelected ? "border-[#00afe3] -translate-y-[3px]" : ""}
