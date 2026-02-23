@@ -86,7 +86,10 @@ export default function FetureCardList({ serviceId, serviceName }) {
                               font-[Arial] font-bold
                               tracking-[-0.03em]
                               text-center align-middle
+                              disabled:opacity-70
                               "
+          disabled={visibleCount >= cards.length}
+          title={visibleCount >= cards.length ? "No more data to show" : ""}
           onClick={handleShowMore}
         >
           Show more

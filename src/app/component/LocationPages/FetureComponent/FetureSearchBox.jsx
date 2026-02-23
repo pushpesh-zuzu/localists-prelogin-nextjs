@@ -193,7 +193,11 @@ export function FetureSearchBox({
         </div>
 
         {/* ERROR */}
-        {error && <p className="absolute max-[768px]:top-[5.5%] max-[768px]:right-[11%] text-red-500 text-xs mt-1">{error}</p>}
+        {error && (
+          <p className="absolute max-[768px]:top-[5.5%] max-[768px]:right-[11%] text-red-500 text-xs mt-1">
+            {error}
+          </p>
+        )}
       </div>
 
       {/* MODAL */}
