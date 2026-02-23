@@ -128,7 +128,7 @@ const NameEmail = ({ nextStep, isPPCPages = false, onBack }) => {
               setIsBannerText={setIsBannerText}
             />
           ) : isBannerText && !isInitialLoading ? (
-            <div className="flex flex-col gap-[10px] -mb-5">
+            <div className="flex flex-col gap-[10px]">
               <img
                 className="h-20 w-20 mx-auto max-[768px]:h-[60px] max-[768px]:w-[60px]"
                 src={"/images/MultiStepFormPPC/CheckStartCircle.png"}

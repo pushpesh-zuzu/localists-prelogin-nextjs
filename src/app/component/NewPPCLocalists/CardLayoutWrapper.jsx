@@ -49,7 +49,7 @@ const CardLayoutWrapper = ({
                         className={`
               mx-auto text-center
               ${titlePrimary ? "text-[#00afe3]" : "text-[#00afe3]"}
-              pb-[10px]
+              pb-[20px]
             `}
                     >
                         {title}
@@ -84,12 +84,12 @@ const CardLayoutWrapper = ({
                 {showButton && (
                     <div
                         className={`
-              flex items-center gap-[12px] mt-[40px]
+              flex items-center gap-[12px] pt-[20px]
                ${buttonWrapperClassName}
-              max-[768px]:mt-[32px]
+              max-[768px]:pt-[20px]
               max-[768px]:gap-[10px]
 
-              max-[480px]:mt-[28px]
+              max-[480px]:pt-[20px]
               max-[480px]:gap-[8px]
             `}>
                         {/* BACK BUTTON */}
