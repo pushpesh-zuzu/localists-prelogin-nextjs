@@ -59,7 +59,7 @@ export default function FeatureCard({
 
             <div className="my-auto flex flex-col gap-1">
               <h5
-                className="text-[16px] leading-[16px]
+                className="text-[18px] leading-[18px]
         md:text-[25px] md:leading-[25px]
         lg:text-[25px] lg:leading-[25px]  font-Inter font-black
         tracking-[-0.03em]"
@@ -70,7 +70,7 @@ export default function FeatureCard({
               <div className="flex items-center gap-2 text-sm">
                 <div className="flex text-emerald-500">
                   {[1, 2, 3, 4, 5].map((i) => (
-                  <StarIconFeature className="h-[16px] w-[16px] md:h-[30px] md:w-[30px]"/>
+                  <StarIconFeature className="h-[18px] w-[18px] md:h-[30px] md:w-[30px]"/>
                   ))}
                 </div>
                 <span className="text-[14.46px] md:text-[20px] tracking-[-0.03em] font-[Arial] text-[#253238]">
