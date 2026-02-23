@@ -10,13 +10,13 @@ function RateExperience() {
                 className="
         grid grid-cols-2 md:gap-3 gap-2
         md:flex md:flex-row md:items-center md:justify-between
-        px-4 md:px-[70px] xl:px-61.5
+        px-4 md:px-[70px] lg:px-61.5 xl:px-61.5
         pt-[10px] pb-[10px]
       "
             >
                 {/* Item 1 */}
-                <div className="flex items-center gap-2 text-white justify-center md:justify-start">
-                    <Home size={20} />
+                <div className="flex items-center gap-2 text-white justify-center md:justify-start leading-none">
+                    <Home size={21} />
                     <Paragraph variant="optional" bold="font-normal">
                         10
                         <span className="hidden sm:inline">{" "}Years</span>
@@ -26,24 +26,24 @@ function RateExperience() {
                 </div>
 
                 {/* Item 2 */}
-                <div className="flex items-center gap-2 text-white justify-center md:justify-start">
-                    <Building2 size={20} />
+                <div className="flex items-center gap-2 text-white justify-center md:justify-start leading-none">
+                    <Building2 size={21} />
                     <Paragraph variant="optional" bold="font-normal">
                         2,700+ Projects <span className="hidden md:inline">Completed</span>
                     </Paragraph>
                 </div>
 
                 {/* Item 3 */}
-                <div className="flex items-center gap-2 text-white justify-center md:justify-start">
-                    <Star size={20} />
+                <div className="flex items-center gap-2 text-white justify-center md:justify-start leading-none">
+                    <Star size={21} />
                     <Paragraph variant="optional" bold="font-normal">
                         10 Year Guarantee
                     </Paragraph>
                 </div>
 
                 {/* Item 4 */}
-                <div className="flex items-center gap-2 text-white justify-center md:justify-start">
-                    <BadgeCheck size={20} />
+                <div className="flex items-center gap-2 text-white justify-center md:justify-start leading-none">
+                    <BadgeCheck size={21} />
                     <Paragraph variant="optional" bold="font-normal">
                         Fully Accredited
                     </Paragraph>
