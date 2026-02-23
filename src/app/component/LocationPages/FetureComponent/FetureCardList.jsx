@@ -1,14 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";  // ✅ useRef add kiya
 import FeatureCard from "./FeatureCard";
 import { FetureSearchBox } from "./FetureSearchBox";
 import Button1 from "../../UI/Typography/Button1";
 
 export default function FetureCardList() {
   const cards = [
-    { id: 1,featured: true },
-    { id: 2, },
+    { id: 1, featured: true },
+    { id: 2 },
     { id: 3 },
     { id: 4 },
     { id: 5 },
@@ -23,14 +23,20 @@ export default function FetureCardList() {
 
   const [visibleCount, setVisibleCount] = useState(STEP);
   const [enableInnerScroll, setEnableInnerScroll] = useState(false);
+  const [activeFeture, setActiveFeture] = useState(0);
+  const newItemRef = useRef(null);  // ✅ ref banaya
 
   const handleShowMore = () => {
     setVisibleCount((prev) => prev + STEP);
 
-    // first click ke baad internal scroll enable
     if (!enableInnerScroll) {
       setEnableInnerScroll(true);
     }
+
+    // ✅ Naye pehle item pe scroll
+    setTimeout(() => {
+      newItemRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
   };
 
   const visibleCards = cards.slice(0, visibleCount);
@@ -42,20 +48,27 @@ export default function FetureCardList() {
       {/* Card Container */}
       <div
         className={`
-          ${enableInnerScroll ? "max-h-[1205px] overflow-y-auto px-1 mt-2.5 md:mt-[84px]" : ""}
+          ${enableInnerScroll ? "max-h-[1205px] [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full overflow-y-auto px-1 mt-[34px] md:mt-[46px]" : "mt-[34px] md:mt-[46px]"}
         `}
       >
-        <div className="flex flex-col gap-10">
-        {visibleCards.map((card,index) => (
-          <FeatureCard index={index} key={card.id} featured={card.featured} />
-        ))}
+        <div className="flex flex-col gap-4 md:gap-12">
+          {visibleCards.map((card, index) => (
+            // ✅ Sirf pehle naye item pe ref wali div lagayi
+            <div key={card.id} ref={index === visibleCount - STEP ? newItemRef : null}>
+              <FeatureCard
+                index={index}
+                featured={index === activeFeture}
+                setActiveFeture={setActiveFeture}
+              />
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Show More */}
-      
-        <div className="flex justify-center pt-6">
-          <button className="hover:bg-[#00afe3]  bg-black text-white
+      <div className="flex justify-center pt-10 md:pt-[50px]">
+        <button
+          className="hover:bg-[#00afe3]  bg-black text-white
                               text-base
                               md:text-[16px]
                               lg:text-[18px]
@@ -68,13 +81,11 @@ export default function FetureCardList() {
                               tracking-[-0.03em]
                               text-center align-middle
                               "
-       disabled={visibleCount > cards.length} variant="secondary"
-          //  onClick={handleShowMore}
-           >
-            Show more
-          </button>
-        </div>
-    
+          onClick={handleShowMore}
+        >
+          Show more
+        </button>
+      </div>
     </div>
   );
 }

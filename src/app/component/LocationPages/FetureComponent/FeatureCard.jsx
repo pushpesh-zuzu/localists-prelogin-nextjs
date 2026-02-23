@@ -1,63 +1,76 @@
-import {  Star, Phone, Mail } from "lucide-react";
+import { Star, Phone, Mail } from "lucide-react";
 import { useState } from "react";
 import GalleryIcon from "../../../../../public/ReactIcons/GalleryIcon";
 import LocationMapIcon from "../../common/icons/SellerRegistration/LocationMapIcon";
 import RequestCallbackModal from "../RequestCallbackModal";
 import Button1 from "../../UI/Typography/Button1";
+import StarIconFeature from "../../../../../public/ReactIcons/StarIconFeature";
 
-export default function FeatureCard({index, featured = false }) {
+export default function FeatureCard({
+  index,
+  featured = false,
+  setActiveFeture,
+}) {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
       <div
-        className={`relative w-full z-20 rounded-[30px] bg-white py-[17px] px-[15px] md:p-6 ${index ===0 ?'mt-[70px] md:mt-[84px]' : ''}   ${
+        onClick={() => {
+          setActiveFeture(index);
+        }}
+        className={`relative w-full z-20 rounded-[30px] bg-white py-[17px] px-[15px] md:p-6 ${featured ? "mt-[34px] md:mt-[50px]" : ""}   ${
           featured
-            ? `border-[#10C87B] ring-2 ring-[#10C87B] border-5 mt-[35px]  
+            ? `border-[#fff] ring-2 ring-[#10C87B] md:ring-5 mt-[35px]  
           md:before:content-[''] 
           md:before:absolute 
-          md:before:-top-[2.5px]
-          md:before:w-[18px] 
+          md:before:-top-[5px]
+          md:before:w-[20px] 
           
-          lg:before:-top-[2px]
-          md:before:-left-[7px] 
-          lg:before:w-[14px] 
+          lg:before:-top-[5px]
+          md:before:-left-[5px] 
+          lg:before:w-[15px] 
           md:before:h-10 
-          md:before:border-t-8 
-          md:before:border-l-7 
+          md:before:border-t-15
+          md:before:border-l-[5px]
+          lg:before:border-l-[5px]
          md:before:border-[#10C87B]
           md:before:rounded-[3px]
           `
-            : ""
+            : "ring-2 ring-[#fff] border-white md:ring-5"
         }`}
       >
-       {featured && (
-  <div
-    className="absolute z-40 -top-9.5 lg:-top-12.5 md:-left-[7px] 
+        {featured && (
+          <div
+            className="absolute z-40 -top-8.5 md:-top-9.5 lg:-top-12.5 md:-left-[5px] 
     left-1/2 -translate-x-1/2 md:translate-x-0
-    rounded-tl-[20px] rounded-tr-[20px] font-[Arial] font-black 
+    rounded-tl-[10px] rounded-tr-[10px] md:rounded-tl-[20px] md:rounded-tr-[20px] font-[Arial] font-black 
     tracking-[-0.03em]
     text-[14px]
     md:text-[16px]
     lg:text-[25px] bg-[#10C87B] text-white px-8 py-1.5 md:px-4.5 lg:px-8"
-  >
-    FEATURED
-  </div>
-)}
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          >
+            FEATURED
+          </div>
+        )}
+        <div className="z-50 relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           {/* LEFT */}
           <div className="flex items-start max-[768px]:justify-between md:gap-4">
             <GalleryIcon className="h-22 w-22 md:h-24 md:w-24" />
 
             <div className="my-auto flex flex-col gap-1">
-              <h5 className="text-[18.8px] leading-[21.7px]
+              <h5
+                className="text-[18.8px] leading-[21.7px]
         md:text-[25px] md:leading-[25px]
         lg:text-[25px] lg:leading-[25px]  font-Inter font-black
-        tracking-[-0.03em]">D.Roberts & Son</h5>
+        tracking-[-0.03em]"
+              >
+                D.Roberts & Son
+              </h5>
 
               <div className="flex items-center gap-2 text-sm">
                 <div className="flex text-emerald-500">
                   {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} size={24} fill="currentColor" className="h-[21px] w-[21px]" />
+                  <StarIconFeature className="h-[21px] w-[21px] md:h-[30px] md:w-[30px]"/>
                   ))}
                 </div>
                 <span className="text-[14.46px] md:text-[20px] tracking-[-0.03em] font-[Arial] text-[#253238]">
@@ -67,7 +80,10 @@ export default function FeatureCard({index, featured = false }) {
 
               <div className="flex items-center gap-1 text-sm text-gray-600">
                 {/* <MapPin size={24} className="text-emerald-500" /> */}
-                                <LocationMapIcon background="#10C87B"  className="text-emerald-500 h-[18px] w-[15px] md:h-6 md:w-6" />
+                <LocationMapIcon
+                  background="#10C87B"
+                  className="text-emerald-500 h-[18px] w-[15px] md:h-6 md:w-6"
+                />
 
                 <span className="text-sm md:text-[20px] tracking-[-0.03em] font-[Arial] text-[#253238]">
                   Chester
@@ -77,7 +93,6 @@ export default function FeatureCard({index, featured = false }) {
           </div>
         </div>
         <div className="hidden md:flex flex-col gap-3 min-w-fit">
-         
           <Button1
             onClick={() => {
               setShowModal(true);
@@ -105,19 +120,18 @@ export default function FeatureCard({index, featured = false }) {
               </span>
             ))}
           </div>
-            <div className="flex md:hidden flex-col gap-3 min-w-fit">
-          <Button1
-            onClick={() => {
-              setShowModal(true);
-            }}
-            className="  text-sm!
+          <div className="flex md:hidden flex-col gap-3 min-w-fit">
+            <Button1
+              onClick={() => {
+                setShowModal(true);
+              }}
+              className="  text-sm!
                         md:text-[16px]
                         lg:text-[18px] flex items-center mx-auto justify-center gap-2 w-fit"
-          >
-            <Mail color="white" size={24} /> Request a Callback
-            
-          </Button1>
-        </div>
+            >
+              <Mail color="white" size={24} /> Request a Callback
+            </Button1>
+          </div>
         </div>
       </div>
       {showModal && (

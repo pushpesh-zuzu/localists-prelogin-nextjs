@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import {
   BREADCRUM_DATA_TREESURGEON_CHESTER,
   FREQUENTLY_DATA_TREE_SURGEON_CHESTER,
@@ -27,6 +27,7 @@ import AdviceInsightNearMe from "../../Nearme/AdviceInsightNearMe";
 import Feature from "../FetureComponent/Feature";
 
 function RoofersInChester() {
+  const featureRef = useRef(null);
   return (
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon />}
@@ -48,6 +49,7 @@ function RoofersInChester() {
         vettedHeading2="Chester"
         breadcrumb={BREADCRUM_DATA_TREESURGEON_CHESTER}
         extraButton
+        featureRef={featureRef} 
       />
       <PopularJobNearMe
         services={POPULAR_SERVICES_CHESTER}
@@ -62,7 +64,9 @@ function RoofersInChester() {
         serviceName="Roofing" 
         contentBlocks={QUESTION_AND_ABOUT_SERVICE_CHESTER}
       />
-      <Feature/>
+      <div ref={featureRef}>   {/* ✅ Feature ko wrap kiya */}
+        <Feature/>
+      </div>
       <AdviceInsightNearMe
         articles={TREE_SRUGEON_ADVICEINSIGHT_CHESTER}
         padding="px-7.5 py-[70px] sm:px-10 md:px-16 md:py-10  xl:px-[120px]  lg:py-[72px]"

@@ -15,8 +15,16 @@ function VettedSection({
   breadcrumb = [],
   buttonText = "View Tree Surgeons",
   getQuoteText = "Get your Quote",
-  extraButton= false
+  extraButton= false,
+  featureRef 
 }) {
+  const handleViewRoofers = () => {
+  const element = featureRef?.current;
+  if (element) {
+    const top = element.getBoundingClientRect().top + window.scrollY - 80; // 80px upar
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+};
   return (
     <WrapperBGWidth>
       <div className="md:block p-[10px] min-[358px]:py-[35px] min-[358px]:px-[30px]  sm:px-10 md:px-16 md:py-10 xl:px-[120px] xl:pt-[71px] xl:pb-[72px]">
@@ -40,7 +48,7 @@ function VettedSection({
             ))}
             <div className="flex flex-wrap justify-center md:justify-start gap-[7px] gap-2.5 lg:gap-6 mb-2.5 mt-[30px] md:mt-[30px] lg:mt-12">
               <GetQuote variant="primary" text={getQuoteText} />
-              {extraButton && <Button variant="primary" className="py-[7px] xl:py-4 xl:px-[30px] max-w-fit px-[13px]  hover:bg-[#00afe3]  rounded-full border-1 flex flex-row justify-center items-center gap-1 md:gap-[13px]"><UserIcon className="h-[18px] w-[18px] md:h-6 md:w-6" />View Roofers</Button>}
+              {extraButton && <Button onClick={handleViewRoofers}  variant="primary" className="cursor-pointer py-[7px] xl:py-4 xl:px-[30px] max-w-fit px-[13px]  hover:bg-[#00afe3]  rounded-full border-1 flex flex-row justify-center items-center gap-1 md:gap-[13px]"><UserIcon className="h-[18px] w-[18px] md:h-6 md:w-6" />View Roofers</Button>}
             </div>
           </div>
         </div>
