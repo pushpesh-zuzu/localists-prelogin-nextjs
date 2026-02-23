@@ -48,7 +48,7 @@ export default function FetureCardList() {
       {/* Card Container */}
       <div
         className={`
-          ${enableInnerScroll ? "max-h-[1205px] [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full overflow-y-auto px-1 mt-[34px] md:mt-[46px]" : "mt-[34px] md:mt-[46px]"}
+          ${enableInnerScroll ? "max-h-[1205px] [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full overflow-y-auto px-1 pb-0.5 md:pb-[5px] mt-[34px] md:mt-[46px]" : "mt-[34px] md:mt-[46px]"}
         `}
       >
         <div className="flex flex-col gap-4 md:gap-12">

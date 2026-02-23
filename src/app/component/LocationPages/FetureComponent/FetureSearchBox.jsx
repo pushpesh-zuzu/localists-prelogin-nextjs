@@ -144,14 +144,14 @@ export function FetureSearchBox({
             style={{
               textShadow: "0px 4px 4px rgba(0,0,0,0.1)",
             }}
-            className="font-black text-[15px] leading-[15px] md:text-[20px] md:leading-[20px] tracking-[-0.03em] text-[#00AFE3]"
+            className="font-black text-[20px] leading-[20px] tracking-[-0.03em] text-[#00AFE3]"
           >
             Find Roofers
           </p>
 
           {/* Near you. */}
           <p
-            className="font-black text-[15px] leading-[15px] md:text-[20px] md:leading-[20px] tracking-[-0.03em] text-[#253238]"
+            className="font-black text-[20px] leading-[20px] tracking-[-0.03em] text-[#253238]"
             style={{
               textShadow: "0px 4px 4px rgba(0,0,0,0.1)",
             }}
