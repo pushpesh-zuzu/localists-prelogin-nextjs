@@ -1,4 +1,4 @@
-export const QUESTION_AND_ABOUT_SERVICE_CHESTER = [
+export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
   {
     type: "h2",
     text: "Roofing Costs in Chester: A Realistic Price Guide",
@@ -198,7 +198,7 @@ export const FREQUENTLY_DATA_TREE_SURGEON_CHESTER = [
         It’s safer to pay via card or bank transfer. Cash is fine for small jobs, but always get a receipt and a clear quote.`,
   },
 ];
-export const TREE_SRUGEON_ADVICEINSIGHT_CHESTER = [
+export const ROOFERS_ADVICEINSIGHT_CHESTER = [
   {
     id: 1,
     title: "How to remove a tree stump",
@@ -225,7 +225,7 @@ export const TREE_SRUGEON_ADVICEINSIGHT_CHESTER = [
     image: "/nearme/tree-root-remove.webp",
   },
 ];
-export const TREE_SURGEON_TABDATA_CHESTER = {
+export const ROOFERS_TABDATA_CHESTER = {
   popular: [
       {
             title: "Landscapers Near Me",
@@ -267,7 +267,7 @@ export const TREE_SURGEON_TABDATA_CHESTER = {
   ],
   findMore: [],
 };
-export const VETTED_DATA_TREE_SURGEON_CHESTER = [
+export const VETTED_DATA_ROOFERS_CHESTER = [
   `Roofs are great  at staying out of sight and out of mind - right up until they decide to cause a scene. One day everything’s fine, the next there’s a suspicious drip, a tile that’s gone AWOL, or rain setting up camp where it definitely doesn’t belong.
   <br/><br/> 
   `,
@@ -276,7 +276,7 @@ Whether it’s a quick repair, a complete roof overhaul, or an urgent fix after 
 `,
 ];
 
-export const BREADCRUM_DATA_TREESURGEON_CHESTER = [
+export const BREADCRUM_DATA_ROOFERS_CHESTER = [
   { title: "Home & Garden", path: "/en/gb/home" },
   {
     title: "Roofing",
@@ -287,7 +287,7 @@ export const BREADCRUM_DATA_TREESURGEON_CHESTER = [
   },
 ];
 
-export const POPULAR_SERVICES_CHESTER = [
+export const POPULAR_SERVICES_ROOFERS_CHESTER = [
   "Roof Repair",
   "Flashing",
   "Waterproofing",
@@ -295,7 +295,7 @@ export const POPULAR_SERVICES_CHESTER = [
   "Shingle replacement",
   "Leadworks Installation ",
 ];
-export const TREE_SUREON_FEEDBACK_CHESTER = [
+export const ROOFERS_FEEDBACK_CHESTER = [
   {
     id: 1,
     text: "A sudden leak had me stressing, but the roofer arrived quickly, explained everything clearly, and fixed it without any fuss. Brilliant service!",
@@ -319,7 +319,7 @@ export const TREE_SUREON_FEEDBACK_CHESTER = [
   },
 ];
 
-export const TREE_SURGEON_DATA_CHESTER = [
+export const ROOFERS_DATA_CHESTER = [
   {
     id: 1,
     title: "Home & Garden",

@@ -5,7 +5,7 @@ import FeatureCard from "./FeatureCard";
 import { FetureSearchBox } from "./FetureSearchBox";
 import Button1 from "../../UI/Typography/Button1";
 
-export default function FetureCardList({ serviceId, serviceName }) {
+export default function FetureCardList({ serviceId, serviceName,serviceProfessionName }) {
   const cards = [
     { id: 1, featured: true },
     { id: 2 },
@@ -46,7 +46,7 @@ export default function FetureCardList({ serviceId, serviceName }) {
 
   return (
     <div className="mx-auto max-w-[1115px] px-[30px] py-[40px] md:py-[50px] md:px-16  xl:px-[120px] lg:py-[72px]">
-      <FetureSearchBox serviceId={serviceId} serviceName={serviceName} />
+      <FetureSearchBox serviceProfessionName={serviceProfessionName} serviceId={serviceId} serviceName={serviceName} />
 
       {/* Card Container */}
       <div

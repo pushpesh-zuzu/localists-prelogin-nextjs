@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInChester from '@/app/component/LocationPages/RoofersInChester/RoofersInChester';
+import RoofersInChester from '@/app/component/LocationPages/Chester/RoofersInChester/RoofersInChester';
 import React, { Suspense } from 'react'
 export const metadata = {
   title: "Find Trusted Roofers Chester | Localists.com",

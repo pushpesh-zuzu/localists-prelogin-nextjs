@@ -1,30 +1,30 @@
 "use client";
 import React, { useRef } from "react";
 import {
-  BREADCRUM_DATA_TREESURGEON_CHESTER,
+  BREADCRUM_DATA_ROOFERS_CHESTER,
   FREQUENTLY_DATA_TREE_SURGEON_CHESTER,
-  POPULAR_SERVICES_CHESTER,
-  QUESTION_AND_ABOUT_SERVICE_CHESTER,
-  TREE_SRUGEON_ADVICEINSIGHT_CHESTER,
-  TREE_SUREON_FEEDBACK_CHESTER,
-  TREE_SURGEON_DATA_CHESTER,
-  TREE_SURGEON_TABDATA_CHESTER,
-  VETTED_DATA_TREE_SURGEON_CHESTER,
+  POPULAR_SERVICES_ROOFERS_CHESTER ,
+  QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER,
+  ROOFERS_ADVICEINSIGHT_CHESTER,
+  ROOFERS_FEEDBACK_CHESTER,
+  ROOFERS_DATA_CHESTER,
+  ROOFERS_TABDATA_CHESTER ,
+  VETTED_DATA_ROOFERS_CHESTER,
 } from "./RoofersInChesterData";
-import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-import HeroSectionNearMe from "../../Nearme/HeroSectionNearMe";
-import VettedSection from "../../Nearme/VettedSection";
-import PopularJobNearMe from "../../Nearme/PopularJobNearMe";
-import Footer from "../../Footer/Footer";
-import AboutServicesAndQuestions from "../../Nearme/AboutServicesAndQuestions";
-import { FAQ } from "../../Nearme/FAQ";
-import UserFeedbackNearMe2 from "../../Nearme/UserFeedbackNearMe2";
-import DiscoverNearMe from "../../Nearme/DiscoverNearMe";
-import NearmeMember from "../../Nearme/NearmeMember";
-import FAQScript from "../../common/seo/FAQScript";
-import HireRelatedToServiceNearMe from "../../Nearme/HireRelatedToServiceNearMe";
-import AdviceInsightNearMe from "../../Nearme/AdviceInsightNearMe";
-import Feature from "../FetureComponent/Feature";
+import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+import HeroSectionNearMe from "../../../Nearme/HeroSectionNearMe";
+import VettedSection from "../../../Nearme/VettedSection";
+import PopularJobNearMe from "../../../Nearme/PopularJobNearMe";
+import Footer from "../../../Footer/Footer";
+import AboutServicesAndQuestions from "../../../Nearme/AboutServicesAndQuestions";
+import { FAQ } from "../../../Nearme/FAQ";
+import UserFeedbackNearMe2 from "../../../Nearme/UserFeedbackNearMe2";
+import DiscoverNearMe from "../../../Nearme/DiscoverNearMe";
+import NearmeMember from "../../../Nearme/NearmeMember";
+import FAQScript from "../../../common/seo/FAQScript";
+import HireRelatedToServiceNearMe from "../../../Nearme/HireRelatedToServiceNearMe";
+import AdviceInsightNearMe from "../../../Nearme/AdviceInsightNearMe";
+import Feature from "../../FetureComponent/Feature";
 
 function RoofersInChester() {
   const featureRef = useRef(null);
@@ -44,15 +44,15 @@ function RoofersInChester() {
         serviceName="Roofing"
       />
       <VettedSection
-        paragraph={VETTED_DATA_TREE_SURGEON_CHESTER}
+        paragraph={VETTED_DATA_ROOFERS_CHESTER}
         vettedHeading1="Find Vetted Local Roofers in "
         vettedHeading2="Chester"
-        breadcrumb={BREADCRUM_DATA_TREESURGEON_CHESTER}
+        breadcrumb={BREADCRUM_DATA_ROOFERS_CHESTER}
         extraButton
         featureRef={featureRef}
       />
       <PopularJobNearMe
-        services={POPULAR_SERVICES_CHESTER}
+        services={POPULAR_SERVICES_ROOFERS_CHESTER }
         popularImage="/nearme/Roofing/roofslate.webp"
         altText="two roofers installing slate tiles onto a brand new roof URL"
         mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -62,7 +62,7 @@ function RoofersInChester() {
       <AboutServicesAndQuestions
         serviceId={113}
         serviceName="Roofing"
-        contentBlocks={QUESTION_AND_ABOUT_SERVICE_CHESTER}
+        contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER}
       />
       <div ref={featureRef}>
         {" "}
@@ -70,7 +70,7 @@ function RoofersInChester() {
         <Feature serviceId={113} serviceName="Roofing" />
       </div>
       <AdviceInsightNearMe
-        articles={TREE_SRUGEON_ADVICEINSIGHT_CHESTER}
+        articles={ROOFERS_ADVICEINSIGHT_CHESTER}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10  xl:px-[120px]  lg:py-[72px]"
       />
       <FAQ
@@ -79,13 +79,13 @@ function RoofersInChester() {
         headingblack="Roofers in Chester"
         data={FREQUENTLY_DATA_TREE_SURGEON_CHESTER}
       />
-      <UserFeedbackNearMe2 feedbackData={TREE_SUREON_FEEDBACK_CHESTER} />
+      <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_CHESTER} />
 
-      <DiscoverNearMe homeData={TREE_SURGEON_DATA_CHESTER} />
+      <DiscoverNearMe homeData={ROOFERS_DATA_CHESTER} />
       <HireRelatedToServiceNearMe
         heading1="Hire with"
         heading2="confidence."
-        tabData={TREE_SURGEON_TABDATA_CHESTER}
+        tabData={ROOFERS_TABDATA_CHESTER }
         activeTabkey="popular"
       />
       <NearmeMember

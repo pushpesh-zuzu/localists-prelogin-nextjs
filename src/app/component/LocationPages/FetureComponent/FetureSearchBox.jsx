@@ -18,6 +18,8 @@ import BuyerRegistration from "../../common/BuyerRegistration/BuyerRegistration"
 export function FetureSearchBox({
   serviceId = 112,
   serviceName = "Tree Surgery",
+  serviceProfessionName="Roofers"
+  
 }) {
   const dispatch = useDispatch();
   const router = useRouter();
@@ -146,7 +148,7 @@ export function FetureSearchBox({
             }}
             className="font-black text-[20px] leading-[20px] tracking-[-0.03em] text-[#00AFE3]"
           >
-            Find Roofers
+            Find {serviceProfessionName}
           </p>
 
           {/* Near you. */}
@@ -161,7 +163,7 @@ export function FetureSearchBox({
         </div>
 
         {/* SEARCH BOX */}
-        <div className="relative md:mt-4 max-w-[55%] md:max-w-full md:w-[200px] flex items-center rounded-full bg-white px-4 py-2 shadow-[0px_11.93px_19.89px_0px_#29292980]">
+        <div className="relative h-fit md:mt-4 max-w-[55%] md:max-w-full md:w-[200px] flex items-center rounded-full bg-white px-4 py-2 shadow-[0px_11.93px_19.89px_0px_#29292980]">
           <input
             value={postcode}
             onChange={handleChange}
