@@ -10,8 +10,18 @@ export default function FeatureCard({
   index,
   featured = false,
   setActiveFeture,
+  seller = {},
+  popularServices = [],
+  cityName=""
 }) {
   const [showModal, setShowModal] = useState(false);
+
+  const businessName = seller.business_profile_name || ""
+  const totalReviews = seller.total_reviews ?? 0;
+  // const avgRating = parseFloat(seller.avg_rating) || 0;
+  // const city = seller.postcode || "N/A";
+  const location = cityName; 
+
   return (
     <>
       <div
@@ -64,34 +74,36 @@ export default function FeatureCard({
         lg:text-[25px] lg:leading-[25px]  font-Inter font-black
         tracking-[-0.03em]"
               >
-                D.Roberts & Son
+                {businessName}
               </h5>
 
               <div className="flex items-center gap-2 text-sm">
                 <div className="flex text-emerald-500">
                   {[1, 2, 3, 4, 5].map((i) => (
-                  <StarIconFeature className="h-[18px] w-[18px] md:h-[30px] md:w-[30px]"/>
+                    <StarIconFeature
+                      key={i}
+                      className="h-[18px] w-[18px] md:h-[30px] md:w-[30px]"
+                    />
                   ))}
                 </div>
                 <span className="text-[14.46px] md:text-[20px] tracking-[-0.03em] font-[Arial] text-[#253238]">
-                  36 Reviews
+                  {totalReviews} Reviews
                 </span>
               </div>
 
               <div className="flex items-center gap-1 text-sm text-gray-600">
-                {/* <MapPin size={24} className="text-emerald-500" /> */}
                 <LocationMapIcon
                   background="#10C87B"
                   className="text-emerald-500 h-[18px] w-[15px] md:h-6 md:w-6"
                 />
-
                 <span className="text-sm md:text-[20px] tracking-[-0.03em] font-[Arial] text-[#253238]">
-                  Chester
+                  {location}
                 </span>
               </div>
             </div>
           </div>
         </div>
+
         <div className="hidden md:flex flex-col gap-3 min-w-fit">
           <Button1
             onClick={() => {
@@ -102,16 +114,10 @@ export default function FeatureCard({
             <Phone color="white" size={24} /> Request a Callback
           </Button1>
         </div>
+
         <div className="max-w-full md:max-w-[69%] flex flex-col gap-y-[30px] md:gap-y-0 md:flex-row gap-x-6">
-          <div className="mt-4 flex  items-center flex-wrap gap-[13px]">
-            {[
-              "Roof Repair",
-              "Flashing",
-              "Waterproofing",
-              "Roof Replacement",
-              "Shingle replacement",
-              "Leadworks installation",
-            ].map((service) => (
+          <div className="mt-4 flex items-center flex-wrap gap-[13px]">
+            {popularServices.map((service) => (
               <span
                 key={service}
                 className="tracking-[-0.03em] font-bold font-[Arial] rounded-full border-[2.5px] h-fit border-[#B9B9C2] py-[5.35px] px-1.5 md:px-2 md:py-1 text-[11px] leading-[11px] md:leading-[17px] md:text-base text-[#B9B9C2]"

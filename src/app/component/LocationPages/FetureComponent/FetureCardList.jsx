@@ -1,30 +1,47 @@
 "use client";
 
-import { useState, useRef } from "react"; // ✅ useRef add kiya
+import { useState, useRef, useEffect } from "react";
 import FeatureCard from "./FeatureCard";
 import { FetureSearchBox } from "./FetureSearchBox";
-import Button1 from "../../UI/Typography/Button1";
+import { useDispatch, useSelector } from "react-redux";
+import { getFetchSellerListData } from "@/lib/store/buyerslice/buyerSlice";
 
-export default function FetureCardList({ serviceId, serviceName,serviceProfessionName }) {
-  const cards = [
-    { id: 1, featured: true },
-    { id: 2 },
-    { id: 3 },
-    { id: 4 },
-    { id: 5 },
-    { id: 6 },
-    { id: 7 },
-    { id: 8 },
-    { id: 9 },
-    { id: 10 },
-  ];
+export default function FetureCardList({
+  serviceId,
+  serviceName,
+  serviceProfessionName,
+  cityName = "Chester",
+}) {
+  const { getSellerData } = useSelector((state) => state.buyer);
 
-  const STEP = 4;
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (!serviceId) return;
+
+    dispatch(
+      getFetchSellerListData({
+        service_id: serviceId,
+        city: cityName,
+      }),
+    );
+  }, [serviceId, dispatch]);
+
+  const sellers = getSellerData?.sellers || [];
+  const popularServices = getSellerData?.popular_services
+    ? getSellerData.popular_services.split(",").map((s) => s.trim())
+    : [];
+
+  const STEP = getSellerData?.recommended_count || 5;
 
   const [visibleCount, setVisibleCount] = useState(STEP);
   const [enableInnerScroll, setEnableInnerScroll] = useState(false);
   const [activeFeture, setActiveFeture] = useState(0);
-  const newItemRef = useRef(null); // ✅ ref banaya
+  const newItemRef = useRef(null);
+
+  useEffect(() => {
+    setVisibleCount(STEP);
+  }, [STEP]);
 
   const handleShowMore = () => {
     setVisibleCount((prev) => prev + STEP);
@@ -33,7 +50,6 @@ export default function FetureCardList({ serviceId, serviceName,serviceProfessio
       setEnableInnerScroll(true);
     }
 
-    // ✅ Naye pehle item pe scroll
     setTimeout(() => {
       newItemRef.current?.scrollIntoView({
         behavior: "smooth",
@@ -42,11 +58,15 @@ export default function FetureCardList({ serviceId, serviceName,serviceProfessio
     }, 100);
   };
 
-  const visibleCards = cards.slice(0, visibleCount);
+  const visibleSellers = sellers.slice(0, visibleCount);
 
   return (
     <div className="mx-auto max-w-[1115px] px-[30px] py-[40px] md:py-[50px] md:px-16  xl:px-[120px] lg:py-[72px]">
-      <FetureSearchBox serviceProfessionName={serviceProfessionName} serviceId={serviceId} serviceName={serviceName} />
+      <FetureSearchBox
+        serviceProfessionName={serviceProfessionName}
+        serviceId={serviceId}
+        serviceName={serviceName}
+      />
 
       {/* Card Container */}
       <div
@@ -55,16 +75,18 @@ export default function FetureCardList({ serviceId, serviceName,serviceProfessio
         `}
       >
         <div className="flex flex-col gap-4 md:gap-12">
-          {visibleCards.map((card, index) => (
-            // ✅ Sirf pehle naye item pe ref wali div lagayi
+          {visibleSellers.map((seller, index) => (
             <div
-              key={card.id}
+              key={`${seller.id}-${index}`}
               ref={index === visibleCount - STEP ? newItemRef : null}
             >
               <FeatureCard
                 index={index}
                 featured={index === activeFeture}
                 setActiveFeture={setActiveFeture}
+                seller={seller}
+                popularServices={popularServices}
+                cityName={getSellerData?.city}
               />
             </div>
           ))}
@@ -88,8 +110,8 @@ export default function FetureCardList({ serviceId, serviceName,serviceProfessio
                               text-center align-middle
                               disabled:opacity-70
                               "
-          disabled={visibleCount >= cards.length}
-          title={visibleCount >= cards.length ? "No more data to show" : ""}
+          disabled={visibleCount >= sellers.length}
+          title={visibleCount >= sellers.length ? "No more data to show" : ""}
           onClick={handleShowMore}
         >
           Show more

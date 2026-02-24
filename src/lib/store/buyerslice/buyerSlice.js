@@ -69,6 +69,8 @@ const initialState = {
   postCodeLoader: false,
   searchServiceLoader: false,
   redirectFromHome: false,
+  getSellerDataLoader:false,
+  getSellerData:{}
 };
 
 // ----------------------------
@@ -154,6 +156,23 @@ export const createRequestData = (requestData) => {
     }
   };
 };
+export const getFetchSellerListData=(data)=>{
+  return async(dispatch)=>{
+    dispatch(setGetSellerDataLoader(true))
+    try{
+      const response = await axiosInstance.post('get-seller-list-city-wise',data)
+      console.log(response.data,'response.data')
+      dispatch(setGetSellerData(response?.data?.data))
+      return response.data
+    }catch(error){
+      console.error("Error get seller data:", error?.response?.data);
+      showToast("error", error?.response?.data?.message);
+      throw error;
+    }finally{
+      dispatch(setGetSellerDataLoader(false))
+    }
+  }
+}
 
 export const registerQuoteCustomer = (customerData) => {
   return async (dispatch) => {
@@ -669,6 +688,12 @@ const buyerSlice = createSlice({
     setsearchServiceLoader(state, action) {
       state.searchServiceLoader = action.payload;
     },
+     setGetSellerDataLoader(state, action) {
+      state.getSellerDataLoader = action.payload;
+    },
+     setGetSellerData(state, action) {
+      state.getSellerData = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -720,6 +745,8 @@ export const {
   clearSetBuyerRequestInternalQuestion,
   resetProgress,
   setsearchServiceLoader,
+  setGetSellerDataLoader,
+  setGetSellerData
 } = buyerSlice.actions;
 
 export default buyerSlice.reducer;
