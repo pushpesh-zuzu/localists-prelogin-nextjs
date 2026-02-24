@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Clock, ArrowLeft } from "lucide-react";
 import H5 from "../UI/Typography/H5";
 import CardLayoutWrapper from "./CardLayoutWrapper";
-import H4 from "../UI/Typography/H4";
+import Paragraph from "../UI/Typography/Paragraph";
 
 const TIME_SLOTS = [
     "09:00 AM",
@@ -65,6 +65,21 @@ export default function CalenderQuestions({ nextStep, onBack, onSelect }) {
     useEffect(() => {
         if (!isMobile) {
             setShowMobileSlots(false);
+        }
+    }, [isMobile]);
+
+    useEffect(() => {
+        // Desktop & Tablet: auto-select today
+        if (!isMobile && !selectedDate) {
+            setSelectedDate(
+                new Date(today.getFullYear(), today.getMonth(), today.getDate())
+            );
+        }
+
+        // Mobile: ensure no default date
+        if (isMobile && selectedDate) {
+            setSelectedDate(null);
+            setSelectedTime(null);
         }
     }, [isMobile]);
 
@@ -164,14 +179,19 @@ export default function CalenderQuestions({ nextStep, onBack, onSelect }) {
                     calendarQuestion={true}
                     buttonWrapperClassName=" lg:w-[535px] lg:mx-auto"
                 >
-                    <H4 className="text-[#00afe3] lg:pb-[30px] md:pb-[20px] pb-[10px]">
+                    <h4 className="text-[#00afe3] lg:pb-[30px] md:pb-[20px] pb-[10px]
+                    font-Inter font-black tracking-[-0.03em] text-[20px] leading-[20px]
+                    md:text-[25px] md:leading-[25px] lg:text-[30px] lg:leading-[30px]">
                         When do you need the work doing?
-                    </H4>
+                    </h4>
 
                     {showMobileSlots && (
                         <div className="flex items-center gap-3 mb-4 md:hidden">
                             <button
-                                onClick={() => setShowMobileSlots(false)}
+                                onClick={() => {
+                                    setShowMobileSlots(false),
+                                        setSelectedTime(null)
+                                }}
                                 className="h-9 w-9
         flex items-center justify-center
         rounded-full
@@ -190,9 +210,10 @@ export default function CalenderQuestions({ nextStep, onBack, onSelect }) {
 
                     <div className="flex flex-col lg:flex-row gap-5">
                         <div>
-                            <H5 className="!font-medium">
+                            <H5 variant="optional" className="!font-medium">
                                 Free Home Visit With Localitsts
                             </H5>
+                            <Paragraph variant="optional" className="!font-medium lg:pt-[20px] pt-[10px] text-left">Book in with Localist at a time that suits you. We will visit your property and assess your roofing needs then provide you with a detailed free quote.</Paragraph>
                         </div>
                         <div className="flex flex-col md:flex-row gap-5">
                             {/* Calendar Box */}
@@ -286,7 +307,7 @@ export default function CalenderQuestions({ nextStep, onBack, onSelect }) {
                                     </span>
                                 </div>
                                 <div
-                                    className="flex flex-row flex-wrap pb-1 md:flex-col gap-2 max-h-[360px] overflow-y-auto pr-1 cursor-pointer
+                                    className="flex flex-row flex-wrap pb-1 md:flex-col gap-2 max-h-[300px] md:max-h-[360px] overflow-y-auto pr-1 cursor-pointer
             [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar]:h-4 [&::-webkit-scrollbar-track]:bg-gray-100 
             [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full"
                                 >

@@ -10,6 +10,9 @@ export default function H5({ children, className = "", variant = "primary" }) {
     medium: `text-[24px] leading-[25px]
         md:text-[16px] md:leading-[16px]
         lg:text-[25px] lg:leading-[25px]`,
+     optional: `text-[18px] leading-[18px]
+        md:text-[20px] md:leading-[20px]
+        lg:text-[25px] lg:leading-[25px]`,
         
   };
   return (
