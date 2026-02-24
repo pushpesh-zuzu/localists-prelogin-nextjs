@@ -3,17 +3,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setBuyerStep } from "@/lib/store/buyerslice/buyerSlice";
-import NameEmailPhoneModal from "./NameEmailPhoneModal";
-import ServiceAndPostCodeModal from "./ServiceAndPostCodeModal";
-import QuestionModal from "./QuestionsModal";
-import OtpVerification from "./OTPVerification";
-import ViewYourMatches from "./ViewYourMatches";
-import DescribeYourRequest from "./DescribeYourRequest";
-import { getBarkToken } from "@/utils/CookiesHelper";
-import ConfirmationModal from "./ConfirmationModal";
+import Callender from "../../common/Callender/Callender";
+import NameEmailPhoneModal from "../../common/BuyerRegistration/NameEmailPhoneModal";
+import ServiceAndPostCodeModal from "../../common/BuyerRegistration/ServiceAndPostCodeModal";
+import QuestionModal from "../../common/BuyerRegistration/QuestionsModal";
+import OtpVerification from "../../common/BuyerRegistration/OTPVerification";
+import ViewYourMatches from "../../common/BuyerRegistration/ViewYourMatches";
+import DescribeYourRequest from "../../common/BuyerRegistration/DescribeYourRequest";
+import ConfirmationModal from "../../common/BuyerRegistration/ConfirmationModal";
 import ReEnterMobileNumber from "../../../../../public/questions/ReEnterMobileNumber";
+import { getBarkToken } from "@/utils/CookiesHelper";
 
-function BuyerRegistration({
+function BuyerRegistrationLocationPage({
   closeModal,
   postcode,
   city,
@@ -39,19 +40,17 @@ function BuyerRegistration({
 
   const dispatch = useDispatch();
 
-  // ✅ Destructure multiple states from buyer slice
   const { buyerStep, questionanswerData, questionLoader, buyerRequest } =
     useSelector(
-      (state) => state.buyer || {} // replace 'buyer' with 'buyers' if store key is buyers
+      (state) => state.buyer || {},
     );
 
   const isAdminOrRemembered = getBarkToken();
 
   const stepFlow = isAdminOrRemembered
     ? [2, 3, 5, 7, 8]
-    : [1, 2, 3, 4, 5, 7, 8];
+    : [1, 2, 3, 4, 5, 7];
 
-  // console.log(buyerRequest, "buyerRequest");
   const nextStep = () => {
     const currentIndex = stepFlow.indexOf(buyerStep);
     if (currentIndex < stepFlow.length - 1) {
@@ -80,9 +79,7 @@ function BuyerRegistration({
     }
   }, [dispatch]);
 
-  // const onNext = (step) => {
-  //   dispatch(setBuyerStep(step));
-  // };
+
 
   useEffect(() => {
     if (shouldClose) {
@@ -91,9 +88,7 @@ function BuyerRegistration({
     }
   }, [shouldClose]);
 
-  // console.log(buyerStep, "bss");
-  if (!buyerStep) return null; // Prevent crash if state is undefined
-  // console.log(questionanswerData, "questionanswerData");
+  if (!buyerStep) return null;
 
   useEffect(() => {
     if (buyerStep === 2) {
@@ -153,15 +148,17 @@ function BuyerRegistration({
           formData={buyerRequest}
           resetQaTrigger={resetQaFormTrigger}
           setResetQasFormTrigger={setResetQasFormTrigger}
+          isStartWithQuestionModal
         />
       )}
+      {buyerStep === 4 && <Callender handleClose={handleClose} nextStep={nextStep} />}
       {reEnterMobile === 1 && (
         <ReEnterMobileNumber
           setReEnterMobile={setReEnterMobile}
           onClose={() => setReEnterMobile(2)}
         />
       )}
-      {buyerStep === 4 && reEnterMobile === 2 && (
+      {buyerStep === 5 && reEnterMobile === 2 && (
         <OtpVerification
           nextStep={nextStep}
           previousStep={previousStep}
@@ -172,7 +169,7 @@ function BuyerRegistration({
           setReEnterMobile={setReEnterMobile}
         />
       )}
-      {buyerStep === 5 && (
+      {buyerStep === 6 && (
         <ViewYourMatches
           nextStep={nextStep}
           previousStep={previousStep}
@@ -200,4 +197,4 @@ function BuyerRegistration({
   );
 }
 
-export default BuyerRegistration;
+export default BuyerRegistrationLocationPage;

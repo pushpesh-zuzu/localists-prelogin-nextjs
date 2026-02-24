@@ -12,7 +12,6 @@ import {
   VETTED_DATA_ROOFERS_CHESTER,
 } from "./RoofersInChesterData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-import HeroSectionNearMe from "../../../Nearme/HeroSectionNearMe";
 import VettedSection from "../../../Nearme/VettedSection";
 import PopularJobNearMe from "../../../Nearme/PopularJobNearMe";
 import Footer from "../../../Footer/Footer";
@@ -25,6 +24,7 @@ import FAQScript from "../../../common/seo/FAQScript";
 import HireRelatedToServiceNearMe from "../../../Nearme/HireRelatedToServiceNearMe";
 import AdviceInsightNearMe from "../../../Nearme/AdviceInsightNearMe";
 import Feature from "../../FetureComponent/Feature";
+import HeroSectionLocation from "../../HeroSectionLocation";
 
 function RoofersInChester() {
   const featureRef = useRef(null);
@@ -32,7 +32,7 @@ function RoofersInChester() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon />}
       <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON_CHESTER} />
-      <HeroSectionNearMe
+      <HeroSectionLocation
         heading1="Roofers"
         heading2="Chester"
         description="Find the best roofers in Chester! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."

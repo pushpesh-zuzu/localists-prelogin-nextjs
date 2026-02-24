@@ -2,10 +2,13 @@
 import dynamic from "next/dynamic";
 import React from "react";
 import LogoWhiteIcon from "../../../../public/ReactIcons/LogoWhiteIcon";
-const PostCodeSearchField = dynamic(() => import("../Nearme/PostCodeSearchField"), {
-  ssr: false,
-  loading: () => <div className="hidden">Loading...</div>,
-});
+const PostCodeSearchFieldLocation = dynamic(
+  () => import("./PostCodeSearchFieldLocation"),
+  {
+    ssr: false,
+    loading: () => <div className="hidden">Loading...</div>,
+  },
+);
 
 function PostCodeSectionLocation({
   classNamePostCode = "mb-[30px] mt-[30px] lg:mt-[60px] lg:mb-[60px]",
@@ -37,7 +40,7 @@ function PostCodeSectionLocation({
         </p>
         {/* Left – Search */}
         <div className="w-[223px] mx-auto lg:mx-0 md:w-[343px] flex justify-center">
-          <PostCodeSearchField
+          <PostCodeSearchFieldLocation
             serviceId={serviceId}
             serviceName={serviceName}
             buttonBg="bg-[#02D07B]"
@@ -61,8 +64,8 @@ function PostCodeSectionLocation({
         </p>
       </div>
       <div className="flex justify-center xl:justify-end mt-[30px] xl:mt-2.5">
-        <LogoWhiteIcon className="h-[28px] w-[153px] md:h-auto md:w-auto"/>
-        </div>
+        <LogoWhiteIcon className="h-[28px] w-[153px] md:h-auto md:w-auto" />
+      </div>
     </div>
   );
 }
