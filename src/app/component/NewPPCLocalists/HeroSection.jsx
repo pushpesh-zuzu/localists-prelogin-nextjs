@@ -18,6 +18,7 @@ import PhoneNumber from "./BuyerRegistrationPPC/PhoneNumber";
 import OTPVerification from "./BuyerRegistrationPPC/OTPVerification";
 import CardLayoutWrapper from "./CardLayoutWrapper";
 import DescribeYourRequest from "./BuyerRegistrationPPC/DescribeYourRequest";
+import CalenderQuestions from "./CalenderQuestions";
 
 function HeroSection({
     title = "",
@@ -43,7 +44,7 @@ function HeroSection({
     const [backButtonTriggered, setBackButtonTriggered] = useState(false);
 
 
-    const stepFlow = [1, 2, 3, 4, 5, 6];
+    const stepFlow = [1, 2, 3, 4, 5, 6, 7];
     const isAdminOrRemembered = authToken || userToken?.remember_tokens;
 
     const nextStep = () => {
@@ -72,6 +73,10 @@ function HeroSection({
     useEffect(() => {
         dispatch(questionAnswerData({ service_id: serviceId }));
     }, []);
+
+    const onSelect = () => {
+        console.log("calling")
+    }
 
     return (
         <section className="relative w-full overflow-hidden px-[30px] md:px-[120px]">
@@ -141,6 +146,14 @@ function HeroSection({
                     )}
 
                     {buyerStep === 4 && (
+                        <CalenderQuestions
+                            nextStep={nextStep}
+                            onBack={prevStep}
+                            onSelect={onSelect}
+                        />
+                    )}
+
+                    {buyerStep === 5 && (
                         <PhoneNumber
                             nextStep={nextStep}
                             onBack={prevStep}
@@ -151,7 +164,7 @@ function HeroSection({
                         />
                     )}
 
-                    {buyerStep === 5 && (
+                    {buyerStep === 6 && (
                         <CardLayoutWrapper OtpContainer={true} showButton={false}>
                             <OTPVerification
                                 open
@@ -164,7 +177,7 @@ function HeroSection({
                         </CardLayoutWrapper>
                     )}
 
-                    {buyerStep === 6 && (
+                    {buyerStep === 7 && (
                         <CardLayoutWrapper
                             showBackButton={false}
                             showButton={false}

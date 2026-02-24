@@ -1,9 +1,6 @@
 "use client";
 
 import LoaderIndicator from "../common/Loader/LoaderIndicatore";
-import Image from "next/image";
-import leftNormalArrow from "../../../../public/icons/leftNormalArrow.svg";
-import H5 from "../UI/Typography/H5";
 import H4 from "../UI/Typography/H4";
 import { ArrowLeft } from "lucide-react";
 
@@ -24,15 +21,16 @@ const CardLayoutWrapper = ({
     titleHeading = "",
     buttonWrapperClassName = "",
     OtpContainer = false,
-    phonenumber = false
+    phonenumber = false,
+    calendarQuestion = false
 }) => {
-     
+
     return (
         <div
             className={`
     flex justify-center items-center bg-white rounded-[20px]
     ${OtpContainer ? "w-fit mx-auto" : ""}
-    ${phonenumber? "lg:w-[60%] md:w-[80%] mx-auto" : ""}
+    ${phonenumber ? "lg:w-[60%] md:w-[80%] mx-auto" : ""}
     ${NameEmailContainer ? "w-[85%] mx-auto h-fit py-5 mt-3 md:mt-6 max-[480px]:w-[95%]" : ""}
     max-[480px]:items-start
   `}>
@@ -49,9 +47,8 @@ const CardLayoutWrapper = ({
                         className={`
               mx-auto text-center
               ${titlePrimary ? "text-[#00afe3]" : "text-[#00afe3]"}
-              pb-[20px]
-            `}
-                    >
+               pb-[20px]
+            `}>
                         {title}
                     </H4>
                 )}

@@ -1,6 +1,17 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
+const formatLabel = (text = "") => {
+  return text
+    // space before capital letters
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    // space between word and slash word
+    .replace(/\/([a-zA-Z])/g, " / $1")
+    // space between letters and numbers (optional)
+    .replace(/([a-zA-Z])(\d)/g, "$1 $2")
+    .replace(/(\d)([a-zA-Z])/g, "$1 $2");
+};
+
 const IconOptionCard = ({
   icon: Icon,
   label,
@@ -29,7 +40,7 @@ const IconOptionCard = ({
       className={`
         relative
         flex flex-col items-center justify-center
-        px-[20px]
+        lg:px-[20px] px-[10px]
         pb-[15px]
         md:pt-[15px] pt-[20px]
         w-full
@@ -60,8 +71,8 @@ const IconOptionCard = ({
       <Icon width={iconSize} height={iconSize} />
 
       {/* Label */}
-      <span className="font-[Arial] tracking-[-0.03em] text-[14px] leading-[16px] text-center font-bold pt-[10px]">
-        {label}
+      <span className="font-[Arial] tracking-[-0.03em] text-[12px] leading-[12px] md:leading-[18px] md:text-[14px] text-center font-bold pt-[10px]">
+         {formatLabel(label)}
       </span>
     </button>
   );
