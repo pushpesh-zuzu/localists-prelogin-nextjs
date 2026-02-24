@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 
 const formatLabel = (text = "") => {
   return text
@@ -12,6 +12,13 @@ const formatLabel = (text = "") => {
     .replace(/(\d)([a-zA-Z])/g, "$1 $2");
 };
 
+// labels that should NOT be displayed
+const HIDE_LABELS = new Set(["1", "2", "3", "4 or more"]);
+
+const shouldHideLabel = (text = "") => {
+  return HIDE_LABELS.has(text.trim());
+};
+
 const IconOptionCard = ({
   icon: Icon,
   label,
@@ -21,6 +28,11 @@ const IconOptionCard = ({
   onClick,
 }) => {
   const [iconSize, setIconSize] = useState(50);
+
+    const isSpecialLabel = useMemo(
+    () => shouldHideLabel(label),
+    [label]
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,6 +44,7 @@ const IconOptionCard = ({
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
     <button
       type="button"
@@ -43,8 +56,8 @@ const IconOptionCard = ({
         lg:px-[20px] px-[10px]
         pb-[15px]
         md:pt-[15px] pt-[20px]
-        w-full
-        rounded-[10px]
+        ${isSpecialLabel ? "md:w-[125px] md:h-[90px] lg:w-[145px] lg:h-[100px]" : "w-full"}
+         rounded-[10px]
         text-white
         bg-[#00afe3]
         cursor-pointer
@@ -68,12 +81,16 @@ const IconOptionCard = ({
       )}
 
       {/* Icon */}
-      <Icon width={iconSize} height={iconSize} />
+      <Icon width={isSpecialLabel ? 65 : iconSize} height={isSpecialLabel ? 65 : iconSize} />
 
       {/* Label */}
-      <span className="font-[Arial] tracking-[-0.03em] text-[12px] leading-[12px] md:leading-[18px] md:text-[14px] text-center font-bold pt-[10px]">
-         {formatLabel(label)}
-      </span>
+      {
+        !isSpecialLabel && (
+          <span className="font-[Arial] tracking-[-0.03em] text-[12px] leading-[12px] md:leading-[18px] md:text-[14px] text-center font-bold pt-[10px]">
+            {formatLabel(label)}
+          </span>
+        )
+      }
     </button>
   );
 };

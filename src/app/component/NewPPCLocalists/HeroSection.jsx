@@ -74,9 +74,9 @@ function HeroSection({
         dispatch(questionAnswerData({ service_id: serviceId }));
     }, []);
 
-    const onSelect = () => {
-        console.log("calling")
-    }
+    // const onSelect = () => {
+    //     console.log("calling")
+    // }
 
     return (
         <section className="relative w-full overflow-hidden px-[30px] md:px-[120px]">
@@ -149,7 +149,7 @@ function HeroSection({
                         <CalenderQuestions
                             nextStep={nextStep}
                             onBack={prevStep}
-                            onSelect={onSelect}
+                            // onSelect={onSelect}
                         />
                     )}
 

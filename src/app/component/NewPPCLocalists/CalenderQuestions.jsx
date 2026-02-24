@@ -45,7 +45,7 @@ function getFirstDayOfMonth(year, month) {
     return new Date(year, month, 1).getDay();
 }
 
-export default function CalenderQuestions({ nextStep, onBack, onSelect }) {
+export default function CalenderQuestions({ nextStep, onBack }) {
     const today = new Date();
     const [currentYear, setCurrentYear] = useState(today.getFullYear());
     const [currentMonth, setCurrentMonth] = useState(today.getMonth());

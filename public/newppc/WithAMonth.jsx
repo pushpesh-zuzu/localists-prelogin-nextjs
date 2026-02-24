@@ -3,7 +3,7 @@ const WithAMonth = ({
     height = 50
 }) => {
     return (
-        <svg width={width} height={height} viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={width} height={height} viewBox="0 0 66 70" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_12532_9702)">
                 <path d="M57.1726 32.1836V55.366C57.1726 56.9848 55.8657 58.2971 54.2534 58.2971H11.7551C10.1429 58.2971 8.83594 56.9848 8.83594 55.366V44.8845" stroke="white" strokeWidth="2.5" strokeMiterlimit="10" />
                 <path d="M27.1719 14.6484H54.2472C55.8595 14.6484 57.1664 15.9607 57.1664 17.5796V33.1756" stroke="white" strokeWidth="2.5" strokeMiterlimit="10" />
