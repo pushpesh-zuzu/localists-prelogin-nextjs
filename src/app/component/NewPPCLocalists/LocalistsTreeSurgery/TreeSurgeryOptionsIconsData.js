@@ -1,39 +1,35 @@
-import InstallNewRoof from "../../../../../public/newppc/InstallNewRoof";
-import ReplaceYourCurrentRoof from "../../../../../public/newppc/ReplaceYourCurrentRoof";
-import RepairCurrentRoof from "../../../../../public/newppc/RepairCurrentRoof";
-import IOwnTheProperty from "../../../../../public/newppc/IOwnTheProperty";
-import BuyingTheProperty from "../../../../../public/newppc/BuyingTheProperty";
-import RentingTheProperty from "../../../../../public/newppc/RentingTheProperty";
+
+import TrimmingIcon from "../../../../../public/newppc/TrimmingIcon";
+import CuttingDownIcon from "../../../../../public/newppc/CuttingDownIcon";
+import StumpRemovalIcon from "../../../../../public/newppc/StumpRemovalIcon";
+import DiagnosisIcon from "../../../../../public/newppc/DiagnosisIcon";
+import BushesGardeningIcon from "../../../../../public/newppc/BushesGardeningIcon";
 import SomethingElse from "../../../../../public/newppc/SomethingElse";
-import ResidentalHome from "../../../../../public/newppc/ResidentalHome";
-import CommercialProperty from "../../../../../public/newppc/CommercialProperty";
-import Garage from "../../../../../public/newppc/Garage";
-import MobileHome from "../../../../../public/newppc/MobileHome";
-import chimney from "../../../../../public/newppc/Chimney";
-import Windows from "../../../../../public/newppc/Windows";
-import SolarPanels from "../../../../../public/newppc/SolarPanels";
-import Pipes from "../../../../../public/newppc/Pipes";
-import SatelliteDishes from "../../../../../public/newppc/SatelliteDishes";
-import Vents from "../../../../../public/newppc/Vents";
-import NoObstruction from "../../../../../public/newppc/NoObstruction";
-import OneStores from "../../../../../public/newppc/OneStores";
-import TwoStorys from "../../../../../public/newppc/TwoStorys";
-import ThreeStorys from "../../../../../public/newppc/ThreeStorys";
-import FourStorysMore from "../../../../../public/newppc/FourStorysMore";
+import ThreeIcon from "../../../../../public/newppc/ThreeIcon";
+import FourOrMoreIcon from "../../../../../public/newppc/FourOrMoreIcon";
+import TwoIcon from "../../../../../public/newppc/TwoIcon";
+import OneIcon from "../../../../../public/newppc/OneIcon";
+import WasteRemoveIcon from "../../../../../public/newppc/WasteRemoveIcon";
+import LargeOverIcon from "../../../../../public/newppc/LargeOverIcon";
+import MediumOverIcon from "../../../../../public/newppc/MediumOverIcon";
+import SmallOverIcon from "../../../../../public/newppc/SmallOverIcon";
+import NoIcon from "../../../../../public/newppc/NoIcon";
+import YesIcon from "../../../../../public/newppc/YesIcon";
+import TpoPlaceIcon from "../../../../../public/newppc/TpoPlaceIcon";
+import NotSureIcon from "../../../../../public/newppc/NotSureIcon";
+import TrashIcon from "../../../../../public/newppc/TrashIcon";
+import DiscussChatIcon from "../../../../../public/newppc/DiscussChatIcon";
+import Asap from "../../../../../public/newppc/Asap";
+import FewDaysIcon from "../../../../../public/newppc/FewDaysIcon";
+import NextWeekIcon from "../../../../../public/newppc/NextWeekIcon";
+import NextFewWeeksicon from "../../../../../public/newppc/NextFewWeeksicon";
+import FlexibleIcon from "../../../../../public/newppc/FlexibleIcon";
 import ImReadtToHire from "../../../../../public/newppc/ImReadyToHire";
 import DefinatilyHire from "../../../../../public/newppc/DefinatelyHire";
 import SureHire from "../../../../../public/newppc/SureHire";
 import WillPosibleHire from "../../../../../public/newppc/WillPosibleHire";
 import Searching from "../../../../../public/newppc/Searching";
-import Asap from "../../../../../public/newppc/Asap";
-import WithAWeek from "../../../../../public/newppc/WithAWeek";
-import WithAMonth from "../../../../../public/newppc/WithAMonth";
-import NextMonth from "../../../../../public/newppc/NextMonth";
-import WaterDamage from "../../../../../public/newppc/WaterDamage";
-import DamageTiles from "../../../../../public/newppc/DamageTiles";
-import RottedWood from "../../../../../public/newppc/RottedWood";
-import RoofFlashing from "../../../../../public/newppc/RoofFlasing";
-import chimneyRepair from "../../../../../public/newppc/ChimneyRepair";
+
 
 const TreeSurgeonOptionsData = [
     {
@@ -41,32 +37,32 @@ const TreeSurgeonOptionsData = [
         options: [
             {
                 optionId: 1,
-                icon: InstallNewRoof,
+                icon: TrimmingIcon,
                 label: "Trimming or topping",
             },
             {
                 optionId: 2,
-                icon: ReplaceYourCurrentRoof,
+                icon: CuttingDownIcon,
                 label: "Cutting down(felling)",
             },
             {
                 optionId: 3,
-                icon: RepairCurrentRoof,
+                icon: StumpRemovalIcon,
                 label: "Stump removal only",
             },
             {
                 optionId: 4,
-                icon: RepairCurrentRoof,
+                icon: DiagnosisIcon,
                 label: "Diagnosis / Assessment",
             },
             {
                 optionId: 5,
-                icon: RepairCurrentRoof,
+                icon: BushesGardeningIcon,
                 label: "Bushes or other gardening tasks",
             },
             {
                 optionId: 6,
-                icon: RepairCurrentRoof,
+                icon: SomethingElse,
                 label: "Something else (please describe)",
             },
         ],
@@ -76,22 +72,22 @@ const TreeSurgeonOptionsData = [
         options: [
             {
                 optionId: 1,
-                icon: IOwnTheProperty,
+                icon: FourOrMoreIcon,
                 label: "4 or more",
             },
             {
                 optionId: 2,
-                icon: BuyingTheProperty,
+                icon: ThreeIcon,
                 label: "3",
             },
             {
                 optionId: 3,
-                icon: RentingTheProperty,
+                icon: TwoIcon,
                 label: "2",
             },
             {
                 optionId: 4,
-                icon: SomethingElse,
+                icon: OneIcon,
                 label: "1",
             },
         ],
@@ -101,17 +97,17 @@ const TreeSurgeonOptionsData = [
         options: [
             {
                 optionId: 1,
-                icon: ResidentalHome,
+                icon: LargeOverIcon,
                 label: "Large - over 8m (over 26ft)",
             },
             {
                 optionId: 2,
-                icon: CommercialProperty,
+                icon: MediumOverIcon,
                 label: "Medium - up to 8m (26ft)",
             },
             {
                 optionId: 3,
-                icon: Garage,
+                icon: SmallOverIcon,
                 label: "Small - up to 3m (9 ft)",
             },
         ],
@@ -120,27 +116,27 @@ const TreeSurgeonOptionsData = [
         options: [
             {
                 optionId: 1,
-                icon: Windows,
+                icon: NoIcon,
                 label: "No",
             },
             {
                 optionId: 2,
-                icon: chimney,
+                icon: YesIcon,
                 label: "Yes - conservation area",
             },
             {
                 optionId: 3,
-                icon: SolarPanels,
+                icon: TpoPlaceIcon,
                 label: "Yes - TPO in place",
             },
             {
                 optionId: 4,
-                icon: Pipes,
+                icon: NotSureIcon,
                 label: "I'm not sure",
             },
             {
                 optionId: 5,
-                icon: SatelliteDishes,
+                icon: SomethingElse,
                 label: "Something else (please describe)",
             },
         ],
@@ -149,17 +145,17 @@ const TreeSurgeonOptionsData = [
         options: [
             {
                 optionId: 1,
-                icon: OneStores,
+                icon: WasteRemoveIcon,
                 label: "I would like the pro to remove the waste",
             },
             {
                 optionId: 2,
-                icon: TwoStorys,
+                icon: TrashIcon,
                 label: "I can take care of the waste",
             },
             {
                 optionId: 3,
-                icon: ThreeStorys,
+                icon: DiscussChatIcon,
                 label: "I need to discuss with the pro",
             },
             {
@@ -173,27 +169,27 @@ const TreeSurgeonOptionsData = [
         options: [
             {
                 optionId: 1,
-                icon: ImReadtToHire,
+                icon: Asap,
                 label: "As soon as possible",
             },
             {
                 optionId: 2,
-                icon: DefinatilyHire,
+                icon: FewDaysIcon,
                 label: "In the next few days",
             },
             {
                 optionId: 3,
-                icon: SureHire,
+                icon: NextWeekIcon,
                 label: "In the next week",
             },
             {
                 optionId: 4,
-                icon: WillPosibleHire,
+                icon: NextFewWeeksicon,
                 label: "In the next few weeks",
             },
             {
                 optionId: 5,
-                icon: Searching,
+                icon: FlexibleIcon,
                 label: "I'm flexible",
             },
             {
@@ -207,27 +203,27 @@ const TreeSurgeonOptionsData = [
         options: [
             {
                 optionId: 1,
-                icon: Asap,
+                icon: ImReadtToHire,
                 label: "I'm ready to hire immediately",
             },
             {
                 optionId: 2,
-                icon: WithAWeek,
+                icon: DefinatilyHire,
                 label: "I'm certain I'll be hiring someone",
             },
             {
                 optionId: 3,
-                icon: WithAMonth,
+                icon: SureHire,
                 label: "I'm leaning towards hiring someone",
             },
             {
                 optionId: 4,
-                icon: NextMonth,
+                icon: WillPosibleHire,
                 label: "I might hire someone",
             },
             {
                 optionId: 5,
-                icon: SomethingElse,
+                icon: Searching,
                 label: "I'm still researching and exploring options",
             },
             {
@@ -242,12 +238,12 @@ const TreeSurgeonOptionsData = [
         options: [
             {
                 optionId: 1,
-                icon: WaterDamage,
+                icon: YesIcon,
                 label: "Yes",
             },
             {
                 optionId: 2,
-                icon: DamageTiles,
+                icon: NoIcon,
                 label: "No",
             },
             {
@@ -262,22 +258,22 @@ const TreeSurgeonOptionsData = [
         options: [
             {
                 optionId: 1,
-                icon: WaterDamage,
+                icon: FourOrMoreIcon,
                 label: "4 or more",
             },
             {
                 optionId: 2,
-                icon: DamageTiles,
+                icon: ThreeIcon,
                 label: "3",
             },
             {
                 optionId: 3,
-                icon: SomethingElse,
+                icon: TwoIcon,
                 label: "2",
             },
             {
                 optionId: 4,
-                icon: SomethingElse,
+                icon: OneIcon,
                 label: "1",
             },
         ],
