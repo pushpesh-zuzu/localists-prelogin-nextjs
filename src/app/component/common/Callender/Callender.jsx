@@ -12,8 +12,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { registerQuoteCustomer } from "@/lib/store/buyerslice/buyerSlice";
 import useUserInfo from "@/utils/getUserIp";
 import { ChevronLeft } from "lucide-react";
+import { getBarkToken } from "@/utils/CookiesHelper";
 
-export default function Callender({ onSelect, nextStep, handleClose }) {
+export default function Callender({ onSelect, nextStep, handleClose,setShowConfirmModal }) {
   const { buyerRequest, citySerach } = useSelector((state) => state.buyer);
   const dispatch = useDispatch();
 
@@ -104,6 +105,14 @@ export default function Callender({ onSelect, nextStep, handleClose }) {
     setSelectedTime(null);
     setMobileStep("timeslot");
   };
+  const handleCloseForm =()=>{
+    if (getBarkToken()){
+      handleClose()
+    }else{
+      setShowConfirmModal(true)
+    }
+
+  }
   return (
     <Modal
       isOpen={true}
@@ -112,13 +121,11 @@ export default function Callender({ onSelect, nextStep, handleClose }) {
       nextButtonText={"Continue"}
       // disableNext={loading || !selectedService || !postalCodeValidate}
       maxWidth="max-w-[95%] md:max-w-fit"
-      onClose={() => {
-        handleClose();
-      }}
+      onClose={handleCloseForm}
       padding="px-2.5 py-4 md:px-7.5 md:pt-3 pb-6"
     >
       {" "}
-      <div className="flex flex-col md:flex-row gap-5">
+      <div className="flex flex-col md:flex-row gap-5 mt-2.5">
         <CallenderLocationLeftSection />
 
         {/* Mobile: step-wise | Desktop: dono saath */}

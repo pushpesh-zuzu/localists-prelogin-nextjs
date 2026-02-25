@@ -3,12 +3,12 @@ import React, { useRef } from "react";
 import {
   BREADCRUM_DATA_ROOFERS_CHESTER,
   FREQUENTLY_DATA_TREE_SURGEON_CHESTER,
-  POPULAR_SERVICES_ROOFERS_CHESTER ,
+  POPULAR_SERVICES_ROOFERS_CHESTER,
   QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER,
   ROOFERS_ADVICEINSIGHT_CHESTER,
   ROOFERS_FEEDBACK_CHESTER,
   ROOFERS_DATA_CHESTER,
-  ROOFERS_TABDATA_CHESTER ,
+  ROOFERS_TABDATA_CHESTER,
   VETTED_DATA_ROOFERS_CHESTER,
 } from "./RoofersInChesterData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
@@ -25,8 +25,10 @@ import HireRelatedToServiceNearMe from "../../../Nearme/HireRelatedToServiceNear
 import AdviceInsightNearMe from "../../../Nearme/AdviceInsightNearMe";
 import Feature from "../../FetureComponent/Feature";
 import HeroSectionLocation from "../../HeroSectionLocation";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 function RoofersInChester() {
+    useScrollToTop()
   const featureRef = useRef(null);
   return (
     <>
@@ -52,45 +54,41 @@ function RoofersInChester() {
         featureRef={featureRef}
       />
       <PopularJobNearMe
-        services={POPULAR_SERVICES_ROOFERS_CHESTER }
+        services={POPULAR_SERVICES_ROOFERS_CHESTER}
         popularImage="/nearme/Roofing/roofslate.webp"
         altText="two roofers installing slate tiles onto a brand new roof URL"
         mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
-        paddingClass="px-[17.5px] py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[0px]"
+        paddingClass="px-[17.5px] py-[30px] sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[0px]"
       />
-      {/* <HowItWorkNearMe /> */}
       <AboutServicesAndQuestions
         serviceId={113}
         serviceName="Roofing"
         contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER}
       />
-      <div ref={featureRef}>
-        {" "}
-        {/* ✅ Feature ko wrap kiya */}
-        <Feature serviceId={113} serviceName="Roofing" />
+
+      <div ref={featureRef} style={{ overflowAnchor: "none" }}>
+        <Feature serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
+
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_CHESTER}
-        padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10  xl:px-[120px]  lg:py-[72px]"
+        padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
       />
       <FAQ
-        containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px]  mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
+        containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
         headdingblue="Frequently Asked Questions About "
         headingblack="Roofers in Chester"
         data={FREQUENTLY_DATA_TREE_SURGEON_CHESTER}
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_CHESTER} />
-
       <DiscoverNearMe homeData={ROOFERS_DATA_CHESTER} />
       <HireRelatedToServiceNearMe
         heading1="Hire with"
         heading2="confidence."
-        tabData={ROOFERS_TABDATA_CHESTER }
+        tabData={ROOFERS_TABDATA_CHESTER}
         activeTabkey="popular"
       />
       <NearmeMember
-        // mobileImage="/location/tree_surgeon_member_location_mobile.webp"
-        // desktopImage="/location/tree_surgeon_member_location_desktop.webp"
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
       />
       <Footer />

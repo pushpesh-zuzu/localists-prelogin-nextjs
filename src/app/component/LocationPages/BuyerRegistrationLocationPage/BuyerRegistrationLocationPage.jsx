@@ -41,15 +41,11 @@ function BuyerRegistrationLocationPage({
   const dispatch = useDispatch();
 
   const { buyerStep, questionanswerData, questionLoader, buyerRequest } =
-    useSelector(
-      (state) => state.buyer || {},
-    );
+    useSelector((state) => state.buyer || {});
 
   const isAdminOrRemembered = getBarkToken();
 
-  const stepFlow = isAdminOrRemembered
-    ? [2, 3, 5, 7, 8]
-    : [1, 2, 3, 4, 5, 7];
+  const stepFlow = isAdminOrRemembered ? [2, 3, 5, 7, 8] : [1, 2, 3, 4, 5, 7];
 
   const nextStep = () => {
     const currentIndex = stepFlow.indexOf(buyerStep);
@@ -78,8 +74,6 @@ function BuyerRegistrationLocationPage({
       // dispatch(setBuyerStep(initialStep));
     }
   }, [dispatch]);
-
-
 
   useEffect(() => {
     if (shouldClose) {
@@ -151,7 +145,13 @@ function BuyerRegistrationLocationPage({
           isStartWithQuestionModal
         />
       )}
-      {buyerStep === 4 && <Callender handleClose={handleClose} nextStep={nextStep} />}
+      {buyerStep === 4 && (
+        <Callender
+          handleClose={handleClose}
+          nextStep={nextStep}
+          setShowConfirmModal={setShowConfirmModal}
+        />
+      )}
       {reEnterMobile === 1 && (
         <ReEnterMobileNumber
           setReEnterMobile={setReEnterMobile}
