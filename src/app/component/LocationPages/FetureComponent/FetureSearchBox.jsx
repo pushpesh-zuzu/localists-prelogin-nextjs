@@ -14,6 +14,7 @@ import { setSelectedServiceId } from "@/lib/store/findjobslice";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 import { useRouter } from "next/navigation";
 import BuyerRegistration from "../../common/BuyerRegistration/BuyerRegistration";
+import BuyerRegistrationLocationPage from "../BuyerRegistrationLocationPage/BuyerRegistrationLocationPage";
 
 export function FetureSearchBox({
   serviceId = 112,
@@ -204,7 +205,7 @@ export function FetureSearchBox({
 
       {/* MODAL */}
       {show && (
-        <BuyerRegistration
+        <BuyerRegistrationLocationPage
           closeModal={handleClose}
           service_Id={serviceId}
           postcode={postcode}

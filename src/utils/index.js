@@ -33,7 +33,7 @@ export const showToast = (type, message) => {
 /* ---------------- BASE URLS ---------------- */
 
 export const BASE_IMAGE_URL =
-    process.env.NEXT_PUBLIC_API_BASE_URL || "";
+    process.env.NEXT_PUBLIC_APP_BASE_URL || "";
 
 export const BASE_URL_IMAGE = `${BASE_IMAGE_URL}storage/app/public/images/category/`;
 export const BASE_IMAGE = `${BASE_IMAGE_URL}storage/app/public/images/`;

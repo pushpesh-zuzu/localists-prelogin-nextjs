@@ -1,17 +1,12 @@
 import { Inter } from "next/font/google";
 import NoscriptTags from "./component/common/TrackingScripts/NoscriptTags";
 import TrackingScripts from "./component/common/TrackingScripts/TrackingScripts";
-// import Header from "./component/Header/Header";
 import "./globals.css";
 import StoreProvider from "./StoreProvider";
 import { ToastProvider } from "@/utils/toaster";
-// import CookieConsent from "./component/common/CookieConsent/CookieConsent";
 import SEO from "./component/common/seo/SEO";
-// import Script from "next/script";
-// import { headers } from "next/headers";
 
 export async function generateMetadata() {
-
   const isProductionDomain =
     process.env.NEXT_PUBLIC_SITE_HOST === "localists.com" || false;
   return {
@@ -22,12 +17,6 @@ export async function generateMetadata() {
     icons: {
       icon: "/favicon.ico",
     },
-
-    // alternates: {
-    //   languages: {
-    //     "en-GB": "/en/gb",
-    //   },
-    // },
 
     openGraph: {
       locale: "en_GB",
@@ -42,14 +31,21 @@ export async function generateMetadata() {
 
 const inter = Inter({
   subsets: ["latin"],
-  // variable: "--font-inter",
-  display: "swap", // allows instant text paint
+  display: "swap", 
 });
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en-GB" suppressHydrationWarning>
       <head>
+        <link
+          rel="preconnect"
+          href={
+            process.env.NEXT_PUBLIC_SITE_HOST === "localists.com"
+              ? "https://localists.com"
+              : "https://dev.localists.com"
+          }
+        />
         <TrackingScripts />
       </head>
       <body

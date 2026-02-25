@@ -25,15 +25,18 @@ import AdviceInsightNearMe from "@/app/component/Nearme/AdviceInsightNearMe";
 import Footer from "@/app/component/Footer/Footer";
 import Feature from "../../FetureComponent/Feature";
 import FAQScript from "@/app/component/common/seo/FAQScript";
+import HeroSectionLocation from "../../HeroSectionLocation";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 function TreeSurgeonInChester() {
+  useScrollToTop();
   const featureRef = useRef(null);
 
   return (
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon />}
       <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON_CHESTER} />
-      <HeroSectionNearMe
+      <HeroSectionLocation
         heading1="Tree Surgeons"
         heading2="Chester."
         description="Find the best tree surgeons in Chester. Click ‘start a quote’ to get free instant quotes from local tree surgeons, or browse through our list of vetted and verified tree surgeons below."
@@ -60,16 +63,17 @@ function TreeSurgeonInChester() {
       <AboutServicesAndQuestions
         contentBlocks={QUESTION_AND_ABOUT_SERVICE_TREE_SURGEON_CHESTER}
       />
-      <div ref={featureRef}>
+      <div ref={featureRef} style={{ overflowAnchor: "none" }}>
         <Feature
           serviceProfessionName="Tree Surgeons"
-          serviceId = {112}
-          serviceName = "Tree Surgery"
+          serviceId={112}
+          serviceName="Tree Surgery"
+          featureRef={featureRef}
         />
       </div>
       <AdviceInsightNearMe
         articles={TREE_SRUGEON_ADVICEINSIGHT_CHESTER}
-               padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10  xl:px-[120px]  lg:py-[72px]"
+        padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10  xl:px-[120px]  lg:py-[72px]"
       />
       <FAQ data={FREQUENTLY_DATA_TREE_SURGEON_CHESTER} />
       <UserFeedbackNearMe2 feedbackData={TREE_SUREON_FEEDBACK_CHESTER} />
@@ -81,7 +85,6 @@ function TreeSurgeonInChester() {
         tabData={TREE_SURGEON_TABDATA_CHESTER}
         activeTabkey="popular"
         heightClass="min-h-[400px] h-auto md:h-auto lg:h-[546px]"
- 
       />
       <NearmeMember
         mobileImage="/location/tree_surgeon_member_location_mobile.webp"

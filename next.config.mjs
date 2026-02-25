@@ -34,6 +34,19 @@ const nextConfig = {
   },
 
   images: {
+    // domains: ["dev.localists.com"],
+    domains: [
+      process.env.NEXT_PUBLIC_APP_BASE_URL
+        ? new URL(process.env.NEXT_PUBLIC_APP_BASE_URL).hostname
+        : "dev.localists.com",
+    ],
+    // remotePatterns:[
+    //    {
+    //     protocol: "https",
+    //     hostname: "dev.localists.com",
+    //     pathname: "/**",
+    //   },
+    // ],
     formats: ["image/avif", "image/webp"],
     formats: ["image/avif", "image/webp"],
     deviceSizes: [320, 420, 640, 750, 828, 1080, 1200],
