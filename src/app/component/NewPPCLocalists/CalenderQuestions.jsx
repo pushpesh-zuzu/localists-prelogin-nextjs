@@ -210,7 +210,7 @@ export default function CalenderQuestions({ nextStep, onBack }) {
 
                     <div className="flex flex-col lg:flex-row gap-5">
                         <div>
-                            <H5 variant="optional" className="!font-medium">
+                            <H5 variant="optional" className="!font-medium text-left md:text-center">
                                 Free Home Visit With Localitsts
                             </H5>
                             <Paragraph variant="optional" className="!font-medium lg:pt-[20px] pt-[10px] text-left">Book in with Localist at a time that suits you. We will visit your property and assess your roofing needs then provide you with a detailed free quote.</Paragraph>
@@ -300,7 +300,7 @@ export default function CalenderQuestions({ nextStep, onBack }) {
                             <div
                                 className={`transition-all duration-300 w-full lg:w-[240px] md:w-[130px] ${showMobileSlots ? "block" : "hidden md:block"}`}
                             >
-                                <div className="flex items-center gap-2 mb-2">
+                                <div className="flex items-center gap-2 md:mb-2 mb-3.5 lg:mb-4">
                                     <Clock size={16} className="text-[#00AEEF]" />
                                     <span className="text-[14px] font-bold text-[#6B7280] tracking-[-0.03em] font-[Arial]">
                                         Available Times
