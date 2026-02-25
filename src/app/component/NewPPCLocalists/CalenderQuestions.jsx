@@ -307,7 +307,7 @@ export default function CalenderQuestions({ nextStep, onBack }) {
                                     </span>
                                 </div>
                                 <div
-                                    className="flex flex-row flex-wrap pb-1 md:flex-col gap-2 max-h-[300px] md:max-h-[360px] overflow-y-auto pr-1 cursor-pointer
+                                    className="flex flex-row flex-wrap pb-1 md:flex-col gap-2 max-h-[340px] md:max-h-[360px] overflow-y-auto pr-1 cursor-pointer
             [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar]:h-4 [&::-webkit-scrollbar-track]:bg-gray-100 
             [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full"
                                 >
