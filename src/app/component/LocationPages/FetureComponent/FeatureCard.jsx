@@ -17,7 +17,7 @@ export default function FeatureCard({
   cityName = "",
 }) {
   const [showModal, setShowModal] = useState(false);
-
+  const [imgError, setImgError] = useState(false);
   const businessName = seller?.business_profile_name || "";
   const totalReviews = seller?.total_reviews ?? 0;
   const location = cityName;
@@ -81,7 +81,7 @@ export default function FeatureCard({
         <div className="z-50 relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           {/* LEFT */}
           <div className="flex items-start max-[768px]:justify-between md:gap-4">
-            {seller.profile_image ? (
+            {seller.profile_image && !imgError ? (
               <Image
                 height={96}
                 width={96}
@@ -92,6 +92,7 @@ export default function FeatureCard({
                 loading={featured ? "eager" : "lazy"}
                 decoding="async"
                 fetchPriority={featured ? "high" : "low"}
+                onError={() => setImgError(true)}
               />
             ) : (
               <GalleryIcon className="h-20 w-20 md:h-24 md:w-24" />
