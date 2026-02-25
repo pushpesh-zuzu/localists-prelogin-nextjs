@@ -209,11 +209,11 @@ export default function CalenderQuestions({ nextStep, onBack }) {
                     )}
 
                     <div className="flex flex-col lg:flex-row gap-5">
-                        <div>
+                        <div className={`${showMobileSlots ? "hidden" : ""}`}>
                             <H5 variant="optional" className="!font-medium text-left md:text-center">
                                 Free Home Visit With Localitsts
                             </H5>
-                            <Paragraph variant="optional" className="!font-medium lg:pt-[20px] pt-[10px] text-left">Book in with Localist at a time that suits you. We will visit your property and assess your roofing needs then provide you with a detailed free quote.</Paragraph>
+                            <Paragraph variant="optional" className="!font-medium lg:pt-[20px] pt-[10px] text-left text-[#3A4B53]">Book in with Localist at a time that suits you. We will visit your property and assess your roofing needs then provide you with a detailed free quote.</Paragraph>
                         </div>
                         <div className="flex flex-col md:flex-row gap-5">
                             {/* Calendar Box */}
