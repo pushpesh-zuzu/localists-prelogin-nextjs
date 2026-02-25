@@ -3,13 +3,13 @@ import React from "react";
 import H2 from "../UI/Typography/H2";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import Button from "../UI/Typography/Button";
-function AdviceInsightNearMe({ articles = [], maxWidth = false }) {
+function AdviceInsightNearMe({ articles = [], maxWidth = false ,padding="px-7.5 py-12 sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:pt-[72px] lg:pb-1"}) {
   return (
     <WrapperBGWidth>
       <section
         className={`${
           maxWidth ? "max-w-[95%]" : ""
-        } mx-auto h-auto min-h-[336px] lg:min-h-[687px] px-7.5 py-12 sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:pt-[72px] lg:pb-1`}
+        } mx-auto h-auto min-h-[336px] lg:min-h-[687px] ${padding} `}
       >
         <H2 className="text-[#00afe3] pb-7.5 xl:pb-[53px]">
           Advice & <span className="text-[#253238]">insight.</span>
@@ -143,9 +143,11 @@ function AdviceInsightNearMe({ articles = [], maxWidth = false }) {
         </div>
 
         <div className="flex justify-center mt-6 xl:mt-12">
-          <Button className="bg-[#253238] px-4.5 py-1 md:px-9 md:py-2 xl:py-3.5 xl:px-[66px] text-white rounded-full">
+          <a href="/en/gb/blog">
+          <Button className="bg-[#253238] cursor-pointer hover:bg-[#00aef3] px-4.5 py-2 xl:py-[15px] md:px-9 xl:px-[66px] rounded-full text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
             Read More
           </Button>
+          </a>
         </div>
       </section>
     </WrapperBGWidth>

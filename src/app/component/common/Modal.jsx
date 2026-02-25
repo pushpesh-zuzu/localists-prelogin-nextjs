@@ -26,13 +26,14 @@ const Modal = ({
   nextButtonClassName = "",
   disabled = false,
   usePortal = false,
+  insetBG='bg-[#00000080]'
 
 }) => {
   if (!isOpen) return null;
 
   const modalContent = (
     <div
-      className={`fixed inset-0 ${zIndex} flex items-center justify-center bg-[#00000080]`}
+      className={`fixed inset-0 ${zIndex} flex items-center justify-center ${insetBG}`}
     // onClick={onClose}
     >
       <div

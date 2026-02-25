@@ -162,7 +162,18 @@ export default function Header() {
                   aria-label="Go to Localists homepage"
                   className="shrink-0"
                 >
-                  <Logo className="w-[103px] h-[25px] md:w-[133px] md:w-8 ml-[25%]"/>
+                  {/* <Logo className="w-[103px] h-[25px] md:w-[133px] md:w-8 ml-[25%]"/> */}
+                   <Image
+                    src="/logo.webp"
+                    alt="Localists - Local Service Provider Directory"
+                    width={103}
+                    height={25}
+                    className="w-[103px] h-[25px] md:w-[133px] md:w-8 ml-[25%]"
+                    priority
+                    fetchPriority="high"
+                    loading="eager"
+                    layout="intrinsic"
+                  />
                 </a>
               </div>
               <div className="flex items-center space-x-[4.34px]">

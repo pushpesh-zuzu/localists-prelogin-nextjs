@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchIcon({ className = "" }) {
+function SearchIcon({ className = "" , onClick }) {
   return (
     <svg
       width="28"
@@ -9,6 +9,7 @@ function SearchIcon({ className = "" }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      onClick={()=>{onClick && onClick()}}
     >
       <path
         d="M12.4735 23.5641C18.5987 23.5641 23.5641 18.5987 23.5641 12.4735C23.5641 6.34827 18.5987 1.38281 12.4735 1.38281C6.34827 1.38281 1.38281 6.34827 1.38281 12.4735C1.38281 18.5987 6.34827 23.5641 12.4735 23.5641Z"

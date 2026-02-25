@@ -14,6 +14,8 @@ import LinkedInIcon from "../../../../public/ReactIcons/LinkedInIcon";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import { showToast } from "@/utils";
 import Logo from "../../../../public/ReactIcons/Logo";
+import Image from "next/image";
+
 
 const Footer = () => {
   const [openSections, setOpenSections] = useState({
@@ -36,7 +38,17 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1.25fr_1fr_1fr_1fr_1fr] lg:grid-cols-[1.25fr_1fr_1fr_1fr_1fr] gap-4 xl:gap-8 lg:gap-12">
             {/* Logo and Description - Always visible */}
             <div className="lg:col-span-1 text-center md:text-left flex flex-col items-center md:items-start">
-              <Logo className="mb-[16.66px] w-[168px] h-[41px] md:w-[89px] md:h-6 lg:w-[156px] lg:h-[39px]" />
+              {/* <Logo className="mb-[16.66px] w-[168px] h-[41px] md:w-[89px] md:h-6 lg:w-[156px] lg:h-[39px]" /> */}
+               <Image
+                src="/logodesktop.svg"
+                alt="Localists - Local Service Provider Directory"
+                width={168}
+                height={38}
+                className="mb-[16.66px] w-[168px] h-[41px] md:w-[89px] md:h-6 lg:w-[156px] lg:h-[39px]"
+                priority
+                fetchPriority="high"
+                loading="eager"
+              />
               <p className="hidden md:block text-[rgba(37, 50, 56, 1)] text-[12px]  lg:text-base mb-6 leading-relaxed">
                 Localists is the world’s fastest-growing marketplace, and we
                 have no intention of slowing down any time soon.

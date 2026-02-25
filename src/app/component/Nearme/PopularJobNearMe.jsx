@@ -14,7 +14,8 @@ export default function PopularJobNearMe({
   altText = "",
   mobileCardClass = 'w-[235px] min-[440px]:w-[302px] min-[512px]:w-[350px]',
   classNameD = 'md:max-w-[400px] xl:max-w-full',
-  ctaLink = ""
+  ctaLink = "",
+  paddingClass='px-[17.5px] py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[100px]'
 }) {
 
   const renderServiceButton = (service) => {
@@ -39,15 +40,7 @@ export default function PopularJobNearMe({
 
   return (
     <WrapperBGWidth>
-      {/* <div className="w-full max-w-[1200px] mx-auto aspect-[1200/590] relative">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url(/nearme/popularJobs.webp)" }}
-      />
-      
-  
-    </div> */}
-      <div className="md:block rounded-[20px] md:rounded-none mx-[30px] md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white  px-[17.5px] py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[100px]">
+     <div className={`md:block rounded-[20px] md:rounded-none mx-[30px] md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white ${paddingClass} `}>
         <div className="rounded-[30px] md:max-w-[600px] lg:max-w-[900px] xl:max-w-[1200px] md:h-[280px] lg:h-[380px] xl:h-[470px] relative overflow-visible">
           {/* 1️⃣ Shape background */}
           <div

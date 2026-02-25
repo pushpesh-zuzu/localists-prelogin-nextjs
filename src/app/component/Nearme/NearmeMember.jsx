@@ -5,7 +5,7 @@ import React from "react";
 import H3 from "../UI/Typography/H3";
 import Button from "../UI/Typography/Button";
 
-function NearmeMember({ description = "" }) {
+function NearmeMember({ description = "",mobileImage="/nearme/treeSurgeonMemberMobile.webp",desktopImage="/nearme/treeSurgeonMember.webp" }) {
   return (
     <div className="w-full max-w-[303px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto pt-10 pb-10  md:py-[0px] md:pb-10 md:pt-10 lg:pb-0 xl:pt-[100px] xl:pb-[100px]">
       <div className="hidden md:flex w-fit rounded-[15px] md:rounded-[33px] overflow-hidden mx-auto ">
@@ -39,7 +39,7 @@ function NearmeMember({ description = "" }) {
 
         <div className=" relative rounded-r-[15px] md:rounded-r-[33px] overflow-hidden">
           <Image
-            src="/nearme/treeSurgeonMember.webp"
+            src={desktopImage}
             alt="Professional using phone"
             priority
             fetchPriority="high"
@@ -54,7 +54,7 @@ function NearmeMember({ description = "" }) {
       <div className="md:hidden rounded-[15px] md:rounded-[33px] overflow-hidden shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
         <div className="w-full  relative">
           <Image
-            src="/nearme/treeSurgeonMemberMobile.webp"
+            src={mobileImage}
             alt="Professional using phone"
             height={300}
             width={250}
