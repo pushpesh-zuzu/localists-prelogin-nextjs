@@ -54,9 +54,7 @@ function BlogShareSection({ readTime = "" }) {
         </button>
 
       </div>
-
-     
-        <div className="flex md:justify-end my-5">
+        <div className={`flex md:justify-end ${readTime ? "my-5" : "mb-5 md:my-5"}`}>
           {readTime && <span className="text-base font-bold">{readTime}</span>}
         </div>
       
