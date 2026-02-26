@@ -42,7 +42,7 @@ function RequestARegistration({
 
     const isAdminOrRemembered = getBarkToken();
 
-    const stepFlow = isAdminOrRemembered ? [2, 3, 4, 5, 7, 8] : [1, 2, 3, 4, 5];
+    const stepFlow = isAdminOrRemembered ? [2, 3, 4, 5] : [1, 2, 3, 4, 5];
 
     const nextStep = () => {
         const currentIndex = stepFlow.indexOf(buyerStep);
@@ -111,6 +111,8 @@ function RequestARegistration({
         totalQuestions > 0
             ? baseSteps - 1 + totalQuestions
             : baseSteps;
+
+    // console.log("totalSteps", totalSteps, baseSteps, stepFlow)
 
     let currentPosition = 0;
 
@@ -187,6 +189,7 @@ function RequestARegistration({
                 <ReEnterMobileNumberModal
                     setReEnterMobile={setReEnterMobile}
                     onClose={() => setReEnterMobile(2)}
+                    progressPercent={progressPercent}
                 />
             )}
 

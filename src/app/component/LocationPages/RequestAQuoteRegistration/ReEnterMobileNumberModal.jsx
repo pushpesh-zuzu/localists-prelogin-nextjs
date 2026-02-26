@@ -15,7 +15,7 @@ import { CheckIcon } from "lucide-react";
 
 function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
     const dispatch = useDispatch();
-    const { buyerRequest, requestLoader, requestUserId } = useSelector(
+    const { buyerRequest, requestLoader, requestUserId, buyerStep } = useSelector(
         (state) => state.buyer
     );
 
@@ -158,6 +158,8 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
             padding="pb-[20px] md:pb-[30px] lg:pb-[40px]"
             buttongroup="md:mx-[68.4px] mx-4"
             showProgressBar={true}
+            buyerStep={buyerStep}
+
         >
             <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
                 <div className="md:pt-[40px] md:pb-[40px] pt-[20px] pb-[20px] md:pt-[30px] md:pb-[30px] text-center">
