@@ -49,7 +49,7 @@ function BlogFlateRoofLast() {
         <PostCodeSectionBlog
           serviceId={113}
           serviceName="Roofing"
-          classNamePostCode="mb-[20px] mt-[20px] lg:mt-[48px] lg:mb-[48px]"
+          classNamePostCode="mb-[40px] mt-[40px] lg:mt-[48px] lg:mb-[48px]"
         />
       </div>
       <AdviceAndInsightBlog articles={TREE_SRUGEON_ADVICEINSIGHT} />
