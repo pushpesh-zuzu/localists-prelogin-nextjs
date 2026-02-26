@@ -5,6 +5,8 @@ export const BLOG_FLATE_QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "h3",
     text: "Flat Roofs last at least 10 years - depending on the material and how well they are looked after. EPDM Roofs can last anywhere from 30-50 years and require minimal maintenance. Whereas Modified bitumen roofs (torch on felt) and built up roofs can last between 10 and 25 years",
+      className:"mb-[15px] md:mb-[20px] md:mt-[5px]"
+
   },
 
   {
@@ -70,7 +72,7 @@ export const BLOG_FLATE_QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "pbold",
     text: "Need local roof installers near you who can help with quality roof installations built to last? Get started now at Localists",
-    className:"italic! mb-5 md:mb-12"
+    className:"italic! mb-6 md:mb-[54px]"
   },
   {
     type: "h2",

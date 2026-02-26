@@ -70,7 +70,7 @@ const AboutServiceAndQuestionBlog = ({
         return <GutterPriceSection key={index} />
       case "h3":
         return (
-          <H3 key={index} className={`${textBase} font-bold ${block?.className ? block?.className : 'mb-5 md:mb-[25px]'} text-[#253238]`}>
+          <H3 key={index} className={`${textBase} font-bold ${block?.className ? block?.className : 'mb-[15px] md:mb-[20px]'} text-[#253238]`}>
             {block.text}
           </H3>
         );
