@@ -13,7 +13,7 @@ import { showToast } from "@/utils/toaster";
 import Paragraph from "@/app/component/UI/Typography/Paragraph";
 import { CheckIcon } from "lucide-react";
 
-function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
+function ReEnterMobileNumber({ onClose, setReEnterMobile, progressPercent }) {
     const dispatch = useDispatch();
     const { buyerRequest, requestLoader, requestUserId, buyerStep } = useSelector(
         (state) => state.buyer
@@ -159,7 +159,7 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
             buttongroup="md:mx-[68.4px] mx-4"
             showProgressBar={true}
             buyerStep={buyerStep}
-
+            progressPercent={progressPercent}
         >
             <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
                 <div className="md:pt-[40px] md:pb-[40px] pt-[20px] pb-[20px] md:pt-[30px] md:pb-[30px] text-center">
