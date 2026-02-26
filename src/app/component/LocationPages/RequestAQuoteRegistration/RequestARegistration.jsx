@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setBuyerStep } from "@/lib/store/buyerslice/buyerSlice";
 import QuestionModal from "./QuestionModal";
-import ConfirmationModal from "../../common/BuyerRegistration/ConfirmationModal";
+import ConfirmationModal from "./ConfirmationModal";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import NameEmailPostCodePhone from "./NameEmailPostCodePhone";
 import OtpVerificationModal from "./OtpverificationModal";

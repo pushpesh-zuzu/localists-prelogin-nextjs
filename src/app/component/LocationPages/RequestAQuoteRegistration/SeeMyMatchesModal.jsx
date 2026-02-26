@@ -342,7 +342,7 @@ function SeeMyMatchesModal({ onClose, nextStep, previousStep, progressPercent, s
             progressPercent={progressPercent}
             nextButtonText={
                 selectedCompanies.length > 0
-                    ? `Send ${selectedCompanies.length}`
+                    ? `(${selectedCompanies.length}) Send`
                     : "Send"
             }        >
             <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">

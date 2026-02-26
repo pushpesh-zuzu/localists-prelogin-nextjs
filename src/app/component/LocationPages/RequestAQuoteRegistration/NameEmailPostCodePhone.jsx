@@ -10,6 +10,7 @@ import {
     setbuyerRequestData,
     getCityName,
     setcitySerach,
+    registerQuoteCustomer
 } from "@/lib/store/buyerslice/buyerSlice";
 import { validateEmail } from "@/utils/validateEmail";
 import { validateUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
@@ -229,7 +230,9 @@ function NameEmailPostCodePhone({
             formData.append("form_status", 1);
             formData.append("entry_url", url);
             formData.append("user_ip_address ", ip);
-
+            if (!isPPCPages) {
+                formData.append("quote_type", "req call back");
+            }
             dispatch(registerQuoteCustomer(formData)).then((result) => {
                 if (result) {
                     nextStep();

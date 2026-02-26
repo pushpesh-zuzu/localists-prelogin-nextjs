@@ -5,15 +5,15 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     addDetailsRequestData,
     addImageSubmittedData,
-    clearSetbuyerRequestData,
-    setBuyerStep,
-    setQualityData,
+    // clearSetbuyerRequestData,
+    // setBuyerStep,
+    // setQualityData,
     textQualityData,
 } from "@/lib/store/buyerslice/buyerSlice";
-import Link from "next/link";
+// import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { showToast } from "@/utils/toaster";
-import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
+// import { showToast } from "@/utils/toaster";
+// import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import Modal from "../Modal";
 import Paragraph from "../../UI/Typography/Paragraph";
 
