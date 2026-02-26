@@ -13,7 +13,7 @@ import { useRouter } from "next/navigation";
 
 
 
-function SeeMyMatchesModal({ onClose, nextStep, previousStep, progressPercent, setShowConfirmModal }) {
+function SeeMyMatchesModal({ previousStep, progressPercent }) {
     const dispatch = useDispatch();
     const router = useRouter();
 
@@ -298,31 +298,13 @@ function SeeMyMatchesModal({ onClose, nextStep, previousStep, progressPercent, s
         // }
     };
 
-    const handleCloseClick = () => {
-        if (questionAnswerData?.length === 0) {
-            onClose();
-            dispatch(clearSetbuyerRequestData());
-            dispatch(clearBuyerRegisterFormData());
-        } else {
-            if (!getBarkToken()) {
-                setShowConfirmModal(true);
-            } else {
-                onClose();
-                dispatch(clearSetbuyerRequestData());
-                dispatch(clearBuyerRegisterFormData());
-            }
-        }
-    };
-
     const handleBack = () => {
         previousStep();
     };
 
     return (
         <Modal
-            onClose={() => {
-                handleCloseClick();
-            }}
+            showClosIcon={false}
             isOpen={true}
             title="Select up to 5 companies to get a quote"
             onNext={handleSubmit}
