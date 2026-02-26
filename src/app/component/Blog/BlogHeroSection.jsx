@@ -66,7 +66,7 @@ function BlogHeroSection({
             
             {/* Author */}
             <div className="flex flex-row gap-4">
-              <div className="w-12 h-12 rounded-full bg-white/40" />
+              {/* <div className="w-12 h-12 rounded-full bg-white/40" /> */}
             <div className="flex flex-col justify-between ">
                 <div className="flex items-center gap-3 mb-5 md:mb-12">
               <div>
