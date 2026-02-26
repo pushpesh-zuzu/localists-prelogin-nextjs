@@ -1,0 +1,153 @@
+"use client";
+
+import LoaderIndicator from "../common/Loader/LoaderIndicatore";
+import H4 from "../UI/Typography/H4";
+import { ArrowLeft } from "lucide-react";
+
+const CardLayoutWrapper = ({
+    children,
+    title,
+    subtitle,
+    buttonText = "Next",
+    onButtonClick,
+    onBackClick,
+    showButton = true,
+    showBackButton = false,
+    disableNextButton,
+    loader = false,
+    headingCenter = true,
+    titlePrimary = false,
+    NameEmailContainer = false,
+    titleHeading = "",
+    buttonWrapperClassName = "",
+    OtpContainer = false,
+    phonenumber = false,
+    calendarQuestion = false
+}) => {
+
+    return (
+        <div
+            className={`
+    flex justify-center items-center bg-white rounded-[20px]
+    ${OtpContainer ? "w-fit mx-auto" : ""}
+    ${phonenumber ? "lg:w-[60%] md:w-[80%] mx-auto" : ""}
+    ${NameEmailContainer ? "w-[85%] mx-auto h-fit py-5 mt-3 md:mt-6 max-[480px]:w-[95%]" : ""}
+    max-[480px]:items-start
+  `}>
+            <div className={`bg-white rounded-[20px] ${NameEmailContainer ? "w-[85%] md:w-[80%] mx-auto h-fit" : ""}`}>
+                {titleHeading && (
+                    <H4 className="mb-[20px] leading-[26px] md:leading-[16px] lg:leading-[30px] max-[768px]:mb-[15px] text-[#253238] text-center">
+                        {titleHeading}
+                    </H4>
+                )}
+
+                {/* TITLE */}
+                {title && (
+                    <H4
+                        className={`
+              mx-auto text-center
+              ${titlePrimary ? "text-[#00afe3]" : "text-[#00afe3]"}
+               pb-[20px]
+            `}>
+                        {title}
+                    </H4>
+                )}
+
+                {/* SUBTITLE */}
+                {subtitle && (
+                    <p
+                        className={`
+              font-normal text-[16px] leading-[22px]
+              ${headingCenter ? "text-center" : "text-left"}
+              mb-[20px]
+              text-[#253238]
+                   font-[Arial]
+                  tracking-[-0.03em]
+              max-[768px]:text-[15px]
+              max-[768px]:mb-[32px]
+
+              max-[480px]:text-[14px]
+              max-[480px]:mb-[28px]
+            `}
+                    >
+                        {subtitle}
+                    </p>
+                )}
+
+                {/* CONTENT */}
+                {children}
+
+                {/* BUTTONS */}
+                {showButton && (
+                    <div
+                        className={`
+              flex items-center gap-[12px] pt-[20px]
+               ${buttonWrapperClassName}
+              max-[768px]:pt-[20px]
+              max-[768px]:gap-[10px]
+
+              max-[480px]:pt-[20px]
+              max-[480px]:gap-[8px]
+            `}>
+                        {/* BACK BUTTON */}
+                        {showBackButton && (
+                            <button
+                                onClick={onBackClick}
+                                className={`
+                  w-[71px] h-[50px]
+                  bg-[#f5f5f5]
+                  border-2 border-[#e1e5e9]
+                  rounded-lg cursor-pointer
+                  flex items-center justify-center
+                  transition-all duration-300
+                  active:translate-y-[1px] gap-[5px]
+
+                  hover:bg-[#e9e9e9]
+                  hover:border-[#ccc]
+
+                  max-[768px]:w-[52px]
+                  max-[768px]:h-[52px]
+
+                  max-[480px]:w-[70px]
+                  max-[480px]:h-[48px]
+                `}
+                            >
+                                <ArrowLeft size={18} strokeWidth={2} />
+                                <span className="text-[14px] font-medium">Back</span>
+                            </button>
+                        )}
+
+                        {/* NEXT BUTTON */}
+                        <button
+                            onClick={onButtonClick}
+                            disabled={disableNextButton}
+                            className={`
+                flex-1 h-[50px]
+                bg-[#00afe3] text-white
+                rounded-lg hover:bg-[#0096C4] font-bold
+                transition-colors duration-300
+                cursor-pointer
+                active:translate-y-[1px]
+
+                disabled:opacity-60
+
+                 font-[Arial]
+                 tracking-[-0.03em]
+        leading-[24px]
+        text-[20px]       
+        max-[768px]:text-[18px]
+        max-[480px]:text-[16px]
+                max-[768px]:h-[52px]
+                max-[480px]:h-[48px]
+              `}
+                        >
+                            {loader ? <LoaderIndicator size="small" /> : buttonText}
+                        </button>
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+};
+
+export default CardLayoutWrapper;
