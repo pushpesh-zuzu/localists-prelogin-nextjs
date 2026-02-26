@@ -12,7 +12,7 @@ import NearmeH2Heading from "../../Nearme/NearmeH2Heading";
 export default function FetureCardList({
   serviceId,
   serviceName,
-  serviceProfessionName,
+  serviceProfessionName='Roofers',
   cityName = "Chester",
   featureRef,
 }) {
