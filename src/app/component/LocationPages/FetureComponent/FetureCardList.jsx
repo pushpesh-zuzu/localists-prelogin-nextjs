@@ -84,10 +84,9 @@ export default function FetureCardList({
         serviceName={serviceName}
       /> */}
       <NearmeH2Heading
-            headdingblue={"Find Roofers "}
-            headingblack="Near You"
-
-          />
+        headdingblue={`Find ${serviceProfessionName} `}
+        headingblack="Near You"
+      />
 
       {/* Card Container */}
       <div
