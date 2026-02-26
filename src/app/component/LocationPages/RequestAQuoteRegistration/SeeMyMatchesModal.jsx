@@ -340,7 +340,11 @@ function SeeMyMatchesModal({ onClose, nextStep, previousStep, progressPercent, s
             descriptionText="Unfortunately the company you selected doesn’t serve your postcode,
                     but why not select up to 5 companies below who do."
             progressPercent={progressPercent}
-        >
+            nextButtonText={
+                selectedCompanies.length > 0
+                    ? `Send ${selectedCompanies.length}`
+                    : "Send"
+            }        >
             <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
                 {/* Loader */}
                 {autoBidListLoader && (
