@@ -42,7 +42,7 @@ function RequestARegistration({
 
     const isAdminOrRemembered = getBarkToken();
 
-    const stepFlow = isAdminOrRemembered ? [2, 3, 4, 5, 7, 8] : [1, 2, 3, 4, 5, 7];
+    const stepFlow = isAdminOrRemembered ? [2, 3, 4, 5, 7, 8] : [1, 2, 3, 4, 5];
 
     const nextStep = () => {
         const currentIndex = stepFlow.indexOf(buyerStep);
@@ -101,21 +101,9 @@ function RequestARegistration({
         if (typeof onClose === "function") onClose();
     };
 
-    const totalQuestions = questionanswerData?.length || 0;
+    const totalSteps = stepFlow.length;
 
-    const totalSteps =
-        stepFlow.length - (totalQuestions > 0 ? 1 : 0) + totalQuestions;
-
-    // console.log("totalSteps", totalSteps, buyerStep)
-
-    let currentPosition = 0;
-
-    if (buyerStep === 2 && totalQuestions > 0) {
-        const baseIndex = stepFlow.indexOf(2);
-        currentPosition = baseIndex + questionIndex + 1;
-    } else {
-        currentPosition = stepFlow.indexOf(buyerStep) + 1;
-    }
+    const currentPosition = stepFlow.indexOf(buyerStep) + 1;
 
     let progressPercent = Math.round(
         (currentPosition / totalSteps) * 100
