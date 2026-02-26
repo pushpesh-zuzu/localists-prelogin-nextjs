@@ -116,7 +116,7 @@ const AboutServiceAndQuestionBlog = ({
           <Paragraph
             variant="primarySmall"
             key={index}
-            className={`${textBase} font-bold ${block?.className ? block?.className : "mb-2.5 md:mb-5"
+            className={`${textBase} font-bold ${block?.className ? block?.className : "mb-[5px] md:mb-2.5"
               } text-[#253238]`}
           >
             {block.text}
