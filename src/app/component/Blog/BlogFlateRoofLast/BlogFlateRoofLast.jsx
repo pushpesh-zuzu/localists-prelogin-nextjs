@@ -17,9 +17,9 @@ import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 function BlogFlateRoofLast() {
-    usePendingBuyerRedirect()
-    useScrollToTop()
-  
+  usePendingBuyerRedirect();
+  useScrollToTop();
+
   return (
     <>
       {" "}
@@ -38,10 +38,19 @@ function BlogFlateRoofLast() {
       <AboutServiceAndQuestionBlog
         maxWidth="max-w-[800px]"
         contentBlocks={BLOG_FLATE_QUESTION_AND_ABOUT_SERVICE}
+        serviceId={113}
+        serviceName="Roofing"
       />
-      <FAQ data={FREQUENTLY_DATA_BLOG_FLATE_ROOF} containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] lg:max-w-[1200px] mx-auto pb-0 xl:pb-[0px]"/>
+      <FAQ
+        data={FREQUENTLY_DATA_BLOG_FLATE_ROOF}
+        containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] lg:max-w-[1200px] mx-auto pb-0 xl:pb-[0px]"
+      />
       <div className="max-w-[800px] px-[30px] md:px-16 xl:px-0 mx-auto   ">
-        <PostCodeSectionBlog classNamePostCode="mb-[20px] mt-[20px] lg:mt-[48px] lg:mb-[48px]"/>
+        <PostCodeSectionBlog
+          serviceId={113}
+          serviceName="Roofing"
+          classNamePostCode="mb-[20px] mt-[20px] lg:mt-[48px] lg:mb-[48px]"
+        />
       </div>
       <AdviceAndInsightBlog articles={TREE_SRUGEON_ADVICEINSIGHT} />
       <Footer />

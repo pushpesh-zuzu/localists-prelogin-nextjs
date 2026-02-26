@@ -10,7 +10,7 @@ function BlogHeroSection({
   category = "Tree Surgery",
   title = "A guide to Tree Preservation Orders",
   author = "Localists",
-  reviewer = "Richard jones",
+  reviewer = "Richard",
   publishedDate = "24.08.24",
   updatedDate = "28.10.25",
 }) {

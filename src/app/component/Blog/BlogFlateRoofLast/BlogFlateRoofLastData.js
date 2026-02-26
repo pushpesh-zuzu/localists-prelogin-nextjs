@@ -70,6 +70,7 @@ export const BLOG_FLATE_QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "pbold",
     text: "Need local roof installers near you who can help with quality roof installations built to last? Get started now at Localists",
+    className:"italic!"
   },
   {
     type: "h2",
@@ -144,7 +145,7 @@ export const BLOG_FLATE_QUESTION_AND_ABOUT_SERVICE = [
     text: "These roofs are usually affordable and fire-resistant. With the right care, they can last around 20 to 30 years. Their layered design gives solid protection against the weather and makes them a reliable choice.",
   },
   {
-    type: "pbold",
+    type: "h3",
     text: "Factors that affect the durability of flat roofs",
   },
   {
