@@ -217,6 +217,7 @@ function NameEmailPhoneModal({
     }
   };
   const handleCloseClick = () => {
+    console.log("calling")
     if (!getBarkToken()) {
       dispatch(setbuyerRequestData({ name, email, phone }));
       setShowConfirmModal(true);

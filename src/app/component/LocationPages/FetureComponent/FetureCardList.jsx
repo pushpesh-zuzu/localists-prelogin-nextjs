@@ -109,6 +109,8 @@ export default function FetureCardList({
                   seller={seller}
                   popularServices={popularServices}
                   cityName={getSellerData?.city}
+                  serviceId={serviceId}
+                  serviceName={serviceName}
                 />
               </div>
             ))

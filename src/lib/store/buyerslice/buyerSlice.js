@@ -69,16 +69,51 @@ const initialState = {
   postCodeLoader: false,
   searchServiceLoader: false,
   redirectFromHome: false,
-  getSellerDataLoader:false,
-  getSellerData:{}
+  getSellerDataLoader: false,
+  getSellerData: {},
+  autoBidData: [],
+  autoBidListLoader: false,
+  manualBidLoader: false,
 };
 
 // ----------------------------
 // Async Thunks
 // ----------------------------
 
+export const getAutoBid = (bidData) => {
+  return async (dispatch) => {
+    dispatch(setAutoBidListLoader(true));
+    try {
+      const response = await axiosInstance.post(`users/manual-leads`, bidData);
+
+      if (response) {
+        dispatch(setAutoBidData(response?.data?.data));
+      }
+    } catch (error) {
+      console.error("AutoBid error:", error);
+    } finally {
+      dispatch(setAutoBidListLoader(false));
+    }
+  };
+};
+
+export const addMultipleManualBid = (manualBidData) => {
+  return async () => {
+    try {
+      const response = await axiosInstance.post(
+        "users/add-multiple-manual-bid",
+        manualBidData
+      );
+      return response?.data;
+    } catch (error) {
+      showToast("error", error?.response?.data?.message);
+      return null;
+    }
+  };
+};
+
 export const questionAnswerData = (questionData) => {
-  console.log("questionData",questionData)
+  // console.log("questionData",questionData)
   return async (dispatch) => {
     dispatch(setquestionLoader(true));
     try {
@@ -146,7 +181,7 @@ export const createRequestData = (requestData) => {
         dispatch(setRequestUserId(response.data.data?.user_id));
         dispatch(setRequestUserPhone(response.data.data?.phone));
         dispatch(setRequestId(response?.data?.data?.request_id));
-        setCookie('requestId',response?.data?.data?.request_id, 10 / (24 * 60))
+        setCookie('requestId', response?.data?.data?.request_id, 10 / (24 * 60))
         return response.data;
       }
     } catch (error) {
@@ -156,19 +191,19 @@ export const createRequestData = (requestData) => {
     }
   };
 };
-export const getFetchSellerListData=(data)=>{
-  return async(dispatch)=>{
+export const getFetchSellerListData = (data) => {
+  return async (dispatch) => {
     dispatch(setGetSellerDataLoader(true))
-    try{
-      const response = await axiosInstance.post('get-seller-list-city-wise',data)
-      console.log(response.data,'response.data')
+    try {
+      const response = await axiosInstance.post('get-seller-list-city-wise', data)
+      console.log(response.data, 'response.data')
       dispatch(setGetSellerData(response?.data?.data))
       return response.data
-    }catch(error){
+    } catch (error) {
       console.error("Error get seller data:", error?.response?.data);
       showToast("error", error?.response?.data?.message);
       throw error;
-    }finally{
+    } finally {
       dispatch(setGetSellerDataLoader(false))
     }
   }
@@ -192,7 +227,7 @@ export const registerQuoteCustomer = (customerData) => {
         // console.log("ammmmmmmmm", response.data.data?.user_id)
         dispatch(setRequestUserId(response.data.data?.user_id));
         dispatch(setRequestUserPhone(response.data.data?.phone));
-        setCookie('userId',response.data.data?.user_id)
+        setCookie('userId', response.data.data?.user_id)
         return response.data;
       }
     } catch (error) {
@@ -399,7 +434,7 @@ export const addDetailsRequestData = (addDetailsData, router, requestId) => {
       );
 
       if (response) {
-          setCookie('isRegistrationComplete',true)
+        setCookie('isRegistrationComplete', true)
         dispatch(getbuyerrequestList());
         router.push(`/conversion/${requestId}`);
         // router.push('/conversion/${requestId}')
@@ -688,11 +723,20 @@ const buyerSlice = createSlice({
     setsearchServiceLoader(state, action) {
       state.searchServiceLoader = action.payload;
     },
-     setGetSellerDataLoader(state, action) {
+    setGetSellerDataLoader(state, action) {
       state.getSellerDataLoader = action.payload;
     },
-     setGetSellerData(state, action) {
+    setGetSellerData(state, action) {
       state.getSellerData = action.payload;
+    },
+    setAutoBidListLoader: (state, action) => {
+      state.autoBidListLoader = action.payload;
+    },
+    setAutoBidData: (state, action) => {
+      state.autoBidData = action.payload;
+    },
+    setManualBidLoader: (state, action) => {
+      state.manualBidLoader = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -746,7 +790,8 @@ export const {
   resetProgress,
   setsearchServiceLoader,
   setGetSellerDataLoader,
-  setGetSellerData
+  setGetSellerData,
+  setAutoBidListLoader, setAutoBidData, setManualBidLoader
 } = buyerSlice.actions;
 
 export default buyerSlice.reducer;

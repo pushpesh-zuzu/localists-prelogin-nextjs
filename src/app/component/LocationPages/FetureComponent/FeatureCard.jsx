@@ -2,12 +2,13 @@ import { Star, Phone, Mail } from "lucide-react";
 import { useState } from "react";
 import GalleryIcon from "../../../../../public/ReactIcons/GalleryIcon";
 import LocationMapIcon from "../../common/icons/SellerRegistration/LocationMapIcon";
-import RequestCallbackModal from "../RequestCallbackModal";
 import Button1 from "../../UI/Typography/Button1";
 import StarIconFeature from "../../../../../public/ReactIcons/StarIconFeature";
 import HalfStarIconFeature from "../../../../../public/ReactIcons/HalfStarIconFeature";
 import Image from "next/image";
 import { BASE_IMAGE } from "@/utils";
+import RequestARegistration from "../RequestAQuoteRegistration/RequestARegistration";
+
 export default function FeatureCard({
   index,
   featured = false,
@@ -15,6 +16,8 @@ export default function FeatureCard({
   seller = {},
   popularServices = [],
   cityName = "",
+  serviceId,
+  serviceName,
 }) {
   const [showModal, setShowModal] = useState(false);
   const [imgError, setImgError] = useState(false);
@@ -43,12 +46,11 @@ export default function FeatureCard({
           setActiveFeture(index);
         }}
         className={`relative w-full z-20 rounded-[30px] bg-white py-[17px] px-[15px] md:p-6 ${featured ? "mt-[34px] md:mt-[50px]" : ""}   
-          ${
-            featured
-              ? `border-[#fff] ring-2 ring-[#10C87B] md:ring-5 mt-[35px]  
+          ${featured
+            ? `border-[#fff] ring-2 ring-[#10C87B] md:ring-5 mt-[35px]  
           
           `
-              : "ring-2 ring-[#fff] border-white md:ring-5"
+            : "ring-2 ring-[#fff] border-white md:ring-5"
           }`}
       >
         {/* md:before:content-[''] 
@@ -187,12 +189,20 @@ export default function FeatureCard({
           </div>
         </div>
       </div>
-      {showModal && (
+      {/* {showModal && (
         <RequestCallbackModal
           onClose={() => setShowModal(false)}
           onSubmit={(data) => {
             console.log("Callback Data:", data);
           }}
+        />
+      )} */}
+
+      {showModal && (
+        <RequestARegistration
+          onClose={() => setShowModal(false)}
+          serviceId={serviceId}
+          serviceName={serviceName}
         />
       )}
     </>

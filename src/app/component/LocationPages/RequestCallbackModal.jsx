@@ -78,7 +78,7 @@ function RequestCallbackModal({ onClose, onSubmit }) {
         Your information is safe and will only be used for contact purposes.
       </Paragraph>
 
-      <InputField
+      {/* <InputField
         label="Name"
         value={name}
         onChange={handleNameChange}
@@ -103,7 +103,7 @@ function RequestCallbackModal({ onClose, onSubmit }) {
         error={errors.phone && "Please enter a valid 11-digit phone number"}
         placeholder="Phone Number"
         type="text"
-      />
+      /> */}
     </Modal>
   );
 }
