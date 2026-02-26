@@ -76,12 +76,12 @@ function BlogHeroSection({
                     {author}
                   </span>
                 </p>
-                <p className="font-bold text-xs md:text-[18px] drop-shadow-[0px_3.65px_3.65px_rgba(0,0,0,0.15)]">
+                {/* <p className="font-bold text-xs md:text-[18px] drop-shadow-[0px_3.65px_3.65px_rgba(0,0,0,0.15)]">
                   Reviewed by{" "}
                   <span className="underline drop-shadow-[0px_3.65px_3.65px_rgba(0,0,0,0.15)]">
                     {reviewer}
                   </span>
-                </p>
+                </p> */}
               </div>
             </div>
 

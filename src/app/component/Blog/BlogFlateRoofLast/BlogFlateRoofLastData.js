@@ -70,7 +70,7 @@ export const BLOG_FLATE_QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "pbold",
     text: "Need local roof installers near you who can help with quality roof installations built to last? Get started now at Localists",
-    className:"italic!"
+    className:"italic! mb-5 md:mb-12"
   },
   {
     type: "h2",
