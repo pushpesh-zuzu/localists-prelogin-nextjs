@@ -57,7 +57,7 @@ export default function FetureCardList({
       if (newItemRef.current) {
         const containerTop = containerRef.current.getBoundingClientRect().top;
         const itemTop = newItemRef.current.getBoundingClientRect().top;
-        const offset = containerRef.current.clientHeight * 0.8; // container ki 50% height
+        const offset = containerRef.current.clientHeight * 0.8;
         containerRef.current.scrollBy({
           top: itemTop - containerTop - offset,
           behavior: "smooth",
@@ -83,10 +83,10 @@ export default function FetureCardList({
         serviceId={serviceId}
         serviceName={serviceName}
       /> */}
-      {/* <NearmeH2Heading
-        headdingblue={`Find ${serviceProfessionName} `}
+      <NearmeH2Heading
+        headdingblue={`Find ${serviceProfessionName}`}
         headingblack="Near You"
-      /> */}
+      />
 
       {/* Card Container */}
       <div
