@@ -71,9 +71,9 @@ function BlogHeroSection({
                 <div className="flex items-center gap-3 mb-5 md:mb-12">
               <div>
                 <p className="font-bold text-xs md:text-[18px] drop-shadow-[0px_3.65px_3.65px_rgba(0,0,0,0.15)] leading-7.5">
-                  Author by{" "}
+                  Author:
                   <span className="underline drop-shadow-[0px_3.65px_3.65px_rgba(0,0,0,0.15)]">
-                    {author}
+                    {" "}{author}
                   </span>
                 </p>
                 {/* <p className="font-bold text-xs md:text-[18px] drop-shadow-[0px_3.65px_3.65px_rgba(0,0,0,0.15)]">
