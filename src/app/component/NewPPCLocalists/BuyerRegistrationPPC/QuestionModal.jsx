@@ -418,7 +418,7 @@ const QuestionModal = ({
         }`;
     const loaderContainerClass = "flex items-center justify-center w-full h-full pt-[20px]";
     const noQuestionClass = "flex justify-center items-center h-[200px] text-base text-[#253238]";
-    const optionsContainerClass = `flex flex-col gap-[12px] pt-[10px] transition-all duration-300 ${isAnimating ? "[animation:fadeIn_0.3s_ease-out_forwards]" : ""}`;
+    const optionsContainerClass = `flex flex-col gap-[12px] lg:min-w-[560px] pt-[10px] transition-all duration-300 ${isAnimating ? "[animation:fadeIn_0.3s_ease-out_forwards]" : ""}`;
     const optionClass = "flex items-center gap-[8px] border-2 border-[#e1e5e9] px-[15px] py-[10px] cursor-pointer font-semibold rounded-[3px] text-[#253238] text-start hover:bg-gray-50 transition-colors duration-200 font-[Arial] tracking-[-0.03em] leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
     const inputClass = "w-full font-[Arial] tra cking-[-0.03em] px-[10.5px] py-[10px] border border-[#d9d9d9] outline-none rounded-[3px] disabled:opacity-50 leading-[20px] text-[16px] max-[768px]:text-[16px] max-[480px]:text-[16px]";
     const errorMessageClass = "text-red-500 text-sm mt-2 text-left";
@@ -514,7 +514,7 @@ const QuestionModal = ({
                                         <div ref={optionsContainerRef} className={optionsContainerClass}>
                                             {imageQuestionData ? (
                                                 <>
-                                                    <div className="grid grid-cols-3 gap-[10px] w-fit mx-auto">
+                                                    <div className="flex flex-wrap gap-[10px] w-fit justify-center mx-auto">
                                                         {imageQuestionData.options.map((opt) => {
                                                             const isSelected = selectedOption.includes(opt.label);
                                                             const isSingle = questions[currentQuestion]?.option_type === "single";

@@ -18,7 +18,8 @@ import PhoneNumber from "./BuyerRegistrationPPC/PhoneNumber";
 import OTPVerification from "./BuyerRegistrationPPC/OTPVerification";
 import CardLayoutWrapper from "./CardLayoutWrapper";
 import DescribeYourRequest from "./BuyerRegistrationPPC/DescribeYourRequest";
-import CalenderQuestions from "./CalenderQuestions";
+import ZohoCalendar from "./BuyerRegistrationPPC/ZohoCalendar";
+// import CalenderQuestions from "./CalenderQuestions";
 
 function HeroSection({
     title = "",
@@ -145,15 +146,16 @@ function HeroSection({
                         />
                     )}
 
-                    {buyerStep === 4 && (
+                    {/* {buyerStep === 4 && (
                         <CalenderQuestions
                             nextStep={nextStep}
                             onBack={prevStep}
                             // onSelect={onSelect}
                         />
-                    )}
+                       
+                    )} */}
 
-                    {buyerStep === 5 && (
+                    {buyerStep === 4 && (
                         <PhoneNumber
                             nextStep={nextStep}
                             onBack={prevStep}
@@ -164,27 +166,31 @@ function HeroSection({
                         />
                     )}
 
-                    {buyerStep === 6 && (
+                    {buyerStep === 5 && (
                         <CardLayoutWrapper OtpContainer={true} showButton={false}>
                             <OTPVerification
                                 open
                                 nextStep={nextStep}
                                 onBack={prevStep}
                                 serviceId={serviceId}
-                                isThankuPageOnlyShow
                                 setUpdateNumberStep={setUpdateNumberStep}
                             />
                         </CardLayoutWrapper>
                     )}
+                    {
+                        buyerStep === 6 && (
+                             <ZohoCalendar/>
+                        )
+                    }
 
-                    {buyerStep === 7 && (
+                    {/* {buyerStep === 7 && (
                         <CardLayoutWrapper
                             showBackButton={false}
                             showButton={false}
                         >
                             <DescribeYourRequest />
                         </CardLayoutWrapper>
-                    )}
+                    )} */}
                 </div>
             </div>
         </section>

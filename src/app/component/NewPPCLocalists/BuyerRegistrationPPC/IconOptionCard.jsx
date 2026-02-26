@@ -56,6 +56,7 @@ const IconOptionCard = ({
         lg:px-[20px] px-[10px]
         pb-[15px]
         md:pt-[15px] pt-[20px]
+        max-w-[85px] md:max-w-[180px] 
         ${isSpecialLabel ? "md:w-[125px] md:h-[90px] lg:w-[145px] lg:h-[100px]" : "w-full"}
          rounded-[10px]
         text-white
