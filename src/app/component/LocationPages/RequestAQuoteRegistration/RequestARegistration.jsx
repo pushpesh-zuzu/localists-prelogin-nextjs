@@ -101,9 +101,33 @@ function RequestARegistration({
         if (typeof onClose === "function") onClose();
     };
 
-    const totalSteps = stepFlow.length;
+    const totalQuestions = questionanswerData?.length || 0;
 
-    const currentPosition = stepFlow.indexOf(buyerStep) + 1;
+    // Base steps without question expansion
+    const baseSteps = stepFlow.length;
+
+    // If questions exist → replace step 2 with question count
+    const totalSteps =
+        totalQuestions > 0
+            ? baseSteps - 1 + totalQuestions
+            : baseSteps;
+
+    let currentPosition = 0;
+
+    if (buyerStep === 2 && totalQuestions > 0) {
+        const baseIndex = stepFlow.indexOf(2);
+        currentPosition = baseIndex + questionIndex + 1;
+    } else {
+        const stepIndex = stepFlow.indexOf(buyerStep);
+
+        if (totalQuestions > 0 && stepIndex > stepFlow.indexOf(2)) {
+            // After questions, shift position forward by (questionCount - 1)
+            currentPosition =
+                stepIndex + totalQuestions;
+        } else {
+            currentPosition = stepIndex + 1;
+        }
+    }
 
     let progressPercent = Math.round(
         (currentPosition / totalSteps) * 100
