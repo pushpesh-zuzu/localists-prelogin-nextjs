@@ -6,7 +6,8 @@ import { getCityName, setbuyerRequestData, setBuyerStep, setcitySerach } from "@
 import { setSelectedServiceId } from "@/lib/store/findjobslice";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 import { useRouter } from "next/navigation";
-import BuyerRegistrationLocationPage from "./BuyerRegistrationLocationPage/BuyerRegistrationLocationPage";
+// import BuyerRegistrationLocationPage from "./BuyerRegistrationLocationPage/BuyerRegistrationLocationPage";
+import BuyerRegistration from "../common/BuyerRegistration/BuyerRegistration";
 
 
 
@@ -211,7 +212,7 @@ function PostCodeSearchFieldLocation({
         )}
       </div>
        {show && (
-        <BuyerRegistrationLocationPage
+        <BuyerRegistration
           closeModal={handleClose}
           service_Id={serviceId}
           postcode={postcode}
