@@ -514,7 +514,7 @@ const QuestionModal = ({
                                         <div ref={optionsContainerRef} className={optionsContainerClass}>
                                             {imageQuestionData ? (
                                                 <>
-                                                    <div className="flex flex-wrap gap-[10px] w-fit justify-center mx-auto">
+                                                    <div className="flex flex-wrap gap-[10px] w-full justify-center mx-auto">
                                                         {imageQuestionData.options.map((opt) => {
                                                             const isSelected = selectedOption.includes(opt.label);
                                                             const isSingle = questions[currentQuestion]?.option_type === "single";
