@@ -17,7 +17,6 @@ function SeeMyMatchesModal({ onClose, nextStep, previousStep, progressPercent, s
     const dispatch = useDispatch();
     const router = useRouter();
 
-
     const {
         autoBidData,
         autoBidListLoader,
@@ -291,7 +290,7 @@ function SeeMyMatchesModal({ onClose, nextStep, previousStep, progressPercent, s
         const result = await dispatch(addMultipleManualBid(manualBidPayload));
         if (result) {
             // dispatch(setBuyerStep(0));
-            router.push(`/conversion/reply/${requestId}`);
+            router.push(`/conversion/${requestId}`);
         }
 
         // if (result) {

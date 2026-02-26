@@ -41,7 +41,7 @@ const Modal = ({
 }) => {
     if (!isOpen) return null;
 
-    console.log("progressPercent", progressPercent)
+    // console.log("progressPercent", progressPercent)
 
     const modalContent = (
         <div

@@ -31,7 +31,7 @@ function RequestARegistration({
     // const [getServiceState, setGetServiceState] = useState(null);
     const [email, setEmails] = useState("");
     const [reEnterMobile, setReEnterMobile] = useState(2);
-    const [questionIndex, setQuestionIndex] = useState(0); // ✅ Track question index
+    const [questionIndex, setQuestionIndex] = useState(0);
     const totalStepsRef = useRef(null);
 
 
@@ -82,35 +82,6 @@ function RequestARegistration({
     if (!buyerStep) return null;
 
     useEffect(() => {
-        if (!totalStepsRef.current && questionanswerData?.length) {
-            const totalMainSteps = stepFlow.length;
-            const totalQuestions = questionanswerData.length;
-
-            totalStepsRef.current =
-                totalMainSteps - 1 + totalQuestions;
-        }
-    }, [questionanswerData]);
-
-    const totalSteps = totalStepsRef.current || stepFlow.length;
-
-    let currentPosition = 0;
-
-    if (buyerStep === 2) {
-        // Question step
-        const baseIndex = stepFlow.indexOf(2);
-        currentPosition = baseIndex + questionIndex + 1;
-    } else {
-        currentPosition = stepFlow.indexOf(buyerStep) + 1;
-    }
-    let progressPercent = Math.round(
-        (currentPosition / totalSteps) * 100
-    );
-
-    if (stepFlow.indexOf(buyerStep) === stepFlow.length - 1) {
-        progressPercent = 100;
-    }
-
-    useEffect(() => {
         if (buyerStep === 2) {
             questionModalRef.current?.resetQuestions?.();
         }
@@ -129,6 +100,30 @@ function RequestARegistration({
         if (typeof setFromImageModal === "function") setFromImageModal(false);
         if (typeof onClose === "function") onClose();
     };
+
+    const totalQuestions = questionanswerData?.length || 0;
+
+    const totalSteps =
+        stepFlow.length - (totalQuestions > 0 ? 1 : 0) + totalQuestions;
+
+    // console.log("totalSteps", totalSteps, buyerStep)
+
+    let currentPosition = 0;
+
+    if (buyerStep === 2 && totalQuestions > 0) {
+        const baseIndex = stepFlow.indexOf(2);
+        currentPosition = baseIndex + questionIndex + 1;
+    } else {
+        currentPosition = stepFlow.indexOf(buyerStep) + 1;
+    }
+
+    let progressPercent = Math.round(
+        (currentPosition / totalSteps) * 100
+    );
+
+    if (stepFlow.indexOf(buyerStep) === stepFlow.length - 1) {
+        progressPercent = 100;
+    }
 
     return (
         <>
