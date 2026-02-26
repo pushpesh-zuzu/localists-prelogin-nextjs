@@ -55,7 +55,7 @@ const AboutServiceAndQuestionBlog = ({
               height={block?.height || 600}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               className={`w-full h-auto object-cover rounded-lg ${block?.className
-                } ${block?.marginTop ? "mb-6 mt-5 lg:mb-[53px] lg:mt-12" : ""} ${block?.marginBottom ? "mb-6 mt-5 lg:mb-[53px] lg:mt-12" : ""
+                } ${block?.marginTop ? "mb-6 mt-5 lg:mb-[56px] lg:mt-12" : ""} ${block?.marginBottom ? "mb-6 mt-5 lg:mb-[56px] lg:mt-12" : ""
                 }`}
               priority={block?.priority || false}
               quality={75}
