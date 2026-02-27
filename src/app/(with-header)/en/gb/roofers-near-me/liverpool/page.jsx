@@ -3,9 +3,9 @@ import SEO from '@/app/component/common/seo/SEO';
 import RoofersInLiverpool from '@/app/component/LocationPages/Liverpool/RoofersInLiverpool/RoofersInLiverpool';
 import React, { Suspense } from 'react'
 export const metadata = {
-  title: "Find Trusted Roofers Liverpool | Localists.com",
+  title: "Roofers Liverpool (16) | Find pre-vetted roofers at Localists.com",
   description:
-    "Looking for reliable roofers in Liverpool? Get up to 5 free, no-obligation quotes from trusted local specialists for repairs, replacements, and installations.",
+    "Looking for reliable roofers in Liverpool? Get up to five free, no-obligation quotes from vetted local professionals with Localists today.",
 };
 function page() {
   return (

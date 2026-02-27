@@ -1,201 +1,242 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
   {
     type: "h2",
-    text: "Roofing Costs in Liverpool: A Realistic Price Guide",
+    text: "How much do roofers in Liverpool cost?",
   },
   {
     type: "p",
-    text: "Roofing prices can feel unpredictable, but once you know the rough numbers, everything becomes a lot less intimidating. Below is a clear, no-nonsense look at what homeowners in Liverpool typically pay for common roofing jobs.",
-  },
-  {
-    type:"pbold",
-    text:"General roofing work"
+    text: "Let’s get to the part everyone really wants to know: the numbers.",
   },
   {
     type: "p",
-    text: "For standard roofing projects, whether it’s minor upgrades or general maintenance, costs usually sit between £1,350 and £3,350, with most jobs coming in around £2,150. It’s the kind of work that quietly keeps your home dry and drama-free.",
-  },
-    {
-    type: "pbold",
-    text: "Roof repairs"
+    text: "Here’s a realistic snapshot of what roofers in Liverpool typically charge in 2026:"
   },
   {
     type: "p",
-    text: "General roof repairs cost £750 on average but this can go increase or decrease based on the complexity of the job and scale of the damage. Small leaks, cracked tiles, or early signs of wear can cost anywhere between £350 and £1,450 to repair. Catching these early can save you from much bigger bills later."
-  },
-  { type: "PostCodeSectionLocation" },
-  {
-    type: "pbold",
-    text: "Flat roof repairs"
-  },
-  {
-    type: "p",
-    text: "Flat roofs need a bit of extra care. Repairs and resealing typically fall between £625 and £2,100, with an average spend of £1,150, ideal for garages, extensions, and low-pitch roofs."
-  },
-  {
-    type: "pbold",
-    text: "Pitched roof repairs"
-  },
-  {
-    type: "p",
-    text: "For sloped roofs, repair costs usually range from £350 to £1,500, averaging £725. A small fix now can prevent water damage down the line."
-  },
-  {
-    type: "pbold",
-    text: "Emergency roofing services"
-  },
-  {
-    type: "p",
-    text: "When a storm hits or water starts coming in unexpectedly, emergency callouts generally cost £370 to £1,170, with an average of £630. Quick action often stops minor issues turning into major repairs."
-  },
-  {
-    type: "pbold",
-    text: "Flat roof installation"
-  },
-  {
-    type: "p",
-    text: "The average cost of a flat roof replacement is £2700 - but this can vary based on the complexity and scale of the job, with flat roof installation prices ranging from £1,500 to £8,000 "
-  },
-  {
-    type: "pbold",
-    text: "Pitched roof installation"
-  },
-  {
-    type: "p",
-    text: "A pitched roof installation costs on average For a full pitched roof installation, expect prices between £5,000 and £8,000, with the average sitting around £5,609. It’s a bigger investment, but one that offers long-term protection and peace of mind."
-  },
-  {
-    type: "pbold",
-    text: "Roof replacement"
-  },
-  {
-    type:"p",
-    text:"When repairs are no longer enough, a complete roof replacement usually costs £5,000 to £9,445, averaging £6,837. A major job, yes, but one that resets the clock on your roof entirely."
-  },
-  {
-    type:"p",
-    text:"Good to know: Final prices depend on factors like roof size, materials, access, and whether extras such as scaffolding or insulation are needed. Always ask for a detailed quote before booking so there are no surprises."
-  },
-  {
-    type:"p",
-    text:"Already know what needs doing? Use our Job Value Estimator for a quick, tailored cost estimate; no guesswork required."
-  },
-  {
-    type:'h2',
-    text:"What Should Be Included in Your Roofing Quote",
-    className: "mt-5 lg:mt-[72px]"
-
-  },
-  {
-   type:"p",
-   text:"A good roofing quote shouldn’t feel like a guessing game. Everything should be clear, upfront, and easy to understand before any work begins. When comparing quotes from roofers in Liverpool, make sure the following are clearly listed:"
-  },
-  {
-    type:"li",
-    text:"Labour costs – covering the time and expertise needed to complete the job properly."
-  },
-  {
-    type:"li",
-    text:"Materials – including tiles, underlay, battens, flashing, or any other components required."
-  },
-{
-    type:"li",
-    text:"Scaffolding or equipment hire – especially for taller or harder-to-reach roofs."
-  },
-  {
-    type:"li",
-    text:"Waste removal – old tiles, damaged materials, and general site clean-up once the job’s done."
-  },
-  {
-    type:"li",
-    text:"VAT (if applicable) – always worth checking so there are no last-minute surprises."
-  },
-  {
-    type:"p",
-    text:"If a quote feels vague or leaves things out, don’t be afraid to ask questions. A trustworthy roofer will be happy to explain exactly what you’re paying for, no fine print, no confusion, no awkward conversations."
-  },
-  {
-    type:"h2",
-    text:"Find the Right Roofer in Liverpool for the Job",
-    className: "mt-5 lg:mt-[72px]"
-  },
-  {
-    type:"p",
-    text:"A roof is more than just a few tiles sitting on top of your house; it’s protection, insulation, and sometimes even a style statement. Depending on what you need, here’s the kind of work you can search for when looking for roofers in Liverpool:"
-  },
-   {
-    type: "li",
-    text: "Roof repairs – leaks, loose tiles, or minor storm damage."
+    text: "Average roofing costs in Liverpool"
   },
   {
     type: "li",
-    text: "New roof installations – flat or pitched, for homes, garages, or extensions."
+    text: "General roofing work: usually ranges from £1343 to £3350, with an average cost of around £2121 per job"
   },
   {
     type: "li",
-    text: "Gutter and fascia replacement – small fixes that prevent big water problems."
+    text: "Roofing repairs: typically cost between £386 and £1444, averaging £739"
   },
   {
     type: "li",
-    text: "Flat roof installation or resealing – perfect for low-pitch areas that need extra waterproofing."
+    text: "Flat roofing repairs: usually fall between £619 and £2076, with an average of £1149"
   },
   {
     type: "li",
-    text: "Chimney repairs – cracks, loose bricks, or failing flashing."
+    text: "Pitched roofing repairs: generally cost £339 to £1498, averaging £714"
   },
   {
     type: "li",
-    text: "Lead flashing repairs – the small details that keep your roof watertight."
+    text: "Emergency roofing services: expect to pay between £370 and £1169, with an average cost of £630"
   },
   {
     type: "li",
-    text: "Skylight or Velux window installation – let the sunshine in safely."
+    text: "Flat roof installation: normally ranges from £1427 to £2877, averaging £2037"
   },
   {
     type: "li",
-    text: "Roof insulation – keep warm in winter, cool in summer, and cut energy costs."
+    text: "Pitched roof installation: typically costs £3951 to £7998, with an average of £5609"
   },
   {
     type: "li",
-    text: "Emergency roofing – fast fixes when storms strike or leaks appear unexpectedly."
+    text: "Full roof replacement: usually sits between £5013 and £9445, with an average price of £6837"
+  },
+  {
+    type: 'p',
+    text: "As you can see, there’s a big difference between fixing a slipped tile and installing a brand-new roof.",
+  },
+  {
+    type: "h3",
+    text: "What affects the price?",
+  },
+  {
+    type: 'p',
+    text: "Several factors can nudge the final bill up or down, including:",
   },
   {
     type: "li",
-    text: "Drone roof surveys – safe, detailed inspections without climbing ladders."
+    text: "The size and type of your roof"
   },
   {
-    type:'p',
-    text:"No matter the job, finding a roofer with the right skills ensures your home stays dry, safe, and looking great without the stress.",
-    notMarginBottom:true
+    type: "li",
+    text: "Materials used (slate, tile, felt, etc.)"
   },
- 
+  {
+    type: "li",
+    text: "How easy the roof is to access"
+  },
+  {
+    type: "li",
+    text: "Whether scaffolding is required"
+  },
+  {
+    type: "li",
+    text: "The extent of any existing damage"
+  },
+  {
+    type: "li",
+    text: "How urgent the job is"
+  },
+  {
+    type: "li",
+    text: "Liverpool’s ever-unpredictable weather"
+  },
+  {
+    type: 'p',
+    text: "Two houses on the same street can end up with very different quotes,  roofs are a bit like fingerprints, no two are quite the same.",
+  },
+  {
+    type: "h3",
+    text: "The best way to get an accurate price",
+  },
+  {
+    type: 'p',
+    text: "These figures are solid guidelines, but they’re still averages. The only way to know exactly what your roofing job will cost is to get a tailored quote based on your specific situation.",
+  },
+  {
+    type: 'p',
+    text: "With Localists, that part is easy.",
+  },
+  {
+    type: 'p',
+    text: "Tell us what you need, and we’ll connect you with vetted Liverpool roofers who’ll send you free, no-obligation quotes in minutes. No guesswork, no pressure, just clear prices from real local professionals.",
+    notMarginBottom: true
+  },
+  {
+    type: "image",
+    src: "/nearme/Roofing/roofinstalling.webp",
+    alt: "two roofers installing slate tiles onto a brand new roof",
+    marginBottom: true,
+    marginTop: true
+  },
+  {
+    type: "h2",
+    text: "Emergency roofers in Liverpool",
+  },
+  {
+    type: 'p',
+    text: "Roof problems have an annoying habit of choosing the worst possible timing.",
+  },
+  {
+    type: 'p',
+    text: "One minute everything’s fine, the next a storm rolls in, and suddenly you’ve got water dripping where water definitely shouldn’t be dripping. Liverpool weather doesn’t mess about; high winds, heavy rain, and the odd flying roof tile can turn a small issue into a big headache fast.",
+  },
+  {
+    type: 'p',
+    text: "That’s when emergency roofers in Liverpool become your new best friends.",
+  },
+  {
+    type: 'p',
+    text: "Most local roofers offer fast call-outs for urgent issues such as:",
+  },
+  {
+    type: "li",
+    text: "Storm damage"
+  },
+  {
+    type: "li",
+    text: "Serious roof leaks"
+  },
+  {
+    type: "li",
+    text: "Loose or broken tiles"
+  },
+  {
+    type: "li",
+    text: "Damaged flashing"
+  },
+  {
+    type: "li",
+    text: "Blocked or collapsed gutters"
+  },
+  {
+    type: "li",
+    text: "Structural roof problems"
+  },
+  {
+    type: 'p',
+    text: "Acting quickly is key. The longer a roofing problem is left, the worse (and more expensive) it usually gets. A small leak today can easily become a soaked ceiling tomorrow.",
+  },
+  {
+    type: 'p',
+    text: `If you need urgent help, Localists can connect you with reliable emergency <a href="https://www.localists.com/en/gb/roofers-near-me" style="color:#00afe3; text-decoration:underline;">roofers near you</a> in minutes. No endless searching, no stress, just fast, practical help when you need it most.`,
+  },
+  {
+    type: "h2",
+    text: "How to choose the right roofer in Liverpool",
+  },
+  {
+    type: 'p',
+    text: "Finding a roofer isn’t like picking a takeaway on a Friday night, getting it wrong can be expensive and stressful.",
+  },
+  {
+    type: 'p',
+    text: "Not all roofers are the same, so it pays to do a little homework before making your choice. Here are a few simple ways to separate the professionals from the “I’ve got a ladder and a van” crowd:",
+  },
+  {
+    type: "li",
+    text: "Check real customer reviews – past feedback is one of the best ways to judge reliability and quality."
+  },
+  {
+    type: "li",
+    text: "Ask about experience and qualifications – a seasoned roofer has seen it all and knows how to handle surprises."
+  },
+  {
+    type: "li",
+    text: "Make sure they’re fully insured – this protects you, your home, and the roofer if anything goes wrong."
+  },
+  {
+    type: "li",
+    text: "Get everything in writing – a clear, detailed quote avoids awkward misunderstandings later."
+  },
+  {
+    type: "li",
+    text: "Be cautious of cash-only requests – reputable roofers are happy to provide proper invoices and paperwork."
+  },
+  {
+    type: "li",
+    text: "Don’t just chase the lowest price – low quotes can sometimes mean low-quality materials or rushed work."
+  },
+  {
+    type: 'p',
+    text: "Remember, your roof protects everything underneath it. Choosing the right roofer is about value and trust, not just saving a few pounds.",
+  },
+  { type: "PostCodeSectionLocation",
+    className:"mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
+  },
 ];
-export const FREQUENTLY_DATA_TREE_SURGEON_LIVERPOOL = [
+export const FREQUENTLY_DATA_LIVERPOOL = [
   {
     key: "1",
-    title: "Do roofers work in all weather?",
+    title: "How do I know if my roof needs repairing or replacing?",
     description: `
-        Mostly yes, but heavy rain, strong winds, or icy conditions can delay work. Safety comes first!
+        Small issues like a few broken tiles can usually be repaired. But if your roof is over 20–25 years old and suffering repeated problems, replacement may be more cost-effective.
         `,
   },
   {
     key: "2",
-    title: "What is the proper name for a roofer?",
+    title: "How long does a roof repair take?",
     description: `
-        A roofer is formally called a roofing contractor or tradesperson. But around Liverpool, “roofing expert” usually works just fine.
+        Minor repairs can often be completed in a few hours. Larger jobs may take a day or two, depending on complexity and weather conditions.
         `,
   },
   {
     key: "3",
-    title: "How long does a roofing job usually take?",
+    title: "Do roofers in Liverpool work in the rain?",
     description: `
-        It depends on the job; repairs can take a few hours, while full replacements may take several days.`,
+        Light rain is usually fine, but heavy downpours or strong winds can make roofing work unsafe. Liverpool's weather likes to keep everyone on their toes.`,
   },
   {
     key: "4",
-    title: "Should I pay my roofer in cash?",
+    title: "How often should I have my roof inspected?",
     description: `
-        It’s safer to pay via card or bank transfer. Cash is fine for small jobs, but always get a receipt and a clear quote.`,
+        It’s a good idea to have your roof checked once a year, especially after winter or major storms.`,
   },
 ];
 export const ROOFERS_ADVICEINSIGHT_LIVERPOOL = [
@@ -227,52 +268,52 @@ export const ROOFERS_ADVICEINSIGHT_LIVERPOOL = [
 ];
 export const ROOFERS_TABDATA_LIVERPOOL = {
   popular: [
-      {
-            title: "Landscapers Near Me",
-            url: "/en/gb/landscape-gardeners-near-me",
-        },
-        {
-            title: "Gardeners Near Me",
-            url: "",
-        },
-        {
-            title: "Architects Near Me",
-            url: "",
-        },
-        {
-            title: "Gutter Cleaners Near Me",
-            url: "/en/gb/gutter-cleaning-near-me",
-        },
-        {
-            title: "Fencing Contractors Near Me",
-            url: "/en/gb/fencing-contractors-near-me",
-        },
-        {
-            title: "Artificial Grass Installers Near Me",
-            url: "/en/gb/artificial-grass-installers-near-me",
-        },
+    {
+      title: "Landscapers Near Me",
+      url: "/en/gb/landscape-gardeners-near-me",
+    },
+    {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
+      title: "Architects Near Me",
+      url: "",
+    },
+    {
+      title: "Gutter Cleaners Near Me",
+      url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Fencing Contractors Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
+    },
+    {
+      title: "Artificial Grass Installers Near Me",
+      url: "/en/gb/artificial-grass-installers-near-me",
+    },
   ],
   related: [
-   "Roofers Leeds",
-        "Roofers York",
-        "Roofers Hull",
-        "Roofers Bolton",
-        "Roofers Chester",
-        "Roofers Cheshire",
-        "Roofers Harrogate",
-        "Roofers Liverpool",
-        "Roofers Manchester",
-        "Roofers Stockport",
-        "Roofers North Yorkshire",
+    "Roofers Leeds",
+    "Roofers York",
+    "Roofers Hull",
+    "Roofers Bolton",
+    "Roofers Chester",
+    "Roofers Cheshire",
+    "Roofers Harrogate",
+    "Roofers Liverpool",
+    "Roofers Manchester",
+    "Roofers Stockport",
+    "Roofers North Yorkshire",
   ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_LIVERPOOL = [
-  `Roofs are great  at staying out of sight and out of mind - right up until they decide to cause a scene. One day everything’s fine, the next there’s a suspicious drip, a tile that’s gone AWOL, or rain setting up camp where it definitely doesn’t belong.
+  `You only really notice your roof when something goes wrong. And suddenly, finding reliable roofers in Liverpool shoots straight to the top of your to-do list. But who do you call? How much should it cost? How do you know you’re choosing someone trustworthy and not just a bloke with a ladder and a van? Take a breath, you’re in the right place.
   <br/><br/> 
   `,
   `
-Whether it’s a quick repair, a complete roof overhaul, or an urgent fix after a storm, we’ll connect you with the best roofers in Liverpool. Get started and receive free no obligation quotes from local experts near you. No chasing callbacks. No technical waffle. No headaches, which you didn’t sign up for.
+At Localists, we make finding experienced roofers in Liverpool, quick, simple, and completely hassle-free. Tell us what you need, and we’ll connect you with vetted Liverpool roofers near you, ready to help. No obligation. No hassle.
 `,
 ];
 
@@ -298,24 +339,24 @@ export const POPULAR_SERVICES_ROOFERS_LIVERPOOL = [
 export const ROOFERS_FEEDBACK_LIVERPOOL = [
   {
     id: 1,
-    text: "A sudden leak had me stressing, but the roofer arrived quickly, explained everything clearly, and fixed it without any fuss. Brilliant service!",
-    name: "Isolde F.",
+    text: "We noticed a damp patch in the bedroom ceiling every time it rained and it was starting to worry us. Used Localists to find a roofer and he came out the same week, found the problem straight away, and fixed it properly. No drama, no upselling, just a good honest job.",
+    name: "Paul R.",
   },
   {
     id: 2,
-    text: "Needed a full pitched roof replacement and was nervous about costs. The team gave a clear quote, finished on time, and left everything spotless. Highly recommend!",
-    name: "Callum B.",
+    text: "I didn’t really know where to start with getting the gutters replaced, so I tried Localists. Ended up with three quotes within a day and picked a friendly local roofer, turned up on time, and left everything clean and tidy. Really smooth experience from start to finish.",
+    name: "Hannah D.",
   },
   {
     id: 3,
-    text: "We had our flat roof resealed and it couldn’t have gone smoother. Friendly team, no hidden costs, and a job done properly.",
-    name: "Anwen K.",
+    text: "I’ve heard so many horror stories about roofing work that I was pretty nervous about the whole thing. Being able to compare quotes side by side made a huge difference. The roofer I chose was great, explained everything clearly, and the price was exactly what he quoted. Definitely took the stress out of it.",
+    name: "Mark E.",
 
   },
   {
     id: 4,
-    text: "I needed a roof installing and already had 2 quotes. But had far better quotes from Localists. Job was done sooner than expected. Thanks to craig and the team",
-    name: "Matthew C.",
+    text: "Had some issues with flashing around the chimney. Had Tony come out from Localists who sorted it all out. Would definitely recommend.",
+    name: "Steven S.",
   },
 ];
 

@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import {
   BREADCRUM_DATA_ROOFERS_LIVERPOOL,
-  FREQUENTLY_DATA_TREE_SURGEON_LIVERPOOL,
+  FREQUENTLY_DATA_LIVERPOOL,
   POPULAR_SERVICES_ROOFERS_LIVERPOOL ,
   QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL,
   ROOFERS_ADVICEINSIGHT_LIVERPOOL,
@@ -31,22 +31,22 @@ function RooferInLiverpool() {
   return (
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon />}
-      <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON_LIVERPOOL} />
+      <FAQScript FAQ={FREQUENTLY_DATA_LIVERPOOL} />
       <HeroSectionLocation
         heading1="Roofers"
         heading2="Liverpool"
         description="Find the best roofers in Liverpool! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
-        altText="Professional roofers roofing a new build with ceramic roof tiles"
+        altText="A roofer installing a new roof by securing clay tiles with a drill"
         blackHeadinginline="inline"
         serviceId={113}
         serviceName="Roofing"
       />
       <VettedSection
         paragraph={VETTED_DATA_ROOFERS_LIVERPOOL}
-        vettedHeading1="Find Vetted Local Roofers in "
-        vettedHeading2="Liverpool"
+        vettedHeading1="Find trusted local roofing "
+        vettedHeading2="experts"
         breadcrumb={BREADCRUM_DATA_ROOFERS_LIVERPOOL}
         extraButton
         featureRef={featureRef}
@@ -77,7 +77,7 @@ function RooferInLiverpool() {
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px]  mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
         headdingblue="Frequently Asked Questions About "
         headingblack="Roofers in Liverpool"
-        data={FREQUENTLY_DATA_TREE_SURGEON_LIVERPOOL}
+        data={FREQUENTLY_DATA_LIVERPOOL}
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_LIVERPOOL} />
 
