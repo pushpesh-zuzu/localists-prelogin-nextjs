@@ -107,7 +107,7 @@ const NameEmail = ({ nextStep, isPPCPages = false, onBack }) => {
 
   return (
     <FormWrapper>
-      <BackgroundWrapperNameEmailMultiForm>
+      <BackgroundWrapperNameEmailMultiForm className="bg-cover bg-center bg-no-repeat md:mx-auto md:max-w-[80%] min-h-[70vh] flex  p-5 md:min-h-[63vh]">
         <CardLayoutWrapper
           title={
             isBannerText

@@ -2,14 +2,16 @@
 import React, { useEffect, useState, useMemo } from "react";
 
 const formatLabel = (text = "") => {
-  return text
-    // space before capital letters
-    .replace(/([a-z])([A-Z])/g, "$1 $2")
-    // space between word and slash word
-    .replace(/\/([a-zA-Z])/g, " / $1")
-    // space between letters and numbers (optional)
-    .replace(/([a-zA-Z])(\d)/g, "$1 $2")
-    .replace(/(\d)([a-zA-Z])/g, "$1 $2");
+  return (
+    text
+      // space before capital letters
+      .replace(/([a-z])([A-Z])/g, "$1 $2")
+      // space between word and slash word
+      .replace(/\/([a-zA-Z])/g, " / $1")
+      // space between letters and numbers (optional)
+      .replace(/([a-zA-Z])(\d)/g, "$1 $2")
+      .replace(/(\d)([a-zA-Z])/g, "$1 $2")
+  );
 };
 
 // labels that should NOT be displayed
@@ -29,10 +31,7 @@ const IconOptionCard = ({
 }) => {
   const [iconSize, setIconSize] = useState(50);
 
-    const isSpecialLabel = useMemo(
-    () => shouldHideLabel(label),
-    [label]
-  );
+  const isSpecialLabel = useMemo(() => shouldHideLabel(label), [label]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -70,7 +69,7 @@ const IconOptionCard = ({
       `}
     >
       {/* Checkbox (only for multi select) */}
-      {!isSingle && (
+      {/* {!isSingle && (
         <div className="absolute top-[2px] md:top-[10px] left-[5px] md:left-[10px]">
           <input
             type="checkbox"
@@ -79,19 +78,44 @@ const IconOptionCard = ({
             className="w-4 h-4 accent-[#00afe3] cursor-pointer"
           />
         </div>
-      )}
+      )} */}
+      {!isSingle && <div
+        className={`
+    w-[16px] h-[16px]
+    border-2 rounded-[3px]
+    flex items-center justify-center
+    transition-all duration-200 absolute top-[2px] md:top-[10px] left-[5px] md:left-[10px]
+    ${isSelected ? "bg-white border-white" : "bg-transparent border-white"}
+  `}
+      >
+        {isSelected && (
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#00afe3"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        )}
+      </div>}
 
       {/* Icon */}
-      <Icon width={isSpecialLabel ? 65 : iconSize} height={isSpecialLabel ? 65 : iconSize} />
+      <Icon
+        width={isSpecialLabel ? 65 : iconSize}
+        height={isSpecialLabel ? 65 : iconSize}
+      />
 
       {/* Label */}
-      {
-        !isSpecialLabel && (
-          <span className="font-[Arial] tracking-[-0.03em] text-[12px] leading-[12px] md:leading-[18px] md:text-[14px] text-center font-bold pt-[10px]">
-            {formatLabel(label)}
-          </span>
-        )
-      }
+      {!isSpecialLabel && (
+        <span className="font-[Arial] tracking-[-0.03em] text-[12px] leading-[12px] md:leading-[18px] md:text-[14px] text-center font-bold pt-[10px]">
+          {formatLabel(label)}
+        </span>
+      )}
     </button>
   );
 };

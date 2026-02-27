@@ -208,7 +208,7 @@ const OTPVerification = ({
                             key={index}
                             type="text"
                             maxLength="1"
-                            className="w-10 h-10 md:w-10 md:h-10  text-2xl text-black! md:text-xl sm:text-lg text-center border-0 border-b border-[#bcbcbc] focus:outline-none "
+                            className="w-10 h-10 md:w-15 md:h-12  text-2xl text-black! md:text-xl sm:text-lg text-center  border-1 rounded-[8px] border-[#bcbcbc] focus:outline-none "
                             value={otp[index]}
                             onChange={(e) => handleChange(index, e.target.value)}
                             onKeyDown={(e) => handleKeyDown(index, e)}
