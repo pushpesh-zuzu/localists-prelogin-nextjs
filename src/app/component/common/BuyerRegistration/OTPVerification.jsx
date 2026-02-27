@@ -41,8 +41,10 @@ const OtpVerification = ({
   } = useSelector((state) => state.buyer || {});
 
   // Get last segment from pathname
-   const pathSegments = pathname?.split("/").filter(Boolean) || []; 
-   const lastSegment = pathSegments[pathSegments.length - 1];
+   const pathSegments = pathname?.split("/").filter(Boolean) || [];
+    const localeSegmentPattern = /^[a-z]{2}$/i;
+    const nonLocaleSegments = pathSegments.filter((seg) => !localeSegmentPattern.test(seg));
+    const fullPagePath = nonLocaleSegments.join("/") || "root";
      
   useEffect(() => {
     if (timer > 0) {
@@ -136,7 +138,7 @@ const OtpVerification = ({
                 buyerRequest: buyerRequest,
                 city: citySerach,
                 serviceId: buyerRequest?.service_id,
-                baseRedirectPath : localePattern.test(lastSegment) ? "root" : lastSegment
+                baseRedirectPath : fullPagePath
 
               };
 
@@ -186,6 +188,7 @@ const OtpVerification = ({
       isOpen={true}
       maxWidth="max-w-[90%] sm:max-w-[500px] mt-[5%]"
       showClosIcon={false}
+      radius="rounded-[20px]"
     >
       <div className="w-full max-w-[500px] bg-white px-2  md:px-8 py-[35px] text-center shadow-sm sm:px-[31px] sm:py-[35px]">
         {/* Title */}
@@ -210,13 +213,13 @@ const OtpVerification = ({
         </span>
 
         {/* OTP Inputs */}
-        <div className="mb-5 flex justify-center gap-6 mt-4">
+        <div className="mb-5 flex justify-center gap-3 md:gap-4 mt-4">
           {[0, 1, 2, 3].map((index) => (
             <input
               key={index}
               type="text"
               maxLength={1}
-              className="h-7 w-7 border-b border-[#BCBCBC] border-t-0 border-r-0 border-l-0 text-center text-2xl focus:outline-none sm:h-7 sm:w-7"
+              className="w-12 h-10 md:w-15 md:h-12  text-2xl text-black! md:text-xl sm:text-lg text-center  border-1 rounded-[8px] border-[#bcbcbc] focus:outline-none "
               value={otp[index]}
               onChange={(e) => handleChange(index, e.target.value)}
               onKeyDown={(e) => handleKeyDown(index, e)}

@@ -262,7 +262,7 @@ const QuestionModal = ({
                     const newHistory = [...prev, nextIndex];
                     return newHistory;
                 });
-                handleViewRoofers()
+                // handleViewRoofers()
                 // Use setTimeout to ensure state updates in correct order
                 setTimeout(() => {
                     setCurrentQuestion(nextIndex);
@@ -341,7 +341,7 @@ const QuestionModal = ({
                     const newHistory = [...prev, nextIndex];
                     return newHistory;
                 });
-                handleViewRoofers()
+                // handleViewRoofers()
 
                 // Use setTimeout to ensure state updates in correct order
                 setTimeout(() => {
@@ -373,6 +373,7 @@ const QuestionModal = ({
                 // ✅ Clear UI state
                 setSelectedOption([]);
                 setOtherText("");
+                handleViewRoofers()
             }, 0);
         } else {
             // handleScrollToBottom();
@@ -382,7 +383,7 @@ const QuestionModal = ({
     useEffect(() => {
         setSelectedOption([]);
         setOtherText("");
-        handleViewRoofers();
+        currentQuestion> 1 && handleViewRoofers();
 
     }, [currentQuestion]);
 

@@ -22,7 +22,7 @@ export const ToastProvider = () => {
 };
 
 // Toast functions
-export const showToast = (type, message = 'not found') => {
+export const showToast = (type, message = 'Please try again later') => {
   const options = {
     position: "top-right",
     autoClose: 3000,

@@ -21,6 +21,7 @@ import Paragraph from "../../UI/Typography/Paragraph";
 import { getCookie } from "@/utils/CookiesHelper";
 import FormWrapper from "../FormWrapper";
 import UserIconWhite from "../../../../../public/ReactIcons/UserIconWhite";
+import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 
 const DescribeYourRequestNewLocalists = ({
   onClose,
@@ -107,14 +108,12 @@ const DescribeYourRequestNewLocalists = ({
     // Dispatch to Redux
     dispatch(addDetailsRequestDataForLocalistLanding(detailsData, requestId)).then(
       (result) => {
-        debugger
         if (result?.success) {
           const successMessage =
             result?.payload?.message ||
             result?.message ||
             "Create Request successfully!";
           showToast("success", successMessage);
-          debugger;
           onNext()
 
           // Clear states
@@ -296,13 +295,15 @@ const DescribeYourRequestNewLocalists = ({
       {/* Button */}
       <div className="mt-[30.44px] max-[480px]:mt-[20px] flex justify-center">
         <button
-          className="flex gap-2 cursor-pointer rounded-full rounded border-none bg-[#00afe3] px-4 py-[12px] text-center align-middle text-[15px] font-medium text-white disabled:opacity-50 max-[768px]:px-4 max-[768px]:py-2 max-[768px]:text-sm max-[480px]:px-4 max-[480px]:py-2 max-[480px]:text-[13px] hover:bg-[#008cc0]"
+          className="flex gap-2 cursor-pointer min-w-[158px] md:min-w-[174px] rounded-full rounded border-none bg-[#00afe3] px-4 py-[12px] text-center align-middle text-[15px] font-medium text-white disabled:opacity-50 max-[768px]:px-4 max-[768px]:py-2 max-[768px]:text-sm max-[480px]:px-4 max-[480px]:py-2 max-[480px]:text-[13px] hover:bg-[#008cc0]"
           onClick={handleSubmit}
           disabled={isLoading}
         >
-          <UserIconWhite/>
+          {isLoading ? "" : <UserIconWhite className="h-5 w-5"/>}
           {isLoading ? (
-            <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
+            <div className="w-full justify-center flex">
+              <LoaderIndicator background="white"/>
+            </div>
           ) : (
             "See My Matches"
           )}

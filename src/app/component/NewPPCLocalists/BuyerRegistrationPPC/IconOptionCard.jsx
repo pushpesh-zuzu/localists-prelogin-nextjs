@@ -84,7 +84,7 @@ const IconOptionCard = ({
     w-[16px] h-[16px]
     border-2 rounded-[3px]
     flex items-center justify-center
-    transition-all duration-200 absolute top-[2px] md:top-[10px] left-[5px] md:left-[10px]
+    transition-all duration-200 absolute top-[2px] right-[5px]  md:top-[2px]  md:right-[2px]
     ${isSelected ? "bg-white border-white" : "bg-transparent border-white"}
   `}
       >
