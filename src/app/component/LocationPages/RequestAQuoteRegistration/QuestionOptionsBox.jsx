@@ -13,10 +13,11 @@ const QuestionOptionsBox = ({
             type="button"
             onClick={onSelect}
             className={`
+        relative
         w-full
         px-4
         py-7
-        rounded-[10px]
+        rounded-[20px]
         border
         text-[16px] leading-[18px]
         md:text-[18px] md:leading-[20px]
@@ -28,23 +29,48 @@ const QuestionOptionsBox = ({
         duration-200
         cursor-pointer
         focus:outline-none
-        flex items-center justify-center gap-3
+        flex items-center justify-center
         ${isSelected
                     ? "border-[#00afe3] bg-[#e9f8ff]"
                     : "border-[#d9d9d9] bg-white hover:border-[#00afe3]"
                 }
       `}
         >
+            {/* Label */}
             <span>{label}</span>
 
-            {/* ✅ Show checkbox only for multi */}
+            {/* 🔥 Custom Checkbox */}
             {isMulti && (
-                <input
-                    type="checkbox"
-                    checked={isSelected}
-                    readOnly
-                    className="w-5 h-5 accent-[#00afe3] pointer-events-none"
-                />
+                <div
+                    className={`
+            absolute top-[-4] right-[-1]
+            h-5 w-5
+            rounded-[5px]
+            border-2
+            flex items-center justify-center
+            transition-all duration-300
+            ${isSelected
+                            ? "bg-[#00afe3] border-[#00afe3] scale-100"
+                            : "bg-white border-[#d9d9d9] scale-95"
+                        }
+          `}
+                >
+                    {/* Check Icon */}
+                    <svg
+                        className={`h-3.5 w-3.5 text-white transition-opacity duration-200 ${isSelected ? "opacity-100" : "opacity-0"
+                            }`}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M5 13l4 4L19 7"
+                        />
+                    </svg>
+                </div>
             )}
         </button>
     );

@@ -6,7 +6,7 @@ import Modal from "../Modal";
 import InputField from "../UI/InputField";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
-    checkEmailIdApi,
+    // checkEmailIdApi,
     setbuyerRequestData,
     getCityName,
     setcitySerach,
@@ -270,14 +270,14 @@ function NameEmailPostCodePhone({
             title="Your Details"
             onNext={handleSubmit}
             maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
-            maxHeight="max-h-[80vh] lg:max-h-[90vh]"
-            padding="pb-[20px] md:pb-[30px] lg:pb-[40px]"
+            maxHeight="max-h-[95vh]"
+            padding="pb-[20px] md:pb-[30px] lg:pb-[30px]"
             disabled={isChecking}
             buyerStep={buyerStep}
             fixedHeight={true}
             showProgressBar={true}
             titleClassName="text-left"
-            buttongroup="md:mx-[68.4px] mx-4"
+            buttongroup="lg:mx-[75.4px] md:mx-[63px] mx-[18px]"
             progressPercent={progressPercent}
         >
             <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
@@ -320,14 +320,14 @@ function NameEmailPostCodePhone({
                         error={errors.postcode && "Please enter a valid postcode"}
                     />
                     {checkingPostcode ? (
-                        <div className="absolute top-13 right-3">
+                        <div className="absolute top-10.5 right-3">
                             <LoaderIndicator size="small" />
                         </div>
                     ) : postalCodeValidate && city ? (
                         <CheckIcon
-                            size={26}
+                            size={22}
                             color="white"
-                            className="absolute top-13 right-3 p-1 bg-green-500 rounded-full text-white"
+                            className="absolute top-10.5 right-3 p-1 bg-green-500 rounded-full text-white"
                         />
                     ) : (
                         ""

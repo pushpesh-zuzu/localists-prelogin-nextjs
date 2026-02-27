@@ -12,8 +12,8 @@ import {
 } from "@/lib/store/buyerslice/buyerSlice";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
-import Button1 from "../../UI/Typography/Button1";
-import H3 from "../../UI/Typography/H3";
+// import Button1 from "../../UI/Typography/Button1";
+// import H3 from "../../UI/Typography/H3";
 import Paragraph2 from "../../UI/Typography/Paragraph2";
 
 const ConfirmationModal = ({
@@ -136,12 +136,12 @@ const ConfirmationModal = ({
             title={cancelHeading}
             maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
             maxHeight="max-h-[80vh] lg:max-h-[90vh]"
-            padding="pb-[20px] md:pb-[30px] lg:pb-[40px]"
+            padding="pb-[20px] md:pb-[30px] lg:pb-[30px]"
             fixedHeight={true}
             titleClassName="text-center"
             onNext={() => handleSubmit()}
             onBack={onClose}
-            buttongroup="lg:mx-[76px] md:mx-[60.4px] mx-4.5"
+            buttongroup="lg:mx-[75.4px] md:mx-[63px] mx-[18px]"
             nextButtonText={loading ? "Leaving..." : "Leave"}
             disabled={loading}
         >

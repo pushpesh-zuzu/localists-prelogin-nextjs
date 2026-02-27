@@ -36,7 +36,6 @@ const Modal = ({
     showProgressBar = false,
     buttongroup = "mx-auto",
     viewMatches = false,
-    descriptionText,
     progressPercent
 }) => {
     if (!isOpen) return null;
@@ -78,7 +77,7 @@ const Modal = ({
 
                     {/* Title */}
                     {title && (
-                        <div className="md:pt-[40px] md:pb-[40px] pt-[20px] pb-[20px] md:pt-[30px] md:pb-[30px] flex-shrink-0">
+                        <div className="lg:pt-[40px] lg:pb-[30px] pt-[30px] pb-[20px] md:pt-[30px] md:pb-[20px] flex-shrink-0">
                             <h4
                                 className={`font-Inter font-black tracking-[-0.03em] text-[25px] leading-[25px]
                     md:text-[25px] md:leading-[25px] lg:text-[30px] lg:leading-[30px] max-w-[90%] md:max-w-[80%] lg:max-w-[608px] lg:mx-[68.4px] mx-auto ${titleClassName}`}
@@ -113,10 +112,10 @@ const Modal = ({
                                 <button
                                     onClick={onBack}
                                     className={`
-                    w-[71px] h-[50px]
+                    w-[80px] h-[50px]
                     bg-[#f5f5f5]
                     border-2 border-[#e1e5e9]
-                    rounded-lg cursor-pointer
+                    rounded-[20px] cursor-pointer
                     flex items-center justify-center gap-[5px]
                     transition-all duration-300
                     active:translate-y-[1px]
@@ -146,7 +145,7 @@ const Modal = ({
                                     className={`
                     flex-1 h-[50px]
                     bg-[#00afe3] text-white
-                    rounded-lg hover:bg-[#0096C4]
+                    rounded-full hover:bg-[#0096C4]
                     font-bold
                     transition-colors duration-300
                     cursor-pointer

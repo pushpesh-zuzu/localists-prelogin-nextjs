@@ -154,15 +154,15 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile, progressPercent }) {
             title=""
             onNext={handleSubmit}
             maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
-            maxHeight="max-h-[80vh] lg:max-h-[90vh]"
-            padding="pb-[20px] md:pb-[30px] lg:pb-[40px]"
-            buttongroup="md:mx-[68.4px] mx-4"
+            maxHeight="max-h-[100vh]"
+            padding="pb-[20px] md:pb-[30px] lg:pb-[30px]"
+            buttongroup="lg:mx-[75.4px] md:mx-[63px] mx-[18px]"
             showProgressBar={true}
             buyerStep={buyerStep}
             progressPercent={progressPercent}
         >
             <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
-                <div className="md:pt-[40px] md:pb-[40px] pt-[20px] pb-[20px] md:pt-[30px] md:pb-[30px] text-center">
+                <div className="lg:pt-[40px] lg:pb-[30px] pt-[20px] pb-[20px] md:pt-[30px] md:pb-[20px] text-center">
                     <Paragraph variant="optional" bold={"font-black"}>
                         Your phone number and email are safe with us.
                     </Paragraph>
@@ -214,9 +214,9 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile, progressPercent }) {
                         disabled={true}
                     />
                     <CheckIcon
-                        size={26}
+                        size={22}
                         color="white"
-                        className="absolute top-13 right-3 p-1 bg-green-500 rounded-full text-white"
+                        className="absolute top-10.5 right-3 p-1 bg-green-500 rounded-full text-white"
                     />
                 </div>
 

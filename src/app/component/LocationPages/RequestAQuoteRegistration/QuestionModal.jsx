@@ -310,8 +310,8 @@ const QuestionModal = ({
             onNext={() => handleNext()}
             onBack={handleBack}
             maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
-            maxHeight="max-h-[80vh] lg:max-h-[90vh]"
-            padding="pb-[20px] md:pb-[30px] lg:pb-[40px]"
+            maxHeight="max-h-[95vh]"
+            padding="pb-[20px] md:pb-[30px] lg:pb-[30px]"
             buyerStep={buyerStep}
             fixedHeight={true}
             showProgressBar={true}
@@ -320,9 +320,9 @@ const QuestionModal = ({
             buttongroup="lg:mx-[76px] md:mx-[60.4px] mx-4.5"
             progressPercent={progressPercent}
         >
-            <div className="border border-[#D9D9D9] rounded-[5px] mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
+            <div className="border border-[#D9D9D9] rounded-[30px] mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
                 {loading ? (
-                    <div className="flex-1 flex items-center justify-center py-3">
+                    <div className="flex-1 flex items-center justify-center py-4">
                         <LoaderIndicator size="large" />
                     </div>
                 ) : questions.length > 0 ? (
@@ -331,6 +331,7 @@ const QuestionModal = ({
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-[20px] md:p-[40px]">
                             {formattedQuestions[currentQuestion]?.parsedAnswers.map(
                                 (opt, index) => {
+                                
                                     const isSingle =
                                         formattedQuestions[currentQuestion]?.option_type === "single";
 

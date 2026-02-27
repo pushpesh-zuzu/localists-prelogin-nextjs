@@ -14,7 +14,7 @@ const InputField = ({
   id,
   className = "",
   onBlur,
-  labelClass = "text-base text-[20px] mt-6 mb-3",
+  labelClass = "text-base text-[20px] md:mt-6 mt-3 md:mb-3 mb-2",
 }) => {
   const [showPassword, setShowPassword] = useState(false);
   const inputId = id || name || label?.toLowerCase().replace(/\s+/g, "-");
@@ -53,7 +53,7 @@ const InputField = ({
           onBlur={onBlur}
           style={{ boxShadow: "0 0 2px .5px #0000001a" }}
           className={`
-             relative w-full mx-auto px-3 py-5 rounded-[10px]
+             relative w-full mx-auto px-3 py-2 rounded-[10px]
             text-gray-900 text-base
             border border-[#ccc]
             transition-all duration-200

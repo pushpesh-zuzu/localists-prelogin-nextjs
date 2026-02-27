@@ -12,7 +12,6 @@ import {
 import { showToast } from "@/utils/toaster";
 import { formatUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
 import BackButtonOTP from "../../common/icons/Registration/BackButtonOTP";
-import H5 from "../../UI/Typography/H5";
 import Paragraph from "../../UI/Typography/Paragraph";
 
 const OtpVerificationModal = ({
@@ -185,7 +184,7 @@ const OtpVerificationModal = ({
 
   return (
     <Modal
-      padding="pb-[20px] md:pb-[30px] lg:pb-[40px]"
+      padding="pb-[20px] md:pb-[30px] lg:pb-[30px]"
       showButtons={false}
       isOpen={true}
       title="OTP Verification"
@@ -193,11 +192,10 @@ const OtpVerificationModal = ({
       showClosIcon={false}
       titleClassName="text-center"
       buyerStep={buyerStep}
-      buttongroup="lg:mx-[76px] md:mx-[60.4px] mx-4.5"
       showProgressBar={true}
       progressPercent={progressPercent}
-    // onNext={() => handleNext()}
-    // onBack={handleBack}
+
+
     >
       <div className="mx-auto text-center max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
         {/* Instruction */}
@@ -218,13 +216,24 @@ const OtpVerificationModal = ({
         </span>
 
         {/* OTP Inputs */}
-        <div className="mb-5 flex justify-center gap-6 mt-4">
+        <div className="mb-5 flex justify-center gap-2 lg:gap-3 mt-4">
           {[0, 1, 2, 3].map((index) => (
             <input
               key={index}
               type="text"
               maxLength={1}
-              className="h-7 w-7 border-b border-[#BCBCBC] border-t-0 border-r-0 border-l-0 text-center text-2xl focus:outline-none sm:h-7 sm:w-7"
+              className="h-[60px] lg:w-[80px] md:w-[73px] w-[67px]
+        rounded-[15px]
+        border border-[#CFCFCF]
+        bg-white
+        text-center
+        text-2xl
+        font-bold
+        text-[#253238]
+        focus:outline-none
+        focus:border-[#00ADD8]
+        transition-all
+        duration-200"
               value={otp[index]}
               onChange={(e) => handleChange(index, e.target.value)}
               onKeyDown={(e) => handleKeyDown(index, e)}
@@ -239,7 +248,7 @@ const OtpVerificationModal = ({
 
         {/* Resend OTP */}
         <div className="mb-4 text-sm font-bold leading-[14px] text-[#969696] font-[Arial] tracking-[-0.03em]">
-          Didn&apos;t you receive the OTP?{" "}
+          Didn&apos;t receive the OTP code? Click here to{" "}
           {timer > 0 ? (
             <span className="font-[Arial] tracking-[-0.03em] mt-4 text-sm font-bold text-[#828282]">
               Resend OTP in <strong>{timer}</strong>s
@@ -256,7 +265,7 @@ const OtpVerificationModal = ({
 
         {/* Verify Button */}
         <button
-          className="mt-[18px] w-[200px] rounded-[3px] bg-[#00ADD8] cursor-pointer px-[23px] py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0096c4] disabled:opacity-50"
+          className="mt-[18px] w-[200px] rounded-[30px] bg-[#00ADD8] cursor-pointer px-[23px] py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0096c4] disabled:opacity-50"
           disabled={requestLoader || verifyPhoneNumberLoader}
           onClick={handleSubmit}
         >

@@ -315,13 +315,13 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
             onNext={handleSubmit}
             onBack={handleBack}
             maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
-            maxHeight="max-h-[80vh] lg:max-h-[90vh]"
-            padding="pb-[20px] md:pb-[30px] lg:pb-[40px]"
+            maxHeight="max-h-[95vh]"
+            padding="pb-[20px] md:pb-[30px] lg:pb-[30px]"
             buyerStep={buyerStep}
             fixedHeight={true}
             showProgressBar={true}
             titleClassName="text-center"
-            buttongroup="md:mx-[68.4px] mx-4"
+            buttongroup="lg:mx-[75.4px] md:mx-[63px] mx-[18px]"
             showButtons={true}
             disabled={selectedCompanies.length === 0}
             descriptionText="Unfortunately the company you selected doesn’t serve your postcode,
@@ -361,68 +361,87 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
                                             }
                                         }}
                                         className={`
-                            w-full
-                            p-4
-                            rounded-xl
-                            border
-                            transition-all
-                            cursor-pointer
-                            ${isSelected
+    relative
+    w-full
+    p-4
+    rounded-[20px]
+    border
+    transition-all
+    cursor-pointer
+    ${isSelected
                                                 ? "border-[#00afe3] bg-[#f0fbff]"
                                                 : "border-[#e1e5e9] bg-white hover:border-[#00afe3]"
                                             }
-                        `} >
-                                        <div className="flex justify-between items-center gap-4">
+  `}
+                                    >
+                                        {/* Custom Checkbox Top Right */}
+                                        <div
+                                            className={`
+      absolute top-1 right-2
+      h-5 w-5
+      rounded-[5px]
+      border-2
+      flex items-center justify-center
+      transition-all duration-300
+      ${isSelected
+                                                    ? "bg-[#00afe3] border-[#00afe3] scale-100"
+                                                    : "bg-white border-[#d9d9d9] scale-95"
+                                                }
+      ${disableCheckbox ? "opacity-40" : ""}
+    `}
+                                        >
+                                            <svg
+                                                className={`h-3.5 w-3.5 text-white transition-opacity duration-200 ${isSelected ? "opacity-100" : "opacity-0"
+                                                    }`}
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="3"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    d="M5 13l4 4L19 7"
+                                                />
+                                            </svg>
+                                        </div>
 
-                                            {/* LEFT SIDE */}
-                                            <div className="flex items-center gap-4">
-                                                <div className="w-14 h-14 relative">
-                                                    <Image
-                                                        src={
-                                                            company.company_logo
-                                                                ? `${serviceData.baseurl}/${company.company_logo}`
-                                                                : ""
-                                                        }
-                                                        alt={company.business_profile_name}
-                                                        fill
-                                                        className="object-cover rounded-md"
-                                                        sizes="56px"
-                                                    />
-                                                </div>
-
-                                                <div>
-                                                    <p className="font-bold text-[#253238]">
-                                                        {company.business_profile_name}
-                                                    </p>
-
-                                                    <div className="flex items-center gap-1 mt-1">
-                                                        {Array.from({ length: 5 }).map((_, i) => (
-                                                            <span
-                                                                key={i}
-                                                                className="text-[#00c853] text-sm"
-                                                            >
-                                                                {i < Math.round(company.avg_rating || 0)
-                                                                    ? "★"
-                                                                    : "☆"}
-                                                            </span>
-                                                        ))}
-                                                    </div>
-
-                                                    <div className="flex items-center gap-1 mt-1 text-sm text-gray-500">
-                                                        <LocationMapIcon className="w-4 h-4" background="#00afe3" />
-                                                        <span>Operates in {company.postcode}</span>
-                                                    </div>
-                                                </div>
+                                        <div className="flex items-center gap-4">
+                                            <div className="w-14 h-14 relative">
+                                                <Image
+                                                    src={
+                                                        company.company_logo
+                                                            ? `${serviceData.baseurl}/${company.company_logo}`
+                                                            : ""
+                                                    }
+                                                    alt={company.business_profile_name}
+                                                    fill
+                                                    className="object-cover rounded-md"
+                                                    sizes="56px"
+                                                />
                                             </div>
 
-                                            {/* CHECKBOX */}
-                                            <input
-                                                type="checkbox"
-                                                checked={isSelected}
-                                                readOnly
-                                                disabled={disableCheckbox}
-                                                className="w-5 h-5 accent-[#00afe3] pointer-events-none"
-                                            />
+                                            <div>
+                                                <p className="font-bold text-[#253238]">
+                                                    {company.business_profile_name}
+                                                </p>
+
+                                                <div className="flex items-center gap-1 mt-1">
+                                                    {Array.from({ length: 5 }).map((_, i) => (
+                                                        <span key={i} className="text-[#00c853] text-sm">
+                                                            {i < Math.round(company.avg_rating || 0) ? "★" : "☆"}
+                                                        </span>
+                                                    ))}
+                                                </div>
+
+                                                <div className="flex items-center gap-1 mt-1 text-sm text-gray-500">
+                                                    <LocationMapIcon
+                                                        className="w-4 h-4"
+                                                        background="#00afe3"
+                                                    />
+                                                    <span>Operates in {company.postcode}</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 );
