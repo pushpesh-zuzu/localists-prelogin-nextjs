@@ -57,7 +57,8 @@ const QuestionModal = ({
     nextStep,
     isQuestionWithImage = false,
     backButtonTriggered,
-    OptionsIconsData
+    OptionsIconsData,
+    featureRef
 }) => {
     const dispatch = useDispatch();
     const { buyerRequest, requestLoader, citySerach, questionLoader } =
@@ -182,6 +183,13 @@ const QuestionModal = ({
         }
     };
 
+     const handleViewRoofers = () => {
+            const element = featureRef?.current;
+            if (element) {
+                const top = element.getBoundingClientRect().top + window.scrollY - 60;
+                window.scrollTo({ top, behavior: "smooth" });
+            }
+            };
     const handleNextCheckBox = () => {
         if (selectedOption.length === 0) {
             setError("Please select at least one option");
@@ -254,7 +262,7 @@ const QuestionModal = ({
                     const newHistory = [...prev, nextIndex];
                     return newHistory;
                 });
-
+                // handleViewRoofers()
                 // Use setTimeout to ensure state updates in correct order
                 setTimeout(() => {
                     setCurrentQuestion(nextIndex);
@@ -333,6 +341,7 @@ const QuestionModal = ({
                     const newHistory = [...prev, nextIndex];
                     return newHistory;
                 });
+                // handleViewRoofers()
 
                 // Use setTimeout to ensure state updates in correct order
                 setTimeout(() => {
@@ -364,6 +373,7 @@ const QuestionModal = ({
                 // ✅ Clear UI state
                 setSelectedOption([]);
                 setOtherText("");
+                handleViewRoofers()
             }, 0);
         } else {
             // handleScrollToBottom();
@@ -373,6 +383,8 @@ const QuestionModal = ({
     useEffect(() => {
         setSelectedOption([]);
         setOtherText("");
+        currentQuestion> 1 && handleViewRoofers();
+
     }, [currentQuestion]);
 
     const formattedQuestions = questions.map((q) => ({

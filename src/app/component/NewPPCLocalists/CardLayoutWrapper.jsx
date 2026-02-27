@@ -141,7 +141,7 @@ const CardLayoutWrapper = ({
                 max-[480px]:h-[48px]
               `}
                         >
-                            {loader ? <LoaderIndicator size="small" /> : buttonText}
+                            {loader ? <LoaderIndicator background="white" size="small" /> : buttonText}
                         </button>
                     </div>
                 )}

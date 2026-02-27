@@ -72,7 +72,7 @@ const RoofOptionsIconsData = [
             {
                 optionId: 3,
                 icon: RentingTheProperty,
-                label: "I Am renting the property",
+                label: "I am renting the property",
             },
             {
                 optionId: 4,

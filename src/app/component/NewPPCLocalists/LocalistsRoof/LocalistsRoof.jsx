@@ -10,10 +10,10 @@ import { ROOFING_FEEDBACK } from './RoofingData'
 import useRegistrationRedirect from '@/hooks/useRegistrationRedirect'
 import Footer from '../../Footer/Footer'
 import HowItWork from '../HowItWorks'
-import Member from '../Member'
 import { useScrollToTop } from '@/utils/handleScrollToBottom'
 import ProjectDetails from '../ProjectDetails'
 import RoofOptionsIconsData from './RoofOptionsIconsData'
+import MemberLocalistsRoof from '../BuyerRegistrationPPC/MemberLocalistsRoof'
 
 const roofingImages = [
     "/roofing.webp",
@@ -49,8 +49,8 @@ function LocalistsRoof() {
             <ProjectDetails projectImages={roofingImages}
             />
             <div className='lg:pt-[100px] pt-[40px]'>
-                <Member
-                    description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
+                <MemberLocalistsRoof
+                    description={`“Today, with over 2,700 roofs completed, I'm proud to say most of our work comes from word of mouth and happy customers. If I wouldn't accept it on my own home, it doesn't go on yours.”`}
                 />
             </div>
             <Footer />
