@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState, Suspense, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
     setBuyerStep,
@@ -17,8 +17,9 @@ import NameEmail from "./BuyerRegistrationPPC/NameEmail";
 import PhoneNumber from "./BuyerRegistrationPPC/PhoneNumber";
 import OTPVerification from "./BuyerRegistrationPPC/OTPVerification";
 import CardLayoutWrapper from "./CardLayoutWrapper";
-import DescribeYourRequest from "./BuyerRegistrationPPC/DescribeYourRequest";
+// import DescribeYourRequest from "./BuyerRegistrationPPC/DescribeYourRequest";
 import ZohoCalendar from "./BuyerRegistrationPPC/ZohoCalendar";
+import DescribeYourRequestNewLocalists from "./BuyerRegistrationPPC/DescribeYourRequestNewLocalists";
 // import CalenderQuestions from "./CalenderQuestions";
 
 function HeroSection({
@@ -78,6 +79,16 @@ function HeroSection({
     // const onSelect = () => {
     //     console.log("calling")
     // }
+      const featureRef = useRef(null);
+    
+    useEffect(() => {
+        const element = featureRef?.current;
+    if (element) {
+        const top = element.getBoundingClientRect().top + window.scrollY - 230; // 80px upar
+        window.scrollTo({ top, behavior: "smooth" });
+    }
+    }, [buyerStep])
+  
 
     return (
         <section className="relative w-full overflow-hidden px-[30px] md:px-[120px]">
@@ -112,7 +123,7 @@ function HeroSection({
           ">
                     {description}
                 </Paragraph1>
-                <div className="pt-[20px] md:pt-[40px] pb-0 flex justify-center">
+                <div ref={featureRef} className="pt-[20px] md:pt-[40px] pb-0 flex justify-center">
                     {buyerStep === 1 && (
                         <Suspense fallback={null}>
                             <QuestionModal
@@ -129,7 +140,7 @@ function HeroSection({
                             />
                         </Suspense>
                     )}
-
+                
                     {buyerStep === 2 && (
                         <PostcodeSearch
                             prevStep={prevStep}
@@ -177,20 +188,20 @@ function HeroSection({
                             />
                         </CardLayoutWrapper>
                     )}
+                        {buyerStep === 6 && (
+                            <CardLayoutWrapper
+                                showBackButton={false}
+                                showButton={false}
+                            >
+                                <DescribeYourRequestNewLocalists onNext={nextStep} />
+                            </CardLayoutWrapper>
+                        )}
                     {
-                        buyerStep === 6 && (
+                        buyerStep === 7 && (
                              <ZohoCalendar/>
                         )
                     }
 
-                    {/* {buyerStep === 7 && (
-                        <CardLayoutWrapper
-                            showBackButton={false}
-                            showButton={false}
-                        >
-                            <DescribeYourRequest />
-                        </CardLayoutWrapper>
-                    )} */}
                 </div>
             </div>
         </section>

@@ -450,6 +450,31 @@ export const addDetailsRequestData = (addDetailsData, router, requestId) => {
     }
   };
 };
+export const addDetailsRequestDataForLocalistLanding = (addDetailsData, requestId) => {
+  return async (dispatch) => {
+    dispatch(setAddDetailLoader(true));
+    try {
+      const response = await axiosInstance.post(
+        `customer/my-request/add-details-to-request`,
+        addDetailsData
+      );
+
+      if (response) {
+          setCookie('isRegistrationComplete',true)
+        dispatch(getbuyerrequestList());
+        // router.push('/conversion/${requestId}')
+        // setTimeout(() => {
+          return response.data;
+        // }, 5000);
+      }
+    } catch (error) {
+      console.error("Error adding details to request:", error);
+    } finally {
+      // dispatch(setAuthToken());
+      dispatch(setAddDetailLoader(false));
+    }
+  };
+};
 
 export const getNotificationData = (NotificationData) => {
   return async (dispatch) => {

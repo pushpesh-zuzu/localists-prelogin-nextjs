@@ -14,7 +14,7 @@ export default function ZohoCalendar({ serviceId = "254145000000051037" }) {
   const customerPhone = userData.phone || "";
 
   const bookingUrl =
-    `https://localists.zohobookings.eu/portal-embed#/${serviceId}` +
+    `https://localists.zohobookings.eu/portal-embed#/${serviceId}?redirection_type=top` +
     "?Name=" +
     encodeURIComponent(customerName) +
     "&Email=" +
