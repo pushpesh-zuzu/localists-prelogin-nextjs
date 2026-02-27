@@ -50,7 +50,7 @@ function LocalistsRoof() {
             />
             <div className='lg:pt-[100px] pt-[40px]'>
                 <MemberLocalistsRoof
-                    description={`“Today, with over 2,700 roofs completed, I'm proud to say most of our work comes from word of mouth and happy customers. If I wouldn't accept it on my own home, it doesn't go on yours."”`}
+                    description={`“Today, with over 2,700 roofs completed, I'm proud to say most of our work comes from word of mouth and happy customers. If I wouldn't accept it on my own home, it doesn't go on yours.”`}
                 />
             </div>
             <Footer />

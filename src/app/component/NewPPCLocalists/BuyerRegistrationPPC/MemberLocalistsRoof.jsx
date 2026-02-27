@@ -79,12 +79,13 @@ function MemberLocalistsRoof({ description = "" }) {
 
         <div className=" relative rounded-r-[15px] md:rounded-r-[33px] overflow-hidden">
           <Image
-            src="/nearme/treeSurgeonMember.webp"
+            src="/images/LocalistsRoofing/memberDesktop.webp"
             alt="Professional using phone"
             priority
             fetchPriority="high"
             loading="eager"
-            height={512}
+            quality={100}
+            height={620}
             width={521}
             className="w-[273px] h-[350px] md:h-[380px] lg:w-[521px] lg:h-[580px] xl:h-[620px]"
           />
@@ -94,9 +95,9 @@ function MemberLocalistsRoof({ description = "" }) {
       <div className="md:hidden rounded-[15px] md:rounded-[33px] overflow-hidden shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
         <div className="w-full  relative">
           <Image
-            src="/nearme/treeSurgeonMemberMobile.webp"
+            src="/images/LocalistsRoofing/memberMobile2.webp"
             alt="Professional using phone"
-            height={300}
+            height={320}
             width={250}
             priority
             className="h-[220] w-xl"
@@ -118,7 +119,7 @@ function MemberLocalistsRoof({ description = "" }) {
             <div className="flex flex-col gap-[12px] items-start mt-3 md:mt-5">
               <div className="flex items-start align-top gap-2">
                 <div className="min-h-5">
-                  <GreenTickWithBorder />
+                  <GreenTickWithBorder className="h-5 w-5" />
                 </div>
                 <Paragraph
                   className="text-[18px]! text-white"
@@ -130,7 +131,7 @@ function MemberLocalistsRoof({ description = "" }) {
               </div>
               <div className="flex items-start align-top gap-2">
                 <div className="min-h-5">
-                  <GreenTickWithBorder />
+                  <GreenTickWithBorder className="h-5 w-5"/>
                 </div>
                 <Paragraph
                   className="text-[18px]! text-white"
@@ -142,7 +143,7 @@ function MemberLocalistsRoof({ description = "" }) {
               </div>
               <div className="flex items-start align-top gap-2">
                 <div className="min-h-5">
-                  <GreenTickWithBorder />
+                  <GreenTickWithBorder className="h-5 w-5" />
                 </div>
                 <Paragraph
                   className="text-[18px]! text-white"
@@ -154,7 +155,7 @@ function MemberLocalistsRoof({ description = "" }) {
               </div>
               <div className="flex items-start align-top gap-2">
                 <div className="min-h-5">
-                  <GreenTickWithBorder />
+                  <GreenTickWithBorder className="h-5 w-5"/>
                 </div>
                 <Paragraph
                   className="text-[18px]! text-white"
