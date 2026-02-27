@@ -330,8 +330,8 @@ const QuestionModal = ({
                         {/* Options Grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-[20px] md:p-[40px]">
                             {formattedQuestions[currentQuestion]?.parsedAnswers.map(
-                                (opt, index) => {
-                                
+                                (opt, index, arr) => {
+
                                     const isSingle =
                                         formattedQuestions[currentQuestion]?.option_type === "single";
 
@@ -352,15 +352,22 @@ const QuestionModal = ({
                                             setError("");
                                         }
                                     };
+                                    const isLastSingle =
+                                        arr.length % 2 !== 0 && index === arr.length - 1;
 
                                     return (
-                                        <QuestionOptionsBox
+                                        <div
                                             key={index}
-                                            label={opt.option}
-                                            isSelected={isSelected}
-                                            onSelect={handleSelect}
-                                            isMulti={!isSingle}
-                                        />
+                                            className={isLastSingle ? "sm:col-span-2 sm:flex sm:justify-center" : ""}>
+                                            <div className={isLastSingle ? "w-full sm:w-1/2" : "w-full"}>
+                                                <QuestionOptionsBox
+                                                    label={opt.option}
+                                                    isSelected={isSelected}
+                                                    onSelect={handleSelect}
+                                                    isMulti={!isSingle}
+                                                />
+                                            </div>
+                                        </div>
                                     );
                                 }
                             )}
