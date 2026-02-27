@@ -116,6 +116,7 @@ const DescribeYourRequestModal = ({ nextStep, progressPercent }) => {
                 fixedHeight={true}
                 showProgressBar={true}
                 // titleClassName="text-center"
+                showClosIcon={false}
                 showButtons={true}
                 buttongroup="lg:mx-[75.4px] md:mx-[63px] mx-[18px]"
                 nextButtonText="See my matches"
