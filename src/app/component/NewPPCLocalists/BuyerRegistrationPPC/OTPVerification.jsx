@@ -237,7 +237,7 @@ const OTPVerification = ({
                 </div>
 
                 <button
-                    className="shadow-[0px_0px_2px_0.5px_rgba(0,0,0,0.1)] bg-[#00afe3] rounded text-white py-2 px-6 border-none cursor-pointer font-semibold text-sm md:text-sm sm:text-sm w-48 md:w-48 sm:w-[70%] mx-auto block mt-[8px] md:mt-5 sm:mt-[10px] hover:bg-[#0096c4] disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="rounded-full shadow-[0px_0px_2px_0.5px_rgba(0,0,0,0.1)] bg-[#00afe3] rounded text-white py-2 px-6 border-none cursor-pointer font-semibold text-sm md:text-sm sm:text-sm w-48 md:w-48 sm:w-[70%] mx-auto block mt-[8px] md:mt-5 sm:mt-[10px] hover:bg-[#0096c4] disabled:opacity-70 disabled:cursor-not-allowed"
                     disabled={requestLoader || verifyPhoneNumberLoader}
                     onClick={handleSubmit}
                 >

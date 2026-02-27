@@ -20,6 +20,7 @@ import H4 from "../../UI/Typography/H4";
 import Paragraph from "../../UI/Typography/Paragraph";
 import { getCookie } from "@/utils/CookiesHelper";
 import FormWrapper from "../FormWrapper";
+import UserIconWhite from "../../../../../public/ReactIcons/UserIconWhite";
 
 const DescribeYourRequestNewLocalists = ({
   onClose,
@@ -167,7 +168,7 @@ const DescribeYourRequestNewLocalists = ({
       {/* Success Message */}
       <div className="mb-[10px] mt-3 flex items-center justify-center gap-[6.18px] text-base font-medium text-[#00afe3] max-[480px]:items-start max-[480px]:text-left max-[480px]:text-[13px] max-[480px]:font-semibold">
         <svg
-          className="h-5 w-5 max-[480px]:mt-0"
+          className="h-5 w-5 max-[480px]:mt-0 max-w-fit"
           viewBox="0 0 20 20"
           fill="currentColor"
         >
@@ -267,7 +268,7 @@ const DescribeYourRequestNewLocalists = ({
           Your Quality score increases as you add more detail to your quote
         </Paragraph>
       </div>
-      <div className="mt-4 h-6 w-full overflow-hidden rounded-[3px] bg-[#eee]">
+      <div className="mt-3 md:mt-4 h-6 w-full overflow-hidden rounded-[3px] bg-[#eee]">
           <div
             className="h-full bg-[#02D07B] transition-all duration-300 ease-in-out"
             style={{ width: qualityScore > 0 ? `${qualityScore}%` : "0%" }}
@@ -293,12 +294,13 @@ const DescribeYourRequestNewLocalists = ({
       </label> */}
 
       {/* Button */}
-      <div className="mt-[30.44px] max-[480px]:mt-[10.44px] flex justify-center">
+      <div className="mt-[30.44px] max-[480px]:mt-[20px] flex justify-center">
         <button
-          className="cursor-pointer rounded-full rounded border-none bg-[#00afe3] px-[29px] py-[9px] text-center align-middle text-[15px] font-medium text-white disabled:opacity-50 max-[768px]:px-6 max-[768px]:py-2 max-[768px]:text-sm max-[480px]:px-5 max-[480px]:py-2 max-[480px]:text-[13px] hover:bg-[#008cc0]"
+          className="flex gap-2 cursor-pointer rounded-full rounded border-none bg-[#00afe3] px-4 py-[12px] text-center align-middle text-[15px] font-medium text-white disabled:opacity-50 max-[768px]:px-4 max-[768px]:py-2 max-[768px]:text-sm max-[480px]:px-4 max-[480px]:py-2 max-[480px]:text-[13px] hover:bg-[#008cc0]"
           onClick={handleSubmit}
           disabled={isLoading}
         >
+          <UserIconWhite/>
           {isLoading ? (
             <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
           ) : (

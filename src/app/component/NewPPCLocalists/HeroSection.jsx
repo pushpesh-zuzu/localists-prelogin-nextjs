@@ -91,7 +91,7 @@ function HeroSection({
   
 
     return (
-        <section className="relative w-full overflow-hidden px-[30px] md:px-[120px]">
+        <section className="relative min-h-[100vh] w-full overflow-hidden px-[30px] md:px-[120px]">
             {/* Background Layer */}
             {bannerImage && (
                 <div
@@ -137,6 +137,7 @@ function HeroSection({
                                 backButtonTriggered={backButtonTriggered}
                                 prevStep={prevStep}
                                 OptionsIconsData={OptionsIconsData}
+                                featureRef={featureRef}
                             />
                         </Suspense>
                     )}

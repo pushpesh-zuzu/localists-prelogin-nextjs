@@ -19,7 +19,7 @@ const PostcodeSearchLandscapingMultiform = ({
   getProgressPercentage,
   setBackButtonTriggered,
   returPercentage,
-  titleHeading="landscaping"
+  titleHeading="landscapers"
 }) => {
   const dispatch = useDispatch();
   const inputRef = useRef(null);
