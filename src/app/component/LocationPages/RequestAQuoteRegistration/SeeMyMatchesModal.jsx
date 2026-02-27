@@ -3,15 +3,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import Modal from "../Modal";
 import { useDispatch, useSelector } from "react-redux";
-import { clearSetbuyerRequestData, getAutoBid, questionAnswerData, addMultipleManualBid, setBuyerStep } from "@/lib/store/buyerslice/buyerSlice";
+import { clearSetbuyerRequestData, getAutoBid, addMultipleManualBid, setBuyerStep, setQualityData } from "@/lib/store/buyerslice/buyerSlice";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import Image from "next/image";
 import LocationMapIcon from "../../common/icons/SellerRegistration/LocationMapIcon";
-import { getBarkToken } from "@/utils/CookiesHelper";
+// import { getBarkToken } from "@/utils/CookiesHelper";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import { useRouter } from "next/navigation";
-
-
 
 function SeeMyMatchesModal({ previousStep, progressPercent }) {
     const dispatch = useDispatch();
@@ -276,7 +274,7 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
     };
 
     const handleSubmit = async () => {
-        if (selectedCompanies.length === 0) return;
+        if (!selectedCompanies.length) return;
 
         const manualBidPayload = {
             service_id: selectedCompanies.map((c) => c.service_id),
@@ -287,15 +285,22 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
             user_id: requestUserId,
         };
 
-        const result = await dispatch(addMultipleManualBid(manualBidPayload));
-        if (result) {
-            // dispatch(setBuyerStep(0));
-            router.push(`/conversion/${requestId}`);
-        }
+        try {
+            // Wait for API dispatch
+            await dispatch(addMultipleManualBid(manualBidPayload));
 
-        // if (result) {
-        //     // nextStep();
-        // }
+            // Clear redux state
+            dispatch(clearSetbuyerRequestData());
+            dispatch(clearBuyerRegisterFormData());
+            dispatch(setQualityData());
+            dispatch(setBuyerStep(10));
+
+            // Navigate after everything
+            router.push(`/conversion/${requestId}`);
+
+        } catch (error) {
+            console.error("Manual bid failed:", error);
+        }
     };
 
     const handleBack = () => {

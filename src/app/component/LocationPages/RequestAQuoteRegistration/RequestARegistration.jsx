@@ -32,7 +32,6 @@ function RequestARegistration({
     const [email, setEmails] = useState("");
     const [reEnterMobile, setReEnterMobile] = useState(2);
     const [questionIndex, setQuestionIndex] = useState(0);
-    const totalStepsRef = useRef(null);
 
 
     const dispatch = useDispatch();
