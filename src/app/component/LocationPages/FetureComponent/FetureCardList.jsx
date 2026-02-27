@@ -7,11 +7,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { getFetchSellerListData } from "@/lib/store/buyerslice/buyerSlice";
 import Loader from "../../common/Loader/Loader";
 import { useRef } from "react";
+import NearmeH2Heading from "../../Nearme/NearmeH2Heading";
 
 export default function FetureCardList({
   serviceId,
   serviceName,
-  serviceProfessionName,
+  serviceProfessionName='Roofers',
   cityName = "Chester",
   featureRef,
 }) {
@@ -56,7 +57,7 @@ export default function FetureCardList({
       if (newItemRef.current) {
         const containerTop = containerRef.current.getBoundingClientRect().top;
         const itemTop = newItemRef.current.getBoundingClientRect().top;
-        const offset = containerRef.current.clientHeight * 0.8; // container ki 50% height
+        const offset = containerRef.current.clientHeight * 0.8;
         containerRef.current.scrollBy({
           top: itemTop - containerTop - offset,
           behavior: "smooth",
@@ -74,13 +75,17 @@ export default function FetureCardList({
 
   return (
     <div
-      className="mx-auto max-w-[1115px] px-[30px] py-[40px] md:py-[50px] md:px-16 xl:px-[120px] lg:py-[72px]"
+      className="mx-auto max-w-[1115px] px-[30px] pt-[30px] pb-[40px] md:py-[50px] md:px-16 xl:px-[120px] lg:py-[72px]"
       style={{ overflowAnchor: "none" }}
     >
-      <FetureSearchBox
+      {/* <FetureSearchBox
         serviceProfessionName={serviceProfessionName}
         serviceId={serviceId}
         serviceName={serviceName}
+      /> */}
+      <NearmeH2Heading
+        headdingblue={`Find ${serviceProfessionName}`}
+        headingblack="Near You"
       />
 
       {/* Card Container */}
@@ -90,7 +95,7 @@ export default function FetureCardList({
           ${
             enableInnerScroll
               ? "max-h-[1205px] overflow-y-auto [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full px-1 pb-0.5 md:pb-[5px] mt-[34px] md:mt-[46px]"
-              : "mt-[34px] md:mt-[46px]"
+              : "mt-[30px] md:mt-[53px]"
           }
         `}
         style={{ overflowAnchor: "none" }}

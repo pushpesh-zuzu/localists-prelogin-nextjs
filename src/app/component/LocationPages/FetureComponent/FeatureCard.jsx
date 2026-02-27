@@ -26,19 +26,10 @@ export default function FeatureCard({
   const location = cityName;
   const avgRating = parseFloat(seller?.avg_rating) || 0;
 
-  const fullStars = Math.floor(avgRating);
-  const decimal = avgRating - fullStars;
-
-  let showFullExtra = false;
-  let showHalf = false;
-
-  if (decimal >= 0.5) {
-    showFullExtra = true;
-  } else if (decimal > 0) {
-    showHalf = true;
-  }
-  const totalFullStars = fullStars + (showFullExtra ? 1 : 0);
-  const emptyStars = 5 - totalFullStars - (showHalf ? 1 : 0);
+ const fullStars = Math.floor(avgRating);
+const decimal = avgRating - fullStars;
+const showHalf = decimal >= 0.5;
+const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
   return (
     <>
       <div
@@ -87,7 +78,7 @@ export default function FeatureCard({
               <Image
                 height={96}
                 width={96}
-                src={`${BASE_IMAGE}users/${seller.profile_image}`}
+                src={`${BASE_IMAGE}users/${seller.company_logo}`}
                 alt={businessName}
                 className="rounded-[20px] h-20 w-20 md:h-24 md:w-24"
                 unoptimized
@@ -112,7 +103,7 @@ export default function FeatureCard({
 
               <div className="flex items-center gap-2 text-sm">
                 <div className="flex text-emerald-500">
-                  {[...Array(totalFullStars)].map((_, i) => (
+                  {[...Array(fullStars)].map((_, i) => (
                     <StarIconFeature
                       key={`full-${i}`}
                       className="h-[18px] w-[18px] md:h-[30px] md:w-[30px]"
@@ -125,7 +116,7 @@ export default function FeatureCard({
                   )}
 
                   {/* EMPTY STARS */}
-                  {avgRating === 0 &&
+                  {
                     [...Array(emptyStars)].map((_, i) => (
                       <StarIconFeature
                         background1="#dfdfe8"

@@ -1,17 +1,17 @@
 "use client";
 import React, { useState, useEffect } from "react";
+// import dynamic from "next/dynamic";
 import { CheckIcon, Loader2 } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { getCityName, setbuyerRequestData, setBuyerStep, setcitySerach } from "@/lib/store/buyerslice/buyerSlice";
 import { setSelectedServiceId } from "@/lib/store/findjobslice";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 import { useRouter } from "next/navigation";
-// import BuyerRegistrationLocationPage from "./BuyerRegistrationLocationPage/BuyerRegistrationLocationPage";
 import BuyerRegistration from "../common/BuyerRegistration/BuyerRegistration";
 
 
 
-function PostCodeSearchFieldLocation({
+function PostCodeSearchFieldBlog({
   placeholder = "Enter Postcode",
   buttonText = "Go",
   debounceMs = 500,
@@ -174,12 +174,12 @@ function PostCodeSearchFieldLocation({
               placeholder={placeholder}
               disabled={disabled}
               autoComplete="off"
-              className={`w-full font-bold px-4 py-2.5 md:pl-6 md:py-2.5 lg:pl-[43px] lg:py-4 
+              className={`w-full md:max-w-[208px] font-bold px-4 py-2.5 md:pl-6 md:py-2.5 lg:pl-[21px] lg:py-[12px] 
                         !text-[#B3B3B3] 
                         placeholder:!text-[#B3B3B3] 
                         focus:outline-none 
-                        text-base lg:!text-[25px] 
-                        placeholder:text-base lg:placeholder:!text-[25px]`}
+                        text-base lg:!text-[20px] 
+                        placeholder:text-base lg:placeholder:!text-[20px]`}
             />
 
             {/* Validation Icons */}
@@ -199,7 +199,7 @@ function PostCodeSearchFieldLocation({
             type="button"
             onClick={handleSubmit}
 
-            className={` ${buttonBg} cursor-pointer min-w-[62px] lg:min-w-[100px] font-bold pl-3.5 pr-5 py-[11px] hover:bg-[#00aef3]  lg:pl-[22px] lg:pr-6 lg:py-4 text-white focus:outline-none text-base lg:text-[25px]!`}
+            className={` ${buttonBg} cursor-pointer min-w-[62px] lg:min-w-[66px] font-bold pl-3.5 pr-5 py-[11px] hover:bg-[#00aef3]  lg:pl-[22px] lg:pr-6 lg:py-[16px] text-white focus:outline-none text-base lg:text-[18px]! lg:leading-[22px]`}
           >
             {buttonText}
           </button>
@@ -220,9 +220,8 @@ function PostCodeSearchFieldLocation({
           service_Name={serviceName}
         />
       )}
-    
     </>
   );
 }
 
-export default PostCodeSearchFieldLocation;
+export default PostCodeSearchFieldBlog;
