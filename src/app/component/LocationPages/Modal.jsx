@@ -9,6 +9,7 @@ import { createPortal } from "react-dom";
 import LogoIcon from "../LandingPages/LogoIcon";
 import ProgressBarQuoteRequest from "./ProgressBarQuoteRequest";
 import Link from "next/link";
+import MenCircle from "../../../../public/ReactIcons/MenCircle";
 
 const Modal = ({
     isOpen,
@@ -36,7 +37,8 @@ const Modal = ({
     showProgressBar = false,
     buttongroup = "mx-auto",
     viewMatches = false,
-    progressPercent
+    progressPercent,
+    viewMatchesIcon
 }) => {
     if (!isOpen) return null;
 
@@ -163,9 +165,10 @@ const Modal = ({
 
                     max-[768px]:h-[52px]
                     max-[480px]:h-[48px]
-
                     ${nextButtonClassName}
-                  `}>
+                  `}>  {viewMatchesIcon && (
+                                        <MenCircle className="w-5 h-5" />
+                                    )}
                                     {!disabled && nextButtonText}
                                 </button>
                             )}

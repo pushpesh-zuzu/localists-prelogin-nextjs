@@ -43,7 +43,7 @@ const QuestionOptionsBox = ({
             {isMulti && (
                 <div
                     className={`
-            absolute top-[-4] right-[-1]
+            absolute top-1 right-2
             h-5 w-5
             rounded-[5px]
             border-2

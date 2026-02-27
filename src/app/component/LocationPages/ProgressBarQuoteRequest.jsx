@@ -6,7 +6,7 @@ const ProgressBarQuoteRequest = ({ value = 0 }) => {
   return (
     <div className="w-full h-4 bg-gray-200 overflow-hidden">
       <div
-        className="h-full transition-all duration-500 ease-in-out bg-[#16E32A]"
+        className="h-full transition-all duration-500 ease-in-out bg-[#04d07b]"
         style={{ width: `${safeValue}%` }}
       />
     </div>

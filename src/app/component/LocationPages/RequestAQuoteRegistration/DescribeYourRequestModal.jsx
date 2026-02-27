@@ -17,8 +17,9 @@ import { useRouter } from "next/navigation";
 import Modal from "../Modal";
 import Paragraph from "../../UI/Typography/Paragraph";
 import H5 from "../../UI/Typography/H5";
+import VerifyIcon from "../../../../../public/ReactIcons/VerifyIcon";
 
-const DescribeYourRequestModal = ({ nextStep, previousStep, progressPercent }) => {
+const DescribeYourRequestModal = ({ nextStep, progressPercent }) => {
     const [text, setText] = useState("");
     const [files, setFiles] = useState([]);
     const [professionalContact, setProfessionalContact] = useState(false);
@@ -118,8 +119,10 @@ const DescribeYourRequestModal = ({ nextStep, previousStep, progressPercent }) =
                 showButtons={true}
                 buttongroup="lg:mx-[75.4px] md:mx-[63px] mx-[18px]"
                 nextButtonText="See my matches"
+                viewMatchesIcon={true}
                 viewMatches={false}
                 progressPercent={progressPercent}
+                nextButtonClassName="flex items-center justify-center gap-2"
             >
                 <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
                     {buyerStep === 10 ? (
@@ -130,17 +133,19 @@ const DescribeYourRequestModal = ({ nextStep, previousStep, progressPercent }) =
                         <>
                             <div className="lg:pt-[40px] pt-[30px] pb-[20px] md:pt-[30px] flex-shrink-0 text-center">
                                 <h6
-                                    className="font-[Arial] tracking-[-0.03em] max-w-[90%] md:max-w-[80%] lg:max-w-[608px] lg:mx-[68.4px] mx-auto text-[#00afe3]"
+                                    className="flex items-center justify-center gap-1.5 font-[Arial] tracking-[-0.03em] max-w-[90%] md:max-w-[80%] lg:max-w-[608px] lg:mx-[68.4px] mx-auto text-[#00afe3]"
                                 >
-                                    Your request has been submitted
+                                    <VerifyIcon className="w-4 h-4 inline-block" />
+                                    <span>Your request has been submitted</span>
                                 </h6>
+
                                 <h4 className="pt-[20px] font-Inter tracking-[-0.03em] font-bold text-[25px] leading-[27px]
-                    md:text-[25px] md:leading-[25px] lg:text-[30px] lg:leading-[35px]">
+    md:text-[25px] md:leading-[25px] lg:text-[30px] lg:leading-[35px]">
                                     Tell us your availability for someone to visit and provide you with your free quote
                                 </h4>
                             </div>
                             <textarea
-                                className={`w-full custom-textarea rounded-[15px] border custom-placeholder border-[#d9d9d9] shadow-[0px_0px_2px_0.5px_rgba(0,0,0,0.1)] p-3.5 resize-none text-sm font-['Arial'] font-bold ${textError ? "border-red-500" : ""
+                                className={`w-full custom-textarea rounded-[15px] border border-2 custom-placeholder shadow-[0px_0px_2px_0.5px_rgba(0,0,0,0.1)] p-3.5 resize-none text-sm font-['Arial'] font-bold ${textError ? "border-red-500" : "border-[#253238]"
                                     }`}
                                 value={text}
                                 onChange={handleChange}
@@ -154,7 +159,7 @@ const DescribeYourRequestModal = ({ nextStep, previousStep, progressPercent }) =
                             )}
 
                             <label
-                                className={`flex justify-center items-center gap-2 bg-[#e6f7ff] text-[#00afe3] px-3 py-2 text-xs font-medium cursor-pointer transition-colors hover:bg-[#d4ebff] w-full mt-3 ${fileError ? "border border-red-500" : ""
+                                className={`flex justify-center rounded-[15px] border-2 border-gray-300 items-center gap-2 bg-[#e6f7ff] text-[#00afe3] px-3 py-2 text-xs font-medium cursor-pointer transition-colors hover:bg-[#d4ebff] w-full mt-3 ${fileError ? "border border-red-500" : ""
                                     }`}
                             >
                                 <svg
@@ -206,9 +211,10 @@ const DescribeYourRequestModal = ({ nextStep, previousStep, progressPercent }) =
                                     Your Quality score increases as you add more detail to your quote
                                 </Paragraph>
                             </div>
-                            <div className="w-full h-4 bg-[#eee] overflow-hidden mt-3">
+                            {/* //progressbar */}
+                            <div className="w-full rounded-[20px] h-5 bg-[#eee] overflow-hidden mt-3">
                                 <div
-                                    className="h-full bg-[#16E32A] transition-all duration-300 ease-in-out"
+                                    className="h-full bg-[#04d07b] transition-all duration-300 ease-in-out"
                                     style={{ width: qualityData > 0 ? `${qualityData}%` : "0%" }}
                                 ></div>
                             </div>
