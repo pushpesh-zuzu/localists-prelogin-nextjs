@@ -17,7 +17,13 @@ import MobileSlideInSearch from "./MobileSlideInSearch";
 import LoaderIndicator from "../common/Loader/LoaderIndicatore";
 import Link from "next/link";
 import Logo from "../../../../public/ReactIcons/Logo";
-
+const adviceMenu = [
+  {
+    name: "How Long Does a Flat Roof Last",
+    path: "blog/advice/how-long-does-a-flat-roof-last",
+    icon: "/MegaMenu/flatRoof.svg",  // ✅ jo bhi SVG choose karo
+  },
+];
 const SearchResultForHeader = dynamic(() => import("./SearchResultForHeader"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -46,6 +52,7 @@ export default function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const [activeMenu, setActiveMenu] = useState(null);
   return getBarkToken() ? (
     <AuthenticatedHeader />
   ) : (
@@ -62,11 +69,16 @@ export default function Header() {
                 aria-label="Go to Localists homepage"
                 className="shrink-0"
               >
-                <Logo className="md:w-[89px] sm:h-5 lg:w-[147px] lg:h-7"/>
+                <Logo className="md:w-[89px] sm:h-5 lg:w-[147px] lg:h-7" />
               </Link>
 
               <div className="flex items-center space-x-4 md:space-x-2 lg:space-x-2.5 lg:py-3">
-                <MegaMenu>
+                <MegaMenu
+                  menuId="explore"
+                  menuHeading="Services"
+                  activeMenu={activeMenu}
+                  setActiveMenu={setActiveMenu}
+                >
                   <button className="cursor-pointer flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
                     Explore Our Services
                     <ArrowDownBlue />
@@ -85,11 +97,17 @@ export default function Header() {
                     </div>
                   ))}
                 </div>
-
-                <button className="cursor-pointer flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
-                  Advice
-                  <ArrowDownBlue />
-                </button>
+                <MegaMenu
+                  menuId="advice"
+                  menuData={adviceMenu}
+                  activeMenu={activeMenu} 
+                  setActiveMenu={setActiveMenu}
+                >
+                  <button className="cursor-pointer flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
+                    Advice
+                    <ArrowDownBlue />
+                  </button>
+                </MegaMenu>
               </div>
             </div>
 
@@ -163,7 +181,7 @@ export default function Header() {
                   className="shrink-0"
                 >
                   {/* <Logo className="w-[103px] h-[25px] md:w-[133px] md:w-8 ml-[25%]"/> */}
-                   <Image
+                  <Image
                     src="/logo.webp"
                     alt="Localists - Local Service Provider Directory"
                     width={103}

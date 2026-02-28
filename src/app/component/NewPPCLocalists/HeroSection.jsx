@@ -21,6 +21,7 @@ import CardLayoutWrapper from "./CardLayoutWrapper";
 // import DescribeYourRequest from "./BuyerRegistrationPPC/DescribeYourRequest";
 import ZohoCalendar from "./BuyerRegistrationPPC/ZohoCalendar";
 import DescribeYourRequestNewLocalists from "./BuyerRegistrationPPC/DescribeYourRequestNewLocalists";
+import H2 from "../UI/Typography/H2";
 // import CalenderQuestions from "./CalenderQuestions";
 
 function HeroSection({
@@ -114,18 +115,37 @@ function HeroSection({
 
             {/* Content */}
             <div className="relative z-10 w-full text-center pt-[20px] md:pt-[40px] pb-[20px] md:pb-[100px]">
+                {buyerStep ===7 ?
+                <>
+                <H2 className="max-w-full md:max-w-[90%] text-white drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
+                    Hold on! You’re not booked in just yet.
+                </H2>
+
+                 <p className="font-[Arial] font-bold tracking-[-0.03em] text-[25.2px] leading-[25.2px]
+                      lg:text-[28px] lg:leading-[28px] text-white pt-[20px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
+
+                    Next step: Choose a time for your free property visit using the calendar below.
+                </p>
+                <p className="font-[Arial] font-bold tracking-[-0.03em] text-[25.2px] leading-[25.2px]
+                      lg:text-[28px] lg:leading-[28px] text-white pt-2 text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
+
+                    Once your booking is confirmed, you’ll receive a confirmation email and text message.
+                </p>
+                </>
+                :
+                <>
                 <H1 className="text-white drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
                     {heading}
                 </H1>
 
-                <Paragraph1
-                    className="
-            text-white
-            pt-[18px] md:pt-4 lg:pt-[20px]
-            drop-shadow-[0_0_4px_rgba(0,0,0,0.25)]
-          ">
+
+                 <p className="font-[Arial] font-bold tracking-[-0.03em] text-[25.2px] leading-[25.2px]
+                      lg:text-[28px] lg:leading-[28px] text-white pt-[20px] md:pt-2 lg:pt-[18px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
+
                     {description}
-                </Paragraph1>
+                </p>
+                </>
+                }
                 <div ref={featureRef} className="pt-[20px] md:pt-[40px] pb-0 flex justify-center">
                     {buyerStep === 1 && (
                         <Suspense fallback={null}>

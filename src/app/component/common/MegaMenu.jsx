@@ -11,15 +11,31 @@ export const megaMenu = [
     path: "home",
     icon: "/house.svg",
     subcategory: [
-      { id: 49, name: "Fence & Gate Installation", path: "fencing-contractors-near-me" },
-      { id: 51, name: "Driveway Installation", path: "driveway-installers-near-me" },
+      {
+        id: 49,
+        name: "Fence & Gate Installation",
+        path: "fencing-contractors-near-me",
+      },
+      {
+        id: 51,
+        name: "Driveway Installation",
+        path: "driveway-installers-near-me",
+      },
       { id: 52, name: "Patio Laying", path: "patio-layers-near-me" },
-      { id: 54, name: "Artificial Grass Installation", path: "artificial-grass-installers-near-me" },
+      {
+        id: 54,
+        name: "Artificial Grass Installation",
+        path: "artificial-grass-installers-near-me",
+      },
       { id: 43, name: "Landscaping", path: "landscape-gardeners-near-me" },
       { id: 44, name: "Tree Surgery", path: "tree-surgeon-near-me" },
       { id: 45, name: "Gutter Cleaning", path: "gutter-cleaning-near-me" },
       { id: 113, name: "Roofing", path: "roofers-near-me" },
-      { id: 46, name: "Painter and Decorator", path: "painter-and-decorator-near-me" },
+      {
+        id: 46,
+        name: "Painter and Decorator",
+        path: "painter-and-decorator-near-me",
+      },
     ],
   },
   {
@@ -41,8 +57,17 @@ export const megaMenu = [
   },
 ];
 
-export default function MegaMenu({ children }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function MegaMenu({
+  children,
+  menuData = megaMenu,
+  menuHeading = "",
+   menuId,          
+  activeMenu,       
+  setActiveMenu,  
+}) {
+  const [localIsOpen, setLocalIsOpen] = useState(false);
+  const isOpen = menuId ? activeMenu === menuId : localIsOpen;
+  // const [isOpen, setIsOpen] = useState(false);
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -67,30 +92,39 @@ export default function MegaMenu({ children }) {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Close all
   const handleClose = useCallback(() => {
     if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
     if (openTimeoutRef.current) clearTimeout(openTimeoutRef.current);
     if (scrollCloseTimeoutRef.current) clearTimeout(scrollCloseTimeoutRef.current);
 
-    setIsOpen(false);
+    if (menuId && setActiveMenu) {
+      setActiveMenu(null);
+    } else {
+      setLocalIsOpen(false);
+    }
     setShowSubMenu(false);
     setSelectedCategory(null);
     setMouseHover("");
-  }, []);
+  }, [menuId, setActiveMenu]);
 
   // Open menu
   const handleOpen = useCallback(() => {
     if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
     if (scrollCloseTimeoutRef.current) clearTimeout(scrollCloseTimeoutRef.current);
-    setIsOpen(true);
-  }, []);
+    
+    if (menuId && setActiveMenu) {
+      setActiveMenu(menuId); 
+    } else {
+      setLocalIsOpen(true);
+    }
+  }, [menuId, setActiveMenu]);
 
   // Mouse enter
   const handleMouseEnter = useCallback(() => {
     if (isMobile) return;
     if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
-    if (scrollCloseTimeoutRef.current) clearTimeout(scrollCloseTimeoutRef.current);
+    if (scrollCloseTimeoutRef.current)
+      clearTimeout(scrollCloseTimeoutRef.current);
     handleOpen();
   }, [handleOpen, isMobile]);
 
@@ -213,7 +247,7 @@ export default function MegaMenu({ children }) {
               </div>
 
               <nav>
-                {megaMenu.map((item, index) => (
+                {menuData.map((item, index) => (
                   <div
                     key={index}
                     className="flex  items-center justify-between py-3 px-3 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors group"
