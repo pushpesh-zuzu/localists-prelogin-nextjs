@@ -32,6 +32,9 @@ function RooferInLiverpool() {
   useRegistrationRedirect();
   useScrollToTop()
   const featureRef = useRef(null);
+  useRegistrationRedirect()
+  useScrollToTop()
+  
   return (
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
