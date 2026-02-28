@@ -95,7 +95,7 @@ function MemberLocalistsRoof({ description = "" }) {
       <div className="md:hidden rounded-[15px] md:rounded-[33px] overflow-hidden shadow-[0px_0px_10px_rgba(0,0,0,0.25)]">
         <div className="w-full  relative">
           <Image
-            src="/images/LocalistsRoofing/memberMobile2.webp"
+            src="/images/LocalistsRoofing/memberMobile4.webp"
             alt="Professional using phone"
             height={320}
             width={250}
