@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     setBuyerStep,
     questionAnswerData,
+    setbuyerRequestData,
 } from "@/lib/store/buyerslice/buyerSlice";
 import { getBarkToken } from "@/utils/CookiesHelper";
 import Paragraph1 from "../UI/Typography/Paragraph1";
@@ -74,6 +75,8 @@ function HeroSection({
 
     useEffect(() => {
         dispatch(questionAnswerData({ service_id: serviceId }));
+        dispatch(setbuyerRequestData({ service_id: serviceId }));
+
     }, []);
 
     // const onSelect = () => {

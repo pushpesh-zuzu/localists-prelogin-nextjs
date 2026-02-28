@@ -14,7 +14,7 @@ const InputField = ({
   id,
   className = "",
   onBlur,
-  labelClass = "text-base text-[20px] mt-3 mb-4",
+  labelClass = "text-base text-[20px] mt-4 mb-3",
 }) => {
   const [showPassword, setShowPassword] = useState(false);
   const inputId = id || name || label?.toLowerCase().replace(/\s+/g, "-");
