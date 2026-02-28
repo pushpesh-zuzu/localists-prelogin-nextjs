@@ -26,8 +26,10 @@ import AdviceInsightNearMe from "../../../Nearme/AdviceInsightNearMe";
 import Feature from "../../FetureComponent/Feature";
 import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
+import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 
 function RoofersInChester() {
+  useRegistrationRedirect();
   useScrollToTop()
   const featureRef = useRef(null);
   return (

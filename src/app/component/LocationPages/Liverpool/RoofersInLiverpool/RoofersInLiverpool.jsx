@@ -3,12 +3,12 @@ import React, { useRef } from "react";
 import {
   BREADCRUM_DATA_ROOFERS_LIVERPOOL,
   FREQUENTLY_DATA_LIVERPOOL,
-  POPULAR_SERVICES_ROOFERS_LIVERPOOL ,
+  POPULAR_SERVICES_ROOFERS_LIVERPOOL,
   QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL,
   ROOFERS_ADVICEINSIGHT_LIVERPOOL,
   ROOFERS_FEEDBACK_LIVERPOOL,
   ROOFERS_DATA_LIVERPOOL,
-  ROOFERS_TABDATA_LIVERPOOL ,
+  ROOFERS_TABDATA_LIVERPOOL,
   VETTED_DATA_ROOFERS_LIVERPOOL,
 } from "./RoofersInLiverpoolData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
@@ -25,8 +25,12 @@ import HireRelatedToServiceNearMe from "../../../Nearme/HireRelatedToServiceNear
 import AdviceInsightNearMe from "../../../Nearme/AdviceInsightNearMe";
 import Feature from "../../FetureComponent/Feature";
 import HeroSectionLocation from "../../HeroSectionLocation";
+import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 function RooferInLiverpool() {
+  useRegistrationRedirect();
+  useScrollToTop()
   const featureRef = useRef(null);
   return (
     <>
@@ -52,7 +56,7 @@ function RooferInLiverpool() {
         featureRef={featureRef}
       />
       <PopularJobNearMe
-        services={POPULAR_SERVICES_ROOFERS_LIVERPOOL }
+        services={POPULAR_SERVICES_ROOFERS_LIVERPOOL}
         popularImage="/nearme/Roofing/roofslate.webp"
         altText="two roofers installing slate tiles onto a brand new roof URL"
         mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -85,7 +89,7 @@ function RooferInLiverpool() {
       <HireRelatedToServiceNearMe
         heading1="Hire with"
         heading2="confidence."
-        tabData={ROOFERS_TABDATA_LIVERPOOL }
+        tabData={ROOFERS_TABDATA_LIVERPOOL}
         activeTabkey="popular"
       />
       <NearmeMember
