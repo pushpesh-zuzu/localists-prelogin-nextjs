@@ -196,7 +196,7 @@ const OTPVerification = ({
                                 OTP Verification
                             </h4>
                             </div>
-           <div className="mx-auto text-center max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
+           <div className="mx-auto text-center max-w-[90%] pb-2.5 md:pb-5 md:max-w-[80%] lg:max-w-[608px]">
                    {/* Instruction */}
                    <Paragraph className="mb-6 text-[#828282] font-black">
                      We've sent a code to{" "}
