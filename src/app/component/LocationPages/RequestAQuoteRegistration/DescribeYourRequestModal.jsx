@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     addDetailsRequestData,
     addImageSubmittedData,
+    setBuyerStep,
+    setQualityData,
     // clearSetbuyerRequestData,
     // setBuyerStep,
     // setQualityData,
@@ -19,7 +21,7 @@ import Paragraph from "../../UI/Typography/Paragraph";
 import H5 from "../../UI/Typography/H5";
 import VerifyIcon from "../../../../../public/ReactIcons/VerifyIcon";
 
-const DescribeYourRequestModal = ({ nextStep, progressPercent }) => {
+const DescribeYourRequestModal = ({ nextStep, progressPercent, sellers }) => {
     const [text, setText] = useState("");
     const [files, setFiles] = useState([]);
     const [professionalContact, setProfessionalContact] = useState(false);
@@ -82,14 +84,30 @@ const DescribeYourRequestModal = ({ nextStep, progressPercent }) => {
             professional_letin: professionalContact ? 1 : 0,
         };
 
-        const dummyRouter = {
-            push: () => { },
-        };
+        const hasSellers = sellers && sellers.length > 0;
+        // If sellers exist → use dummy router
+        // If no sellers → use real router
+        const selectedRouter = hasSellers
+            ? { push: () => { } }
+            : router;
+
+        // console.log("selectedRouter", sellers, selectedRouter)
 
         await dispatch(
-            addDetailsRequestData(detailsData, dummyRouter, requestId)
+            addDetailsRequestData(detailsData, selectedRouter, requestId)
         );
-        nextStep();
+
+        if (hasSellers) {
+            //  Stay in modal flow → go to Step 5
+            nextStep();
+        } else {
+            //  No sellers → Clear everything & go to Step 10
+            dispatch(clearSetbuyerRequestData());
+            dispatch(clearBuyerRegisterFormData());
+            dispatch(setQualityData());
+            dispatch(setBuyerStep(10));
+            localStorage.removeItem("pendingBuyerModal");
+        }
     };
 
     // const handleBack = () => {

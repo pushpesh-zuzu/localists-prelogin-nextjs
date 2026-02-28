@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Modal from "../Modal";
 import { useDispatch, useSelector } from "react-redux";
-import { clearSetbuyerRequestData, getAutoBid, addMultipleManualBid, setBuyerStep, setQualityData } from "@/lib/store/buyerslice/buyerSlice";
+import { clearSetbuyerRequestData, addMultipleManualBid, setBuyerStep, setQualityData } from "@/lib/store/buyerslice/buyerSlice";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import Image from "next/image";
 import LocationMapIcon from "../../common/icons/SellerRegistration/LocationMapIcon";
@@ -234,22 +234,8 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
     //     }
     // ]
 
-    const hasFetched = useRef(false);
     const [selectedCompanies, setSelectedCompanies] = useState([]);
     const [showAll, setShowAll] = useState(false);
-
-    // Call API once
-    useEffect(() => {
-        if (!hasFetched.current && requestId && requestUserId) {
-            dispatch(
-                getAutoBid({
-                    user_id: requestUserId,
-                    lead_id: requestId,
-                })
-            );
-            hasFetched.current = true;
-        }
-    }, [dispatch, requestId, requestUserId]);
 
     const serviceData = autoBidData?.[0];
     const sellers = serviceData?.sellers || [];

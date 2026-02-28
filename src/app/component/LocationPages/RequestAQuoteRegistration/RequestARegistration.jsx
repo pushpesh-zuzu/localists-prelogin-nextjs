@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setBuyerStep } from "@/lib/store/buyerslice/buyerSlice";
+import { setBuyerStep, getAutoBid } from "@/lib/store/buyerslice/buyerSlice";
 import QuestionModal from "./QuestionModal";
 import ConfirmationModal from "./ConfirmationModal";
 import { getBarkToken } from "@/utils/CookiesHelper";
@@ -23,6 +23,8 @@ function RequestARegistration({
 }) {
     const [showConfirmModal, setShowConfirmModal] = useState(false);
     const questionModalRef = useRef();
+    const hasFetched = useRef(false);
+
 
     const [resetEmailFormTrigger, setResetEmailFormTrigger] = useState(false);
     const [resetServiceFormTrigger, setResetServiceFormTrigger] = useState(false);
@@ -36,12 +38,27 @@ function RequestARegistration({
 
     const dispatch = useDispatch();
 
-    const { buyerStep, questionanswerData, questionLoader, buyerRequest } =
+    const { buyerStep, questionanswerData, questionLoader, buyerRequest, requestId,
+        requestUserId, autoBidData } =
         useSelector((state) => state.buyer || {});
+
+    const serviceData = autoBidData?.[0];
+    const sellers = serviceData?.sellers || [];
+    const hasSellers = sellers.length > 0;
+
+    // console.log("sellers",buyerStep, sellers, requestId, requestUserId)
 
     const isAdminOrRemembered = getBarkToken();
 
-    const stepFlow = isAdminOrRemembered ? [2, 3, 4, 5] : [1, 2, 3, 4, 5];
+    // const stepFlow = isAdminOrRemembered ? [2, 3, 4, 5] : [1, 2, 3, 4, 5];
+
+    const stepFlow = useMemo(() => {
+        if (isAdminOrRemembered) {
+            return hasSellers ? [2, 3, 4, 5] : [2, 3, 4];
+        } else {
+            return hasSellers ? [1, 2, 3, 4, 5] : [1, 2, 3, 4];
+        }
+    }, [isAdminOrRemembered, hasSellers]);
 
     const nextStep = () => {
         const currentIndex = stepFlow.indexOf(buyerStep);
@@ -65,9 +82,9 @@ function RequestARegistration({
             localStorage.removeItem("pendingBuyerModal");
         } else {
             // const initialStep = isAdminOrRemembered ? 2 : 1;
-            const initialStep = 1;
+            // const initialStep = 1;
 
-            dispatch(setBuyerStep(initialStep));
+            // dispatch(setBuyerStep(initialStep));
         }
     }, [dispatch]);
 
@@ -138,6 +155,19 @@ function RequestARegistration({
         progressPercent = 100;
     }
 
+    // Call API once
+    useEffect(() => {
+        if (!hasFetched.current && requestId && requestUserId) {
+            dispatch(
+                getAutoBid({
+                    user_id: requestUserId,
+                    lead_id: requestId,
+                })
+            );
+            hasFetched.current = true;
+        }
+    }, [dispatch, requestId, requestUserId]);
+
     return (
         <>
             {buyerStep === 1 && (
@@ -199,20 +229,21 @@ function RequestARegistration({
                     onClose={handleClose}
                     setShowConfirmModal={setShowConfirmModal}
                     progressPercent={progressPercent}
-
+                    sellers={sellers}
                 />
             )}
 
-            {buyerStep === 5 && (
+            {buyerStep === 5 && hasSellers && (
                 <SeeMyMatchesModal
                     onClose={handleClose}
                     nextStep={nextStep}
                     previousStep={previousStep}
                     setShowConfirmModal={setShowConfirmModal}
                     progressPercent={progressPercent}
-
                 />
             )}
+
+
             {showConfirmModal && (
                 <ConfirmationModal
                     isOpen={showConfirmModal}
