@@ -31,6 +31,7 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 function RoofersInChester() {
   useRegistrationRedirect();
   useScrollToTop()
+  useRegistrationRedirect()
   const featureRef = useRef(null);
   return (
     <>

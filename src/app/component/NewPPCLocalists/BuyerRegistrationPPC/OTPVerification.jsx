@@ -11,6 +11,7 @@ import BackButtonOTP from "../../common/icons/Registration/BackButtonOTP";
 import { formatUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
 import { clearSpecificCookie, getCookie } from "@/utils/CookiesHelper";
 import FormWrapper from "../FormWrapper";
+import Paragraph from "../../UI/Typography/Paragraph";
 
 const OTPVerification = ({
     open,
@@ -186,91 +187,110 @@ const OTPVerification = ({
 
     return (
         <FormWrapper>
-            <div className="pt-[20px] md:pt-[30px] lg:pt-[60px] pb-[20px]">
-                <h2 className="font-extrabold text-lg md:text-lg sm:text-lg text-center text-black mb-5">
-                    OTP Verification
-                </h2>
+                                    <div className="lg:pt-[40px] lg:pb-[30px] pt-[30px] pb-[20px] md:pt-[30px] md:pb-[20px] flex-shrink-0">
 
-                <p className="font-medium text-center text-[#828282] mb-[13px] md:mb-5 sm:mb-[13px] text-base md:text-base text-[10px]">
-                    Enter the OTP sent to{" "}
-                    <span className="text-black">
-                        {formatUKPhoneNumber(requestUserPhone)}
-                    </span>
-                </p>
-
-                <p className="font-medium text-center bg-[#f5f5f5] py-1.5 px-2 mx-auto max-w-fit text-black mb-5 md:mb-5 sm:mb-[19px] text-[10px] md:text-base ">
-                    **Please check the above number is correct**
-                </p>
-
-                <div className="flex justify-center gap-3 md:gap-4 mb-5 md:mb-[20px] sm:mb-6">
-                    {[0, 1, 2, 3].map((index) => (
-                        <input
-                            key={index}
-                            type="text"
-                            maxLength="1"
-                            className="w-10 h-10 md:w-15 md:h-12  text-2xl text-black! md:text-xl sm:text-lg text-center  border-1 rounded-[8px] border-[#bcbcbc] focus:outline-none "
-                            value={otp[index]}
-                            onChange={(e) => handleChange(index, e.target.value)}
-                            onKeyDown={(e) => handleKeyDown(index, e)}
-                            onPaste={handlePaste}
-                            ref={(el) => (inputRefs.current[index] = el)}
-                            autoFocus={index === 0}
-                        />
-                    ))}
-                </div>
-
-                <div className="font-medium md:text-sm text-[10px] text-center text-[#969696] md:mb-[26px]">
-                    Didn't you receive the OTP?{" "}
-                    {timer > 0 ? (
-                        <p className="text-[#828282] font-medium mt-4 md:mt-4 sm:mt-4 md:text-sm text-[10px]">
-                            Resend OTP in <strong>{timer}</strong>s
-                        </p>
-                    ) : (
-                        <button
-                            className="inline-block bg-white text-[#00afe3] cursor-pointer font-medium text-sm md:text-sm sm:text-[10px] ml-1 hover:text-[#0096c4]"
-                            onClick={handleResendOtp}
-                            disabled={resendOtpLoader}
-                        >
-                            {resendOtpLoader ? "Resending..." : "Resend OTP"}
-                        </button>
-                    )}
-                </div>
-
-                <button
-                    className="rounded-full shadow-[0px_0px_2px_0.5px_rgba(0,0,0,0.1)] bg-[#00afe3] rounded text-white py-2 px-6 border-none cursor-pointer font-semibold text-sm md:text-sm sm:text-sm w-48 md:w-48 sm:w-[70%] mx-auto block mt-[8px] md:mt-5 sm:mt-[10px] hover:bg-[#0096c4] disabled:opacity-70 disabled:cursor-not-allowed"
-                    disabled={requestLoader || verifyPhoneNumberLoader}
-                    onClick={handleSubmit}
-                >
-                    Verify
-                </button>
-
-                <p className="font-medium md:text-sm text-[10px] text-center text-[#969696] mb-1.5 mt-6 md:mt-6 sm:mt-[14px]">
-                    Want to update your above number?
-                </p>
-
-                <div
-                    className="cursor-pointer max-w-fit mx-auto mb-4 relative flex align-middle"
-                    onClick={() => {
-                        setUpdateNumberStep(1);
+            <h4
+                                className={`font-Inter font-black tracking-[-0.03em] text-[25px] leading-[25px]
+                    md:text-[25px] md:leading-[25px] lg:text-[30px] lg:leading-[30px] `}
+                            >
+                                OTP Verification
+                            </h4>
+                            </div>
+           <div className="mx-auto text-center max-w-[90%] pb-2.5 md:pb-5 md:max-w-[80%] lg:max-w-[608px]">
+                   {/* Instruction */}
+                   <Paragraph className="mb-6 text-[#828282] font-black">
+                     We've sent a code to{" "}
+                     <span className="text-[#253238]">
+                       {formatUKPhoneNumber(requestUserPhone)}.
+                     </span>
+                     {" "}Please enter it below
+                   </Paragraph>
+           
+                   {/* Phone verification notice */}
+                   <span className="tracking-[-0.03em]
+                   text-[12px] leading-[18px] font-[Arial] font-bold
+                   md:text-[14px] md:leading-[16px]
+                   lg:text-[16px] lg:leading-[24px] mx-auto mb-5 bg-[#F5F5F5]">
+                     **Please check the above number is correct**
+                   </span>
+           
+                   {/* OTP Inputs */}
+                   <div className="mb-5 flex justify-center gap-2 lg:gap-3 mt-4">
+                     {[0, 1, 2, 3].map((index) => (
+                       <input
+                         key={index}
+                         type="text"
+                         maxLength={1}
+                         className="h-[60px] lg:w-[80px] md:w-[73px] w-[67px]
+                   rounded-[15px]
+                   border border-[#CFCFCF]
+                   bg-white
+                   text-center
+                   text-2xl
+                   font-bold
+                   text-[#253238]
+                   focus:outline-none
+                   focus:border-[#00ADD8]
+                   transition-all
+                   duration-200"
+                         value={otp[index]}
+                         onChange={(e) => handleChange(index, e.target.value)}
+                         onKeyDown={(e) => handleKeyDown(index, e)}
+                         onPaste={handlePaste}
+                         ref={(el) => {
+                           inputRefs.current[index] = el;
+                         }}
+                         autoFocus={index === 0}
+                       />
+                     ))}
+                   </div>
+           
+                   {/* Resend OTP */}
+                   <div className="mb-4 text-sm font-bold leading-[14px] text-[#969696] font-[Arial] tracking-[-0.03em]">
+                     Didn&apos;t receive the OTP code? Click here to{" "}
+                     {timer > 0 ? (
+                       <span className="font-[Arial] tracking-[-0.03em] mt-4 text-sm font-bold text-[#828282]">
+                         Resend OTP in <strong>{timer}</strong>s
+                       </span>
+                     ) : (
+                       <span
+                         className="ml-0.5 inline-block font-[Arial] tracking-[-0.03em] cursor-pointer text-sm font-bold text-[#00ADD8] hover:underline"
+                         onClick={handleResendOtp}
+                       >
+                         {resendOtpLoader ? "Resending..." : "Resend OTP"}
+                       </span>
+                     )}
+                   </div>
+           
+                   {/* Verify Button */}
+                   <button
+                     className="mt-[18px] w-[200px] rounded-[30px] bg-[#00ADD8] cursor-pointer px-[23px] py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0096c4] disabled:opacity-50"
+                     disabled={requestLoader || verifyPhoneNumberLoader}
+                     onClick={handleSubmit}
+                   >
+                     {requestLoader || verifyPhoneNumberLoader ? "Verifying..." : "Verify"}
+                   </button>
+           
+                   {/* Go Back */}
+                   <p className="mb-[5px] mt-[26px] text-[#969696] tracking-[-0.03em]
+                   text-[12px] leading-[18px] font-[Arial] font-bold
+                   md:text-[14px] md:leading-4
+                   lg:text-[16px] lg:leading-6">
+                     Want to update your above number?
+                   </p>
+                   <div
+                     className="flex items-center mx-auto mb-4 w-fit cursor-pointer"
+                     onClick={() => {
+                       setUpdateNumberStep(1);
                         onBack();
-                    }}
-                >
-                    <span className="font-medium  md:text-sm text-[10px] text-center text-[#00afe3] mr-1.5 hover:text-[#0096c4] ">
-                        Go Back
-                    </span>
-                    <BackButtonOTP className="h-2.5 w-2.5 md:h-[17px] md:w-[17px]" />
-                </div>
-
-                <div className="bg-[#f5f5f5] mx-auto p-1.5 rounded max-w-[450px]">
-                    <p className="mx-auto text-black font-semibold text-[10px] md:text-base text-center">
-                        WE CAN ONLY SEND A PASSCODE TO A MOBILE NUMBER NOT TO A LANDLINE.
-                    </p>
-                </div>
-
-                <p className="mx-auto mt-4 md:mt-4 sm:mt-4 mb-0 text-[#a3a3a3] font-semibold text-[10px] md:text-base  text-center">
-                    We cannot verify your account without a mobile number
-                </p>
-            </div>
+                     }}
+                   >
+                     <span className="mr-[5px] text-sm font-bold font-[Arial] tracking-[-0.03em] text-[#00ADD8]">
+                       Go Back
+                     </span>
+                     <BackButtonOTP />
+                   </div>
+                 </div>
         </FormWrapper>
     );
 };
