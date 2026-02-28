@@ -59,17 +59,17 @@ function RequestARegistration({
     // const getService = (service) => {
     //     setGetServiceState(service);
     // };
-    useEffect(() => {
-        const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
-        if (pendingModal?.shouldOpen) {
-            localStorage.removeItem("pendingBuyerModal");
-        } else {
-            // const initialStep = isAdminOrRemembered ? 2 : 1;
-            const initialStep = 1;
+    // useEffect(() => {
+    //     const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
+    //     if (pendingModal?.shouldOpen) {
+    //         localStorage.removeItem("pendingBuyerModal");
+    //     } else {
+    //         // const initialStep = isAdminOrRemembered ? 2 : 1;
+    //         const initialStep = 1;
 
-            // dispatch(setBuyerStep(initialStep));
-        }
-    }, [dispatch]);
+    //         // dispatch(setBuyerStep(initialStep));
+    //     }
+    // }, [dispatch]);
 
     useEffect(() => {
         if (shouldClose) {

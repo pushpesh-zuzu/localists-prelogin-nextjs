@@ -238,7 +238,7 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
     const [selectedCompanies, setSelectedCompanies] = useState([]);
     const [showAll, setShowAll] = useState(false);
 
-    // ✅ Call API once
+    // Call API once
     useEffect(() => {
         if (!hasFetched.current && requestId && requestUserId) {
             dispatch(
