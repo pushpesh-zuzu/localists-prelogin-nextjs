@@ -28,11 +28,11 @@ import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 function RoofersInChester() {
-    useScrollToTop()
+  useScrollToTop()
   const featureRef = useRef(null);
   return (
     <>
-      {typeof window !== "undefined" && <CloseBrowserAbandon />}
+      {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON_CHESTER} />
       <HeroSectionLocation
         heading1="Roofers"

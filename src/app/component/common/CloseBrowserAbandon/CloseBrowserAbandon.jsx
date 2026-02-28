@@ -8,35 +8,35 @@ import useUserInfo from "@/utils/getUserIp";
 import { extractAllParams } from "@/utils/decodeURLParams";
 import { getBarkToken } from "@/utils/CookiesHelper";
 
-const CloseBrowserAbandon = () => {
+const CloseBrowserAbandon = ({ serviceId, quote_type }) => {
   if (typeof window === 'undefined') return null;
-  
+
   const dispatch = useDispatch();
   const userToken = getBarkToken();
   const { buyerRequest, citySerach } = useSelector((state) => state.buyer);
   const searchParams = useSearchParams();
-  
+
   const search = searchParams?.toString() ? `?${searchParams.toString()}` : "";
   const allParams = extractAllParams(search || window.location.search);
-  
-const campaignid = allParams.campaign_id || "";
-    const keyword = allParams.keyword || "";
-    const gclid = allParams.gclid || "";
-    const msclkid = allParams.msclkid || "";
-    const adgroup_id = allParams.adgroup_id;
-    const platform_source = allParams.source || "";
-    const campaign = allParams.campaign || "";
-    const adgroup = allParams.adgroup || "";
-    const matchtype = allParams.matchtype || "";
-    const device = allParams.device || "";
-    const loc_physical_ms = allParams.loc_physical_ms || "";
-    const utm_search_term = allParams.utm_search_term || "";
 
-  
+  const campaignid = allParams.campaign_id || "";
+  const keyword = allParams.keyword || "";
+  const gclid = allParams.gclid || "";
+  const msclkid = allParams.msclkid || "";
+  const adgroup_id = allParams.adgroup_id;
+  const platform_source = allParams.source || "";
+  const campaign = allParams.campaign || "";
+  const adgroup = allParams.adgroup || "";
+  const matchtype = allParams.matchtype || "";
+  const device = allParams.device || "";
+  const loc_physical_ms = allParams.loc_physical_ms || "";
+  const utm_search_term = allParams.utm_search_term || "";
+
+
   const { ip, url } = useUserInfo();
 
   const isMobile = useRef(false);
-  
+
   const latestData = useRef({
     userToken,
     buyerRequest,
@@ -52,13 +52,13 @@ const campaignid = allParams.campaign_id || "";
   // Check if form has any data
   const hasFormData = () => {
     const { userToken, buyerRequest } = latestData.current;
-    
+
     if (userToken) {
       return false;
     }
 
     // Check if any field has value
-    const hasData = 
+    const hasData =
       (buyerRequest?.name?.trim()?.length > 0) ||
       (buyerRequest?.email?.trim()?.length > 0) ||
       (buyerRequest?.phone?.trim()?.length > 0) ||
@@ -70,7 +70,7 @@ const campaignid = allParams.campaign_id || "";
 
   const submitFormData = () => {
     const { userToken, buyerRequest, citySerach } = latestData.current;
-    
+
     // Don't send if user is logged in
     if (userToken) {
       console.log("🔐 User logged in - skipping");
@@ -93,10 +93,10 @@ const campaignid = allParams.campaign_id || "";
 
     const answersToSend = hasQuestionNo
       ? updatedAnswers.map((q) => {
-          if (!q || typeof q !== "object") return q;
-          const { question_no, ...rest } = q;
-          return rest;
-        })
+        if (!q || typeof q !== "object") return q;
+        const { question_no, ...rest } = q;
+        return rest;
+      })
       : updatedAnswers;
 
     const isEverythingEmpty =
@@ -119,7 +119,7 @@ const campaignid = allParams.campaign_id || "";
     formData.append("email", buyerRequest?.email || "");
     formData.append("phone", buyerRequest?.phone || "");
     formData.append("questions", JSON.stringify(answersToSend));
-    formData.append("service_id", buyerRequest?.service_id || "");
+    formData.append("service_id", serviceId || buyerRequest?.service_id || "");
     formData.append("city", citySerach || "");
     formData.append("postcode", buyerRequest?.postcode || "");
     formData.append("campaignid", campaignid || "");
@@ -138,6 +138,9 @@ const campaignid = allParams.campaign_id || "";
     formData.append("entry_url", buyerRequest?.url || "");
     formData.append("user_ip_address", buyerRequest?.ip || "");
     formData.append("form_status", 0);
+    if (quote_type) {
+      formData.append("quote_type", quote_type);
+    }
 
     console.log("📤 Sending incomplete form data");
 
@@ -169,10 +172,10 @@ const campaignid = allParams.campaign_id || "";
       }
 
       if (hasSent.current) return;
-      
+
       console.log(`🚨 ${isMobile.current ? "Mobile" : "Desktop"} - beforeunload triggered`);
       submitFormData();
-      
+
       event.preventDefault();
       event.returnValue = "";
     };
@@ -195,7 +198,7 @@ const campaignid = allParams.campaign_id || "";
     const handleBlur = () => {
       // Only for mobile, with slight delay to avoid false triggers
       if (!isMobile.current || !hasFormData() || hasSent.current) return;
-      
+
       setTimeout(() => {
         if (document.hidden && !hasSent.current && hasFormData()) {
           console.log("📱 Mobile - blur triggered");
@@ -206,7 +209,7 @@ const campaignid = allParams.campaign_id || "";
 
     // Add all listeners
     window.addEventListener("beforeunload", handleBeforeUnload);
-    
+
     if (isMobile.current) {
       window.addEventListener("pagehide", handlePageHide);
       document.addEventListener("visibilitychange", handleVisibilityChange);
@@ -218,15 +221,15 @@ const campaignid = allParams.campaign_id || "";
       // Reset hasSent when component unmounts (page actually changes/navigates)
       // This allows API to be called again if user comes back and closes again
       hasSent.current = false;
-      
+
       window.removeEventListener("beforeunload", handleBeforeUnload);
-      
+
       if (isMobile.current) {
         window.removeEventListener("pagehide", handlePageHide);
         document.removeEventListener("visibilitychange", handleVisibilityChange);
         window.removeEventListener("blur", handleBlur);
       }
-      
+
       console.log("🧹 Cleanup done");
     };
   }, []);
