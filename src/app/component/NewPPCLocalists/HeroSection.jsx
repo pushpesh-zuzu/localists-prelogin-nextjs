@@ -115,9 +115,9 @@ function HeroSection({
 
             {/* Content */}
             <div className="relative z-10 w-full text-center pt-[20px] md:pt-[40px] pb-[20px] md:pb-[100px]">
-                {buyerStep ===7 ?
+                {buyerStep ===1 ?
                 <>
-                <H2 className="max-w-full md:max-w-[90%] text-white drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
+                <H2 className="max-w-full md:max-w-[90%] mx-auto text-white drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
                     Hold on! You’re not booked in just yet.
                 </H2>
 
