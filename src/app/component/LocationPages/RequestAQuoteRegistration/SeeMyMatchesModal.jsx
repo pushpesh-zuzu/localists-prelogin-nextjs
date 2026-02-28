@@ -10,6 +10,8 @@ import LocationMapIcon from "../../common/icons/SellerRegistration/LocationMapIc
 // import { getBarkToken } from "@/utils/CookiesHelper";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import { useRouter } from "next/navigation";
+import StarIconFeature from "../../../../../public/ReactIcons/StarIconFeature";
+import HalfStarIconFeature from "../../../../../public/ReactIcons/HalfStarIconFeature";
 
 function SeeMyMatchesModal({ previousStep, progressPercent }) {
     const dispatch = useDispatch();
@@ -35,7 +37,7 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
     //                 "phone": "+447894561230",
     //                 "profile_image": "6989ee63d18a5_1770647139.jpg",
     //                 "total_credit": "966",
-    //                 "avg_rating": 0,
+    //                 "avg_rating": 1,
     //                 "about_company": null,
     //                 "form_status": 1,
     //                 "business_profile_name": "BadeBusineed",
@@ -63,7 +65,7 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
     //                 "phone": "+447894561230",
     //                 "profile_image": "6989ee63d18a5_1770647139.jpg",
     //                 "total_credit": "966",
-    //                 "avg_rating": 0,
+    //                 "avg_rating": "1.1",
     //                 "about_company": null,
     //                 "form_status": 1,
     //                 "business_profile_name": "BadeBusineed",
@@ -91,7 +93,7 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
     //                 "phone": "+447894561230",
     //                 "profile_image": "6989ee63d18a5_1770647139.jpg",
     //                 "total_credit": "966",
-    //                 "avg_rating": 0,
+    //                 "avg_rating": "1.4",
     //                 "about_company": null,
     //                 "form_status": 1,
     //                 "business_profile_name": "BadeBusineed",
@@ -119,7 +121,7 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
     //                 "phone": "+447894561230",
     //                 "profile_image": "6989ee63d18a5_1770647139.jpg",
     //                 "total_credit": "966",
-    //                 "avg_rating": 0,
+    //                 "avg_rating": "2.5",
     //                 "about_company": null,
     //                 "form_status": 1,
     //                 "business_profile_name": "BadeBusineed",
@@ -147,7 +149,7 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
     //                 "phone": "+447894561230",
     //                 "profile_image": "6989ee63d18a5_1770647139.jpg",
     //                 "total_credit": "966",
-    //                 "avg_rating": 0,
+    //                 "avg_rating": 2.6,
     //                 "about_company": null,
     //                 "form_status": 1,
     //                 "business_profile_name": "BadeBusineed",
@@ -175,7 +177,7 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
     //                 "phone": "+447894561230",
     //                 "profile_image": "6989ee63d18a5_1770647139.jpg",
     //                 "total_credit": "966",
-    //                 "avg_rating": 0,
+    //                 "avg_rating": 2.9,
     //                 "about_company": null,
     //                 "form_status": 1,
     //                 "business_profile_name": "BadeBusineed",
@@ -203,7 +205,7 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
     //                 "phone": "+447894561230",
     //                 "profile_image": "6989ee63d18a5_1770647139.jpg",
     //                 "total_credit": "966",
-    //                 "avg_rating": 0,
+    //                 "avg_rating": 3.6,
     //                 "about_company": null,
     //                 "form_status": 1,
     //                 "business_profile_name": "BadeBusineed",
@@ -344,13 +346,21 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
                     <div className="overflow-y-auto">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-                            {visibleSellers.map((company) => {
+                            {visibleSellers.map((company, index) => {
                                 const isSelected = selectedCompanies.some(
                                     (item) => item.id === company.id
                                 );
 
                                 const disableCheckbox =
                                     !isSelected && selectedCompanies.length >= 5;
+
+                                // RATING LOGIC
+                                const rating = Number(company.avg_rating || 0);
+                                const fullStars = Math.floor(rating);
+                                const decimal = rating - fullStars;
+                                const showHalf = decimal >= 0.5;
+                                const emptyStars =
+                                    5 - fullStars - (showHalf ? 1 : 0);
 
                                 return (
                                     <div
@@ -361,18 +371,24 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
                                             }
                                         }}
                                         className={`
-    relative
-    w-full
-    p-4
-    rounded-[20px]
-    border
-    transition-all
-    cursor-pointer
-    ${isSelected
+                                                        relative
+                                                         w-full
+                                                p-4
+                                                    rounded-[20px]
+                                                        border
+                                                transition-all
+                                                        cursor-pointer
+                                                        ${isSelected
                                                 ? "border-[#00afe3] bg-[#f0fbff]"
                                                 : "border-[#e1e5e9] bg-white hover:border-[#00afe3]"
                                             }
-  `}
+                                              ${
+                                            /* If last item AND total count is odd */
+                                            sellers.length % 2 !== 0 &&
+                                                index === visibleSellers.length - 1
+                                                ? "md:col-span-2 md:max-w-[300px] md:mx-auto"
+                                                : ""
+                                            }`}
                                     >
                                         {/* Custom Checkbox Top Right */}
                                         <div
@@ -426,12 +442,31 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
                                                     {company.business_profile_name}
                                                 </p>
 
-                                                <div className="flex items-center gap-1 mt-1">
-                                                    {Array.from({ length: 5 }).map((_, i) => (
-                                                        <span key={i} className="text-[#00c853] text-sm">
-                                                            {i < Math.round(company.avg_rating || 0) ? "★" : "☆"}
-                                                        </span>
-                                                    ))}
+                                                {/* STARS */}
+                                                <div className="flex items-center gap-2 text-sm mt-1">
+                                                    <div className="flex text-emerald-500">
+                                                        {[...Array(fullStars)].map((_, i) => (
+                                                            <StarIconFeature
+                                                                key={`full-${i}`}
+                                                                className="h-[14px] w-[14px]"
+                                                            />
+                                                        ))}
+
+                                                        {showHalf && (
+                                                            <HalfStarIconFeature
+                                                                className="h-[14px] w-[14px]"
+                                                            />
+                                                        )}
+
+                                                        {[...Array(emptyStars)].map((_, i) => (
+                                                            <StarIconFeature
+                                                                background1="#dfdfe8"
+                                                                background2="#dfdfe8"
+                                                                key={`empty-${i}`}
+                                                                className="h-[14px] w-[14px]"
+                                                            />
+                                                        ))}
+                                                    </div>
                                                 </div>
 
                                                 <div className="flex items-center gap-1 mt-1 text-sm text-gray-500">
@@ -448,7 +483,7 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
                             })}
                         </div>
 
-                        {/* ✅ Show More INSIDE scroll area */}
+                        {/* Show More Button */}
                         {!showAll && sellers.length > displayCount && (
                             <div className="text-center pt-[25px]">
                                 <button
