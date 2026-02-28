@@ -19,6 +19,7 @@ import H4 from "../../UI/Typography/H4";
 import Paragraph from "../../UI/Typography/Paragraph";
 import UserIconWhite from "../../../../../public/ReactIcons/UserIconWhite";
 import LoaderIndicator from "../Loader/LoaderIndicatore";
+import { getCookie } from "@/utils/CookiesHelper";
 
 const DescribeYourRequest = ({
   onClose,
@@ -91,16 +92,16 @@ const DescribeYourRequest = ({
     let hasError = false;
 
     if (hasError) return;
-
+    const req = getCookie("requestId") || requestId
     // Prepare data for submission
     const detailsData = {
-      request_id: requestId,
+      request_id: req,
       details: text,
       professional_letin: professionalContact ? 1 : 0,
     };
 
     // Dispatch to Redux
-    dispatch(addDetailsRequestData(detailsData, router, requestId)).then(
+    dispatch(addDetailsRequestData(detailsData, router, req)).then(
       (result) => {
         if (result?.success) {
           const successMessage =

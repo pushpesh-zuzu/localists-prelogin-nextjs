@@ -296,7 +296,7 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
             dispatch(clearBuyerRegisterFormData());
             dispatch(setQualityData());
             dispatch(setBuyerStep(10));
-
+            localStorage.removeItem("pendingBuyerModal");
             // Navigate after everything
             router.push(`/conversion/${requestId}`);
 
