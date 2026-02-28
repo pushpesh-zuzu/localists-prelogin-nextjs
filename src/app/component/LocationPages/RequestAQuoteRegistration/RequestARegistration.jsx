@@ -219,6 +219,7 @@ function RequestARegistration({
                     cancelHeading={cancelHeading}
                     cancelPara={cancelPara}
                     onConfirm={confirmClose}
+                    serviceId={serviceId}
                     onClose={() => setShowConfirmModal(false)}
                 />
             )}

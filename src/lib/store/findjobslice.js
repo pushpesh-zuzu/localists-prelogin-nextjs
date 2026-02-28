@@ -522,6 +522,8 @@ const findJobSlice = createSlice({
         email: "",
         name: "",
         phone: "",
+        postcode: "",
+        quote_type: ""
       };
     },
     setAuthToken(state, action) {

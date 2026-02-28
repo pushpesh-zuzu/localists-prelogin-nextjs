@@ -16,12 +16,15 @@ const QuestionOptionsBox = ({
         relative
         w-full
         px-4
-        py-7
+        h-[80px] flex
+        items-center
+        justify-center
+        text-center
         rounded-[20px]
         border
         text-[16px] leading-[18px]
         md:text-[18px] md:leading-[20px]
-        lg:text-[20px] lg:leading-[22px]
+        lg:text-[18px] lg:leading-[20px]
         font-[Arial]
         font-bold
         tracking-[-0.03em]
@@ -39,7 +42,7 @@ const QuestionOptionsBox = ({
             {/* Label */}
             <span>{label}</span>
 
-            {/* 🔥 Custom Checkbox */}
+            {/* Custom Checkbox */}
             {isMulti && (
                 <div
                     className={`

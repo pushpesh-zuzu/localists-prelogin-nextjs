@@ -22,6 +22,7 @@ const ConfirmationModal = ({
     onConfirm,
     cancelHeading = "Are you sure that you want to leave?",
     cancelPara = `We're asking a few questions so we can find you the right pros, and send you quotes fast and free!`,
+    serviceId
 }) => {
 
 
@@ -74,7 +75,7 @@ const ConfirmationModal = ({
                 formData.append("email", buyerRequest?.email || "");
                 formData.append("phone", buyerRequest?.phone || "");
                 formData.append("questions", JSON.stringify(updatedAnswers));
-                formData.append("service_id", buyerRequest?.service_id || "");
+                formData.append("service_id", serviceId || buyerRequest?.service_id || "");
                 formData.append("city", citySerach || "");
                 formData.append("postcode", buyerRequest?.postcode || "");
                 formData.append("campaignid", campaignid || "");
@@ -97,7 +98,12 @@ const ConfirmationModal = ({
 
                 const result = await dispatch(registerQuoteCustomer(formData));
 
-                if (result?.payload?.success || result?.success) {
+                // console.log("result", result)
+                // console.log("succespayload", result?.payload?.success)
+                // console.log("finish", result?.success)
+
+
+                if (result?.success || result?.payload?.success) {
                     // Clear local storage
                     if (typeof window !== "undefined") {
                         localStorage.removeItem("barkToken");
