@@ -242,8 +242,8 @@ export default function MegaMenu({
                 </button>
               )}
 
-              <div className="flex items-center justify-between mb-4 pb-3 border-b">
-                <h3 className="text-lg font-bold text-gray-900">Services</h3>
+               <div className={`flex items-center justify-between mb-4 pb-3 ${menuHeading ? "border-b":""}`}>
+                {menuHeading && <h3 className="text-lg font-bold text-gray-900">Services</h3>}
               </div>
 
               <nav>
