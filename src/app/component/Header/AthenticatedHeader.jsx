@@ -8,7 +8,7 @@ import SellerDesktopMenu from "./SellerDesktopMenu";
 import SellerMobileMenu from "./SellerMobileMenu";
 import SellerMobileRightBellUser from "./SellerMobileRightBellUser";
 import BuyerDesktopMenu from "./BuyerDesktopMenu";
-import { resetProgress } from "@/lib/store/buyerslice/buyerSlice";
+import { clearSetbuyerRequestData, resetProgress } from "@/lib/store/buyerslice/buyerSlice";
 import { userLogout } from "@/lib/store/Auth/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { showToast } from "@/utils/toaster";
@@ -69,6 +69,7 @@ const AuthenticatedHeader = () => {
         // router.push("/en/gb/login");
         window.location.href = "/en/gb/login";
         localStorage.removeItem("pendingBuyerModal");
+        dispatch(clearSetbuyerRequestData())
         dispatch(resetProgress());
       }
     } catch (error) {

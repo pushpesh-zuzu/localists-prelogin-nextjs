@@ -25,9 +25,14 @@ import HireRelatedToServiceNearMe from "../../../Nearme/HireRelatedToServiceNear
 import AdviceInsightNearMe from "../../../Nearme/AdviceInsightNearMe";
 import Feature from "../../FetureComponent/Feature";
 import HeroSectionLocation from "../../HeroSectionLocation";
+import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
+import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
 function RooferInLiverpool() {
   const featureRef = useRef(null);
+  useRegistrationRedirect()
+  useScrollToTop()
+  
   return (
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
