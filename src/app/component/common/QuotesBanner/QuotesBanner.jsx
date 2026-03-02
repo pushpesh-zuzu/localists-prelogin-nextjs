@@ -148,10 +148,10 @@ export default function QuotesBanner({
   useEffect(() => {
     const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
     if (pendingModal?.shouldOpen) {
-      setSelectedServiceId({
+      dispatch(setSelectedServiceId({
         id: pendingModal.serviceId,
         name: pendingModal.serviceName,
-      });
+      }));
       dispatch(setbuyerRequestData(pendingModal.buyerRequest));
       dispatch(setcitySerach(pendingModal.city));
       setShow(true);
