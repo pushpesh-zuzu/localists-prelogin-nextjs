@@ -80,7 +80,7 @@ relative overflow-hidden md:pr-[170px]">
                   }}
                   onKeyDown={handleKeyPress}
                   placeholder="Post Code"
-                  className="custom-input px-6 py-3 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-35 md:w-55"
+                  className="custom-input px-6 py-3 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-35 md:w-40 lg:w-55"
                 />
 
                 <Button variant={variant}
@@ -112,7 +112,6 @@ relative overflow-hidden md:pr-[170px]">
             {/* Background Faded Text */}
             <BackgroundLogo className="w-[280px] md:w-[600px]" />
           </div>
-          {/* PHONE IMAGE */}
           {/* PHONE IMAGE (Desktop only) */}
           <div className="hidden md:block absolute right-6 top-1/2 transform -translate-y-1/2">
             <Image
