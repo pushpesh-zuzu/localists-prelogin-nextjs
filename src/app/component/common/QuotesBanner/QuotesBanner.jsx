@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Button from "../../UI/Typography/Button";
 import H3 from "../../UI/Typography/H3";
@@ -7,6 +7,13 @@ import RoundedLogo from "../icons/RoudedLogo";
 import BackgroundLogo from "../icons/BackgroundLogo";
 import Image from "next/image";
 import BuyerRegistration from "../BuyerRegistration/BuyerRegistration";
+import { CheckIcon, Loader2 } from "lucide-react";
+import { useDispatch } from "react-redux";
+import { useRouter } from "next/navigation";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
+import { getCityName, setbuyerRequestData, setcitySerach, setBuyerStep } from "@/lib/store/buyerslice/buyerSlice";
+import { setSelectedServiceId } from "@/lib/store/findjobslice";
+
 
 export default function QuotesBanner({
   text = "ROOFING QUOTES IN",
@@ -16,18 +23,113 @@ export default function QuotesBanner({
   buttonClassQuote = "md:py-[8px] md:px-8 px-4 py-2",
   serviceId = 113,
   serviceName = "Roofing",
+  onSubmit,
+  debounceMs = 500,
+  disabled = false,
+  onValidationSuccess,
+  onValidationError,
 }) {
 
   const [postcode, setPostcode] = useState("");
-  const [show, setShow] = useState(false);
+  const [isValidating, setIsValidating] = useState(false);
+  const [isValid, setIsValid] = useState(false);
+  const [city, setCity] = useState("");
   const [error, setError] = useState("");
+  const [show, setShow] = useState(false);
+
+  const dispatch = useDispatch();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!postcode.trim() || postcode.length < 3) {
+      setIsValid(false);
+      setCity("");
+      setError("");
+      if (onValidationError) onValidationError();
+      return;
+    }
+
+    const timer = setTimeout(async () => {
+      setIsValidating(true);
+      try {
+        const response = await dispatch(getCityName({ postcode: postcode }));
+        const newResponse = response?.payload || response;
+
+        if (newResponse?.data?.valid) {
+          setIsValid(true);
+          setCity(newResponse.data.city);
+          dispatch(setcitySerach(newResponse.data.city));
+          dispatch(setbuyerRequestData({ postcode: newResponse?.data?.postcode }))
+          setError("");
+
+          // Notify parent component - validation success
+          if (onValidationSuccess) {
+            onValidationSuccess({
+              postcode: postcode,
+              city: newResponse.data.city,
+              isValid: true,
+            });
+          }
+        } else {
+          setIsValid(false);
+          setCity("");
+          setError("Please enter a valid postcode!");
+
+          // Notify parent component - validation failed
+          if (onValidationError) {
+            onValidationError();
+          }
+        }
+      } catch (err) {
+        setIsValid(false);
+        setCity("");
+        setError("Please enter a valid postcode!");
+
+        // Notify parent component - validation error
+        if (onValidationError) {
+          onValidationError();
+        }
+      } finally {
+        setIsValidating(false);
+      }
+    }, debounceMs);
+
+    return () => clearTimeout(timer);
+  }, [postcode, dispatch, debounceMs, onValidationSuccess, onValidationError]);
+
+  const handleChange = (e) => {
+    const value = e.target.value.trim().toUpperCase().slice(0, 10);
+    setPostcode(value);
+    setError("");
+  };
 
   const handleSubmit = () => {
+    const canContinue = checkAuthenticatedUser(router);
+    if (!canContinue) return;
+
     if (!postcode.trim()) {
       setError("Please enter a valid postcode!");
       return;
     }
 
+    if (!isValid) {
+      setError("Please enter a valid postcode!");
+      return;
+    }
+
+    if (!serviceId) {
+      setError("Coming soon!");
+      return;
+    }
+
+    // Call submit callback with postcode and city data
+    if (onSubmit) {
+      onSubmit({
+        postcode,
+        city,
+        isValid,
+      });
+    }
     setError("");
     setShow(true);
   };
@@ -42,6 +144,20 @@ export default function QuotesBanner({
     setShow(false);
     setPostcode("");
   };
+
+  useEffect(() => {
+    const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
+    if (pendingModal?.shouldOpen) {
+      setSelectedServiceId({
+        id: pendingModal.serviceId,
+        name: pendingModal.serviceName,
+      });
+      dispatch(setbuyerRequestData(pendingModal.buyerRequest));
+      dispatch(setcitySerach(pendingModal.city));
+      setShow(true);
+      dispatch(setBuyerStep(7));
+    }
+  }, [dispatch]);
 
   return (
     <>
@@ -70,36 +186,49 @@ relative overflow-hidden md:pr-[170px]">
         lg:!text-[35px] lg:!leading-[35px] xl:!text-[38px] xl:!leading-[38px] !text-[15px] !leading-[15px]">{text}
               </H3>
 
-              <div className="mt-3 md:mt-6 flex flex-row items-center md:gap-4 gap-2 justify-start">
-                <input
-                  type="text"
-                  value={postcode}
-                  onChange={(e) => {
-                    setPostcode(e.target.value);
-                    if (error) setError("");
-                  }}
-                  onKeyDown={handleKeyPress}
-                  placeholder="Post Code"
-                  className="custom-input px-1 py-2 md:px-6 md:py-3 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-27 md:w-40 lg:w-55"
-                />
+              <div className="mt-3 md:mt-6 relative">
+                <div className="flex flex-row items-center md:gap-4 gap-2">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      value={postcode}
+                      onChange={handleChange}
+                      onKeyDown={handleKeyPress}
+                      disabled={disabled}
+                      autoComplete="off"
+                      placeholder="Post Code"
+                      className="custom-input px-1 py-2 md:px-6 md:py-3 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-27 md:w-40 lg:w-55"
+                    />
+                    {postcode && (
+                      <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                        {isValidating ? (
+                          <Loader2 className="w-5 h-5 text-gray-400 animate-spin" />
+                        ) : isValid ? (
+                          <CheckIcon className="w-5 text-white h-5 bg-green-500 rounded-full" />
+                        ) : null}
+                      </div>
+                    )}
+                  </div>
+                  <Button
+                    variant={variant}
+                    onClick={handleSubmit}
+                    className={`${buttonClassQuote}
+        bg-green-500 hover:bg-green-600 
+        border border-3 border-white 
+        cursor-pointer transition 
+        rounded-full text-white 
+        font-semibold shadow-md`}
+                  >
+                    Go
+                  </Button>
+                </div>
 
-                <Button
-                  variant={variant}
-                  onClick={handleSubmit}
-                  className={`
-   ${buttonClassQuote}
-    bg-green-500 hover:bg-green-600 
-    border border-3 border-white 
-    cursor-pointer transition 
-    rounded-full text-white 
-    font-semibold shadow-md
-  `}
-                >
-                  Go
-                </Button>
+                {error && (
+                  <span className="absolute left-2 top-full mt-1 text-red-500 text-sm">
+                    {error}
+                  </span>
+                )}
               </div>
-              {error && (
-                <div className="text-red-500 mt-2 text-sm text-block">{error}</div>)}
             </div>
 
             {/* RIGHT SIDE (30 SEC CIRCLE) */}
