@@ -12,8 +12,8 @@ export default function QuotesBanner({
   text = "ROOFING QUOTES IN",
   variant = "secondary",
   classQuote = "w-full flex justify-center items-center",
-  containerWidth = "w-full md:w-[100%] lg:w-[74%] max-w-6xl",
-  buttonClassQuote = "md:py-[8px] md:px-8 px-10 py-[10px]",
+  containerWidth = "w-full max-w-6xl",
+  buttonClassQuote = "md:py-[8px] md:px-8 px-4 py-2",
   serviceId = 113,
   serviceName = "Roofing",
 }) {
@@ -60,7 +60,7 @@ px-6 md:px-5 py-10 md:py-3
 flex flex-row items-center justify-between 
 relative overflow-hidden md:pr-[170px]"> */}
           <div className="bg-[#00afe3] rounded-3xl 
-px-5 md:px-5 py-2 md:py-3 md:gap-0 gap-1
+px-5 md:px-5 py-2 md:py-3
 flex flex-row items-center md:items-center justify-between 
 relative overflow-hidden md:pr-[170px]">
 
@@ -86,17 +86,17 @@ relative overflow-hidden md:pr-[170px]">
                 <Button
                   variant={variant}
                   onClick={handleSubmit}
-                  className="
-    px-4 py-2 text-sm 
-    md:px-8 md:py-[8px] md:text-base
+                  className={`
+   ${buttonClassQuote}
     bg-green-500 hover:bg-green-600 
     border border-3 border-white 
     cursor-pointer transition 
     rounded-full text-white 
     font-semibold shadow-md
-  "
+  `}
                 >
-                  Start
+                  <span className="block md:hidden">Go</span>
+                  <span className="hidden md:block">Start</span>
                 </Button>
               </div>
               {error && (
