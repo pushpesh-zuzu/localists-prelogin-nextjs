@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
+import { serviceRouteMap } from "@/utils/allServicesRoute";
 
 export default function MobileSlideInSearch({
     isOpen,
@@ -14,14 +15,14 @@ export default function MobileSlideInSearch({
     setMobileSearchText,
 }) {
     // route map
-    const serviceRouteMap = {
-        49: "/fencing-contractors-near-me",
-        51: "/driveway-installers-near-me",
-        52: "/patio-layers-near-me",
-        54: "/artificial-grass-installers-near-me",
-        43: "/landscape-gardeners-near-me",
-        112: "/tree-surgeon-near-me",
-    };
+    // const serviceRouteMap = {
+    //     49: "/fencing-contractors-near-me",
+    //     51: "/driveway-installers-near-me",
+    //     52: "/patio-layers-near-me",
+    //     54: "/artificial-grass-installers-near-me",
+    //     43: "/landscape-gardeners-near-me",
+    //     112: "/tree-surgeon-near-me",
+    // };
 
     const [debouncedText, setDebouncedText] = useState("");
     const [showSuggestions, setShowSuggestions] = useState(false);
