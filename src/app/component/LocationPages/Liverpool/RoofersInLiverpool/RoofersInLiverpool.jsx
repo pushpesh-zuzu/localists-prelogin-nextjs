@@ -71,7 +71,7 @@ function RooferInLiverpool() {
       <div ref={featureRef}>
         {" "}
         {/* ✅ Feature ko wrap kiya */}
-        <Feature serviceId={113} serviceName="Roofing" />
+        <Feature serviceId={113} serviceName="Roofing" cityName="Liverpool" featureRef={featureRef} />
       </div>
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_LIVERPOOL}

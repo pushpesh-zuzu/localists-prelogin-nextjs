@@ -10,11 +10,11 @@ import { useRef } from "react";
 import NearmeH2Heading from "../../Nearme/NearmeH2Heading";
 
 export default function FetureCardList({
+  featureRef,
+  serviceProfessionName='Roofers',
   serviceId,
   serviceName,
-  serviceProfessionName='Roofers',
   cityName = "Chester",
-  featureRef,
 }) {
   const { getSellerData } = useSelector((state) => state.buyer);
   const dispatch = useDispatch();
