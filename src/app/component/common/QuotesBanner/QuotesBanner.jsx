@@ -11,9 +11,9 @@ import BuyerRegistration from "../BuyerRegistration/BuyerRegistration";
 export default function QuotesBanner({
   text = "ROOFING QUOTES IN",
   variant = "secondary",
-  classQuote = "w-full flex justify-center items-center md:py-16 py-0",
-  containerWidth = "w-[85%] md:w-[80%] lg:w-[49%] max-w-6xl",
-  buttonClassQuote = "md:py-[8px] md:px-8 px-12 py-[10px]",
+  classQuote = "w-full flex justify-center items-center",
+  containerWidth = "w-full md:w-[100%] lg:w-[74%] max-w-6xl",
+  buttonClassQuote = "md:py-[8px] md:px-8 px-10 py-[10px]",
   serviceId = 113,
   serviceName = "Roofing",
 }) {

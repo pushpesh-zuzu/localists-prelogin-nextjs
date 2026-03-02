@@ -8,14 +8,14 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
     text: "Roofing prices can feel unpredictable, but once you know the rough numbers, everything becomes a lot less intimidating. Below is a clear, no-nonsense look at what homeowners in Chester typically pay for common roofing jobs.",
   },
   {
-    type:"pbold",
-    text:"General roofing work"
+    type: "pbold",
+    text: "General roofing work"
   },
   {
     type: "p",
     text: "For standard roofing projects, whether it’s minor upgrades or general maintenance, costs usually sit between £1,350 and £3,350, with most jobs coming in around £2,150. It’s the kind of work that quietly keeps your home dry and drama-free.",
   },
-    {
+  {
     type: "pbold",
     text: "Roof repairs"
   },
@@ -69,61 +69,65 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
     text: "Roof replacement"
   },
   {
-    type:"p",
-    text:"When repairs are no longer enough, a complete roof replacement usually costs £5,000 to £9,445, averaging £6,837. A major job, yes, but one that resets the clock on your roof entirely."
+    type: "p",
+    text: "When repairs are no longer enough, a complete roof replacement usually costs £5,000 to £9,445, averaging £6,837. A major job, yes, but one that resets the clock on your roof entirely."
   },
   {
-    type:"p",
-    text:"Good to know: Final prices depend on factors like roof size, materials, access, and whether extras such as scaffolding or insulation are needed. Always ask for a detailed quote before booking so there are no surprises."
+    type: "p",
+    text: "Good to know: Final prices depend on factors like roof size, materials, access, and whether extras such as scaffolding or insulation are needed. Always ask for a detailed quote before booking so there are no surprises."
   },
   {
-    type:"p",
-    text:"Already know what needs doing? Use our Job Value Estimator for a quick, tailored cost estimate; no guesswork required."
+    type: "p",
+    text: "Already know what needs doing? Use our Job Value Estimator for a quick, tailored cost estimate; no guesswork required."
   },
   {
-    type:'h2',
-    text:"What Should Be Included in Your Roofing Quote",
+    type: 'h2',
+    text: "What Should Be Included in Your Roofing Quote",
     className: "mt-5 lg:mt-[72px]"
 
   },
   {
-   type:"p",
-   text:"A good roofing quote shouldn’t feel like a guessing game. Everything should be clear, upfront, and easy to understand before any work begins. When comparing quotes from roofers in Chester, make sure the following are clearly listed:"
+    type: "p",
+    text: "A good roofing quote shouldn’t feel like a guessing game. Everything should be clear, upfront, and easy to understand before any work begins. When comparing quotes from roofers in Chester, make sure the following are clearly listed:"
   },
   {
-    type:"li",
-    text:"Labour costs – covering the time and expertise needed to complete the job properly."
+    type: "li",
+    text: "Labour costs – covering the time and expertise needed to complete the job properly."
   },
   {
-    type:"li",
-    text:"Materials – including tiles, underlay, battens, flashing, or any other components required."
-  },
-{
-    type:"li",
-    text:"Scaffolding or equipment hire – especially for taller or harder-to-reach roofs."
+    type: "li",
+    text: "Materials – including tiles, underlay, battens, flashing, or any other components required."
   },
   {
-    type:"li",
-    text:"Waste removal – old tiles, damaged materials, and general site clean-up once the job’s done."
+    type: "li",
+    text: "Scaffolding or equipment hire – especially for taller or harder-to-reach roofs."
   },
   {
-    type:"li",
-    text:"VAT (if applicable) – always worth checking so there are no last-minute surprises."
+    type: "li",
+    text: "Waste removal – old tiles, damaged materials, and general site clean-up once the job’s done."
   },
   {
-    type:"p",
-    text:"If a quote feels vague or leaves things out, don’t be afraid to ask questions. A trustworthy roofer will be happy to explain exactly what you’re paying for, no fine print, no confusion, no awkward conversations."
+    type: "li",
+    text: "VAT (if applicable) – always worth checking so there are no last-minute surprises."
   },
   {
-    type:"h2",
-    text:"Find the Right Roofer in Chester for the Job",
+    type: "p",
+    text: "If a quote feels vague or leaves things out, don’t be afraid to ask questions. A trustworthy roofer will be happy to explain exactly what you’re paying for, no fine print, no confusion, no awkward conversations."
+  },
+  {
+    type: "QuotesBanner",
+    className: "mb-[30px] mt-[30px] lg:mt-[130px] lg:mb-[130px]"
+  },
+  {
+    type: "h2",
+    text: "Find the Right Roofer in Chester for the Job",
     className: "mt-5 lg:mt-[72px]"
   },
   {
-    type:"p",
-    text:"A roof is more than just a few tiles sitting on top of your house; it’s protection, insulation, and sometimes even a style statement. Depending on what you need, here’s the kind of work you can search for when looking for roofers in Chester:"
+    type: "p",
+    text: "A roof is more than just a few tiles sitting on top of your house; it’s protection, insulation, and sometimes even a style statement. Depending on what you need, here’s the kind of work you can search for when looking for roofers in Chester:"
   },
-   {
+  {
     type: "li",
     text: "Roof repairs – leaks, loose tiles, or minor storm damage."
   },
@@ -164,11 +168,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
     text: "Drone roof surveys – safe, detailed inspections without climbing ladders."
   },
   {
-    type:'p',
-    text:"No matter the job, finding a roofer with the right skills ensures your home stays dry, safe, and looking great without the stress.",
-    notMarginBottom:true
+    type: 'p',
+    text: "No matter the job, finding a roofer with the right skills ensures your home stays dry, safe, and looking great without the stress.",
+    notMarginBottom: true
   },
- 
+
 ];
 export const FREQUENTLY_DATA_TREE_SURGEON_CHESTER = [
   {
@@ -227,43 +231,43 @@ export const ROOFERS_ADVICEINSIGHT_CHESTER = [
 ];
 export const ROOFERS_TABDATA_CHESTER = {
   popular: [
-      {
-            title: "Landscapers Near Me",
-            url: "/en/gb/landscape-gardeners-near-me",
-        },
-        {
-            title: "Gardeners Near Me",
-            url: "",
-        },
-        {
-            title: "Architects Near Me",
-            url: "",
-        },
-        {
-            title: "Gutter Cleaners Near Me",
-            url: "/en/gb/gutter-cleaning-near-me",
-        },
-        {
-            title: "Fencing Contractors Near Me",
-            url: "/en/gb/fencing-contractors-near-me",
-        },
-        {
-            title: "Artificial Grass Installers Near Me",
-            url: "/en/gb/artificial-grass-installers-near-me",
-        },
+    {
+      title: "Landscapers Near Me",
+      url: "/en/gb/landscape-gardeners-near-me",
+    },
+    {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
+      title: "Architects Near Me",
+      url: "",
+    },
+    {
+      title: "Gutter Cleaners Near Me",
+      url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Fencing Contractors Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
+    },
+    {
+      title: "Artificial Grass Installers Near Me",
+      url: "/en/gb/artificial-grass-installers-near-me",
+    },
   ],
   related: [
-   "Roofers Leeds",
-        "Roofers York",
-        "Roofers Hull",
-        "Roofers Bolton",
-        "Roofers Chester",
-        "Roofers Cheshire",
-        "Roofers Harrogate",
-        "Roofers Liverpool",
-        "Roofers Manchester",
-        "Roofers Stockport",
-        "Roofers North Yorkshire",
+    "Roofers Leeds",
+    "Roofers York",
+    "Roofers Hull",
+    "Roofers Bolton",
+    "Roofers Chester",
+    "Roofers Cheshire",
+    "Roofers Harrogate",
+    "Roofers Liverpool",
+    "Roofers Manchester",
+    "Roofers Stockport",
+    "Roofers North Yorkshire",
   ],
   findMore: [],
 };

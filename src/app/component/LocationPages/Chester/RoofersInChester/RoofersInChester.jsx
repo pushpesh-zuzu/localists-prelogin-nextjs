@@ -27,7 +27,6 @@ import Feature from "../../FetureComponent/Feature";
 import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
-import QuotesBanner from "@/app/component/common/QuotesBanner/QuotesBanner";
 
 function RoofersInChester() {
   useScrollToTop()
@@ -57,10 +56,6 @@ function RoofersInChester() {
         featureRef={featureRef}
       />
 
-      <div className="md:pb-[72px] pb-[30px] pt-0">
-        <QuotesBanner serviceId={113} serviceName="Roofing" />
-      </div>
-      
       <PopularJobNearMe
         services={POPULAR_SERVICES_ROOFERS_CHESTER}
         popularImage="/nearme/Roofing/roofslate.webp"
