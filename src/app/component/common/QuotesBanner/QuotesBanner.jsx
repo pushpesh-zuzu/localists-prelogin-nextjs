@@ -202,9 +202,9 @@ relative overflow-hidden md:pr-[170px]">
                     {postcode && (
                       <div className="absolute right-3 top-1/2 -translate-y-1/2">
                         {isValidating ? (
-                          <Loader2 className="w-5 h-5 text-gray-400 animate-spin" />
+                          <Loader2 className="w-4 h-4 md:w-5 md:h-5 text-gray-400 animate-spin" />
                         ) : isValid ? (
-                          <CheckIcon className="w-5 text-white h-5 bg-green-500 rounded-full" />
+                          <CheckIcon className="w-4 h-4 text-white bg-green-500 rounded-full" />
                         ) : null}
                       </div>
                     )}
