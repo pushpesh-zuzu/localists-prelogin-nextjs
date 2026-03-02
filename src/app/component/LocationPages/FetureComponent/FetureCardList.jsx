@@ -94,8 +94,8 @@ export default function FetureCardList({
         className={`
           ${
             enableInnerScroll
-              ? "max-h-[1205px] overflow-y-auto [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full px-1 pb-0.5 md:pb-[5px] mt-[34px] md:mt-[46px]"
-              : "mt-[30px] md:mt-[53px]"
+              ? "max-h-[1205px] overflow-y-auto [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full px-1 pb-0.5 md:pb-[5px] mt-[34px] xl:mt-[46px]"
+              : "mt-[34px] xl:mt-[46px]"
           }
         `}
         style={{ overflowAnchor: "none" }}

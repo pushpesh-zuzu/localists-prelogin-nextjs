@@ -36,7 +36,7 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
         onClick={() => {
           setActiveFeture(index);
         }}
-        className={`relative w-full z-20 rounded-[30px] bg-white py-[17px] px-[15px] md:p-6 ${featured ? "mt-[34px] md:mt-[50px]" : ""}   
+        className={`relative w-full z-20 rounded-[30px] bg-white py-[17px] px-[15px] md:p-6 ${featured ? "mt-[38px] lg:mt-[50px]" : ""}   
           ${featured
             ? `border-[#fff] ring-2 ring-[#10C87B] md:ring-5 mt-[35px]  
           
