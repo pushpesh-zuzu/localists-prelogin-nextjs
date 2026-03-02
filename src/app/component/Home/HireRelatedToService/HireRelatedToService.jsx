@@ -43,6 +43,7 @@ export default function HireRelatedToService({
   heading1 = "Hire with",
   heading2 = "confidence",
   tabData = [],
+  heightClass = "min-h-[400px] h-auto md:h-auto lg:h-[484px]",
 }) {
   const [currentTab, setcurrentTab] = useState("professionals");
   const [showAll, setShowAll] = useState(false);
@@ -92,8 +93,7 @@ export default function HireRelatedToService({
 
   return (
     <WrapperBGWidth background={"#00AFE3"}>
-      <div className="bg-[#00AFE3]  px-[30px] py-10 md:py-[50px] md:pl-16  xl:px-[120px] lg:py-[72px] w-full h-auto
-    lg:min-h-[484px]">
+      <div className={`bg-[#00AFE3]  px-[30px] py-10 md:py-[50px] md:pl-16  xl:px-[120px] lg:py-[72px] w-full ${heightClass}`}>
         <header className="mb-5 xl:mb-12">
           <div className="flex flex-wrap md:flex-col lg:flex-row xl:justify-between items-left gap-7.5 md:gap-6 xl:gap-12">
             <h2
