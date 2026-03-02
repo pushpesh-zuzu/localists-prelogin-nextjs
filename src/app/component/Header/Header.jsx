@@ -233,7 +233,7 @@ export default function Header() {
             <>
               <div className="flex justify-center flex-1 max-w-[103px] max-h-[25px]">
                 <a
-                  href="/"
+                  href="/en/gb"
                   aria-label="Go to Localists homepage"
                   className="shrink-0"
                 >
