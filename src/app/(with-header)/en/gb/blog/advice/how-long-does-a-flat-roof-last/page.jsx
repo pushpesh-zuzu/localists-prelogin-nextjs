@@ -14,7 +14,7 @@ function page() {
       {/* // <div><BlogFlateRoofLast/></div> */}
       <SEO
         canonicalPath="/en/gb/blog/news/how-long-does-a-flat-roof-last"
-        bannerImage="/blog/blogflatroofbanner.webp"
+        bannerImage="/blog/blogflatroofbanner3.webp"
         
         conversion={true} /><Suspense
           fallback={<div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">

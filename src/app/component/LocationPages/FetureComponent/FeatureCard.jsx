@@ -137,7 +137,7 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
                   className="text-emerald-500 h-[18px] w-[15px] md:h-6 md:w-6"
                 />
                 <span className="text-sm md:text-[20px] tracking-[-0.03em] font-[Arial] text-[#253238]">
-                  {location}
+                  Operates in {location}
                 </span>
               </div>
             </div>

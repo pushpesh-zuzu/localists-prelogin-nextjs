@@ -84,7 +84,7 @@ function MemberLocalistsRoof({ description = "" }) {
             priority
             fetchPriority="high"
             loading="eager"
-            quality={100}
+            quality={90}
             height={620}
             width={521}
             className="w-[273px] h-[350px] md:h-[380px] lg:w-[521px] lg:h-[580px] xl:h-[620px]"

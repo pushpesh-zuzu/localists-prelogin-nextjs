@@ -29,7 +29,7 @@ function BlogFlateRoofLast() {
         category="Roofing"
         title="How Long Does a Flat Roof Last"
         altText="a roofer wearing protective clothing unrolling roofing material on a flat roof"
-        bannerImage="/blog/blogflatroofbanner.webp"
+        bannerImage="/blog/blogflatroofbanner3.webp"
         bannerImageMobile="/blog/blogflatroofbannerMobile.webp"
         publishedDate="25.02.26"
         updatedDate="25.02.26"

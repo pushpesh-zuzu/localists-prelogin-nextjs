@@ -25,6 +25,8 @@ function BlogHeroSection({
           fill
           priority
           className="object-cover"
+          fetchPriority="high"
+          quality={90}
           sizes="(min-width: 768px) 100vw, 0px"
         />
       </div>
