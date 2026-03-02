@@ -11,6 +11,7 @@ import GutterPriceSection from "./GutterPriceSection";
 import AveragePriceDynamic from "./AveragePriceDynamic";
 import GetQuote from "../common/GetQuotes/GetQuote";
 import PostCodeSectionLocation from "../LocationPages/PostCodeSectionLocation";
+import QuotesBanner from "../common/QuotesBanner/QuotesBanner";
 
 const textBase =
   "font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em]!"
@@ -33,7 +34,7 @@ const AboutServicesAndQuestions = ({
             className={`max-w-[100%] md:max-w-full ${block?.noMarginBottom
               ? "mb-0"
               : "mb-5 md:mb-[25px]"
-              } ${block?.className? block?.className :""}`}
+              } ${block?.className ? block?.className : ""}`}
           />
         );
       case "image":
@@ -69,8 +70,11 @@ const AboutServicesAndQuestions = ({
         );
       case "PostCodeSection":
         return <PostCodeSection serviceId={serviceId} serviceName={serviceName} classNamePostCode={block?.className} key={index} />;
-        case "PostCodeSectionLocation":
+      case "PostCodeSectionLocation":
         return <PostCodeSectionLocation serviceId={serviceId} serviceName={serviceName} classNamePostCode={block?.className} key={index} />;
+
+      case "QuotesBanner":
+        return <QuotesBanner serviceId={serviceId} serviceName={serviceName} key={index} classQuote={block?.className} />;
 
       case "p":
         return (
@@ -83,12 +87,12 @@ const AboutServicesAndQuestions = ({
             <span dangerouslySetInnerHTML={{ __html: block.text }} />
           </Paragraph>
         );
-        case "getQuotesButton":
-          return(
-            <div className={`flex justify-center ${block.className? block.className : 'mt-[15px] xl:mt-[25px]'} `}>
+      case "getQuotesButton":
+        return (
+          <div className={`flex justify-center ${block.className ? block.className : 'mt-[15px] xl:mt-[25px]'} `}>
             <GetQuote variant="primary" text={block?.text} />
           </div>
-          )
+        )
       case "patioPricingTable":
         return (
           // <PatioPricingTable/>
@@ -142,7 +146,7 @@ const AboutServicesAndQuestions = ({
               : "mb-2.5 md:mb-[15px]"
               }`}>
             <li className={textBase}>
-              <span className={`${block.noBold? "" : "font-bold"}`}>{block.heading}</span>
+              <span className={`${block.noBold ? "" : "font-bold"}`}>{block.heading}</span>
               {block.noBold && " "}
               <span dangerouslySetInnerHTML={{ __html: block.text }} />
             </li>

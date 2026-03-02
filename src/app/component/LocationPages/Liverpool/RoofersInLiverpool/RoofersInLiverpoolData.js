@@ -92,6 +92,14 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
     text: "Two houses on the same street can end up with very different quotes,  roofs are a bit like fingerprints, no two are quite the same.",
   },
   {
+    type: "QuotesBanner",
+    className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[100px] lg:mb-[100px]"
+  },
+  // {
+  //   type: "PostCodeSectionLocation",
+  //   className: "mb-[30px] mt-[30px] lg:mt-[60px] lg:mb-[60px]"
+  // },
+  {
     type: "h3",
     text: "The best way to get an accurate price",
   },
@@ -207,8 +215,9 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
     type: 'p',
     text: "Remember, your roof protects everything underneath it. Choosing the right roofer is about value and trust, not just saving a few pounds.",
   },
-  { type: "PostCodeSectionLocation",
-    className:"mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
+  {
+    type: "PostCodeSectionLocation",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
   },
 ];
 export const FREQUENTLY_DATA_LIVERPOOL = [

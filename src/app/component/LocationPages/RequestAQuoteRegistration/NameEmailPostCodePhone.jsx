@@ -131,7 +131,7 @@ function NameEmailPostCodePhone({
     };
 
     const handlePostcodeChange = async (e) => {
-        const value = e.target.value.trim().slice(0, 10);
+        const value = e.target.value.trim().toUpperCase().slice(0, 10);
         setPostode(value);
         setPostalCodeValidate(false);
 
