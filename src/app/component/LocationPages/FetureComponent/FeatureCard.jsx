@@ -157,12 +157,12 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
 
         <div className="max-w-full md:max-w-[69%] flex flex-col gap-y-[30px] md:gap-y-0 md:flex-row gap-x-6">
           <div className="mt-4 flex items-center flex-wrap gap-[13px]">
-            {popularServices.map((service) => (
+            {seller?.services && seller?.services.map((service) => (
               <span
-                key={service}
+                key={service?.id}
                 className="tracking-[-0.03em] font-bold font-[Arial] rounded-full border-[2.5px] h-fit border-[#B9B9C2] py-[5.35px] px-1.5 md:px-2 md:py-1 text-[11px] leading-[11px] md:leading-[17px] md:text-base text-[#B9B9C2]"
               >
-                {service}
+                {service?.name}
               </span>
             ))}
           </div>
