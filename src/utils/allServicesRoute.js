@@ -5,4 +5,5 @@ export const serviceRouteMap = {
   54: "/artificial-grass-installers-near-me",
   43: "/landscape-gardeners-near-me",
   112: "/tree-surgeon-near-me",
+  113: "/roofers-near-me",
 };

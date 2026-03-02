@@ -277,7 +277,7 @@ const QuestionModal = ({
       onClick={() => setShowConfirmModal(true)}
     >
       <div
-        className="relative w-full mt-[5%] max-w-[500px] max-h-[80vh] mx-4 bg-white shadow-2xl flex flex-col rounded-lg"
+        className="relative w-full mt-[5%] max-w-[500px] max-h-[80vh] mx-4 bg-white shadow-2xl flex flex-col rounded-[20px]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}

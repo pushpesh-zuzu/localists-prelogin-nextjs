@@ -155,7 +155,7 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
       maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
       maxHeight="max-h-[80vh] lg:max-h-[90vh]"
       padding="px-3 py-4 md:px-7.5 md:pt-3 pb-6"
-      radius="rounded-[10px]"
+      radius="rounded-[20px]"
       titleClassName="text-[#253238]"
       nextButtonClassName="bg-[#00afe3] hover:bg-[#008cc0]"
     >

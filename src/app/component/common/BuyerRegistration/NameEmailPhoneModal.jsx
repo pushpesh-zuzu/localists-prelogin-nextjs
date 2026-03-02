@@ -242,6 +242,7 @@ function NameEmailPhoneModal({
         maxHeight="max-h-[80vh] lg:max-h-[90vh]"
         padding="px-3 py-4 md:px-7.5 md:pt-3 pb-6"
         disabled={isChecking}
+        radius="rounded-[20px]"
       >
         <Paragraph className="text-center">
           Your phone number and email are safe with us.

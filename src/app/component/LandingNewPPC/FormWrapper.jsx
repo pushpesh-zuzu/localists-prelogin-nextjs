@@ -23,7 +23,7 @@ const FormWrapper = ({
 }) => {
   return (
     <div
-      className={`relative w-full ${maxWidth} ${maxHeight} py-4 bg-white shadow-2xl flex flex-col ${className}`}
+      className={`relative w-full ${maxWidth} ${maxHeight} py-4 rounded-[20px] bg-white shadow-2xl flex flex-col ${className}`}
     >
       {/* Close Button */}
       {showCloseIcon && onClose && (

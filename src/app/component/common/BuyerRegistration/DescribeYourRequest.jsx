@@ -20,6 +20,7 @@ import Paragraph from "../../UI/Typography/Paragraph";
 import UserIconWhite from "../../../../../public/ReactIcons/UserIconWhite";
 import LoaderIndicator from "../Loader/LoaderIndicatore";
 import { getCookie } from "@/utils/CookiesHelper";
+import VerifyIcon from "../../../../../public/ReactIcons/VerifyIcon";
 
 const DescribeYourRequest = ({
   onClose,
@@ -157,10 +158,11 @@ const DescribeYourRequest = ({
       maxWidth="max-w-[90%] md:max-w-[540px] mt-[5%] "
       maxHeight="max-h-[90vh]"
       radius="rounded-[20px]"
+      showClosIcon={false}
     >
       {/* Success Message */}
       <div className="mb-[10px] flex items-center justify-center gap-[6.18px] text-base font-medium text-[#00afe3] max-[480px]:items-start max-[480px]:text-left max-[480px]:text-[13px] max-[480px]:font-semibold">
-        <svg
+        {/* <svg
           className="h-5 w-5 max-[480px]:mt-0"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -170,7 +172,8 @@ const DescribeYourRequest = ({
             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
             clipRule="evenodd"
           />
-        </svg>
+        </svg> */}
+        <VerifyIcon className="w-4 h-4 inline-block" />
         <Paragraph bold="font-normal">
           Your request has been submitted
         </Paragraph>

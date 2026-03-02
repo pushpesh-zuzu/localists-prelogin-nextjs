@@ -150,7 +150,8 @@ const DescribeYourRequest = ({
       isOpen={true}
       maxWidth="max-w-[90%] md:max-w-[540px] mt-[5%]"
       maxHeight="max-h-[90vh]"
-      radius="rounded-[10px]"
+      radius="rounded-[20px]"
+      showClosIcon={false}
     >
       {/* Success Message */}
       <div className="mb-[10px] flex items-center justify-center gap-[6.18px] text-base font-medium text-[#00afe3] max-[480px]:items-start max-[480px]:text-left max-[480px]:text-[13px] max-[480px]:font-semibold">

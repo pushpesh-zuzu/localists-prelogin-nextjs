@@ -140,6 +140,7 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile }) {
       maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
       maxHeight="max-h-[80vh] lg:max-h-[90vh]"
       padding="px-3 py-4 md:px-7.5 md:pt-3 pb-6"
+      radius="rounded-[20px]"
     >
       <Paragraph bold={"font-black"} className="text-center">
         Your phone number and email are safe with us.
