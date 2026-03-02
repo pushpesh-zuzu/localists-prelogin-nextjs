@@ -48,7 +48,7 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
     //                 "service_id": 113,
     //                 "miles": "20",
     //                 "nation_wide": 0,
-    //                 "postcode": "E1 1AA",
+    //                 "postcode": "E11AA",
     //                 "response_time": "15",
     //                 "lat": "51.519018",
     //                 "lng": "-0.058133",
@@ -76,7 +76,7 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
     //                 "service_id": 113,
     //                 "miles": "20",
     //                 "nation_wide": 0,
-    //                 "postcode": "E1 1AA",
+    //                 "postcode": "E11AA",
     //                 "response_time": "15",
     //                 "lat": "51.519018",
     //                 "lng": "-0.058133",
@@ -460,7 +460,15 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
                                                         className="w-4 h-4"
                                                         background="#00afe3"
                                                     />
-                                                    <span>Operates in {company.postcode}</span>
+                                                    <span>Operates in {
+                                                        company.postcode
+                                                            ? company.postcode.slice(
+                                                                0,
+                                                                company.postcode.includes(" ") ? 5 : 4
+                                                            )
+                                                            : ""
+                                                    }
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
