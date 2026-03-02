@@ -26,7 +26,7 @@ const roofingImages = [
     "/roofing.webp",
 ];
 
-function LocalistsRoof() {
+function LocalistsRoof({ heading ="Find Your Local Roofing Company" }) {
     useRegistrationRedirect();
     useScrollToTop()
     return (
@@ -36,7 +36,7 @@ function LocalistsRoof() {
             <RateExperience />
             <HeroSection
                 title="Get A Free Roofing Quote"
-                heading="Find Your Local Roofing Company"
+                heading={heading}
                 description="Complete the form below to get a free quote from us today"
                 bannerImage="/newppc/roofbanner.webp"
                 altText="Professional roofers roofing a new build with ceramic roof tiles"

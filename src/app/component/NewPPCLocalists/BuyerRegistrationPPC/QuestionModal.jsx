@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
     setbuyerRequestData,
 } from "@/lib/store/buyerslice/buyerSlice";
@@ -14,7 +14,7 @@ import H3 from "../../UI/Typography/H3";
 import H4 from "../../UI/Typography/H4";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import IconOptionCard from "./IconOptionCard";
-
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 const keyframesCSS = `
 @keyframes slideInRight {
@@ -60,6 +60,7 @@ const QuestionModal = ({
     OptionsIconsData,
     featureRef
 }) => {
+      const router = useRouter();
     const dispatch = useDispatch();
     const { buyerRequest, requestLoader, citySerach, questionLoader } =
         useSelector((state) => state.buyer);
@@ -191,6 +192,8 @@ const QuestionModal = ({
             }
             };
     const handleNextCheckBox = () => {
+        const canContinue = checkAuthenticatedUser(router);
+            if (!canContinue) return;
         if (selectedOption.length === 0) {
             setError("Please select at least one option");
             return;
@@ -275,6 +278,9 @@ const QuestionModal = ({
     };
 
     const handleNext = (selected) => {
+            const canContinue = checkAuthenticatedUser(router);
+            if (!canContinue) return;
+
         if (selected.length === 0) {
             setError("Please select at least one option");
             return;
