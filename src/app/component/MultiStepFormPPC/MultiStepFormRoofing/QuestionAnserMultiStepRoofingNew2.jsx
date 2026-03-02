@@ -376,7 +376,7 @@ const QuestionAnserMultiStepRoofingNew2 = ({
       subtitle={
         currentQuestion === 0
           ? !isQuestionWithImage
-            ? "To find the ideal roofing companies for your project, simply complete the quick form below."
+            ? "To find the ideal roofing company for your project, simply complete the quick form below."
             : ""
           : ""
       }

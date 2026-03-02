@@ -24,6 +24,63 @@ const adviceMenu = [
     icon: "/MegaMenu/flatRoof.svg",  // ✅ jo bhi SVG choose karo
   },
 ];
+export const MobileMegaMenu = [
+  {
+    name: "Home & Garden",
+    path: "home",
+    icon: "/house.svg",
+    subcategory: [
+      {
+        id: 49,
+        name: "Fence & Gate Installation",
+        path: "fencing-contractors-near-me",
+      },
+      {
+        id: 51,
+        name: "Driveway Installation",
+        path: "driveway-installers-near-me",
+      },
+      { id: 52, name: "Patio Laying", path: "patio-layers-near-me" },
+      {
+        id: 54,
+        name: "Artificial Grass Installation",
+        path: "artificial-grass-installers-near-me",
+      },
+      { id: 43, name: "Landscaping", path: "landscape-gardeners-near-me" },
+      { id: 44, name: "Tree Surgery", path: "tree-surgeon-near-me" },
+      { id: 45, name: "Gutter Cleaning", path: "gutter-cleaning-near-me" },
+      { id: 113, name: "Roofing", path: "roofers-near-me" },
+      {
+        id: 46,
+        name: "Painter and Decorator",
+        path: "painter-and-decorator-near-me",
+      },
+    ],
+  },
+  
+  {
+    name: "Transport",
+    path: "transportation-services",
+    icon: "/airport.svg",
+    subcategory: [
+      { name: "Airport Transfers", path: "airport-transfers-near-me" },
+    ],
+  },
+  {
+    name: "Lessons & Training",
+    path: "lessons-training",
+    icon: "/lessons.svg",
+    subcategory: [
+      { name: "Physics and Maths", path: "physics-maths-tutors-near-me" },
+      { name: "Tutoring", path: "tutors-near-me" },
+    ],
+  },
+   {
+    name: "How Long Does a Flat Roof Last",
+    path: "blog/advice/how-long-does-a-flat-roof-last",
+    icon: "/MegaMenu/flatRoof.svg",  // ✅ jo bhi SVG choose karo
+  },
+];
 const SearchResultForHeader = dynamic(() => import("./SearchResultForHeader"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -167,7 +224,7 @@ export default function Header() {
           </div>
 
           <div className="flex lg:hidden items-center justify-between px-2.5 py-2.5 md:py-[9.5px] md:px-16">
-            <MegaMenu>
+            <MegaMenu menuData={MobileMegaMenu} menuHeading="Services" >
               <button type="button" aria-label="Open mobile menu">
                 <MobileMenuIcon className="" />
               </button>

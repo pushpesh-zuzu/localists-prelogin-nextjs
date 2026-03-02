@@ -150,6 +150,7 @@ const DescribeYourRequestLandingNewPPC = ({
       isOpen={true}
       maxWidth="md:max-w-[540px] "
       maxHeight="max-h-[90vh]"
+      showCloseIcon={false}
     >
       {/* Success Message */}
       <div className="mb-[10px] flex items-center justify-center gap-[6.18px] text-base font-medium text-[#00afe3] max-[480px]:items-start max-[480px]:text-left max-[480px]:text-[13px] max-[480px]:font-semibold">

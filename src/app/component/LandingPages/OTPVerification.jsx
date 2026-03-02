@@ -191,7 +191,7 @@ const OtpVerification = ({
       isOpen={true}
       maxWidth="max-w-[90%] sm:max-w-[500px] mt-[5%]"
       showClosIcon={false}
-      radius="rounded-[10px]"
+      radius="rounded-[20px]"
     >
       <div className="w-full max-w-[500px] bg-white px-2  md:px-8 py-[35px] text-center shadow-sm sm:px-[31px] sm:py-[35px]">
         {/* Title */}

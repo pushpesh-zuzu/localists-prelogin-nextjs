@@ -284,7 +284,7 @@ const QuestionAnswerMultiStepFence2 = ({
       subtitle={
         currentQuestion === 0
           ? !isQuestionWithImage
-            ? "To find the ideal fencing companies for your project, simply complete the quick form below."
+            ? "To find the ideal fencing company for your project, simply complete the quick form below."
             : ""
           : ""
       }

@@ -209,13 +209,13 @@ export default function MegaMenu({
       onMouseLeave={handleMouseLeave}
     >
       <div
-        onClick={() => {
-          if (isMobile) {
-            setIsOpen(!isOpen);
-          }
-        }}
-        style={{ display: 'inline-block' }}
-      >
+          onClick={() => {
+            if (isMobile) {
+              isOpen ? handleClose() : handleOpen();
+            }
+          }}
+          style={{ display: "inline-block" }}
+        >
         {children}
       </div>
 

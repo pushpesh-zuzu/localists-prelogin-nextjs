@@ -319,7 +319,7 @@ const WhatServiceYouNeed = ({
         maxWidth="max-w-[90%] md:max-w-[550px]"
         onClose={() => { handleCloseClick() }}
         padding="px-3 py-4 md:px-7.5 md:pt-3 pb-6"
-        radius="rounded-[10px]"
+        radius="rounded-[20px]"
         nextButtonClassName="bg-[#00afe3] hover:bg-[#008cc0]"
       >
         {/* Service Input */}
