@@ -60,17 +60,17 @@ px-6 md:px-5 py-10 md:py-3
 flex flex-row items-center justify-between 
 relative overflow-hidden md:pr-[170px]"> */}
           <div className="bg-[#00afe3] rounded-3xl 
-px-5 md:px-5 py-5 md:py-3 
-flex flex-col md:flex-row items-center md:items-center justify-between 
+px-5 md:px-5 py-2 md:py-3 md:gap-0 gap-1
+flex flex-row items-center md:items-center justify-between 
 relative overflow-hidden md:pr-[170px]">
 
             {/* LEFT CONTENT */}
             <div className="z-10 flex-1 text-left">
-              <H3 className="text-white tracking-wide md:tracking-[-0.03em]">
-                {text}
+              <H3 className="text-white tracking-wide md:tracking-[-0.03em] md:!text-[22px] md:!leading-[24px]
+        lg:!text-[35px] lg:!leading-[35px] xl:!text-[38px] xl:!leading-[38px] !text-[15px] !leading-[15px]">{text}
               </H3>
 
-              <div className="mt-4 md:mt-6 flex flex-row items-center gap-4 justify-center md:justify-start">
+              <div className="mt-3 md:mt-6 flex flex-row items-center md:gap-4 gap-2 justify-start">
                 <input
                   type="text"
                   value={postcode}
@@ -80,12 +80,22 @@ relative overflow-hidden md:pr-[170px]">
                   }}
                   onKeyDown={handleKeyPress}
                   placeholder="Post Code"
-                  className="custom-input px-6 py-3 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-35 md:w-40 lg:w-55"
+                  className="custom-input px-1 py-2 md:px-6 md:py-3 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-23 md:w-40 lg:w-55"
                 />
 
-                <Button variant={variant}
+                <Button
+                  variant={variant}
                   onClick={handleSubmit}
-                  className={`${buttonClassQuote} bg-green-500 hover:bg-green-600 border border-3 border-white cursor-pointer transition rounded-full text-white font-semibold shadow-md`}>
+                  className="
+    px-4 py-2 text-sm 
+    md:px-8 md:py-[8px] md:text-base
+    bg-green-500 hover:bg-green-600 
+    border border-3 border-white 
+    cursor-pointer transition 
+    rounded-full text-white 
+    font-semibold shadow-md
+  "
+                >
                   Start
                 </Button>
               </div>
@@ -94,7 +104,7 @@ relative overflow-hidden md:pr-[170px]">
             </div>
 
             {/* RIGHT SIDE (30 SEC CIRCLE) */}
-            <div className="mt-2 md:mt-0 relative flex items-center justify-center md:mr-2">
+            <div className="mt-0 relative flex items-center justify-center md:mr-2">
               <div className="relative w-[100px] h-[100px] md:w-[145px] md:h-[145px] flex items-center justify-center">
                 {/* Rounded SVG */}
                 <RoundedLogo width={150} height={150} />

@@ -23,7 +23,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
     type: "p",
     text: "General roof repairs cost £750 on average but this can go increase or decrease based on the complexity of the job and scale of the damage. Small leaks, cracked tiles, or early signs of wear can cost anywhere between £350 and £1,450 to repair. Catching these early can save you from much bigger bills later."
   },
-  // { type: "PostCodeSectionLocation" },
+  { type: "PostCodeSectionLocation" },
   {
     type: "pbold",
     text: "Flat roof repairs"
@@ -114,12 +114,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
     type: "p",
     text: "If a quote feels vague or leaves things out, don’t be afraid to ask questions. A trustworthy roofer will be happy to explain exactly what you’re paying for, no fine print, no confusion, no awkward conversations."
   },
-  // {
-  //   type: "QuotesBanner",
-  //   className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[100px] lg:mb-[100px]"
-  // },
-  { type: "PostCodeSectionLocation" },
-
+  {
+    type: "QuotesBanner",
+    className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[100px] lg:mb-[100px]"
+  },
   {
     type: "h2",
     text: "Find the Right Roofer in Chester for the Job",
