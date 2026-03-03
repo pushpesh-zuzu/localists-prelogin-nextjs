@@ -1,3 +1,4 @@
+import SEO from "@/app/component/common/seo/SEO";
 import MultiStepFormDriveways from "@/app/component/MultiStepFormPPC/MultiFormDriveways/MultiStepFormDriveways";
 import React from "react";
 export const metadata = {
@@ -10,7 +11,15 @@ export const metadata = {
   },
 };
 function page() {
-  return <MultiStepFormDriveways isQuestionWithImage />;
+  return (
+    <>
+      <SEO
+        canonicalPath="/en/gb/driveways-multi-form-ppc-banner"
+        conversion={false}
+      />
+      <MultiStepFormDriveways isQuestionWithImage />;
+    </>
+  )
 }
 
 export default page;

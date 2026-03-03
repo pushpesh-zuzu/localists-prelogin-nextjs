@@ -19,7 +19,7 @@ export default function QuotesBanner({
   text = "ROOFING QUOTES IN",
   variant = "secondary",
   classQuote = "w-full flex justify-center items-center",
-  containerWidth = "w-full md:w-[100%] lg:w-[74%] max-w-6xl",
+  containerWidth = "w-full max-w-6xl",
   buttonClassQuote = "md:py-[8px] md:px-8 px-4 py-2",
   serviceId = 113,
   serviceName = "Roofing",
@@ -176,18 +176,18 @@ px-6 md:px-5 py-10 md:py-3
 flex flex-row items-center justify-between 
 relative overflow-hidden md:pr-[170px]"> */}
           <div className="bg-[#00afe3] rounded-3xl 
-px-3 md:px-5 py-2 md:py-3
+px-3 md:px-6 lg:px-[39px] py-2 md:py-3
 flex flex-row items-center md:items-center justify-between 
-relative overflow-hidden md:pr-[170px]">
+relative overflow-hidden">
 
             {/* LEFT CONTENT */}
             <div className="z-10 flex-1 text-left">
               <H3 className="text-white tracking-wide md:tracking-[-0.03em] md:!text-[22px] md:!leading-[24px]
-        lg:!text-[35px] lg:!leading-[35px] xl:!text-[38px] xl:!leading-[38px] !text-[15px] !leading-[15px]">{text}
+        lg:!text-[45px] lg:!leading-[31.3px] xl:!text-[45px] xl:!leading-[31.3px] !text-[15px] !leading-[15px]">{text}
               </H3>
 
               <div className="mt-3 md:mt-6 relative">
-                <div className="flex flex-row items-center md:gap-4 gap-2">
+                <div className="flex flex-row items-center lg:gap-5 md:gap-4 gap-2">
                   <div className="relative">
                     <input
                       type="text"
@@ -197,14 +197,14 @@ relative overflow-hidden md:pr-[170px]">
                       disabled={disabled}
                       autoComplete="off"
                       placeholder="Post Code"
-                      className="custom-input px-1 py-2 md:px-6 md:py-3 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-27 md:w-40 lg:w-55"
+                      className="custom-input px-1 py-2 md:px-6 md:py-3 lg:py-5 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-27 md:w-40 lg:w-74"
                     />
                     {postcode && (
                       <div className="absolute right-3 top-1/2 -translate-y-1/2">
                         {isValidating ? (
-                          <Loader2 className="w-4 h-4 md:w-5 md:h-5 text-gray-400 animate-spin" />
+                          <Loader2 className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-gray-400 animate-spin" />
                         ) : isValid ? (
-                          <CheckIcon className="w-4 h-4 text-white bg-green-500 rounded-full" />
+                          <CheckIcon className="w-4 h-4 lg:w-6 lg:h-6 text-white bg-green-500 rounded-full" />
                         ) : null}
                       </div>
                     )}
@@ -214,7 +214,7 @@ relative overflow-hidden md:pr-[170px]">
                     onClick={handleSubmit}
                     className={`${buttonClassQuote}
         bg-green-500 hover:bg-green-600 
-        border border-3 border-white 
+        border border-3 border-white lg:py-4 lg:w-28
         cursor-pointer transition 
         rounded-full text-white 
         font-semibold shadow-md`}
@@ -232,15 +232,15 @@ relative overflow-hidden md:pr-[170px]">
             </div>
 
             {/* RIGHT SIDE (30 SEC CIRCLE) */}
-            <div className="mt-0 relative flex items-center justify-center md:mr-2">
-              <div className="relative w-[100px] h-[100px] md:w-[145px] md:h-[145px] flex items-center justify-center">
+            <div className="mt-0 relative flex items-center justify-center md:mr-38 lg:mr-65">
+              <div className="relative w-[100px] h-[100px] md:w-[145px] md:h-[145px] lg:w-[194px] lg:h-[194px] flex items-center justify-center">
                 {/* Rounded SVG */}
-                <RoundedLogo width={150} height={150} />
+                <RoundedLogo width={194} height={194} />
                 <div className="absolute inset-0 mt-2 md:mt-[10px] flex flex-col items-center justify-center text-white rotate-[15deg]">
-                  <span className="font-Inter tracking-[-0.03em] text-[50px] leading-[50px] md:text-[80px] font-bold md:leading-[80px]">
+                  <span className="font-Inter tracking-[-0.03em] text-[50px] leading-[50px] md:text-[80px] font-bold md:leading-[80px] lg:text-[110px] lg:leading-[110px]">
                     30
                   </span>
-                  <span className="font-[Arial] tracking-[-0.03em] text-[18px] md:text-[22px] md:-mt-3 -mt-2">
+                  <span className="font-[Arial] tracking-[-0.03em] text-[18px] md:text-[22px] lg:text-[30px] md:-mt-3 -mt-2 lg:-mt-5">
                     Sec
                   </span>
                 </div>
@@ -248,16 +248,17 @@ relative overflow-hidden md:pr-[170px]">
             </div>
 
             {/* Background Faded Text */}
-            <BackgroundLogo className="w-[280px] md:w-[600px]" />
+            <BackgroundLogo className="w-[280px] md:w-[500px] lg:w-[800px]" />
           </div>
           {/* PHONE IMAGE (Desktop only) */}
-          <div className="hidden md:block absolute right-6 top-1/2 transform -translate-y-1/2">
+          <div className="hidden md:block absolute md:right-6 lg:right-9 top-1/2 transform -translate-y-1/2">
             <Image
               src="/nearme/Roofing/mobileroof.webp"
               alt="phone"
               width={140}
               height={200}
-              className="object-contain"
+              className="object-contain md:w-[140px] md:h-[200px] 
+               lg:w-[234px] lg:h-[464px]"
             />
           </div>
 

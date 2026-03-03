@@ -285,7 +285,9 @@ function page() {
             <FloatingButtonWrapper>
                 {(heroRef, sectionsStartRef) => (
                     <>
-                        <SEO conversion />
+                        <SEO
+                            canonicalPath="/en/gb/new-ppc-roof-and-replacements"
+                            conversion={false} />
                         <div ref={heroRef}>
                             <HeroSectionNewPPC
                                 trustedText="Trusted New Roof Installation & Replacement Specialists"
