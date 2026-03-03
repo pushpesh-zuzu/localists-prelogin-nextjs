@@ -93,7 +93,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
   },
   {
     type: "QuotesBanner",
-    className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[100px] lg:mb-[100px]"
+    className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[154px] lg:mb-[154px]"
   },
   // {
   //   type: "PostCodeSectionLocation",
