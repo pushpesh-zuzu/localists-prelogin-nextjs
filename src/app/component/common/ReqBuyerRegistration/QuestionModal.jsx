@@ -261,14 +261,14 @@ const QuestionModal = ({
 
     const handleCloseClick = () => {
         if (questionanswerData?.length === 0) {
-            onClose?.(); 
+            onClose?.();
             dispatch(clearSetbuyerRequestData());
             dispatch(clearBuyerRegisterFormData());
         } else {
             if (!getBarkToken()) {
                 setShowConfirmModal(true);
             } else {
-                onClose?.(); 
+                onClose?.();
                 dispatch(clearSetbuyerRequestData());
                 dispatch(clearBuyerRegisterFormData());
             }
@@ -294,7 +294,7 @@ const QuestionModal = ({
             onNext={() => handleNext()}
             onBack={handleBack}
             maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
-            maxHeight="max-h-[95vh]"
+            maxHeight="max-h-[87vh]"
             padding="pb-[20px] md:pb-[30px] lg:pb-[30px]"
             buyerStep={buyerStep}
             fixedHeight={true}
@@ -303,6 +303,7 @@ const QuestionModal = ({
             showButtons={true}
             buttongroup="lg:mx-[76px] md:mx-[60.4px] mx-4.5"
             progressPercent={progressPercent}
+            marginTop="lg:mt-[12vh] mt-[5vh]"
         >
             <div className="border border-[#D9D9D9] rounded-[30px] mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
                 {loading ? (
@@ -328,7 +329,7 @@ const QuestionModal = ({
                                             setSelectedOption([opt.option]);
                                             setError("");
                                             handleNext(opt.option);
-                                        } else  {
+                                        } else {
                                             // Multi toggle
                                             setSelectedOption((prev) =>
                                                 prev.includes(opt.option)

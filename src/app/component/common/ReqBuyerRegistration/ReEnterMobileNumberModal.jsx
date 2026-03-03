@@ -133,12 +133,13 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile, progressPercent }) {
             title=""
             onNext={handleSubmit}
             maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
-            maxHeight="max-h-[100vh]"
+            maxHeight="max-h-[90vh]"
             padding="pb-[20px] md:pb-[30px] lg:pb-[30px]"
             buttongroup="lg:mx-[75.4px] md:mx-[63px] mx-[18px]"
             showProgressBar={true}
             buyerStep={buyerStep}
             progressPercent={progressPercent}
+            marginTop="lg:mt-[12vh] mt-[5vh]"
         >
             <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
                 <div className="lg:pt-[40px] lg:pb-[30px] pt-[20px] pb-[20px] md:pt-[30px] md:pb-[20px] text-center">

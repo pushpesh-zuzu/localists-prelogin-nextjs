@@ -122,7 +122,7 @@ const DescribeYourRequestModal = ({ nextStep, progressPercent, sellers }) => {
                 onNext={handleSubmit}
                 // onBack={handleBack}
                 maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
-                maxHeight="max-h-[97vh]"
+                maxHeight="lg:max-h-[86vh] max-h-[91vh]"
                 padding="pb-[20px] md:pb-[30px] lg:pb-[30px]"
                 buyerStep={buyerStep}
                 fixedHeight={true}
@@ -136,6 +136,7 @@ const DescribeYourRequestModal = ({ nextStep, progressPercent, sellers }) => {
                 viewMatches={false}
                 progressPercent={progressPercent}
                 nextButtonClassName="flex items-center justify-center gap-2"
+                marginTop="lg:mt-[12vh] mt-[6vh]"
             >
                 <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
                     {buyerStep === 10 ? (

@@ -114,7 +114,7 @@ const OtpVerificationModal = ({
         showToast("success", result?.message);
 
         const formData = new FormData();
-        formData.append("service_id",  buyerRequest?.service_id || serviceId || "");
+        formData.append("service_id", buyerRequest?.service_id || serviceId || "");
         formData.append("postcode", buyerRequest?.postcode || "");
         formData.append("city", citySerach || "");
         formData.append("phone", buyerRequest?.phone || "");
@@ -193,7 +193,7 @@ const OtpVerificationModal = ({
       buyerStep={buyerStep}
       showProgressBar={true}
       progressPercent={progressPercent}
-
+      marginTop="lg:mt-[5vh]"
 
     >
       <div className="mx-auto text-center max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">

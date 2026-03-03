@@ -212,7 +212,7 @@ function NameEmailPhone({
             title="Your Details"
             onNext={handleSubmit}
             maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
-            maxHeight="max-h-[95vh]"
+            maxHeight="max-h-[90vh]"
             padding="pb-[20px] md:pb-[30px] lg:pb-[30px]"
             disabled={isChecking}
             buyerStep={buyerStep}
@@ -221,6 +221,7 @@ function NameEmailPhone({
             titleClassName="text-left"
             buttongroup="lg:mx-[75.4px] md:mx-[63px] mx-[18px]"
             progressPercent={progressPercent}
+            marginTop="lg:mt-[10vh] mt-[5vh]"
         >
             <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
                 <InputField

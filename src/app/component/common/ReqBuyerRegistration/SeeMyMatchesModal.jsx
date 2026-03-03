@@ -302,8 +302,9 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
             onNext={handleSubmit}
             onBack={handleBack}
             maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
-            maxHeight="max-h-[95vh]"
+            maxHeight="lg:max-h-[85vh] max-h-[90vh]"
             padding="pb-[20px] md:pb-[30px] lg:pb-[30px]"
+            marginTop="lg:mt-[12vh] mt-[6vh]"
             buyerStep={buyerStep}
             fixedHeight={true}
             showProgressBar={true}

@@ -37,7 +37,8 @@ const Modal = ({
     buttongroup = "mx-auto",
     viewMatches = false,
     progressPercent,
-    viewMatchesIcon
+    viewMatchesIcon,
+    marginTop = "",
 }) => {
     if (!isOpen) return null;
 
@@ -45,7 +46,7 @@ const Modal = ({
 
     const modalContent = (
         <div
-            className={`fixed inset-0 ${zIndex} flex items-center lg:pt-[50px] pt-0 justify-center ${insetBG}`}
+            className={`fixed inset-0 ${zIndex} ${marginTop} flex items-center justify-center ${insetBG}`}
         >
             <div
                 className={`relative w-full ${maxWidth} ${maxHeight} bg-white shadow-2xl flex flex-col ${radius} overflow-hidden`}
