@@ -277,13 +277,14 @@ export default function MegaMenu({
                         }}
                         className="flex items-center gap-3"
                       >
-                        <Image
+                        {item.icon && <Image
                           src={item.icon}
                           alt=""
                           width={20}
                           height={20}
                           aria-hidden="true"
-                        />
+                        />}
+                        {!item.icon && <div className="h-5 w-5 md:hidden"/>}
                         <span className="text-sm font-bold text-gray-700 group-hover:text-gray-900">
                           {item.name}
                         </span>

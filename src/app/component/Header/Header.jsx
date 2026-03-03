@@ -21,7 +21,7 @@ const adviceMenu = [
   {
     name: "How Long Does a Flat Roof Last",
     path: "blog/advice/how-long-does-a-flat-roof-last",
-    icon: "/MegaMenu/flatRoof.svg",  // ✅ jo bhi SVG choose karo
+    // icon: "/MegaMenu/flatRoof.svg",  // ✅ jo bhi SVG choose karo
   },
 ];
 export const MobileMegaMenu = [
@@ -78,7 +78,7 @@ export const MobileMegaMenu = [
    {
     name: "How Long Does a Flat Roof Last",
     path: "blog/advice/how-long-does-a-flat-roof-last",
-    icon: "/MegaMenu/flatRoof.svg",  // ✅ jo bhi SVG choose karo
+    // icon: "/MegaMenu/flatRoof.svg",  // ✅ jo bhi SVG choose karo
   },
 ];
 const SearchResultForHeader = dynamic(() => import("./SearchResultForHeader"), {
