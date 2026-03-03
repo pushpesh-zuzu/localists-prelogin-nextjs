@@ -1,3 +1,4 @@
+import SEO from "@/app/component/common/seo/SEO";
 import MultiStepFormFencing from "@/app/component/MultiStepFormPPC/MultiStepFormFencing/MultiStepFormFencing";
 import React from "react";
 export const metadata = {
@@ -10,7 +11,15 @@ export const metadata = {
   },
 };
 function page() {
-  return <MultiStepFormFencing isQuestionWithImage />;
+  return (
+    <>
+      <SEO
+        canonicalPath="/en/gb/fence-multi-form-ppc-banner"
+        conversion={false}
+      />
+      <MultiStepFormFencing isQuestionWithImage />
+    </>
+  );
 }
 
 export default page;

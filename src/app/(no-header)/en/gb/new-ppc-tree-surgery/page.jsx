@@ -223,65 +223,67 @@ function page() {
     useRegistrationRedirect();
     return (
         <>
-        <CloseBrowserAbandon />
-        <FloatingButtonWrapper>
-            {(heroRef, sectionsStartRef) => (
-                <>
-                    <SEO conversion />
-                    <div ref={heroRef}>
-                        <HeroSectionNewPPC
-                            heading1="Tree Surgeons"
-                            trustedText="Trusted Tree Surgery"
-                            quoteText="Find Expert Tree Surgeons Near You"
-                            questionDescription="To find the ideal Tree Surgeon for your project, simply complete the quick form below"
-                            serviceId={112}
+            <CloseBrowserAbandon />
+            <FloatingButtonWrapper>
+                {(heroRef, sectionsStartRef) => (
+                    <>
+                        <SEO
+                            canonicalPath="/en/gb/new-ppc-tree-surgery"
+                            conversion={false} />
+                        <div ref={heroRef}>
+                            <HeroSectionNewPPC
+                                heading1="Tree Surgeons"
+                                trustedText="Trusted Tree Surgery"
+                                quoteText="Find Expert Tree Surgeons Near You"
+                                questionDescription="To find the ideal Tree Surgeon for your project, simply complete the quick form below"
+                                serviceId={112}
+                            />
+                        </div>
+                        <div ref={sectionsStartRef}>
+                            <HowItWorkNewPPC
+                                steps={[
+                                    {
+                                        icon: <TreeEditIcon />,
+                                        text: "Fill in your details for your project",
+                                    },
+                                    {
+                                        icon: <TreeUserIcon />,
+                                        text: "Receive quotes from professionals",
+                                    },
+                                    {
+                                        icon: <TreeDocumentSearchIcon />,
+                                        text: "Compare your quotes and enjoy great savings",
+                                    },
+                                ]}
+                            />
+                        </div>
+                        <PopularServicesTypes
+                            heading1="Tree Surgery"
+                            heading2="Services"
+                            description="Local comprehensive tree care services tailored to your needs:"
+                            data={NEW_PPC_POPULUAR_SERVICE_TYPE}
                         />
-                    </div>
-                    <div ref={sectionsStartRef}>
-                        <HowItWorkNewPPC
-                            steps={[
-                                {
-                                    icon: <TreeEditIcon />,
-                                    text: "Fill in your details for your project",
-                                },
-                                {
-                                    icon: <TreeUserIcon />,
-                                    text: "Receive quotes from professionals",
-                                },
-                                {
-                                    icon: <TreeDocumentSearchIcon />,
-                                    text: "Compare your quotes and enjoy great savings",
-                                },
-                            ]}
+
+                        <TreeSurgeryCostGuide description="Understanding the costs involved in tree surgeon helps you budget effectively. Prices vary based on material, size, and complexity." CostGuidData={CostGuidData} />
+
+                        <ProfessionalServiceInstallation
+                            heading="Tree Surgery"
+                            topCards={PSI_TOP}
                         />
-                    </div>
-                    <PopularServicesTypes
-                        heading1="Tree Surgery"
-                        heading2="Services"
-                        description="Local comprehensive tree care services tailored to your needs:"
-                        data={NEW_PPC_POPULUAR_SERVICE_TYPE}
-                    />
 
-                    <TreeSurgeryCostGuide description="Understanding the costs involved in tree surgeon helps you budget effectively. Prices vary based on material, size, and complexity." CostGuidData={CostGuidData} />
+                        <TreeSurgeryRegionalGuide
+                            pricingData={treeSurgeryRegionalPricing}
+                            background="white"
+                        />
 
-                    <ProfessionalServiceInstallation
-                        heading="Tree Surgery"
-                        topCards={PSI_TOP}
-                    />
-
-                    <TreeSurgeryRegionalGuide
-                        pricingData={treeSurgeryRegionalPricing}
-                        background="white"
-                    />
-
-                    <FAQSection
-                        FrequentlyQuestion={FrequentlyQuestion}
-                        background="#FAFAFA"
-                        description="Get answers to common tree surgery questions"
-                    />
-                </>
-            )}
-        </FloatingButtonWrapper>
+                        <FAQSection
+                            FrequentlyQuestion={FrequentlyQuestion}
+                            background="#FAFAFA"
+                            description="Get answers to common tree surgery questions"
+                        />
+                    </>
+                )}
+            </FloatingButtonWrapper>
         </>
     );
 }

@@ -183,7 +183,7 @@ relative overflow-hidden">
             {/* LEFT CONTENT */}
             <div className="z-10 flex-1 text-left">
               <H3 className="text-white tracking-wide md:tracking-[-0.03em] md:!text-[22px] md:!leading-[24px]
-        lg:!text-[35px] lg:!leading-[35px] xl:!text-[38px] xl:!leading-[38px] !text-[15px] !leading-[15px]">{text}
+        lg:!text-[55px] lg:!leading-[45px] xl:!text-[55px] xl:!leading-[45px] !text-[15px] !leading-[15px]">{text}
               </H3>
 
               <div className="mt-3 md:mt-6 relative">
@@ -232,7 +232,7 @@ relative overflow-hidden">
             </div>
 
             {/* RIGHT SIDE (30 SEC CIRCLE) */}
-            <div className="mt-0 relative flex items-center justify-center md:mr-42 lg:mr-70">
+            <div className="mt-0 relative flex items-center justify-center md:mr-42 lg:mr-52">
               <div className="relative w-[100px] h-[100px] md:w-[145px] md:h-[145px] flex items-center justify-center">
                 {/* Rounded SVG */}
                 <RoundedLogo width={150} height={150} />

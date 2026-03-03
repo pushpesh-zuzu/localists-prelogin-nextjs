@@ -1,3 +1,4 @@
+import SEO from "@/app/component/common/seo/SEO";
 import MultiStepTreeSurgeon from "@/app/component/MultiStepFormPPC/MultiStepTreeSurgeon/MultiStepTreeSurgeon";
 import React from "react";
 export const metadata = {
@@ -11,7 +12,14 @@ export const metadata = {
 };
 
 function page() {
-  return <MultiStepTreeSurgeon serviceId={112} isQuestionWithImage />;
+  return (
+    <>
+      <SEO
+        canonicalPath="/en/gb/tree-surgeon-multi-form-ppc-banner"
+        conversion={false}
+      />
+      <MultiStepTreeSurgeon serviceId={112} isQuestionWithImage />;    </>
+  )
 }
 
 export default page;

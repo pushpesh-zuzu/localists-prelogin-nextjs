@@ -16,7 +16,8 @@ function NewGlobalFormPPC() {
             <FloatingButtonWrapper>
                 {(heroRef, sectionsStartRef) => (
                     <>
-                        <SEO conversion />
+                        <SEO canonicalPath="/en/gb/hire-home-improvement-experts-near-you-ppc"
+                            conversion={false} />
                         <div ref={heroRef}>
                             <HeroSectionNewPPC
                                 heading0="Find Trusted"

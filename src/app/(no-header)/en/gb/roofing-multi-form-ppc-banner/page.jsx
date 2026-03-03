@@ -1,3 +1,4 @@
+import SEO from "@/app/component/common/seo/SEO";
 import MultiStepRoofing from "@/app/component/MultiStepFormPPC/MultiStepFormRoofing/MultiStepRoofing";
 import React from "react";
 export const metadata = {
@@ -11,11 +12,17 @@ export const metadata = {
 };
 function page() {
   return (
-    <MultiStepRoofing
-      serviceName="Roofing"
-      isQuestionWithImage
-      serviceId={113}
-    />
+    <>
+      <SEO
+        canonicalPath="/en/gb/roofing-multi-form-ppc-banner"
+        conversion={false}
+      />
+      <MultiStepRoofing
+        serviceName="Roofing"
+        isQuestionWithImage
+        serviceId={113}
+      />
+    </>
   );
 }
 

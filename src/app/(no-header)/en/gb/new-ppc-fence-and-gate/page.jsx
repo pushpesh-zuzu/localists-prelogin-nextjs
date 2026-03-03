@@ -182,7 +182,9 @@ function page() {
             <FloatingButtonWrapper>
                 {(heroRef, sectionsStartRef) => (
                     <>
-                        <SEO conversion />
+                        <SEO
+                         canonicalPath="/en/gb/new-ppc-fence-and-gate"
+                         conversion={false} />
                         <div ref={heroRef}>
                             <HeroSectionNewPPC
                                 heading0="Find"

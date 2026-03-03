@@ -1,3 +1,4 @@
+import SEO from '@/app/component/common/seo/SEO';
 import MultiStepLandscaping from '@/app/component/MultiStepFormPPC/MulStepLandscaping/MultiStepLandscaping'
 import React from 'react'
 export const metadata = {
@@ -11,7 +12,13 @@ export const metadata = {
 };
 function page() {
   return (
-    <MultiStepLandscaping/>
+    <>
+      <SEO
+        canonicalPath="/en/gb/landscaping-multi-form-ppc"
+        conversion={false}
+      />
+      <MultiStepLandscaping />
+    </>
   )
 }
 

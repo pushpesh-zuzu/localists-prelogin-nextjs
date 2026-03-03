@@ -14,8 +14,8 @@ const QuestionOptionsBox = ({
             className={`
         relative
         w-full
-        px-4
-        h-[80px] flex
+        md:px-4 px-3
+        md:h-[80px] h-[52px] flex
         items-center
         justify-center
         text-center
