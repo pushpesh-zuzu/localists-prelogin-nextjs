@@ -19,7 +19,7 @@ export default function QuotesBanner({
   text = "ROOFING QUOTES IN",
   variant = "secondary",
   classQuote = "w-full flex justify-center items-center",
-  containerWidth = "w-full md:w-[100%] lg:w-[74%] max-w-6xl",
+  containerWidth = "w-full max-w-6xl",
   buttonClassQuote = "md:py-[8px] md:px-8 px-4 py-2",
   serviceId = 113,
   serviceName = "Roofing",
@@ -178,7 +178,7 @@ relative overflow-hidden md:pr-[170px]"> */}
           <div className="bg-[#00afe3] rounded-3xl 
 px-3 md:px-5 py-2 md:py-3
 flex flex-row items-center md:items-center justify-between 
-relative overflow-hidden md:pr-[170px]">
+relative overflow-hidden">
 
             {/* LEFT CONTENT */}
             <div className="z-10 flex-1 text-left">
@@ -187,7 +187,7 @@ relative overflow-hidden md:pr-[170px]">
               </H3>
 
               <div className="mt-3 md:mt-6 relative">
-                <div className="flex flex-row items-center md:gap-4 gap-2">
+                <div className="flex flex-row items-center lg:gap-8 md:gap-4 gap-2">
                   <div className="relative">
                     <input
                       type="text"
@@ -197,7 +197,7 @@ relative overflow-hidden md:pr-[170px]">
                       disabled={disabled}
                       autoComplete="off"
                       placeholder="Post Code"
-                      className="custom-input px-1 py-2 md:px-6 md:py-3 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-27 md:w-40 lg:w-55"
+                      className="custom-input px-1 py-2 md:px-6 md:py-3 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-27 md:w-40 lg:w-75"
                     />
                     {postcode && (
                       <div className="absolute right-3 top-1/2 -translate-y-1/2">
@@ -232,7 +232,7 @@ relative overflow-hidden md:pr-[170px]">
             </div>
 
             {/* RIGHT SIDE (30 SEC CIRCLE) */}
-            <div className="mt-0 relative flex items-center justify-center md:mr-2">
+            <div className="mt-0 relative flex items-center justify-center md:mr-42 lg:mr-70">
               <div className="relative w-[100px] h-[100px] md:w-[145px] md:h-[145px] flex items-center justify-center">
                 {/* Rounded SVG */}
                 <RoundedLogo width={150} height={150} />
