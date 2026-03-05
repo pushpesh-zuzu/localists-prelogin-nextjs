@@ -30,15 +30,15 @@ const DescribeYourRequest = () => {
     const dispatch = useDispatch();
     const router = useRouter();
 
-    useEffect(() => {
-        const delayDebounce = setTimeout(() => {
-            if (text.trim() !== "") {
-                dispatch(textQualityData({ text }));
-            }
-        }, 500);
+    // useEffect(() => {
+    //     const delayDebounce = setTimeout(() => {
+    //         if (text.trim() !== "") {
+    //             dispatch(textQualityData({ text }));
+    //         }
+    //     }, 500);
 
-        return () => clearTimeout(delayDebounce);
-    }, [text, dispatch]);
+    //     return () => clearTimeout(delayDebounce);
+    // }, [text, dispatch]);
 
     const handleChange = (e) => {
         setText(e.target.value);
@@ -185,7 +185,7 @@ const DescribeYourRequest = () => {
                             </ul>
                         )}
 
-                        <div className="mt-4 text-left">
+                        {/* <div className="mt-4 text-left">
                             <span className="text-[#828282] font-medium text-base">
                                 Request quality
                             </span>
@@ -201,7 +201,7 @@ const DescribeYourRequest = () => {
                             <p className="font-medium text-base text-[#828282] text-left">
                                 Quality score increases as you add more detail
                             </p>
-                        </div>
+                        </div> */}
 
                         <label className="mt-4 flex cursor-pointer items-center bg-gradient-to-r from-[#8ed5ec] to-[#00afe3] px-[18px] py-[16.35px] text-left text-sm font-medium text-white transition-all duration-300 ease-in-out max-[768px]:px-[14px] max-[768px]:py-[14px] max-[768px]:text-[13px] max-[480px]:px-3 max-[480px]:py-3 max-[480px]:text-[10px] max-[400px]:text-[10px] max-[350px]:text-[10px]">
                             <input

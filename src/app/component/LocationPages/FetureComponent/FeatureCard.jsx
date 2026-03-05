@@ -31,7 +31,20 @@ const decimal = avgRating - fullStars;
 const showHalf = decimal >= 0.5;
 const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
   return (
-    <>
+    <div className="relative">
+      {featured && (
+          <div
+            className="absolute z-0 -top-8.5 md:-top-9.5 lg:-top-12.5 md:-left-[8px] xl:-left-[4.7px]
+    left-1/2 -translate-x-1/2 md:translate-x-0
+    rounded-tl-[10px] rounded-tr-[10px] md:rounded-tl-[20px] md:rounded-tr-[20px] font-[Arial] font-black 
+    tracking-[-0.03em]
+    text-[14px]
+    md:text-[16px]
+    lg:text-[25px] bg-[#10C87B] text-white px-8 py-1.5 md:px-4.5 lg:px-8 pb-10"
+          >
+            FEATURED
+          </div>
+        )}
       <div
         onClick={() => {
           setActiveFeture(index);
@@ -44,33 +57,8 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
             : "ring-2 ring-[#fff] border-white md:ring-5"
           }`}
       >
-        {/* md:before:content-[''] 
-          md:before:absolute 
-          md:before:-top-[5px]
-          md:before:w-[20px] 
-          
-          lg:before:-top-[5px]
-          md:before:-left-[5px] 
-          lg:before:w-[15px] 
-          md:before:h-10 
-          md:before:border-t-15
-          md:before:border-l-[5px]
-          lg:before:border-l-[5px]
-         md:before:border-[#10C87B]
-          md:before:rounded-[3px] */}
-        {featured && (
-          <div
-            className="absolute z-40 -top-8.5 md:-top-9.5 lg:-top-12.5 md:left-[12px] 
-    left-1/2 -translate-x-1/2 md:translate-x-0
-    rounded-tl-[10px] rounded-tr-[10px] md:rounded-tl-[20px] md:rounded-tr-[20px] font-[Arial] font-black 
-    tracking-[-0.03em]
-    text-[14px]
-    md:text-[16px]
-    lg:text-[25px] bg-[#10C87B] text-white px-8 py-1.5 md:px-4.5 lg:px-8"
-          >
-            FEATURED
-          </div>
-        )}
+
+       
         <div className="z-50 relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           {/* LEFT */}
           <div className="flex items-start max-[768px]:justify-between md:gap-4">
@@ -196,6 +184,6 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
           serviceName={serviceName}
         />
       )}
-    </>
+    </div>
   );
 }

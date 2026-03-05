@@ -91,7 +91,7 @@ const PostCodeNewPPC = ({
     };
 
     return (
-        <div className="max-w-[600px] mx-auto">
+        <div className="max-w-[550px] mx-auto">
             <CardLayoutWrapper
                 buttonWrapperClassName="px-[28px] pb-[24px] max-[768px]:px-[16px] max-[768px]:pb-[20px]"
                 title={title}

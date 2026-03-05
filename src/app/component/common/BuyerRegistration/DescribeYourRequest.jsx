@@ -48,15 +48,15 @@ const DescribeYourRequest = ({
   const isComplete = buyerStep === 10;
 
   // Text quality debounce effect
-  useEffect(() => {
-    const delayDebounce = setTimeout(() => {
-      if (text.trim() !== "") {
-        dispatch(textQualityData({ text }));
-      }
-    }, 500);
+  // useEffect(() => {
+  //   const delayDebounce = setTimeout(() => {
+  //     if (text.trim() !== "") {
+  //       dispatch(textQualityData({ text }));
+  //     }
+  //   }, 500);
 
-    return () => clearTimeout(delayDebounce);
-  }, [text, dispatch]);
+  //   return () => clearTimeout(delayDebounce);
+  // }, [text, dispatch]);
 
   const handleChange = (e) => {
     setText(e.target.value);
@@ -254,12 +254,12 @@ const DescribeYourRequest = ({
       )}
 
       {/* Progress Container */}
-      <div className="mt-4 text-left ">
+      {/* <div className="mt-4 text-left ">
         <Paragraph className="text-base ">Quality Score</Paragraph>
-      </div>
+      </div> */}
 
       {/* Add More Detail */}
-      <div>
+      {/* <div>
         <Paragraph variant="small" className="mt-[16.5px] text-left">
           Your Quality score increases as you add more detail to your quote
         </Paragraph>
@@ -269,7 +269,7 @@ const DescribeYourRequest = ({
           className="h-full bg-[#02D07B] transition-all duration-300 ease-in-out"
           style={{ width: qualityScore > 0 ? `${qualityScore}%` : "0%" }}
         ></div>
-      </div>
+      </div> */}
 
       {/* Button */}
       <div className="mt-[30.44px] max-[480px]:mt-[20px] flex justify-center">

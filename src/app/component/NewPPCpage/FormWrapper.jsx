@@ -12,6 +12,7 @@ export default function FormWrapper({ children }) {
         max-[1024px]:w-full
         max-[1024px]:max-w-[550px]
         max-[1024px]:mx-auto
+        h-fit
       "
     >
       {children}

@@ -35,15 +35,15 @@ const DescribeYourRequestModal = ({ nextStep, progressPercent, sellers }) => {
     const dispatch = useDispatch();
     const router = useRouter();
 
-    useEffect(() => {
-        const delayDebounce = setTimeout(() => {
-            if (text.trim() !== "") {
-                dispatch(textQualityData({ text }));
-            }
-        }, 500);
+    // useEffect(() => {
+    //     const delayDebounce = setTimeout(() => {
+    //         if (text.trim() !== "") {
+    //             dispatch(textQualityData({ text }));
+    //         }
+    //     }, 500);
 
-        return () => clearTimeout(delayDebounce);
-    }, [text, dispatch]);
+    //     return () => clearTimeout(delayDebounce);
+    // }, [text, dispatch]);
 
     const handleChange = (e) => {
         setText(e.target.value);
@@ -222,21 +222,21 @@ const DescribeYourRequestModal = ({ nextStep, progressPercent, sellers }) => {
                                 </ul>
                             )}
 
-                            <div className="addMoreDetail mt-4 text-left">
+                            {/* <div className="addMoreDetail mt-4 text-left">
                                 <H5 className="font-bold">
                                     Quality score
                                 </H5>
                                 <Paragraph className="mt-3">
                                     Your Quality score increases as you add more detail to your quote
                                 </Paragraph>
-                            </div>
+                            </div> */}
                             {/* //progressbar */}
-                            <div className="w-full rounded-[20px] h-5 bg-[#eee] overflow-hidden mt-3">
+                            {/* <div className="w-full rounded-[20px] h-5 bg-[#eee] overflow-hidden mt-3">
                                 <div
                                     className="h-full bg-[#04d07b] transition-all duration-300 ease-in-out"
                                     style={{ width: qualityData > 0 ? `${qualityData}%` : "0%" }}
                                 ></div>
-                            </div>
+                            </div> */}
                             {/* <label className="mt-4 flex cursor-pointer items-center bg-gradient-to-r from-[#8ed5ec] to-[#00afe3] px-[18px] py-[16.35px] text-left text-sm font-medium text-white transition-all duration-300 ease-in-out max-[768px]:px-[14px] max-[768px]:py-[14px] max-[768px]:text-[13px] max-[480px]:px-3 max-[480px]:py-3 max-[480px]:text-[10px] max-[400px]:text-[10px] max-[350px]:text-[10px]">
                             <input
                                 type="checkbox"

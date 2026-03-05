@@ -44,15 +44,15 @@ const DescribeYourRequestLandingNewPPC = ({
   const isComplete = buyerStep === 10;
 
   // Text quality debounce effect
-  useEffect(() => {
-    const delayDebounce = setTimeout(() => {
-      if (text.trim() !== "") {
-        dispatch(textQualityData({ text }));
-      }
-    }, 500);
+  // useEffect(() => {
+  //   const delayDebounce = setTimeout(() => {
+  //     if (text.trim() !== "") {
+  //       dispatch(textQualityData({ text }));
+  //     }
+  //   }, 500);
 
-    return () => clearTimeout(delayDebounce);
-  }, [text, dispatch]);
+  //   return () => clearTimeout(delayDebounce);
+  // }, [text, dispatch]);
 
   const handleChange = (e) => {
     setText(e.target.value);
@@ -248,7 +248,7 @@ const DescribeYourRequestLandingNewPPC = ({
       )}
 
       {/* Progress Container */}
-      <div className="mt-4 text-left ">
+      {/* <div className="mt-4 text-left ">
         <Paragraph className="text-base  text-[#828282]">
           Request quality
         </Paragraph>
@@ -258,14 +258,14 @@ const DescribeYourRequestLandingNewPPC = ({
             style={{ width: qualityScore > 0 ? `${qualityScore}%` : "0%" }}
           ></div>
         </div>
-      </div>
+      </div> */}
 
       {/* Add More Detail */}
-      <div>
+      {/* <div>
         <Paragraph className="mt-[16.5px] text-left text-[#828282]">
           Quality score increases as you add more detail
         </Paragraph>
-      </div>
+      </div> */}
 
       {/* Checkbox Container */}
       <label className="mt-4 flex cursor-pointer items-center bg-gradient-to-r from-[#8ed5ec] to-[#00afe3] px-[18px] py-[16.35px] text-left text-sm font-medium text-white transition-all duration-300 ease-in-out max-[768px]:px-[14px] max-[768px]:py-[14px] max-[768px]:text-[13px] max-[480px]:px-3 max-[480px]:py-3 max-[480px]:text-[10px] max-[400px]:text-[10px] max-[350px]:text-[10px]">
