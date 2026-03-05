@@ -264,12 +264,26 @@ const QuestionAnswerMultiStepDriveways = ({
     }
   };
 
+  // const removeQuestionsAfter = (questionIndex) => {
+  //   const updatedAnswers =
+  //     buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
+
+  //   dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+  // };
+
   const removeQuestionsAfter = (questionIndex) => {
-    const updatedAnswers =
-      buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
+  const questionText = formattedQuestions[questionIndex]?.questions;
+
+  const indexInAnswers = buyerRequest?.questions?.findIndex(
+    (q) => q?.ques === questionText
+  );
+
+  if (indexInAnswers !== -1) {
+    const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
 
     dispatch(setbuyerRequestData({ questions: updatedAnswers }));
-  };
+  }
+};
 
   const handleBack = () => {
     setIsComingFromStep4(false);
@@ -286,7 +300,8 @@ const QuestionAnswerMultiStepDriveways = ({
         setProgressPercentage(85);
       }
     } else {
-      dispatch(setbuyerRequestData({ questions: [] }));
+      // console.log("calling", buyerRequest, isComingFromStep4)
+      // dispatch(setbuyerRequestData({ questions: [] }));
       onBack();
     }
   };

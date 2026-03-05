@@ -197,6 +197,7 @@ const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
                         setProgressPercentage={setProgressPercentage}
                         isQuestionWithImage={isQuestionWithImage}
                         serviceName="Fence & Gate Installation"
+                        currentQuesntionWhenBack={7}
                       />
                     </div>
                   )}

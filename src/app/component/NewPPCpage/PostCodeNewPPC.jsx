@@ -82,7 +82,7 @@ const PostCodeNewPPC = ({
 
         if (onNext) {
             onNext();
-            setBackButtonTriggered(false);
+            setBackButtonTriggered && setBackButtonTriggered(false);
         }
     };
 

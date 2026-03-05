@@ -291,20 +291,32 @@ const QuestionAnswerMultiStepTreeSurgeon = ({
   };
 
   const removeAnswersAfterIndex = async (questionIndex) => {
-    const updatedQuestions =
-      buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
+    // const updatedQuestions =
+    //   buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
 
-    dispatch(setbuyerRequestData({ questions: updatedQuestions }));
+    // dispatch(setbuyerRequestData({ questions: updatedQuestions }));
 
+    const questionText = formattedQuestions[questionIndex]?.questions;
+  
+      const indexInAnswers = buyerRequest?.questions?.findIndex(
+        (q) => q?.ques === questionText
+      );
+  
+      if (indexInAnswers !== -1) {
+        const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
+  
+        dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+      
     try {
       const formData = new FormData();
-      formData.append("questions", JSON.stringify(updatedQuestions));
+      formData.append("questions", JSON.stringify(updatedAnswers));
       formData.append("service_id", buyerRequest?.service_id);
       const response = await dispatch(getProgressPercentageAPI(formData));
       setProgressPercentage(response?.percentage);
     } catch (err) {
       console.error("Progress update failed:", err);
     }
+  }
   };
 
   const handleBack = async () => {
@@ -382,67 +394,67 @@ const QuestionAnswerMultiStepTreeSurgeon = ({
       // }
     }
   };
-  const handleBack2 = async () => {
-    setIsComingFromStep4(false);
+  // const handleBack2 = async () => {
+  //   setIsComingFromStep4(false);
 
-    if (questionHistory.length > 1) {
-      const newHistory = [...questionHistory];
-      newHistory.pop(); // remove current question index
-      const prevIndex = newHistory[newHistory.length - 1]; // previous question index
+  //   if (questionHistory.length > 1) {
+  //     const newHistory = [...questionHistory];
+  //     newHistory.pop(); // remove current question index
+  //     const prevIndex = newHistory[newHistory.length - 1]; // previous question index
 
-      setQuestionHistory(newHistory);
-      setCurrentQuestion(prevIndex);
+  //     setQuestionHistory(newHistory);
+  //     setCurrentQuestion(prevIndex);
 
-      // ✅ Find the question text of the previous question
-      const prevQuestionText = formattedQuestions[prevIndex]?.questions;
+  //     // ✅ Find the question text of the previous question
+  //     const prevQuestionText = formattedQuestions[prevIndex]?.questions;
 
-      // ✅ Find saved answer for that question (if any)
-      const prevSaved = buyerRequest?.questions?.find(
-        (q) => q.ques === prevQuestionText
-      );
+  //     // ✅ Find saved answer for that question (if any)
+  //     const prevSaved = buyerRequest?.questions?.find(
+  //       (q) => q.ques === prevQuestionText
+  //     );
 
-      if (prevSaved?.ans) {
-        // Split string answers into array
-        const prevAnsArray =
-          typeof prevSaved.ans === "string"
-            ? prevSaved.ans.split(",").map((a) => a.trim())
-            : [prevSaved.ans];
+  //     if (prevSaved?.ans) {
+  //       // Split string answers into array
+  //       const prevAnsArray =
+  //         typeof prevSaved.ans === "string"
+  //           ? prevSaved.ans.split(",").map((a) => a.trim())
+  //           : [prevSaved.ans];
 
-        setSelectedOption(prevAnsArray);
-      } else {
-        // No answer saved for previous question → clear selection
-        setSelectedOption([]);
-      }
+  //       setSelectedOption(prevAnsArray);
+  //     } else {
+  //       // No answer saved for previous question → clear selection
+  //       setSelectedOption([]);
+  //     }
 
-      // ✅ Remove current (last) question from buyerRequest in Redux
-      const updatedBuyerRequest = {
-        ...buyerRequest,
-        questions: buyerRequest.questions.slice(0, -1),
-      };
+  //     // ✅ Remove current (last) question from buyerRequest in Redux
+  //     const updatedBuyerRequest = {
+  //       ...buyerRequest,
+  //       questions: buyerRequest.questions.slice(0, -1),
+  //     };
 
-      dispatch(setbuyerRequestData(updatedBuyerRequest));
+  //     dispatch(setbuyerRequestData(updatedBuyerRequest));
 
-      // ✅ Update progress if needed
-      try {
-        const formData = new FormData();
-        formData.append(
-          "questions",
-          JSON.stringify(updatedBuyerRequest.questions)
-        );
-        formData.append("service_id", updatedBuyerRequest.service_id);
+  //     // ✅ Update progress if needed
+  //     try {
+  //       const formData = new FormData();
+  //       formData.append(
+  //         "questions",
+  //         JSON.stringify(updatedBuyerRequest.questions)
+  //       );
+  //       formData.append("service_id", updatedBuyerRequest.service_id);
 
-        if (prevIndex === 0) {
-          const response = await dispatch(getProgressPercentageAPI(formData));
-          setProgressPercentage(response.percentage);
-        }
-      } catch (err) {
-        console.error("Error updating progress on back:", err);
-      }
-    } else {
-      setProgressPercentage((pre) => pre - 10);
-      onBack();
-    }
-  };
+  //       if (prevIndex === 0) {
+  //         const response = await dispatch(getProgressPercentageAPI(formData));
+  //         setProgressPercentage(response.percentage);
+  //       }
+  //     } catch (err) {
+  //       console.error("Error updating progress on back:", err);
+  //     }
+  //   } else {
+  //     setProgressPercentage((pre) => pre - 10);
+  //     onBack();
+  //   }
+  // };
 
   if (questions.length === 0) {
     return (
