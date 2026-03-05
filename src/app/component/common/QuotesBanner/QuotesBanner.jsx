@@ -176,7 +176,7 @@ px-6 md:px-5 py-10 md:py-3
 flex flex-row items-center justify-between 
 relative overflow-hidden md:pr-[170px]"> */}
           <div className="bg-[#00afe3] rounded-3xl 
-px-3 md:px-6 lg:px-[39px] py-2 md:py-3
+px-3 md:px-6 lg:px-[44px] py-2 md:py-3
 flex flex-row items-center md:items-center justify-between 
 relative overflow-hidden">
 
@@ -187,7 +187,7 @@ relative overflow-hidden">
               </H3>
 
               <div className="mt-3 md:mt-6 relative">
-                <div className="flex flex-row items-center lg:gap-5 md:gap-4 gap-2">
+                <div className="flex flex-row items-center lg:gap-4.5 md:gap-4 gap-2">
                   <div className="relative">
                     <input
                       type="text"
@@ -197,7 +197,7 @@ relative overflow-hidden">
                       disabled={disabled}
                       autoComplete="off"
                       placeholder="Post Code"
-                      className="custom-input px-1 py-2 md:px-6 md:py-3 lg:py-5 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-27 md:w-40 lg:w-74"
+                      className="custom-input px-1 py-2 md:px-6 md:py-3 lg:py-2.5 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-27 md:w-40 lg:w-74 text-[14px] md:text-[16px] lg:!text-[28px] placeholder:text-[14px] md:placeholder:text-[16px] lg:placeholder:!text-[28px]"
                     />
                     {postcode && (
                       <div className="absolute right-3 top-1/2 -translate-y-1/2">
@@ -214,8 +214,8 @@ relative overflow-hidden">
                     onClick={handleSubmit}
                     className={`${buttonClassQuote}
         bg-green-500 hover:bg-green-600 
-        border border-3 border-white lg:py-4 lg:w-28
-        cursor-pointer transition 
+        border border-3 border-white lg:py-2 lg:w-28
+        cursor-pointer transition lg:text-[28px]
         rounded-full text-white 
         font-semibold shadow-md`}
                   >
@@ -232,7 +232,7 @@ relative overflow-hidden">
             </div>
 
             {/* RIGHT SIDE (30 SEC CIRCLE) */}
-            <div className="mt-0 relative flex items-center justify-center md:mr-38 lg:mr-65">
+            <div className="mt-0 relative flex items-center justify-center md:mr-38 lg:mr-62">
               <div className="relative w-[100px] h-[100px] md:w-[145px] md:h-[145px] lg:w-[194px] lg:h-[194px] flex items-center justify-center">
                 {/* Rounded SVG */}
                 <RoundedLogo width={194} height={194} />
@@ -248,17 +248,17 @@ relative overflow-hidden">
             </div>
 
             {/* Background Faded Text */}
-            <BackgroundLogo className="w-[280px] md:w-[500px] lg:w-[800px]" />
+            <BackgroundLogo className="w-[280px] md:w-[430px] lg:w-[650px] lg:-ml-21.5 md:-ml-14" />
           </div>
           {/* PHONE IMAGE (Desktop only) */}
-          <div className="hidden md:block absolute md:right-6 lg:right-9 top-1/2 transform -translate-y-1/2">
+          <div className="hidden md:block absolute md:right-6 lg:right-11 top-1/2 transform -translate-y-1/2">
             <Image
               src="/nearme/Roofing/mobileroof.webp"
               alt="phone"
               width={140}
               height={200}
               className="object-contain md:w-[140px] md:h-[200px] 
-               lg:w-[234px] lg:h-[464px]"
+               lg:w-[186px] lg:h-[375px]"
             />
           </div>
 
