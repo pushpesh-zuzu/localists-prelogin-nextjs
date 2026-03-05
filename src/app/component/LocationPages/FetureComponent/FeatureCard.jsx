@@ -34,7 +34,7 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
     <div className="relative">
       {featured && (
           <div
-            className="absolute z-0 -top-8.5 md:-top-9.5 lg:-top-12.5 md:-left-[8px] xl:-left-[4.7px]
+            className="absolute z-0 -top-8.5 md:-top-9.5 lg:-top-12.5 md:-left-[5px] xl:-left-[4.7px]
     left-1/2 -translate-x-1/2 md:translate-x-0
     rounded-tl-[10px] rounded-tr-[10px] md:rounded-tl-[20px] md:rounded-tr-[20px] font-[Arial] font-black 
     tracking-[-0.03em]
