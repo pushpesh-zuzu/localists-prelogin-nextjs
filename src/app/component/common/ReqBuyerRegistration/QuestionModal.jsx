@@ -339,20 +339,21 @@ const QuestionModal = ({
                                             setError("");
                                         }
                                     };
-                                    const isLastSingle =
-                                        arr.length % 2 !== 0 && index === arr.length - 1;
+                                    // const isLastSingle =
+                                    //     arr.length % 2 !== 0 && index === arr.length - 1;
 
                                     return (
                                         <div
                                             key={index}
-                                            className={isLastSingle ? "sm:col-span-2 sm:flex sm:justify-center" : ""}>
-                                            <div className={isLastSingle ? "w-full sm:w-1/2" : "w-full"}>
-                                                <QuestionOptionsBox
-                                                    label={opt.option}
-                                                    isSelected={isSelected}
-                                                    onSelect={handleSelect}
-                                                />
-                                            </div>
+                                        // className={isLastSingle ? "sm:col-span-2 sm:flex sm:justify-center" : ""}>
+                                        // <div className={isLastSingle ? "w-full sm:w-1/2" : "w-full"}
+                                        >
+                                            <QuestionOptionsBox
+                                                label={opt.option}
+                                                isSelected={isSelected}
+                                                onSelect={handleSelect}
+                                            />
+                                            {/* </div> */}
                                         </div>
                                     );
                                 }

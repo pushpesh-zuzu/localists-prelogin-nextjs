@@ -2,8 +2,17 @@
 import dynamic from "next/dynamic";
 import React from "react";
 import LogoWhiteIcon from "../../../../public/ReactIcons/LogoWhiteIcon";
-const PostCodeSearchFieldLocation = dynamic(
-  () => import("./PostCodeSearchFieldLocation"),
+// import PostCodeSearchContentLocation from "./PostCodeSearchContentLocation";
+// const PostCodeSearchFieldLocation = dynamic(
+//   () => import("./PostCodeSearchFieldLocation"),
+//   {
+//     ssr: false,
+//     loading: () => <div className="hidden">Loading...</div>,
+//   },
+// );
+
+const PostCodeSearchContentLocation = dynamic(
+  () => import("./PostCodeSearchContentLocation"),
   {
     ssr: false,
     loading: () => <div className="hidden">Loading...</div>,
@@ -40,7 +49,13 @@ function PostCodeSectionLocation({
         </p>
         {/* Left – Search */}
         <div className="w-[223px] mx-auto lg:mx-0 md:w-[343px] flex justify-center">
-          <PostCodeSearchFieldLocation
+          {/* <PostCodeSearchFieldLocation
+            serviceId={serviceId}
+            serviceName={serviceName}
+            buttonBg="bg-[#02D07B]"
+            margin={false}
+          /> */}
+          <PostCodeSearchContentLocation
             serviceId={serviceId}
             serviceName={serviceName}
             buttonBg="bg-[#02D07B]"
