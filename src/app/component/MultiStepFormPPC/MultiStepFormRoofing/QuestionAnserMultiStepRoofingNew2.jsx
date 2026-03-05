@@ -314,32 +314,32 @@ const QuestionAnserMultiStepRoofingNew2 = ({
     setIsComingFromStep3(false);
 
     if (questionHistory.length > 1) {
-      // if (questionsForProgress.length > 0) {
-      //   const lastQuestion =
-      //     questionsForProgress[questionsForProgress.length - 1];
-      //   const lastQuestionNo = lastQuestion.number;
-      //   removeQuestionByNumber(lastQuestionNo);
-      // }
+      if (questionsForProgress.length > 0) {
+        const lastQuestion =
+          questionsForProgress[questionsForProgress.length - 1];
+        const lastQuestionNo = lastQuestion.number;
+        removeQuestionByNumber(lastQuestionNo);
+      }
 
       const newHistory = [...questionHistory];
       newHistory.pop();
       const prevIndex = newHistory[newHistory.length - 1];
-      const prevQuestionNo =
-        formattedQuestions[prevIndex]?.question_no;
+      // const prevQuestionNo =
+      //   formattedQuestions[prevIndex]?.question_no;
 
-      removeQuestionsAfter(prevQuestionNo);
+      removeQuestionsAfter(prevIndex);
 
       setQuestionHistory(newHistory);
       setCurrentQuestion(prevIndex);
       setTotalQuestionsAnswered((prev) => Math.max(1, prev - 1));
     } else {
-      // if (questionsForProgress.length > 0) {
-      //   const firstQuestion = questionsForProgress[0];
-      //   const firstQuestionNo = firstQuestion.number;
-      //   removeQuestionByNumber(firstQuestionNo);
-      // }
+      if (questionsForProgress.length > 0) {
+        const firstQuestion = questionsForProgress[0];
+        const firstQuestionNo = firstQuestion.number;
+        removeQuestionByNumber(firstQuestionNo);
+      }
 
-      dispatch(setbuyerRequestData({ questions: [] }));
+      // dispatch(setbuyerRequestData({ questions: [] }));
       dispatch(setQuestionsForProgress([]));
 
       setQuestionHistory([0]);

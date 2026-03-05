@@ -172,6 +172,8 @@ const MultiStepFormDriveways = ({ isQuestionWithImage = false }) => {
     }
   }, []);
 
+  // console.log("buyerRequest", buyerRequest.questions)
+
   return (
     <>
       {!localRequestId && <CloseBrowserAbandon />}

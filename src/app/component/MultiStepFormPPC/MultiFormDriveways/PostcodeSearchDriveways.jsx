@@ -82,7 +82,7 @@ const PostcodeSearchDriveways = ({
       setIsCheckingPostcode(false);
     }
   };
-  console.log(postalCodeValidate, "postalCodeValidatepostalCodeValidate");
+  // console.log(postalCodeValidate, "postalCodeValidatepostalCodeValidate");
   const handleNext = (isValid = postalCodeValidate) => {
     if (!isValid) {
       showToast("error", "Please enter a valid postcode.");
