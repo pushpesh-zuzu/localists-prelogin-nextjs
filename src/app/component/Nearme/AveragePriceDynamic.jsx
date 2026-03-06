@@ -8,21 +8,25 @@ export default function AveragePriceDynamic({
     {
       description: "For a small tree removal (under 25ft), the average cost is",
       price: "£450",
+      className:"max-[760px]:min-h-10 max-[760px]:max-h-10  max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px]"
     },
     {
       description:
         "For a medium stump removal under 15 inch diameter), the average cost is",
       price: "£215",
+      className:"max-[760px]:min-h-10 max-[760px]:max-h-10 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px]"
     },
     {
       description:
         "Trimming or pruning a small tree (under 25ft) costs on average",
       price: "£250",
+      className:"max-[760px]:min-h-10 max-[760px]:max-h-10 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px]"
     },
     {
       description:
         "For medium stump grinding (under 15 inch in diameter), the average cost is",
       price: "£115",
+      className:"max-[760px]:min-h-10 max-[760px]:max-h-10 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px]"
     },
   ],
   disclaimerText = "*costs are estimates only, to get a more specific estimate try our",
@@ -57,28 +61,28 @@ export default function AveragePriceDynamic({
               <div className="">
                 <Paragraph
                   variant="VeryprimarySmall"
-                  className="max-[760px]:min-h-10 max-[760px]:max-h-10  max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px]  md:mx-auto  text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center  md:max-w-[220px]  lg:max-w-[90%]  lg:text-center"
+                  className={`${priceCards[0].className}tracking-[-0.03em]! md:mx-auto  text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center  md:max-w-[220px]  lg:max-w-[90%]  lg:text-center`}
                 >
                   {priceCards[0].description}
                 </Paragraph>
-                <p className="text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center  md:text-center lg:text-center text-[#253238] lg:mt-3">
+                {priceCards[0].price && <p className="text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center  md:text-center lg:text-center text-[#253238] lg:mt-3">
                   {priceCards[0].price}{" "}
                   <span className="text-base xl:text-2xl">per &nbsp; m²</span>
-                </p>
+                </p>}
               </div>
 
               {/* Price Card 2 */}
               <div className="">
                 <Paragraph
                   variant="VeryprimarySmall"
-                  className="max-[760px]:min-h-10 max-[760px]:max-h-10 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px] tracking-[-0.03em]! md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto  md:text-center lg:text-center  md:max-w-[220px]"
+                  className={`${priceCards[1].className} tracking-[-0.03em]! md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto  md:text-center lg:text-center  md:max-w-[220px]`}
                 >
                   {priceCards[1].description}
                 </Paragraph>
-                <p className=" text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3 ">
+                {priceCards[1].price && <p className=" text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3 ">
                   {priceCards[1].price}{" "}
-                  <span className="text-base xl:text-2xl">per &nbsp; m²</span>
-                </p>
+                  <span className="text-sm xl:text-2xl">per &nbsp; m²</span>
+                </p>}
               </div>
 
               {/* Divider Line */}
@@ -88,30 +92,30 @@ export default function AveragePriceDynamic({
               <div className="h-full">
                 <Paragraph
                   variant="VeryprimarySmall"
-                  className="max-[760px]:min-h-10 max-[760px]:max-h-10 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px] md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center   md:max-w-[220px]  lg:max-w-[90%]"
+                  className={`${priceCards[2].className} tracking-[-0.03em]! md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center   md:max-w-[220px]  lg:max-w-[90%]`}
                 >
                   {priceCards[2].description}
                 </Paragraph>
-                <p className=" text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238]  lg:mt-3">
+                {priceCards[2].price && <p className=" text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238]  lg:mt-3">
                   {priceCards[2].price}{" "}
                   <span className="text-base xl:text-2xl">per &nbsp; m²</span>
-                </p>
+                </p>}
               </div>
 
               {/* Price Card 4 */}
               <div className="">
                 <Paragraph
                   variant="VeryprimarySmall"
-                  className="max-[760px]:min-h-10 max-[760px]:max-h-10 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px] md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center  md:max-w-[220px] "
+                  className={`${priceCards[3].className}tracking-[-0.03em]! md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center  md:max-w-[220px]`}
                 >
                   {priceCards[3].description}
                 </Paragraph>
-                <p className=" text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3">
+                {priceCards[3].price && <p className=" text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3">
                   {priceCards[3].price}{" "}
                   <span className="text-base xl:text-2xl  xl:-mr-1">
                     per &nbsp; m²
                   </span>
-                </p>
+                </p>}
               </div>
               <div className="flex lg:hidden col-span-2 mt-5 md:mt-2.5 lg:mt-0 md:mb-[5px] lg:mb-0 justify-center ">
                 <GetQuote variant="primary" text=" Get a real quote" />
