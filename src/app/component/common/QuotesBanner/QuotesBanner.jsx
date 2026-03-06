@@ -17,7 +17,7 @@ import { setSelectedServiceId } from "@/lib/store/findjobslice";
 
 export default function QuotesBanner({
   text = "ROOFING QUOTES IN",
-  variant = "secondary",
+  variant = "primary",
   classQuote = "w-full flex justify-center items-center",
   containerWidth = "w-full max-w-6xl",
   buttonClassQuote = "md:py-[8px] md:px-8 px-4 py-2",
@@ -197,7 +197,7 @@ relative overflow-hidden">
                       disabled={disabled}
                       autoComplete="off"
                       placeholder="Post Code"
-                      className="custom-input px-1 py-2 md:px-6 md:py-3 lg:py-2.5 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-27 md:w-40 lg:w-74 text-[14px] md:text-[16px] lg:!text-[28px] placeholder:text-[14px] md:placeholder:text-[16px] lg:placeholder:!text-[28px]"
+                      className="custom-input px-1 py-2 md:px-6 md:py-3 lg:py-2.5 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-27 md:w-40 lg:w-74 !text-[16px] md:!text-[16px] lg:!text-[28px] placeholder:!text-[16px] md:placeholder:!text-[16px] lg:placeholder:!text-[28px]"
                     />
                     {postcode && (
                       <div className="absolute right-3 top-1/2 -translate-y-1/2">
@@ -214,7 +214,7 @@ relative overflow-hidden">
                     onClick={handleSubmit}
                     className={`${buttonClassQuote}
         bg-green-500 hover:bg-green-600 
-        border border-3 border-white lg:py-2 lg:w-28
+        border border-3 border-white py-[7px] md:py-[8px] lg:py-2 lg:w-28
         cursor-pointer transition lg:text-[28px]
         rounded-full text-white 
         font-semibold shadow-md`}
