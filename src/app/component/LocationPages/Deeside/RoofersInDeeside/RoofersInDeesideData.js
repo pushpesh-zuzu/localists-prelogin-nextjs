@@ -221,22 +221,22 @@ export const ROOFERS_FEEDBACK_DEESIDE = [
   {
     id: 1,
     text: "After the last big storm, I found a couple of tiles on the driveway and knew we couldn’t leave it. We got a few prices first just to be sure. The roofer we went with was calm, explained what had actually happened, and didn’t try to turn it into a massive job.",
-    name: "Cerys Vaughan, Deeside",
+    name: "Cerys V.",
   },
   {
     id: 2,
     text: "Our extension roof had been patched up more than once and we knew it wouldn’t last forever. I was expecting hassle and hidden costs, but it was pretty straightforward. The price stayed as agreed and they left everything tidy when they finished.",
-    name: "Tawanda Moyo, Deeside",
+    name: "Tawanda M.",
   },
   {
     id: 3,
     text: "We had a damp patch near the chimney that kept getting worse. We honestly thought it might be something inside the house. It wasn’t. The roofer showed us exactly where the problem was on the roof and sorted it without any fuss. It just felt honest and practical.",
-    name: "Lina Rahman, Deeside",
+    name: "Lina R.",
   },
   {
     id: 4,
     text: "We had a few tiles fly off after a storm; unfortunately, we didn’t notice straight away as we’d just come back from holiday. By the time we spotted it, there was a small damp patch starting to show. The roofer we found through Localists came out quickly, replaced the missing tiles, and also went ahead to check the rest of the roof.",
-    name: "Simon Jenkins, Deeside",
+    name: "Simon J.",
   },
 ];
 
