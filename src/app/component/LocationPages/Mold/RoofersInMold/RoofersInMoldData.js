@@ -1,119 +1,123 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
   {
-  type: "h2",
-  text: "What roofing work tends to cost in Mold"
-},
-{
-  type: "p",
-  text: "There isn’t a fixed price for roofing because every house is different. The cost depends on what actually needs doing, how big the roof is, what materials are involved and whether access is simple or a bit awkward. It goes without saying that fixing a small problem is different from replacing a whole roof."
-},
-{
-  type: "p",
-  text: "So here’s a rough idea of what people in Mold often pay:"
-},
-{
-  type:"AveragePriceLocation",
-  title:"Average cost of roofing Mold ",
-  calculatorText:"Roofing Calculator",
-   priceCards: [
+    type: "h2",
+    text: "What roofing work tends to cost in Mold"
+  },
+  {
+    type: "p",
+    text: "There isn’t a fixed price for roofing because every house is different. The cost depends on what actually needs doing, how big the roof is, what materials are involved and whether access is simple or a bit awkward. It goes without saying that fixing a small problem is different from replacing a whole roof."
+  },
+  {
+    type: "p",
+    text: "So here’s a rough idea of what people in Mold often pay:"
+  },
+  {
+    type: "AveragePriceLocation",
+    title: "Average cost of roofing Mold ",
+    calculatorText: "Roofing Calculator",
+    priceCards: [
       {
         description: "For general roofing jobs, homeowners usually spend around on average",
         price: "£2,858",
-              className:"max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
+        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
 
       },
       {
         description: "Most straightforward repairs, including fixing leaks, replacing broken tiles, come in at about.",
         price: "£862",
-              className:"max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
+        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
 
       },
       {
         description: "Emergency call-outs for roofers tend to average around, depending on complexity.",
         price: "£445",
-              className:"max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-14 min-[360px]:max-h-14 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
+        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-14 min-[360px]:max-h-14 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
 
       },
       {
         description: "For a full replacement new roof, the average cost in Mold is around.",
         price: "£7,495",
-              className:"max-[360]:min-h-16 max-[360]:max-h-14 min-[360px]:min-h-14 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
+        className: "max-[360]:min-h-16 max-[360]:max-h-14 min-[360px]:min-h-14 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
       },
     ],
-    
-},
-{
-  type: "p",
-  text: "These figures are just to give you a ballpark. The only way to know what your roof will actually cost is to have a local roofer take a proper look and give you a written quote.",
-    notMarginBottom: true
-    },
-    {
-       type: "image",
-        src: "/nearme/Roofing/roofinstalling.webp",
-        alt: "two roofers installing slate tiles onto a brand new roof ",
-        marginBottom: true,
-        marginTop: true
-    },
-    {
-  type: "h2",
-  text: "Common roofing services in Mold"
-},
-{
-  type: "li",
-  text: "Fixing roof leaks"
-},
-{
-  type: "li",
-  text: "Replacing cracked or slipped tiles and slates"
-},
-{
-  type: "li",
-  text: "Repairing or installing flat roofs"
-},
-{
-  type: "li",
-  text: "Repointing chimneys and replacing worn flashing"
-},
-{
-  type: "li",
-  text: "Sorting out damaged or leaking gutters"
-},
-{
-  type: "li",
-  text: "Repairing storm damage"
-},
-{
-  type: "li",
-  text: "Carrying out full roof replacements"
-},
-{
-  type: "p",
-  text: "If you’re not sure whether it’s a quick repair or something more serious, it’s usually worth having someone take a proper look. Sometimes what seems like a big issue turns out to be straightforward, and sometimes catching it early prevents a much larger job later on."
-},
-{
-    type: "QuotesBanner",
-    className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[154px] lg:mb-[154px]"
+
   },
   {
-  type: "h2",
-  text: "Why many homeowners use Localists to find Roofers in Mold"
-},
-{
-  type: "p",
-  text: "When there’s a problem with the roof, it’s not something you want to get wrong. It’s your home underneath it. Even a small issue can turn into something bigger if it’s handled badly, so picking the first name you see? Not a very brilliant idea."
-},
-{
-  type: "p",
-  text: "With Localists, instead of calling around blindly or guessing who’s reliable, we have done the legwork for you. Every roofer we recommend has been thoroughly vetted and can be trusted to deliver high-quality work."
-},
-{
-  type: "p",
-  text: "Also, with multiple quotes to compare, you start to get a feel of what the job should cost and what’s actually needed. There’s no feeling pressured into agreeing on the spot."
-},
-{
-  type: "p",
-  text: "In the end, it’s about having a bit more control over the process. You look at your options, ask your questions, and move forward when you’re comfortable. That’s why many homeowners prefer doing it this way."
-},
+    type: "p",
+    text: "These figures are just to give you a ballpark. The only way to know what your roof will actually cost is to have a local roofer take a proper look and give you a written quote.",
+    notMarginBottom: true
+  },
+  {
+    type: "image",
+    src: "/nearme/Roofing/roofinstalling.webp",
+    alt: "two roofers installing slate tiles onto a brand new roof ",
+    marginBottom: true,
+    marginTop: true
+  },
+  {
+    type: "h2",
+    text: "Common roofing services in Mold"
+  },
+  {
+    type: "li",
+    text: "Fixing roof leaks"
+  },
+  {
+    type: "li",
+    text: "Replacing cracked or slipped tiles and slates"
+  },
+  {
+    type: "li",
+    text: "Repairing or installing flat roofs"
+  },
+  {
+    type: "li",
+    text: "Repointing chimneys and replacing worn flashing"
+  },
+  {
+    type: "li",
+    text: "Sorting out damaged or leaking gutters"
+  },
+  {
+    type: "li",
+    text: "Repairing storm damage"
+  },
+  {
+    type: "li",
+    text: "Carrying out full roof replacements"
+  },
+  {
+    type: "p",
+    text: "If you’re not sure whether it’s a quick repair or something more serious, it’s usually worth having someone take a proper look. Sometimes what seems like a big issue turns out to be straightforward, and sometimes catching it early prevents a much larger job later on."
+  },
+  // {
+  //   type: "QuotesBanner",
+  //   className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[154px] lg:mb-[154px]"
+  // },
+  {
+    type: "QuotesBanner",
+    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
+  },
+  {
+    type: "h2",
+    text: "Why many homeowners use Localists to find Roofers in Mold"
+  },
+  {
+    type: "p",
+    text: "When there’s a problem with the roof, it’s not something you want to get wrong. It’s your home underneath it. Even a small issue can turn into something bigger if it’s handled badly, so picking the first name you see? Not a very brilliant idea."
+  },
+  {
+    type: "p",
+    text: "With Localists, instead of calling around blindly or guessing who’s reliable, we have done the legwork for you. Every roofer we recommend has been thoroughly vetted and can be trusted to deliver high-quality work."
+  },
+  {
+    type: "p",
+    text: "Also, with multiple quotes to compare, you start to get a feel of what the job should cost and what’s actually needed. There’s no feeling pressured into agreeing on the spot."
+  },
+  {
+    type: "p",
+    text: "In the end, it’s about having a bit more control over the process. You look at your options, ask your questions, and move forward when you’re comfortable. That’s why many homeowners prefer doing it this way."
+  },
 ];
 export const ROOFERS_FREQUENTLY_DATA_MOLD = [
   {
@@ -200,51 +204,51 @@ export const ROOFERS_TABDATA_MOLD = {
     },
   ],
   related: [
-  {
-    title: "Roofers Leeds",
-    url: ""
-  },
-  {
-    title: "Roofers York",
-    url: ""
-  },
-  {
-    title: "Roofers Hull",
-    url: ""
-  },
-  {
-    title: "Roofers Bolton",
-    url: ""
-  },
-  {
-    title: "Roofers Chester",
-    url: "/en/gb/roofers-near-me/chester"
-  },
-  {
-    title: "Roofers Cheshire",
-    url: ""
-  },
-  {
-    title: "Roofers Harrogate",
-    url: ""
-  },
-  {
-    title: "Roofers Liverpool",
-    url: "/en/gb/roofers-near-me/liverpool"
-  },
-  {
-    title: "Roofers Manchester",
-    url: ""
-  },
-  {
-    title: "Roofers Stockport",
-    url: ""
-  },
-  {
-    title: "Roofers North Yorkshire",
-    url: ""
-  }
-],
+    {
+      title: "Roofers Leeds",
+      url: ""
+    },
+    {
+      title: "Roofers York",
+      url: ""
+    },
+    {
+      title: "Roofers Hull",
+      url: ""
+    },
+    {
+      title: "Roofers Bolton",
+      url: ""
+    },
+    {
+      title: "Roofers Chester",
+      url: "/en/gb/roofers-near-me/chester"
+    },
+    {
+      title: "Roofers Cheshire",
+      url: ""
+    },
+    {
+      title: "Roofers Harrogate",
+      url: ""
+    },
+    {
+      title: "Roofers Liverpool",
+      url: "/en/gb/roofers-near-me/liverpool"
+    },
+    {
+      title: "Roofers Manchester",
+      url: ""
+    },
+    {
+      title: "Roofers Stockport",
+      url: ""
+    },
+    {
+      title: "Roofers North Yorkshire",
+      url: ""
+    }
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_MOLD = [
@@ -324,7 +328,7 @@ export const ROOFERS_DATA_MOLD = [
   {
     id: 4,
     title: "Landscaping",
-    image: "/homepage/landscapingservice.webp", 
+    image: "/homepage/landscapingservice.webp",
     isSpecial: false,
     slug: "/en/gb/landscape-gardeners-near-me",
   },

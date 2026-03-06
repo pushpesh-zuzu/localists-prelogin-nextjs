@@ -1,85 +1,89 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
- {
-  type: "h2",
-  text: "What roofing work usually costs in Deeside"
-},
-{
-  type: "p",
-  text: "There isn’t a single price for roofing because no two houses are exactly the same. The cost usually depends on the requirements and complexity of the job."
-},
-{
-  type: "p",
-  text: "Here’s a rough idea of what people in Deeside tend to pay:"
-},
-{
-  type:"AveragePriceLocation",
-  title:"Average cost of roofing Deeside",
-  calculatorText:"Roofing Calculator",
-   priceCards: [
+  {
+    type: "h2",
+    text: "What roofing work usually costs in Deeside"
+  },
+  {
+    type: "p",
+    text: "There isn’t a single price for roofing because no two houses are exactly the same. The cost usually depends on the requirements and complexity of the job."
+  },
+  {
+    type: "p",
+    text: "Here’s a rough idea of what people in Deeside tend to pay:"
+  },
+  {
+    type: "AveragePriceLocation",
+    title: "Average cost of roofing Deeside",
+    calculatorText: "Roofing Calculator",
+    priceCards: [
       {
         description: "General roofing workBigger roofing jobs usually average around, depending on how involved the work is.",
         price: "£2,858",
-              className:"max-[360]:min-h-[110px] max-[360]:max-h-[110px] min-[360px]:min-h-[100px] min-[360px]:max-h-[100px]  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[120px] md:max-h-[120px] lg:min-h-[180px] lg:max-h-[180px]"
+        className: "max-[360]:min-h-[110px] max-[360]:max-h-[110px] min-[360px]:min-h-[100px] min-[360px]:max-h-[100px]  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[120px] md:max-h-[120px] lg:min-h-[180px] lg:max-h-[180px]"
 
       },
       {
         description: "Roof repairs Most standard repairs come in at about. That might include fixing a leak, replacing damaged tiles or sorting out worn flashing.",
         price: "£862",
-              className:"max-[360]:min-h-[110px] max-[360]:max-h-[110px] min-[360px]:min-h-[100px] min-[360px]:max-h-[100px]  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[120px] md:max-h-[120px] lg:min-h-[180px] lg:max-h-[180px]"
+        className: "max-[360]:min-h-[110px] max-[360]:max-h-[110px] min-[360px]:min-h-[100px] min-[360px]:max-h-[100px]  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[120px] md:max-h-[120px] lg:min-h-[180px] lg:max-h-[180px]"
 
       },
       {
         description: "Emergency roofing services average around. The final amount will depend on how serious the issue is.",
         price: "£445",
-              className:"max-[360]:min-h-22 max-[360]:max-h-20 min-[360px]:min-h-20 min-[360px]:max-h-20 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[130px] lg:max-h-[130px]"
+        className: "max-[360]:min-h-22 max-[360]:max-h-20 min-[360px]:min-h-20 min-[360px]:max-h-20 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[130px] lg:max-h-[130px]"
 
       },
       {
         description: "For a complete new roof, homeowners in Deeside typically pay around on average.",
         price: "£7,495",
-              className:"max-[360]:min-h-22 max-[360]:max-h-20 min-[360px]:min-h-20 min-[360px]:max-h-20 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[130px] lg:max-h-[130px]"
+        className: "max-[360]:min-h-22 max-[360]:max-h-20 min-[360px]:min-h-20 min-[360px]:max-h-20 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[130px] lg:max-h-[130px]"
       },
     ],
-},
-{
-  type: "p",
-  text: "These figures are just to help you get your bearings. The only way to know what your roof will actually cost is to have a roofer take a proper look and give you a written quote.",
-  notMarginBottom:true
-},
-    {
-        type: "image",
-        src: "/nearme/Roofing/roofinstalling.webp",
-        alt: "Specialist on a roof repairing and replacing old roof with new one",
-        marginBottom: true,
-        marginTop: true
-    },
-    {
-  type: "h2",
-  text: "Why homeowners use Localists to find Roofers in Deeside"
-},
-{
-  type: "p",
-  text: "Just like any home improvement job, the hardest part is often deciding who to call. You search online, and suddenly there are dozens of companies, all saying they’re reliable and experienced. That doesn’t always help narrow it down."
-},
-{
-  type: "p",
-  text: "Using Localists just gives you a more organised way to approach things. Rather than choosing someone at random or going with whoever answers first, you can see a few options and think it through. You’re not under pressure or any sort of obligation with our free quotes."
-},
-{
-  type: "p",
-  text: "If it’s urgent, you will also find emergency roofers who offer quick services. If it isn’t, simply take a bit of time to ask questions, request samples of similar jobs, all in one place."
-},
-{
-  type: "p",
-  text: "Being able to see some background before you even speak to someone makes that first conversation easier too. It feels less like a cold call and more like a normal discussion about the job."
-},
-{
-  type: "p",
-  text: "More so, when you have more than one quote in front of you, you start to get a clearer idea of what’s reasonable. That alone makes you feel more confident."
-},
-{
+  },
+  {
+    type: "p",
+    text: "These figures are just to help you get your bearings. The only way to know what your roof will actually cost is to have a roofer take a proper look and give you a written quote.",
+    notMarginBottom: true
+  },
+  {
+    type: "image",
+    src: "/nearme/Roofing/roofinstalling.webp",
+    alt: "Specialist on a roof repairing and replacing old roof with new one",
+    marginBottom: true,
+    marginTop: true
+  },
+  {
+    type: "h2",
+    text: "Why homeowners use Localists to find Roofers in Deeside"
+  },
+  {
+    type: "p",
+    text: "Just like any home improvement job, the hardest part is often deciding who to call. You search online, and suddenly there are dozens of companies, all saying they’re reliable and experienced. That doesn’t always help narrow it down."
+  },
+  {
+    type: "p",
+    text: "Using Localists just gives you a more organised way to approach things. Rather than choosing someone at random or going with whoever answers first, you can see a few options and think it through. You’re not under pressure or any sort of obligation with our free quotes."
+  },
+  {
+    type: "p",
+    text: "If it’s urgent, you will also find emergency roofers who offer quick services. If it isn’t, simply take a bit of time to ask questions, request samples of similar jobs, all in one place."
+  },
+  {
+    type: "p",
+    text: "Being able to see some background before you even speak to someone makes that first conversation easier too. It feels less like a cold call and more like a normal discussion about the job."
+  },
+  {
+    type: "p",
+    text: "More so, when you have more than one quote in front of you, you start to get a clearer idea of what’s reasonable. That alone makes you feel more confident."
+  },
+  // {
+  //   type: "QuotesBanner",
+  //   className: "mb-[0px] mt-[30px] md:mt-[80px] md:mb-[40px] lg:mt-[154px] lg:mb-[72px]"
+  // },
+  {
     type: "QuotesBanner",
-    className: "mb-[0px] mt-[30px] md:mt-[80px] md:mb-[40px] lg:mt-[154px] lg:mb-[72px]"
+    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
   },
 
 ];
@@ -176,51 +180,51 @@ export const ROOFERS_TABDATA_DEESIDE = {
   ],
 
   related: [
-  {
-    title: "Roofers Leeds",
-    url: ""
-  },
-  {
-    title: "Roofers York",
-    url: ""
-  },
-  {
-    title: "Roofers Hull",
-    url: ""
-  },
-  {
-    title: "Roofers Bolton",
-    url: ""
-  },
-  {
-    title: "Roofers Chester",
-    url: "/en/gb/roofers-near-me/chester"
-  },
-  {
-    title: "Roofers Cheshire",
-    url: ""
-  },
-  {
-    title: "Roofers Harrogate",
-    url: ""
-  },
-  {
-    title: "Roofers Liverpool",
-    url: "/en/gb/roofers-near-me/liverpool"
-  },
-  {
-    title: "Roofers Manchester",
-    url: ""
-  },
-  {
-    title: "Roofers Stockport",
-    url: ""
-  },
-  {
-    title: "Roofers North Yorkshire",
-    url: ""
-  }
-],
+    {
+      title: "Roofers Leeds",
+      url: ""
+    },
+    {
+      title: "Roofers York",
+      url: ""
+    },
+    {
+      title: "Roofers Hull",
+      url: ""
+    },
+    {
+      title: "Roofers Bolton",
+      url: ""
+    },
+    {
+      title: "Roofers Chester",
+      url: "/en/gb/roofers-near-me/chester"
+    },
+    {
+      title: "Roofers Cheshire",
+      url: ""
+    },
+    {
+      title: "Roofers Harrogate",
+      url: ""
+    },
+    {
+      title: "Roofers Liverpool",
+      url: "/en/gb/roofers-near-me/liverpool"
+    },
+    {
+      title: "Roofers Manchester",
+      url: ""
+    },
+    {
+      title: "Roofers Stockport",
+      url: ""
+    },
+    {
+      title: "Roofers North Yorkshire",
+      url: ""
+    }
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_DEESIDE = [
@@ -300,7 +304,7 @@ export const ROOFERS_DATA_DEESIDE = [
   {
     id: 4,
     title: "Landscaping",
-    image: "/homepage/landscapingservice.webp", 
+    image: "/homepage/landscapingservice.webp",
     isSpecial: false,
     slug: "/en/gb/landscape-gardeners-near-me",
   },

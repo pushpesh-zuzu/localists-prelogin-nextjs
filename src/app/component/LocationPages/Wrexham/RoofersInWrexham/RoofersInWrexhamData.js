@@ -7,114 +7,118 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
     type: "p",
     text: "When it comes to roofing, trust matters. A roof protects everything inside your home, so cutting corners can cause more stress later on.",
   },
-   {
+  {
     type: "p",
     text: "A reliable roofer will want to see the problem up close before giving firm answers. That might mean climbing up to inspect the tiles or checking the loft space. If someone is willing to give a full diagnosis without a proper look, that’s worth questioning.",
   },
-   {
+  {
     type: "p",
     text: "When comparing roofers in Wrexham, it’s sensible to look for:",
   },
   {
-  type: "li",
-  text: "Roofers who have experience with similar jobs"
-},
-{
-  type: "li",
-  text: "Clear written quotes without hidden clauses"
-},
-{
-  type: "li",
-  text: "Straightforward communication"
-},
-{
-  type: "li",
-  text: "Realistic timelines"
-},
-{
-  type: "li",
-  text: "Public liability insurance"
-},
-{
-  type: "li",
-  text: "Reviews from previous customers",
-  className: 'mb-0'
-    },
-    {
-       type: "image",
-        src: "/nearme/Roofing/roofinstalling.webp",
-        alt: "two roofers installing slate tiles onto a brand new roof ",
-        marginBottom: true,
-        marginTop: true
-    },
-    {
+    type: "li",
+    text: "Roofers who have experience with similar jobs"
+  },
+  {
+    type: "li",
+    text: "Clear written quotes without hidden clauses"
+  },
+  {
+    type: "li",
+    text: "Straightforward communication"
+  },
+  {
+    type: "li",
+    text: "Realistic timelines"
+  },
+  {
+    type: "li",
+    text: "Public liability insurance"
+  },
+  {
+    type: "li",
+    text: "Reviews from previous customers",
+    className: 'mb-0'
+  },
+  {
+    type: "image",
+    src: "/nearme/Roofing/roofinstalling.webp",
+    alt: "two roofers installing slate tiles onto a brand new roof ",
+    marginBottom: true,
+    marginTop: true
+  },
+  {
     type: 'h2',
     text: " Why using Localists makes finding Roofers Wrexham easier",
 
   },
   {
-  type: "p",
-  text: "Finding a roofer shouldn’t feel like trial and error. Yet that’s often what it turns into. You search, you scroll, you’re not quite sure who’s still active or who actually covers your area."
-},
-{
-  type: "p",
-  text: "Localists gives you a clearer starting point. Instead of guessing, you’re connected with roofers who are local and open to providing free quotes."
-},
-{
-  type: "p",
-  text: "It gives you space to compare without feeling pushed. No awkward follow-up calls. No pressure to say yes on the spot. Just information, options, and the freedom to choose when you’re ready."
-},
-{
-    type: "QuotesBanner",
-    className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[154px] lg:mb-[154px]"
+    type: "p",
+    text: "Finding a roofer shouldn’t feel like trial and error. Yet that’s often what it turns into. You search, you scroll, you’re not quite sure who’s still active or who actually covers your area."
   },
   {
-  type: "h2",
-  text: "How much does roofing cost in Wrexham?"
-},
-{
-  type: "p",
-  text: "There isn’t a flat price for roofing. The final cost usually depends on what’s actually happening up there. A small repair after a windy week is very different from removing and replacing an entire roof. Access to the property, the materials chosen, and how much labour is involved all affect the total cost."
-},
-{
-  type: "p",
-  text: "But here’s a rough guide of what the numbers may look like:"
-},
-{
-  type:"AveragePriceLocation",
-  title:"Average cost of roofing in Wrexham",
-  calculatorText:"Roofing Calculator",
-   priceCards: [
+    type: "p",
+    text: "Localists gives you a clearer starting point. Instead of guessing, you’re connected with roofers who are local and open to providing free quotes."
+  },
+  {
+    type: "p",
+    text: "It gives you space to compare without feeling pushed. No awkward follow-up calls. No pressure to say yes on the spot. Just information, options, and the freedom to choose when you’re ready."
+  },
+  // {
+  //   type: "QuotesBanner",
+  //   className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[154px] lg:mb-[154px]"
+  // },
+  {
+    type: "QuotesBanner",
+    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
+  },
+  {
+    type: "h2",
+    text: "How much does roofing cost in Wrexham?"
+  },
+  {
+    type: "p",
+    text: "There isn’t a flat price for roofing. The final cost usually depends on what’s actually happening up there. A small repair after a windy week is very different from removing and replacing an entire roof. Access to the property, the materials chosen, and how much labour is involved all affect the total cost."
+  },
+  {
+    type: "p",
+    text: "But here’s a rough guide of what the numbers may look like:"
+  },
+  {
+    type: "AveragePriceLocation",
+    title: "Average cost of roofing in Wrexham",
+    calculatorText: "Roofing Calculator",
+    priceCards: [
       {
         description: "For general roofing projects, homeowners in Wrexham typically pay around",
         price: "£2,858",
-              className:"max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
+        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
       },
       {
         description: "For roofing repairs, the average cost tends to be around ",
         price: "£862",
-              className:"max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
+        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
 
       },
       {
         description: "For emergency roofing call-outs, the average sits closer to ",
         price: "£445",
-              className:"max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
+        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
 
       },
       {
         description: "For a full roof replacement, the average cost is around",
         price: "£7,495",
-              className:"max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
+        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
       },
     ],
-},
-{
-  type:"p",
-  text:"These numbers are there to give you a sense of scale, not a fixed promise. Every roof is different. The best way to know what yours will cost is to have it looked at properly and compare a few quotes before making a decision"
-},
+  },
+  {
+    type: "p",
+    text: "These numbers are there to give you a sense of scale, not a fixed promise. Every roof is different. The best way to know what yours will cost is to have it looked at properly and compare a few quotes before making a decision"
+  },
 
-  
+
 ];
 export const ROOFERS_FREQUENTLY_DATA_WREXHAM = [
   {
@@ -201,51 +205,51 @@ export const ROOFERS_TABDATA_WREXHAM = {
     },
   ],
   related: [
-  {
-    title: "Roofers Leeds",
-    url: ""
-  },
-  {
-    title: "Roofers York",
-    url: ""
-  },
-  {
-    title: "Roofers Hull",
-    url: ""
-  },
-  {
-    title: "Roofers Bolton",
-    url: ""
-  },
-  {
-    title: "Roofers Chester",
-    url: "/en/gb/roofers-near-me/chester"
-  },
-  {
-    title: "Roofers Cheshire",
-    url: ""
-  },
-  {
-    title: "Roofers Harrogate",
-    url: ""
-  },
-  {
-    title: "Roofers Liverpool",
-    url: "/en/gb/roofers-near-me/liverpool"
-  },
-  {
-    title: "Roofers Manchester",
-    url: ""
-  },
-  {
-    title: "Roofers Stockport",
-    url: ""
-  },
-  {
-    title: "Roofers North Yorkshire",
-    url: ""
-  }
-],
+    {
+      title: "Roofers Leeds",
+      url: ""
+    },
+    {
+      title: "Roofers York",
+      url: ""
+    },
+    {
+      title: "Roofers Hull",
+      url: ""
+    },
+    {
+      title: "Roofers Bolton",
+      url: ""
+    },
+    {
+      title: "Roofers Chester",
+      url: "/en/gb/roofers-near-me/chester"
+    },
+    {
+      title: "Roofers Cheshire",
+      url: ""
+    },
+    {
+      title: "Roofers Harrogate",
+      url: ""
+    },
+    {
+      title: "Roofers Liverpool",
+      url: "/en/gb/roofers-near-me/liverpool"
+    },
+    {
+      title: "Roofers Manchester",
+      url: ""
+    },
+    {
+      title: "Roofers Stockport",
+      url: ""
+    },
+    {
+      title: "Roofers North Yorkshire",
+      url: ""
+    }
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_WREXHAM = [
@@ -325,7 +329,7 @@ export const ROOFERS_DATA_WREXHAM = [
   {
     id: 4,
     title: "Landscaping",
-    image: "/homepage/landscapingservice.webp", 
+    image: "/homepage/landscapingservice.webp",
     isSpecial: false,
     slug: "/en/gb/landscape-gardeners-near-me",
   },
