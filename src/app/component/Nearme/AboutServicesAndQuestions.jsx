@@ -12,6 +12,7 @@ import AveragePriceDynamic from "./AveragePriceDynamic";
 import GetQuote from "../common/GetQuotes/GetQuote";
 import PostCodeSectionLocation from "../LocationPages/PostCodeSectionLocation";
 import QuotesBanner from "../common/QuotesBanner/QuotesBanner";
+import AveragePriceLocation from "../LocationPages/AveragePriceLocation";
 
 const textBase =
   "font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em]!"
@@ -97,6 +98,18 @@ const AboutServicesAndQuestions = ({
         return (
           // <PatioPricingTable/>
           <AveragePriceDynamic
+            key={index}
+            title={block?.title}
+            priceCards={block?.priceCards}
+            disclaimerText={block?.disclaimerText}
+            calculatorText={block?.calculatorText}
+            calculatorLink={block?.calculatorLink}
+          />
+        );
+
+         case "AveragePriceLocation":
+        return (
+          <AveragePriceLocation
             key={index}
             title={block?.title}
             priceCards={block?.priceCards}

@@ -132,7 +132,7 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
           </div>
         </div>
 
-        <div className="hidden md:flex md:gap-3 lg:gap-0 flex-col min-w-fit lg:bottom-[40px] lg:relative">
+        <div className="hidden md:flex md:gap-3 z-50 lg:gap-0 flex-col min-w-fit lg:bottom-[40px] lg:relative">
           <Button1
             onClick={() => {
               setShowModal(true);
