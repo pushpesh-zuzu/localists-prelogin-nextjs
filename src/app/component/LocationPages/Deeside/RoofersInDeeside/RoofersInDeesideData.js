@@ -29,7 +29,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
 
       },
       {
-        description: "Emergency roofing services average around £445. The final amount will depend on how serious the issue is.",
+        description: "Emergency roofing services average around. The final amount will depend on how serious the issue is.",
         price: "£445",
               className:"max-[360]:min-h-22 max-[360]:max-h-22 min-[360px]:min-h-20 min-[360px]:max-h-20 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[130px] lg:max-h-[130px]"
 
