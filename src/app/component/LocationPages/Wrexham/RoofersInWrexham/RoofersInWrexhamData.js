@@ -81,32 +81,31 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
   text: "But here’s a rough guide of what the numbers may look like:"
 },
 {
-  type:"patioPricingTable",
+  type:"AveragePriceLocation",
   title:"Average cost of roofing in Wrexham",
   calculatorText:"Roofing Calculator",
    priceCards: [
       {
-        description: "For general roofing projects, homeowners in Wrexham typically pay around £2,858",
-        // price: "£2,858",
-              className:"max-[760px]:min-h-14 max-[760px]:max-h-14  max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px]"
+        description: "For general roofing projects, homeowners in Wrexham typically pay around",
+        price: "£2,858",
+              className:"max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
+      },
+      {
+        description: "For roofing repairs, the average cost tends to be around ",
+        price: "£862",
+              className:"max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
 
       },
       {
-        description: "For roofing repairs, the average cost tends to be around £862",
-        // price: "£862",
-              className:"max-[760px]:min-h-14 max-[760px]:max-h-14  max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px]"
+        description: "For emergency roofing call-outs, the average sits closer to ",
+        price: "£445",
+              className:"max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
 
       },
       {
-        description: "For emergency roofing call-outs, the average sits closer to £445",
-        // price: "445",
-              className:"max-[760px]:min-h-12 max-[760px]:max-h-12  max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px]"
-
-      },
-      {
-        description: "For a full roof replacement, the average cost is around £7,495",
-        // price: "£7,495",
-              className:"max-[760px]:min-h-12 max-[760px]:max-h-12  max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px]"
+        description: "For a full roof replacement, the average cost is around",
+        price: "£7,495",
+              className:"max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
       },
     ],
 },
@@ -115,173 +114,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
   text:"These numbers are there to give you a sense of scale, not a fixed promise. Every roof is different. The best way to know what yours will cost is to have it looked at properly and compare a few quotes before making a decision"
 },
 
-  // delete after done below
-  // {
-  //   type: "pbold",
-  //   text: "General roofing work"
-  // },
-  // {
-  //   type: "p",
-  //   text: "For standard roofing projects, whether it’s minor upgrades or general maintenance, costs usually sit between £1,350 and £3,350, with most jobs coming in around £2,150. It’s the kind of work that quietly keeps your home dry and drama-free.",
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "Roof repairs"
-  // },
-  // {
-  //   type: "p",
-  //   text: "General roof repairs cost £750 on average but this can go increase or decrease based on the complexity of the job and scale of the damage. Small leaks, cracked tiles, or early signs of wear can cost anywhere between £350 and £1,450 to repair. Catching these early can save you from much bigger bills later."
-  // },
-  // { type: "PostCodeSectionLocation" },
-  // {
-  //   type: "pbold",
-  //   text: "Flat roof repairs"
-  // },
-  // {
-  //   type: "p",
-  //   text: "Flat roofs need a bit of extra care. Repairs and resealing typically fall between £625 and £2,100, with an average spend of £1,150, ideal for garages, extensions, and low-pitch roofs."
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "Pitched roof repairs"
-  // },
-  // {
-  //   type: "p",
-  //   text: "For sloped roofs, repair costs usually range from £350 to £1,500, averaging £725. A small fix now can prevent water damage down the line."
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "Emergency roofing services"
-  // },
-  // {
-  //   type: "p",
-  //   text: "When a storm hits or water starts coming in unexpectedly, emergency callouts generally cost £370 to £1,170, with an average of £630. Quick action often stops minor issues turning into major repairs."
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "Flat roof installation"
-  // },
-  // {
-  //   type: "p",
-  //   text: "The average cost of a flat roof replacement is £2700 - but this can vary based on the complexity and scale of the job, with flat roof installation prices ranging from £1,500 to £8,000 "
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "Pitched roof installation"
-  // },
-  // {
-  //   type: "p",
-  //   text: "A pitched roof installation costs on average For a full pitched roof installation, expect prices between £5,000 and £8,000, with the average sitting around £5,609. It’s a bigger investment, but one that offers long-term protection and peace of mind."
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "Roof replacement"
-  // },
-  // {
-  //   type: "p",
-  //   text: "When repairs are no longer enough, a complete roof replacement usually costs £5,000 to £9,445, averaging £6,837. A major job, yes, but one that resets the clock on your roof entirely."
-  // },
-  // {
-  //   type: "p",
-  //   text: "Good to know: Final prices depend on factors like roof size, materials, access, and whether extras such as scaffolding or insulation are needed. Always ask for a detailed quote before booking so there are no surprises."
-  // },
-  // {
-  //   type: "p",
-  //   text: "Already know what needs doing? Use our Job Value Estimator for a quick, tailored cost estimate; no guesswork required."
-  // },
-  // {
-  //   type: 'h2',
-  //   text: " Why using Localists makes finding Roofers Wrexham easier",
-  //   className: "mt-5 lg:mt-[72px]"
-
-  // },
-  // {
-  //   type: "p",
-  //   text: "A good roofing quote shouldn’t feel like a guessing game. Everything should be clear, upfront, and easy to understand before any work begins. When comparing quotes from roofers in Chester, make sure the following are clearly listed:"
-  // },
-  // {
-  //   type: "li",
-  //   text: "Labour costs – covering the time and expertise needed to complete the job properly."
-  // },
-  // {
-  //   type: "li",
-  //   text: "Materials – including tiles, underlay, battens, flashing, or any other components required."
-  // },
-  // {
-  //   type: "li",
-  //   text: "Scaffolding or equipment hire – especially for taller or harder-to-reach roofs."
-  // },
-  // {
-  //   type: "li",
-  //   text: "Waste removal – old tiles, damaged materials, and general site clean-up once the job’s done."
-  // },
-  // {
-  //   type: "li",
-  //   text: "VAT (if applicable) – always worth checking so there are no last-minute surprises."
-  // },
-  // {
-  //   type: "p",
-  //   text: "If a quote feels vague or leaves things out, don’t be afraid to ask questions. A trustworthy roofer will be happy to explain exactly what you’re paying for, no fine print, no confusion, no awkward conversations."
-  // },
-  // {
-  //   type: "QuotesBanner",
-  //   className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[154px] lg:mb-[154px]"
-  // },
-  // {
-  //   type: "h2",
-  //   text: "Find the Right Roofer in Chester for the Job",
-  //   className: "mt-5 lg:mt-[72px]"
-  // },
-  // {
-  //   type: "p",
-  //   text: "A roof is more than just a few tiles sitting on top of your house; it’s protection, insulation, and sometimes even a style statement. Depending on what you need, here’s the kind of work you can search for when looking for roofers in Chester:"
-  // },
-  // {
-  //   type: "li",
-  //   text: "Roof repairs – leaks, loose tiles, or minor storm damage."
-  // },
-  // {
-  //   type: "li",
-  //   text: "New roof installations – flat or pitched, for homes, garages, or extensions."
-  // },
-  // {
-  //   type: "li",
-  //   text: "Gutter and fascia replacement – small fixes that prevent big water problems."
-  // },
-  // {
-  //   type: "li",
-  //   text: "Flat roof installation or resealing – perfect for low-pitch areas that need extra waterproofing."
-  // },
-  // {
-  //   type: "li",
-  //   text: "Chimney repairs – cracks, loose bricks, or failing flashing."
-  // },
-  // {
-  //   type: "li",
-  //   text: "Lead flashing repairs – the small details that keep your roof watertight."
-  // },
-  // {
-  //   type: "li",
-  //   text: "Skylight or Velux window installation – let the sunshine in safely."
-  // },
-  // {
-  //   type: "li",
-  //   text: "Roof insulation – keep warm in winter, cool in summer, and cut energy costs."
-  // },
-  // {
-  //   type: "li",
-  //   text: "Emergency roofing – fast fixes when storms strike or leaks appear unexpectedly."
-  // },
-  // {
-  //   type: "li",
-  //   text: "Drone roof surveys – safe, detailed inspections without climbing ladders."
-  // },
-  // {
-  //   type: 'p',
-  //   text: "No matter the job, finding a roofer with the right skills ensures your home stays dry, safe, and looking great without the stress.",
-  //   notMarginBottom: true
-  // },
-
+  
 ];
 export const ROOFERS_FREQUENTLY_DATA_WREXHAM = [
   {
@@ -368,18 +201,51 @@ export const ROOFERS_TABDATA_WREXHAM = {
     },
   ],
   related: [
-    "Roofers Leeds",
-    "Roofers York",
-    "Roofers Hull",
-    "Roofers Bolton",
-    "Roofers Chester",
-    "Roofers Cheshire",
-    "Roofers Harrogate",
-    "Roofers Liverpool",
-    "Roofers Manchester",
-    "Roofers Stockport",
-    "Roofers North Yorkshire",
-  ],
+  {
+    title: "Roofers Leeds",
+    url: ""
+  },
+  {
+    title: "Roofers York",
+    url: ""
+  },
+  {
+    title: "Roofers Hull",
+    url: ""
+  },
+  {
+    title: "Roofers Bolton",
+    url: ""
+  },
+  {
+    title: "Roofers Chester",
+    url: "/en/gb/roofers-near-me/chester"
+  },
+  {
+    title: "Roofers Cheshire",
+    url: ""
+  },
+  {
+    title: "Roofers Harrogate",
+    url: ""
+  },
+  {
+    title: "Roofers Liverpool",
+    url: "/en/gb/roofers-near-me/liverpool"
+  },
+  {
+    title: "Roofers Manchester",
+    url: ""
+  },
+  {
+    title: "Roofers Stockport",
+    url: ""
+  },
+  {
+    title: "Roofers North Yorkshire",
+    url: ""
+  }
+],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_WREXHAM = [
