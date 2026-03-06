@@ -1,0 +1,495 @@
+export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
+  {
+    type: "h2",
+    text: "Choosing the right roofer in Wrexham",
+  },
+  {
+    type: "p",
+    text: "When it comes to roofing, trust matters. A roof protects everything inside your home, so cutting corners can cause more stress later on.",
+  },
+   {
+    type: "p",
+    text: "A reliable roofer will want to see the problem up close before giving firm answers. That might mean climbing up to inspect the tiles or checking the loft space. If someone is willing to give a full diagnosis without a proper look, that’s worth questioning.",
+  },
+   {
+    type: "p",
+    text: "When comparing roofers in Wrexham, it’s sensible to look for:",
+  },
+  {
+  type: "li",
+  text: "Roofers who have experience with similar jobs"
+},
+{
+  type: "li",
+  text: "Clear written quotes without hidden clauses"
+},
+{
+  type: "li",
+  text: "Straightforward communication"
+},
+{
+  type: "li",
+  text: "Realistic timelines"
+},
+{
+  type: "li",
+  text: "Public liability insurance"
+},
+{
+  type: "li",
+  text: "Reviews from previous customers",
+  className: 'mb-0'
+    },
+    {
+       type: "image",
+        src: "/nearme/Roofing/roofinstalling.webp",
+        alt: "two roofers installing slate tiles onto a brand new roof ",
+        marginBottom: true,
+        marginTop: true
+    },
+    {
+    type: 'h2',
+    text: " Why using Localists makes finding Roofers Wrexham easier",
+
+  },
+  {
+  type: "p",
+  text: "Finding a roofer shouldn’t feel like trial and error. Yet that’s often what it turns into. You search, you scroll, you’re not quite sure who’s still active or who actually covers your area."
+},
+{
+  type: "p",
+  text: "Localists gives you a clearer starting point. Instead of guessing, you’re connected with roofers who are local and open to providing free quotes."
+},
+{
+  type: "p",
+  text: "It gives you space to compare without feeling pushed. No awkward follow-up calls. No pressure to say yes on the spot. Just information, options, and the freedom to choose when you’re ready."
+},
+{
+    type: "QuotesBanner",
+    className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[154px] lg:mb-[154px]"
+  },
+  {
+  type: "h2",
+  text: "How much does roofing cost in Wrexham?"
+},
+{
+  type: "p",
+  text: "There isn’t a flat price for roofing. The final cost usually depends on what’s actually happening up there. A small repair after a windy week is very different from removing and replacing an entire roof. Access to the property, the materials chosen, and how much labour is involved all affect the total cost."
+},
+{
+  type: "p",
+  text: "But here’s a rough guide of what the numbers may look like:"
+},
+{
+  type:"patioPricingTable",
+  title:"Average cost of roofing in Wrexham",
+  calculatorText:"Roofing Calculator",
+   priceCards: [
+      {
+        description: "For general roofing projects, homeowners in Wrexham typically pay around £2,858",
+        // price: "£2,858",
+              className:"max-[760px]:min-h-14 max-[760px]:max-h-14  max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px]"
+
+      },
+      {
+        description: "For roofing repairs, the average cost tends to be around £862",
+        // price: "£862",
+              className:"max-[760px]:min-h-14 max-[760px]:max-h-14  max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px]"
+
+      },
+      {
+        description: "For emergency roofing call-outs, the average sits closer to £445",
+        // price: "445",
+              className:"max-[760px]:min-h-12 max-[760px]:max-h-12  max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px]"
+
+      },
+      {
+        description: "For a full roof replacement, the average cost is around £7,495",
+        // price: "£7,495",
+              className:"max-[760px]:min-h-12 max-[760px]:max-h-12  max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px]"
+      },
+    ],
+},
+{
+  type:"p",
+  text:"These numbers are there to give you a sense of scale, not a fixed promise. Every roof is different. The best way to know what yours will cost is to have it looked at properly and compare a few quotes before making a decision"
+},
+
+  // delete after done below
+  // {
+  //   type: "pbold",
+  //   text: "General roofing work"
+  // },
+  // {
+  //   type: "p",
+  //   text: "For standard roofing projects, whether it’s minor upgrades or general maintenance, costs usually sit between £1,350 and £3,350, with most jobs coming in around £2,150. It’s the kind of work that quietly keeps your home dry and drama-free.",
+  // },
+  // {
+  //   type: "pbold",
+  //   text: "Roof repairs"
+  // },
+  // {
+  //   type: "p",
+  //   text: "General roof repairs cost £750 on average but this can go increase or decrease based on the complexity of the job and scale of the damage. Small leaks, cracked tiles, or early signs of wear can cost anywhere between £350 and £1,450 to repair. Catching these early can save you from much bigger bills later."
+  // },
+  // { type: "PostCodeSectionLocation" },
+  // {
+  //   type: "pbold",
+  //   text: "Flat roof repairs"
+  // },
+  // {
+  //   type: "p",
+  //   text: "Flat roofs need a bit of extra care. Repairs and resealing typically fall between £625 and £2,100, with an average spend of £1,150, ideal for garages, extensions, and low-pitch roofs."
+  // },
+  // {
+  //   type: "pbold",
+  //   text: "Pitched roof repairs"
+  // },
+  // {
+  //   type: "p",
+  //   text: "For sloped roofs, repair costs usually range from £350 to £1,500, averaging £725. A small fix now can prevent water damage down the line."
+  // },
+  // {
+  //   type: "pbold",
+  //   text: "Emergency roofing services"
+  // },
+  // {
+  //   type: "p",
+  //   text: "When a storm hits or water starts coming in unexpectedly, emergency callouts generally cost £370 to £1,170, with an average of £630. Quick action often stops minor issues turning into major repairs."
+  // },
+  // {
+  //   type: "pbold",
+  //   text: "Flat roof installation"
+  // },
+  // {
+  //   type: "p",
+  //   text: "The average cost of a flat roof replacement is £2700 - but this can vary based on the complexity and scale of the job, with flat roof installation prices ranging from £1,500 to £8,000 "
+  // },
+  // {
+  //   type: "pbold",
+  //   text: "Pitched roof installation"
+  // },
+  // {
+  //   type: "p",
+  //   text: "A pitched roof installation costs on average For a full pitched roof installation, expect prices between £5,000 and £8,000, with the average sitting around £5,609. It’s a bigger investment, but one that offers long-term protection and peace of mind."
+  // },
+  // {
+  //   type: "pbold",
+  //   text: "Roof replacement"
+  // },
+  // {
+  //   type: "p",
+  //   text: "When repairs are no longer enough, a complete roof replacement usually costs £5,000 to £9,445, averaging £6,837. A major job, yes, but one that resets the clock on your roof entirely."
+  // },
+  // {
+  //   type: "p",
+  //   text: "Good to know: Final prices depend on factors like roof size, materials, access, and whether extras such as scaffolding or insulation are needed. Always ask for a detailed quote before booking so there are no surprises."
+  // },
+  // {
+  //   type: "p",
+  //   text: "Already know what needs doing? Use our Job Value Estimator for a quick, tailored cost estimate; no guesswork required."
+  // },
+  // {
+  //   type: 'h2',
+  //   text: " Why using Localists makes finding Roofers Wrexham easier",
+  //   className: "mt-5 lg:mt-[72px]"
+
+  // },
+  // {
+  //   type: "p",
+  //   text: "A good roofing quote shouldn’t feel like a guessing game. Everything should be clear, upfront, and easy to understand before any work begins. When comparing quotes from roofers in Chester, make sure the following are clearly listed:"
+  // },
+  // {
+  //   type: "li",
+  //   text: "Labour costs – covering the time and expertise needed to complete the job properly."
+  // },
+  // {
+  //   type: "li",
+  //   text: "Materials – including tiles, underlay, battens, flashing, or any other components required."
+  // },
+  // {
+  //   type: "li",
+  //   text: "Scaffolding or equipment hire – especially for taller or harder-to-reach roofs."
+  // },
+  // {
+  //   type: "li",
+  //   text: "Waste removal – old tiles, damaged materials, and general site clean-up once the job’s done."
+  // },
+  // {
+  //   type: "li",
+  //   text: "VAT (if applicable) – always worth checking so there are no last-minute surprises."
+  // },
+  // {
+  //   type: "p",
+  //   text: "If a quote feels vague or leaves things out, don’t be afraid to ask questions. A trustworthy roofer will be happy to explain exactly what you’re paying for, no fine print, no confusion, no awkward conversations."
+  // },
+  // {
+  //   type: "QuotesBanner",
+  //   className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[154px] lg:mb-[154px]"
+  // },
+  // {
+  //   type: "h2",
+  //   text: "Find the Right Roofer in Chester for the Job",
+  //   className: "mt-5 lg:mt-[72px]"
+  // },
+  // {
+  //   type: "p",
+  //   text: "A roof is more than just a few tiles sitting on top of your house; it’s protection, insulation, and sometimes even a style statement. Depending on what you need, here’s the kind of work you can search for when looking for roofers in Chester:"
+  // },
+  // {
+  //   type: "li",
+  //   text: "Roof repairs – leaks, loose tiles, or minor storm damage."
+  // },
+  // {
+  //   type: "li",
+  //   text: "New roof installations – flat or pitched, for homes, garages, or extensions."
+  // },
+  // {
+  //   type: "li",
+  //   text: "Gutter and fascia replacement – small fixes that prevent big water problems."
+  // },
+  // {
+  //   type: "li",
+  //   text: "Flat roof installation or resealing – perfect for low-pitch areas that need extra waterproofing."
+  // },
+  // {
+  //   type: "li",
+  //   text: "Chimney repairs – cracks, loose bricks, or failing flashing."
+  // },
+  // {
+  //   type: "li",
+  //   text: "Lead flashing repairs – the small details that keep your roof watertight."
+  // },
+  // {
+  //   type: "li",
+  //   text: "Skylight or Velux window installation – let the sunshine in safely."
+  // },
+  // {
+  //   type: "li",
+  //   text: "Roof insulation – keep warm in winter, cool in summer, and cut energy costs."
+  // },
+  // {
+  //   type: "li",
+  //   text: "Emergency roofing – fast fixes when storms strike or leaks appear unexpectedly."
+  // },
+  // {
+  //   type: "li",
+  //   text: "Drone roof surveys – safe, detailed inspections without climbing ladders."
+  // },
+  // {
+  //   type: 'p',
+  //   text: "No matter the job, finding a roofer with the right skills ensures your home stays dry, safe, and looking great without the stress.",
+  //   notMarginBottom: true
+  // },
+
+];
+export const ROOFERS_FREQUENTLY_DATA_WREXHAM = [
+  {
+    key: "1",
+    title: "Which roof is best for a house?",
+    description: `
+        There isn’t one single answer because it depends on the house itself. The pitch of the roof, the age of the property, your budget, and even the local weather all play a part. Concrete tiles are common because they’re practical and cost-effective. Slate looks great and lasts a long time but comes at a higher price. The “best” option is usually the one that suits your home and how long you plan to stay in it.
+        `,
+  },
+  {
+    key: "2",
+    title: "Should I pay a roofer in cash?",
+    description: `
+        Paying in cash isn’t automatically a problem, but what matters more is having everything clearly written down. You should always have a proper quote before work starts and a receipt once it’s finished. Many people prefer bank transfer because it leaves a record, but the key thing is transparency. Avoid large upfront payments unless it’s for agreed materials.
+        `,
+  },
+  {
+    key: "3",
+    title: "Which roof material lasts the longest?",
+    description: `
+        Natural slate is often considered the longest-lasting roofing material. When it’s installed properly and maintained, it can last for decades. Clay tiles also have a strong lifespan. Of course, durability depends on installation quality and exposure to the elements as much as the material itself.
+        `,
+  },
+  {
+    key: "4",
+    title: "What is the best time of year to replace a roof?",
+    description: `
+        Most roofers prefer steady, dry weather. Spring and summer are popular because conditions are usually more predictable. That said, roofing work can be done at other times of the year if the weather allows. Timing often comes down to urgency and availability rather than a perfect calendar month.
+        `,
+  },
+];
+export const ROOFERS_ADVICEINSIGHT_WREXHAM = [
+  {
+    id: 1,
+    title: "How to remove a tree stump",
+    image: "/nearme/tree-remove.webp",
+  },
+  {
+    id: 2,
+    title: " How to tell if a tree is dying",
+    image: "/nearme/trees-removal.webp",
+  },
+  {
+    id: 3,
+    title: "How much does it cost to remove a tree?",
+    image: "/nearme/tree-climb-remov.webp",
+  },
+  {
+    id: 4,
+    title: "What is a tree surgeon?",
+    image: "/nearme/long-tree-remove.webp",
+  },
+  {
+    id: 5,
+    title: " What is an arborist?",
+    image: "/nearme/tree-root-remove.webp",
+  },
+];
+export const ROOFERS_TABDATA_WREXHAM = {
+  popular: [
+    {
+      title: "Landscapers Near Me",
+      url: "/en/gb/landscape-gardeners-near-me",
+    },
+    {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
+      title: "Architects Near Me",
+      url: "",
+    },
+    {
+      title: "Gutter Cleaners Near Me",
+      url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Fencing Contractors Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
+    },
+    {
+      title: "Artificial Grass Installers Near Me",
+      url: "/en/gb/artificial-grass-installers-near-me",
+    },
+  ],
+  related: [
+    "Roofers Leeds",
+    "Roofers York",
+    "Roofers Hull",
+    "Roofers Bolton",
+    "Roofers Chester",
+    "Roofers Cheshire",
+    "Roofers Harrogate",
+    "Roofers Liverpool",
+    "Roofers Manchester",
+    "Roofers Stockport",
+    "Roofers North Yorkshire",
+  ],
+  findMore: [],
+};
+export const VETTED_DATA_ROOFERS_WREXHAM = [
+  `Are your roof tiles starting to shift every time the wind picks up? Telling yourself it’ll probably survive “just one more winter”? Truth is, if you’re starting to question it, it’s probably time to get it looked at. And we know the best roofers in Wrexham.
+  <br/><br/> 
+  `,
+  `
+Simply tell us what you need: a few tile replacements, repair, routine maintenance, or you’re just looking around for quotes? No worries, we will send up to 5 free no-obligation quotes from experts near you in Wrexham. Take your time, compare and decide what works best for you.
+`,
+];
+
+export const BREADCRUM_DATA_ROOFERS_WREXHAM = [
+  { title: "Home & Garden", path: "/en/gb/home" },
+  {
+    title: "Roofing",
+    path: "/en/gb/roofers-near-me",
+  },
+  {
+    title: "Wrexham",
+  },
+];
+
+export const POPULAR_SERVICES_ROOFERS_WREXHAM = [
+  "Roof Repair",
+  "Flashing",
+  "Waterproofing",
+  "Roof Replacement",
+  "Shingle replacement",
+  "Leadworks Installation ",
+];
+export const ROOFERS_FEEDBACK_WREXHAM = [
+  {
+    id: 1,
+    text: "We’d been hearing a faint rattling sound on windy nights but couldn’t work out what it was. Turned out a few tiles had shifted slightly. It wasn’t a huge job, but I’m glad we didn’t ignore it. The roofer explained it in simple terms and had it sorted quicker than expected.",
+    name: "Owain G.",
+  },
+  {
+    id: 2,
+    text: "There was a small leak above the landing that only showed up when it rained heavily. I assumed it would mean replacing half the roof, but it didn’t. They found the issue around the flashing and fixed it without turning it into something bigger. It felt honest, which I appreciated.",
+    name: "Megan P.",
+  },
+  {
+    id: 3,
+    text: "We bought an older property and knew the roof would need attention at some point. After getting a few quotes, we felt more confident about what actually needed doing versus what could wait. The work took a few days and was noisier than we expected, but it was handled properly.",
+    name: "Rhys B.",
+  },
+  {
+    id: 4,
+    text: "Noticed a damp patch forming in our spare bedroom ceiling but couldn’t see anything obvious from outside. The roofer did a proper check and found a small issue near the ridge tiles. He was local to us so booked us in for a next day fix. Highly recommend Localists.",
+    name: "Catrin H.",
+  },
+];
+
+export const ROOFERS_DATA_WREXHAM = [
+  {
+    id: 1,
+    title: "Home & Garden",
+    image: "/homepage/image6.webp",
+    isSpecial: true,
+    bgColor: "bg-cyan-400",
+    slug: "/en/gb/home",
+  },
+  {
+    id: 2,
+    title: "Fence & Gate Installation",
+    image: "/homepage/fenceandgate.webp",
+    isSpecial: false,
+    slug: "/en/gb/fencing-contractors-near-me",
+  },
+  {
+    id: 3,
+    title: "Driveway Installation",
+    image: "/homepage/driveway.webp",
+    isSpecial: false,
+    slug: "/en/gb/driveway-installers-near-me",
+  },
+  {
+    id: 4,
+    title: "Landscaping",
+    image: "/homepage/landscapingservice.webp", 
+    isSpecial: false,
+    slug: "/en/gb/landscape-gardeners-near-me",
+  },
+  {
+    id: 5,
+    title: "Artificial Grass Installation",
+    image: "/homepage/artificialgrassinstallation.webp",
+    isSpecial: false,
+    slug: "/en/gb/artificial-grass-installers-near-me",
+  },
+  {
+    id: 6,
+    title: "Patio Layer",
+    image: "/homepage/patiolayer.webp", // Aapki image path
+    isSpecial: false,
+    slug: "/en/gb/patio-layers-near-me",
+  },
+
+  {
+    id: 7,
+    title: "Gutter Cleaning",
+    image: "/homepage/guttercleaning.webp", // Aapki image path
+    isSpecial: false,
+    slug: "/en/gb/gutter-cleaning-near-me",
+  },
+  {
+    id: 8,
+    title: "Roofing",
+    image: "/roofing.webp",
+    isSpecial: false,
+    slug: "/en/gb/roofers-near-me",
+  },
+];

@@ -8,6 +8,7 @@ import { getFetchSellerListData } from "@/lib/store/buyerslice/buyerSlice";
 import Loader from "../../common/Loader/Loader";
 import { useRef } from "react";
 import NearmeH2Heading from "../../Nearme/NearmeH2Heading";
+import Paragraph from "../../UI/Typography/Paragraph";
 
 export default function FetureCardList({
   featureRef,
@@ -16,7 +17,7 @@ export default function FetureCardList({
   serviceName,
   cityName = "Chester",
 }) {
-  const { getSellerData } = useSelector((state) => state.buyer);
+  const { getSellerData,getSellerDataLoader } = useSelector((state) => state.buyer);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -119,9 +120,11 @@ export default function FetureCardList({
                 />
               </div>
             ))
-          ) : (
+          ) : getSellerDataLoader ?(
             <Loader />
-          )}
+          ) :<div className="flex min-h-[150px]">
+            <Paragraph className="m-auto"> No Seller Found in {cityName} </Paragraph>
+            </div>}
         </div>
       </div>
 
