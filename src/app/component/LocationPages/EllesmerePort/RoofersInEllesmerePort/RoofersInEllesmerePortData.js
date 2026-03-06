@@ -73,88 +73,16 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ELLESMEREPORT = [
         text: "To give you a rough idea of what people in Ellesmere Ports tend to pay:"
     },
     {
-        type: "li",
-        text: "Labour costs – covering the time and expertise needed to complete the job properly."
-    },
-    {
-        type: "li",
-        text: "Materials – including tiles, underlay, battens, flashing, or any other components required."
-    },
-    {
-        type: "li",
-        text: "Scaffolding or equipment hire – especially for taller or harder-to-reach roofs."
-    },
-    {
-        type: "li",
-        text: "Waste removal – old tiles, damaged materials, and general site clean-up once the job’s done."
-    },
-    {
-        type: "li",
-        text: "VAT (if applicable) – always worth checking so there are no last-minute surprises."
+        type: "AveratePriceSection",
     },
     {
         type: "p",
-        text: "If a quote feels vague or leaves things out, don’t be afraid to ask questions. A trustworthy roofer will be happy to explain exactly what you’re paying for, no fine print, no confusion, no awkward conversations."
+        text: "These numbers aren’t fixed quotes, just a guide to help you understand what’s normal locally. The surefire way to know what your own roof will cost is to get tailored quotes from local Ellesmere Port roofers who can see the job firsthand."
     },
     {
         type: "QuotesBanner",
-        className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[132px] lg:mb-[132px]"
+        className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
     },
-    {
-        type: "h2",
-        text: "Find the Best Roofers in Chester",
-        className: "mt-5 lg:mt-[72px]"
-    },
-    {
-        type: "p",
-        text: "A roof is more than just a few tiles sitting on top of your house; it’s protection, insulation, and sometimes even a style statement. Depending on what you need, here’s the kind of work you can search for when looking for roofers in Chester:"
-    },
-    {
-        type: "li",
-        text: "Roof repairs – leaks, loose tiles, or minor storm damage."
-    },
-    {
-        type: "li",
-        text: "New roof installations – flat or pitched, for homes, garages, or extensions."
-    },
-    {
-        type: "li",
-        text: "Gutter and fascia replacement – small fixes that prevent big water problems."
-    },
-    {
-        type: "li",
-        text: "Flat roof installation or resealing – perfect for low-pitch areas that need extra waterproofing."
-    },
-    {
-        type: "li",
-        text: "Chimney repairs – cracks, loose bricks, or failing flashing."
-    },
-    {
-        type: "li",
-        text: "Lead flashing repairs – the small details that keep your roof watertight."
-    },
-    {
-        type: "li",
-        text: "Skylight or Velux window installation – let the sunshine in safely."
-    },
-    {
-        type: "li",
-        text: "Roof insulation – keep warm in winter, cool in summer, and cut energy costs."
-    },
-    {
-        type: "li",
-        text: "Emergency roofing – fast fixes when storms strike or leaks appear unexpectedly."
-    },
-    {
-        type: "li",
-        text: "Drone roof surveys – safe, detailed inspections without climbing ladders."
-    },
-    {
-        type: 'p',
-        text: "No matter the job, finding a roofer with the right skills ensures your home stays dry, safe, and looking great without the stress.",
-        notMarginBottom: true
-    },
-
 ];
 export const FREQUENTLY_DATA_ELLESMEREPORT = [
     {
