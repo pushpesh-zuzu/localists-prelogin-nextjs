@@ -15,13 +15,13 @@ const QuestionOptionsBox = ({
         relative
         w-full
         md:px-4 px-3
-        md:h-[80px] h-[52px] flex
+        md:h-[80px] h-[54px] flex
         items-center
         justify-center
         text-center
         rounded-[20px]
         border border-2
-        text-[16px] leading-[18px]
+        text-[16px] leading-[16px]
         md:text-[18px] md:leading-[20px]
         lg:text-[18px] lg:leading-[20px]
         font-[Arial]
