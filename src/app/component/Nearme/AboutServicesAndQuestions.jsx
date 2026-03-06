@@ -12,6 +12,7 @@ import AveragePriceDynamic from "./AveragePriceDynamic";
 import GetQuote from "../common/GetQuotes/GetQuote";
 import PostCodeSectionLocation from "../LocationPages/PostCodeSectionLocation";
 import QuotesBanner from "../common/QuotesBanner/QuotesBanner";
+import DynamicPricingTable from "./DynamicPricingTable";
 
 const textBase =
   "font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em]!"
@@ -101,6 +102,18 @@ const AboutServicesAndQuestions = ({
             title={block?.title}
             priceCards={block?.priceCards}
             disclaimerText={block?.disclaimerText}
+            calculatorText={block?.calculatorText}
+            calculatorLink={block?.calculatorLink}
+          />
+        );
+
+      case "pricingTable":
+        return (
+          <DynamicPricingTable
+            key={index}
+            title={block?.title}
+            prices={block?.prices || []}
+            disclaimer={block?.disclaimer}
             calculatorText={block?.calculatorText}
             calculatorLink={block?.calculatorLink}
           />

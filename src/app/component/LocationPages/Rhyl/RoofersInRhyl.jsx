@@ -1,45 +1,45 @@
 "use client";
 import React, { useRef } from "react";
 import {
-    BREADCRUM_DATA_ROOFERS_ELLESMEREPORT,
-    FREQUENTLY_DATA_ELLESMEREPORT,
-    POPULAR_SERVICES_ROOFERS_ELLESMEREPORT,
-    QUESTION_AND_ABOUT_SERVICE_ROOFERS_ELLESMEREPORT,
-    ROOFERS_ADVICEINSIGHT_ELLESMEREPORT,
-    ROOFERS_FEEDBACK_ELLESMEREPORT,
-    ROOFERS_DATA_ELLESMEREPORT,
-    ROOFERS_TABDATA_ELLESMEREPORT,
-    VETTED_DATA_ROOFERS_ELLESMEREPORT,
-} from "./RoofersInEllesmerePortData";
-import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-import VettedSection from "../../../Nearme/VettedSection";
-import PopularJobNearMe from "../../../Nearme/PopularJobNearMe";
-import Footer from "../../../Footer/Footer";
-import AboutServicesAndQuestions from "../../../Nearme/AboutServicesAndQuestions";
-import { FAQ } from "../../../Nearme/FAQ";
-import UserFeedbackNearMe2 from "../../../Nearme/UserFeedbackNearMe2";
-import DiscoverNearMe from "../../../Nearme/DiscoverNearMe";
-import NearmeMember from "../../../Nearme/NearmeMember";
-import FAQScript from "../../../common/seo/FAQScript";
-import HireRelatedToServiceNearMe from "../../../Nearme/HireRelatedToServiceNearMe";
-import AdviceInsightNearMe from "../../../Nearme/AdviceInsightNearMe";
-import Feature from "../../FetureComponent/Feature";
-import HeroSectionLocation from "../../HeroSectionLocation";
+    BREADCRUM_DATA_ROOFERS_RHYL,
+    FREQUENTLY_DATA_RHYL,
+    POPULAR_SERVICES_ROOFERS_RHYL,
+    QUESTION_AND_ABOUT_SERVICE_ROOFERS_RHYL,
+    ROOFERS_ADVICEINSIGHT_RHYL,
+    ROOFERS_FEEDBACK_RHYL,
+    ROOFERS_DATA_RHYL,
+    ROOFERS_TABDATA_RHYL,
+    VETTED_DATA_ROOFERS_RHYL,
+} from "./RoofersInRhylData";
+import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+import VettedSection from "../../Nearme/VettedSection";
+import PopularJobNearMe from "../../Nearme/PopularJobNearMe";
+import Footer from "../../Footer/Footer";
+import AboutServicesAndQuestions from "../../Nearme/AboutServicesAndQuestions";
+import { FAQ } from "../../Nearme/FAQ";
+import UserFeedbackNearMe2 from "../../Nearme/UserFeedbackNearMe2";
+import DiscoverNearMe from "../../Nearme/DiscoverNearMe";
+import NearmeMember from "../../Nearme/NearmeMember";
+import FAQScript from "../../common/seo/FAQScript";
+import HireRelatedToServiceNearMe from "../../Nearme/HireRelatedToServiceNearMe";
+import AdviceInsightNearMe from "../../Nearme/AdviceInsightNearMe";
+import Feature from "../FetureComponent/Feature";
+import HeroSectionLocation from "../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 
-function RoofersInEllesmerePort() {
+function RoofersInRhyl() {
     useScrollToTop()
     useRegistrationRedirect()
     const featureRef = useRef(null);
     return (
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-            <FAQScript FAQ={FREQUENTLY_DATA_ELLESMEREPORT} />
+            <FAQScript FAQ={FREQUENTLY_DATA_RHYL} />
             <HeroSectionLocation
                 heading1="Roofers"
-                heading2="Ellesmere Port"
-                description="Get free, no-obligation quotes from the highest quality roofers working across Ellesmere Port. Enter your postcode below and share a few details about the work. It only takes a minute to get started."
+                heading2="Rhyl"
+                description="Need a local roofer in Rhyl? Input your postcode, a few details about the project, and get free quotes now from trusted professionals in your area. No pressure, no guesses."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -48,16 +48,16 @@ function RoofersInEllesmerePort() {
                 serviceName="Roofing"
             />
             <VettedSection
-                paragraph={VETTED_DATA_ROOFERS_ELLESMEREPORT}
-                vettedHeading1="Find Local Vetted Roofers Ellesmere Port "
+                paragraph={VETTED_DATA_ROOFERS_RHYL}
+                vettedHeading1="Find Local Vetted Roofers Rhyl "
                 vettedHeading2="Near You"
-                breadcrumb={BREADCRUM_DATA_ROOFERS_ELLESMEREPORT}
+                breadcrumb={BREADCRUM_DATA_ROOFERS_RHYL}
                 extraButton
                 featureRef={featureRef}
             />
 
             <PopularJobNearMe
-                services={POPULAR_SERVICES_ROOFERS_ELLESMEREPORT}
+                services={POPULAR_SERVICES_ROOFERS_RHYL}
                 popularImage="/nearme/Roofing/roofslate.webp"
                 altText="two roofers installing slate tiles onto a brand new roof URL"
                 mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -66,7 +66,7 @@ function RoofersInEllesmerePort() {
             <AboutServicesAndQuestions
                 serviceId={113}
                 serviceName="Roofing"
-                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_ELLESMEREPORT}
+                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_RHYL}
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
@@ -74,21 +74,21 @@ function RoofersInEllesmerePort() {
             </div>
 
             <AdviceInsightNearMe
-                articles={ROOFERS_ADVICEINSIGHT_ELLESMEREPORT}
+                articles={ROOFERS_ADVICEINSIGHT_RHYL}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
             />
             <FAQ
                 containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
                 headdingblue="FAQ's"
                 headingblack=""
-                data={FREQUENTLY_DATA_ELLESMEREPORT}
+                data={FREQUENTLY_DATA_RHYL}
             />
-            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_ELLESMEREPORT} />
-            <DiscoverNearMe homeData={ROOFERS_DATA_ELLESMEREPORT} />
+            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_RHYL} />
+            <DiscoverNearMe homeData={ROOFERS_DATA_RHYL} />
             <HireRelatedToServiceNearMe
                 heading1="Hire with"
                 heading2="confidence."
-                tabData={ROOFERS_TABDATA_ELLESMEREPORT}
+                tabData={ROOFERS_TABDATA_RHYL}
                 activeTabkey="popular"
             />
             <NearmeMember
@@ -98,4 +98,4 @@ function RoofersInEllesmerePort() {
         </>
     );
 }
-export default RoofersInEllesmerePort;
+export default RoofersInRhyl;

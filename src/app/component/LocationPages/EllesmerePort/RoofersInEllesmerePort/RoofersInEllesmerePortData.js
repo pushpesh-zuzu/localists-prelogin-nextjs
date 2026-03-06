@@ -73,7 +73,29 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ELLESMEREPORT = [
         text: "To give you a rough idea of what people in Ellesmere Ports tend to pay:"
     },
     {
-        type: "AveratePriceSection",
+        type: "pricingTable",
+        title: "Average cost of roofers in Ellesmere Port",
+        calculatorText: "Roofing Calculator",
+        calculatorLink: "",
+        disclaimer: "*costs are estimates only, to get a more specific estimate try our",
+        prices: [
+            {
+                text: "General roofing work comes in at around",
+                price: "£2,121"
+            },
+            {
+                text: "Roof repairs typically average about",
+                price: "£739"
+            },
+            {
+                text: "Emergency roofing call-outs are usually around",
+                price: "£630"
+            },
+            {
+                text: "Full roof replacements sit closer to",
+                price: "£6,837"
+            }
+        ]
     },
     {
         type: "p",
