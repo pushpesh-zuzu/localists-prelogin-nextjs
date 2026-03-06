@@ -31,20 +31,20 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
       {
         description: "Emergency roofing services average around. The final amount will depend on how serious the issue is.",
         price: "£445",
-              className:"max-[360]:min-h-22 max-[360]:max-h-22 min-[360px]:min-h-20 min-[360px]:max-h-20 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[130px] lg:max-h-[130px]"
+              className:"max-[360]:min-h-22 max-[360]:max-h-20 min-[360px]:min-h-20 min-[360px]:max-h-20 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[130px] lg:max-h-[130px]"
 
       },
       {
         description: "For a complete new roof, homeowners in Deeside typically pay around on average.",
         price: "£7,495",
-              className:"max-[360]:min-h-22 max-[360]:max-h-22 min-[360px]:min-h-20 min-[360px]:max-h-20 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[130px] lg:max-h-[130px]"
+              className:"max-[360]:min-h-22 max-[360]:max-h-20 min-[360px]:min-h-20 min-[360px]:max-h-20 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[130px] lg:max-h-[130px]"
       },
     ],
 },
 {
   type: "p",
   text: "These figures are just to help you get your bearings. The only way to know what your roof will actually cost is to have a roofer take a proper look and give you a written quote.",
-noMarginBottom:true
+  notMarginBottom:true
 },
     {
         type: "image",
@@ -79,7 +79,7 @@ noMarginBottom:true
 },
 {
     type: "QuotesBanner",
-    className: "mb-[15px] mt-[30px] md:mt-[80px] md:mb-[40px] lg:mt-[154px] lg:mb-[72px]"
+    className: "mb-[0px] mt-[30px] md:mt-[80px] md:mb-[40px] lg:mt-[154px] lg:mb-[72px]"
   },
 
 ];

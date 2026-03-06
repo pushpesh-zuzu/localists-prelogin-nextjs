@@ -44,7 +44,7 @@ export default function HireRelatedToServiceNearMe({
   heading2 = "confidence",
   tabData = [],
   headingMiddle = "",
-  heightClass = "min-h-[440px] h-auto md:h-auto lg:h-[484px]",
+  heightClass = "min-h-[412px] h-auto md:h-auto lg:h-[484px]",
   activeTabkey="professionals"
 }) {
   const [currentTab, setcurrentTab] = useState(activeTabkey);
