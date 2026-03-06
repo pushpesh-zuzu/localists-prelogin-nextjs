@@ -197,7 +197,7 @@ relative overflow-hidden">
                       disabled={disabled}
                       autoComplete="off"
                       placeholder="Post Code"
-                      className="custom-input px-1 py-2 md:px-6 md:py-3 lg:py-2.5 text-center font-bold rounded-full bg-white text-gray-500 outline-none w-27 md:w-40 lg:w-74 !text-[16px] md:!text-[16px] lg:!text-[28px] placeholder:!text-[16px] md:placeholder:!text-[16px] lg:placeholder:!text-[28px]"
+                      className="custom-input px-4 py-2 md:px-6 md:py-3 lg:py-2.5 text-left md:text-center font-bold rounded-full bg-white text-gray-500 outline-none w-27 md:w-40 lg:w-74 !text-[16px] md:!text-[16px] lg:!text-[28px] placeholder:!text-[16px] md:placeholder:!text-[16px] lg:placeholder:!text-[28px]"
                     />
                     {postcode && (
                       <div className="absolute right-3 top-1/2 -translate-y-1/2">
