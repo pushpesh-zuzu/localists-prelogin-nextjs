@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInChester from '@/app/component/LocationPages/Chester/RoofersInChester/RoofersInChester';
+import RoofersInEllesmerePort from '@/app/component/LocationPages/EllesmerePort/RoofersInEllesmerePort/RoofersInEllesmerePort';
 import React, { Suspense } from 'react'
 export const metadata = {
   title: "Find Roofers Ellesmere Port | Localists",
@@ -25,7 +25,7 @@ function page() {
         </div>}
       >
 
-        <RoofersInChester />
+        <RoofersInEllesmerePort />
       </Suspense></>
   )
 }
