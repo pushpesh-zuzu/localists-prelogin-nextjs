@@ -45,7 +45,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
 {
   type: "p",
   text: "These figures are just to give you a ballpark. The only way to know what your roof will actually cost is to have a local roofer take a proper look and give you a written quote.",
-    noMarginBottom: true
+    notMarginBottom: true
     },
     {
        type: "image",

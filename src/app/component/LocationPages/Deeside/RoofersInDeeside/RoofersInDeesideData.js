@@ -44,7 +44,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
 {
   type: "p",
   text: "These figures are just to help you get your bearings. The only way to know what your roof will actually cost is to have a roofer take a proper look and give you a written quote.",
-noMarginBottom:true
+  notMarginBottom:true
 },
     {
         type: "image",
@@ -79,7 +79,7 @@ noMarginBottom:true
 },
 {
     type: "QuotesBanner",
-    className: "mb-[15px] mt-[30px] md:mt-[80px] md:mb-[40px] lg:mt-[154px] lg:mb-[72px]"
+    className: "mb-[0px] mt-[30px] md:mt-[80px] md:mb-[40px] lg:mt-[154px] lg:mb-[72px]"
   },
 
 ];
