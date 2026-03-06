@@ -49,7 +49,7 @@ function RoofersInChester() {
       />
       <VettedSection
         paragraph={VETTED_DATA_ROOFERS_CHESTER}
-        vettedHeading1="Find Vetted Local Roofers in "
+        vettedHeading1="Find Vetted Roofers in "
         vettedHeading2="Chester"
         breadcrumb={BREADCRUM_DATA_ROOFERS_CHESTER}
         extraButton
@@ -79,8 +79,8 @@ function RoofersInChester() {
       />
       <FAQ
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
-        headdingblue="Frequently Asked Questions About "
-        headingblack="Roofers in Chester"
+        headdingblue="FAQ's"
+        headingblack=""
         data={FREQUENTLY_DATA_TREE_SURGEON_CHESTER}
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_CHESTER} />

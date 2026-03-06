@@ -61,14 +61,14 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
        
         <div className="z-50 relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           {/* LEFT */}
-          <div className="flex items-start max-[768px]:justify-between md:gap-4">
+          <div className="flex items-start max-[768px]:justify-between md:gap-4 lg:gap-6">
             {seller.profile_image && !imgError ? (
               <Image
                 height={96}
                 width={96}
                 src={`${BASE_IMAGE}users/${seller.company_logo}`}
                 alt={businessName}
-                className="rounded-[20px] h-20 w-20 md:h-24 md:w-24"
+                className="rounded-[20px] h-20 w-20 md:h-24 md:w-24 lg:h-30 lg:w-30"
                 unoptimized
                 loading={featured ? "eager" : "lazy"}
                 decoding="async"
@@ -76,14 +76,14 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
                 onError={() => setImgError(true)}
               />
             ) : (
-              <GalleryIcon className="h-20 w-20 md:h-24 md:w-24" />
+              <GalleryIcon className="h-20 w-20 md:h-24 md:w-24 lg:h-30 lg:w-30" />
             )}
 
-            <div className="max-w-[63%] min-w-[63%] md:max-w-full my-auto flex flex-col gap-1">
+            <div className="max-w-[63%] min-w-[63%] md:max-w-full my-auto flex flex-col gap-1 lg:gap-3">
               <h5
                 className="text-[18px] leading-[18px]
         md:text-[25px] md:leading-[25px]
-        lg:text-[25px] lg:leading-[25px]  font-Inter font-black
+        lg:text-[28px] lg:leading-[28px]  font-Inter font-black
         tracking-[-0.03em]"
               >
                 {businessName}
@@ -100,7 +100,7 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
 
                   {/* HALF STAR */}
                   {showHalf && (
-                    <HalfStarIconFeature className="h-[18px] w-[18px] md:h-[30px] md:w-[30px]" />
+                    <HalfStarIconFeature className="h-[18px] w-[18px] md:h-[30px] md:w-[30px] lg:h-" />
                   )}
 
                   {/* EMPTY STARS */}
@@ -132,7 +132,7 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
           </div>
         </div>
 
-        <div className="hidden md:flex flex-col gap-3 min-w-fit">
+        <div className="hidden md:flex md:gap-3 lg:gap-0 flex-col min-w-fit lg:bottom-[40px] lg:relative">
           <Button1
             onClick={() => {
               setShowModal(true);
@@ -143,12 +143,12 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
           </Button1>
         </div>
 
-        <div className="max-w-full md:max-w-[69%] flex flex-col gap-y-[30px] md:gap-y-0 md:flex-row gap-x-6">
+        <div className="max-w-full md:max-w-[69%] lg:max-w-[80%] flex flex-col gap-y-[30px] md:gap-y-0 md:flex-row gap-x-6">
           <div className="mt-4 flex items-center flex-wrap gap-[13px]">
             {seller?.services && seller?.services.map((service) => (
               <span
                 key={service?.service_id}
-                className="tracking-[-0.03em] font-bold font-[Arial] rounded-full border-[2.5px] h-fit border-[#B9B9C2] py-[5.35px] px-1.5 md:px-2 md:py-1 text-[11px] leading-[11px] md:leading-[17px] md:text-base text-[#B9B9C2]"
+                className="tracking-[-0.03em] font-bold font-[Arial] rounded-full border-[2.5px] h-fit border-[#B9B9C2] py-[5.35px] px-1.5 md:px-2 lg:px-4 lg:py-2 md:py-1 text-[11px] leading-[11px] md:leading-[17px] md:text-base lg:text-[18px] lg:leading-[18px] text-[#B9B9C2]"
               >
                 {service?.name}
               </span>
@@ -159,7 +159,7 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
               onClick={() => {
                 setShowModal(true);
               }}
-              className="  text-sm!
+              className="text-sm!
                         md:text-[16px]
                         lg:text-[18px] flex items-center mx-auto justify-center gap-2 w-fit"
             >

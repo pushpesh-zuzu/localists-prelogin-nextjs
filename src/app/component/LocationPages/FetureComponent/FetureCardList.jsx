@@ -76,7 +76,7 @@ export default function FetureCardList({
 
   return (
     <div
-      className="mx-auto max-w-[1115px] px-[30px] pt-[30px] pb-[40px] md:py-[50px] md:px-16 xl:px-[120px] lg:py-[72px]"
+      className="mx-auto max-w-[1520px] px-[30px] pt-[30px] pb-[40px] md:py-[50px] md:px-16 xl:px-[120px] lg:py-[72px]"
       style={{ overflowAnchor: "none" }}
     >
       {/* <FetureSearchBox

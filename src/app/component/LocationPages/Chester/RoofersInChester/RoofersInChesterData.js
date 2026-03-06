@@ -116,11 +116,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
   },
   {
     type: "QuotesBanner",
-    className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[132px] lg:mb-[132px]"
+    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
   },
   {
     type: "h2",
-    text: "Find the Right Roofer in Chester for the Job",
+    text: "Find the Best Roofers in Chester",
     className: "mt-5 lg:mt-[72px]"
   },
   {
