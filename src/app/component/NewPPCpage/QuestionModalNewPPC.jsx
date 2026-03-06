@@ -118,7 +118,8 @@ const QuestionModalNewPPC = ({
         if (
             questions.length > 0 &&
             buyerRequest?.questions?.length > 0 &&
-            !hasInitializedRef.current
+            !hasInitializedRef.current &&
+            questionHistory.length === 1
         ) {
             const savedQuestions = buyerRequest.questions;
             const reconstructedHistory = [0];
@@ -378,6 +379,7 @@ const QuestionModalNewPPC = ({
             }
         }
     };
+
 
     const handleBack = () => {
         if (questionHistory.length > 1) {

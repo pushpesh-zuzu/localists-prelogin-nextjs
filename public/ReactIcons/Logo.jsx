@@ -1,8 +1,10 @@
-import React from "react";
+import React,  { useId } from "react";
 
 function Logo({
   className = "",
 }) {
+  const uniqueId = useId().replace(/:/g, ""); 
+  const gradientId = `paint0_linear_${uniqueId}`;
   return (
     <svg
       width="103"
@@ -14,7 +16,7 @@ function Logo({
     >
       <path
         d="M7.65361 19.0348C11.6376 15.0536 15.6105 11.5053 15.2245 7.02505C14.8854 3.07693 11.5631 -0.0137394 7.59847 4.59349e-05C3.39946 0.0110742 0 3.42156 0 7.62609C0 11.8279 3.79372 15.2356 7.59571 19.0348C7.61225 19.0514 7.63982 19.0514 7.65361 19.0348Z"
-        fill="url(#paint0_linear_7808_9920)"
+       fill={`url(#${gradientId})`}
       />
       <path
         d="M7.61636 11.2074C9.5791 11.2074 11.1702 10.5174 11.1702 9.6662C11.1702 8.81502 9.5791 8.125 7.61636 8.125C5.65362 8.125 4.0625 8.81502 4.0625 9.6662C4.0625 10.5174 5.65362 11.2074 7.61636 11.2074Z"
@@ -59,7 +61,7 @@ function Logo({
       />
       <defs>
         <linearGradient
-          id="paint0_linear_7808_9920"
+           id={gradientId}
           x1="1.59116"
           y1="12.4194"
           x2="14.7805"

@@ -238,11 +238,25 @@ const QuestionAnswerMultiStep = ({
     }
   };
 
-  const removeQuestionsAfter = (questionIndex) => {
-    const updatedAnswers =
-      buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
+  // const removeQuestionsAfter = (questionIndex) => {
+  //   const updatedAnswers =
+  //     buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
 
-    dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+  //   dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+  // };
+
+  const removeQuestionsAfter = (questionIndex) => {
+    const questionText = formattedQuestions[questionIndex]?.questions;
+
+    const indexInAnswers = buyerRequest?.questions?.findIndex(
+      (q) => q?.ques === questionText
+    );
+
+    if (indexInAnswers !== -1) {
+      const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
+
+      dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+    }
   };
 
   const handleBack = () => {
@@ -254,7 +268,7 @@ const QuestionAnswerMultiStep = ({
       setQuestionHistory(newHistory);
       setCurrentQuestion(prevIndex);
     } else {
-      dispatch(setbuyerRequestData({ questions: [] }));
+      // dispatch(setbuyerRequestData({ questions: [] }));
       onBack();
       getProgressPercentage(-remainingProgressPerStep + 5);
     }

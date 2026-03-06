@@ -257,16 +257,29 @@ const QuestionAnswerMultiStepRoofingNew = ({
     }
   };
 
-  const removeQuestionsAfter = (questionNo) => {  //added
-    dispatch(
-      setbuyerRequestData({
-        questions: buyerRequest.questions.filter(
-          (q) => q.question_no <= questionNo
-        ),
-      })
-    );
-  };
+  // const removeQuestionsAfter = (questionNo) => {  //added
+  //   dispatch(
+  //     setbuyerRequestData({
+  //       questions: buyerRequest.questions.filter(
+  //         (q) => q.question_no <= questionNo
+  //       ),
+  //     })
+  //   );
+  // };
 
+  const removeQuestionsAfter = (questionIndex) => {
+    const questionText = formattedQuestions[questionIndex]?.questions;
+
+    const indexInAnswers = buyerRequest?.questions?.findIndex(
+      (q) => q?.ques === questionText
+    );
+
+    if (indexInAnswers !== -1) {
+      const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
+
+      dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+    }
+  };
 
   const handleBack = () => {
     setIsComingFromStep4(false);
@@ -274,10 +287,10 @@ const QuestionAnswerMultiStepRoofingNew = ({
       const newHistory = [...questionHistory];
       newHistory.pop();
       const prevIndex = newHistory[newHistory.length - 1];
-      const prevQuestionNo =
-        formattedQuestions[prevIndex]?.question_no; // added
+      // const prevQuestionNo =
+      //   formattedQuestions[prevIndex]?.question_no; // added
 
-      removeQuestionsAfter(prevQuestionNo); //added
+      removeQuestionsAfter(prevIndex); //added
 
 
       setQuestionHistory(newHistory);
@@ -287,7 +300,7 @@ const QuestionAnswerMultiStepRoofingNew = ({
         setIsFirstQuestionAnswered(false);
       }
     } else {
-      dispatch(setbuyerRequestData({ questions: [] })); //added
+      // dispatch(setbuyerRequestData({ questions: [] })); //added
       onBack();
       setPercetangForPost(0);
     }
