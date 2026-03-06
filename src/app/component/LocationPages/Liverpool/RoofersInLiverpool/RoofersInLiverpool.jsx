@@ -79,8 +79,8 @@ function RooferInLiverpool() {
       />
       <FAQ
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px]  mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
-        headdingblue="Frequently Asked Questions About "
-        headingblack="Roofers in Liverpool"
+        headdingblue="FAQ's"
+        headingblack=""
         data={FREQUENTLY_DATA_LIVERPOOL}
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_LIVERPOOL} />
