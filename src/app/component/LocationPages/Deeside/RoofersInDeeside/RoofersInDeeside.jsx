@@ -38,7 +38,7 @@ function RoofersInDeeside() {
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_DEESIDE} />
       <HeroSectionLocation
         heading1="Roofers"
-        heading2="Wrexham"
+        heading2="Deeside"
         description="Looking to find the best roofers in Deeside? Look no further! Just give us your Looking for roofers in your local area? Let us know your postcode, and we’ll connect you with reliable Roofers in Deeside. Get free, no-obligation quotes to your inbox within minutes."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
