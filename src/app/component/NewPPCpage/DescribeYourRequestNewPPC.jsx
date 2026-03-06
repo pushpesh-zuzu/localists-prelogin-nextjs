@@ -17,7 +17,7 @@ import { useRouter } from "next/navigation";
 import PlusIcon from "../../../../public/icons/PlusIcon.svg";
 import CheckIcon from "../../../../public/icons/CheckIcon.svg";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
-import H5 from "../UI/Typography/H5";
+import H4 from "../UI/Typography/H4";
 
 const DescribeYourRequestNewPPC = () => {
     const [text, setText] = useState("");
@@ -88,15 +88,15 @@ const DescribeYourRequestNewPPC = () => {
             {/* Success */}
             <div className="flex items-center justify-center gap-[6px] font-[Arial]
         tracking-[-0.03em] text-[#00afe3] text-[16px] leading-[18px] font-medium mb-[10px] max-sm:text-[13px]">
-                <Image src={CheckIcon} alt="success" width={20} height={20} />
+                <Image src={CheckIcon} alt="success" width={18} height={18} />
                 <span>Your request has been submitted</span>
             </div>
 
             {/* Header */}
-            <div className="text-center mb-[6px]">
-                <H5 className="text-[#253238] font-bold">
+            <div className="text-center mb-[6px] md:mb-[16px]">
+                <H4 className="text-[#253238] font-bold">
                     Tell us more about what you need for better responses
-                </H5>
+                </H4>
             </div>
 
             <p className="text-center text-[#828282] font-[Arial]
@@ -114,7 +114,7 @@ const DescribeYourRequestNewPPC = () => {
                 }}
                 placeholder="What should the professional know to better understand your request?"
                 className={`
-          w-full mt-[10px] p-[14px]
+          w-full mt-[10px] md:mt-[24px] p-[14px]
           border rounded-[5px]
           font-[Arial]
         tracking-[-0.03em] leading-[18px]
@@ -157,7 +157,7 @@ const DescribeYourRequestNewPPC = () => {
             </label>
 
             <p className="text-[12px] font-[Arial]
-        tracking-[-0.03em] leading-[16px] text-[#d9d9d9] text-left mt-[4px]">
+        tracking-[-0.03em] leading-[16px] text-[#d9d9d9] text-left mt-[4px] md:mt-4">
                 Image (jpeg, jpg, png) file can be uploaded
             </p>
 
@@ -177,7 +177,7 @@ const DescribeYourRequestNewPPC = () => {
             )}
 
             {/* Progress */}
-            <div className="mt-[16px]">
+            {/* <div className="mt-[16px]">
                 <span className="text-[#828282] font-[Arial]
         tracking-[-0.03em] leading-[18px] text-[16px] font-medium max-sm:text-[12px]">
                     Request quality
@@ -188,12 +188,12 @@ const DescribeYourRequestNewPPC = () => {
                         style={{ width: `${qualityData || 0}%` }}
                     />
                 </div>
-            </div>
+            </div> */}
 
-            <p className="mt-[16px] text-[#828282] font-[Arial]
+            {/* <p className="mt-[16px] text-[#828282] font-[Arial]
         tracking-[-0.03em] leading-[20px] text-[16px] font-medium text-left max-sm:text-[12px]">
                 Quality score increases as you add more detail
-            </p>
+            </p> */}
 
             {/* Checkbox */}
             <label className="mt-[16px] flex items-start gap-[8px] p-[16px] bg-gradient-to-r from-[#8ed5ec] to-[#00afe3] text-white cursor-pointer">

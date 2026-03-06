@@ -29,15 +29,15 @@ const MultiStepDescribeYourRequest = () => {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  useEffect(() => {
-    const delayDebounce = setTimeout(() => {
-      if (text.trim() !== "") {
-        dispatch(textQualityData({ text }));
-      }
-    }, 500);
+  // useEffect(() => {
+  //   const delayDebounce = setTimeout(() => {
+  //     if (text.trim() !== "") {
+  //       dispatch(textQualityData({ text }));
+  //     }
+  //   }, 500);
 
-    return () => clearTimeout(delayDebounce);
-  }, [text, dispatch]);
+  //   return () => clearTimeout(delayDebounce);
+  // }, [text, dispatch]);
 
   const handleChange = (e) => {
     setText(e.target.value);
@@ -110,6 +110,17 @@ const MultiStepDescribeYourRequest = () => {
               height={20}
               className="w-5 h-5"
             /> */}
+             <svg
+          className="h-5 w-5 max-[480px]:mt-0"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clipRule="evenodd"
+          />
+        </svg>
             <span>Your request has been submitted</span>
           </div>
 
@@ -185,7 +196,7 @@ const MultiStepDescribeYourRequest = () => {
             </ul>
           )}
 
-          <div className="mt-4 text-left">
+          {/* <div className="mt-4 text-left">
             <span className="text-[#828282] font-medium text-base">
               Request quality
             </span>
@@ -201,7 +212,7 @@ const MultiStepDescribeYourRequest = () => {
             <p className="font-medium text-base text-[#828282] text-left">
               Quality score increases as you add more detail
             </p>
-          </div>
+          </div> */}
 
           <label className="mt-4 flex cursor-pointer items-center bg-gradient-to-r from-[#8ed5ec] to-[#00afe3] px-[18px] py-[16.35px] text-left text-sm font-medium text-white transition-all duration-300 ease-in-out max-[768px]:px-[14px] max-[768px]:py-[14px] max-[768px]:text-[13px] max-[480px]:px-3 max-[480px]:py-3 max-[480px]:text-[10px] max-[400px]:text-[10px] max-[350px]:text-[10px]">
             <input
