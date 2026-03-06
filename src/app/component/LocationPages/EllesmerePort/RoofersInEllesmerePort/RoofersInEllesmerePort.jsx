@@ -70,7 +70,7 @@ function RoofersInEllesmerePort() {
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-                <Feature serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+                <Feature cityName='Ellesmere Port' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
             <AdviceInsightNearMe
