@@ -37,7 +37,7 @@ export default function DynamicPricingTable({
                                 <React.Fragment key={index}>
                                     <div>
                                         <Paragraph
-                                            variant="VeryprimarySmall"
+                                            variant="optional"
                                             className="md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center md:max-w-[220px] lg:max-w-[90%]"
                                         >
                                             {item.text}
