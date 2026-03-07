@@ -74,6 +74,7 @@ const initialState = {
   autoBidData: [],
   autoBidListLoader: false,
   manualBidLoader: false,
+  showBookingModal: false,
 };
 
 // ----------------------------
@@ -436,9 +437,11 @@ export const addDetailsRequestData = (addDetailsData, router, requestId) => {
       if (response) {
         setCookie('isRegistrationComplete', true)
         dispatch(getbuyerrequestList());
+        dispatch(setShowBookingModal(true));
         router.push(`/conversion/${requestId}`);
         // router.push('/conversion/${requestId}')
         setTimeout(() => {
+          dispatch(setShowBookingModal(false));
           return response.data;
         }, 5000);
       }
@@ -460,11 +463,11 @@ export const addDetailsRequestDataForLocalistLanding = (addDetailsData, requestI
       );
 
       if (response) {
-          setCookie('isRegistrationComplete',true)
+        setCookie('isRegistrationComplete', true)
         dispatch(getbuyerrequestList());
         // router.push('/conversion/${requestId}')
         // setTimeout(() => {
-          return response.data;
+        return response.data;
         // }, 5000);
       }
     } catch (error) {
@@ -763,6 +766,9 @@ const buyerSlice = createSlice({
     setManualBidLoader: (state, action) => {
       state.manualBidLoader = action.payload;
     },
+    setShowBookingModal: (state, action) => {
+      state.showBookingModal = action.payload;
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -816,7 +822,7 @@ export const {
   setsearchServiceLoader,
   setGetSellerDataLoader,
   setGetSellerData,
-  setAutoBidListLoader, setAutoBidData, setManualBidLoader
+  setAutoBidListLoader, setAutoBidData, setManualBidLoader, setShowBookingModal
 } = buyerSlice.actions;
 
 export default buyerSlice.reducer;

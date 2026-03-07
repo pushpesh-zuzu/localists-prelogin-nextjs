@@ -27,6 +27,7 @@ import H2 from "../UI/Typography/H2";
 import CalenderQuestions from "./CalenderQuestions";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import { useRouter } from "next/navigation";
+import CalenderFlowQuestions from "./CalenderFlowQuestions";
 // import CalenderQuestions from "./CalenderQuestions";
 
 function HeroSection({
@@ -54,6 +55,7 @@ function HeroSection({
     questionLoader,
     buyerRequest,
     buyerStep,
+    showBookingModal,
   } = useSelector((state) => state.buyer);
   const [inputText, setInputText] = useState("");
   const [files, setFiles] = useState([]);
@@ -106,7 +108,14 @@ function HeroSection({
     }
   }, [buyerStep]);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (selectedDates) => {
+
+    const formattedSlots = selectedDates.map((item) => ({
+      date: item.date.toISOString().split("T")[0],
+      slots: item.slots.join(", "),
+    }));
+
+    // console.log("formattedSlots", JSON.stringify(formattedSlots));
     let hasError = false;
 
     if (hasError) return;
@@ -118,7 +127,7 @@ function HeroSection({
       request_id: reqId,
       details: inputText,
       professional_letin: 0,
-      slots: JSON.stringify("data"),
+      slots: JSON.stringify(formattedSlots),
     };
 
     // Dispatch to Redux
@@ -130,8 +139,7 @@ function HeroSection({
             result?.message ||
             "Create Request successfully!";
           showToast("success", successMessage);
-          onNext();
-
+          // onNext();
           // Clear states
           dispatch(clearSetbuyerRequestData());
           dispatch(clearBuyerRegisterFormData());
@@ -140,7 +148,7 @@ function HeroSection({
       },
     );
   };
-  console.log(buyerStep, "bbbbbbbbb");
+  // console.log(buyerStep, "bbbbbbbbb");
   return (
     <section className="relative min-h-[100vh] w-full overflow-hidden px-[30px] md:px-[120px]">
       {/* Background Layer */}
@@ -280,14 +288,53 @@ function HeroSection({
           )}
           {buyerStep === 7 && (
             //  <ZohoCalendar/>
-            <CalenderQuestions
+            // <CalenderQuestions
+            //   onBack={prevStep}
+            //   // onSelect={onSelect}
+            //   nextStep={handleSubmit}
+            // />
+
+            <CalenderFlowQuestions
               onBack={prevStep}
-              // onSelect={onSelect}
               nextStep={handleSubmit}
             />
           )}
         </div>
       </div>
+
+      {showBookingModal && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
+
+          <div className="bg-white rounded-2xl p-8 w-full max-w-[420px] text-center shadow-2xl animate-[fadeIn_.3s_ease]">
+
+            {/* Success Icon */}
+            <div className="flex justify-center mb-4">
+              <div className="h-16 w-16 flex items-center justify-center rounded-full bg-green-100">
+                <svg
+                  className="w-8 h-8 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Title */}
+            <h2 className="text-[22px] font-bold text-[#253238] mb-2">
+              Booking Confirmed!
+            </h2>
+
+            {/* Message */}
+            <p className="text-gray-600 text-[15px] leading-relaxed">
+              Your selected time slots have been successfully booked.
+            </p>
+
+          </div>
+        </div>
+      )}
     </section>
   );
 }
