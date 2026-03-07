@@ -1,16 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useRouter } from "next/navigation";
 import {
-  addDetailsRequestData,
   addImageSubmittedData,
 } from "@/lib/store/buyerslice/buyerSlice";
 import H4 from "../../UI/Typography/H4";
 import Paragraph from "../../UI/Typography/Paragraph";
 import FormWrapper from "../FormWrapper";
+import UserIconWhite from "../../../../../public/ReactIcons/UserIconWhite";
 
 const DescribeYourRequestNewLocalists = ({
   setInputText,
@@ -24,7 +22,7 @@ const DescribeYourRequestNewLocalists = ({
 
   const dispatch = useDispatch();
 
-  const { buyerStep } = useSelector((state) => state.buyer);
+  const { buyerStep, requestId } = useSelector((state) => state.buyer);
 
   const isComplete = buyerStep === 10;
 
@@ -43,7 +41,9 @@ const DescribeYourRequestNewLocalists = ({
     setFiles(selectedFiles);
     setFileError(false);
     // Dispatch image upload to Redux
+
     const formData = new FormData();
+    formData.append("request_id", requestId);
     selectedFiles.forEach((file) => {
       formData.append("image_file", file);
     });
@@ -97,9 +97,8 @@ const DescribeYourRequestNewLocalists = ({
         {/* Textarea */}
         <span className="max-[480px]:h-fit">
           <textarea
-            className={`mt-[10px] w-full resize-none rounded-[14px] border-2 placeholder:text-gray-400! placeholder:font-medium px-[14px] py-[14px] text-sm shadow-sm ${
-              textError ? "border-red-500" : "border-[#253238]"
-            } max-[480px]:h-20 max-[480px]:px-[10px] max-[480px]:py-[10px] max-[480px]:text-xs max-[400px]:h-[100px] max-[350px]:h-20`}
+            className={`mt-[10px] w-full resize-none rounded-[14px] border-2 placeholder:text-gray-400! placeholder:font-medium px-[14px] py-[14px] text-sm shadow-sm ${textError ? "border-red-500" : "border-[#253238]"
+              } max-[480px]:h-20 max-[480px]:px-[10px] max-[480px]:py-[10px] max-[480px]:text-xs max-[400px]:h-[100px] max-[350px]:h-20`}
             value={inputText}
             onChange={handleChange}
             placeholder="Let the professional know your availability for a free estimate "
@@ -114,9 +113,8 @@ const DescribeYourRequestNewLocalists = ({
 
         {/* File Upload */}
         <label
-          className={`mt-[11px] border-2 border-gray-300 flex w-full cursor-pointer items-center justify-center gap-2 bg-[#e6f7ff] px-3 py-2 text-xs font-medium text-[#00afe3] transition-all duration-300 hover:bg-[#d4ebff] ${
-            fileError ? "border border-red-500" : ""
-          } max-[768px]:px-[10px] max-[768px]:py-[10px] max-[768px]:text-sm max-[480px]:px-2 max-[480px]:py-2 max-[480px]:text-xs`}
+          className={`mt-[11px] border-2 border-gray-300 flex w-full cursor-pointer items-center justify-center gap-2 bg-[#e6f7ff] px-3 py-2 text-xs font-medium text-[#00afe3] transition-all duration-300 hover:bg-[#d4ebff] ${fileError ? "border border-red-500" : ""
+            } max-[768px]:px-[10px] max-[768px]:py-[10px] max-[768px]:text-sm max-[480px]:px-2 max-[480px]:py-2 max-[480px]:text-xs`}
         >
           <svg
             className="h-4 w-4 bg-[#00afe3] rounded-full"
