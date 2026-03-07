@@ -38,7 +38,7 @@ export default function DynamicPricingTable({
                                     <div className="flex flex-col h-full justify-between">
                                         <Paragraph
                                             variant="optional"
-                                            className="md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center md:max-w-[220px] lg:max-w-[90%]"
+                                            className="md:mx-auto tracking-[-0.03em]! text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center md:max-w-[220px] lg:max-w-[90%]"
                                         >
                                             {item.text}
                                         </Paragraph>

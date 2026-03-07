@@ -50,7 +50,7 @@ export default function AveragePriceLocation({
           <div className="flex flex-col lg:flex-row lg:gap-6">
             {/* Left Section - H2 and GetQuote */}
             <div className="flex flex-col justify-between px-2.5  pt-[30px] lg:pl-[38px]  lg:pt-[54px] lg:pb-[52px] lg:max-w-[35%]  xl:max-w-[380px]">
-              <H2 className="text-center  min-[460px]:mx-auto md:mx-0 md:max-w-full lg:text-left">
+              <H2 variant="optional" className="text-center  min-[460px]:mx-auto md:mx-0 md:max-w-full lg:text-left">
                 {title}
               </H2>
 
@@ -72,7 +72,7 @@ export default function AveragePriceLocation({
                 >
                   {priceCards[0].description}
                 </Paragraph>
-                {priceCards[0].price && <p className="max-[360px]:text-[20px] min-[360px]:text-[24px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center  md:text-center lg:text-center text-[#253238] lg:mt-3">
+                {priceCards[0].price && <p className="max-[360px]:text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center  md:text-center lg:text-center text-[#253238] lg:mt-3">
                   {priceCards[0].price}{" "}
                   {showPerMSquare && <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
                 </p>}
@@ -86,7 +86,7 @@ export default function AveragePriceLocation({
                 >
                   {priceCards[1].description}
                 </Paragraph>
-                {priceCards[1].price && <p className=" max-[360px]:text-[20px] min-[360px]:text-[24px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3 ">
+                {priceCards[1].price && <p className=" max-[360px]:text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3 ">
                   {priceCards[1].price}{" "}
                   {showPerMSquare && <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
                 </p>}
@@ -103,7 +103,7 @@ export default function AveragePriceLocation({
                 >
                   {priceCards[2].description}
                 </Paragraph>
-                {priceCards[2].price && <p className=" max-[360px]:text-[20px] min-[360px]:text-[24px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238]  lg:mt-3">
+                {priceCards[2].price && <p className=" max-[360px]:text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238]  lg:mt-3">
                   {priceCards[2].price}{" "}
                   {showPerMSquare && <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
                 </p>}
@@ -113,11 +113,11 @@ export default function AveragePriceLocation({
               <div className="">
                 <Paragraph
                   variant="VeryprimarySmall"
-                  className={`${priceCards[3].className}tracking-[-0.03em]! md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center  md:max-w-[220px]`}
+                  className={`${priceCards[3].className} tracking-[-0.03em]! md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center  md:max-w-[220px]`}
                 >
                   {priceCards[3].description}
                 </Paragraph>
-                {priceCards[3].price && <p className=" max-[360px]:text-[20px] min-[360px]:text-[24px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3">
+                {priceCards[3].price && <p className=" max-[360px]:text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3">
                   {priceCards[3].price}{" "}
                   {showPerMSquare &&<span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
                 

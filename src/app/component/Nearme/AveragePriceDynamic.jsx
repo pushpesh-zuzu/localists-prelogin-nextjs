@@ -61,7 +61,7 @@ export default function AveragePriceDynamic({
               <div className="">
                 <Paragraph
                   variant="VeryprimarySmall"
-                  className={`${priceCards[0].className}tracking-[-0.03em]! md:mx-auto  text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center  md:max-w-[220px]  lg:max-w-[90%]  lg:text-center`}
+                  className={`${priceCards[0].className} tracking-[-0.03em]! md:mx-auto  text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center  md:max-w-[220px]  lg:max-w-[90%]  lg:text-center`}
                 >
                   {priceCards[0].description}
                 </Paragraph>
@@ -106,7 +106,7 @@ export default function AveragePriceDynamic({
               <div className="">
                 <Paragraph
                   variant="VeryprimarySmall"
-                  className={`${priceCards[3].className}tracking-[-0.03em]! md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center  md:max-w-[220px]`}
+                  className={`${priceCards[3].className} tracking-[-0.03em]! md:mx-auto text-left min-[450px]:text-center min-[450px]:mx-auto md:text-center lg:text-center  md:max-w-[220px]`}
                 >
                   {priceCards[3].description}
                 </Paragraph>
