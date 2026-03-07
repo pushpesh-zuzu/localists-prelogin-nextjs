@@ -30,7 +30,7 @@ export default function AveragePriceLocation({
     },
   ],
   disclaimerText = "*costs are estimates only, to get a more specific estimate try our",
-  calculatorText = "Patio Laying Calculator",
+  calculatorText = "Roofing Calculator",
   calculatorLink = "",
 }) {
   return (

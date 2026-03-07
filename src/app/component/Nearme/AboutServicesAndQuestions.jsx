@@ -115,6 +115,7 @@ const AboutServicesAndQuestions = ({
             title={block?.title}
             priceCards={block?.priceCards}
             disclaimerText={block?.disclaimerText}
+            calculatorText={block?.calculatorText}
             />
         );
         
