@@ -257,17 +257,62 @@ export const ROOFERS_TABDATA_CHESTER = {
     },
   ],
   related: [
-    "Roofers Leeds",
-    "Roofers York",
-    "Roofers Hull",
-    "Roofers Bolton",
-    "Roofers Chester",
-    "Roofers Cheshire",
-    "Roofers Harrogate",
-    "Roofers Liverpool",
-    "Roofers Manchester",
-    "Roofers Stockport",
-    "Roofers North Yorkshire",
+    // "Roofers Leeds",
+    // "Roofers York",
+    // "Roofers Hull",
+    // "Roofers Bolton",
+    // "Roofers Chester",
+    // "Roofers Cheshire",
+    // "Roofers Harrogate",
+    // "Roofers Liverpool",
+    // "Roofers Manchester",
+    // "Roofers Stockport",
+    // "Roofers North Yorkshire",
+
+    {
+      title: "Roofers Leeds",
+      url: "",
+    },
+    {
+      title: "Roofers York",
+      url: "",
+    },
+    {
+      title: "Roofers Hull",
+      url: "",
+    },
+    {
+      title: "Roofers Bolton",
+      url: "",
+    },
+    {
+      title: "Roofers Chester",
+      url: "",
+    },
+    {
+      title: "Roofers Cheshire",
+      url: "",
+    },
+    {
+      title: "Roofers Harrogate",
+      url: "",
+    },
+    {
+      title: "Roofers Liverpool",
+      url: "/en/gb/roofers-near-me/liverpool",
+    },
+    {
+      title: "Roofers Manchester",
+      url: "",
+    },
+    {
+      title: "Roofers Stockport",
+      url: "",
+    },
+    {
+      title: "Roofers North Yorkshire",
+      url: "",
+    },
   ],
   findMore: [],
 };
