@@ -11,7 +11,7 @@ function page() {
   return (
     <>
     <SEO
-      canonicalPath="/en/gb/roofers-near-me/wrexham"
+      canonicalPath="/en/gb/roofers-near-me/mold"
       bannerImage="/nearme/Roofing/wrexhamBanner.webp"
       breadcrumb={[
         { title: "Home", path: "en/gb" },
