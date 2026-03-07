@@ -129,7 +129,7 @@ export default function FetureCardList({
       </div>
 
       {/* Show More */}
-      {visibleCount <= sellers.length && (
+      {sellers.length > STEP && visibleCount < sellers.length && (
         <div className="flex justify-center pt-10 md:pt-[50px]">
           <button
             className="hover:bg-[#00afe3] bg-black text-white
