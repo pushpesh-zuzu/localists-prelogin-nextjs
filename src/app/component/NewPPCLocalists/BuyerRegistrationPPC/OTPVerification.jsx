@@ -137,7 +137,7 @@ const OTPVerification = ({
                         if (isThankuPageOnlyShow) {
                             const modalData = {
                                 shouldOpen: true,
-                                step: 7,
+                                step: 6,
                                 buyerRequest: buyerRequest,
                                 city: citySerach,
                                 serviceId: serviceId ? serviceId : buyerRequest?.service_id,
