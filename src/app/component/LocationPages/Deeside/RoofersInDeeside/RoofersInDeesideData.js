@@ -17,7 +17,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
     calculatorText: "Roofing Calculator",
     priceCards: [
       {
-        description: "General roofing workBigger roofing jobs usually average around, depending on how involved the work is.",
+        description: "General roofing work Bigger roofing jobs usually average around, depending on how involved the work is.",
         price: "£2,858",
         className: "max-[360]:min-h-[110px] max-[360]:max-h-[110px] min-[360px]:min-h-[100px] min-[360px]:max-h-[100px]  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[120px] md:max-h-[120px] lg:min-h-[180px] lg:max-h-[180px]"
 
