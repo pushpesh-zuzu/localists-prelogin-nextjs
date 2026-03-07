@@ -6,11 +6,10 @@ import {
   setBuyerStep,
   questionAnswerData,
   setbuyerRequestData,
-  addDetailsRequestData,
   clearSetbuyerRequestData,
+  addDetailsRequestDataForLocalistLanding,
 } from "@/lib/store/buyerslice/buyerSlice";
 import { getBarkToken, getCookie } from "@/utils/CookiesHelper";
-import Paragraph1 from "../UI/Typography/Paragraph1";
 import H1 from "../UI/Typography/H1";
 import QuestionModal from "./BuyerRegistrationPPC/QuestionModal";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
@@ -20,11 +19,10 @@ import NameEmail from "./BuyerRegistrationPPC/NameEmail";
 import PhoneNumber from "./BuyerRegistrationPPC/PhoneNumber";
 import OTPVerification from "./BuyerRegistrationPPC/OTPVerification";
 import CardLayoutWrapper from "./CardLayoutWrapper";
-// import DescribeYourRequest from "./BuyerRegistrationPPC/DescribeYourRequest";
-import ZohoCalendar from "./BuyerRegistrationPPC/ZohoCalendar";
+// import ZohoCalendar from "./BuyerRegistrationPPC/ZohoCalendar";
 import DescribeYourRequestNewLocalists from "./BuyerRegistrationPPC/DescribeYourRequestNewLocalists";
 import H2 from "../UI/Typography/H2";
-import CalenderQuestions from "./CalenderQuestions";
+// import CalenderQuestions from "./CalenderQuestions";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import { useRouter } from "next/navigation";
 import CalenderFlowQuestions from "./CalenderFlowQuestions";
@@ -131,7 +129,7 @@ function HeroSection({
     };
 
     // Dispatch to Redux
-    dispatch(addDetailsRequestData(detailsData, router, reqId)).then(
+    dispatch(addDetailsRequestDataForLocalistLanding(detailsData, router, reqId)).then(
       (result) => {
         if (result?.success) {
           const successMessage =

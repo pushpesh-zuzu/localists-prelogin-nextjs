@@ -34,8 +34,20 @@ function getFirstDayOfMonth(year, month) {
     return new Date(year, month, 1).getDay();
 }
 
+function getTodayInLondon() {
+    const londonDateStr = new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Europe/London",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+    }).format(new Date());
+    const [day, month, year] = londonDateStr.split("/").map(Number);
+    return new Date(year, month - 1, day);
+}
+
 export default function CalenderFlowQuestions({ nextStep, onBack }) {
-    const today = new Date();
+    const today = getTodayInLondon();
+
     const [currentYear, setCurrentYear] = useState(today.getFullYear());
     const [currentMonth, setCurrentMonth] = useState(today.getMonth());
 
@@ -43,17 +55,36 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
     const [error, setError] = useState("");
 
     // const [showMobileSlots, setShowMobileSlots] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
+    // const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < 768);
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    // useEffect(() => {
+    //     const handleResize = () => setIsMobile(window.innerWidth < 768);
+    //     handleResize();
+    //     window.addEventListener("resize", handleResize);
+    //     return () => window.removeEventListener("resize", handleResize);
+    // }, []);
 
     const daysInMonth = getDaysInMonth(currentYear, currentMonth);
     const firstDay = getFirstDayOfMonth(currentYear, currentMonth);
+
+    // Today midnight & max allowed date (today + 28 days)
+    const todayMidnight = new Date(
+        today.getFullYear(),
+        today.getMonth(),
+        today.getDate(),
+    );
+    const maxDate = new Date(todayMidnight);
+    maxDate.setDate(maxDate.getDate() + 28);
+
+    // Next month button disabled if entire next month is beyond maxDate
+    const isNextDisabled = (() => {
+        const nextMonthFirst = new Date(
+            currentMonth === 11 ? currentYear + 1 : currentYear,
+            currentMonth === 11 ? 0 : currentMonth + 1,
+            1,
+        );
+        return nextMonthFirst > maxDate;
+    })();
 
     const isPrevDisabled =
         currentYear < today.getFullYear() ||
@@ -83,9 +114,15 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
         currentMonth === today.getMonth() &&
         currentYear === today.getFullYear();
 
-    const isPast = (day) =>
-        new Date(currentYear, currentMonth, day) <=
-        new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    const isPast = (day) => {
+
+        // new Date(currentYear, currentMonth, day) <=
+        // new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+        const date = new Date(currentYear, currentMonth, day);
+        return date <= todayMidnight || date > maxDate;
+    }
+
 
     const isSelected = (day) =>
         selectedDates.some(
@@ -202,12 +239,8 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
                                     <button
                                         onClick={prevMonth}
                                         disabled={isPrevDisabled}
-                                        className={`
-                                                    h-9 w-9 rounded-full flex items-center justify-center transition
-                                                    ${isPrevDisabled
-                                                ? "text-gray-300 cursor-not-allowed"
-                                                : "hover:bg-gray-100 text-[#253238] cursor-pointer"
-                                            }
+                                        className={`h-9 w-9 rounded-full flex items-center justify-center bg-[#EBF9F3] cursor-pointer hover:bg-[#00AEEF] hover:text-white transition text-[#00AEEF]
+                                        disabled:bg-white disabled:text-gray-300 disabled:cursor-not-allowed
                                         `}
                                     >
                                         <ChevronLeft size={20} />
@@ -217,7 +250,10 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
                                     </span>
                                     <button
                                         onClick={nextMonth}
-                                        className="h-9 w-9 rounded-full flex items-center justify-center bg-[#EBF9F3] cursor-pointer hover:bg-[#00AEEF] hover:text-white transition text-[#00AEEF]"
+                                        disabled={isNextDisabled}
+                                        className={`h-9 w-9 rounded-full flex items-center justify-center bg-[#EBF9F3] cursor-pointer hover:bg-[#00AEEF] hover:text-white transition text-[#00AEEF]
+                                        disabled:bg-white disabled:text-gray-300 disabled:cursor-not-allowed
+                                        `}
                                     >
                                         <ChevronRight size={20} />
                                     </button>

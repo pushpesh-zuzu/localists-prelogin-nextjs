@@ -453,7 +453,7 @@ export const addDetailsRequestData = (addDetailsData, router, requestId) => {
     }
   };
 };
-export const addDetailsRequestDataForLocalistLanding = (addDetailsData, requestId) => {
+export const addDetailsRequestDataForLocalistLanding = (addDetailsData, router, requestId) => {
   return async (dispatch) => {
     dispatch(setAddDetailLoader(true));
     try {
@@ -465,10 +465,12 @@ export const addDetailsRequestDataForLocalistLanding = (addDetailsData, requestI
       if (response) {
         setCookie('isRegistrationComplete', true)
         dispatch(getbuyerrequestList());
-        // router.push('/conversion/${requestId}')
-        // setTimeout(() => {
-        return response.data;
-        // }, 5000);
+        dispatch(setShowBookingModal(true));
+        setTimeout(() => {
+          dispatch(setShowBookingModal(false));
+          router.push(`/conversion/${requestId}`);
+          return response.data;
+        }, 4000);
       }
     } catch (error) {
       console.error("Error adding details to request:", error);
