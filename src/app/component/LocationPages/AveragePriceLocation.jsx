@@ -1,4 +1,5 @@
 import GetQuote from "../common/GetQuotes/GetQuote";
+import NearmeH2Heading from "../Nearme/NearmeH2Heading";
 import H2 from "../UI/Typography/H2";
 import Paragraph from "../UI/Typography/Paragraph";
 
@@ -32,10 +33,16 @@ export default function AveragePriceLocation({
   disclaimerText = "*costs are estimates only, to get a more specific estimate try our",
   calculatorText = "Roofing Calculator",
   calculatorLink = "",
+  heading='',
+  showPerMSquare=false
 }) {
   return (
     <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px] ">
       <div className="w-full max-w-[1000px]">
+         {heading && <NearmeH2Heading
+                    headdingblue={heading}
+                    className={`mb-5 mt-[7px] md:mt-0 md:mb-[25px]`}
+                  />}
         <div
           className="w-full rounded-[30px] md:rounded-[25px]"
           style={{ backgroundColor: "#8BFFCF" }}
@@ -67,7 +74,7 @@ export default function AveragePriceLocation({
                 </Paragraph>
                 {priceCards[0].price && <p className="max-[360px]:text-[20px] min-[360px]:text-[24px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center  md:text-center lg:text-center text-[#253238] lg:mt-3">
                   {priceCards[0].price}{" "}
-                  <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>
+                  {showPerMSquare && <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
                 </p>}
               </div>
 
@@ -81,7 +88,7 @@ export default function AveragePriceLocation({
                 </Paragraph>
                 {priceCards[1].price && <p className=" max-[360px]:text-[20px] min-[360px]:text-[24px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3 ">
                   {priceCards[1].price}{" "}
-                  <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>
+                  {showPerMSquare && <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
                 </p>}
               </div>
 
@@ -98,7 +105,7 @@ export default function AveragePriceLocation({
                 </Paragraph>
                 {priceCards[2].price && <p className=" max-[360px]:text-[20px] min-[360px]:text-[24px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238]  lg:mt-3">
                   {priceCards[2].price}{" "}
-                  <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>
+                  {showPerMSquare && <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
                 </p>}
               </div>
 
@@ -112,7 +119,7 @@ export default function AveragePriceLocation({
                 </Paragraph>
                 {priceCards[3].price && <p className=" max-[360px]:text-[20px] min-[360px]:text-[24px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3">
                   {priceCards[3].price}{" "}
-                  <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>
+                  {showPerMSquare &&<span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
                 
                 </p>}
               </div>

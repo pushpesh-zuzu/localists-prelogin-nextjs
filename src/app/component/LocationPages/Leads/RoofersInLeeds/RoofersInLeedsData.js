@@ -1,7 +1,7 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
   {
     type: "h2",
-    text: "Choosing the right roofer in York",
+    text: "Choosing the right roofer in Leeds",
   },
   {
     type: "p",
@@ -13,7 +13,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
   },
   {
     type: "p",
-    text: "When comparing roofers in York, it’s sensible to look for:",
+    text: "When comparing roofers in Leeds, it’s sensible to look for:",
   },
   {
     type: "li",
@@ -49,7 +49,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
   },
   {
     type: 'h2',
-    text: " Why using Localists makes finding Roofers York easier",
+    text: " Why using Localists makes finding Roofers Leeds easier",
 
   },
   {
@@ -74,7 +74,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
   },
   {
     type: "h2",
-    text: "How much does roofing cost in York?"
+    text: "How much does roofing cost in Leeds?"
   },
   {
     type: "p",
@@ -86,11 +86,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
   },
   {
     type: "AveragePriceLocation",
-    title: "Average cost of roofing in York",
+    title: "Average cost of roofing in Leeds",
     calculatorText: "Roofing Calculator",
     priceCards: [
       {
-        description: "For general roofing projects, homeowners in York typically pay around",
+        description: "For general roofing projects, homeowners in Leeds typically pay around",
         price: "£2,858",
         className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
       },
@@ -253,11 +253,11 @@ export const ROOFERS_TABDATA_LEEDS = {
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_LEEDS = [
-  `Are your roof tiles starting to shift every time the wind picks up? Telling yourself it’ll probably survive “just one more winter”? Truth is, if you’re starting to question it, it’s probably time to get it looked at. And we know the best roofers in York.
+  `Are your roof tiles starting to shift every time the wind picks up? Telling yourself it’ll probably survive “just one more winter”? Truth is, if you’re starting to question it, it’s probably time to get it looked at. And we know the best roofers in Leeds.
   <br/><br/> 
   `,
   `
-Simply tell us what you need: a few tile replacements, repair, routine maintenance, or you’re just looking around for quotes? No worries, we will send up to 5 free no-obligation quotes from experts near you in York. Take your time, compare and decide what works best for you.
+Simply tell us what you need: a few tile replacements, repair, routine maintenance, or you’re just looking around for quotes? No worries, we will send up to 5 free no-obligation quotes from experts near you in Leeds. Take your time, compare and decide what works best for you.
 `,
 ];
 
@@ -268,7 +268,7 @@ export const BREADCRUM_DATA_ROOFERS_LEEDS = [
     path: "/en/gb/roofers-near-me",
   },
   {
-    title: "York",
+    title: "Leeds",
   },
 ];
 

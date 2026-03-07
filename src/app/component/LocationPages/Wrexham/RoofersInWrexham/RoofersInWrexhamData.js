@@ -115,10 +115,12 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
   },
   {
     type: "p",
-    text: "These numbers are there to give you a sense of scale, not a fixed promise. Every roof is different. The best way to know what yours will cost is to have it looked at properly and compare a few quotes before making a decision"
+    text: "These numbers are there to give you a sense of scale, not a fixed promise. Every roof is different. The best way to know what yours will cost is to have it looked at properly and compare a few quotes before making a decision."
   },
-
-
+  {
+        type: "PostCodeSectionLocation",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
+    }
 ];
 export const ROOFERS_FREQUENTLY_DATA_WREXHAM = [
   {

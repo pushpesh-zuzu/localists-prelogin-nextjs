@@ -17,27 +17,27 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
     calculatorText: "Roofing Calculator",
     priceCards: [
       {
-        description: "For general roofing jobs, homeowners usually spend around on average",
-        price: "£2,858",
-        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
+        description: "For general roofing jobs, homeowners usually spend around £2,858 on average",
+        // price: "£2,858",
+        // className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[120px] lg:max-h-[120px]"
 
       },
       {
-        description: "Most straightforward repairs, including fixing leaks, replacing broken tiles, come in at about.",
-        price: "£862",
-        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
+        description: "Most straightforward repairs, including fixing leaks, replacing broken tiles, come in at about £862.",
+        // price: "£862",
+        // className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[120px] lg:max-h-[120px]"
 
       },
       {
-        description: "Emergency call-outs for roofers tend to average around, depending on complexity.",
-        price: "£445",
-        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-14 min-[360px]:max-h-14 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
+        description: "Emergency call-outs for roofers tend to average around £445, depending on complexity.",
+        // price: "£445",
+        // className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-14 min-[360px]:max-h-14 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
 
       },
       {
-        description: "For a full replacement new roof, the average cost in Mold is around.",
-        price: "£7,495",
-        className: "max-[360]:min-h-16 max-[360]:max-h-14 min-[360px]:min-h-14 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
+        description: "For a full replacement new roof, the average cost in Mold is around £7,495.",
+        // price: "£7,495",
+        // className: "max-[360]:min-h-16 max-[360]:max-h-14 min-[360px]:min-h-14 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
       },
     ],
 
@@ -122,6 +122,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
     type: "p",
     text: "In the end, it’s about having a bit more control over the process. You look at your options, ask your questions, and move forward when you’re comfortable. That’s why many homeowners prefer doing it this way."
   },
+  {
+        type: "PostCodeSectionLocation",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
+  }
 ];
 export const ROOFERS_FREQUENTLY_DATA_MOLD = [
   {
