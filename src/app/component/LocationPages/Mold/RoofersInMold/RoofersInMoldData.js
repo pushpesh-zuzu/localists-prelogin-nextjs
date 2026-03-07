@@ -58,6 +58,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
     type: "h2",
     text: "Common roofing services in Mold"
   },
+   {
+    type: "p",
+    text: "Most roofers in Mold deal with a mix of everyday repairs and bigger jobs. Some of the more common ones include:",
+  },
   {
     type: "li",
     text: "Fixing roof leaks"
