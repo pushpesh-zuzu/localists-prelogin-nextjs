@@ -220,6 +220,7 @@ const OtpVerificationModal = ({
             <input
               key={index}
               type="text"
+              inputMode="numeric"
               maxLength={1}
               className="h-[60px] lg:w-[80px] md:w-[73px] w-[67px]
         rounded-[15px]
