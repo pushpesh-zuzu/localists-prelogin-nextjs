@@ -70,6 +70,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
     type: "p",
     text: "If it’s urgent, you will also find emergency roofers who offer quick services. If it isn’t, simply take a bit of time to ask questions, request samples of similar jobs, all in one place."
   },
+    { type: "PostCodeSectionLocation" },
   {
     type: "p",
     text: "Being able to see some background before you even speak to someone makes that first conversation easier too. It feels less like a cold call and more like a normal discussion about the job."

@@ -62,7 +62,7 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
         <div className="z-50 relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           {/* LEFT */}
           <div className="flex items-start max-[768px]:justify-between md:gap-4 lg:gap-6">
-            {seller.profile_image && !imgError ? (
+            {seller.company_logo && !imgError ? (
               <Image
                 height={96}
                 width={96}
@@ -177,13 +177,13 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
         />
       )} */}
 
-      {showModal && (
+      {/* {showModal && (
         <RequestARegistration
           onClose={() => setShowModal(false)}
           serviceId={serviceId}
           serviceName={serviceName}
         />
-      )}
+      )} */}
     </div>
   );
 }
