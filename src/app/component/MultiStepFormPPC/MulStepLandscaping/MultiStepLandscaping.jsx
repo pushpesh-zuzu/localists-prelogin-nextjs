@@ -31,12 +31,12 @@ import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 const MultiStepLandscaping = ({ isQuestionWithImage = false }) => {
   usePendingBuyerRedirect()
   const dispatch = useDispatch();
- const router = useRouter();
-    
-    useEffect(() => {
-       const canContinue = checkAuthenticatedUser(router);
-          if (!canContinue) return;
-    }, [])
+  const router = useRouter();
+
+  useEffect(() => {
+    const canContinue = checkAuthenticatedUser(router);
+    if (!canContinue) return;
+  }, [])
   const { questionanswerData, buyerStep, questionLoader, buyerRequest } =
     useSelector((state) => state.buyer);
 
@@ -53,6 +53,8 @@ const MultiStepLandscaping = ({ isQuestionWithImage = false }) => {
   const [updateNumberStep, setUpdateNumberStep] = useState(2);
   const [localRequestId, setLocalRequestId] = useState(null);
   const stepFlow = [1, 2, 3, 4, 5, 6, 7];
+
+  // console.log("buyerRequest", buyerRequest)
 
   useEffect(() => {
     if (buyerStep === 1) {

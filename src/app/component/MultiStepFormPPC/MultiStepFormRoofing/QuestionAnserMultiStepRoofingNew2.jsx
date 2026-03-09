@@ -297,11 +297,23 @@ const QuestionAnserMultiStepRoofingNew2 = ({
   };
 
   const removeQuestionsAfter = (questionNo) => {    // added
-    const updatedAnswers = buyerRequest.questions.filter(
-      (q) => q.question_no <= questionNo
+    // const updatedAnswers = buyerRequest.questions.filter(
+    //   (q) => q.question_no <= questionNo
+    // );
+
+    // dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+
+    const questionText = formattedQuestions[questionNo]?.questions;
+
+    const indexInAnswers = buyerRequest?.questions?.findIndex(
+      (q) => q?.ques === questionText
     );
 
-    dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+    if (indexInAnswers !== -1) {
+      const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
+
+      dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+    }
 
     const updatedProgress = questionsForProgress.filter(
       (q) => q.number <= questionNo

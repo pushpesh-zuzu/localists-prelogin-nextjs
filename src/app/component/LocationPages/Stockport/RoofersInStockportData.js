@@ -194,64 +194,52 @@ export const ROOFERS_TABDATA_STOCKPORT = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
     ],
-    related: [
-        // "Roofers Leeds",
-        // "Roofers York",
-        // "Roofers Hull",
-        // "Roofers Bolton",
-        // "Roofers Chester",
-        // "Roofers Cheshire",
-        // "Roofers Harrogate",
-        // "Roofers Liverpool",
-        // "Roofers Manchester",
-        // "Roofers Stockport",
-        // "Roofers North Yorkshire",
-
-        {
-            title: "Roofers Leeds",
-            url: "",
-        },
-        {
-            title: "Roofers York",
-            url: "",
-        },
-        {
-            title: "Roofers Hull",
-            url: "",
-        },
-        {
-            title: "Roofers Bolton",
-            url: "",
-        },
-        {
-            title: "Roofers Chester",
-            url: "/en/gb/roofers-near-me/chester",
-        },
-        {
-            title: "Roofers Cheshire",
-            url: "",
-        },
-        {
-            title: "Roofers Harrogate",
-            url: "",
-        },
-        {
-            title: "Roofers Liverpool",
-            url: "/en/gb/roofers-near-me/liverpool",
-        },
-        {
-            title: "Roofers Manchester",
-            url: "/en/gb/roofers-near-me/manchester",
-        },
-        {
-            title: "Roofers Stockport",
-            url: "",
-        },
-        {
-            title: "Roofers North Yorkshire",
-            url: "",
-        },
-    ],
+     related: [
+    {
+      title: "Roofers Leeds",
+      url: "/en/gb/roofers-near-me/leeds"
+    },
+    {
+      title: "Roofers York",
+      url: "/en/gb/roofers-near-me/york"
+    },
+    {
+      title: "Roofers Hull",
+      url: ""
+    },
+    {
+      title: "Roofers Bolton",
+      url: ""
+    },
+    {
+      title: "Roofers Chester",
+      url: "/en/gb/roofers-near-me/chester"
+    },
+    {
+      title: "Roofers Cheshire",
+      url: ""
+    },
+    {
+      title: "Roofers Harrogate",
+      url: ""
+    },
+    {
+      title: "Roofers Liverpool",
+      url: "/en/gb/roofers-near-me/liverpool"
+    },
+    {
+      title: "Roofers Manchester",
+      url: "/en/gb/roofers-near-me/manchester"
+    },
+    {
+      title: "Roofers Stockport",
+      url: "/en/gb/roofers-near-me/stockport"
+    },
+    {
+      title: "Roofers North Yorkshire",
+      url: ""
+    }
+  ],
     findMore: [],
 };
 export const VETTED_DATA_ROOFERS_STOCKPORT = [

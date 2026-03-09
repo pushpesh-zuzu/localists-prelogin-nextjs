@@ -70,7 +70,7 @@ function RoofersInWrexham() {
       />
 
       <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-        <Feature cityName='Wrexham' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+        <Feature county='Wrexham County Borough' cityName='Wrexham' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
       <AdviceInsightNearMe

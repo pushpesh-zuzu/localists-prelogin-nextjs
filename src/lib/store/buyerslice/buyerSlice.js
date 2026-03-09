@@ -201,8 +201,10 @@ export const getFetchSellerListData = (data) => {
       dispatch(setGetSellerData(response?.data?.data))
       return response.data
     } catch (error) {
-      console.error("Error get seller data:", error?.response?.data);
-      showToast("error", error?.response?.data?.message);
+      const errorMessage =
+      error?.response?.data?.message?.county?.[0]
+      console.error("Error get seller data:", errorMessage);
+      showToast("error", errorMessage);
       throw error;
     } finally {
       dispatch(setGetSellerDataLoader(false))

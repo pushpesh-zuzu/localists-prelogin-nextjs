@@ -256,63 +256,51 @@ export const ROOFERS_TABDATA_CHESTER = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-  related: [
-    // "Roofers Leeds",
-    // "Roofers York",
-    // "Roofers Hull",
-    // "Roofers Bolton",
-    // "Roofers Chester",
-    // "Roofers Cheshire",
-    // "Roofers Harrogate",
-    // "Roofers Liverpool",
-    // "Roofers Manchester",
-    // "Roofers Stockport",
-    // "Roofers North Yorkshire",
-
+    related: [
     {
       title: "Roofers Leeds",
-      url: "",
+      url: "/en/gb/roofers-near-me/leeds"
     },
     {
       title: "Roofers York",
-      url: "",
+      url: "/en/gb/roofers-near-me/york"
     },
     {
       title: "Roofers Hull",
-      url: "",
+      url: ""
     },
     {
       title: "Roofers Bolton",
-      url: "",
+      url: ""
     },
     {
       title: "Roofers Chester",
-      url: "",
+      url: "/en/gb/roofers-near-me/chester"
     },
     {
       title: "Roofers Cheshire",
-      url: "",
+      url: ""
     },
     {
       title: "Roofers Harrogate",
-      url: "",
+      url: ""
     },
     {
       title: "Roofers Liverpool",
-      url: "/en/gb/roofers-near-me/liverpool",
+      url: "/en/gb/roofers-near-me/liverpool"
     },
     {
       title: "Roofers Manchester",
-      url: "",
+      url: "/en/gb/roofers-near-me/manchester"
     },
     {
       title: "Roofers Stockport",
-      url: "",
+      url: "/en/gb/roofers-near-me/stockport"
     },
     {
       title: "Roofers North Yorkshire",
-      url: "",
-    },
+      url: ""
+    }
   ],
   findMore: [],
 };

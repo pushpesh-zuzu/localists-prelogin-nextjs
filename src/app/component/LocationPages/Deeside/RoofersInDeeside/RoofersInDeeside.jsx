@@ -70,7 +70,7 @@ function RoofersInDeeside() {
       />
 
       <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-        <Feature cityName="Deeside" serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+        <Feature  county="flintshire" cityName="Deeside" serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
       <AdviceInsightNearMe

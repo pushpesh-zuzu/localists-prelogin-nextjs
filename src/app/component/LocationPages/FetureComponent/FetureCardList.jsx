@@ -16,6 +16,7 @@ export default function FetureCardList({
   serviceId,
   serviceName,
   cityName = "Chester",
+  county
 }) {
   const { getSellerData,getSellerDataLoader } = useSelector((state) => state.buyer);
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ export default function FetureCardList({
       getFetchSellerListData({
         service_id: serviceId,
         city: cityName,
+        county:county
       }),
     );
   }, [serviceId, dispatch]);

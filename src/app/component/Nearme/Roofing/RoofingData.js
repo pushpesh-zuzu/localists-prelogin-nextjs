@@ -129,24 +129,13 @@ export const FREQUENTLY_DATA_ROOFING = [
 
 export const ROOFING_TABDATA = {
     professionals: [
-        // "Roofers Leeds",
-        // "Roofers York",
-        // "Roofers Hull",
-        // "Roofers Bolton",
-        // "Roofers Chester",
-        // "Roofers Cheshire",
-        // "Roofers Harrogate",
-        // "Roofers Liverpool",
-        // "Roofers Manchester",
-        // "Roofers Stockport",
-        // "Roofers North Yorkshire",
         {
             title: "Roofers Leeds",
-            url: "",
+            url: "/en/gb/roofers-near-me/leeds"
         },
         {
             title: "Roofers York",
-            url: "",
+            url: "/en/gb/roofers-near-me/york"
         },
         {
             title: "Roofers Hull",
@@ -174,11 +163,11 @@ export const ROOFING_TABDATA = {
         },
         {
             title: "Roofers Manchester",
-            url: "",
+            url: "/en/gb/roofers-near-me/manchester"
         },
         {
             title: "Roofers Stockport",
-            url: "",
+            url: "/en/gb/roofers-near-me/stockport"
         },
         {
             title: "Roofers North Yorkshire",
@@ -186,12 +175,6 @@ export const ROOFING_TABDATA = {
         },
     ],
     popular: [
-        // "Landscapers Near Me",
-        // "Gardeners Near Me",
-        // "Fence and Gate Installation Near Me",
-        // "Architects Near Me",
-        // "Gutter Cleaners Near Me",
-        // "Artificial Grass Installers Near Me",
 
         {
             title: "Landscapers Near Me",

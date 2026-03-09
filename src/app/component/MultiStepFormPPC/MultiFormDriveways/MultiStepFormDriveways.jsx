@@ -28,14 +28,16 @@ import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 const MultiStepFormDriveways = ({ isQuestionWithImage = false }) => {
   usePendingBuyerRedirect()
   const dispatch = useDispatch();
-   const router = useRouter();
-      
-      useEffect(() => {
-         const canContinue = checkAuthenticatedUser(router);
-            if (!canContinue) return;
-      }, [])
+  const router = useRouter();
+
+  useEffect(() => {
+    const canContinue = checkAuthenticatedUser(router);
+    if (!canContinue) return;
+  }, [])
   const { questionanswerData, buyerStep, questionLoader, buyerRequest } =
     useSelector((state) => state.buyer);
+
+  // console.log("buyerRequest", buyerRequest)
 
   const [animationDirection, setAnimationDirection] = useState("");
   const [actualSteps, setActualSteps] = useState(1);
@@ -297,7 +299,7 @@ const MultiStepFormDriveways = ({ isQuestionWithImage = false }) => {
             </div>
 
             <div ref={sectionsStartRef}>
-              <HowItWorkNewPPC  />
+              <HowItWorkNewPPC />
             </div>
             {/* <CookieConsent /> */}
             <div className="mb-20 sm:mb-20">
