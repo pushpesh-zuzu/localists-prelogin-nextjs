@@ -18,9 +18,9 @@ function LinkeInWithArrowIcon({ className = "" }) {
       <path
         d="M56.3828 26L72.3828 10M72.3828 10L56.3828 10M72.3828 10L72.3828 26"
         stroke="#343434"
-        stroke-width="3.2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

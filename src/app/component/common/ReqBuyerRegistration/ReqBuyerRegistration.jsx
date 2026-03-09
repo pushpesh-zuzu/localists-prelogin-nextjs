@@ -88,6 +88,8 @@ function ReqBuyerRegistration({
     //     setGetServiceState(service);
     // };
     useEffect(() => {
+        if (typeof window === "undefined") return;
+
         const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
         if (pendingModal?.shouldOpen) {
             localStorage.removeItem("pendingBuyerModal");
@@ -109,8 +111,8 @@ function ReqBuyerRegistration({
     if (!buyerStep) return null;
 
     useEffect(() => {
-        if (buyerStep === 2) {
-            questionModalRef.current?.resetQuestions?.();
+        if (buyerStep === 2 && questionModalRef.current) {
+            questionModalRef.current.resetQuestions?.();
         }
     }, [buyerStep]);
 

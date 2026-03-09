@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import { CheckIcon, Loader2 } from "lucide-react";
 import { useDispatch } from "react-redux";
@@ -140,13 +141,35 @@ function PostCodeSearchFieldLocation({
     setPostcode("")
   };
 
+  // useEffect(() => {
+  //   const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
+  //   if (pendingModal?.shouldOpen) {
+  //     dispatch(
+  //       setSelectedServiceId({
+  //         id: pendingModal.serviceId,
+  //         name: pendingModal.serviceName,
+  //       })
+  //     );
+  //     dispatch(setbuyerRequestData(pendingModal.buyerRequest));
+  //     dispatch(setcitySerach(pendingModal.city));
+  //     setShow(true);
+  //     dispatch(setBuyerStep(7));
+  //   }
+  // }, [dispatch]);
+
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
+
     if (pendingModal?.shouldOpen) {
-      setSelectedServiceId({
-        id: pendingModal.serviceId,
-        name: pendingModal.serviceName,
-      });
+      dispatch(
+        setSelectedServiceId({
+          id: pendingModal.serviceId,
+          name: pendingModal.serviceName,
+        })
+      );
+
       dispatch(setbuyerRequestData(pendingModal.buyerRequest));
       dispatch(setcitySerach(pendingModal.city));
       setShow(true);
@@ -168,10 +191,11 @@ function PostCodeSearchFieldLocation({
           {/* Input Field */}
           <div className="flex-1 flex-col relative">
             <input
+              suppressHydrationWarning
               type="text"
               value={postcode}
               onChange={handleChange}
-              onKeyPress={handleKeyPress}
+              onKeyDown={handleKeyPress}
               placeholder={placeholder}
               disabled={disabled}
               autoComplete="off"
