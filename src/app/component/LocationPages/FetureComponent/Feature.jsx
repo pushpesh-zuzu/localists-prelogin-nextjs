@@ -8,7 +8,8 @@ function Feature({
   serviceName,
   serviceProfessionName,
   featureRef,
-  cityName
+  cityName,
+  county
 }) {
   return (
     <WrapperBGWidth background={"#F6F6F6"}>
@@ -19,6 +20,7 @@ function Feature({
           serviceId={serviceId}
           serviceName={serviceName}
           cityName={cityName}
+          county={county}
         />
       </main>
     </WrapperBGWidth>

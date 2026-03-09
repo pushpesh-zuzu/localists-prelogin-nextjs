@@ -65,6 +65,7 @@ function TreeSurgeonInChester() {
       />
       <div ref={featureRef} style={{ overflowAnchor: "none" }}>
         <Feature
+          county='Cheshire'
           serviceProfessionName="Tree Surgeons"
           serviceId={112}
           serviceName="Tree Surgery"
