@@ -230,10 +230,22 @@ const QuestionAnswerMultiStep2 = ({
   };
 
   const removeQuestionsAfter = (questionIndex) => {
-    const updatedAnswers =
-      buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
+    // const updatedAnswers =
+    //   buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
 
-    dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+    // dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+
+    const questionText = formattedQuestions[questionIndex]?.questions;
+
+    const indexInAnswers = buyerRequest?.questions?.findIndex(
+      (q) => q?.ques === questionText
+    );
+
+    if (indexInAnswers !== -1) {
+      const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
+
+      dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+    }
   };
 
   const handleBack = () => {

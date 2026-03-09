@@ -279,19 +279,31 @@ const QuestionAsnwerMultiStepTreeSurgeon2 = ({
 
 
   const removeQuestionsAfterIndex = async (questionIndex) => {
-    const updatedQuestions =
-      buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
+    // const updatedQuestions =
+    //   buyerRequest?.questions?.slice(0, questionIndex + 1) || [];
 
-    dispatch(setbuyerRequestData({ questions: updatedQuestions }));
+    // dispatch(setbuyerRequestData({ questions: updatedQuestions }));
 
-    try {
-      const formData = new FormData();
-      formData.append("questions", JSON.stringify(updatedQuestions));
-      formData.append("service_id", buyerRequest?.service_id);
-      const response = await dispatch(getProgressPercentageAPI(formData));
-      setProgressPercentage(response?.percentage);
-    } catch (err) {
-      console.error("Progress update failed:", err);
+    const questionText = formattedQuestions[questionIndex]?.questions;
+
+    const indexInAnswers = buyerRequest?.questions?.findIndex(
+      (q) => q?.ques === questionText
+    );
+
+    if (indexInAnswers !== -1) {
+      const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
+
+      dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+
+      try {
+        const formData = new FormData();
+        formData.append("questions", JSON.stringify(updatedAnswers));
+        formData.append("service_id", buyerRequest?.service_id);
+        const response = await dispatch(getProgressPercentageAPI(formData));
+        setProgressPercentage(response?.percentage);
+      } catch (err) {
+        console.error("Progress update failed:", err);
+      }
     }
   };
 

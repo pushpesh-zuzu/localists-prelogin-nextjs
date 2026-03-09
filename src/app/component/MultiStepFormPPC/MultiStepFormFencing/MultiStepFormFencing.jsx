@@ -26,14 +26,14 @@ import { useRouter } from "next/navigation";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
-      usePendingBuyerRedirect()
+  usePendingBuyerRedirect()
   const dispatch = useDispatch();
-   const router = useRouter();
-      
-      useEffect(() => {
-         const canContinue = checkAuthenticatedUser(router);
-            if (!canContinue) return;
-      }, [])
+  const router = useRouter();
+
+  useEffect(() => {
+    const canContinue = checkAuthenticatedUser(router);
+    if (!canContinue) return;
+  }, [])
   const { questionanswerData, buyerStep, questionLoader, buyerRequest } =
     useSelector((state) => state.buyer);
 
@@ -54,6 +54,9 @@ const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
   const [isDesktop, setIsDesktop] = useState(false);
 
   const stepFlow = [1, 2, 3, 4, 5, 6, 7];
+
+  // console.log("buyerRequest", buyerRequest)
+
 
   useEffect(() => {
     if (buyerStep === 1) {
@@ -172,7 +175,7 @@ const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
           <>
             <div className="h-9 w-48 mt-6 ml-[2%] lg:h-7 lg:w-32 md:h-5 md:w-[120px] xl:w-[195px] xl:h-[38px] md:mt-6">
               <LogoIconMultiForm className="w-[120px] h-[20px]  md:w-[125px] md:h-[28px] lg:w-[195px] lg:h-[38px]" />
-            </div> 
+            </div>
 
             <div
               className="w-[90%] mx-auto my-5 lg:w-3/5 md:w-4/5 md:my-2.5 sm:w-[90%] sm:my-2.5"
@@ -276,7 +279,7 @@ const MultiStepFormFencing = ({ isQuestionWithImage = false }) => {
 
             {/* Commented out sections as requested */}
             <div ref={sectionsStartRef}>
-              <HowItWorkNewPPC  />
+              <HowItWorkNewPPC />
             </div>
             {/* <CookieConsent /> */}
             <div className="mb-20 sm:mb-20">
