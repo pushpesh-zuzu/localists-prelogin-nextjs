@@ -18,9 +18,9 @@ function XWithArrowIcon({ className = "" }) {
       <path
         d="M56.3828 25.5273L72.3828 9.52734M72.3828 9.52734L56.3828 9.52734M72.3828 9.52734L72.3828 25.5273"
         stroke="#343434"
-        stroke-width="3.2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

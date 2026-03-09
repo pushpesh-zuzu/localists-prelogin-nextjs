@@ -18,9 +18,9 @@ function FacebookWithArrowIcon({ className = "" }) {
       <path
         d="M56.3828 26.4883L72.3828 10.4883M72.3828 10.4883L56.3828 10.4883M72.3828 10.4883L72.3828 26.4883"
         stroke="#343434"
-        stroke-width="3.2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
