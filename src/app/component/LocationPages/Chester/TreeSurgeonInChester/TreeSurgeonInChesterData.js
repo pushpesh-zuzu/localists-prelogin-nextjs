@@ -86,8 +86,7 @@ export const QUESTION_AND_ABOUT_SERVICE_TREE_SURGEON_CHESTER = [
   {
     type: "h2",
     text: "How much does a tree surgeon cost",
-        className: "mt-5 lg:mt-[72px]"
-
+    className: "mt-5 lg:mt-[72px]",
   },
   {
     type: "p",
@@ -98,8 +97,8 @@ export const QUESTION_AND_ABOUT_SERVICE_TREE_SURGEON_CHESTER = [
     text: "Other considerations that can affect pricing include accessibility (how easy it is to reach the tree), whether stump removal is needed, and if the job requires special safety equipment or multiple hands on site.",
   },
   {
-    type:"p",
-    text:"At Localists, you don’t need to guess or spend hours searching for reliable tree surgeons. Simply submit your requirements and receive free quotes from qualified local experts in your inbox. You can then compare prices, experience, and availability, and choose what fits your needs.",
+    type: "p",
+    text: "At Localists, you don’t need to guess or spend hours searching for reliable tree surgeons. Simply submit your requirements and receive free quotes from qualified local experts in your inbox. You can then compare prices, experience, and availability, and choose what fits your needs.",
   },
   {
     type: "AveratePriceSection",
@@ -107,7 +106,6 @@ export const QUESTION_AND_ABOUT_SERVICE_TREE_SURGEON_CHESTER = [
   {
     type: "h2",
     text: "Why hire a professional tree surgeon?",
-
   },
   {
     type: "p",
@@ -124,8 +122,7 @@ export const QUESTION_AND_ABOUT_SERVICE_TREE_SURGEON_CHESTER = [
   {
     type: "h2",
     text: "How do I pick the right tree surgeon",
-        className: "mt-5 lg:mt-[72px]"
-
+    className: "mt-5 lg:mt-[72px]",
   },
   {
     type: "pbold",
@@ -270,17 +267,50 @@ export const TREE_SURGEON_TABDATA_CHESTER = {
     },
   ],
   related: [
-    "Tree Surgeons Hull",
-    "Tree Surgeons York",
-    "Tree Surgeons Leeds",
-    "Tree Surgeons Bolton",
-    "Tree Surgeons Chester",
-    "Tree Surgeons Cheshire",
-    "Tree Surgeons Liverpool",
-    "Tree Surgeons Harrogate",
-    "Tree Surgeons Stockport",
-    "Tree Surgeons Manchester",
-    "Tree Surgeons North Yorkshire",
+    {
+      title: "Tree Surgeons Hull",
+      url: "",
+    },
+    {
+      title: "Tree Surgeons York",
+      url: "",
+    },
+    {
+      title: "Tree Surgeons Leeds",
+      url: "",
+    },
+    {
+      title: "Tree Surgeons Bolton",
+      url: "",
+    },
+    {
+      title: "Tree Surgeons Chester",
+      url: "/en/gb/tree-surgeon-near-me/chester",
+    },
+    {
+      title: "Tree Surgeons Cheshire",
+      url: "",
+    },
+    {
+      title: "Tree Surgeons Liverpool",
+      url: "",
+    },
+    {
+      title: "Tree Surgeons Harrogate",
+      url: "",
+    },
+    {
+      title: "Tree Surgeons Stockport",
+      url: "",
+    },
+    {
+      title: "Tree Surgeons Manchester",
+      url: "",
+    },
+    {
+      title: "Tree Surgeons North Yorkshire",
+      url: "",
+    },
   ],
   findMore: [],
   // insight: [],

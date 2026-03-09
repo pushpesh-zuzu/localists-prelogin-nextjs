@@ -204,7 +204,7 @@ export const ROOFERS_TABDATA_YORK = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-   related: [
+    related: [
     {
       title: "Roofers Leeds",
       url: "/en/gb/roofers-near-me/leeds"
@@ -239,11 +239,11 @@ export const ROOFERS_TABDATA_YORK = {
     },
     {
       title: "Roofers Manchester",
-      url: ""
+      url: "/en/gb/roofers-near-me/manchester"
     },
     {
       title: "Roofers Stockport",
-      url: ""
+      url: "/en/gb/roofers-near-me/stockport"
     },
     {
       title: "Roofers North Yorkshire",
