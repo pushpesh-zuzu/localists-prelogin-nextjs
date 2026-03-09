@@ -300,7 +300,7 @@ export const BREADCRUM_DATA_TREESURGEON_CHESTER = [
   { title: "Home & Garden", path: "/en/gb/home" },
   {
     title: "Tree Surgeons",
-    path: "/en/gb/tree-surgeon-nearm-me",
+    path: "/en/gb/tree-surgeon-near-me",
   },
   {
     title: "Chester",
