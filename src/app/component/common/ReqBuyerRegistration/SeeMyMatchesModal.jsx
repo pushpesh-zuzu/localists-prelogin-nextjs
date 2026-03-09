@@ -11,6 +11,8 @@ import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import { useRouter } from "next/navigation";
 import StarIconFeature from "../../../../../public/ReactIcons/StarIconFeature";
 import HalfStarIconFeature from "../../../../../public/ReactIcons/HalfStarIconFeature";
+import GalleryIcon from "../../../../../public/ReactIcons/GalleryIcon";
+
 
 function SeeMyMatchesModal({ previousStep, progressPercent }) {
     const dispatch = useDispatch();
@@ -409,18 +411,20 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
                                         </div>
 
                                         <div className="flex items-center gap-4">
-                                            <div className="w-14 h-14 relative">
-                                                <Image
-                                                    src={
-                                                        company.company_logo
-                                                            ? `${serviceData.baseurl}/${company.company_logo}`
-                                                            : ""
-                                                    }
-                                                    alt={company.business_profile_name}
-                                                    fill
-                                                    className="object-cover rounded-md"
-                                                    sizes="56px"
-                                                />
+                                            <div className="w-15 h-15 relative">
+                                                {company.company_logo ? (
+                                                    <Image
+                                                        src={`${serviceData.baseurl}/${company.company_logo}`}
+                                                        alt={company.business_profile_name}
+                                                        fill
+                                                        className="object-cover rounded-md"
+                                                        sizes="56px"
+                                                    />
+                                                ) : (
+                                                    <div className="w-full h-full flex items-center justify-center">
+                                                        <GalleryIcon className="w-15 h-15 text-gray-400" />
+                                                    </div>
+                                                )}
                                             </div>
 
                                             <div>
