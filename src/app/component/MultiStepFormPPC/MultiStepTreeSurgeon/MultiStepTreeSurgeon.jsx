@@ -56,6 +56,8 @@ const MultiStepTreeSurgeon = ({ isQuestionWithImage = false, serviceId=null }) =
 
   const stepFlow = [1, 2, 3, 4, 5, 6, 7];
 
+    // console.log("buyerRequest", buyerRequest)
+
   useEffect(() => {
     if (buyerStep === 1) {
       setActualSteps(1);

@@ -7,18 +7,18 @@ import {
     addImageSubmittedData,
     setBuyerStep,
     setQualityData,
-    // clearSetbuyerRequestData,
+    clearSetbuyerRequestData,
     // setBuyerStep,
     // setQualityData,
-    textQualityData,
+    // textQualityData,
 } from "@/lib/store/buyerslice/buyerSlice";
 // import Link from "next/link";
 import { useRouter } from "next/navigation";
 // import { showToast } from "@/utils/toaster";
-// import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
+import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import Modal from "../Modal";
-import Paragraph from "../../UI/Typography/Paragraph";
-import H5 from "../../UI/Typography/H5";
+// import Paragraph from "../../UI/Typography/Paragraph";
+// import H5 from "../../UI/Typography/H5";
 import VerifyIcon from "../../../../../public/ReactIcons/VerifyIcon";
 
 const DescribeYourRequestModal = ({ nextStep, progressPercent, sellers }) => {

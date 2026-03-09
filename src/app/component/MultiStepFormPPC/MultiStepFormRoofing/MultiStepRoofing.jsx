@@ -33,16 +33,16 @@ const MultiStepRoofing = ({
 }) => {
   const dispatch = useDispatch();
   usePendingBuyerRedirect()
-   const router = useRouter();
-      
-      useEffect(() => {
-         const canContinue = checkAuthenticatedUser(router);
-            if (!canContinue) return;
-      }, [])
-  const { questionanswerData, buyerStep } = useSelector((state) => state.buyer);
+  const router = useRouter();
+
+  useEffect(() => {
+    const canContinue = checkAuthenticatedUser(router);
+    if (!canContinue) return;
+  }, [])
+  const { questionanswerData, buyerStep, buyerRequest } = useSelector((state) => state.buyer);
   const { progressPercentage, removeQuestionByNumber, setProgressPercentage } =
     useProgress(serviceId);
- 
+
   const [animationDirection, setAnimationDirection] = useState("");
   const [actualSteps, setActualSteps] = useState(1);
   const { userToken } = useSelector((state) => state.auth);
@@ -59,6 +59,8 @@ const MultiStepRoofing = ({
   const [isDesktop, setIsDesktop] = useState(false);
   const [percetangForPost, setPercetangForPost] = useState(0);
   const stepFlow = [1, 2, 3, 4, 5, 6, 7];
+
+  // console.log("buyerRequest", buyerRequest)
 
   useEffect(() => {
     if (buyerStep === 1) {
@@ -210,7 +212,7 @@ const MultiStepRoofing = ({
                   {buyerStep === 3 && (
                     <div style={{ maxWidth: "592px", margin: "auto" }}>
                       <QuestionAnswerMultiStepRoofingNew
-                         questions={lastQuestion}
+                        questions={lastQuestion}
                         onNext={nextStep}
                         onBack={prevStep}
                         setIsComingFromStep4={setIsComingFromStep4}

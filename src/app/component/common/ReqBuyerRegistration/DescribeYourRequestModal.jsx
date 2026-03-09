@@ -8,12 +8,12 @@ import {
     clearSetbuyerRequestData,
     setBuyerStep,
     setQualityData,
-    textQualityData,
+    // textQualityData,
 } from "@/lib/store/buyerslice/buyerSlice";
 import { useRouter } from "next/navigation";
 import Modal from "./Modal/Modal";
-import Paragraph from "../../UI/Typography/Paragraph";
-import H5 from "../../UI/Typography/H5";
+// import Paragraph from "../../UI/Typography/Paragraph";
+// import H5 from "../../UI/Typography/H5";
 import VerifyIcon from "../../../../../public/ReactIcons/VerifyIcon";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 
