@@ -85,6 +85,7 @@ function TreeSurgeon() {
         heading1="Tree Surgeons"
         heading2="in your area"
         tabData={TREE_SURGEON_TABDATA}
+        heightClass="min-h-[426px] h-auto md:h-auto lg:h-[484px]"
       />
       <UserFeedbackNearMe2 feedbackData={TREE_SUREON_FEEDBACK} />
       {/* <PaddingWrapper> */}
