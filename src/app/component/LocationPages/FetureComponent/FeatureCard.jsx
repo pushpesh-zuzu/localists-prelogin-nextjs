@@ -177,13 +177,13 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
         />
       )} */}
 
-      {/* {showModal && (
+      {showModal && (
         <RequestARegistration
           onClose={() => setShowModal(false)}
           serviceId={serviceId}
           serviceName={serviceName}
         />
-      )} */}
+      )}
     </div>
   );
 }
