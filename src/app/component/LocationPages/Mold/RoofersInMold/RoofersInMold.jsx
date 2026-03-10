@@ -43,7 +43,7 @@ function RoofersInMold() {
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
-        blackHeadinginline="inline"
+        blackHeadinginline="block md:inline"
         serviceId={113}
         serviceName="Roofing"
       />
