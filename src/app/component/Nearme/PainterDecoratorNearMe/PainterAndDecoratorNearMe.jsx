@@ -54,7 +54,7 @@ function PainterAndDecoratorNearMe() {
                 heading2="Near You"
                 description="Find reliable painters and decorators in your area. Enter your postcode and a few details to receive instant quotes."
                 bannerImage="/nearme/painter/Painter.webp"
-                bannerImageMobile="/nearme/painter/painter-mobile.webp"
+                bannerImageMobile="/nearme/painter/painter-mobile1.webp"
                 altText="Painter pouring paint into a paint tray with clips roller"
                 serviceId=""
                 serviceName=""

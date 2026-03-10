@@ -55,7 +55,7 @@ function FenceAndGateInstallation() {
                 heading2="Near You"
                 description="Find the best fencing contractors for your job, just enter your postcode and a few details for instant quotes."
                 bannerImage="/nearme/Fencing-Contractors.webp"
-                bannerImageMobile="/nearme/fencing-contractor-mobile.webp"
+                bannerImageMobile="/nearme/FenceAndGate/fencing-contractor-mobile.webp"
                 altText="Worker drilling metal fence panel"
                 serviceId={49}
                 serviceName="Fence & Gate Installation"

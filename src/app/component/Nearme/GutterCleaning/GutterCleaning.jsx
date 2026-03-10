@@ -53,7 +53,7 @@ function GutterCleaning() {
                 heading2="Near You"
                 description="Find the best gutter cleaning experts in your area, just enter your postcode and a few details for instant quotes"
                 bannerImage="/nearme/Gutter-Cleaning.webp"
-                bannerImageMobile="/nearme/Gutter-cleaning_mobile.webp"
+                bannerImageMobile="/nearme/GutterCleaning/GuttonCleaningMobile.webp"
                 altText="Close-up of dry autumn leaves piled in a house gutter and slate roof tiles."
                 serviceId=""
                 serviceName=""

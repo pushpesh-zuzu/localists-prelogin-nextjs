@@ -66,7 +66,7 @@ function LandscapeGardenNearme() {
         heading2="Near You"
         description="Find the best landscape gardeners near you! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss. "
         bannerImage="/nearme/Landscaping/Landscapingbanner.webp"
-        bannerImageMobile="/nearme/Landscaping/landscapingMobile.webp"
+        bannerImageMobile="/nearme/Landscaping/landscapingMobile1.webp"
         altText="A Landscaper carefully laying a large concrete slab amongst a garden of flowers and grey pebble dash"
         serviceId={43}
         serviceName="Landscaping"

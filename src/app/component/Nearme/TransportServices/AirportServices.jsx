@@ -24,6 +24,7 @@ import FAQScript from "../../common/seo/FAQScript";
 import DiscoverNearMe from "../DiscoverNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
+import HeroSectionNearMeOtherTheHome from "../HeroSectionNearMeOtherTheHome";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   loading: () => (
@@ -46,7 +47,7 @@ function AirportServices() {
     <>
       {typeof window !== 'undefined' && <CloseBrowserAbandon />}
       <FAQScript FAQ={FREQUENTLY_DATA_AIRPORT_TRANSPORT} />
-      <HeroSectionNearMe
+      <HeroSectionNearMeOtherTheHome
         heading1="Find Airport Transfer"
         headingMiddle="Services"
         heading2="Near You"

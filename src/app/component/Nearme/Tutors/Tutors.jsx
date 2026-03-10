@@ -25,6 +25,7 @@ import DiscoverNearMe from "../DiscoverNearMe";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import UserFeedbackNearMe2 from "../UserFeedbackNearMe2";
+import HeroSectionNearMeOtherTheHome from "../HeroSectionNearMeOtherTheHome";
 
 const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
     loading: () => (
@@ -47,7 +48,7 @@ function Tutors() {
         <>
             <CloseBrowserAbandon />
             <FAQScript FAQ={FREQUENTLY_DATA_TUTORS["tutors-near-me"]} />
-            <HeroSectionNearMe
+            <HeroSectionNearMeOtherTheHome
                 heading1="Find Tutors"
                 heading2="Near You"
                 description="Find the best tutors near you for any subject. Enter your postcode and requirements to get 5 tailored quotes. Free. No obligation. No fuss."

@@ -61,7 +61,7 @@ function PatioServicesNearme() {
         heading2="Near You"
         description="Find the best patio layers for your job, just enter your postcode and a few details for instant quotes."
         bannerImage="/nearme/Patio/patioServicesNearme.webp"
-        bannerImageMobile="/nearme/Patio/patioServicesNearmeMobile.webp"
+        bannerImageMobile="/nearme/Patio/patioServicesNearmeMobile1.webp"
         altText="Expert patio installer with gloves on, laying paver bricks on large patio"
         serviceId={52}
         serviceName="Patio Laying"

@@ -62,7 +62,7 @@ function ArtificialGrassInstallationNearme() {
         heading2="Near You"
         description="Find the best artificial grass installers in your area, just enter your postcode and a few details for instant quotes"
         bannerImage="/nearme/Artificial/ArtificialGrassBanner.jpg"
-        bannerImageMobile="/nearme/Artificial/ArtificialGrassBannerMobile.webp"
+        bannerImageMobile="/nearme/Artificial/ArtificialGrassBannerMobile1.webp"
         altText="Artificial grass installer landscaping a yard with artificial grass, measuring tap on grass."
         serviceId={54}
         serviceName="Artificial Grass Installation"

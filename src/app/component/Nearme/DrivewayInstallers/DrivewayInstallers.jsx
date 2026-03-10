@@ -56,7 +56,7 @@ function DrivewayInstallers() {
                 heading2="Near You"
                 description="Find the best driveway installers near you! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
                 bannerImage="/nearme/Driveway-Installation-Page.webp"
-                bannerImageMobile="/nearme/Driveway-mobile.webp"
+                bannerImageMobile="/nearme/Driveways/drivewaysMobile.webp"
                 altText="New block paved Driveway being carefully Installed by a Driveway Installer"
                 serviceId={51}
                 serviceName="Driveway Installation"

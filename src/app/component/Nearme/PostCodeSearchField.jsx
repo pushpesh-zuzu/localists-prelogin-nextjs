@@ -171,62 +171,67 @@ function PostCodeSearchField({
   return (
     <>
       <div
-        className={`relative max-w-[260px] md:max-w-[280px] lg:max-w-[416px] ${margin ? "mt-5 md:mt-6 lg:mt-[40px]" : ""
-          }`}
-      >
-        <div
-          className="flex items-center bg-white rounded-full overflow-hidden "
-          style={{
-            boxShadow: "0px 12.56px 20.94px 0px #005974E5",
-          }}
-        >
-          {/* Input Field */}
-          <div className="flex-1 flex-col relative">
-            <input
-              type="text"
-              value={postcode}
-              onChange={handleChange}
-              onKeyPress={handleKeyPress}
-              placeholder={placeholder}
-              disabled={disabled}
-              autoComplete="off"
-              className={`w-full font-bold px-4 py-2.5 md:pl-6 md:py-2.5 lg:pl-[43px] lg:py-4 
-                        !text-[#B3B3B3] 
-                        placeholder:!text-[#B3B3B3] 
-                        focus:outline-none 
-                        text-base lg:!text-[25px] 
-                        placeholder:text-base lg:placeholder:!text-[25px]`}
-            />
-
-            {/* Validation Icons */}
-            {postcode && (
-              <div className="absolute right-3 top-1/2 -translate-y-1/2">
-                {isValidating ? (
-                  <Loader2 className="w-5 h-5 text-gray-400 animate-spin" />
-                ) : isValid ? (
-                  <CheckIcon className="w-5 text-white h-5 bg-green-500 rounded-full" />
-                ) : null}
+              className={`relative w-[83.5vw] md:w-auto md:max-w-[280px] lg:max-w-[416px] ${
+                margin ? "mt-[30px] md:mt-6 lg:mt-[40px]" : ""
+              }`}
+            >
+              <div
+                className="flex items-center bg-white rounded-full overflow-hidden"
+                style={{ boxShadow: "0px 12.56px 20.94px 0px #005974E5" }}
+              >
+                {/* Input Field */}
+                <div className="flex-1 flex-col relative">
+                  <input
+                    suppressHydrationWarning
+                    type="text"
+                    value={postcode}
+                    onChange={handleChange}
+                    onKeyDown={handleKeyPress}
+                    placeholder={placeholder}
+                    disabled={disabled}
+                    autoComplete="off"
+                    className={`w-full font-bold 
+                    pl-[6.67vw] py-[4.3vw]
+                    md:pl-6 md:py-2.5 
+                    lg:pl-[43px] lg:py-4 
+                    !text-[#B3B3B3] 
+                    placeholder:!text-[#B3B3B3] 
+                    focus:outline-none 
+                    text-base lg:!text-[25px] 
+                    placeholder:text-base lg:placeholder:!text-[25px]`}
+                  />
+      
+                  {postcode && (
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                      {isValidating ? (
+                        <Loader2 className="w-5 h-5 text-gray-400 animate-spin" />
+                      ) : isValid ? (
+                        <CheckIcon className="w-5 text-white h-5 bg-green-500 rounded-full" />
+                      ) : null}
+                    </div>
+                  )}
+                </div>
+      
+                {/* Go Button */}
+                <button
+                  type="button"
+                  onClick={handleSubmit}
+                  className={`${buttonBg} cursor-pointer font-bold text-white hover:bg-[#00aef3] focus:outline-none
+                  min-w-[17.2vw] pl-[3.9vw] pr-[5.56vw] py-[4.3vw]
+                  md:min-w-[62px] md:pl-3.5 md:pr-5 md:py-[15.5px]
+                  lg:min-w-[100px] lg:pl-[22px] lg:pr-6 lg:py-4 
+                  text-base lg:text-[25px]!`}
+                >
+                  {buttonText}
+                </button>
               </div>
-            )}
-          </div>
-
-          {/* Go Button */}
-          <button
-            type="button"
-            onClick={handleSubmit}
-
-            className={` ${buttonBg} cursor-pointer min-w-[62px] lg:min-w-[100px] font-bold pl-3.5 pr-5 py-[11px] hover:bg-[#00aef3]  lg:pl-[22px] lg:pr-6 lg:py-4 text-white focus:outline-none text-base lg:text-[25px]!`}
-          >
-            {buttonText}
-          </button>
-        </div>
-
-        {error && (
-          <p className="ml-[5%] absolute  text-left whitespace-nowrap text-red-600 text-base mt-1 max-w-[254px] md:max-w-[246px] lg:max-w-[404px]">
-            {error}
-          </p>
-        )}
-      </div>
+      
+              {error && (
+                <p className="ml-[5%] absolute text-left whitespace-nowrap text-red-600 text-base mt-1 max-w-[254px] md:max-w-[246px] lg:max-w-[404px]">
+                  {error}
+                </p>
+              )}
+            </div>
        {/* {show && (
         <BuyerRegistration
           closeModal={handleClose}
