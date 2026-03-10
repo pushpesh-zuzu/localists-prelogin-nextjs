@@ -1,15 +1,30 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ChevronLeft, ChevronRight, Clock, ArrowLeft } from "lucide-react";
 import H5 from "../UI/Typography/H5";
 import CardLayoutWrapper from "./CardLayoutWrapper";
 import Paragraph from "../UI/Typography/Paragraph";
 
 const TIME_SLOTS = [
-    "09:00 AM - 12:00 PM",
-    "12:00 PM - 03:00 PM",
-    "03:00 PM - 06:00 PM",
+    {
+        label: "Morning",
+        time: "09:00 AM - 12:00 PM",
+    },
+    {
+        label: "Afternoon",
+        time: "12:00 PM - 03:00 PM",
+    },
+    {
+        label: "Evening",
+        time: "03:00 PM - 06:00 PM",
+    },
 ];
+
+const SLOT_LABELS = {
+    "09:00 AM - 12:00 PM": "Morning",
+    "12:00 PM - 03:00 PM": "Afternoon",
+    "03:00 PM - 06:00 PM": "Evening",
+};
 
 const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const MONTHS = [
@@ -54,15 +69,8 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
     const [selectedDates, setSelectedDates] = useState([]);
     const [error, setError] = useState("");
 
-    // const [showMobileSlots, setShowMobileSlots] = useState(false);
-    // const [isMobile, setIsMobile] = useState(false);
-
-    // useEffect(() => {
-    //     const handleResize = () => setIsMobile(window.innerWidth < 768);
-    //     handleResize();
-    //     window.addEventListener("resize", handleResize);
-    //     return () => window.removeEventListener("resize", handleResize);
-    // }, []);
+    const [activeDate, setActiveDate] = useState(null);
+    const [showSlotsModal, setShowSlotsModal] = useState(false);
 
     const daysInMonth = getDaysInMonth(currentYear, currentMonth);
     const firstDay = getFirstDayOfMonth(currentYear, currentMonth);
@@ -115,72 +123,107 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
         currentYear === today.getFullYear();
 
     const isPast = (day) => {
-
-        // new Date(currentYear, currentMonth, day) <=
-        // new Date(today.getFullYear(), today.getMonth(), today.getDate());
-
         const date = new Date(currentYear, currentMonth, day);
         return date <= todayMidnight || date > maxDate;
     }
 
 
     const isSelected = (day) =>
-        selectedDates.some(
-            (d) =>
-                d.date.getDate() === day &&
-                d.date.getMonth() === currentMonth &&
-                d.date.getFullYear() === currentYear
-        );
+        selectedDates.some((d) => {
+            const dateObj = new Date(d.date);
+            return (
+                dateObj.getDate() === day &&
+                dateObj.getMonth() === currentMonth &&
+                dateObj.getFullYear() === currentYear
+            );
+        });
 
     const handleDateClick = (day) => {
         if (isPast(day)) return;
 
         const clickedDate = new Date(currentYear, currentMonth, day);
+        // const dateKey = clickedDate.toISOString();
 
-        const exists = selectedDates.find(
-            (d) => d.date.getTime() === clickedDate.getTime()
-        );
+        const dateKey = `${clickedDate.getFullYear()}-${String(clickedDate.getMonth() + 1).padStart(2, "0")}-${String(clickedDate.getDate()).padStart(2, "0")}`;
 
-        if (exists) {
-            setSelectedDates(
-                selectedDates.filter((d) => d.date.getTime() !== clickedDate.getTime())
-            );
-            setError("");
-            return;
-        }
+        const exists = selectedDates.find((d) => d.date === dateKey);
 
-        if (selectedDates.length >= 3) {
+        if (!exists && selectedDates.length >= 3) {
             setError("You can select maximum 3 dates");
             return;
         }
 
-        setSelectedDates([...selectedDates, { date: clickedDate, slots: [] }]);
         setError("");
+        setActiveDate(clickedDate);
+        setShowSlotsModal(true);
     };
 
-    const handleSlotSelect = (dateIndex, slot) => {
-        const updated = [...selectedDates];
+    const toggleSlot = (time) => {
 
-        const exists = updated[dateIndex].slots.includes(slot);
+        // const dateKey = activeDate.toISOString();
 
-        if (exists) {
-            updated[dateIndex].slots = updated[dateIndex].slots.filter(
-                (s) => s !== slot
-            );
+        const dateKey = `${activeDate.getFullYear()}-${String(activeDate.getMonth() + 1).padStart(2, "0")}-${String(activeDate.getDate()).padStart(2, "0")}`;
+
+        let updated = [...selectedDates];
+
+        const existingDateIndex = updated.findIndex((d) => d.date === dateKey);
+
+        setError("");
+
+        if (existingDateIndex !== -1) {
+
+            const existingDate = updated[existingDateIndex];
+
+            if (existingDate.slots.includes(time)) {
+
+                const newSlots = existingDate.slots.filter((s) => s !== time);
+
+                if (newSlots.length === 0) {
+                    // remove the whole date if no slots left
+                    updated.splice(existingDateIndex, 1);
+                } else {
+                    existingDate.slots = newSlots;
+                }
+
+            } else {
+
+                if (existingDate.slots.length >= 3) {
+                    setError("Maximum 3 slots per date");
+                    return;
+                }
+
+                existingDate.slots.push(time);
+            }
+
         } else {
-            updated[dateIndex].slots.push(slot);
+
+            if (updated.length >= 3) {
+                setError("Maximum 3 dates allowed");
+                return;
+            }
+
+            updated.push({
+                date: dateKey,
+                slots: [time],
+            });
+
         }
 
         setSelectedDates(updated);
     };
 
-    const formatDate = (date) => {
-        return date.toLocaleDateString("en-GB", {
-            weekday: "long",
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-        });
+    const isSlotSelected = (time) => {
+        // const dateKey = activeDate?.toISOString();
+
+        const dateKey = activeDate
+            ? `${activeDate.getFullYear()}-${String(activeDate.getMonth() + 1).padStart(2, "0")}-${String(activeDate.getDate()).padStart(2, "0")}`
+            : null;
+
+        const found = selectedDates.find((d) => d.date === dateKey);
+
+        if (!found) return false;
+
+        return found.slots.includes(time);
     };
 
     const handleSubmit = () => {
@@ -192,21 +235,50 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
         if (missingSlots)
             return setError("Please select at least one slot for each date");
 
+        const formattedDates = selectedDates.map((item) => ({
+            date: item.date,
+            slots: item.slots
+        }));
+
         setError("");
-        nextStep(selectedDates);
+        // console.log("selectedDates", formattedDates)
+        nextStep(formattedDates);
     };
 
     const handleBackClick = () => {
         onBack();
     };
 
+    const removeSlot = (date, slot) => {
+        const updated = selectedDates.map((d) => {
+            if (d.date === date) {
+                return {
+                    ...d,
+                    slots: d.slots.filter((s) => s !== slot),
+                };
+            }
+            return d;
+        }).filter(d => d.slots.length > 0);
+
+        setSelectedDates(updated);
+    };
+
+    const totalSelectedSlots = selectedDates.reduce(
+        (acc, d) => acc + d.slots.length,
+        0
+    );
+
+    const remainingSlots = 9 - totalSelectedSlots;
+    const totalSelectedDates = selectedDates.length;
+    const maxDatesReached = totalSelectedDates >= 3;
+
     return (
-        <div className=" w-[970px]
+        <div className=" w-[768px]
         bg-white
         rounded-[20px]
         overflow-hidden
         max-[1024px]:w-full
-        max-[1024px]:max-w-[970px]
+        max-[1024px]:max-w-[768px]
         max-[1024px]:mx-auto">
             <div className="pt-[20px] md:pt-[30px] lg:pt-[40px] pb-[20px] px-[20px] md:px-[60px] w-full mx-auto">
                 <CardLayoutWrapper
@@ -216,24 +288,23 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
                     showBackButton={true}
                     buttonText="Next"
                     calendarQuestion={true}
-                    buttonWrapperClassName=" lg:w-[535px] lg:mx-auto"
-                >
-                    <h4 className="text-[#00afe3] lg:pb-[30px] md:pb-[20px] pb-[10px]
+                    buttonWrapperClassName=" lg:w-[535px] lg:mx-auto">
+                    <h4 className="text-[#00afe3] lg:pb-[20px] md:pb-[20px] pb-[10px]
                     font-Inter font-black tracking-[-0.03em] text-[20px] leading-[20px]
-                    md:text-[25px] md:leading-[25px] lg:text-[30px] lg:leading-[30px]">
+                    md:text-[25px] md:leading-[25px] lg:text-[32px] lg:leading-[32px]">
                         When are you available?
                     </h4>
 
-                    <div className="flex flex-col lg:flex-row gap-5 lg:gap-10">
+                    <div className="flex flex-col gap-5 lg:gap-7 mb-4">
                         <div>
-                            <H5 variant="optional" className="!font-medium text-left md:text-center">
+                            <H5 variant="optional" className="!font-bold text-left md:text-center">
                                 Free Home Visit With Localitsts
                             </H5>
-                            <Paragraph variant="optional" className="!font-medium lg:pt-[20px] pt-[10px] text-left text-[#3A4B53]">Book in with Localist at a time that suits you. We will visit your property and assess your roofing needs then provide you with a detailed free quote.</Paragraph>
+                            <Paragraph variant="optional" className="!font-medium pt-[10px] text-left md:text-center text-[#3A4B53] tracking-[0px]">Book in with Localist at a time that suits you. We will visit your property and assess your roofing needs then provide you with a detailed free quote.</Paragraph>
                         </div>
                         <div className="flex flex-col md:flex-row gap-5">
                             {/* Calendar Box */}
-                            <div className={` flex-1 bg-white rounded-[24px] h-fit md:min-w-[300px] lg:min-w-[400px] border-2 border-[#E5E7EB] p-5 shadow-sm`}>
+                            <div className={`flex-1 bg-white rounded-[24px] h-fit md:min-w-[300px] lg:min-w-[400px] border-2 border-[#E5E7EB] p-5 shadow-sm`}>
                                 {/* Month */}
                                 <div className="flex items-center justify-between mb-5">
                                     <button
@@ -271,7 +342,7 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
                                 </div>
 
                                 {/* Day Cells */}
-                                <div className="grid grid-cols-7 gap-y-2">
+                                <div className="grid grid-cols-7 gap-y-3">
                                     {/* Empty cells */}
                                     {Array.from({ length: firstDay }).map((_, i) => (
                                         <div key={`empty-${i}`} />
@@ -284,7 +355,7 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
                                         return (
                                             <button
                                                 key={day}
-                                                disabled={past}
+                                                disabled={past || (selectedDates.length >= 3 && !selected)}
                                                 onClick={() => handleDateClick(day)}
                                                 className={`
                     mx-auto flex items-center justify-center
@@ -300,53 +371,149 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
                                         );
                                     })}
                                 </div>
-                                {/* Selected date pill */}
                             </div>
                         </div>
                     </div>
+                    <span className="tracking-[-0.03em] font-[Arial] py-0.5 text-[14px] leading-[14px] text-[#6A7282]">Select 1-9 timeslots that suit you. We will email you to confirm the selected time and date.</span>
 
-                    {/* <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5"> */}
-                    <div className="
-w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
-gap-6 mt-5 max-h-[230px] md:max-h-[250px] lg:max-h-full
-overflow-y-auto lg:overflow-visible pr-2 [&::-webkit-scrollbar]:w-1
-[&::-webkit-scrollbar-thumb]:bg-gray-300
-[&::-webkit-scrollbar-thumb]:rounded-full
-">
-                        {selectedDates.map((item, index) => (
-                            <div key={index} className="">
-                                <div className="flex items-center gap-2 md:mb-2 mb-2 lg:mb-1">
-                                    <Clock size={16} className="text-[#00AEEF]" />
-                                    <span className="text-[14px] font-bold text-[#6B7280] tracking-[-0.03em] font-[Arial]">
-                                        Available Time Slots
-                                    </span>
-                                </div>
+                    <div className="mt-4">
 
-                                <div className="flex items-center gap-2 bg-[#EBF9F3] rounded-full px-4 py-2 w-fit mb-3">
-                                    <span className="text-[#00AEEF] text-[13px] font-bold">
-                                        {formatDate(item.date)}
-                                    </span>
-                                </div>
+                        <p className="text-left tracking-[-0.03em] font-[Arial] text-[14px] mb-3">
+                            Selected timeslots
+                        </p>
 
-                                <div className="flex flex-col gap-2">
-                                    {TIME_SLOTS.map((slot) => (
-                                        <button
-                                            key={slot}
-                                            onClick={() => handleSlotSelect(index, slot)}
-                                            className={`w-full cursor-pointer py-2 px-4 rounded-xl border-2 text-[14px] font-bold
-                          ${item.slots.includes(slot)
-                                                    ? "bg-[#00AEEF] border-[#00AEEF] text-white"
-                                                    : "border-[#D1FAE5] text-[#00AEEF]"
-                                                }`}
+                        <div className="flex flex-wrap gap-3">
+
+                            {selectedDates.flatMap((d) =>
+                                d.slots.map((slot, i) => {
+
+                                    const monthDay = new Date(d.date + "T00:00:00").toLocaleDateString("en-GB", {
+                                        month: "long",
+                                        day: "numeric",
+                                    });
+
+                                    const label = SLOT_LABELS[slot];
+
+                                    return (
+                                        <div
+                                            key={d.date + slot}
+                                            className="flex items-center gap-2 bg-[#00AEEF] text-white font-medium px-4 py-2 rounded-full text-[14px]"
                                         >
-                                            {slot}
-                                        </button>
-                                    ))}
+                                            {label} - {monthDay}
+                                            <button
+                                                onClick={() => removeSlot(d.date, slot)}
+                                                className="flex items-center justify-center w-4 h-4 rounded-full cursor-pointer hover:bg-white/20 transition-colors text-[16px]"
+                                            >
+                                                ×
+                                            </button>
+                                        </div>
+                                    );
+                                })
+                            )}
+
+                            {Array.from({
+                                length: Math.max(
+                                    0,
+                                    3 -
+                                    selectedDates.reduce((acc, d) => acc + d.slots.length, 0)
+                                ),
+                            }).map((_, i) => (
+                                <div
+                                    key={"placeholder-" + i}
+                                    className="border-2 border-dashed border-gray-300 text-gray-400 px-3 py-2 rounded-full text-[14px] tracking-[-0.03em]"
+                                >
+                                    Select a timeslot
+                                </div>
+                            ))}
+
+                        </div>
+
+                    </div>
+
+                    {showSlotsModal && (
+                        <div className="fixed inset-0 flex items-center justify-center bg-black/30 z-50">
+                            <div className="bg-white rounded-xl p-5 w-[320px] shadow-xl">
+
+                                <div className="flex justify-between mb-2">
+                                    <h5 className="text-[16px]">Available time slots</h5>
+                                    <span className="text-[12px] text-gray-500">
+                                        {totalSelectedSlots === 0
+                                            ? "Select 1 more"
+                                            : `${remainingSlots} remaining`}
+                                    </span>                                    <button
+                                        onClick={() => setShowSlotsModal(false)}
+                                        className="flex items-center justify-center w-7 h-7 rounded-full cursor-pointer hover:bg-gray-200 transition-colors"
+                                    >
+                                        ✕
+                                    </button>
+                                </div>
+
+                                <p className="text-left text-sm text-gray-500 mb-5">
+                                    {activeDate?.toLocaleDateString("en-GB", {
+                                        weekday: "long",
+                                        year: "numeric",
+                                        month: "long",
+                                        day: "numeric",
+                                    })}
+                                </p>
+
+                                <div className="flex flex-col gap-3">
+
+                                    {TIME_SLOTS.map((slot) => {
+
+                                        const selected = isSlotSelected(slot.time);
+
+                                        return (
+
+                                            <div
+                                                key={slot.time}
+                                                className="flex items-center justify-between p-4 rounded-xl bg-gray-100"
+                                            >
+
+                                                <div>
+                                                    <p className="text-left font-semibold text-[#00AEEF]">
+                                                        {slot.label}
+                                                    </p>
+
+                                                    <p className="text-sm text-gray-500">
+                                                        {slot.time}
+                                                    </p>
+                                                </div>
+
+                                                <button
+                                                    onClick={() => toggleSlot(slot.time)}
+                                                    disabled={remainingSlots === 0 && !selected}
+                                                    className={`w-12 h-6 flex items-center rounded-full p-1 transition cursor-pointer
+                                                    ${selected ? "bg-green-500" : "bg-gray-300"}
+                                                    ${remainingSlots === 0 && !selected ? "opacity-50 cursor-not-allowed" : ""}`}
+                                                >
+                                                    <div
+                                                        className={`bg-white w-4 h-4 rounded-full shadow transform transition
+                                                ${selected ? "translate-x-6" : ""}`}
+                                                    />
+                                                </button>
+
+                                            </div>
+
+                                        );
+                                    })}
 
                                 </div>
+
+                                {remainingSlots === 0 && (
+                                    <p className="text-[#E99643] text-[12px] mt-3">
+                                        Maximum selections reached. Remove a slot to add another.
+                                    </p>
+                                )}
+                                {maxDatesReached && !selectedDates.some(d => d.date === `${activeDate?.getFullYear()}-${String(activeDate?.getMonth() + 1).padStart(2, "0")}-${String(activeDate?.getDate()).padStart(2, "0")}`
+                                ) && (
+                                        <p className="text-[#E99643] text-[12px] mt-3">
+                                            Maximum dates reached. Remove a date to add another.
+                                        </p>
+                                    )}
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    )}
 
                     {error && (
                         <p className="text-red-500 text-sm font-medium lg:pt-3 md:pt-0 pt-2 text-left lg:text-center">
