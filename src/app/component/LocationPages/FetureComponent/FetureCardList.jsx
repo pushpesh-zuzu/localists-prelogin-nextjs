@@ -104,7 +104,7 @@ export default function FetureCardList({
         style={{ overflowAnchor: "none" }}
       >
         <div className="flex flex-col gap-4 md:gap-12">
-          {visibleSellers.length ? (
+          {!getSellerDataLoader ? (
             visibleSellers.map((seller, index) => (
               <div
                 key={`${seller.id}-${index}`}
@@ -122,7 +122,7 @@ export default function FetureCardList({
                 />
               </div>
             ))
-          ) : getSellerDataLoader ?(
+          ) : !visibleSellers.length  ?(
             <Loader />
           ) :<div className="flex min-h-[150px]">
             <Paragraph className="m-auto"> No Seller Found in {cityName} </Paragraph>

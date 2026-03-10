@@ -69,7 +69,7 @@ const initialState = {
   postCodeLoader: false,
   searchServiceLoader: false,
   redirectFromHome: false,
-  getSellerDataLoader: false,
+  getSellerDataLoader: true,
   getSellerData: {},
   autoBidData: [],
   autoBidListLoader: false,
@@ -199,6 +199,8 @@ export const getFetchSellerListData = (data) => {
       const response = await axiosInstance.post('get-seller-list-city-wise', data)
       console.log(response.data, 'response.data')
       dispatch(setGetSellerData(response?.data?.data))
+      dispatch(setGetSellerDataLoader(false))
+
       return response.data
     } catch (error) {
       const errorMessage =
