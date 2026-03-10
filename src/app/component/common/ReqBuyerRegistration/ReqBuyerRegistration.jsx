@@ -47,7 +47,7 @@ function ReqBuyerRegistration({
     const sellers = serviceData?.sellers || [];
     const hasSellers = sellers.length > 0;
 
-    // console.log("sellers",buyerStep, sellers, requestId, requestUserId)
+    // console.log("buyerRequest", buyerRequest)
 
     const isAdminOrRemembered = getBarkToken();
 

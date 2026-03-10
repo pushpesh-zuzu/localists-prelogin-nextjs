@@ -243,10 +243,22 @@ const QuestionModal = ({
       newHistory.pop();
       const prevIndex = newHistory[newHistory.length - 1];
 
-      const trimmedAnswers =
-        buyerRequest?.questions?.slice(0, prevIndex) || [];
+      // const trimmedAnswers =
+      //   buyerRequest?.questions?.slice(0, prevIndex) || [];
 
-      dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
+      // dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
+
+      const questionText = formattedQuestions[prevIndex]?.questions;
+
+      const indexInAnswers = buyerRequest?.questions?.findIndex(
+        (q) => q?.ques === questionText
+      );
+
+      if (indexInAnswers !== -1) {
+        const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
+
+        dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+      }
 
       setQuestionHistory(newHistory);
       setCurrentQuestion(prevIndex);
