@@ -20,7 +20,7 @@ function HeroSectionLandscapingNearMe({
   altText = "Tree Surgeon",
   serviceId = 112,
   serviceName = "Tree Surgery",
-  containerHight = "relative w-full h-[600px] max-h-[600px] md:h-[375px] lg:h-[550px] xl:h-[570px] xl:max-h-[570px]",
+  containerHight = "relative w-full h-[550px] max-h-[550px] md:h-[375px] lg:h-[550px] xl:h-[570px] xl:max-h-[570px]",
   desktopImageClass = "object-cover h-10 w-10 md:h-[375px] min-[900px]:h-[400px] lg:h-[550px] xl:h-[570px]",
 }) {
   return (
@@ -55,11 +55,11 @@ function HeroSectionLandscapingNearMe({
 
         <div className="relative z-10 max-w-[1536px] mx-auto h-full">
           <section
-            className="flex flex-col  justify-around h-[600px] max-h-[600px] max-[353px]:max-h-[550px] md:max-h-full md:flex-row px-[30px] pt-8 pb-[31.33px] md:px-[60px] lg:pb-[64px] xl:pb-[100px] md:pt-5 lg:pt-8 xl:px-[120px] xl:pt-[73.88px] relative z-10"
+            className="flex flex-col  justify-around h-[550px] max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full md:flex-row px-[30px] pt-8 pb-[31.33px] md:px-[60px] lg:pb-[64px] xl:pb-[100px] md:pt-5 lg:pt-8 xl:px-[120px] xl:pt-[73.88px] relative z-10"
             role="banner"
             aria-label="Hero section"
           >
-           <div className={`w-full flex flex-col relative z-10 mb-[100px] mt-auto md:m-0 md:mt-0`}>
+           <div className={`w-full flex flex-col relative z-10 mb-[50px] mt-auto md:m-0 md:mt-0`}>
               <TrustpioletIconLocation className=" md:hidden lg:min-h-[54px] max-h-[23px] max-w-[184px] md:max-w-[177px] lg:max-w-[360px] mb-[15px] md:mb-3 lg:mb-[30px] lg:max-h-12" />
 
               <TrustpioletIcon className="hidden md:block lg:min-h-[54px] max-h-[23px] max-w-[154px] md:max-w-[177px] lg:max-w-[360px] mb-[15px] md:mb-3 lg:mb-[30px] lg:max-h-12" />
