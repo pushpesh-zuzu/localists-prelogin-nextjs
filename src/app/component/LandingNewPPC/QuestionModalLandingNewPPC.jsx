@@ -44,23 +44,23 @@ const QuestionModalLandingNewPPC = ({
   const [questionHistory, setQuestionHistory] = useState([0]);
 
   // Get URL params
-   const { search } = useSearchParams();
-        const allParams =
-                        typeof window !== "undefined" &&
-                 extractAllParams(search || window.location.search);
-                 const campaignid = allParams.campaign_id || "";
-                 const keyword = allParams.keyword || "";
-                 const gclid = allParams.gclid || "";
-                 const msclkid = allParams.msclkid || "";
-                 const adgroup_id = allParams.adgroup_id;
-                 const platform_source = allParams.source || "";
-                 const campaign = allParams.campaign || "";
-                 const adgroup = allParams.adgroup || "";
-                 const matchtype = allParams.matchtype || "";
-                 const device = allParams.device || "";
-                 const loc_physical_ms = allParams.loc_physical_ms || "";
-                 const utm_search_term = allParams.utm_search_term || "";
-  
+  const { search } = useSearchParams();
+  const allParams =
+    typeof window !== "undefined" &&
+    extractAllParams(search || window.location.search);
+  const campaignid = allParams.campaign_id || "";
+  const keyword = allParams.keyword || "";
+  const gclid = allParams.gclid || "";
+  const msclkid = allParams.msclkid || "";
+  const adgroup_id = allParams.adgroup_id;
+  const platform_source = allParams.source || "";
+  const campaign = allParams.campaign || "";
+  const adgroup = allParams.adgroup || "";
+  const matchtype = allParams.matchtype || "";
+  const device = allParams.device || "";
+  const loc_physical_ms = allParams.loc_physical_ms || "";
+  const utm_search_term = allParams.utm_search_term || "";
+
 
   useEffect(() => {
     if (questions.length > 0 && currentQuestion === -1) {
@@ -205,19 +205,19 @@ const QuestionModalLandingNewPPC = ({
         formData?.append("city", citySerach);
         formData.append("postcode", buyerRequest?.postcode);
         formData.append("form_status", "1");
-       formData.append("campaignid", campaignid || "");
-      formData.append("gclid", gclid || "");
-      formData.append("campaign", campaign || "");
-      formData.append("adgroup", adgroup || "");
-      formData.append("msclickid", msclkid || "");
-      formData.append("adgroup_id", adgroup_id || "");
-      formData.append("matchtype", matchtype || "");
-      formData.append("device", device || "");
-      formData.append("loc_physical_ms", loc_physical_ms || "");
-      formData.append("utm_search_term", utm_search_term || "");
-      formData.append("platform_source", platform_source);
-      formData.append("keyword", keyword || "");
-            
+        formData.append("campaignid", campaignid || "");
+        formData.append("gclid", gclid || "");
+        formData.append("campaign", campaign || "");
+        formData.append("adgroup", adgroup || "");
+        formData.append("msclickid", msclkid || "");
+        formData.append("adgroup_id", adgroup_id || "");
+        formData.append("matchtype", matchtype || "");
+        formData.append("device", device || "");
+        formData.append("loc_physical_ms", loc_physical_ms || "");
+        formData.append("utm_search_term", utm_search_term || "");
+        formData.append("platform_source", platform_source);
+        formData.append("keyword", keyword || "");
+
         formData.append("entry_url", url);
         formData.append("user_ip_address", ip);
 
@@ -250,10 +250,22 @@ const QuestionModalLandingNewPPC = ({
       newHistory.pop();
       const prevIndex = newHistory[newHistory.length - 1];
 
-      const trimmedAnswers =
-        buyerRequest?.questions?.slice(0, prevIndex) || [];
+      // const trimmedAnswers =
+      //   buyerRequest?.questions?.slice(0, prevIndex) || [];
 
-      dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
+      // dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
+
+      const questionText = formattedQuestions[prevIndex]?.questions;
+
+      const indexInAnswers = buyerRequest?.questions?.findIndex(
+        (q) => q?.ques === questionText
+      );
+
+      if (indexInAnswers !== -1) {
+        const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
+
+        dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+      }
 
       setQuestionHistory(newHistory);
       setCurrentQuestion(prevIndex);

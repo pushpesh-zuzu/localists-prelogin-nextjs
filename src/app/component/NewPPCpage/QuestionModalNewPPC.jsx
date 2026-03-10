@@ -405,10 +405,22 @@ const QuestionModalNewPPC = ({
                 setCurrentQuestion(prevIndex);
 
                 // ✅ KEEP answers till previous step, remove future ones
-                const trimmedAnswers =
-                    buyerRequest?.questions?.slice(0, prevIndex) || [];
+                // const trimmedAnswers =
+                //     buyerRequest?.questions?.slice(0, prevIndex) || [];
 
-                dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
+                // dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
+
+                const questionText = formattedQuestions[prevIndex]?.questions;
+
+                const indexInAnswers = buyerRequest?.questions?.findIndex(
+                    (q) => q?.ques === questionText
+                );
+
+                if (indexInAnswers !== -1) {
+                    const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
+
+                    dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+                }
 
                 // ✅ Clear UI state
                 setSelectedOption([]);

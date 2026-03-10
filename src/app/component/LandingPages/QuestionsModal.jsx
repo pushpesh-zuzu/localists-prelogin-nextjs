@@ -41,22 +41,22 @@ const QuestionModal = ({
   const [questionHistory, setQuestionHistory] = useState([0]);
 
   // Get URL params
-    const { search } = useSearchParams();
-                const allParams =
-                    typeof window !== "undefined" &&
-             extractAllParams(search || window.location.search);
-             const campaignid = allParams.campaign_id || "";
-             const keyword = allParams.keyword || "";
-             const gclid = allParams.gclid || "";
-             const msclkid = allParams.msclkid || "";
-             const adgroup_id = allParams.adgroup_id;
-             const platform_source = allParams.source || "";
-             const campaign = allParams.campaign || "";
-             const adgroup = allParams.adgroup || "";
-             const matchtype = allParams.matchtype || "";
-             const device = allParams.device || "";
-             const loc_physical_ms = allParams.loc_physical_ms || "";
-             const utm_search_term = allParams.utm_search_term || "";
+  const { search } = useSearchParams();
+  const allParams =
+    typeof window !== "undefined" &&
+    extractAllParams(search || window.location.search);
+  const campaignid = allParams.campaign_id || "";
+  const keyword = allParams.keyword || "";
+  const gclid = allParams.gclid || "";
+  const msclkid = allParams.msclkid || "";
+  const adgroup_id = allParams.adgroup_id;
+  const platform_source = allParams.source || "";
+  const campaign = allParams.campaign || "";
+  const adgroup = allParams.adgroup || "";
+  const matchtype = allParams.matchtype || "";
+  const device = allParams.device || "";
+  const loc_physical_ms = allParams.loc_physical_ms || "";
+  const utm_search_term = allParams.utm_search_term || "";
 
   useEffect(() => {
     if (questions.length > 0 && currentQuestion === -1) {
@@ -252,23 +252,35 @@ const QuestionModal = ({
   };
 
   const handleBack = () => {
-  if (questionHistory.length > 1) {
-    const newHistory = [...questionHistory];
-    newHistory.pop();
-    const prevIndex = newHistory[newHistory.length - 1];
+    if (questionHistory.length > 1) {
+      const newHistory = [...questionHistory];
+      newHistory.pop();
+      const prevIndex = newHistory[newHistory.length - 1];
 
-    // CLEAR FUTURE ANSWERS
-    const trimmedAnswers =
-      buyerRequest?.questions?.slice(0, prevIndex) || [];
+      // CLEAR FUTURE ANSWERS
+      // const trimmedAnswers =
+      //   buyerRequest?.questions?.slice(0, prevIndex) || [];
 
-    dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
+      // dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
 
-    setQuestionHistory(newHistory);
-    setCurrentQuestion(prevIndex);
-  } else {
-    previousStep();
-  }
-};
+      const questionText = formattedQuestions[prevIndex]?.questions;
+
+      const indexInAnswers = buyerRequest?.questions?.findIndex(
+        (q) => q?.ques === questionText
+      );
+
+      if (indexInAnswers !== -1) {
+        const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
+
+        dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+      }
+
+      setQuestionHistory(newHistory);
+      setCurrentQuestion(prevIndex);
+    } else {
+      previousStep();
+    }
+  };
 
   const handleCloseClick = () => {
     if (questionanswerData?.length === 0) {

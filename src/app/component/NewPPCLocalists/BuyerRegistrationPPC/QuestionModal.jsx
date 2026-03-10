@@ -60,7 +60,7 @@ const QuestionModal = ({
     OptionsIconsData,
     featureRef
 }) => {
-      const router = useRouter();
+    const router = useRouter();
     const dispatch = useDispatch();
     const { buyerRequest, requestLoader, citySerach, questionLoader } =
         useSelector((state) => state.buyer);
@@ -184,16 +184,16 @@ const QuestionModal = ({
         }
     };
 
-     const handleViewRoofers = () => {
-            const element = featureRef?.current;
-            if (element) {
-                const top = element.getBoundingClientRect().top + window.scrollY - 60;
-                window.scrollTo({ top, behavior: "smooth" });
-            }
-            };
+    const handleViewRoofers = () => {
+        const element = featureRef?.current;
+        if (element) {
+            const top = element.getBoundingClientRect().top + window.scrollY - 60;
+            window.scrollTo({ top, behavior: "smooth" });
+        }
+    };
     const handleNextCheckBox = () => {
         const canContinue = checkAuthenticatedUser(router);
-            if (!canContinue) return;
+        if (!canContinue) return;
         if (selectedOption.length === 0) {
             setError("Please select at least one option");
             return;
@@ -278,8 +278,8 @@ const QuestionModal = ({
     };
 
     const handleNext = (selected) => {
-            const canContinue = checkAuthenticatedUser(router);
-            if (!canContinue) return;
+        const canContinue = checkAuthenticatedUser(router);
+        if (!canContinue) return;
 
         if (selected.length === 0) {
             setError("Please select at least one option");
@@ -371,10 +371,22 @@ const QuestionModal = ({
                 setCurrentQuestion(prevIndex);
 
                 // ✅ KEEP answers till previous step, remove future ones
-                const trimmedAnswers =
-                    buyerRequest?.questions?.slice(0, prevIndex) || [];
+                // const trimmedAnswers =
+                //     buyerRequest?.questions?.slice(0, prevIndex) || [];
 
-                dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
+                // dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
+
+                const questionText = formattedQuestions[prevIndex]?.questions;
+
+                const indexInAnswers = buyerRequest?.questions?.findIndex(
+                    (q) => q?.ques === questionText
+                );
+
+                if (indexInAnswers !== -1) {
+                    const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
+
+                    dispatch(setbuyerRequestData({ questions: updatedAnswers }));
+                }
 
                 // ✅ Clear UI state
                 setSelectedOption([]);
@@ -389,7 +401,7 @@ const QuestionModal = ({
     useEffect(() => {
         setSelectedOption([]);
         setOtherText("");
-        currentQuestion> 1 && handleViewRoofers();
+        currentQuestion > 1 && handleViewRoofers();
 
     }, [currentQuestion]);
 

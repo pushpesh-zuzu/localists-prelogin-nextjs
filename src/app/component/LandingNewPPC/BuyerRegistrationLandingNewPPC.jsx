@@ -51,6 +51,8 @@ function BuyerRegistrationLandingNewPPC({
 
   const isAdminOrRemembered = getBarkToken();
 
+  // console.log("buyerRequest", buyerRequest)
+
   const stepFlow = isAdminOrRemembered
     ? [2, 3, 6, 7, 8]
     : [1, 2, 3, 4, 5, 7, 8];
