@@ -41,7 +41,7 @@ function RoofersInRhyl() {
                 heading2="Rhyl"
                 description="Need a local roofer in Rhyl? Input your postcode, a few details about the project, and get free quotes now from trusted professionals in your area. No pressure, no guesses."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
-                bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
+                bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
                 blackHeadinginline="inline"
                 serviceId={113}
@@ -49,8 +49,8 @@ function RoofersInRhyl() {
             />
             <VettedSection
                 paragraph={VETTED_DATA_ROOFERS_RHYL}
-                vettedHeading1="Find Local Vetted Roofers Rhyl "
-                vettedHeading2="Near You"
+                vettedHeading1="Find Local Vetted Roofers in "
+                vettedHeading2="Rhyl"
                 breadcrumb={BREADCRUM_DATA_ROOFERS_RHYL}
                 extraButton
                 featureRef={featureRef}

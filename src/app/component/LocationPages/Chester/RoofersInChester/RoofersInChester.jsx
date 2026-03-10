@@ -41,7 +41,7 @@ function RoofersInChester() {
         heading2="Chester"
         description="Find the best roofers in Chester! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
-        bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
+        bannerImageMobile="/location/roofing_location.webp"
         altText="Professional roofers roofing a new build with ceramic roof tiles"
         blackHeadinginline="inline"
         serviceId={113}
@@ -49,7 +49,7 @@ function RoofersInChester() {
       />
       <VettedSection
         paragraph={VETTED_DATA_ROOFERS_CHESTER}
-        vettedHeading1="Find Vetted Roofers in "
+        vettedHeading1="Find Local Vetted Roofers in "
         vettedHeading2="Chester"
         breadcrumb={BREADCRUM_DATA_ROOFERS_CHESTER}
         extraButton

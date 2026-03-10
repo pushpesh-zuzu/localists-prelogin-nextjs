@@ -41,7 +41,7 @@ function RoofersInStockport() {
                 heading2="Stockport"
                 description="Get free, no-obligation quotes from the highest quality roofers working across Stockport. Enter your postcode below and share a few details about the work. It only takes a minute to get started."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
-                bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
+                bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
                 blackHeadinginline="inline"
                 serviceId={113}
@@ -49,8 +49,8 @@ function RoofersInStockport() {
             />
             <VettedSection
                 paragraph={VETTED_DATA_ROOFERS_STOCKPORT}
-                vettedHeading1="Find Local Vetted Roofers Stockport "
-                vettedHeading2="Near You"
+                vettedHeading1="Find Local Vetted Roofers in "
+                vettedHeading2="Stockport"
                 breadcrumb={BREADCRUM_DATA_ROOFERS_STOCKPORT}
                 extraButton
                 featureRef={featureRef}

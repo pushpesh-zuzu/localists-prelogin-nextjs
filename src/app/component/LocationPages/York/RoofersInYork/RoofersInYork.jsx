@@ -41,7 +41,7 @@ function RoofersInYork() {
         heading2="York"
         description="Find the highest quality roofers in York now! Just enter your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
-        bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
+        bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
         blackHeadinginline="inline"
         serviceId={113}
@@ -49,8 +49,8 @@ function RoofersInYork() {
       />
       <VettedSection
         paragraph={VETTED_DATA_ROOFERS_YORK}
-        vettedHeading1="Find Local Vetted Roofers "
-        vettedHeading2="York Near You"
+        vettedHeading1="Find Local Vetted Roofers in "
+        vettedHeading2="York"
         breadcrumb={BREADCRUM_DATA_ROOFERS_YORK}
         extraButton
         featureRef={featureRef}

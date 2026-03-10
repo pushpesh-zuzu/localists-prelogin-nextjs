@@ -41,7 +41,7 @@ function RooferInLiverpool() {
         heading2="Liverpool"
         description="Find the best roofers in Liverpool! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
-        bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
+        bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
         blackHeadinginline="inline"
         serviceId={113}
@@ -49,8 +49,8 @@ function RooferInLiverpool() {
       />
       <VettedSection
         paragraph={VETTED_DATA_ROOFERS_LIVERPOOL}
-        vettedHeading1="Find trusted local roofing "
-        vettedHeading2="experts"
+        vettedHeading1="Find Local Vetted Roofers in "
+        vettedHeading2="Liverpool"
         breadcrumb={BREADCRUM_DATA_ROOFERS_LIVERPOOL}
         extraButton
         featureRef={featureRef}

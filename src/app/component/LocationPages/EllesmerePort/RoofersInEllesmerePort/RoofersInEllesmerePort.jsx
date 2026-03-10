@@ -41,7 +41,7 @@ function RoofersInEllesmerePort() {
                 heading2="Ellesmere Port"
                 description="Get free, no-obligation quotes from the highest quality roofers working across Ellesmere Port. Enter your postcode below and share a few details about the work. It only takes a minute to get started."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
-                bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
+                bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
                 blackHeadinginline="inline"
                 serviceId={113}
@@ -49,8 +49,8 @@ function RoofersInEllesmerePort() {
             />
             <VettedSection
                 paragraph={VETTED_DATA_ROOFERS_ELLESMEREPORT}
-                vettedHeading1="Find Local Vetted Roofers Ellesmere Port "
-                vettedHeading2="Near You"
+                vettedHeading1="Find Local Vetted Roofers in "
+                vettedHeading2="Ellesmere Port"
                 breadcrumb={BREADCRUM_DATA_ROOFERS_ELLESMEREPORT}
                 extraButton
                 featureRef={featureRef}

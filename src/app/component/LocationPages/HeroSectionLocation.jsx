@@ -5,6 +5,7 @@ import Paragraph1 from "../UI/Typography/Paragraph1";
 import H1 from "../UI/Typography/H1";
 import Image from "next/image";
 import PostCodeSearchFieldLocation from "./PostCodeSearchFieldLocation";
+import ChevroliteDoubleDownIcon from "../common/icons/HomePageIcons/ChevroliteDoubleDownIcon";
 
 function HeroSectionLocation({
   heading1 = "Find Tree Surgeons",
@@ -22,7 +23,7 @@ function HeroSectionLocation({
 }) {
   return (
     <>
-      <div className="relative w-full md:h-[380px] lg:h-[513px] xl:h-[570px] max-h-[570px]">
+      <div className="relative w-full max-[360px]:max-h-fit h-[600px] max-h-[600px] md:h-[380px] lg:h-[513px] xl:h-[570px] ">
         <div className="absolute inset-0 hidden md:block z-0 w-full h-full">
           <Image
             src={bannerImage}
@@ -37,7 +38,7 @@ function HeroSectionLocation({
         </div>
 
         {/* Mobile Image */}
-        <div className="absolute inset-0 md:hidden h-full w-full z-0">
+        <div className="absolute inset-0 md:hidden md:h-full w-full z-0">
           <Image
             src={bannerImageMobile}
             alt={altText}
@@ -50,9 +51,9 @@ function HeroSectionLocation({
           />
         </div>
 
-        <div className="relative z-10 max-w-[1536px] mx-auto h-full">
+        <div className="relative z-10 max-w-[1536px] mx-auto md:h-full">
           <section
-            className="flex flex-col max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full md:flex-row px-[30px] pt-10 md:px-[60px] lg:pb-[64px] xl:pb-[100px] md:pt-5 lg:pt-8 xl:px-[120px] xl:pt-[73.88px] relative z-10"
+            className="flex flex-col justify-around h-[600px] max-h-[600px] max-[353px]:max-h-[550px] md:max-h-full md:flex-row px-[30px] pt-10 md:px-[60px] lg:pb-[64px] xl:pb-[100px] md:pt-5 lg:pt-8 xl:px-[120px] xl:pt-[73.88px] relative z-10"
             role="banner"
             aria-label="Hero section"
           >
@@ -71,7 +72,7 @@ function HeroSectionLocation({
               />
             </div>
             <div className="flex h-[12px] ml-auto mr-auto justify-center mb-3.5 mt-[30px] md:hidden relative z-1">
-              {/* <ChevroliteDoubleDownIcon /> */}
+              <ChevroliteDoubleDownIcon />
             </div>
           </section>
         </div>

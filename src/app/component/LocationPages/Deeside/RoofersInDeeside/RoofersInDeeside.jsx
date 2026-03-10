@@ -41,7 +41,7 @@ function RoofersInDeeside() {
         heading2="Deeside"
         description="Looking to find the best roofers in Deeside? Look no further! Just give us your Looking for roofers in your local area? Let us know your postcode, and we’ll connect you with reliable Roofers in Deeside. Get free, no-obligation quotes to your inbox within minutes."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
-        bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
+        bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
         blackHeadinginline="inline"
         serviceId={113}
@@ -49,8 +49,8 @@ function RoofersInDeeside() {
       />
       <VettedSection
         paragraph={VETTED_DATA_ROOFERS_DEESIDE}
-        vettedHeading1="Find Local Vetted Roofers "
-        vettedHeading2="Deeside Near You"
+        vettedHeading1="Find Local Vetted Roofers in "
+        vettedHeading2="Deeside"
         breadcrumb={BREADCRUM_DATA_ROOFERS_DEESIDE}
         extraButton
         featureRef={featureRef}

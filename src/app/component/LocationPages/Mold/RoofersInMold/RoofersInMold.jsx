@@ -41,7 +41,7 @@ function RoofersInMold() {
         heading2="Mold"
         description="Find the best roofers in Mold. Just enter your postcode, give us a few quick details, and we will match you with roofers in under a minute."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
-        bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
+        bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
         blackHeadinginline="inline"
         serviceId={113}
@@ -49,8 +49,8 @@ function RoofersInMold() {
       />
       <VettedSection
         paragraph={VETTED_DATA_ROOFERS_MOLD}
-        vettedHeading1="Find Local Vetted Roofers "
-        vettedHeading2="Mold Near You"
+        vettedHeading1="Find Local Vetted Roofers in "
+        vettedHeading2="Mold"
         breadcrumb={BREADCRUM_DATA_ROOFERS_MOLD}
         extraButton
         featureRef={featureRef}

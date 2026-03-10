@@ -41,7 +41,7 @@ function RoofersInLeeds() {
         heading2="Leeds"
         description="Find the highest quality roofers in Leeds now! Just enter your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
-        bannerImageMobile="/nearme/Roofing/roofingmobile.webp"
+        bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
         blackHeadinginline="inline"
         serviceId={113}
@@ -49,8 +49,8 @@ function RoofersInLeeds() {
       />
       <VettedSection
         paragraph={VETTED_DATA_ROOFERS_LEEDS}
-        vettedHeading1="Find Local Vetted Roofers "
-        vettedHeading2="Leeds Near You"
+        vettedHeading1="Find Local Vetted Roofers in "
+        vettedHeading2="Leeds"
         breadcrumb={BREADCRUM_DATA_ROOFERS_LEEDS}
         extraButton
         featureRef={featureRef}
