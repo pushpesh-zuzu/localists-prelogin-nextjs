@@ -273,7 +273,7 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
     const maxDatesReached = totalSelectedDates >= 3;
 
     return (
-        <div className=" w-[768px]
+        <div className="w-[768px]
         bg-white
         rounded-[20px]
         overflow-hidden
@@ -288,23 +288,23 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
                     showBackButton={true}
                     buttonText="Next"
                     calendarQuestion={true}
-                    buttonWrapperClassName=" lg:w-[535px] lg:mx-auto">
+                    buttonWrapperClassName="lg:w-[648px] lg:mx-auto">
                     <h4 className="text-[#00afe3] lg:pb-[20px] md:pb-[20px] pb-[10px]
                     font-Inter font-black tracking-[-0.03em] text-[20px] leading-[20px]
                     md:text-[25px] md:leading-[25px] lg:text-[32px] lg:leading-[32px]">
-                        When are you available?
+                        When would you like the job done?
                     </h4>
 
                     <div className="flex flex-col gap-5 lg:gap-7 mb-4">
-                        <div>
+                        {/* <div>
                             <H5 variant="optional" className="!font-bold text-left md:text-center">
                                 Free Home Visit With Localitsts
                             </H5>
                             <Paragraph variant="optional" className="!font-medium pt-[10px] text-left md:text-center text-[#3A4B53] tracking-[0px]">Book in with Localist at a time that suits you. We will visit your property and assess your roofing needs then provide you with a detailed free quote.</Paragraph>
-                        </div>
+                        </div> */}
                         <div className="flex flex-col md:flex-row gap-5">
                             {/* Calendar Box */}
-                            <div className={`flex-1 bg-white rounded-[24px] h-fit md:min-w-[300px] lg:min-w-[400px] border-2 border-[#E5E7EB] p-5 shadow-sm`}>
+                            <div className={`flex-1 bg-white rounded-[24px] h-fit md:min-w-[300px] lg:min-w-[648px] border-2 border-[#E5E7EB] p-5 shadow-sm`}>
                                 {/* Month */}
                                 <div className="flex items-center justify-between mb-5">
                                     <button
@@ -374,10 +374,9 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
                             </div>
                         </div>
                     </div>
-                    <span className="tracking-[-0.03em] font-[Arial] py-0.5 text-[14px] leading-[14px] text-[#6A7282]">Select 1-9 timeslots that suit you. We will email you to confirm the selected time and date.</span>
+                    <span className="tracking-[-0.03em] font-[Arial] text-[14px] text-[#6A7282]">Select 1-9 timeslots that suit you. We will email you to confirm the selected time and date.</span>
 
                     <div className="mt-4">
-
                         <p className="text-left tracking-[-0.03em] font-[Arial] text-[14px] mb-3">
                             Selected timeslots
                         </p>
