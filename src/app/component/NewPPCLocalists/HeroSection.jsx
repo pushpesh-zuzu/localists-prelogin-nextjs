@@ -109,11 +109,10 @@ function HeroSection({
   const handleSubmit = async (selectedDates) => {
 
     const formattedSlots = selectedDates.map((item) => ({
-      date: item.date.toISOString().split("T")[0],
+      date: item.date,
       slots: item.slots.join(", "),
     }));
 
-    // console.log("formattedSlots", JSON.stringify(formattedSlots));
     let hasError = false;
 
     if (hasError) return;
@@ -128,7 +127,9 @@ function HeroSection({
       slots: JSON.stringify(formattedSlots),
     };
 
-    // Dispatch to Redux
+    // console.log("formattedSlots", detailsData);
+
+    // // Dispatch to Redux
     dispatch(addDetailsRequestDataForLocalistLanding(detailsData, router, reqId)).then(
       (result) => {
         if (result?.success) {
@@ -146,7 +147,7 @@ function HeroSection({
       },
     );
   };
-  // console.log(buyerStep, "bbbbbbbbb");
+  // console.log(buyerRequest, "buyerRequest");
   return (
     <section className="relative min-h-[100vh] w-full overflow-hidden px-[30px] md:px-[120px]">
       {/* Background Layer */}
