@@ -179,7 +179,7 @@ const PhoneNumber = ({
         <FormWrapper>
             <div className="px-[20px] lg:px-10 pt-[20px] md:pt-[30px] lg:pt-[60px] pb-[20px]">
             <CardLayoutWrapper
-                title="Please Enter Your Mobile Telephone Number"
+                title="Please Enter Your Mobile Number"
                 onButtonClick={handleSubmit}
                 onBackClick={handleBackClick}
                 buttonText="Compare quotes now"
