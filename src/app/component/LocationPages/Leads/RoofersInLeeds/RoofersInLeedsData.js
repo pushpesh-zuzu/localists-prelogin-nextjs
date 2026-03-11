@@ -87,7 +87,9 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
   {
     type: "AveragePriceLocation",
     title: "Average cost of roofing in Leeds",
-    calculatorText: "Roofing Calculator",
+    calculatorText: "click here.",
+    calculatorLink: "/en/gb/roofing-multi-form-ppc",
+    disclaimerText:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
     priceCards: [
       {
         description: "For general roofing projects, homeowners in Leeds typically pay around",

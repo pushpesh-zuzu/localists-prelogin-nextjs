@@ -117,6 +117,7 @@ const AboutServicesAndQuestions = ({
             disclaimerText={block?.disclaimerText}
             calculatorText={block?.calculatorText}
             heading={block?.heading}
+            calculatorLink={block?.calculatorLink}
             />
         );
         

@@ -54,11 +54,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
   },
   {
     type: "p",
-    text: "Finding a roofer shouldn’t feel like trial and error. Yet that’s often what it turns into. You search, you scroll, you’re not quite sure who’s still active or who actually covers your area."
+    text: "Finding a roofer shouldn’t feel like trial and error. Yet that’s often what it turns into. You search, you scroll, you’re not quite sure who’s still active or who actually covers your area. Then you call them and you get the “sorry love we’re fully booked”"
   },
   {
     type: "p",
-    text: "Localists gives you a clearer starting point. Instead of guessing, you’re connected with roofers who are local and open to providing free quotes."
+    text: "Localists gives you a clearer starting point. Instead of guessing, you’re connected with roofers who are local and open to providing free quotes, and have the capacity for your project."
   },
   {
     type: "p",
@@ -87,7 +87,9 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
   {
     type: "AveragePriceLocation",
     title: "Average cost of roofing in Wrexham",
-    calculatorText: "Roofing Calculator",
+    calculatorText: "click here.",
+    calculatorLink: "/en/gb/roofing-multi-form-ppc",
+    disclaimerText:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
     priceCards: [
       {
         description: "For general roofing projects, homeowners in Wrexham typically pay around",
@@ -255,11 +257,11 @@ export const ROOFERS_TABDATA_WREXHAM = {
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_WREXHAM = [
-  `Are your roof tiles starting to shift every time the wind picks up? Telling yourself it’ll probably survive “just one more winter”? Truth is, if you’re starting to question it, it’s probably time to get it looked at. And we know the best roofers in Wrexham.
+  `Are your roof tiles starting to shift every time the wind picks up? Is it one of those jobs that’s taken more time to complete than the Wrexham Racecourse Ground Kop End? Well it doesn’t need to take that long. At Localists, we have a whole load of vetted roofers in Wrexham that’ll not only provide competitive quotes, but have the capacity to complete your roofing work when you need it.
   <br/><br/> 
   `,
   `
-Simply tell us what you need: a few tile replacements, repair, routine maintenance, or you’re just looking around for quotes? No worries, we will send up to 5 free no-obligation quotes from experts near you in Wrexham. Take your time, compare and decide what works best for you.
+Just input your postcode, answer a few questions, and we’ll send you quotes from 5 of the best roofers in Wrexham. Or just take a loot at a Wrexham roofer that takes your fancy and request a callback. All of our roofers have been vetted and verified to ensure you only get the best service.
 `,
 ];
 

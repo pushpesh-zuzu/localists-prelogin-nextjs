@@ -138,12 +138,19 @@ export default function AveragePriceLocation({
         lg:text-[20px] lg:leading-[24px] font-[Arial]  tracking-[0em]! font-bold lg:font-bold"
           >
             {disclaimerText}{" "}
-            <a
-              // href={calculatorLink ? calculatorLink : ''}
+            {calculatorLink ? <a
+              href={calculatorLink}
               className="underline font-bold md:font-bold text-[#00AFE3]"
             >
               {calculatorText}
-            </a>
+            </a> 
+          :
+          <span
+              className="underline font-bold md:font-bold text-[#00AFE3]"
+            >
+              {calculatorText}
+            </span>  
+          }
           </p>
         </div>
       </div>

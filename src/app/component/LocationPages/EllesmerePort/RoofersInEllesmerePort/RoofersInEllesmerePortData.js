@@ -75,9 +75,9 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ELLESMEREPORT = [
     {
         type: "pricingTable",
         title: "Average cost of roofers in Ellesmere Port",
-        calculatorText: "Roofing Calculator",
-        calculatorLink: "",
-        disclaimer: "*costs are estimates only, to get a more specific estimate try our",
+        calculatorText: "click here.",
+        calculatorLink: "/en/gb/roofing-multi-form-ppc",
+        disclaimer:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
         prices: [
             {
                 text: "General roofing work comes in at around",
