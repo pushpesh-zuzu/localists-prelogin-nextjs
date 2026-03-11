@@ -1,7 +1,7 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RHYL = [
     {
         type: "h2",
-        text: "So what might you actually pay for roofing work in Rhyl?",
+        text: "What’s the average cost of Roofing in Rhyl?",
     },
     {
         type: "p",
@@ -12,7 +12,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RHYL = [
         title: "Average cost of roofers in Rhyl",
         calculatorText: "click here.",
         calculatorLink: "/en/gb/roofing-multi-form-ppc",
-        disclaimer:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+        disclaimer: "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
         prices: [
             {
                 text: "General roofing jobs Often averaging somewhere near",
@@ -46,15 +46,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RHYL = [
     },
     {
         type: 'h2',
-        text: "Why use Localists to find the right Rhyl roofer",
+        text: "Why use Localists to find local roofers in Rhyl",
     },
     {
         type: "p",
-        text: "When something goes wrong with your roof in Rhyl, the first thing you’re usually thinking is, ‘‘Is this a quick fix or am I about to lose a fortune?’’ And unless you’re a roofer yourself, you probably have no idea which it is, and that ‘not-knowing’ is the most uncomfortable part."
+        text: "When something goes wrong with your roof, the first thing you’re usually thinking is, ‘‘Is this a quick fix or am I about to lose a fortune?’’ And unless you’re a roofer yourself, you probably have no idea which it is, and that ‘not-knowing’ is the most uncomfortable part."
     },
     {
         type: "p",
-        text: "While some people just ring the first number they find and hope for the best, the smarter move is to slow things down and get a few different perspectives before you commit to anything."
+        text: "While some people just ring the first number they find and hope for the best, the smarter move is to slow things down and get a few different perspectives before you commit to anything. Rushing is how you get ripped off, or worse, a bodged roof job"
     },
     {
         type: "p",
@@ -66,7 +66,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RHYL = [
     },
     {
         type: "p",
-        text: "The best part is that there’s absolutely no pressure to hire. You can take your time to look through your options and ask questions without any hard sales or being pushed into a decision. You only move forward and hire when you’re 100% ready and comfortable with your choice.",
+        text: "The best part is that there’s absolutely no pressure to hire. You can take your time to look through your options and ask questions without any hard sales or being pushed into a decision. You only move forward and hire when you’re 100% ready and comfortable with your choice. Plus, you’re safe in the knowledge that the roofers that get in touch with you all have capacity to fit you in.",
         notMarginBottom: true
     },
     {
@@ -156,52 +156,52 @@ export const ROOFERS_TABDATA_RHYL = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
     ],
-     related: [
-    {
-      title: "Roofers Leeds",
-      url: "/en/gb/roofers-near-me/leeds"
-    },
-    {
-      title: "Roofers York",
-      url: "/en/gb/roofers-near-me/york"
-    },
-    {
-      title: "Roofers Hull",
-      url: ""
-    },
-    {
-      title: "Roofers Bolton",
-      url: ""
-    },
-    {
-      title: "Roofers Chester",
-      url: "/en/gb/roofers-near-me/chester"
-    },
-    {
-      title: "Roofers Cheshire",
-      url: ""
-    },
-    {
-      title: "Roofers Harrogate",
-      url: ""
-    },
-    {
-      title: "Roofers Liverpool",
-      url: "/en/gb/roofers-near-me/liverpool"
-    },
-    {
-      title: "Roofers Manchester",
-      url: "/en/gb/roofers-near-me/manchester"
-    },
-    {
-      title: "Roofers Stockport",
-      url: "/en/gb/roofers-near-me/stockport"
-    },
-    {
-      title: "Roofers North Yorkshire",
-      url: ""
-    }
-  ],
+    related: [
+        {
+            title: "Roofers Leeds",
+            url: "/en/gb/roofers-near-me/leeds"
+        },
+        {
+            title: "Roofers York",
+            url: "/en/gb/roofers-near-me/york"
+        },
+        {
+            title: "Roofers Hull",
+            url: ""
+        },
+        {
+            title: "Roofers Bolton",
+            url: ""
+        },
+        {
+            title: "Roofers Chester",
+            url: "/en/gb/roofers-near-me/chester"
+        },
+        {
+            title: "Roofers Cheshire",
+            url: ""
+        },
+        {
+            title: "Roofers Harrogate",
+            url: ""
+        },
+        {
+            title: "Roofers Liverpool",
+            url: "/en/gb/roofers-near-me/liverpool"
+        },
+        {
+            title: "Roofers Manchester",
+            url: "/en/gb/roofers-near-me/manchester"
+        },
+        {
+            title: "Roofers Stockport",
+            url: "/en/gb/roofers-near-me/stockport"
+        },
+        {
+            title: "Roofers North Yorkshire",
+            url: ""
+        }
+    ],
     findMore: [],
 };
 export const VETTED_DATA_ROOFERS_RHYL = [
@@ -209,7 +209,7 @@ export const VETTED_DATA_ROOFERS_RHYL = [
   <br/><br/> 
   `,
     `
-And that’s where Localists comes in. We will match you with vetted roofers that Rhyl residents recommend and trust with their roofs. Compare quotes, review past jobs, and hire when you are ready. No pressure.
+So if you’ve got a roof that even the notorious seagulls of Rhyl are turning their beaks at - it might be time to get in touch with a Rhyl roofer to sort it out- and we have just the ones for the job on our platform. We’ll match you with 5 local roofers, or you can pick them yoourself. We will match you with vetted roofers that Rhyl residents recommend and trust with their roofs. Compare quotes, review past jobs, and hire when you are ready. No pressure.
 `,
 ];
 
@@ -250,7 +250,7 @@ export const ROOFERS_FEEDBACK_RHYL = [
     },
     {
         id: 4,
-        text: "Our house is right near the front, so the roof takes a proper battering every winter. We'd had it patched a couple of times over the years, but this time decided to just replace the whole thing properly. Got a few quotes, had a good look through them, and went with the one that gave us the most confidence. Finished on time and tidied up after themselves,, which sounds basic, but you'd be surprised.",
+        text: "With our house being located near the seafront, we get all the elements hitting us. We had leaks coming through the top. Had Dave from Localists sort out the flashing round the chimney and the leaks gone. Cheaper than I expected, would recommend!",
         name: "Dewi M.",
     },
 ];
