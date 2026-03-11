@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Clock, ArrowLeft } from "lucide-react";
-import H5 from "../UI/Typography/H5";
+// import H5 from "../UI/Typography/H5";
 import CardLayoutWrapper from "./CardLayoutWrapper";
-import Paragraph from "../UI/Typography/Paragraph";
+// import Paragraph from "../UI/Typography/Paragraph";
 
 const TIME_SLOTS = [
     {
@@ -424,9 +424,7 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
                                     Select a timeslot
                                 </div>
                             ))}
-
                         </div>
-
                     </div>
 
                     {showSlotsModal && (
