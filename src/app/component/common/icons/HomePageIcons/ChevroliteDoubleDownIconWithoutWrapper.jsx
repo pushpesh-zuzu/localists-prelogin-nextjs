@@ -13,16 +13,16 @@ function ChevroliteDoubleDownIconWithoutWrapper({className=""}) {
       <path
         d="M1.7474 12.5859L12.5807 23.4193L23.4141 12.5859"
         stroke="white"
-        stroke-width="3.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M1.7474 1.75L12.5807 12.5833L23.4141 1.75"
         stroke="white"
-        stroke-width="3.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
