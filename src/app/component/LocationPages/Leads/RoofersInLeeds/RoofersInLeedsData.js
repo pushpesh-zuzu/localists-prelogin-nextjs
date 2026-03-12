@@ -1,46 +1,22 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
-  {
+    {
     type: "h2",
     text: "Choosing the right roofer in Leeds",
   },
   {
     type: "p",
-    text: "When it comes to roofing, trust matters. A roof protects everything inside your home, so cutting corners can cause more stress later on.",
+    text: "Hiring roofers in Leeds can feel like a city-wide scavenger hunt. You want someone who actually knows local roofs, understands the quirks of Victorian terraces in Headingley or modern builds in Chapel Allerton, and won’t ghost halfway through the job. That’s where Localists step in.",
   },
   {
     type: "p",
-    text: "A reliable roofer will want to see the problem up close before giving firm answers. That might mean climbing up to inspect the tiles or checking the loft space. If someone is willing to give a full diagnosis without a proper look, that’s worth questioning.",
+    text: "We connect you with vetted Leeds roofers who can handle everything, from patching a stubborn leak to a full-scale roof replacement, all with free, no-obligation quotes.",
   },
   {
     type: "p",
-    text: "When comparing roofers in Leeds, it’s sensible to look for:",
-  },
-  {
-    type: "li",
-    text: "Roofers who have experience with similar jobs"
-  },
-  {
-    type: "li",
-    text: "Clear written quotes without hidden clauses"
-  },
-  {
-    type: "li",
-    text: "Straightforward communication"
-  },
-  {
-    type: "li",
-    text: "Realistic timelines"
-  },
-  {
-    type: "li",
-    text: "Public liability insurance"
-  },
-  {
-    type: "li",
-    text: "Reviews from previous customers",
-    className: 'mb-0'
-  },
-  {
+    text: "Think of it like giving your home a first-class upgrade: no more leaky ceilings, no more improvising with buckets, just a roof that laughs in the face of rain, wind, and the occasional “oh look, the sun is out!” day.",
+    notMarginBottom:true
+},
+ {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
@@ -48,107 +24,133 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
     marginTop: true
   },
   {
-    type: 'h2',
-    text: " Why using Localists makes finding Roofers Leeds easier",
+    type:"h2",
+    text:"Counting the Pennies: What Roofers Charge in Leeds"
+  },
+  {
+ type:"p",
+ text:"Wondering how much roofers in Leeds will charge you for a roofing job? The truth is, it depends on what your roof needs and how ambitious you’re feeling. A quick patch-up won’t cost the same as a full replacement of a Victorian terrace in Headingley. Here’s a friendly guide to help you budget without pulling your hair out based on our own internal data"
+  },
+  {
+    type:"p",
+    text:"<strong>General roofing jobs</strong> - if you’re looking for standard work to keep your roof in tip-top shape, expect to spend £1,300  to £3,200, with the average job landing around £2,000. Perfect for keeping drips and leaks at bay without emptying your wallet."
+  },
+  {
+  type: "p",
+  text: "<strong>Roofing repairs</strong> — for smaller fixes like slipped tiles, broken flashing, or leaks, prices generally sit between £450 and £1,550. Pitched roof repairs as well as flat roof repairs often come in around £800 for a repair on average in Leeds."
+},
+{
+  type: "p",
+  text: "<strong>Emergency roofing services</strong> — storms happen, and sometimes your roof doesn’t wait politely. Emergency fixes typically cost £350 to £1,050. Not cheap, but peace of mind is priceless when it’s tipping it down outside."
+},
+{
+  type: "p",
+  text: "<strong>Flat roof installation</strong> — installing a new flat roof? Expect a price of £1,200 to £2,500. Ideal for garages, extensions, or smaller modern homes."
+},
+{
+  type: "p",
+  text: "<strong>Pitched roof installation</strong> — bigger roofs mean bigger budgets. Pitched roof installs in Leeds range from £3,850 to £8,480. Quality materials and professional installation make this a solid investment for decades of protection."
+},
+{
+  type: "p",
+  text: "<strong>Full roof replacement</strong> — when a patch-up just won’t cut it, a full replacement will typically run £4,800 to £9,250. Yes, it’s an investment, but it’s one that keeps your home safe, dry, and free from the “surprise indoor waterfalls” Leeds weather sometimes delivers."
+},
+{
+  type: "p",
+  text: "The final cost always comes down to how complex your roof is, the materials you pick, and any tricky challenges the job might have. It’s always worth getting a professional quote before committing, and with Localists, you can receive multiple free, no-obligation quotes in just minutes, so you’ll know exactly what to expect before any work begins.",
+notMarginBottom:true
+},
 
+{
+  type: "h2",
+  text: "Find the right roofer in Leeds for the job",
+  className:"mt-6 lg:mt-[70px]"
+},
+{
+  type:"p",
+  text:"Roofing isn’t just about slapping tiles on top of your house; there’s a lot more to it than meets the eye. Knowing what service you need makes finding the right roofer much easier. Here’s a quick guide to what Leeds roofers can handle:"
+},
+ {
+    type: "li",
+    text: "<strong>Roof repairs </strong> - leaks, cracked tiles, or anything that’s letting the rain sneak in."
   },
   {
-    type: "p",
-    text: "Finding a roofer shouldn’t feel like trial and error. Yet that’s often what it turns into. You search, you scroll, you’re not quite sure who’s still active or who actually covers your area."
-  },
-  {
-    type: "p",
-    text: "Localists gives you a clearer starting point. Instead of guessing, you’re connected with roofers who are local and open to providing free quotes."
-  },
-  {
-    type: "p",
-    text: "It gives you space to compare without feeling pushed. No awkward follow-up calls. No pressure to say yes on the spot. Just information, options, and the freedom to choose when you’re ready."
-  },
-  // {
-  //   type: "QuotesBanner",
-  //   className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[154px] lg:mb-[154px]"
-  // },
-  {
-    type: "QuotesBanner",
-    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
-  },
-  {
-    type: "h2",
-    text: "How much does roofing cost in Leeds?"
-  },
-  {
-    type: "p",
-    text: "There isn’t a flat price for roofing. The final cost usually depends on what’s actually happening up there. A small repair after a windy week is very different from removing and replacing an entire roof. Access to the property, the materials chosen, and how much labour is involved all affect the total cost."
-  },
-  {
-    type: "p",
-    text: "But here’s a rough guide of what the numbers may look like:"
-  },
-  {
-    type: "AveragePriceLocation",
-    title: "Average cost of roofing in Leeds",
-    calculatorText: "click here.",
-    calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimerText:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
-    priceCards: [
-      {
-        description: "For general roofing projects, homeowners in Leeds typically pay around",
-        price: "£2,858",
-        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
-      },
-      {
-        description: "For roofing repairs, the average cost tends to be around ",
-        price: "£862",
-        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
+  type: "li",
+  text: "<strong>New roof installations </strong> — from pitched roofs to flat designs, for brand-new homes or complete replacements."
+},
+{
+  type: "li",
+  text: "<strong>Gutter and fascia replacement </strong> — keep water flowing where it should and avoid soggy walls."
+},
+{
+  type: "li",
+  text: "<strong>Flat roof installation or resealing </strong> — ideal for garages, extensions, or tricky modern builds."
+},
+{
+  type: "li",
+  text: "<strong>Chimney repairs </strong> — protect your chimney from crumbling or letting the elements in."
+},
+{
+  type: "li",
+  text: "<strong>Lead flashing </strong> — essential waterproofing for tricky junctions around chimneys, valleys, and roof edges."
+},
+{
+  type: "li",
+  text: "<strong>Skylight or Velux window installation </strong> — bring light into those dark corners of your home."
+},
+{
+  type: "li",
+  text: "<strong>Roof insulation </strong> — keep the warmth in and energy bills down."
+},
+{
+  type: "li",
+  text: "<strong>Emergency roofing </strong> — storm damage, sudden leaks, or unexpected issues, Leeds roofers can swoop in fast."
+},
+{
+  type: "li",
+  text: "<strong>Drone roof surveys </strong> — high-tech inspections for tricky or large roofs, without anyone hanging off a ladder.",
+} ,
+{
+  type:"p",
+  text:"Whatever your roofing challenge, Localists makes it easy to find trusted Leeds roofers who can handle the job, so you can stay dry, safe, and stress-free."
+},
+{
+        type: "QuotesBanner",
+        className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    },
+  ,
 
-      },
-      {
-        description: "For emergency roofing call-outs, the average sits closer to ",
-        price: "£445",
-        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
-
-      },
-      {
-        description: "For a full roof replacement, the average cost is around",
-        price: "£7,495",
-        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
-      },
-    ],
-  },
-  {
-    type: "p",
-    text: "These numbers are there to give you a sense of scale, not a fixed promise. Every roof is different. The best way to know what yours will cost is to have it looked at properly and compare a few quotes before making a decision"
-  },
-
+ 
+  
 
 ];
 export const ROOFERS_FREQUENTLY_DATA_LEEDS = [
   {
     key: "1",
-    title: "Which roof is best for a house?",
+    title: "How long does a roofing job usually take?",
     description: `
-        There isn’t one single answer because it depends on the house itself. The pitch of the roof, the age of the property, your budget, and even the local weather all play a part. Concrete tiles are common because they’re practical and cost-effective. Slate looks great and lasts a long time but comes at a higher price. The “best” option is usually the one that suits your home and how long you plan to stay in it.
+        It depends on the job. Minor repairs like a few slipped tiles usually take 1–2 days, medium repairs around 2–5 days, and full roof replacements can stretch from 1–4 weeks, depending on the size, materials, and, of course, Leeds’ unpredictable weather.
         `,
   },
   {
     key: "2",
-    title: "Should I pay a roofer in cash?",
+    title: "What’s the cheapest time of year to replace a roof?",
     description: `
-        Paying in cash isn’t automatically a problem, but what matters more is having everything clearly written down. You should always have a proper quote before work starts and a receipt once it’s finished. Many people prefer bank transfer because it leaves a record, but the key thing is transparency. Avoid large upfront payments unless it’s for agreed materials.
+        Late winter to early spring often brings lower prices. Roofers are less busy than in summer, so you might get a better deal. Just keep in mind that the weather can throw a few curveballs, so flexibility is key.
         `,
   },
   {
     key: "3",
-    title: "Which roof material lasts the longest?",
+    title: "What is the best time of year to replace a roof?",
     description: `
-        Natural slate is often considered the longest-lasting roofing material. When it’s installed properly and maintained, it can last for decades. Clay tiles also have a strong lifespan. Of course, durability depends on installation quality and exposure to the elements as much as the material itself.
+        Spring through early autumn is usually ideal. Longer days, warmer temperatures, and drier spells mean materials set properly, work moves faster, and your roof isn’t left soggy mid-install. Basically, it’s when the Leeds weather is playing nice.
         `,
   },
   {
     key: "4",
-    title: "What is the best time of year to replace a roof?",
+    title: "What insurance should a roofer have?",
     description: `
-        Most roofers prefer steady, dry weather. Spring and summer are popular because conditions are usually more predictable. That said, roofing work can be done at other times of the year if the weather allows. Timing often comes down to urgency and availability rather than a perfect calendar month.
+        A professional roofer should carry public liability insurance at a minimum. This protects both you and them if accidents happen. Some roofers may also have employer’s liability insurance if they have staff on site. Always ask to see proof before any work starts; it’s your safety net for a worry-free project.
         `,
   },
 ];
@@ -255,11 +257,11 @@ export const ROOFERS_TABDATA_LEEDS = {
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_LEEDS = [
-  `Are your roof tiles starting to shift every time the wind picks up? Telling yourself it’ll probably survive “just one more winter”? Truth is, if you’re starting to question it, it’s probably time to get it looked at. And we know the best roofers in Leeds.
+  `Roofs are great at staying out of sight and out of mind - right up until they decide to cause a scene. One day everything’s fine, the next there’s a suspicious drip, a tile that’s gone AWOL, or rain setting up camp where it definitely doesn’t belong.
   <br/><br/> 
   `,
   `
-Simply tell us what you need: a few tile replacements, repair, routine maintenance, or you’re just looking around for quotes? No worries, we will send up to 5 free no-obligation quotes from experts near you in Leeds. Take your time, compare and decide what works best for you.
+Whether it’s a quick repair, a complete roof overhaul, or an urgent fix after a storm, we’ll connect you with the best roofers in Leeds. Get started and receive free no obligation quotes from local experts near you. No chasing callbacks. No technical waffle. No headaches, which you didn’t sign up for.
 `,
 ];
 
@@ -285,23 +287,23 @@ export const POPULAR_SERVICES_ROOFERS_LEEDS = [
 export const ROOFERS_FEEDBACK_LEEDS = [
   {
     id: 1,
-    text: "We’d been hearing a faint rattling sound on windy nights but couldn’t work out what it was. Turned out a few tiles had shifted slightly. It wasn’t a huge job, but I’m glad we didn’t ignore it. The roofer explained it in simple terms and had it sorted quicker than expected.",
-    name: "Owain G.",
+    text: "After a heavy storm, a few tiles on our Headingley roof came loose. The Localists' roofer arrived promptly, fixed everything in a day, and even cleaned up after themselves. Honestly, I didn’t expect things to go this smoothly.",
+    name: "Dara Q.",
   },
   {
     id: 2,
-    text: "There was a small leak above the landing that only showed up when it rained heavily. I assumed it would mean replacing half the roof, but it didn’t. They found the issue around the flashing and fixed it without turning it into something bigger. It felt honest, which I appreciated.",
-    name: "Megan P.",
+    text: "Our flat roof over the garage had started leaking, and we were worried it would get worse over winter. The team recommended a quick reseal and completed it within a couple of days. Very professional, and I finally feel at ease when it rains.",
+    name: "Eamon F.",
   },
   {
     id: 3,
-    text: "We bought an older property and knew the roof would need attention at some point. After getting a few quotes, we felt more confident about what actually needed doing versus what could wait. The work took a few days and was noisier than we expected, but it was handled properly.",
-    name: "Rhys B.",
+    text: "I’d been putting off replacing our old pitched roof for years. Localists connected us with a roofer who gave a clear quote, explained the process, and replaced the roof in under three weeks. It looks fantastic, and the house feels warmer already.",
+    name: "Sorcha M.",
   },
   {
     id: 4,
-    text: "Noticed a damp patch forming in our spare bedroom ceiling but couldn’t see anything obvious from outside. The roofer did a proper check and found a small issue near the ridge tiles. He was local to us so booked us in for a next day fix. Highly recommend Localists.",
-    name: "Catrin H.",
+    text: "Had a quote from Andy to fix a leak, turns out it was just flashing issues around my chimney. Already had quotes from others nearby and Andy was cheaper. Andy was a polite chap and I’d 100% recommend him.",
+    name: "Danny J.",
   },
 ];
 

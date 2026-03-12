@@ -39,7 +39,7 @@ function RoofersInLeeds() {
       <HeroSectionLocation
         heading1="Roofers"
         heading2="Leeds"
-        description="Find the highest quality roofers in Leeds now! Just enter your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
+        description="Find the best roofers in Leeds! Just enter your postcode and answer a few questions and we’ll send pre-vetted roofers based in Leeds to give you a quick quote."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"

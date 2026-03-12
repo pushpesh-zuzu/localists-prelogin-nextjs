@@ -54,8 +54,16 @@ function TreeSurgeonInChester() {
         featureRef={featureRef}
         featureButtonText="View Tree Surgeons"
       />
-      <PopularJobsInLocation
+      {/* <PopularJobsInLocation
         services={POPULAR_SERVICES_TREE_SURGEON_CHESTER}
+        ctaLink="/en/gb/tree-surgeon-multi-form-ppc"
+        paddingClass="px-[17.5px] py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[0px]"
+      /> */}
+       <PopularJobNearMe
+        services={POPULAR_SERVICES_TREE_SURGEON_CHESTER}
+        popularImage="/location/treeSurgeon_location_popularjob.webp"
+        altText="a tree surgeon cutting the branches of an evergreen tree"
+        mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
         ctaLink="/en/gb/tree-surgeon-multi-form-ppc"
         paddingClass="px-[17.5px] py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[0px]"
       />

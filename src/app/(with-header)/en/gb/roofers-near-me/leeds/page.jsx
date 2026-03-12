@@ -3,9 +3,9 @@ import SEO from '@/app/component/common/seo/SEO';
 import RoofersInLeeds from '@/app/component/LocationPages/Leads/RoofersInLeeds/RoofersInLeeds';
 import React, { Suspense } from 'react'
 export const metadata = {
-  title: "Roofers Leads | Find pre-vetted roofers at Localists.com",
+  title: "Roofers Leeds | Localists.com",
   description:
-    "Looking for reliable roofers in Leads? Get up to five free, no-obligation quotes from vetted local professionals with Localists today.",
+    "Need trusted roofers in Leeds? Get free, no-obligation quotes from vetted local experts for repairs, replacements, and installations.",
 };
 function page() {
   return (
