@@ -54,7 +54,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RHYL = [
     },
     {
         type: "p",
-        text: "While some people just ring the first number they find and hope for the best, the smarter move is to slow things down and get a few different perspectives before you commit to anything. Rushing is how you get ripped off, or worse, a bodged roof job"
+        text: "While some people just ring the first number they find and hope for the best, the smarter move is to slow things down and get a few different perspectives before you commit to anything. Rushing is how you get ripped off, or worse, a bodged roof job."
     },
     {
         type: "p",
