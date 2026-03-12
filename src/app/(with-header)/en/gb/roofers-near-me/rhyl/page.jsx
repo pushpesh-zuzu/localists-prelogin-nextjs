@@ -6,7 +6,7 @@ import React, { Suspense } from 'react'
 export const metadata = {
     title: "Find Trusted Roofers Rhyl | Localists.com",
     description:
-        " Looking to find the top roofers in Rhyl? Review free quotes from top roof experts in Rhyl today. Fully vetted and insured professionals near you.",
+        "Looking to find the top roofers in Rhyl? Review free quotes from top roof experts in Rhyl today. Fully vetted and insured professionals near you.",
 };
 function page() {
     return (

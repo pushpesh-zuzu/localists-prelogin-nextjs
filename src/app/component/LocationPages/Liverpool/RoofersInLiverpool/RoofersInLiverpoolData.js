@@ -9,43 +9,36 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
   },
   {
     type: "p",
-    text: "Here’s a realistic snapshot of what roofers in Liverpool typically charge in 2026:"
+    text: "Roofing costs in Liverpool can vary quite a bit depending on the type of work, the size of the job, and the materials involved. A quick tile repair is vastly different to a full roof replacement.",
   },
   {
     type: "p",
-    text: "Average roofing costs in Liverpool"
+    text: "Here’s a realistic snapshot of what roofers in Liverpool typically charge in 2026:"
   },
   {
-    type: "li",
-    text: "General roofing work: usually ranges from £1343 to £3350, with an average cost of around £2121 per job"
-  },
-  {
-    type: "li",
-    text: "Roofing repairs: typically cost between £386 and £1444, averaging £739"
-  },
-  {
-    type: "li",
-    text: "Flat roofing repairs: usually fall between £619 and £2076, with an average of £1149"
-  },
-  {
-    type: "li",
-    text: "Pitched roofing repairs: generally cost £339 to £1498, averaging £714"
-  },
-  {
-    type: "li",
-    text: "Emergency roofing services: expect to pay between £370 and £1169, with an average cost of £630"
-  },
-  {
-    type: "li",
-    text: "Flat roof installation: normally ranges from £1427 to £2877, averaging £2037"
-  },
-  {
-    type: "li",
-    text: "Pitched roof installation: typically costs £3951 to £7998, with an average of £5609"
-  },
-  {
-    type: "li",
-    text: "Full roof replacement: usually sits between £5013 and £9445, with an average price of £6837"
+    type: "pricingTable",
+    title: "Average cost of roofing in Liverpool",
+    calculatorText: "click here.",
+    calculatorLink: "/en/gb/roofing-multi-form-ppc",
+    disclaimer: "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+    prices: [
+      {
+        text: "For general roofing work, it usually cost an average of",
+        price: "£2,120"
+      },
+      {
+        text: "For roofing repairs such as leaks the average cost is  typically around",
+        price: "£740"
+      },
+      {
+        text: "For emergency roofing services, the average cost is roughly around",
+        price: "£630"
+      },
+      {
+        text: "For full roof replacements the price usually sits around",
+        price: "£6,840"
+      }
+    ]
   },
   {
     type: 'p',
@@ -302,7 +295,7 @@ export const ROOFERS_TABDATA_LIVERPOOL = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-   related: [
+  related: [
     {
       title: "Roofers Leeds",
       url: "/en/gb/roofers-near-me/leeds"
@@ -393,7 +386,6 @@ export const ROOFERS_FEEDBACK_LIVERPOOL = [
     id: 3,
     text: "I’ve heard so many horror stories about roofing work that I was pretty nervous about the whole thing. Being able to compare quotes side by side made a huge difference. The roofer I chose was great, explained everything clearly, and the price was exactly what he quoted. Definitely took the stress out of it.",
     name: "Mark E.",
-
   },
   {
     id: 4,

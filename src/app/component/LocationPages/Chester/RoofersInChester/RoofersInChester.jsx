@@ -42,14 +42,14 @@ function RoofersInChester() {
         description="Find the best roofers in Chester! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
-        altText="Professional roofers roofing a new build with ceramic roof tiles"
+        altText="A roofer installing a new roof by securing clay tiles with a drill"
         blackHeadinginline="inline"
         serviceId={113}
         serviceName="Roofing"
       />
       <VettedSection
         paragraph={VETTED_DATA_ROOFERS_CHESTER}
-        vettedHeading1="Find Local Vetted Roofers in "
+        vettedHeading1="Find Vetted Local Roofers in "
         vettedHeading2="Chester"
         breadcrumb={BREADCRUM_DATA_ROOFERS_CHESTER}
         extraButton
@@ -93,6 +93,8 @@ function RoofersInChester() {
       />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
+        desktopImage="/nearme/Roofing/roofingmember.webp"
+        mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
       <Footer />
     </>

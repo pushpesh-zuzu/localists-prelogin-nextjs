@@ -81,11 +81,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ELLESMEREPORT = [
         prices: [
             {
                 text: "General roofing work comes in at around",
-                price: "£2,121"
+                price: "£2,150"
             },
             {
                 text: "Roof repairs typically average about",
-                price: "£739"
+                price: "£740"
             },
             {
                 text: "Emergency roofing call-outs are usually around",
@@ -93,7 +93,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ELLESMEREPORT = [
             },
             {
                 text: "Full roof replacements sit closer to",
-                price: "£6,837"
+                price: "£6,840"
             }
         ]
     },
@@ -116,7 +116,7 @@ export const FREQUENTLY_DATA_ELLESMEREPORT = [
     },
     {
         key: "2",
-        title: "How many years before you should replace your roof?",
+        title: "How many years should you wait  before you should replace your roof?",
         description: `
         There isn’t a fixed timeframe. Some tiled roofs last 40 years or more; others need attention sooner, depending on weather, ventilation, and how well previous repairs were done. Flat roofs tend to have a shorter lifespan. If your roof is over 20 - 25 years old, it’s worth having it checked occasionally rather than waiting for a problem to show itself.
         `,

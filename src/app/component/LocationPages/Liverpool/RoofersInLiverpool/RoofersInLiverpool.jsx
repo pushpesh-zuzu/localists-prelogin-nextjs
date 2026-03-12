@@ -96,6 +96,8 @@ function RooferInLiverpool() {
         // mobileImage="/location/tree_surgeon_member_location_mobile.webp"
         // desktopImage="/location/tree_surgeon_member_location_desktop.webp"
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
+        desktopImage="/nearme/Roofing/roofingmember.webp"
+        mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
       <Footer />
     </>

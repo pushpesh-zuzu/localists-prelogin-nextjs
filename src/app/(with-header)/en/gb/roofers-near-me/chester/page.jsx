@@ -3,7 +3,7 @@ import SEO from '@/app/component/common/seo/SEO';
 import RoofersInChester from '@/app/component/LocationPages/Chester/RoofersInChester/RoofersInChester';
 import React, { Suspense } from 'react'
 export const metadata = {
-  title: "Find Trusted Roofers Chester | Localists.com",
+  title: "Roofers Chester | Find the best roofers at Localists.com",
   description:
     "Looking for reliable roofers in Chester? Get up to 5 free, no-obligation quotes from trusted local specialists for repairs, replacements, and installations.",
 };

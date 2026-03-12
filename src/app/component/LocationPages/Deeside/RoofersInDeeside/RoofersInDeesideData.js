@@ -16,45 +16,43 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
     title: "Average cost of roofing Deeside",
     calculatorText: "click here.",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimerText:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
-    heading:"Typical roofing costs in Deeside",
+    disclaimerText: "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+    heading: "Typical roofing costs in Deeside",
     priceCards: [
       {
-        description: "General roofing work Bigger roofing jobs usually average around £2858, depending on how involved the work is.",
-        // price: "£2,858",
-        // className: "max-[360]:min-h-[110px] max-[360]:max-h-[110px] min-[360px]:min-h-[64px] min-[360px]:max-h-[64px]  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[120px] md:max-h-[120px] lg:min-h-[180px] lg:max-h-[180px]"
+        description: "General roofing work in deeside costs on average around Bigger roofing jobs usually average around",
+        price: "£2,858",
+        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
+      },
+      {
+        description: "Roof repairs On average cost about",
+        price: "£862",
+        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
 
       },
       {
-        description: "Roof repairs Most standard repairs come in at about £862. That might include fixing a leak, replacing damaged tiles or sorting out worn flashing.",
-        // price: "£862",
-        // className: "max-[360]:min-h-[110px] max-[360]:max-h-[110px] min-[360px]:min-h-[100px] min-[360px]:max-h-[100px]  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[120px] md:max-h-[120px] lg:min-h-[180px] lg:max-h-[180px]"
-
+        description: "Emergency roofing services in deeside cost on average around",
+        price: "£445",
+        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
       },
       {
-        description: "Emergency roofing services average around £445. The final amount will depend on how serious the issue is.",
-        // price: "£445",
-        // className: "max-[360]:min-h-22 max-[360]:max-h-20 min-[360px]:min-h-20 min-[360px]:max-h-20 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[130px] lg:max-h-[130px]"
-
-      },
-      {
-        description: "For a complete new roof, homeowners in Deeside typically pay around £7495 on average.",
-        // price: "£7,495",
-        // className: "max-[360]:min-h-22 max-[360]:max-h-20 min-[360px]:min-h-20 min-[360px]:max-h-20 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[130px] lg:max-h-[130px]"
+        description: "For a complete new roof, homeowners in Deeside typically pay on average around",
+        price: "£7,495",
+        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[81px] lg:max-h-[81px]"
       },
     ],
   },
-  {
-    type: "p",
-    text: "These figures are just to help you get your bearings. The only way to know what your roof will actually cost is to have a roofer take a proper look and give you a written quote.",
-    notMarginBottom: true
-  },
+  // {
+  //   type: "p",
+  //   text: "These figures are just to help you get your bearings. The only way to know what your roof will actually cost is to have a roofer take a proper look and give you a written quote.",
+  //   notMarginBottom: true
+  // },
   {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "Specialist on a roof repairing and replacing old roof with new one",
     marginBottom: true,
-    marginTop: true
+    marginTop: false
   },
   {
     type: "h2",
@@ -72,7 +70,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
     type: "p",
     text: "If it’s urgent, you will also find emergency roofers who offer quick services. If it isn’t, simply take a bit of time to ask questions, request samples of similar jobs, all in one place."
   },
-    { type: "PostCodeSectionLocation" },
+  { type: "PostCodeSectionLocation" },
   {
     type: "p",
     text: "Being able to see some background before you even speak to someone makes that first conversation easier too. It feels less like a cold call and more like a normal discussion about the job."
@@ -94,9 +92,9 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
 export const ROOFERS_FREQUENTLY_DATA_DEESIDE = [
   {
     key: "1",
-    title: "What is too cold to install a roof?",
+    title: "How long does a re-roof take to install?",
     description: `
-        Once it’s properly freezing, most roofers would rather wait. When it’s icy, materials can get brittle and things don’t always seal the way they should. Winter work can still happen, but if it’s below zero and slippery, it’s usually safer and smarter to hold off.
+        The answer to this is variable, it can depend on the size of the roof, the type of roof you want installing and whether you want to install windows onto the roof. On average a re-roof will take 4-5 weeks for a standard semi-detached.
     `,
   },
   {
@@ -183,7 +181,7 @@ export const ROOFERS_TABDATA_DEESIDE = {
     },
   ],
 
-   related: [
+  related: [
     {
       title: "Roofers Leeds",
       url: "/en/gb/roofers-near-me/leeds"
@@ -236,7 +234,7 @@ export const VETTED_DATA_ROOFERS_DEESIDE = [
   <br/><br/> 
   `,
   `
-And that’s where Localists come in. We match you with local roofers in Deeside who we’ve fully vetted and are trustworthy. Once we know your requirements, you’ll get up to 5 free no-obligation quotes delivered to your inbox within minutes. Review, compare, and choose the roofer that works best for you at your own time.
+And that’s where Localists come in. We match you with local roofers in Deeside who can get the job done and have passed our rigorous vetting process. Just  input your postcode and answer a few questions to get 5 free no-obligation quotes delivered to your inbox within minutes. Review, compare, and choose the roofer that works best for you at your own time.
 `,
 ];
 

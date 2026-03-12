@@ -205,7 +205,7 @@ export const ROOFERS_TABDATA_RHYL = {
     findMore: [],
 };
 export const VETTED_DATA_ROOFERS_RHYL = [
-    `We all have that one neighbour who thinks a YouTube video and a ladder makes them an expert, only for them to get on your roof and leave you with more problems than you started with. When it comes to your home, you need a professional who knows what they’re doing.
+    `We all have that one neighbour who thinks a YouTube video and a ladder makes them an expert, only for them to get on your roof and leave you with more problems than you started with.  When it comes to your home, you need a professional who knows what they’re doing.
   <br/><br/> 
   `,
     `

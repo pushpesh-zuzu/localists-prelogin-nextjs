@@ -39,7 +39,7 @@ function RoofersInWrexham() {
       <HeroSectionLocation
         heading1="Roofers"
         heading2="Wrexham"
-        description="Find the highest quality roofers in Wrexham now! Just enter your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
+        description="Find the best roofers in Wrexham! Just enter your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -91,6 +91,8 @@ function RoofersInWrexham() {
       />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
+        desktopImage="/nearme/Roofing/roofingmember.webp"
+        mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
       <Footer />
     </>

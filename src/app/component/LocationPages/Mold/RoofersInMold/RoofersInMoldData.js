@@ -11,38 +11,63 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
     type: "p",
     text: "So here’s a rough idea of what people in Mold often pay:"
   },
+  // {
+  //   type: "AveragePriceLocation",
+  //   title: "Average cost of roofing Mold ",
+  //   calculatorText: "click here.",
+  //   calculatorLink: "/en/gb/roofing-multi-form-ppc",
+  //   disclaimerText:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+  //   priceCards: [
+  //     {
+  //       description: "For general roofing jobs, homeowners usually spend around £2,858",
+  //       // price: "£2,858",
+  //       // className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[120px] lg:max-h-[120px]"
+
+  //     },
+  //     {
+  //       description: "Most straightforward repairs, including fixing leaks, replacing broken tiles, come in at about £862.",
+  //       // price: "£862",
+  //       // className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[120px] lg:max-h-[120px]"
+
+  //     },
+  //     {
+  //       description: "Emergency call-outs for roofers tend to average around £445",
+  //       // price: "£445",
+  //       // className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-14 min-[360px]:max-h-14 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
+
+  //     },
+  //     {
+  //       description: "For a full replacement new roof, the average cost in Mold is around £7,495.",
+  //       // price: "£7,495",
+  //       // className: "max-[360]:min-h-16 max-[360]:max-h-14 min-[360px]:min-h-14 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
+  //     },
+  //   ],
+
+  // },
   {
-    type: "AveragePriceLocation",
-    title: "Average cost of roofing Mold ",
+    type: "pricingTable",
+    title: "Average cost of roofing Mold",
     calculatorText: "click here.",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimerText:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
-    priceCards: [
+    disclaimer: "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+    prices: [
       {
-        description: "For general roofing jobs, homeowners usually spend around £2,858 on average",
-        // price: "£2,858",
-        // className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[120px] lg:max-h-[120px]"
-
+        text: "For general roofing jobs, homeowners usually spend around",
+        price: "£2,858"
       },
       {
-        description: "Most straightforward repairs, including fixing leaks, replacing broken tiles, come in at about £862.",
-        // price: "£862",
-        // className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[120px] lg:max-h-[120px]"
-
+        text: "Most straightforward repairs, including fixing leaks, replacing broken tiles, come in at about",
+        price: "£862"
       },
       {
-        description: "Emergency call-outs for roofers tend to average around £445, depending on complexity.",
-        // price: "£445",
-        // className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-14 min-[360px]:max-h-14 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
-
+        text: "Emergency call-outs for roofers tend to average around",
+        price: "£445"
       },
       {
-        description: "For a full replacement new roof, the average cost in Mold is around £7,495.",
-        // price: "£7,495",
-        // className: "max-[360]:min-h-16 max-[360]:max-h-14 min-[360px]:min-h-14 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
-      },
-    ],
-
+        text: "For a full replacement new roof, the average cost in Mold is around",
+        price: "£7,495"
+      }
+    ]
   },
   {
     type: "p",
@@ -60,7 +85,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
     type: "h2",
     text: "Common roofing services in Mold"
   },
-   {
+  {
     type: "p",
     text: "Most roofers in Mold deal with a mix of everyday repairs and bigger jobs. Some of the more common ones include:",
   },
@@ -125,8 +150,8 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
     text: "In the end, it’s about having a bit more control over the process. You look at your options, ask your questions, and move forward when you’re comfortable. That’s why many homeowners prefer doing it this way."
   },
   {
-        type: "PostCodeSectionLocation",
-        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
+    type: "PostCodeSectionLocation",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
   }
 ];
 export const ROOFERS_FREQUENTLY_DATA_MOLD = [
@@ -213,7 +238,7 @@ export const ROOFERS_TABDATA_MOLD = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-   related: [
+  related: [
     {
       title: "Roofers Leeds",
       url: "/en/gb/roofers-near-me/leeds"
@@ -289,6 +314,7 @@ export const POPULAR_SERVICES_ROOFERS_MOLD = [
   "Shingle replacement",
   "Leadworks Installation ",
 ];
+
 export const ROOFERS_FEEDBACK_MOLD = [
   {
     id: 1,

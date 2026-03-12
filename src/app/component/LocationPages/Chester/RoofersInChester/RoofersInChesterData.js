@@ -8,78 +8,111 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
     text: "Roofing prices can feel unpredictable, but once you know the rough numbers, everything becomes a lot less intimidating. Below is a clear, no-nonsense look at what homeowners in Chester typically pay for common roofing jobs.",
   },
   {
-    type: "pbold",
-    text: "General roofing work"
+    type: "pricingTable",
+    title: "Average cost of roofing in Chester",
+    calculatorText: "click here.",
+    calculatorLink: "/en/gb/roofing-multi-form-ppc",
+    disclaimer: "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+    prices: [
+      {
+        text: "For general roofing projects, the average cost comes in around",
+        price: "£2,150"
+      },
+      {
+        text: "For roof repairs like fixing leaks or cracked tiles, the average cost is about",
+        price: "£750"
+      },
+      {
+        text: "For emergency roofing services, you can expect to pay an average of",
+        price: "£630"
+      },
+      {
+        text: "For full roof replacement where repairs are no longer enough, average cost is around",
+        price: "£6,840"
+      }
+    ]
   },
   {
     type: "p",
-    text: "For standard roofing projects, whether it’s minor upgrades or general maintenance, costs usually sit between £1,350 and £3,350, with most jobs coming in around £2,150. It’s the kind of work that quietly keeps your home dry and drama-free.",
-  },
-  {
-    type: "pbold",
-    text: "Roof repairs"
+    text: "Good to know: Final prices depend on factors like roof size, materials, access, and whether extras such as scaffolding or insulation are needed. Always ask for a detailed quote before booking so there are no surprises.",
   },
   {
     type: "p",
-    text: "General roof repairs cost £750 on average but this can go increase or decrease based on the complexity of the job and scale of the damage. Small leaks, cracked tiles, or early signs of wear can cost anywhere between £350 and £1,450 to repair. Catching these early can save you from much bigger bills later."
+    text: "Already know what needs doing? Use our Job Value Estimator for a quick, tailored cost estimate; no guesswork required.",
   },
+  // {
+  //   type: "pbold",
+  //   text: "General roofing work"
+  // },
+  // {
+  //   type: "p",
+  //   text: "For standard roofing projects, whether it’s minor upgrades or general maintenance, costs usually sit between £1,350 and £3,350, with most jobs coming in around £2,150. It’s the kind of work that quietly keeps your home dry and drama-free.",
+  // },
+  // {
+  //   type: "pbold",
+  //   text: "Roof repairs"
+  // },
+  // {
+  //   type: "p",
+  //   text: "General roof repairs cost £750 on average but this can go increase or decrease based on the complexity of the job and scale of the damage. Small leaks, cracked tiles, or early signs of wear can cost anywhere between £350 and £1,450 to repair. Catching these early can save you from much bigger bills later."
+  // },
   { type: "PostCodeSectionLocation" },
-  {
-    type: "pbold",
-    text: "Flat roof repairs"
-  },
-  {
-    type: "p",
-    text: "Flat roofs need a bit of extra care. Repairs and resealing typically fall between £625 and £2,100, with an average spend of £1,150, ideal for garages, extensions, and low-pitch roofs."
-  },
-  {
-    type: "pbold",
-    text: "Pitched roof repairs"
-  },
-  {
-    type: "p",
-    text: "For sloped roofs, repair costs usually range from £350 to £1,500, averaging £725. A small fix now can prevent water damage down the line."
-  },
-  {
-    type: "pbold",
-    text: "Emergency roofing services"
-  },
-  {
-    type: "p",
-    text: "When a storm hits or water starts coming in unexpectedly, emergency callouts generally cost £370 to £1,170, with an average of £630. Quick action often stops minor issues turning into major repairs."
-  },
-  {
-    type: "pbold",
-    text: "Flat roof installation"
-  },
-  {
-    type: "p",
-    text: "The average cost of a flat roof replacement is £2700 - but this can vary based on the complexity and scale of the job, with flat roof installation prices ranging from £1,500 to £8,000 "
-  },
-  {
-    type: "pbold",
-    text: "Pitched roof installation"
-  },
-  {
-    type: "p",
-    text: "A pitched roof installation costs on average For a full pitched roof installation, expect prices between £5,000 and £8,000, with the average sitting around £5,609. It’s a bigger investment, but one that offers long-term protection and peace of mind."
-  },
-  {
-    type: "pbold",
-    text: "Roof replacement"
-  },
-  {
-    type: "p",
-    text: "When repairs are no longer enough, a complete roof replacement usually costs £5,000 to £9,445, averaging £6,837. A major job, yes, but one that resets the clock on your roof entirely."
-  },
-  {
-    type: "p",
-    text: "Good to know: Final prices depend on factors like roof size, materials, access, and whether extras such as scaffolding or insulation are needed. Always ask for a detailed quote before booking so there are no surprises."
-  },
-  {
-    type: "p",
-    text: "Already know what needs doing? Use our Job Value Estimator for a quick, tailored cost estimate; no guesswork required."
-  },
+  // {
+  //   type: "pbold",
+  //   text: "Flat roof repairs"
+  // },
+  // {
+  //   type: "p",
+  //   text: "Flat roofs need a bit of extra care. Repairs and resealing typically fall between £625 and £2,100, with an average spend of £1,150, ideal for garages, extensions, and low-pitch roofs."
+  // },
+  // {
+  //   type: "pbold",
+  //   text: "Pitched roof repairs"
+  // },
+  // {
+  //   type: "p",
+  //   text: "For sloped roofs, repair costs usually range from £350 to £1,500, averaging £725. A small fix now can prevent water damage down the line."
+  // },
+  // {
+  //   type: "pbold",
+  //   text: "Emergency roofing services"
+  // },
+  // {
+  //   type: "p",
+  //   text: "When a storm hits or water starts coming in unexpectedly, emergency callouts generally cost £370 to £1,170, with an average of £630. Quick action often stops minor issues turning into major repairs."
+  // },
+  // {
+  //   type: "pbold",
+  //   text: "Flat roof installation"
+  // },
+  // {
+  //   type: "p",
+  //   text: "The average cost of a flat roof replacement is £2700 - but this can vary based on the complexity and scale of the job, with flat roof installation prices ranging from £1,500 to £8,000 "
+  // },
+  // {
+  //   type: "pbold",
+  //   text: "Pitched roof installation"
+  // },
+  // {
+  //   type: "p",
+  //   text: "A pitched roof installation costs on average For a full pitched roof installation, expect prices between £5,000 and £8,000, with the average sitting around £5,609. It’s a bigger investment, but one that offers long-term protection and peace of mind."
+  // },
+  // {
+  //   type: "pbold",
+  //   text: "Roof replacement"
+  // },
+  // {
+  //   type: "p",
+  //   text: "When repairs are no longer enough, a complete roof replacement usually costs £5,000 to £9,445, averaging £6,837. A major job, yes, but one that resets the clock on your roof entirely."
+  // },
+  // {
+  //   type: "p",
+  //   text: "Good to know: Final prices depend on factors like roof size, materials, access, and whether extras such as scaffolding or insulation are needed. Always ask for a detailed quote before booking so there are no surprises."
+  // },
+  // {
+  //   type: "p",
+  //   text: "Already know what needs doing? Use our Job Value Estimator for a quick, tailored cost estimate; no guesswork required."
+  // },
   {
     type: 'h2',
     text: "What Should Be Included in Your Roofing Quote",
@@ -120,7 +153,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
   },
   {
     type: "h2",
-    text: "Find the Best Roofers in Chester",
+    text: "Find the Right Roofer in Chester for the Job",
     className: "mt-5 lg:mt-[72px]"
   },
   {
@@ -256,7 +289,7 @@ export const ROOFERS_TABDATA_CHESTER = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-    related: [
+  related: [
     {
       title: "Roofers Leeds",
       url: "/en/gb/roofers-near-me/leeds"
@@ -305,7 +338,7 @@ export const ROOFERS_TABDATA_CHESTER = {
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_CHESTER = [
-  `Roofs are great  at staying out of sight and out of mind - right up until they decide to cause a scene. One day everything’s fine, the next there’s a suspicious drip, a tile that’s gone AWOL, or rain setting up camp where it definitely doesn’t belong.
+  `Roofs are great at staying out of sight and out of mind - right up until they decide to cause a scene. One day everything’s fine, the next there’s a suspicious drip, a tile that’s gone AWOL, or rain setting up camp where it definitely doesn’t belong.
   <br/><br/> 
   `,
   `
@@ -353,6 +386,11 @@ export const ROOFERS_FEEDBACK_CHESTER = [
     id: 4,
     text: "I needed a roof installing and already had 2 quotes. But had far better quotes from Localists. Job was done sooner than expected. Thanks to craig and the team",
     name: "Matthew C.",
+  },
+  {
+    id: 5,
+    text: "Really happy with James who managed to retile my garage. Cheap quote and very polite. Would recommend.",
+    name: "Arthur G.",
   },
 ];
 

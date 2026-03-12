@@ -39,7 +39,7 @@ function RoofersInDeeside() {
       <HeroSectionLocation
         heading1="Roofers"
         heading2="Deeside"
-        description="Looking to find the best roofers in Deeside? Look no further! Just give us your Looking for roofers in your local area? Let us know your postcode, and we’ll connect you with reliable Roofers in Deeside. Get free, no-obligation quotes to your inbox within minutes."
+        description="Just input your postcode and give us a few details about your project, and we’ll connect you with vetted, local roofers in Deeside for free, no-obligation quotes on your roofing project."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -70,7 +70,7 @@ function RoofersInDeeside() {
       />
 
       <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-        <Feature  county="flintshire" cityName="Deeside" serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+        <Feature county="flintshire" cityName="Deeside" serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
       <AdviceInsightNearMe
@@ -91,6 +91,8 @@ function RoofersInDeeside() {
       />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
+        desktopImage="/nearme/Roofing/roofingmember.webp"
+        mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
       <Footer />
     </>
