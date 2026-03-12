@@ -9,8 +9,8 @@ import { setSelectedServiceId } from "@/lib/store/findjobslice";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 import { useRouter } from "next/navigation";
 // import LoaderIndicator from "../common/Loader/LoaderIndicatore";
-import BuyerRegistration from "../common/BuyerRegistration/BuyerRegistration";
-// import ReqBuyerRegistration from "../common/ReqBuyerRegistration/ReqBuyerRegistration";
+// import BuyerRegistration from "../common/BuyerRegistration/BuyerRegistration";
+import ReqBuyerRegistration from "../common/ReqBuyerRegistration/ReqBuyerRegistration";
 // import BuyerRegistrationNearMe1 from "./BuyerRegistrationNearMe1";
 
 
@@ -227,7 +227,7 @@ function PostCodeInsideContent({
                     </p>
                 )}
             </div>
-            {show && (
+            {/* {show && (
                 <BuyerRegistration
                     closeModal={handleClose}
                     service_Id={serviceId}
@@ -235,9 +235,9 @@ function PostCodeInsideContent({
                     serviceName={serviceName}
                     service_Name={serviceName}
                 />
-            )}
+            )} */}
 
-            {/* {show && (
+            {show && (
         <ReqBuyerRegistration
           onClose={handleClose}
           service_Id={serviceId}
@@ -245,7 +245,7 @@ function PostCodeInsideContent({
           serviceName={serviceName}
           service_Name={serviceName}
         />
-      )} */}
+      )}
 
             {/* {show && (
         <BuyerRegistrationNearMe

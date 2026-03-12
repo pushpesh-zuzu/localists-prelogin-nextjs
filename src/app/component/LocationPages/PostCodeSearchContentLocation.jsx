@@ -7,8 +7,8 @@ import { setSelectedServiceId } from "@/lib/store/findjobslice";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 import { useRouter } from "next/navigation";
 // import BuyerRegistrationLocationPage from "./BuyerRegistrationLocationPage/BuyerRegistrationLocationPage";
-import BuyerRegistration from "../common/BuyerRegistration/BuyerRegistration";
-// import ReqBuyerRegistration from "../common/ReqBuyerRegistration/ReqBuyerRegistration";
+// import BuyerRegistration from "../common/BuyerRegistration/BuyerRegistration";
+import ReqBuyerRegistration from "../common/ReqBuyerRegistration/ReqBuyerRegistration";
 
 
 
@@ -212,7 +212,7 @@ function PostCodeSearchContentLocation({
           </p>
         )}
       </div>
-      {show && (
+      {/* {show && (
         <BuyerRegistration
           closeModal={handleClose}
           service_Id={serviceId}
@@ -220,9 +220,9 @@ function PostCodeSearchContentLocation({
           serviceName={serviceName}
           service_Name={serviceName}
         />
-      )}
+      )} */}
 
-      {/* {show && (
+      {show && (
         <ReqBuyerRegistration
           onClose={handleClose}
           service_Id={serviceId}
@@ -230,7 +230,7 @@ function PostCodeSearchContentLocation({
           serviceName={serviceName}
           service_Name={serviceName}
         />
-      )} */}
+      )}
 
     </>
   );
