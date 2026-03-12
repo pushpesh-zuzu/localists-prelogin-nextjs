@@ -58,13 +58,14 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
 {
   type: "p",
   text: "The final cost always comes down to how complex your roof is, the materials you pick, and any tricky challenges the job might have. It’s always worth getting a professional quote before committing, and with Localists, you can receive multiple free, no-obligation quotes in just minutes, so you’ll know exactly what to expect before any work begins.",
-notMarginBottom:true
 },
-
+ {
+    type: "QuotesBanner",
+    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
+  },
 {
   type: "h2",
   text: "Find the right roofer in Leeds for the job",
-  className:"mt-6 lg:mt-[70px]"
 },
 {
   type:"p",
@@ -114,10 +115,10 @@ notMarginBottom:true
   type:"p",
   text:"Whatever your roofing challenge, Localists makes it easy to find trusted Leeds roofers who can handle the job, so you can stay dry, safe, and stress-free."
 },
-{
-        type: "QuotesBanner",
-        className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
-    },
+ {
+        type: "PostCodeSectionLocation",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
+    }
   ,
 
  
