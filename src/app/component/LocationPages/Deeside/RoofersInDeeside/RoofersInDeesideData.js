@@ -25,7 +25,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
         className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
       },
       {
-        description: "Roof repairs On average cost about",
+        description: "Roof repairs on average cost about",
         price: "£862",
         className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
 
@@ -188,7 +188,7 @@ export const ROOFERS_TABDATA_DEESIDE = {
     },
     {
       title: "Roofers York",
-      url: "/en/gb/roofers-near-me/york"
+      url: ""
     },
     {
       title: "Roofers Hull",
@@ -216,7 +216,7 @@ export const ROOFERS_TABDATA_DEESIDE = {
     },
     {
       title: "Roofers Manchester",
-      url: "/en/gb/roofers-near-me/manchester"
+      url: ""
     },
     {
       title: "Roofers Stockport",

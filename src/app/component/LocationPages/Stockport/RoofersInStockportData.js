@@ -13,15 +13,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_STOCKPORT = [
     },
     {
         type: "pbold",
-        text: "You’re matched with local experts"
+        text: "Local expertise"
     },
     {
         type: "p",
-        text: "Not random listings. Real roofers working in and around Stockport and who understand the area.",
+        text: "Real roofers working in and around Stockport and who understand the area. Including local planning rules.",
     },
     {
         type: "pbold",
-        text: "Quotes are tailored to your specific job"
+        text: "Quotes tailored to your job"
     },
     {
         type: "p",
@@ -30,7 +30,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_STOCKPORT = [
     { type: "PostCodeSectionLocation" },
     {
         type: "pbold",
-        text: "You control the timing"
+        text: "Jobs done around your timescale"
     },
     {
         type: "p",
@@ -70,7 +70,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_STOCKPORT = [
     },
     {
         type: "p",
-        text: "To give you a rough idea of what people in Stockports tend to pay:"
+        text: "To give you a rough idea of what people in Stockport tend to pay:"
     },
     {
         type: "pricingTable",
@@ -98,13 +98,13 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_STOCKPORT = [
             }
         ]
     },
-    {
-        type: "p",
-        text: "These numbers aren’t fixed quotes, just a guide to help you understand what’s normal locally. The surefire way to know what your own roof will cost is to get tailored quotes from local Stockport roofers who can see the job firsthand."
-    },
+    // {
+    //     type: "p",
+    //     text: "These numbers aren’t fixed quotes, just a guide to help you understand what’s normal locally. The surefire way to know what your own roof will cost is to get tailored quotes from local Stockport roofers who can see the job firsthand."
+    // },
     {
         type: "QuotesBanner",
-        className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+        className: "mb-[22px] mt-[20px] md:mt-[50px] md:mb-[42px] lg:mt-[108px] lg:mb-[114px]"
     },
 ];
 export const FREQUENTLY_DATA_STOCKPORT = [
@@ -112,7 +112,7 @@ export const FREQUENTLY_DATA_STOCKPORT = [
         key: "1",
         title: "How do I know if my house needs a new roof?",
         description: `
-        Most roofs don’t fail overnight. It’s usually a buildup of subtle warning signs: tiles slipping more often than they should, watermarks that keep reappearing on ceilings, bits of grit collecting in the gutters, or a roofline that doesn’t look quite straight anymore. More so, if you’re calling a professional out every year for a different ‘‘patch job’’, that’s often the point where a proper assessment makes sense.
+        Most roofs don’t fail overnight. It’s usually a buildup of subtle warning signs: tiles slipping more often than they should, watermarks that keep reappearing on ceilings, bits of grit collecting in the gutters, or a roofline that doesn’t look quite straight anymore. One of the major red flags though is if you’re calling a professional out every year for a different ‘‘patch job’’, that’s often the point where a proper assessment makes sense.
         `,
     },
     {
@@ -202,7 +202,7 @@ export const ROOFERS_TABDATA_STOCKPORT = {
     },
     {
       title: "Roofers York",
-      url: "/en/gb/roofers-near-me/york"
+      url: ""
     },
     {
       title: "Roofers Hull",
@@ -230,7 +230,7 @@ export const ROOFERS_TABDATA_STOCKPORT = {
     },
     {
       title: "Roofers Manchester",
-      url: "/en/gb/roofers-near-me/manchester"
+      url: ""
     },
     {
       title: "Roofers Stockport",
@@ -274,24 +274,24 @@ export const POPULAR_SERVICES_ROOFERS_STOCKPORT = [
 export const ROOFERS_FEEDBACK_STOCKPORT = [
     {
         id: 1,
-        text: "We’d noticed a small stain on the ceiling for months and kept pretending it wasn’t getting bigger. Eventually, we decided to deal with it properly. The roofer who came out didn’t overcomplicate things or try to scare us; he showed us exactly where the issue was and fixed it within a few hours. It felt straightforward, which is all we wanted.",
-        name: "Karen W.",
+        text: "We noticed a few tiles had come loose after a storm, and water was starting to get in. The Localists roofer arrived the next day, fixed everything efficiently, and even cleaned up afterwards. Highly recommend!",
+        name: "Claire B.",
     },
     {
         id: 2,
-        text: "After the last spell of heavy wind, a couple of tiles ended up in the garden. I was worried it would turn into a massive job, but it didn’t. The quote was clear, the timing worked around my shifts, and the roof’s been solid since. I appreciated how normal the whole experience felt.",
-        name: "Mark E.",
+        text: "Our flat roof had started leaking, and we were worried it would get worse over winter. The roofer Localists connected us with gave a clear quote, turned up on time, and finished the work in two days. Really professional and friendly.",
+        name: "James H.",
     },
     {
         id: 3,
-        text: "Our house isn’t new, and the roof has clearly had work done over the years. We wanted someone to tell us honestly whether we needed a full replacement or not. The advice was balanced: some repairs now, replacement later. No pressure either way. That honesty stuck with us.",
-        name: "Aisha R.",
+        text: "I’d been putting off replacing our old pitched roof for years. Thanks to Localists, we got a roofer who explained everything clearly, handled the job without fuss, and left the house looking great.",
+        name: "Melanie F.",
 
     },
     {
         id: 4,
-        text: "Our house isn't new, and the roof has been slowly showing its age for a while. We'd patched bits here and there over the years, but it just got to a point where it didn't make sense to keep doing that. Got a few quotes, compared them properly, and went with someone who was honest about what needed doing and what could wait. The job was done steadily over a few days, and the price didn't change from what we'd been told. Really pleased with the result.",
-        name: "Carol S.",
+        text: "We had James come over from Localist as we had leaks. Already got quotes elsewhere for £50 more than he charged us and he got it done same day. Couldn't recommend enough!",
+        name: "Steve L.",
     },
 ];
 

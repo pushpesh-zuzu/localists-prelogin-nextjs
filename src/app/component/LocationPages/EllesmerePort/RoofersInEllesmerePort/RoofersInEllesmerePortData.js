@@ -201,7 +201,7 @@ export const ROOFERS_TABDATA_ELLESMEREPORT = {
     },
     {
       title: "Roofers York",
-      url: "/en/gb/roofers-near-me/york"
+      url: ""
     },
     {
       title: "Roofers Hull",
@@ -229,7 +229,7 @@ export const ROOFERS_TABDATA_ELLESMEREPORT = {
     },
     {
       title: "Roofers Manchester",
-      url: "/en/gb/roofers-near-me/manchester"
+      url: ""
     },
     {
       title: "Roofers Stockport",
