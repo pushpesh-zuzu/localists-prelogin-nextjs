@@ -263,7 +263,7 @@ export const VETTED_DATA_ROOFERS_WREXHAM = [
   `,
   `
 Just input your postcode, answer a few questions, and we’ll send you quotes from 5 of the
-<a href="https://www.localists.com/en/gb/roofers-near-me" style="color:#00afe3; text-decoration:underline;">best roofers</a> in Wrexham. Or just take a loot at a Wrexham roofer that takes your fancy and request a callback. All of our roofers have been vetted and verified to ensure you only get the best service..
+<a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3; text-decoration:underline;">best roofers</a> in Wrexham. Or just take a loot at a Wrexham roofer that takes your fancy and request a callback. All of our roofers have been vetted and verified to ensure you only get the best service..
 `,
 ];
 
