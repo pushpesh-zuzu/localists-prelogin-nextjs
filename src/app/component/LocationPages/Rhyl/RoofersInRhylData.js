@@ -209,7 +209,7 @@ export const VETTED_DATA_ROOFERS_RHYL = [
   <br/><br/> 
   `,
     `
-So if you’ve got a roof that even the notorious seagulls of Rhyl are turning their beaks at - it might be time to get in touch with a Rhyl roofer to sort it out- and we have just the ones for the job on our platform. We’ll match you with 5 local roofers, or you can pick them yoourself. We will match you with vetted roofers that Rhyl residents recommend and trust with their roofs. Compare quotes, review past jobs, and hire when you are ready. No pressure.
+So if you’ve got a roof that even the notorious seagulls of Rhyl are turning their beaks at - it might be time to get in touch with a Rhyl roofer to sort it out- and we have just the ones for the job on our platform. We’ll match you with 5 local roofers, or you can pick them yourself. We will match you with vetted roofers that Rhyl residents recommend and trust with their roofs. Compare quotes, review past jobs, and hire when you are ready. No pressure.
 `,
 ];
 
