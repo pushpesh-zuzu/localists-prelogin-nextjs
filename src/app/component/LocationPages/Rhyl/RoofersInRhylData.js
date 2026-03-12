@@ -32,17 +32,16 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RHYL = [
             }
         ]
     },
-    {
-        type: "p",
-        text: "Think of these as rough reference points, not promises. The only way to know for sure is to have someone take a proper look and talk it through with you. Seeing a few quotes side by side usually makes it much easier to understand what feels fair.",
-        notMarginBottom: true
-    },
+    // {
+    //     type: "p",
+    //     text: "Think of these as rough reference points, not promises. The only way to know for sure is to have someone take a proper look and talk it through with you. Seeing a few quotes side by side usually makes it much easier to understand what feels fair.",
+    //     notMarginBottom: true
+    // },
     {
         type: "image",
         src: "/nearme/Roofing/roofinstalling.webp",
         alt: "two roofers installing slate tiles onto a brand new roof",
         marginBottom: true,
-        marginTop: true
     },
     {
         type: 'h2',
@@ -60,19 +59,22 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RHYL = [
         type: "p",
         text: "With Localists, you simply describe what’s happening, and we connect you with high-quality roofers right here in Rhyl. Because these professionals are local, they can respond quickly in cases of an emergency. Also, every free quote you receive is tailored to your specific roof problem, so you aren't just guessing based on a generic price list. You get to see exactly how different professionals approach the same problem side-by-side, giving you the clarity you need to decide what to do next."
     },
-    {
-        type: "QuotesBanner",
-        className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
-    },
+    // {
+    //     type: "QuotesBanner",
+    //     className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
+    // },
     {
         type: "p",
         text: "The best part is that there’s absolutely no pressure to hire. You can take your time to look through your options and ask questions without any hard sales or being pushed into a decision. You only move forward and hire when you’re 100% ready and comfortable with your choice. Plus, you’re safe in the knowledge that the roofers that get in touch with you all have capacity to fit you in.",
-        notMarginBottom: true
     },
+    // {
+    //     type: "PostCodeSectionLocation",
+    //     className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
+    // }
     {
-        type: "PostCodeSectionLocation",
-        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
-    }
+    type: "QuotesBanner",
+    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+  },
 ];
 export const FREQUENTLY_DATA_RHYL = [
     {
@@ -209,7 +211,7 @@ export const VETTED_DATA_ROOFERS_RHYL = [
   <br/><br/> 
   `,
     `
-So if you’ve got a roof that even the notorious seagulls of Rhyl are turning their beaks at - it might be time to get in touch with a Rhyl roofer to sort it out- and we have just the ones for the job on our platform. We’ll match you with 5 local roofers, or you can pick them yourself. We will match you with vetted roofers that Rhyl residents recommend and trust with their roofs. Compare quotes, review past jobs, and hire when you are ready. No pressure.
+So if you’ve got a roof that even the notorious seagulls of Rhyl are turning their beaks at - it might be time to get in touch with a Rhyl roofer to sort it out- and we have just the ones for the job on our platform. We will match you with <a href="/en/gb/roofers-near-me" <a target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>local roofers</a> that Rhyl residents recommend and trust with their roofs. Compare quotes, review past jobs, and hire when you are ready. No pressure.
 `,
 ];
 

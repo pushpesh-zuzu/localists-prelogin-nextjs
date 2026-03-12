@@ -86,7 +86,7 @@ export const QUESTION_AND_ABOUT_SERVICE_TREE_SURGEON_CHESTER = [
   {
     type: "h2",
     text: "How much does a tree surgeon cost",
-    className: "mt-5 lg:mt-[72px]",
+    className: "mt-6 lg:mt-[72px]",
   },
   {
     type: "p",
@@ -122,7 +122,7 @@ export const QUESTION_AND_ABOUT_SERVICE_TREE_SURGEON_CHESTER = [
   {
     type: "h2",
     text: "How do I pick the right tree surgeon",
-    className: "mt-5 lg:mt-[72px]",
+    className: "mt-6 lg:mt-[72px]",
   },
   {
     type: "pbold",

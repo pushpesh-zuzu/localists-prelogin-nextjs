@@ -116,7 +116,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
   {
     type: 'h2',
     text: "What Should Be Included in Your Roofing Quote",
-    className: "mt-5 lg:mt-[72px]"
+    className: "mt-6 lg:mt-[72px]"
 
   },
   {
@@ -147,14 +147,14 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
     type: "p",
     text: "If a quote feels vague or leaves things out, don’t be afraid to ask questions. A trustworthy roofer will be happy to explain exactly what you’re paying for, no fine print, no confusion, no awkward conversations."
   },
-  {
-    type: "QuotesBanner",
-    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
-  },
+  // {
+  //   type: "QuotesBanner",
+  //   className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
+  // },
   {
     type: "h2",
     text: "Find the Right Roofer in Chester for the Job",
-    className: "mt-5 lg:mt-[72px]"
+    className: "mt-6 lg:mt-[72px]"
   },
   {
     type: "p",
@@ -203,7 +203,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
   {
     type: 'p',
     text: "No matter the job, finding a roofer with the right skills ensures your home stays dry, safe, and looking great without the stress.",
-    notMarginBottom: true
+  },
+   {
+    type: "QuotesBanner",
+    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
   },
 
 ];
@@ -342,7 +345,7 @@ export const VETTED_DATA_ROOFERS_CHESTER = [
   <br/><br/> 
   `,
   `
-Whether it’s a quick repair, a complete roof overhaul, or an urgent fix after a storm, we’ll connect you with the best roofers in Chester. Get started and receive free no obligation quotes from local experts near you. No chasing callbacks. No technical waffle. No headaches, which you didn’t sign up for.
+Whether it’s a quick repair, a complete roof overhaul, or an urgent fix after a storm, we’ll connect you with the best <a href="/en/gb/roofers-near-me" <a target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>roofers</a> in Chester. Get started and receive free no obligation quotes from local experts near you. No chasing callbacks. No technical waffle. No headaches, which you didn’t sign up for.
 `,
 ];
 

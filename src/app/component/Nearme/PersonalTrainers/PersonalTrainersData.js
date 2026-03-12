@@ -54,7 +54,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "h2",
         text: "Are personal trainers worth the cost?",
-        className: "mt-5 lg:mt-[72px]"
+        className: "mt-6 lg:mt-[72px]"
     },
     {
         type: "p",
