@@ -1,0 +1,86 @@
+import React from "react";
+import H2 from "../UI/Typography/H2";
+import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
+import ServicesButton from "../common/ServicesButton";
+import Link from "next/link";
+import dynamic from "next/dynamic";
+const PopularJobsMapSection = dynamic(() => import("./PopularJobsMapSection"), {
+  ssr: false,
+});
+export default function PopularJobsInLocation({
+  services = [],
+  mobileCardClass = "w-[235px] min-[440px]:w-[302px] min-[512px]:w-[350px]",
+  classNameD = "md:max-w-[400px] xl:max-w-full",
+  ctaLink = "",
+  paddingClass = "px-[17.5px] py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[100px]",
+  location = "Chester",
+}) {
+  const renderServiceButton = (service) => {
+    const button = (
+      <ServicesButton
+        service={service}
+        mobileBorder="border-2"
+        className={ctaLink ? "cursor-pointer" : ""}
+      />
+    );
+
+    return ctaLink ? (
+      <Link
+        key={service}
+        href={ctaLink}
+        className="inline-block cursor-pointer"
+      >
+        {button}
+      </Link>
+    ) : (
+      <React.Fragment key={service}>{button}</React.Fragment>
+    );
+  };
+
+  return (
+    <WrapperBGWidth>
+      <div
+        className={`md:block rounded-[20px] md:rounded-none mx-[30px] md:mx-0 mt-2.5 md:mt-0 bg-[#00AFE3] md:bg-white ${paddingClass} `}
+      >
+        <div className="rounded-[30px] flex flex-wrap md:max-w-[600px] lg:max-w-full md:h-[280px] lg:h-[380px] xl:h-[470px] bg-[#00AFE3] overflow-visible">
+          {/* 1️⃣ Shape background */}
+
+          {/* 2️⃣ Normal content layer */}
+          <div className="h-full pt-[30px] md:pt-[37px] xl:pt-[0px] md:pb-[24px] xl:pb-0 md:px-8 xl:px-15 flex flex-col md:justify-center max-w-full md:max-w-[70%] lg:min-w-[65.45%] lg:max-w-[70%] ">
+            <H2 className="text-white mb-4 md:mb-0 md:pb-4 xl:pb-[35px]">
+              Popular Jobs.
+            </H2>
+            <p
+              variant="secondary"
+              // style={{ textShadow: "0px 3.65px 3.65px #00000026" }}
+              className={`text-[16px] leading-[16px]
+        md:text-[14px] md:leading-[16px]
+        lg:text-[20px] lg:leading-[24px] font-[Arial] font-bold
+          tracking-[0em]! sm:max-w-full mb-5 md:mb-0 text-white  md:pb-4 xl:pb-[43px]`}
+            >
+              Click below to get a quote for the specific job you want
+            </p>
+
+            <div className=" flex md:hidden items-center justify-start">
+              <div className={`${mobileCardClass}`}>
+                <div
+                  className={`flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4`}
+                >
+                  {services.map(renderServiceButton)}
+                </div>
+              </div>
+            </div>
+            <div
+              className={`hidden md:flex flex-wrap gap-2 xl:gap-[16px] xl:gap-y-[19px] md:mb-4 xl:mb-4 ${classNameD}`}
+            >
+              {services.map(renderServiceButton)}
+            </div>
+          </div>
+          {/* <div className="hidden md:flex"> */}
+          <PopularJobsMapSection location={location} />
+          {/* </div> */}
+        </div>
+      </div>
+    </WrapperBGWidth>
+  );
+}

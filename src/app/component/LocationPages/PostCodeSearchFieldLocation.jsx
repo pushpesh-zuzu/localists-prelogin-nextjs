@@ -185,7 +185,7 @@ function PostCodeSearchFieldLocation({
     <>
       <div
         className={`relative w-[83.5vw] md:w-auto md:max-w-[280px] lg:max-w-[416px] ${
-          margin ? "mt-[30px] md:mt-6 lg:mt-[40px]" : ""
+          margin ? "mt-[30px] md:mt-auto lg:mt-auto" : ""
         }`}
       >
         <div

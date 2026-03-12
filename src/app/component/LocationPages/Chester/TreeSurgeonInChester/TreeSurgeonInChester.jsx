@@ -27,6 +27,7 @@ import Feature from "../../FetureComponent/Feature";
 import FAQScript from "@/app/component/common/seo/FAQScript";
 import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
+import PopularJobsInLocation from "../../PopularJobsInLocation";
 
 function TreeSurgeonInChester() {
   useScrollToTop();
@@ -51,8 +52,14 @@ function TreeSurgeonInChester() {
         breadcrumb={BREADCRUM_DATA_TREESURGEON_CHESTER}
         extraButton
         featureRef={featureRef}
+        featureButtonText="View Tree Surgeons"
       />
-      <PopularJobNearMe
+      {/* <PopularJobsInLocation
+        services={POPULAR_SERVICES_TREE_SURGEON_CHESTER}
+        ctaLink="/en/gb/tree-surgeon-multi-form-ppc"
+        paddingClass="px-[17.5px] py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[0px]"
+      /> */}
+       <PopularJobNearMe
         services={POPULAR_SERVICES_TREE_SURGEON_CHESTER}
         popularImage="/location/treeSurgeon_location_popularjob.webp"
         altText="a tree surgeon cutting the branches of an evergreen tree"
