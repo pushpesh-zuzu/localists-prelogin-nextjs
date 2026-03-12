@@ -29,7 +29,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
   },
   {
  type:"p",
- text:"Wondering how much roofers in Leeds will charge you for a roofing job? The truth is, it depends on what your roof needs and how ambitious you’re feeling. A quick patch-up won’t cost the same as a full replacement of a Victorian terrace in Headingley. Here’s a friendly guide to help you budget without pulling your hair out based on our own internal data"
+ text:"Wondering how much roofers in Leeds will charge you for a roofing job? The truth is, it depends on what your roof needs and how ambitious you’re feeling. A quick patch-up won’t cost the same as a full replacement of a Victorian terrace in Headingley. Here’s a friendly guide to help you budget without pulling your hair out based on our own internal data."
   },
   {
     type:"p",
