@@ -118,6 +118,7 @@ const AboutServicesAndQuestions = ({
             calculatorText={block?.calculatorText}
             heading={block?.heading}
             calculatorLink={block?.calculatorLink}
+            className={block?.className}
             />
         );
         
