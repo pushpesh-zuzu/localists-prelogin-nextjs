@@ -9,40 +9,41 @@ export default function AveragePriceLocation({
     {
       description: "For a small tree removal (under 25ft), the average cost is",
       price: "£450",
-      className:"max-[760px]:min-h-10 max-[760px]:max-h-10  max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px]"
+      className: "max-[760px]:min-h-10 max-[760px]:max-h-10  max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px]"
     },
     {
       description:
         "For a medium stump removal under 15 inch diameter), the average cost is",
       price: "£215",
-      className:"max-[760px]:min-h-10 max-[760px]:max-h-10 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px]"
+      className: "max-[760px]:min-h-10 max-[760px]:max-h-10 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px]"
     },
     {
       description:
         "Trimming or pruning a small tree (under 25ft) costs on average",
       price: "£250",
-      className:"max-[760px]:min-h-10 max-[760px]:max-h-10 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px]"
+      className: "max-[760px]:min-h-10 max-[760px]:max-h-10 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px]"
     },
     {
       description:
         "For medium stump grinding (under 15 inch in diameter), the average cost is",
       price: "£115",
-      className:"max-[760px]:min-h-10 max-[760px]:max-h-10 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px]"
+      className: "max-[760px]:min-h-10 max-[760px]:max-h-10 max-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[50px] md:max-h-[50px]"
     },
   ],
   disclaimerText = "*costs are estimates only, to get a more specific estimate try our",
   calculatorText = "Roofing Calculator",
   calculatorLink = "",
-  heading='',
-  showPerMSquare=false
+  heading = '',
+  showPerMSquare = false,
+  className = "lg:pb-[72px] pb-[30px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px]"
 }) {
   return (
-    <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px] ">
+    <div className={`flex items-center justify-center ${className}`}>
       <div className="w-full max-w-[1000px]">
-         {heading && <NearmeH2Heading
-                    headdingblue={heading}
-                    className={`mb-5 mt-[7px] md:mt-0 md:mb-[25px]`}
-                  />}
+        {heading && <NearmeH2Heading
+          headdingblue={heading}
+          className={`mb-5 mt-[7px] md:mt-0 md:mb-[25px]`}
+        />}
         <div
           className="w-full rounded-[30px] md:rounded-[25px]"
           style={{ backgroundColor: "#8BFFCF" }}
@@ -119,8 +120,8 @@ export default function AveragePriceLocation({
                 </Paragraph>
                 {priceCards[3].price && <p className=" max-[360px]:text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3">
                   {priceCards[3].price}{" "}
-                  {showPerMSquare &&<span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
-                
+                  {showPerMSquare && <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
+
                 </p>}
               </div>
               <div className="flex lg:hidden col-span-2 mt-5 md:mt-2.5 lg:mt-0 md:mb-[5px] lg:mb-0 justify-center ">
@@ -143,14 +144,14 @@ export default function AveragePriceLocation({
               className="underline font-bold md:font-bold text-[#00AFE3]"
             >
               {calculatorText}
-            </a> 
-          :
-          <span
-              className="underline font-bold md:font-bold text-[#00AFE3]"
-            >
-              {calculatorText}
-            </span>  
-          }
+            </a>
+              :
+              <span
+                className="underline font-bold md:font-bold text-[#00AFE3]"
+              >
+                {calculatorText}
+              </span>
+            }
           </p>
         </div>
       </div>

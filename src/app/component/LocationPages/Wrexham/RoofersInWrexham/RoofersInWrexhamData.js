@@ -114,15 +114,16 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
         className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
       },
     ],
+    className: "lg:pb-[0px] pb-[0px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px]"
   },
   // {
   //   type: "p",
   //   text: "These numbers are there to give you a sense of scale, not a fixed promise. Every roof is different. The best way to know what yours will cost is to have it looked at properly and compare a few quotes before making a decision."
   // },
-  {
-    type: "PostCodeSectionLocation",
-    className: "mb-[0px] mt-[0px] lg:mt-[0px] lg:mb-[0px]"
-  }
+  // {
+  //   type: "PostCodeSectionLocation",
+  //   className: "mb-[0px] mt-[0px] lg:mt-[0px] lg:mb-[0px]"
+  // }
 ];
 export const ROOFERS_FREQUENTLY_DATA_WREXHAM = [
   {
@@ -261,7 +262,8 @@ export const VETTED_DATA_ROOFERS_WREXHAM = [
   <br/><br/> 
   `,
   `
-Just input your postcode, answer a few questions, and we’ll send you quotes from 5 of the best roofers in Wrexham. Or just take a loot at a Wrexham roofer that takes your fancy and request a callback. All of our roofers have been vetted and verified to ensure you only get the best service..
+Just input your postcode, answer a few questions, and we’ll send you quotes from 5 of the
+<a href="https://www.localists.com/en/gb/roofers-near-me" style="color:#00afe3; text-decoration:underline;">best roofers</a> in Wrexham. Or just take a loot at a Wrexham roofer that takes your fancy and request a callback. All of our roofers have been vetted and verified to ensure you only get the best service..
 `,
 ];
 

@@ -147,12 +147,13 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
   },
   {
     type: "p",
-    text: "In the end, it’s about having a bit more control over the process. You look at your options, ask your questions, and move forward when you’re comfortable. That’s why many homeowners prefer doing it this way."
+    text: "In the end, it’s about having a bit more control over the process. You look at your options, ask your questions, and move forward when you’re comfortable. That’s why many homeowners prefer doing it this way.",
+    notMarginBottom: true
   },
-  {
-    type: "PostCodeSectionLocation",
-    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
-  }
+  // {
+  //   type: "PostCodeSectionLocation",
+  //   className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
+  // }
 ];
 export const ROOFERS_FREQUENTLY_DATA_MOLD = [
   {
@@ -291,7 +292,8 @@ export const VETTED_DATA_ROOFERS_MOLD = [
   <br/><br/> 
   `,
   `
-Whether you’re dealing with a few damages or need a replacement, finding experienced local Roofers in Mold shouldn’t feel stressful. At Localists, we connect you with the best roofing specialists in your area at no cost. Get up to 5 free quotes delivered to you in minutes. Take your time to compare and choose what works for you without feeling rushed.
+Whether you’re dealing with a few damages or need a replacement, finding experienced
+<a href="https://www.localists.com/en/gb/roofers-near-me" style="color:#00afe3; text-decoration:underline;">local Roofers</a> in Mold shouldn’t feel stressful. At Localists, we connect you with the best roofing specialists in your area at no cost. Get up to 5 free quotes delivered to you in minutes. Take your time to compare and choose what works for you without feeling rushed.
 `,
 ];
 

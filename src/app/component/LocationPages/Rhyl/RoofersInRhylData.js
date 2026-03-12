@@ -69,10 +69,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RHYL = [
         text: "The best part is that there’s absolutely no pressure to hire. You can take your time to look through your options and ask questions without any hard sales or being pushed into a decision. You only move forward and hire when you’re 100% ready and comfortable with your choice. Plus, you’re safe in the knowledge that the roofers that get in touch with you all have capacity to fit you in.",
         notMarginBottom: true
     },
-    {
-        type: "PostCodeSectionLocation",
-        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
-    }
+    // {
+    //     type: "PostCodeSectionLocation",
+    //     className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
+    // }
 ];
 export const FREQUENTLY_DATA_RHYL = [
     {

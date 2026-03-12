@@ -27,6 +27,8 @@ import Feature from "../../FetureComponent/Feature";
 import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
+import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
+import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 
 function RoofersInMold() {
   useScrollToTop()
@@ -77,6 +79,11 @@ function RoofersInMold() {
         articles={ROOFERS_ADVICEINSIGHT_MOLD}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
       />
+      <WrapperBGWidth>
+        <div className="px-[30px] sm:px-10 md:px-16 xl:px-[120px]">
+          <PostCodeSectionLocation2 classNamePostCode="mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px] lg:justify-center lg:gap-12" serviceId={113} serviceName="Roofing" />
+        </div>
+      </WrapperBGWidth>
       <FAQ
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
         data={ROOFERS_FREQUENTLY_DATA_MOLD}
