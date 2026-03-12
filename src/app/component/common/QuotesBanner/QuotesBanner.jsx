@@ -6,13 +6,14 @@ import H3 from "../../UI/Typography/H3";
 import RoundedLogo from "../icons/RoudedLogo";
 import BackgroundLogo from "../icons/BackgroundLogo";
 import Image from "next/image";
-import BuyerRegistration from "../BuyerRegistration/BuyerRegistration";
+// import BuyerRegistration from "../BuyerRegistration/BuyerRegistration";
 import { CheckIcon, Loader2 } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 import { getCityName, setbuyerRequestData, setcitySerach, setBuyerStep } from "@/lib/store/buyerslice/buyerSlice";
 import { setSelectedServiceId } from "@/lib/store/findjobslice";
+import ReqBuyerRegistration from "../ReqBuyerRegistration/ReqBuyerRegistration";
 
 
 export default function QuotesBanner({
@@ -266,9 +267,19 @@ relative overflow-hidden">
         </div>
       </div>
 
-      {show && (
+      {/* {show && (
         <BuyerRegistration
           closeModal={handleClose}
+          service_Id={serviceId}
+          postcode={postcode}
+          serviceName={serviceName}
+          service_Name={serviceName}
+        />
+      )} */}
+
+      {show && (
+        <ReqBuyerRegistration
+          onClose={handleClose}
           service_Id={serviceId}
           postcode={postcode}
           serviceName={serviceName}

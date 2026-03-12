@@ -5,7 +5,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ELLESMEREPORT = [
     },
     {
         type: "p",
-        text: "Roofing mistakes are expensive to fix, so it’s vital to hire the right professional from the start. As with any home improvement service, the hardest part is knowing who to trust.",
+        text: `<a href="/en/gb/roofers-near-me" <a target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>Roofing</a> mistakes are expensive to fix, so it’s vital to hire the right professional from the start. As with any home improvement service, the hardest part is knowing who to trust.`,
     },
     {
         type: "p",

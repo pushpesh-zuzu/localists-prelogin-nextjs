@@ -16,7 +16,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "h2",
     text: "Benefits of hiring a local landscape gardener",
-    className: "mt-5 lg:mt-[72px]"
+    className: "mt-6 lg:mt-[72px]"
   },
 
   {

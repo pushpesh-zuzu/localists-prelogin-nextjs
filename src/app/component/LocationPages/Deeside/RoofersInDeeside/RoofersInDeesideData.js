@@ -83,10 +83,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
   //   type: "QuotesBanner",
   //   className: "mb-[0px] mt-[30px] md:mt-[80px] md:mb-[40px] lg:mt-[154px] lg:mb-[72px]"
   // },
-  {
-    type: "QuotesBanner",
-    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
-  },
+  // {
+  //   type: "QuotesBanner",
+  //   className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+  // },
 
 ];
 export const ROOFERS_FREQUENTLY_DATA_DEESIDE = [
@@ -234,8 +234,7 @@ export const VETTED_DATA_ROOFERS_DEESIDE = [
   <br/><br/> 
   `,
   `
-And that’s where Localists come in. We match you with local roofers in Deeside who can get the job done and have passed our rigorous vetting process. Just  input your postcode and answer a few questions to get 5 free no-obligation quotes delivered to your inbox within minutes. Review, compare, and choose the roofer that works best for you at your own time.
-`,
+And that’s where Localists come in. We match you with <a href="/en/gb/roofers-near-me" <a target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>local roofers</a> in Deeside who can get the job done and have passed our rigorous vetting process. Just input your postcode and answer a few questions to get 5 free no-obligation quotes delivered to your inbox within minutes. Review, compare, and choose the roofer that works best for you at your own time.`,
 ];
 
 export const BREADCRUM_DATA_ROOFERS_DEESIDE = [
