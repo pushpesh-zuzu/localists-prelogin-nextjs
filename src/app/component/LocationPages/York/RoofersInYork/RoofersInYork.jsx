@@ -39,7 +39,7 @@ function RoofersInYork() {
       <HeroSectionLocation
         heading1="Roofers"
         heading2="York"
-        description="Find the highest quality roofers in York now! Just enter your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
+        description={`Find the best <a href="/en/gb/roofers-near-me" <a target='_blank' rel='noopener noreferrer' style='text-decoration:underline;'>roofers</a> in York - Just enter your postcode and answer a few questions, and we’ll match you with up to 5 roofers near you who’ll be able to give you a quote on your job.`}
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -77,7 +77,7 @@ function RoofersInYork() {
         articles={ROOFERS_ADVICEINSIGHT_YORK}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
       />
-      <FAQ
+      <FAQ headingblack=" on roofers York"
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
         data={ROOFERS_FREQUENTLY_DATA_YORK}
       />

@@ -1,88 +1,15 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_YORK = [
   {
     type: "h2",
-    text: "Choosing the right roofer in York",
+    text: "Roofing costs in York – A friendly guide to real-world prices",
   },
   {
     type: "p",
-    text: "When it comes to roofing, trust matters. A roof protects everything inside your home, so cutting corners can cause more stress later on.",
+    text: "Thinking about getting some work done on your roof but unsure what it might cost? You’re not alone. To help you plan ahead, here’s a clear, no-nonsense snapshot of what common roofing jobs in York typically cost. Of course, these are guide prices based on our own internal data.",
   },
   {
     type: "p",
-    text: "A reliable roofer will want to see the problem up close before giving firm answers. That might mean climbing up to inspect the tiles or checking the loft space. If someone is willing to give a full diagnosis without a proper look, that’s worth questioning.",
-  },
-  {
-    type: "p",
-    text: "When comparing roofers in York, it’s sensible to look for:",
-  },
-  {
-    type: "li",
-    text: "Roofers who have experience with similar jobs"
-  },
-  {
-    type: "li",
-    text: "Clear written quotes without hidden clauses"
-  },
-  {
-    type: "li",
-    text: "Straightforward communication"
-  },
-  {
-    type: "li",
-    text: "Realistic timelines"
-  },
-  {
-    type: "li",
-    text: "Public liability insurance"
-  },
-  {
-    type: "li",
-    text: "Reviews from previous customers",
-    className: 'mb-0'
-  },
-  {
-    type: "image",
-    src: "/nearme/Roofing/roofinstalling.webp",
-    alt: "two roofers installing slate tiles onto a brand new roof ",
-    marginBottom: true,
-    marginTop: true
-  },
-  {
-    type: 'h2',
-    text: " Why using Localists makes finding Roofers York easier",
-
-  },
-  {
-    type: "p",
-    text: "Finding a roofer shouldn’t feel like trial and error. Yet that’s often what it turns into. You search, you scroll, you’re not quite sure who’s still active or who actually covers your area."
-  },
-  {
-    type: "p",
-    text: "Localists gives you a clearer starting point. Instead of guessing, you’re connected with roofers who are local and open to providing free quotes."
-  },
-  {
-    type: "p",
-    text: "It gives you space to compare without feeling pushed. No awkward follow-up calls. No pressure to say yes on the spot. Just information, options, and the freedom to choose when you’re ready."
-  },
-  // {
-  //   type: "QuotesBanner",
-  //   className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[154px] lg:mb-[154px]"
-  // },
-  {
-    type: "QuotesBanner",
-    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
-  },
-  {
-    type: "h2",
-    text: "How much does roofing cost in York?"
-  },
-  {
-    type: "p",
-    text: "There isn’t a flat price for roofing. The final cost usually depends on what’s actually happening up there. A small repair after a windy week is very different from removing and replacing an entire roof. Access to the property, the materials chosen, and how much labour is involved all affect the total cost."
-  },
-  {
-    type: "p",
-    text: "But here’s a rough guide of what the numbers may look like:"
+    text: "The final bill will depend on things like the size of your roof, the materials you choose, how easy the property is to access, and how much work is involved. That’s why getting a proper quote from a local roofer is always the smartest move. ",
   },
   {
     type: "AveragePriceLocation",
@@ -92,63 +19,133 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_YORK = [
     disclaimerText:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
     priceCards: [
       {
-        description: "For general roofing projects, homeowners in York typically pay around",
-        price: "£2,858",
-        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
+        description: "For general roofing jobs, homeowners usually spend around",
+        price: "£2,000",
+        className: "max-[360]:min-h-16 max-[360]:max-h-[76px] min-[360px]:min-h-12 min-[360px]:max-h-12  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[80px] lg:max-h-[80px]"
       },
       {
-        description: "For roofing repairs, the average cost tends to be around ",
-        price: "£862",
-        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
+        description: "On average, roof repairs in York come in at around",
+        price: "£815",
+        className: "max-[360]:min-h-16 max-[360]:max-h-[76px] min-[360px]:min-h-12 min-[360px]:max-h-12  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[80px] lg:max-h-[80px]"
 
       },
       {
-        description: "For emergency roofing call-outs, the average sits closer to ",
-        price: "£445",
+        description: "Emergency call-outs for roofers tend to average around",
+        price: "£560",
         className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
 
       },
       {
-        description: "For a full roof replacement, the average cost is around",
-        price: "£7,495",
+        description: "For a full replacement new roof, the average cost in Mold is around",
+        price: "£6,650",
         className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
       },
     ],
   },
   {
-    type: "p",
-    text: "These numbers are there to give you a sense of scale, not a fixed promise. Every roof is different. The best way to know what yours will cost is to have it looked at properly and compare a few quotes before making a decision"
+    type: "image",
+    src: "/nearme/Roofing/roofinstalling.webp",
+    alt: "two roofers installing slate tiles onto a brand new roof ",
+    marginBottom: true,
   },
+  {
+   type: "h2", text: "Common roofing services in York:", 
+
+  },
+
+{ type: "li", text: "Roof repairs – fixing leaks, slipped tiles, or damaged flashing before small problems turn into big headaches." },
+
+  { type: "li", text: "Full roof replacements – from pitched to flat roofs, for homes that need a complete overhaul." },
+
+  { type: "li", text: "Gutter cleaning and repairs – keeping water flowing properly and avoiding damp issues." },
+
+  { type: "li", text: "Chimney work – repointing, flashing repairs, or full maintenance to keep your chimney weatherproof." },
+
+  { type: "li", text: "Flat roof installation or resealing – perfect for garages, extensions, or tricky modern builds." },
+
+  { type: "li", text: "Roof inspections and surveys – spotting potential issues early so you can plan repairs before they become urgent." },
+   {
+    type: "QuotesBanner",
+    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
+  },
+  { type: "h2", text: "What to look for in a York roofer – Qualifications and timings" },
+  {
+    type: "p",
+    text: "Finding a roofer who knows what they’re doing is more than just spotting a ladder and a van. Here’s how to make sure you’re hiring someone qualified, safe, and reliable.",
+  },
+  {
+ type:"pbold",
+ text:"Key qualifications and certifications:",
+ className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+
+  },
+  { type: "li", text: "NVQ Level 2 in Roofing (or equivalent) – proof they know the trade inside out." },
+
+  { type: "li", text: "CSCS card – confirms they’re trained to work safely on construction sites." },
+
+  { type: "li", text: "CHAS accreditation – shows they meet strict health and safety standards." },
+
+  { type: "li", text: "Public liability insurance – essential protection if anything goes wrong." },
+
+  { type: "li", text: "Membership of professional trade bodies – like the NFRC or CORC, which signal credibility and experience." }
+,
+{
+  type:"pbold",
+  text:"How long jobs usually take in York:",
+ className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+
+},
+{ type: "li", text: "Small repairs – a day or two is often enough to fix leaks, slipped tiles, or minor damage." },
+
+{ type: "li", text: "Roof sections – replacing part of a roof or tackling larger repairs usually takes 2–5 days." },
+
+{ type: "li", text: "Full roof replacement – bigger projects can stretch from 1 to 3 weeks, depending on the roof type, size, and, of course, York’s famously unpredictable weather." },
+
+{
+    type: "p",
+    text: "By checking qualifications and understanding realistic timings, you can avoid surprises and feel confident that your York roof is in capable hands."
+  },
+      {
+    type: "PostCodeSectionLocation",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
+  }
 
 
 ];
 export const ROOFERS_FREQUENTLY_DATA_YORK = [
   {
     key: "1",
-    title: "Which roof is best for a house?",
+    title: "How do I pick the best roofer?",
     description: `
-        There isn’t one single answer because it depends on the house itself. The pitch of the roof, the age of the property, your budget, and even the local weather all play a part. Concrete tiles are common because they’re practical and cost-effective. Slate looks great and lasts a long time but comes at a higher price. The “best” option is usually the one that suits your home and how long you plan to stay in it.
+        Start by checking qualifications, insurance, and trade memberships. Read customer reviews, compare quotes, and ask for examples of past work. The best roofer is the one who balances experience, reliability, and clear communication, not just the cheapest price.
         `,
   },
   {
     key: "2",
-    title: "Should I pay a roofer in cash?",
+    title: "Which type of roof has the shortest lifespan?",
     description: `
-        Paying in cash isn’t automatically a problem, but what matters more is having everything clearly written down. You should always have a proper quote before work starts and a receipt once it’s finished. Many people prefer bank transfer because it leaves a record, but the key thing is transparency. Avoid large upfront payments unless it’s for agreed materials.
+        Asphalt or standard shingles usually wear out faster than slate, clay, or metal roofs. Expect around 15 - 25 years for basic shingles, compared with 50+ years for higher-end materials like slate.
         `,
   },
   {
     key: "3",
-    title: "Which roof material lasts the longest?",
+    title: "What’s the cheapest roof that lasts a long time?",
     description: `
-        Natural slate is often considered the longest-lasting roofing material. When it’s installed properly and maintained, it can last for decades. Clay tiles also have a strong lifespan. Of course, durability depends on installation quality and exposure to the elements as much as the material itself.
+        A well-installed metal roof or high-quality asphalt shingles can be surprisingly durable for the cost. They often combine affordability with longevity, making them a smart choice for homeowners looking for value.
         `,
   },
   {
     key: "4",
-    title: "What is the best time of year to replace a roof?",
+    title: "Is it cheaper to have a metal roof or shingles?",
     description: `
-        Most roofers prefer steady, dry weather. Spring and summer are popular because conditions are usually more predictable. That said, roofing work can be done at other times of the year if the weather allows. Timing often comes down to urgency and availability rather than a perfect calendar month.
+        Shingles are generally cheaper upfront, but metal roofs often last much longer and need less maintenance. Over time, a metal roof can be the more cost-effective option.
+        `,
+  },
+  {
+    key: "5",
+    title: "What is the most expensive part of replacing a roof?",
+    description: `
+        Labour and materials usually make up the biggest chunk of the cost. High-end materials like slate or lead, complex roof designs, and difficult access can all drive prices up. Planning ahead and getting multiple quotes helps avoid surprises.
         `,
   },
 ];
@@ -209,11 +206,11 @@ export const ROOFERS_TABDATA_YORK = {
     related: [
     {
       title: "Roofers Leeds",
-      url: ""
+      url: "/en/gb/roofers-near-me/leeds"
     },
     {
       title: "Roofers York",
-      url: ""
+      url: "/en/gb/roofers-near-me/york"
     },
     {
       title: "Roofers Hull",
@@ -241,11 +238,11 @@ export const ROOFERS_TABDATA_YORK = {
     },
     {
       title: "Roofers Manchester",
-      url: ""
+      url: "/en/gb/roofers-near-me/manchester"
     },
     {
       title: "Roofers Stockport",
-      url: ""
+       url: "/en/gb/roofers-near-me/stockport"
     },
     {
       title: "Roofers North Yorkshire",
@@ -255,12 +252,16 @@ export const ROOFERS_TABDATA_YORK = {
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_YORK = [
-  `Are your roof tiles starting to shift every time the wind picks up? Telling yourself it’ll probably survive “just one more winter”? Truth is, if you’re starting to question it, it’s probably time to get it looked at. And we know the best roofers in York.
+  `When your roof needs attention, the last thing you want is added stress. Yet for most homeowners, the hardest part isn’t the repair - it’s knowing who to trust in the first place. Endless listings, mixed reviews, and everyone claiming to be “the best in the area” don’t make it any easier.
   <br/><br/> 
   `,
   `
-Simply tell us what you need: a few tile replacements, repair, routine maintenance, or you’re just looking around for quotes? No worries, we will send up to 5 free no-obligation quotes from experts near you in York. Take your time, compare and decide what works best for you.
+That’s where Localists come in. We connect you with experienced, vetted roofers in York who can handle any roofing job. You don’t need to wonder whether they’ve got capacity to do your job, or worry if they’re reliable. We’ve done all that for you.
+<br/><br/>
 `,
+`
+Zero cost. Zero obligation. Zero stress
+`
 ];
 
 export const BREADCRUM_DATA_ROOFERS_YORK = [
@@ -285,26 +286,20 @@ export const POPULAR_SERVICES_ROOFERS_YORK = [
 export const ROOFERS_FEEDBACK_YORK = [
   {
     id: 1,
-    text: "We’d been hearing a faint rattling sound on windy nights but couldn’t work out what it was. Turned out a few tiles had shifted slightly. It wasn’t a huge job, but I’m glad we didn’t ignore it. The roofer explained it in simple terms and had it sorted quicker than expected.",
-    name: "Owain G.",
+    text: "After the heavy rain, our roof started leaking in a couple of places. I contacted a local roofer via Localists, and they were on site the very next day. They explained the process, fixed the leaks, and even tidied up afterward. No stress, no upselling.",
+    name: "Harriet B.",
   },
   {
     id: 2,
-    text: "There was a small leak above the landing that only showed up when it rained heavily. I assumed it would mean replacing half the roof, but it didn’t. They found the issue around the flashing and fixed it without turning it into something bigger. It felt honest, which I appreciated.",
-    name: "Megan P.",
+    text: "Our flat roof on the rear extension had started to sag, and I was worried about water getting in. The roofer arrived on time, worked efficiently, and gave us some useful maintenance tips. The job was completed in two days and looks fantastic.",
+    name: "Ewan G.",
   },
   {
     id: 3,
-    text: "We bought an older property and knew the roof would need attention at some point. After getting a few quotes, we felt more confident about what actually needed doing versus what could wait. The work took a few days and was noisier than we expected, but it was handled properly.",
-    name: "Rhys B.",
-  },
-  {
-    id: 4,
-    text: "Noticed a damp patch forming in our spare bedroom ceiling but couldn’t see anything obvious from outside. The roofer did a proper check and found a small issue near the ridge tiles. He was local to us so booked us in for a next day fix. Highly recommend Localists.",
-    name: "Catrin H.",
+    text: "A storm blew off a few tiles, and I had no idea who to call. Within hours, a roofer arrived, assessed the damage, and replaced everything safely. Quick, professional, and completely hassle-free.",
+    name: "Leonora S.",
   },
 ];
-
 export const ROOFERS_DATA_YORK = [
   {
     id: 1,

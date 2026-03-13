@@ -72,7 +72,8 @@ function HeroSectionLocation({
               <p className="font-[Arial] font-bold  text-[18px] leading-[18px]
                       sm:text-base sm:leading-[18px]
                       lg:text-[20px] lg:leading-[22px] tracking-[0em]! text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-[80%] sm:max-w-[60%] md:max-w-[450px] lg:max-w-[590px] text-white pt-[11px] md:pt-4 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
-                {description}
+                
+                <span dangerouslySetInnerHTML={{ __html: description }} />
               </p>
               <PostCodeSearchFieldLocation serviceId={serviceId} serviceName={serviceName}             
               />
