@@ -1,143 +1,158 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MANCHESTER = [
     {
         type: "h2",
-        text: "Why hire Manchester Roofers through Localists?",
+        text: "Roofing costs in Manchester: A friendly price guide",
     },
     {
         type: "p",
-        text: "Roofing mistakes are expensive to fix, so it’s vital to hire the right professional from the start. As with any home improvement service, the hardest part is knowing who to trust.",
-    },
-    {
-        type: "p",
-        text: "Localists removes the guesswork. Instead of scrolling endlessly or relying on half-remembered recommendations, you simply describe the job once and let the right professionals come to you. You aren’t rushed, you aren’t pushed, and you’re never stuck with just one option. When you source your contractor through Localists, you get:",
-    },
-    {
-        type: "pbold",
-        text: "You’re matched with local experts"
-    },
-    {
-        type: "p",
-        text: "Not random listings. Real roofers working in and around Manchester and who understand the area.",
-    },
-    {
-        type: "pbold",
-        text: "Quotes are tailored to your specific job"
-    },
-    {
-        type: "p",
-        text: "A slipped tile isn’t the same as a sagging flat roof. Each quote reflects what you’ve described, so you’re not dealing with generic estimates."
-    },
-    { type: "PostCodeSectionLocation" },
-    {
-        type: "pbold",
-        text: "You control the timing"
-    },
-    {
-        type: "p",
-        text: "Whether it’s urgent or something you’re planning in advance, you’ll hear from roofers who can work within your timeframe."
-    },
-    {
-        type: "pbold",
-        text: "Choice and transparency"
-    },
-    {
-        type: "p",
-        text: "Reviews from real customers. Details of previous work. Clear breakdowns. It’s easier to spot quality before anyone climbs a ladder."
-    },
-    {
-        type: "pbold",
-        text: "Better pricing confidence"
-    },
-    {
-        type: "p",
-        text: "With up to five free quotes, you can compare approaches and avoid overpaying.",
-        notMarginBottom: true
-    },
-    {
-        type: "image",
-        src: "/nearme/Roofing/roofinstalling.webp",
-        alt: "two roofers installing slate tiles onto a brand new roof",
-        marginBottom: true,
-        marginTop: true
-    },
-    {
-        type: 'h2',
-        text: "What do roofers in Manchester usually charge?",
-    },
-    {
-        type: "p",
-        text: "Roofing costs aren’t one-size-fits-all. The final price often comes down to the size of the roof, how easy it is to access, the materials involved, and what’s actually discovered once the work begins."
-    },
-    {
-        type: "p",
-        text: "To give you a rough idea of what people in Manchesters tend to pay:"
+        text: "If you’re staring at a dodgy roof and wondering, “How much is this going to cost me?”, don’t panic. Roofing costs in Manchester vary depending on the job, the materials, and how adventurous your roof happens to be. The good news? Knowing the ranges upfront makes budgeting way easier.",
     },
     {
         type: "pricingTable",
-        title: "Average cost of roofers in Manchester",
+        title: "Average cost of roofing in Manchester",
         calculatorText: "click here.",
         calculatorLink: "/en/gb/roofing-multi-form-ppc",
-        disclaimer:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+        disclaimer: "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
         prices: [
             {
-                text: "General roofing work comes in at around",
-                price: "£2,121"
+                text: "For a general roofing job in Manchester, the range varies with the average coming in around",
+                price: "£2,120"
             },
             {
-                text: "Roof repairs typically average about",
-                price: "£739"
+                text: "For roofing repairs like patching leaks or replacing a few tiles, costs usually average about",
+                price: "£740"
             },
             {
-                text: "Emergency roofing call-outs are usually around",
+                text: "For emergency roofing services, you can expect to pay an average of",
                 price: "£630"
             },
             {
-                text: "Full roof replacements sit closer to",
-                price: "£6,837"
+                text: "For a full replacement if your roof suffered serious damage, it comes at about",
+                price: "£6,840"
             }
         ]
     },
     {
+        type: 'h2',
+        text: "Hiring a roofer in Manchester? Here’s what really happens",
+    },
+    {
         type: "p",
-        text: "These numbers aren’t fixed quotes, just a guide to help you understand what’s normal locally. The surefire way to know what your own roof will cost is to get tailored quotes from local Manchester roofers who can see the job firsthand."
+        text: "Before you hire a roofer near you, it helps to know what’s involved.",
+    },
+    {
+        type: "p",
+        text: "When a professional roofer turns up, the first thing they’ll do isn’t rush to fix anything, they’ll take time to properly inspect your roof. That means checking tiles or slates, flashing, gutters, and any obvious weak spots, often from both ground level and up close. They’re looking for the real cause of the problem, not just the visible symptoms. Once they’ve had a good look, they’ll explain what they’ve found, talk you through the options, and recommend what actually needs doing.",
+    },
+    {
+        type: "p",
+        text: "Here are the most common jobs a roofer will handle:",
+    },
+    {
+        type: "uili",
+        heading: "Roof repairs\u00A0",
+        text: "- Leaks, slipped tiles, broken flashing, or any sneaky damage caused by storms. Think of this as giving your roof a quick check-up to stop small problems from turning into big headaches.",
+        marginTop: true,
+    },
+    {
+        type: "uili",
+        heading: "Full roof replacements\u00A0",
+        text: "- Sometimes patches aren’t enough. A full replacement gives your home a brand-new, watertight cover, perfect if your roof has seen better decades.",
+        marginTop: false,
+    },
+    {
+        type: "uili",
+        heading: "Gutter cleaning and repair\u00A0",
+        text: "- Gutters might be out of sight, but they’re not out of mind. Roofers can clear debris, fix leaks, and make sure rainwater goes where it should.",
+        marginTop: false,
+    },
+    {
+        type: "uili",
+        heading: "Chimney repointing and flashing repair\u00A0",
+        text: "- Chimneys and flashings take a beating over time. Fixing these prevents leaks, drafts, and long-term damage to your roof structure.",
+        marginTop: false,
+    },
+    {
+        type: "uili",
+        heading: "Flat roof installation or resealing\u00A0",
+        text: "- Flat roofs need special attention. Whether it’s installing a new one or resealing an old one, the right roofer keeps water out and insulation in.",
+        marginTop: false,
+    },
+    {
+        type: "uili",
+        heading: "Roof inspections and surveys\u00A0",
+        text: "- Not sure what’s wrong? Roofers can carry out a full inspection, highlight any hidden issues, and give you a clear plan for repairs or replacement.",
+        noMarginBottom: true
     },
     {
         type: "QuotesBanner",
-        className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+        className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
+    },
+    {
+        type: 'h2',
+        text: "What to look for when hiring a roofer",
+    },
+    {
+        type: "p",
+        text: "Finding a roofer isn’t just about picking the first person who answers the phone. You want someone qualified, insured, and experienced, so your roof stays dry and your home safe. Here’s a quick checklist to make sure you hire the right pro:"
+    },
+    {
+        type: "p",
+        text: "Qualifications and credentials:"
+    },
+    {
+        type: "li",
+        text: "NVQ Level 2 in Roofing (or equivalent) – Shows they’ve been trained properly and know their stuff.",
+    },
+    {
+        type: "li",
+        text: "Public liability insurance – Accidents happen. This protects both you and the roofer if anything goes wrong on site.",
+    },
+    {
+        type: "li",
+        text: "CSCS card for site work – Confirms they’re trained to work safely on construction sites.",
+    },
+    {
+        type: "li",
+        text: "Memberships – Look for professional bodies like the NFRC (National Federation of Roofing Contractors) or CORC (Council of Roofing Contractors). Membership shows they stick to industry standards and best practices.",
+    },
+    {
+        type: "PostCodeSectionLocation",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
     },
 ];
 export const FREQUENTLY_DATA_MANCHESTER = [
     {
         key: "1",
-        title: "How do I know if my house needs a new roof?",
+        title: "What’s the cheapest time of year to replace a roof?",
         description: `
-        Most roofs don’t fail overnight. It’s usually a buildup of subtle warning signs: tiles slipping more often than they should, watermarks that keep reappearing on ceilings, bits of grit collecting in the gutters, or a roofline that doesn’t look quite straight anymore. More so, if you’re calling a professional out every year for a different ‘‘patch job’’, that’s often the point where a proper assessment makes sense.
+       Typically, late winter to early spring can be a good time. Roofers are a bit less busy than during peak summer months, so you might get a better deal. That said, Manchester’s unpredictable weather means even the “cheaper months” could involve a few rainy-day delays, so plan accordingly.
         `,
     },
     {
         key: "2",
-        title: "How many years before you should replace your roof?",
+        title: "How long does a roofing job usually take?",
         description: `
-        There isn’t a fixed timeframe. Some tiled roofs last 40 years or more; others need attention sooner, depending on weather, ventilation, and how well previous repairs were done. Flat roofs tend to have a shorter lifespan. If your roof is over 20 - 25 years old, it’s worth having it checked occasionally rather than waiting for a problem to show itself.
+        It depends on the job. Small repairs might be done in 1–2 days, medium repairs take 2–5 days, and a full roof replacement can range from 1–4 weeks, depending on size, materials, and weather conditions. Think of it as a mini home renovation, except the ladder climbs are optional for you!
         `,
     },
     {
         key: "3",
-        title: "How expensive is a roofer?",
+        title: "What is the cheapest option for a new roof?",
         description: `
-        It really depends on the job. Replacing a few tiles might cost a few hundred pounds. Larger repairs or structural work climb from there. A full roof replacement is naturally a bigger investment. The key is understanding what you’re paying for - materials, labour, safety equipment, and waste removal - and comparing like-for-like quotes.`,
+        For budget-friendly roofing, flat roofs with felt or standard tiles tend to be the most affordable. They’re quick to install, functional, and still keep your home dry, though they might not have the same aesthetic “wow” factor as slate or premium tiles.`,
     },
     {
         key: "4",
-        title: "What’s the most common roof repair?",
+        title: "Do roofers work in all weather?",
         description: `
-        Slipped or cracked tiles are probably top of the list. They’re easy to overlook from the ground, but once water finds its way underneath, that’s when problems start. Flashing around chimneys is another frequent culprit.`,
+        Not exactly. Safety comes first. Roofers will usually pause work during heavy rain, strong winds, or icy conditions. Drizzle? Probably fine. Storms? Definitely not. It’s all about keeping the team (and your home) safe while still getting the job done efficiently.`,
     },
     {
         key: "5",
-        title: "Should I pay a roofer in cash?",
+        title: "What is the best time of year to replace a roof?",
         description: `
-        It’s generally safer to use a traceable payment method. Bank transfers or card payments give you a record, which can be useful if you ever need to refer back to the job. Cash isn’t automatically a red flag, but if someone insists on it and avoids paperwork, that’s usually a sign to slow things down and ask questions.`,
+        Spring through early autumn is ideal. Days are longer, the weather is more predictable, and materials cure better in warmer temperatures. That said, a professional Manchester roofer can work around typical rainy spells; they’re used to this city’s mood swings.`,
     },
 ];
 export const ROOFERS_ADVICEINSIGHT_MANCHESTER = [
@@ -195,60 +210,67 @@ export const ROOFERS_TABDATA_MANCHESTER = {
         },
     ],
     related: [
-    {
-      title: "Roofers Leeds",
-      url: "/en/gb/roofers-near-me/leeds"
-    },
-    {
-      title: "Roofers York",
-      url: ""
-    },
-    {
-      title: "Roofers Hull",
-      url: ""
-    },
-    {
-      title: "Roofers Bolton",
-      url: ""
-    },
-    {
-      title: "Roofers Chester",
-      url: "/en/gb/roofers-near-me/chester"
-    },
-    {
-      title: "Roofers Cheshire",
-      url: ""
-    },
-    {
-      title: "Roofers Harrogate",
-      url: ""
-    },
-    {
-      title: "Roofers Liverpool",
-      url: "/en/gb/roofers-near-me/liverpool"
-    },
-    {
-      title: "Roofers Manchester",
-      url: ""
-    },
-    {
-      title: "Roofers Stockport",
-      url: "/en/gb/roofers-near-me/stockport"
-    },
-    {
-      title: "Roofers North Yorkshire",
-      url: ""
-    }
-  ],
+        {
+            title: "Roofers Leeds",
+            url: "/en/gb/roofers-near-me/leeds"
+        },
+        {
+            title: "Roofers York",
+            url: "/en/gb/roofers-near-me/york"
+        },
+        {
+            title: "Roofers Hull",
+            url: ""
+        },
+        {
+            title: "Roofers Bolton",
+            url: ""
+        },
+        {
+            title: "Roofers Chester",
+            url: "/en/gb/roofers-near-me/chester"
+        },
+        {
+            title: "Roofers Cheshire",
+            url: ""
+        },
+        {
+            title: "Roofers Harrogate",
+            url: ""
+        },
+        {
+            title: "Roofers Liverpool",
+            url: "/en/gb/roofers-near-me/liverpool"
+        },
+        {
+            title: "Roofers Manchester",
+            url: ""
+        },
+        {
+            title: "Roofers Stockport",
+            url: "/en/gb/roofers-near-me/stockport"
+        },
+        {
+            title: "Roofers North Yorkshire",
+            url: ""
+        }
+    ],
     findMore: [],
 };
 export const VETTED_DATA_ROOFERS_MANCHESTER = [
-    `With roofs, small problems don’t stay small for long. It often goes from manageable to urgent faster than you’d expect.
+    `Manchester's weather has a reputation: rain, wind, occasional hail, and the rare sun that just shows up to remind you it exists. If your roof is showing signs of wear, leaks, missing tiles, or just looking a bit tired after years of weathering the city’s unpredictable skies, it’s time to call in the experts.
   <br/><br/> 
   `,
     `
-If you’re looking for roofers in Manchester, you don’t have to spend hours searching. We’ll match you with qualified contractors in your area in minutes. Simply tell us what you need, and receive free quotes directly to your inbox. No hard sales. No pressure to hire.
+Finding trustworthy roofers in Manchester can feel like searching for a needle in a haystack. You want someone who knows local building codes inside out, understands the unique challenges posed by the city’s weather, and won’t vanish mid-job, leaving you staring at a gaping hole in your ceiling.
+  <br/><br/>
 `,
+    `
+That’s where Localist comes in. We do the heavy lifting for you, connecting you with reliable, vetted <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3; text-decoration:underline;">local roofers</a> in Manchester who can handle everything from small repairs to full roof replacements.
+  <br/><br/>
+`,
+    `Zero hassle. Zero stress. Zero guesswork. Just reputable roofers in Manchester, ready to start.
+  `
 ];
 
 export const BREADCRUM_DATA_ROOFERS_MANCHESTER = [
@@ -273,24 +295,24 @@ export const POPULAR_SERVICES_ROOFERS_MANCHESTER = [
 export const ROOFERS_FEEDBACK_MANCHESTER = [
     {
         id: 1,
-        text: "We’d noticed a small stain on the ceiling for months and kept pretending it wasn’t getting bigger. Eventually, we decided to deal with it properly. The roofer who came out didn’t overcomplicate things or try to scare us; he showed us exactly where the issue was and fixed it within a few hours. It felt straightforward, which is all we wanted.",
-        name: "Karen W.",
+        text: "After a storm damaged our flat roof, we weren’t sure where to start. Localists helped us find a roofer quickly, and they replaced the whole section in under a week. The team were polite, tidy, and left the place spotless.",
+        name: "Ronan C.",
     },
     {
         id: 2,
-        text: "After the last spell of heavy wind, a couple of tiles ended up in the garden. I was worried it would turn into a massive job, but it didn’t. The quote was clear, the timing worked around my shifts, and the roof’s been solid since. I appreciated how normal the whole experience felt.",
-        name: "Mark E.",
+        text: "Our pitched roof needed replacing after years of wear and tear. The roofer gave us a clear quote, timeline, and advice on materials. Work was completed on schedule, and the new roof looks amazing, it really feels like a proper upgrade.",
+        name: "Elowen T.",
     },
     {
         id: 3,
-        text: "Our house isn’t new, and the roof has clearly had work done over the years. We wanted someone to tell us honestly whether we needed a full replacement or not. The advice was balanced: some repairs now, replacement later. No pressure either way. That honesty stuck with us.",
-        name: "Aisha R.",
+        text: "I was worried about hiring a roofer for the first time, but the Localists' service made it simple. The team arrived on time, worked efficiently, and the roof repairs were perfect. No leaks, no stress, just a happy, dry house.",
+        name: "Soren W.",
 
     },
     {
         id: 4,
-        text: "Our house isn't new, and the roof has been slowly showing its age for a while. We'd patched bits here and there over the years, but it just got to a point where it didn't make sense to keep doing that. Got a few quotes, compared them properly, and went with someone who was honest about what needed doing and what could wait. The job was done steadily over a few days, and the price didn't change from what we'd been told. Really pleased with the result.",
-        name: "Carol S.",
+        text: "We noticed some damp patches appearing on the ceiling after a heavy downpour, so we used Localists to find someone local. The roofer was brilliant. Got the job done on time. Everything is watertight again.",
+        name: "Jude S.",
     },
 ];
 

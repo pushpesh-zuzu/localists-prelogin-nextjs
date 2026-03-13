@@ -39,7 +39,7 @@ function RoofersInManchester() {
             <HeroSectionLocation
                 heading1="Roofers"
                 heading2="Manchester"
-                description="Get free, no-obligation quotes from the highest quality roofers working across Manchester. Enter your postcode below and share a few details about the work. It only takes a minute to get started."
+                description="Need a roofing specialist in Manchester? Look no further! Get free no obligation quotes now from local roofers in your area. Simply share your postcode and a few details - takes under a minute!"
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
