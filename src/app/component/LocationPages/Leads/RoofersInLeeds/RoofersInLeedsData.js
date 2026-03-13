@@ -1,7 +1,8 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
   {
     type: "QuotesBanner",
-    className: "mb-[50px] mt-[22px] md:mt-[42px] md:mb-[80px] lg:mt-[114px] lg:mb-[180px]"
+    className:
+      "mb-[50px] mt-[22px] md:mt-[42px] md:mb-[80px] lg:mt-[114px] lg:mb-[180px]",
   },
   {
     type: "h2",
@@ -16,25 +17,26 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
     title: "Average cost of roofing in Leeds",
     calculatorText: "click here.",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimer: "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+    disclaimer:
+      "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
     prices: [
       {
         text: "For general roofing jobs you can expect to spend an average of",
-        price: "£2,010"
+        price: "£2,010",
       },
       {
         text: "With roofing repairs like fixing slipped tiles or broken flashing, it often comes in around",
-        price: "£820"
+        price: "£820",
       },
       {
         text: "Emergency roofing services typically cost around",
-        price: "£590"
+        price: "£590",
       },
       {
         text: "For full roof replacement, you can expect to pay an average of",
-        price: "£6,620"
-      }
-    ]
+        price: "£6,620",
+      },
+    ],
   },
   {
     type: "p",
@@ -47,22 +49,22 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
   {
     type: "p",
     text: "The final cost always comes down to how complex your roof is, the materials you pick, and any tricky challenges the job might have. It’s always worth getting a professional quote before committing, and with Localists, you can receive multiple free, no-obligation quotes in just minutes, so you’ll know exactly what to expect before any work begins.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
     marginBottom: true,
-    marginTop: true
+    marginTop: true,
   },
   {
     type: "h2",
-    text: "Find the right roofer in Leeds for the job"
+    text: "Find the right roofer in Leeds for the job",
   },
   {
     type: "p",
-    text: "Roofing isn’t just about slapping tiles on top of your house; there’s a lot more to it than meets the eye. Knowing what service you need makes finding the right roofer much easier. Here’s a quick guide to what Leeds roofers can handle:"
+    text: "Roofing isn’t just about slapping tiles on top of your house; there’s a lot more to it than meets the eye. Knowing what service you need makes finding the right roofer much easier. Here’s a quick guide to what Leeds roofers can handle:",
   },
   {
     type: "uili",
@@ -125,8 +127,8 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
   },
   {
     type: "PostCodeSectionLocation",
-    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
-  }
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
 ];
 export const ROOFERS_FREQUENTLY_DATA_LEEDS = [
   {
@@ -215,48 +217,48 @@ export const ROOFERS_TABDATA_LEEDS = {
   related: [
     {
       title: "Roofers Leeds",
-      url: ""
+      url: "/en/gb/roofers-near-me/leeds",
     },
     {
       title: "Roofers York",
-      url: ""
+      url: "/en/gb/roofers-near-me/york",
     },
     {
       title: "Roofers Hull",
-      url: ""
+      url: "",
     },
     {
       title: "Roofers Bolton",
-      url: ""
+      url: "",
     },
     {
       title: "Roofers Chester",
-      url: "/en/gb/roofers-near-me/chester"
+      url: "/en/gb/roofers-near-me/chester",
     },
     {
       title: "Roofers Cheshire",
-      url: ""
+      url: "",
     },
     {
       title: "Roofers Harrogate",
-      url: ""
+      url: "",
     },
     {
       title: "Roofers Liverpool",
-      url: "/en/gb/roofers-near-me/liverpool"
+      url: "/en/gb/roofers-near-me/liverpool",
     },
     {
       title: "Roofers Manchester",
-      url: ""
+      url: "/en/gb/roofers-near-me/manchester",
     },
     {
       title: "Roofers Stockport",
-      url: ""
+       url: "/en/gb/roofers-near-me/stockport"
     },
     {
       title: "Roofers North Yorkshire",
-      url: ""
-    }
+      url: "",
+    },
   ],
   findMore: [],
 };

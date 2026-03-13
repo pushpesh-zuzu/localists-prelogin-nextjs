@@ -216,7 +216,7 @@ export const ROOFERS_TABDATA_STOCKPORT = {
         },
         {
             title: "Roofers Stockport",
-            url: ""
+            url: "/en/gb/roofers-near-me/stockport"
         },
         {
             title: "Roofers North Yorkshire",
