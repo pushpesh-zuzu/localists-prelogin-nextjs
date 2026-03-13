@@ -295,7 +295,7 @@ export const ROOFERS_TABDATA_CHESTER = {
   related: [
     {
       title: "Roofers Leeds",
-      url: "/en/gb/roofers-near-me/leeds"
+      url: ""
     },
     {
       title: "Roofers York",
@@ -331,7 +331,7 @@ export const ROOFERS_TABDATA_CHESTER = {
     },
     {
       title: "Roofers Stockport",
-      url: "/en/gb/roofers-near-me/stockport"
+      url: ""
     },
     {
       title: "Roofers North Yorkshire",

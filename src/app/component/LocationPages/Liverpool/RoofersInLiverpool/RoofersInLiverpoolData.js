@@ -298,7 +298,7 @@ export const ROOFERS_TABDATA_LIVERPOOL = {
   related: [
     {
       title: "Roofers Leeds",
-      url: "/en/gb/roofers-near-me/leeds"
+      url: ""
     },
     {
       title: "Roofers York",
@@ -334,7 +334,7 @@ export const ROOFERS_TABDATA_LIVERPOOL = {
     },
     {
       title: "Roofers Stockport",
-      url: "/en/gb/roofers-near-me/stockport"
+      url: ""
     },
     {
       title: "Roofers North Yorkshire",
