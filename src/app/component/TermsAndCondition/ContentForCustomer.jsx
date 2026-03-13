@@ -16,7 +16,7 @@ export const professionalsTermsData = [
         text: "If you do not agree with these Terms of Use, or if you are unsure about their meaning, you should not use our Website or Marketplace Introductions, and you must not click “accept” or “sign up” when creating an Account. If you are acting on behalf of a business or other organisation, you confirm that you have the authority to commit that entity to these Terms of Service.",
     },
 
-    { type: "h3", number: "About Our Marketplace", fullWidth: true },
+    { type: "h2", text: "About Our Marketplace", fullWidth: true },
 
     {
         type: "p",

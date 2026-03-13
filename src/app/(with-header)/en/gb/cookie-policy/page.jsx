@@ -238,11 +238,11 @@ export const professionalsTermsData = [
     },
     {
         type: "li",
-        text: `For the Firefox web browser, please visit this page from Mozilla: <a href="https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored" target="_blank" style="color:#00afe3;">https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored</a>`,
+        text: `For the Firefox web browser, please visit this page from Mozilla: <a href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox" target="_blank" style="color:#00afe3;">https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored</a>`,
     },
     {
         type: "li",
-        text: `For the Safari web browser, please visit this page from Apple: <a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank" style="color:#00afe3;">https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac</a>`,
+        text: `For the Safari web browser, please visit this page from Apple: <a href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac" target="_blank" style="color:#00afe3;">https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac</a>`,
     },
     {
         type: "li",
