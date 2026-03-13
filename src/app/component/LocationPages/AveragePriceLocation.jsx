@@ -73,7 +73,7 @@ export default function AveragePriceLocation({
                 >
                   {priceCards[0].description}
                 </Paragraph>
-                {priceCards[0].price && <p className="max-[360px]:text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center  md:text-center lg:text-center text-[#253238] lg:mt-3">
+                {priceCards[0].price && <p className="max-[360px]:text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center  md:text-center lg:text-center text-[#253238] lg:mt-3">
                   {priceCards[0].price}{" "}
                   {showPerMSquare && <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
                 </p>}
@@ -87,7 +87,7 @@ export default function AveragePriceLocation({
                 >
                   {priceCards[1].description}
                 </Paragraph>
-                {priceCards[1].price && <p className=" max-[360px]:text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3 ">
+                {priceCards[1].price && <p className=" max-[360px]:text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center md:text-center text-[#253238] lg:mt-3 ">
                   {priceCards[1].price}{" "}
                   {showPerMSquare && <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
                 </p>}
@@ -104,7 +104,7 @@ export default function AveragePriceLocation({
                 >
                   {priceCards[2].description}
                 </Paragraph>
-                {priceCards[2].price && <p className=" max-[360px]:text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238]  lg:mt-3">
+                {priceCards[2].price && <p className=" max-[360px]:text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center md:text-center text-[#253238]  lg:mt-3">
                   {priceCards[2].price}{" "}
                   {showPerMSquare && <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
                 </p>}
@@ -118,7 +118,7 @@ export default function AveragePriceLocation({
                 >
                   {priceCards[3].description}
                 </Paragraph>
-                {priceCards[3].price && <p className=" max-[360px]:text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-left min-[450px]:text-center md:text-center text-[#253238] lg:mt-3">
+                {priceCards[3].price && <p className=" max-[360px]:text-[24px] min-[360px]:text-[30px] lg:text-5xl tracking-[-0.03em] font-black text-center min-[450px]:text-center md:text-center text-[#253238] lg:mt-3">
                   {priceCards[3].price}{" "}
                   {showPerMSquare && <span className="max-[360]:text-xs min-[360px]:text-sm xl:text-2xl">per &nbsp; m²</span>}
 
