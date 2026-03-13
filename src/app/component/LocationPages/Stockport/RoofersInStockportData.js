@@ -1,144 +1,125 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_STOCKPORT = [
     {
         type: "h2",
-        text: "Why hire Stockport Roofers through Localists?",
+        text: "How much will roofing in Stockport cost?",
     },
     {
         type: "p",
-        text: "Roofing mistakes are expensive to fix, so it’s vital to hire the right professional from the start. As with any home improvement service, the hardest part is knowing who to trust.",
-    },
-    {
-        type: "p",
-        text: "Localists removes the guesswork. Instead of scrolling endlessly or relying on half-remembered recommendations, you simply describe the job once and let the right professionals come to you. You aren’t rushed, you aren’t pushed, and you’re never stuck with just one option. When you source your contractor through Localists, you get:",
-    },
-    {
-        type: "pbold",
-        text: "Local expertise"
-    },
-    {
-        type: "p",
-        text: "Real roofers working in and around Stockport and who understand the area. Including local planning rules.",
-    },
-    {
-        type: "pbold",
-        text: "Quotes tailored to your job"
-    },
-    {
-        type: "p",
-        text: "A slipped tile isn’t the same as a sagging flat roof. Each quote reflects what you’ve described, so you’re not dealing with generic estimates."
-    },
-    { type: "PostCodeSectionLocation" },
-    {
-        type: "pbold",
-        text: "Jobs done around your timescale"
-    },
-    {
-        type: "p",
-        text: "Whether it’s urgent or something you’re planning in advance, you’ll hear from roofers who can work within your timeframe."
-    },
-    {
-        type: "pbold",
-        text: "Choice and transparency"
-    },
-    {
-        type: "p",
-        text: "Reviews from real customers. Details of previous work. Clear breakdowns. It’s easier to spot quality before anyone climbs a ladder."
-    },
-    {
-        type: "pbold",
-        text: "Better pricing confidence"
-    },
-    {
-        type: "p",
-        text: "With up to five free quotes, you can compare approaches and avoid overpaying.",
-        notMarginBottom: true
-    },
-    {
-        type: "image",
-        src: "/nearme/Roofing/roofinstalling.webp",
-        alt: "two roofers installing slate tiles onto a brand new roof",
-        marginBottom: true,
-        marginTop: true
-    },
-    {
-        type: 'h2',
-        text: "What do roofers in Stockport usually charge?",
-    },
-    {
-        type: "p",
-        text: "Roofing costs aren’t one-size-fits-all. The final price often comes down to the size of the roof, how easy it is to access, the materials involved, and what’s actually discovered once the work begins."
-    },
-    {
-        type: "p",
-        text: "To give you a rough idea of what people in Stockport tend to pay:"
+        text: "The truth is, roofing costs in Stockport can vary depending on your roof’s size, type, and what you’re after. Here’s a simple, friendly guide so you can plan your budget without pulling your hair out:",
     },
     {
         type: "pricingTable",
-        title: "Average cost of roofers in Stockport",
+        title: "Average cost of roofing in Stockport",
         calculatorText: "click here.",
         calculatorLink: "/en/gb/roofing-multi-form-ppc",
-        disclaimer:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
-
+        disclaimer: "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
         prices: [
             {
-                text: "General roofing work comes in at around",
-                price: "£2,121"
+                text: "For general roofing work expect to spend on average",
+                price: "£2,120"
             },
             {
-                text: "Roof repairs typically average about",
-                price: "£739"
+                text: "For roofing repairs, whether slipped tiles or minor leaks, the average cost is about",
+                price: "£740"
             },
             {
-                text: "Emergency roofing call-outs are usually around",
+                text: "For emergency roofing services immediate attention is required, expect to pay an average of",
                 price: "£630"
             },
             {
-                text: "Full roof replacements sit closer to",
-                price: "£6,837"
+                text: "For a full roof replacement work, depending on the roof type, you can pay an average of",
+                price: "£6,840"
             }
         ]
     },
-    // {
-    //     type: "p",
-    //     text: "These numbers aren’t fixed quotes, just a guide to help you understand what’s normal locally. The surefire way to know what your own roof will cost is to get tailored quotes from local Stockport roofers who can see the job firsthand."
-    // },
+    {
+        type: "p",
+        text: "Remember, these are rough guides. The final cost depends on the materials you choose, roof complexity, and any tricky challenges. The best way to know exactly? Get tailored quotes from trusted local professionals via Localists, no guesswork, no stress, just clear prices before work even begins.",
+    },
     {
         type: "QuotesBanner",
-        className: "mb-[22px] mt-[20px] md:mt-[50px] md:mb-[42px] lg:mt-[108px] lg:mb-[114px]"
+        className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
+    },
+    {
+        type: 'h2',
+        text: "Key things to expect in your roof quote",
+    },
+    {
+        type: "p",
+        text: "When you get a quote from a Stockport roofer, it’s important to know what’s actually covered. A clear, detailed quote helps you avoid surprise costs later. Here’s what to look for:",
+    },
+    {
+        type: "li",
+        text: "Labour costs – The price for the roofer and their team to do the job safely and professionally."
+    },
+    {
+        type: "li",
+        text: "Materials – Tiles, slates, underlay, battens, or any other roofing components needed for the job."
+    },
+    {
+        type: "li",
+        text: "Scaffolding or equipment hire – If your roof needs scaffolding, ladders, or special tools, this should be included."
+    },
+    {
+        type: "li",
+        text: "Waste removal – Proper disposal of old roofing materials and debris, so you’re not left with a pile of rubble."
+    },
+    {
+        type: "li",
+        text: "VAT (if applicable) – Any taxes included in the total price should be clearly listed."
+    },
+    {
+        type: "p",
+        text: "A detailed quote gives you peace of mind and ensures you’re comparing like-for-like when getting multiple quotes. With Localists, you can quickly receive up to five free, no-obligation quotes from vetted Stockport roofers, all transparent and hassle-free.",
+        notMarginBottom: true
+    },
+    // {
+    //     type: "image",
+    //     src: "/nearme/Roofing/roofinstalling.webp",
+    //     alt: "two roofers installing slate tiles onto a brand new roof",
+    //     marginBottom: true,
+    //     marginTop: true
+    // },
+    {
+        type: "PostCodeSectionLocation",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
     },
 ];
 export const FREQUENTLY_DATA_STOCKPORT = [
     {
         key: "1",
-        title: "How do I know if my house needs a new roof?",
+        title: "How long does a roofing job usually take?",
         description: `
-        Most roofs don’t fail overnight. It’s usually a buildup of subtle warning signs: tiles slipping more often than they should, watermarks that keep reappearing on ceilings, bits of grit collecting in the gutters, or a roofline that doesn’t look quite straight anymore. One of the major red flags though is if you’re calling a professional out every year for a different ‘‘patch job’’, that’s often the point where a proper assessment makes sense.
+        It depends on the type of work. Small repairs like a few slipped tiles can often be completed in a day, while medium-sized jobs like patching up a pitched roof might take 2–5 days. Full roof replacements can stretch from 1- 4 weeks, depending on roof size, materials, and, of course, Stockport’s weather.
         `,
     },
     {
         key: "2",
-        title: "How many years before you should replace your roof?",
+        title: "What’s the cheapest time of year to replace a roof?",
         description: `
-        There isn’t a fixed timeframe. Some tiled roofs last 40 years or more; others need attention sooner, depending on weather, ventilation, and how well previous repairs were done. Flat roofs tend to have a shorter lifespan. If your roof is over 20 - 25 years old, it’s worth having it checked occasionally rather than waiting for a problem to show itself.
+        Late winter to early spring is usually when roofers are less busy, so you might get a better deal. Keep in mind that the weather can be unpredictable, so you may need some flexibility if rain delays work.
         `,
     },
     {
         key: "3",
-        title: "How expensive is a roofer?",
+        title: "Do roofers work in all weather?",
         description: `
-        It really depends on the job. Replacing a few tiles might cost a few hundred pounds. Larger repairs or structural work climb from there. A full roof replacement is naturally a bigger investment. The key is understanding what you’re paying for - materials, labour, safety equipment, and waste removal - and comparing like-for-like quotes.`,
+        Not quite. Light rain is usually fine, but heavy downpours, strong winds, or icy conditions can make roofing unsafe. Professionals always prioritise safety, so work might be rescheduled until conditions improve.`,
     },
     {
         key: "4",
-        title: "What’s the most common roof repair?",
+        title: "How do I spot a dodgy roofer?",
         description: `
-        Slipped or cracked tiles are probably top of the list. They’re easy to overlook from the ground, but once water finds its way underneath, that’s when problems start. Flashing around chimneys is another frequent culprit.`,
-    },
-    {
-        key: "5",
-        title: "Should I pay a roofer in cash?",
-        description: `
-        It’s generally safer to use a traceable payment method. Bank transfers or card payments give you a record, which can be useful if you ever need to refer back to the job. Cash isn’t automatically a red flag, but if someone insists on it and avoids paperwork, that’s usually a sign to slow things down and ask questions.`,
+        A few warning signs include:
+      <br /> <br />
+        <li style="margin-left: 30px">
+        Asking for cash-only payments with no receipt.
+        </li>
+        <li style="margin-left: 30px">Giving vague or no written quotes.</li>
+        <li style="margin-left: 30px">Refusing to show insurance or qualifications.</li>
+        <li style="margin-left: 30px">Pressure to hire immediately or unusually low quotes that seem “too good to be true.”</li>
+        <br />
+      Always check reviews, ask for proof of insurance, and get multiple quotes to be confident you’re hiring a reputable roofer.`,
     },
 ];
 export const ROOFERS_ADVICEINSIGHT_STOCKPORT = [
@@ -195,61 +176,64 @@ export const ROOFERS_TABDATA_STOCKPORT = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
     ],
-     related: [
-    {
-      title: "Roofers Leeds",
-      url: ""
-    },
-    {
-      title: "Roofers York",
-      url: ""
-    },
-    {
-      title: "Roofers Hull",
-      url: ""
-    },
-    {
-      title: "Roofers Bolton",
-      url: ""
-    },
-    {
-      title: "Roofers Chester",
-      url: "/en/gb/roofers-near-me/chester"
-    },
-    {
-      title: "Roofers Cheshire",
-      url: ""
-    },
-    {
-      title: "Roofers Harrogate",
-      url: ""
-    },
-    {
-      title: "Roofers Liverpool",
-      url: "/en/gb/roofers-near-me/liverpool"
-    },
-    {
-      title: "Roofers Manchester",
-      url: ""
-    },
-    {
-      title: "Roofers Stockport",
-      url: ""
-    },
-    {
-      title: "Roofers North Yorkshire",
-      url: ""
-    }
-  ],
+
+    related: [
+        {
+            title: "Roofers Leeds",
+            url: "/en/gb/roofers-near-me/leeds"
+        },
+        {
+            title: "Roofers York",
+            url: "/en/gb/roofers-near-me/york"
+        },
+        {
+            title: "Roofers Hull",
+            url: ""
+        },
+        {
+            title: "Roofers Bolton",
+            url: ""
+        },
+        {
+            title: "Roofers Chester",
+            url: "/en/gb/roofers-near-me/chester"
+        },
+        {
+            title: "Roofers Cheshire",
+            url: ""
+        },
+        {
+            title: "Roofers Harrogate",
+            url: ""
+        },
+        {
+            title: "Roofers Liverpool",
+            url: "/en/gb/roofers-near-me/liverpool"
+        },
+        {
+            title: "Roofers Manchester",
+            url: "/en/gb/roofers-near-me/manchester"
+        },
+        {
+            title: "Roofers Stockport",
+            url: ""
+        },
+        {
+            title: "Roofers North Yorkshire",
+            url: ""
+        }
+    ],
     findMore: [],
 };
 export const VETTED_DATA_ROOFERS_STOCKPORT = [
-    `With roofs, small problems don’t stay small for long. It often goes from manageable to urgent faster than you’d expect.
+    `After one too many quick fixes and a failed recommendation that went nowhere, finding a roofer can start to feel risky. Who can you trust? How much will it cost? And how do you avoid ending up with someone who disappears halfway through the job?
   <br/><br/> 
   `,
     `
-If you’re looking for roofers in Stockport, you don’t have to spend hours searching. We’ll match you with qualified contractors in your area in minutes. Simply tell us what you need, and receive free quotes directly to your inbox. No hard sales. No pressure to hire.
+That’s where Localists come in. We make finding quick and simple. Just share a few details about your job, and we’ll connect you with dependable, experienced and vetted Stockport roofers ready to help.
+<br/><br/>
 `,
+    `Zero cost. Zero obligation. Zero stress. Just free quotes from trusted <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3; text-decoration:underline;">roofers near you</a>.`
 ];
 
 export const BREADCRUM_DATA_ROOFERS_STOCKPORT = [
@@ -290,8 +274,8 @@ export const ROOFERS_FEEDBACK_STOCKPORT = [
     },
     {
         id: 4,
-        text: "We had James come over from Localist as we had leaks. Already got quotes elsewhere for £50 more than he charged us and he got it done same day. Couldn't recommend enough!",
-        name: "Steve L.",
+        text: "We needed to find a roofer because our garage had a persistent leak that was starting to damage everything inside. Found Mike through Localists who did a fantastic job. A very pleasant lad and clearly knows his job. Happy with the work done.",
+        name: "Niamh O.",
     },
 ];
 

@@ -27,6 +27,8 @@ import Feature from "../FetureComponent/Feature";
 import HeroSectionLocation from "../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
+import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
+import PostCodeSectionLocation2 from "../PostCodeSectionLocation2";
 
 function RoofersInStockport() {
     useScrollToTop()
@@ -39,7 +41,7 @@ function RoofersInStockport() {
             <HeroSectionLocation
                 heading1="Roofers"
                 heading2="Stockport"
-                description="Get free, no-obligation quotes from the highest quality roofers working across Stockport. Enter your postcode below and share a few details about the work. It only takes a minute to get started."
+                description="Need a local roofing specialist in Stockport? Enter your postcode, tell us a bit about the project, and get free quotes to your inbox from trusted professionals in your area. Takes under a minute."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
