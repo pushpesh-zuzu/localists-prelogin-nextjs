@@ -3,7 +3,7 @@ import SEO from '@/app/component/common/seo/SEO';
 import RoofersInStockport from '@/app/component/LocationPages/Stockport/RoofersInStockport';
 import React, { Suspense } from 'react'
 export const metadata = {
-    title: "Roofers Stockport | Free Quotes in Minutes| Localists.com.",
+    title: "Roofers Stockport | Free Quotes in Minutes| Localists.com",
     description:
         "Need trusted roofers in Stockport? Get up to five free, no-obligation quotes from vetted local professionals for repairs, replacements, and installations.",
 };

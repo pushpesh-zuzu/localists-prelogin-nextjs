@@ -3,7 +3,7 @@ import SEO from '@/app/component/common/seo/SEO';
 import RoofersInManchester from '@/app/component/LocationPages/Manchester/RoofersInManchester';
 import React, { Suspense } from 'react'
 export const metadata = {
-    title: "Roofers Manchester | Localists.com.",
+    title: "Roofers Manchester | Localists.com",
     description:
         "Looking for reliable roofers in Manchester? Get expert advice, cost breakdowns, and free, no-obligation quotes from trusted local roofing specialists.",
 };
