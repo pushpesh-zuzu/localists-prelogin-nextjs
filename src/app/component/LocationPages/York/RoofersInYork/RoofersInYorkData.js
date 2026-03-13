@@ -210,7 +210,7 @@ export const ROOFERS_TABDATA_YORK = {
     },
     {
       title: "Roofers York",
-      url: "/en/gb/roofers-near-me/york"
+      url: ""
     },
     {
       title: "Roofers Hull",

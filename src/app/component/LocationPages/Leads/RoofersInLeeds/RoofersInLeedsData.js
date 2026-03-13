@@ -217,7 +217,7 @@ export const ROOFERS_TABDATA_LEEDS = {
   related: [
     {
       title: "Roofers Leeds",
-      url: "/en/gb/roofers-near-me/leeds",
+      url: "",
     },
     {
       title: "Roofers York",
