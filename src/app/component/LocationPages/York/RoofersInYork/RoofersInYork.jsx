@@ -77,7 +77,7 @@ function RoofersInYork() {
         articles={ROOFERS_ADVICEINSIGHT_YORK}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
       />
-      <FAQ headdingblue="FAQs on roofers" headingblack="York"
+      <FAQ headdingblue="FAQ's on roofers" headingblack="York"
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
         data={ROOFERS_FREQUENTLY_DATA_YORK}
       />
