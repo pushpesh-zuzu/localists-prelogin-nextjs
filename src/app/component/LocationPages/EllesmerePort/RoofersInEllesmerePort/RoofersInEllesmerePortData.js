@@ -99,7 +99,8 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ELLESMEREPORT = [
     },
     {
         type: "p",
-        text: "These numbers aren’t fixed quotes, just a guide to help you understand what’s normal locally. The surefire way to know what your own roof will cost is to get tailored quotes from local Ellesmere Port roofers who can see the job firsthand."
+        text: "These numbers aren’t fixed quotes, just a guide to help you understand what’s normal locally. The surefire way to know what your own roof will cost is to get tailored quotes from local Ellesmere Port roofers who can see the job firsthand.",
+        notMarginBottom: true
     },
     {
         type: "QuotesBanner",

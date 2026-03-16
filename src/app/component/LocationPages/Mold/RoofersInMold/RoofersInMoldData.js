@@ -119,7 +119,8 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
   },
   {
     type: "p",
-    text: "If you’re not sure whether it’s a quick repair or something more serious, it’s usually worth having someone take a proper look. Sometimes what seems like a big issue turns out to be straightforward, and sometimes catching it early prevents a much larger job later on."
+    text: "If you’re not sure whether it’s a quick repair or something more serious, it’s usually worth having someone take a proper look. Sometimes what seems like a big issue turns out to be straightforward, and sometimes catching it early prevents a much larger job later on.",
+    notMarginBottom: true
   },
   // {
   //   type: "QuotesBanner",
