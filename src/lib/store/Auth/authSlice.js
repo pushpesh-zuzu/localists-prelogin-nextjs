@@ -15,7 +15,7 @@ import {
 import { setCreateRequestToken, setRequestData } from "../buyerslice/buyerSlice";
 import { clearCompanyData } from "../companyJobSlice";
 import { safeLocalStorage } from "@/utils/localStorage";
-import { BASE_IMAGE_URL } from "@/utils";
+import { BASE_API_URL } from "@/utils";
 import { extractEssentialUserData } from "@/utils/extractEssentialUserData";
 
 /* -------------------------------------
@@ -213,7 +213,7 @@ export const fetchProfileFromMagicLink = (navigate) => {
                 throw new Error("Invalid client_id format");
             }
 
-            const api = `${BASE_IMAGE_URL}users/get-seller-profile`;
+            const api = `${BASE_API_URL}users/get-seller-profile`;
 
             const res = await fetch(api, {
                 method: "POST",
