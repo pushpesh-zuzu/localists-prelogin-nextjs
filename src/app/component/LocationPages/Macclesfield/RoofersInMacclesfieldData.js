@@ -323,6 +323,11 @@ export const ROOFERS_FEEDBACK_MACCLESFIELD = [
         text: "We wanted to add a skylight, but I was nervous about leaks. The roofer explained every step, did a flawless installation, and cleaned up after themselves. Our loft has never been brighter, and I’m genuinely impressed.",
         name: "Lucas F.",
     },
+    {
+        id: 4,
+        text: "Big thanks to Joseph from Macclesfield Roofing and Building who sorted my roof out. Competitive and would use again 100%.",
+        name: "John W.",
+    },
 ];
 
 export const ROOFERS_DATA_MACCLESFIELD = [
