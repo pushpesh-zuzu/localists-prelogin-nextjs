@@ -212,11 +212,11 @@ export const ROOFERS_TABDATA_WREXHAM = {
   related: [
     {
       title: "Roofers Leeds",
-      url: ""
+      url: "/en/gb/roofers-near-me/leeds"
     },
     {
       title: "Roofers York",
-      url: ""
+      url: "/en/gb/roofers-near-me/york"
     },
     {
       title: "Roofers Hull",
@@ -244,11 +244,11 @@ export const ROOFERS_TABDATA_WREXHAM = {
     },
     {
       title: "Roofers Manchester",
-      url: ""
+      url: "/en/gb/roofers-near-me/manchester"
     },
     {
       title: "Roofers Stockport",
-      url: ""
+      url: "/en/gb/roofers-near-me/stockport"
     },
     {
       title: "Roofers North Yorkshire",

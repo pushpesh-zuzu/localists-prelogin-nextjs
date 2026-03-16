@@ -206,7 +206,7 @@ export const getFetchSellerListData = (data) => {
       const errorMessage =
       error?.response?.data?.message?.county?.[0]
       console.error("Error get seller data:", errorMessage);
-      showToast("error", errorMessage);
+      showToast("error", errorMessage || "Data not found");
       throw error;
     } finally {
       dispatch(setGetSellerDataLoader(false))
