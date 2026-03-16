@@ -199,7 +199,7 @@ export const VETTED_DATA_ROOFERS_NORTHWICH = [
   <br/><br/> 
   `,
   `
-We get it, and we can help. At Localists, we connect you with high-quality, trusted roofers right here in Northwich. Every professional we recommend is fully insured and has been thoroughly vetted by us. Simply let us know what you need, and you’ll receive free quotes directly to your inbox. Take your time to decide, without ever feeling pushed into it.
+We get it, and we can help. At Localists, we connect you with high-quality, <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">trusted roofers</a> right here in Northwich. Every professional we recommend is fully insured and has been thoroughly vetted by us. Simply let us know what you need, and you’ll receive free quotes directly to your inbox. Take your time to decide, without ever feeling pushed into it.
 `,
 ];
 

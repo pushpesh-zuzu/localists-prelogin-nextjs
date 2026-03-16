@@ -166,7 +166,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
   },
   {
     type: 'p',
-    text: `If you need urgent help, Localists can connect you with reliable emergency <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3; text-decoration:underline;">roofers near you</a> in minutes. No endless searching, no stress, just fast, practical help when you need it most.`,
+    text: `If you need urgent help, Localists can connect you with reliable emergency <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">roofers near you</a> in minutes. No endless searching, no stress, just fast, practical help when you need it most.`,
   },
   {
     type: "h2",

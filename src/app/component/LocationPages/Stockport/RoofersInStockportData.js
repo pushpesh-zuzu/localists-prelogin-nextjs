@@ -233,7 +233,7 @@ export const VETTED_DATA_ROOFERS_STOCKPORT = [
 That’s where Localists come in. We make finding quick and simple. Just share a few details about your job, and we’ll connect you with dependable, experienced and vetted Stockport roofers ready to help.
 <br/><br/>
 `,
-    `Zero cost. Zero obligation. Zero stress. Just free quotes from trusted <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3; text-decoration:underline;">roofers near you</a>.`
+    `Zero cost. Zero obligation. Zero stress. Just free quotes from trusted <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">roofers near you</a>.`
 ];
 
 export const BREADCRUM_DATA_ROOFERS_STOCKPORT = [

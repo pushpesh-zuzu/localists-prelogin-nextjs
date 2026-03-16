@@ -268,7 +268,7 @@ Finding trustworthy roofers in Manchester can feel like searching for a needle i
   <br/><br/>
 `,
   `
-That’s where Localist comes in. We do the heavy lifting for you, connecting you with reliable, vetted <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3; text-decoration:underline;">local roofers</a> in Manchester who can handle everything from small repairs to full roof replacements.
+That’s where Localist comes in. We do the heavy lifting for you, connecting you with reliable, vetted <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">local roofers</a> in Manchester who can handle everything from small repairs to full roof replacements.
   <br/><br/>
 `,
   `Zero hassle. Zero stress. Zero guesswork. Just reputable roofers in Manchester, ready to start.

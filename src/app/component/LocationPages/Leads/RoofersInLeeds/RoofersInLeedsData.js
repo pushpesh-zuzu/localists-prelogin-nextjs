@@ -267,7 +267,7 @@ export const VETTED_DATA_ROOFERS_LEEDS = [
   <br/><br/> 
   `,
   `
-We connect you with vetted Leeds <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3; text-decoration:underline;">roofers</a> who can handle everything, from patching a stubborn leak to a full-scale roof replacement, all with free, no-obligation quotes. Think of it like giving your home a first-class upgrade: no more leaky ceilings, no more improvising with buckets, just a roof that laughs in the face of rain, wind, and the occasional “oh look, the sun is out!” day.
+We connect you with vetted Leeds <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">roofers</a> who can handle everything, from patching a stubborn leak to a full-scale roof replacement, all with free, no-obligation quotes. Think of it like giving your home a first-class upgrade: no more leaky ceilings, no more improvising with buckets, just a roof that laughs in the face of rain, wind, and the occasional “oh look, the sun is out!” day.
 `,
 ];
 

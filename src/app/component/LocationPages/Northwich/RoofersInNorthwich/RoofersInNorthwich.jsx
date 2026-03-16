@@ -81,8 +81,6 @@ function RoofersInNorthwich() {
       />
      
       <FAQ
-      headdingblue="FAQ's on roofers "
-      headingblack="Northwich"
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
         data={ROOFERS_FREQUENTLY_DATA_NORTHWICH}
       />
