@@ -1,24 +1,24 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_OSWESTRY = [
-{
-  type: "h2",
-  text: "What do roofers in Oswestry usually charge?",
-},
-{
-  type: "p",
-  text: "Roofing costs in Oswestry can vary more than people expect. Until someone actually climbs up and sees what’s going on, it’s hard to give a precise figure. The size of the roof matters, of course, but so does the roofing material type.",
-},
-{
-  type: "p",
-  text: "Further, a straightforward job on a single-story home won’t be priced the same as work on a taller property where scaffolding is needed. Two houses that look similar from the road can end up with different quotes once inspected properly.",
-},
-{
-        type: "pricingTable",
-        title: "Average cost of roofers in Oswestry",
-        calculatorText: "click here.",
-        calculatorLink: "/en/gb/roofing-multi-form-ppc",
-        disclaimer: "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",
-        prices: [
-               {
+  {
+    type: "h2",
+    text: "What do roofers in Oswestry usually charge?",
+  },
+  {
+    type: "p",
+    text: "Roofing costs in Oswestry can vary more than people expect. Until someone actually climbs up and sees what’s going on, it’s hard to give a precise figure. The size of the roof matters, of course, but so does the roofing material type.",
+  },
+  {
+    type: "p",
+    text: "Further, a straightforward job on a single-story home won’t be priced the same as work on a taller property where scaffolding is needed. Two houses that look similar from the road can end up with different quotes once inspected properly.",
+  },
+  {
+    type: "pricingTable",
+    title: "Average cost of roofers in Oswestry",
+    calculatorText: "click here.",
+    calculatorLink: "/en/gb/roofing-multi-form-ppc",
+    disclaimer: "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",
+    prices: [
+      {
         text: "General roofing work in Oswestry tends to come in somewhere around",
         price: "£2,093",
       },
@@ -36,72 +36,73 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_OSWESTRY = [
         text: "A full roof replacement is a bigger commitment, and across Oswestry, the average tends to land around",
         price: "£6,557",
       },
-      
 
-        ]
-        
-    },
-    {
-  type: "p",
-  text: "These numbers aren’t promises; they’re just there to help you understand what’s normal locally. The only way to know where your roof stands is to have someone take a proper look and explain it in context.",
-notMarginBottom:true
-},
-{
-type: "image",
-src: "/nearme/Roofing/roofinstalling.webp",
-alt: "two roofers installing slate tiles onto a brand new roof ",
-marginBottom: true,
-marginTop: true,
-},
-{
-  type: "h2",
-  text: "Why many homeowners choose Localists to find roofers in Oswestry",
-},
-{
-  type: "p",
-  text: "Searching online for a roofer in Oswestry can be overwhelming. First off, the search result brings up dozens of names. Then you’re stuck choosing between a \"one-man band\" offering a suspiciously low price or a larger company with reviews that don't quite feel right. It’s hard to know who actually has the expertise to handle your home.",
-},
-{
-  type: "p",
-  text: "With Localists, we’ve done the legwork so you don’t have to worry:",
-},
-{
-  type: "pbold",
-  text: "You get more than one expert opinion:",
-  className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
-},
-{
-  type: "p",
-  text: "Instead of just taking one person’s word for it, you can compare different professional perspectives.",
-},
-{
-  type: "pbold",
-  text: "You hear from roofers who already work locally:",
-  className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
-},
-{
-  type: "p",
-  text: "They know the property styles common in Oswestry and the surrounding villages.",
-},
-{
-  type: "pbold",
-  text: "No pressure at any point:",
-  className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
-},
-{
-  type: "p",
-  text: "There’s no obligation to accept a quote.",
-},
-{
-  type: "pbold",
-  text: "See the \"actual\" price",
-  className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
-},
-{
-  type: "p",
-  text: "By seeing a few different quotes, you’ll get a much better feel for what’s a fair price for the work, so you don’t end up getting overcharged.",
-},
-//delete
+
+    ]
+
+  },
+  {
+    type: "p",
+    text: "These numbers aren’t promises; they’re just there to help you understand what’s normal locally. The only way to know where your roof stands is to have someone take a proper look and explain it in context.",
+    notMarginBottom: true
+  },
+  {
+    type: "image",
+    src: "/nearme/Roofing/roofinstalling.webp",
+    alt: "two roofers installing slate tiles onto a brand new roof ",
+    marginBottom: true,
+    marginTop: true,
+  },
+  {
+    type: "h2",
+    text: "Why many homeowners choose Localists to find roofers in Oswestry",
+  },
+  {
+    type: "p",
+    text: "Searching online for a roofer in Oswestry can be overwhelming. First off, the search result brings up dozens of names. Then you’re stuck choosing between a \"one-man band\" offering a suspiciously low price or a larger company with reviews that don't quite feel right. It’s hard to know who actually has the expertise to handle your home.",
+  },
+  {
+    type: "p",
+    text: "With Localists, we’ve done the legwork so you don’t have to worry:",
+  },
+  {
+    type: "pbold",
+    text: "You get more than one expert opinion:",
+    className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+  },
+  {
+    type: "p",
+    text: "Instead of just taking one person’s word for it, you can compare different professional perspectives.",
+  },
+  {
+    type: "pbold",
+    text: "You hear from roofers who already work locally:",
+    className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+  },
+  {
+    type: "p",
+    text: "They know the property styles common in Oswestry and the surrounding villages.",
+  },
+  {
+    type: "pbold",
+    text: "No pressure at any point:",
+    className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+  },
+  {
+    type: "p",
+    text: "There’s no obligation to accept a quote.",
+  },
+  {
+    type: "pbold",
+    text: "See the \"actual\" price",
+    className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+  },
+  {
+    type: "p",
+    text: "By seeing a few different quotes, you’ll get a much better feel for what’s a fair price for the work, so you don’t end up getting overcharged.",
+    notMarginBottom: true
+  },
+  //delete
   {
     type: "QuotesBanner",
     className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"

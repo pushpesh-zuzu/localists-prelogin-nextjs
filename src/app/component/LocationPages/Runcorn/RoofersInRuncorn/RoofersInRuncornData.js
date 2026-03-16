@@ -1,93 +1,93 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RUNCORN = [
-{
-  type: "h2",
-  text: "Why more homeowners choose Localists to find Runcorn roofers",
-},
-{
-  type: "p",
-  text: "Roofing is one of those jobs where you just want it sorted properly. If it’s done badly, you’re not just dealing with a small mistake. You could be facing damp, structural damage, or a bigger bill a few months later. But at the same time, nobody wants to feel pressured into paying for work that isn’t actually necessary.",
-},
-{
-  type: "p",
-  text: "That’s usually why people looking for roofers in Runcorn use Localists. We take away the uncertainties, the awkward part of ringing round, chasing callbacks, and trying to work out who’s reliable.",
-},
-{
-  type: "p",
-  text: "With Localists, you get:",
-},
-{
-  type: "pbold",
-  text: "Local roofers who know the area",
-  className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
-},
-{
-  type: "p",
-  text: "You’re connected with roofers who work in Runcorn regularly and understand the mix of older terraces, semis, and newer estates. That local experience matters.",
-},
-{
-  type: "pbold",
-  text: "Quotes based on your actual problem",
-  className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
-},
-{
-  type: "p",
-  text: "Whether it’s a leak, damaged flashing, slipped tiles, or a flat roof that’s seen better days, the quotes you receive are based on the details you’ve shared. Not rough guesses.",
-},
-{
-  type: "pbold",
-  text: "Work that fits your timeline",
-  className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
-},
-{
-  type: "p",
-  text: "If it’s urgent, you can move quickly. If you’re planning ahead, you can compare options and book when it suits you.",
-},
-{
-  type: "pbold",
-  text: "Fair pricing",
-  className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
-},
-{
-  type: "p",
-  text: "With up to five free quotes, you can compare properly and get a sense of what’s reasonable for your job.",
-},
-{
-  type: "pbold",
-  text: "Options for ongoing care",
-  className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
-},
-{
-  type: "p",
-  text: "Some roofers also offer inspections or gutter cleaning to help prevent future problems, which can save money long term.",
-notMarginBottom:true
-},
-{
-type: "image",
-src: "/nearme/Roofing/roofinstalling.webp",
-alt: "two roofers installing slate tiles onto a brand new roof ",
-marginBottom: true,
-marginTop: true,
-},
-{
-  type: "h2",
-  text: "What roofing work usually costs in Runcorn",
-},
-{
-  type: "p",
-  text: "Roofing prices aren’t fixed because no two roofs are the same. A quick repair after a windy night is very different from stripping everything back and starting again. Things like the size of your roof, the type of tiles or materials, and whether scaffolding is needed all play a part in what you’ll end up paying.",
-},
-{
-  type: "p",
-  text: "To give you a ballpark idea, here’s what people in Runcorn typically spend on common roofing work.",
-},
-{
-        type: "pricingTable",
-        title: "Average cost of roofers in Runcorn",
-        calculatorText: "click here.",
-        calculatorLink: "/en/gb/roofing-multi-form-ppc",
-        disclaimer: "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",
-        prices: [
-               {
+  {
+    type: "h2",
+    text: "Why more homeowners choose Localists to find Runcorn roofers",
+  },
+  {
+    type: "p",
+    text: "Roofing is one of those jobs where you just want it sorted properly. If it’s done badly, you’re not just dealing with a small mistake. You could be facing damp, structural damage, or a bigger bill a few months later. But at the same time, nobody wants to feel pressured into paying for work that isn’t actually necessary.",
+  },
+  {
+    type: "p",
+    text: "That’s usually why people looking for roofers in Runcorn use Localists. We take away the uncertainties, the awkward part of ringing round, chasing callbacks, and trying to work out who’s reliable.",
+  },
+  {
+    type: "p",
+    text: "With Localists, you get:",
+  },
+  {
+    type: "pbold",
+    text: "Local roofers who know the area",
+    className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+  },
+  {
+    type: "p",
+    text: "You’re connected with roofers who work in Runcorn regularly and understand the mix of older terraces, semis, and newer estates. That local experience matters.",
+  },
+  {
+    type: "pbold",
+    text: "Quotes based on your actual problem",
+    className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+  },
+  {
+    type: "p",
+    text: "Whether it’s a leak, damaged flashing, slipped tiles, or a flat roof that’s seen better days, the quotes you receive are based on the details you’ve shared. Not rough guesses.",
+  },
+  {
+    type: "pbold",
+    text: "Work that fits your timeline",
+    className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+  },
+  {
+    type: "p",
+    text: "If it’s urgent, you can move quickly. If you’re planning ahead, you can compare options and book when it suits you.",
+  },
+  {
+    type: "pbold",
+    text: "Fair pricing",
+    className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+  },
+  {
+    type: "p",
+    text: "With up to five free quotes, you can compare properly and get a sense of what’s reasonable for your job.",
+  },
+  {
+    type: "pbold",
+    text: "Options for ongoing care",
+    className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+  },
+  {
+    type: "p",
+    text: "Some roofers also offer inspections or gutter cleaning to help prevent future problems, which can save money long term.",
+    notMarginBottom: true
+  },
+  {
+    type: "image",
+    src: "/nearme/Roofing/roofinstalling.webp",
+    alt: "two roofers installing slate tiles onto a brand new roof ",
+    marginBottom: true,
+    marginTop: true,
+  },
+  {
+    type: "h2",
+    text: "What roofing work usually costs in Runcorn",
+  },
+  {
+    type: "p",
+    text: "Roofing prices aren’t fixed because no two roofs are the same. A quick repair after a windy night is very different from stripping everything back and starting again. Things like the size of your roof, the type of tiles or materials, and whether scaffolding is needed all play a part in what you’ll end up paying.",
+  },
+  {
+    type: "p",
+    text: "To give you a ballpark idea, here’s what people in Runcorn typically spend on common roofing work.",
+  },
+  {
+    type: "pricingTable",
+    title: "Average cost of roofers in Runcorn",
+    calculatorText: "click here.",
+    calculatorLink: "/en/gb/roofing-multi-form-ppc",
+    disclaimer: "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",
+    prices: [
+      {
         text: "General roofing work Bigger jobs that involve more time and materials tend to average around",
         price: "£2,121",
       },
@@ -105,17 +105,18 @@ marginTop: true,
         text: "Full roof replacement For a complete new roof, homeowners in Runcorn typically pay around",
         price: "£6,837",
       },
-      
 
-        ]
-        
-    },
-{
-  type: "p",
-  text: "These numbers are just a guide to help you plan. The only way to know for certain what your roof will cost is to get a few local roofers to take a proper look and quote based on your specific job.",
-},
-//delete
- {
+
+    ]
+
+  },
+  {
+    type: "p",
+    text: "These numbers are just a guide to help you plan. The only way to know for certain what your roof will cost is to get a few local roofers to take a proper look and quote based on your specific job.",
+    notMarginBottom: true
+  },
+  //delete
+  {
     type: "QuotesBanner",
     className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
   },

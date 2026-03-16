@@ -8,35 +8,35 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
     text: "Roofing mistakes are an expensive headache you don’t need; it’s vital to get the right person for the job the first time. Localists replaces endless scrolling with a simple process: describe your job once, and we’ll connect you with the right experts.",
   },
   {
- type:"pbold",
- text:"Here’s what you get:",
- className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+    type: "pbold",
+    text: "Here’s what you get:",
+    className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
 
   },
   {
-  type: "uili",
-  heading: "Matches with local specialists\u00A0",
-  text: ": We connect you with roofers who are already working in the area and understand the property styles common in Crewe - from Victorian terraces to the newer estates.",
-  marginTop: true,
-},
-{
-  type: "uili",
-  heading: "Quotes based on your specific project\u00A0",
-  text: ": No generic pricing. The details you provide shape the tailored responses you receive.",
-  marginTop: true,
-},
-{
-  type: "uili",
-  heading: "Clear, transparent options\u00A0",
-  text: ": View reviews, experience, and services at a glance before you commit to anything.",
-  marginTop: true,
-},
-{
-  type: "uili",
-  heading: "Fair market pricing\u00A0",
-  text: ": By comparing multiple quotes, you’ll know exactly what is reasonable for the work involved, helping you avoid overpaying.",
-  noMarginBottom: true,
-},
+    type: "uili",
+    heading: "Matches with local specialists\u00A0",
+    text: ": We connect you with roofers who are already working in the area and understand the property styles common in Crewe - from Victorian terraces to the newer estates.",
+    marginTop: true,
+  },
+  {
+    type: "uili",
+    heading: "Quotes based on your specific project\u00A0",
+    text: ": No generic pricing. The details you provide shape the tailored responses you receive.",
+    marginTop: true,
+  },
+  {
+    type: "uili",
+    heading: "Clear, transparent options\u00A0",
+    text: ": View reviews, experience, and services at a glance before you commit to anything.",
+    marginTop: true,
+  },
+  {
+    type: "uili",
+    heading: "Fair market pricing\u00A0",
+    text: ": By comparing multiple quotes, you’ll know exactly what is reasonable for the work involved, helping you avoid overpaying.",
+    noMarginBottom: true,
+  },
   {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
@@ -45,25 +45,25 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
     marginTop: true
   },
   {
-  type: "h2",
-  text: "What do roofers in Crewe usually charge?",
-},
-{
-  type: "p",
-  text: "Roofing prices aren’t fixed in the way people sometimes expect. The cost depends on what’s actually wrong, how easy the roof is to access, and whether scaffolding or specialist materials are needed. A small repair on a single-story extension will naturally look very different from work on a taller, older property.",
-},
-{
-  type: "p",
-  text: "To give you a sense of what’s typical in Crewe:",
-},
- {
-        type: "pricingTable",
-        title: "Average cost of roofers in Crewe",
-        calculatorText: "click here.",
-        calculatorLink: "/en/gb/roofing-multi-form-ppc",
-        disclaimer: "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
-        prices: [
-               {
+    type: "h2",
+    text: "What do roofers in Crewe usually charge?",
+  },
+  {
+    type: "p",
+    text: "Roofing prices aren’t fixed in the way people sometimes expect. The cost depends on what’s actually wrong, how easy the roof is to access, and whether scaffolding or specialist materials are needed. A small repair on a single-story extension will naturally look very different from work on a taller, older property.",
+  },
+  {
+    type: "p",
+    text: "To give you a sense of what’s typical in Crewe:",
+  },
+  {
+    type: "pricingTable",
+    title: "Average cost of roofers in Crewe",
+    calculatorText: "click here.",
+    calculatorLink: "/en/gb/roofing-multi-form-ppc",
+    disclaimer: "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+    prices: [
+      {
         text: "General roofing work tends to average around",
         price: "£21,21",
       },
@@ -82,37 +82,38 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
         price: "£6,830",
       },
 
-        ]
-    },
-    {
-  type: "p",
-  text: "These figures are only meant as a guide. The only way to know where your roof sits within that range is to have it looked at properly and compare quotes from local roofers who can assess the situation firsthand.",
-},
-   {
+    ]
+  },
+  {
+    type: "p",
+    text: "These figures are only meant as a guide. The only way to know where your roof sits within that range is to have it looked at properly and compare quotes from local roofers who can assess the situation firsthand.",
+    notMarginBottom: true
+  },
+  {
     type: "QuotesBanner",
     className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
   },
 
-{
-  type: "h2",
-  text: "When is it a repair… And when is it time to replace?",
-},
-{
-  type: "p",
-  text: "It’s something a lot of people end up thinking about once roof problems start coming back. You fix one thing, then a few months later, something else shows up, and you begin to wonder whether you’re just buying time.",
-},
-{
-  type: "p",
-  text: "Quite often, a simple repair really is enough. A few slipped tiles, some flashing that’s come loose around the chimney, or a small leak in one spot can usually be sorted without turning the whole house upside down. If most of the roof is still solid and the timber underneath is in good shape, repairing the problem area can be the sensible way forward.",
-},
-{
-  type: "p",
-  text: "Replacement usually comes up when the issues aren’t confined to one place anymore. If different parts of the roof keep failing, tiles are cracking across larger sections - patching it may start to feel like a short-term fix. At that point, people often realise they’re spending again and again without really solving the bigger problem. A replacement roof is often the best way to go in this case.",
-},
-{
-  type: "p",
-  text: "Age plays a part too. Some roofs last decades, others less so, depending on materials and how well they’ve been looked after. If yours is edging towards that 25-30 year mark, it’s reasonable to think ahead (possible replacement) rather than just react to the next leak.",
-},
+  {
+    type: "h2",
+    text: "When is it a repair… And when is it time to replace?",
+  },
+  {
+    type: "p",
+    text: "It’s something a lot of people end up thinking about once roof problems start coming back. You fix one thing, then a few months later, something else shows up, and you begin to wonder whether you’re just buying time.",
+  },
+  {
+    type: "p",
+    text: "Quite often, a simple repair really is enough. A few slipped tiles, some flashing that’s come loose around the chimney, or a small leak in one spot can usually be sorted without turning the whole house upside down. If most of the roof is still solid and the timber underneath is in good shape, repairing the problem area can be the sensible way forward.",
+  },
+  {
+    type: "p",
+    text: "Replacement usually comes up when the issues aren’t confined to one place anymore. If different parts of the roof keep failing, tiles are cracking across larger sections - patching it may start to feel like a short-term fix. At that point, people often realise they’re spending again and again without really solving the bigger problem. A replacement roof is often the best way to go in this case.",
+  },
+  {
+    type: "p",
+    text: "Age plays a part too. Some roofs last decades, others less so, depending on materials and how well they’ve been looked after. If yours is edging towards that 25-30 year mark, it’s reasonable to think ahead (possible replacement) rather than just react to the next leak.",
+  },
   {
     type: "PostCodeSectionLocation",
     className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
