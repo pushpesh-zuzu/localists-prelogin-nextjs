@@ -88,11 +88,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
   type: "p",
   text: "These figures are only meant as a guide. The only way to know where your roof sits within that range is to have it looked at properly and compare quotes from local roofers who can assess the situation firsthand.",
 },
- {
+   {
     type: "QuotesBanner",
-    className:
-      "mb-[50px] mt-[22px] md:mt-[42px] md:mb-[80px] lg:mt-[114px] lg:mb-[180px]",
+    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
   },
+
 {
   type: "h2",
   text: "When is it a repair… And when is it time to replace?",
