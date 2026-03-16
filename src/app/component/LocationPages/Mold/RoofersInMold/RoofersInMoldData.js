@@ -293,7 +293,7 @@ export const VETTED_DATA_ROOFERS_MOLD = [
   `,
   `
 Whether you’re dealing with a few damages or need a replacement, finding experienced
-<a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3; text-decoration:underline;">local roofers</a> in Mold shouldn’t feel stressful. At Localists, we connect you with the best roofing specialists in your area at no cost. Get up to 5 free quotes delivered to you in minutes. Take your time to compare and choose what works for you without feeling rushed.
+<a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">local roofers</a> in Mold shouldn’t feel stressful. At Localists, we connect you with the best roofing specialists in your area at no cost. Get up to 5 free quotes delivered to you in minutes. Take your time to compare and choose what works for you without feeling rushed.
 `,
 ];
 
