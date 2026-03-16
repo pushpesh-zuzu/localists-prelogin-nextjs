@@ -62,7 +62,8 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
   },
   {
     type: "p",
-    text: "It gives you space to compare without feeling pushed. No awkward follow-up calls. No pressure to say yes on the spot. Just information, options, and the freedom to choose when you’re ready."
+    text: "It gives you space to compare without feeling pushed. No awkward follow-up calls. No pressure to say yes on the spot. Just information, options, and the freedom to choose when you’re ready.",
+    notMarginBottom: true
   },
   // {
   //   type: "QuotesBanner",

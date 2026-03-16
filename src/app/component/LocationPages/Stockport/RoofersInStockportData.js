@@ -35,6 +35,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_STOCKPORT = [
     {
         type: "p",
         text: "Remember, these are rough guides. The final cost depends on the materials you choose, roof complexity, and any tricky challenges. The best way to know exactly? Get tailored quotes from trusted local professionals via Localists, no guesswork, no stress, just clear prices before work even begins.",
+        notMarginBottom: true
     },
     {
         type: "QuotesBanner",

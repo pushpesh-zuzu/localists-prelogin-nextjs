@@ -203,8 +203,9 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
   {
     type: 'p',
     text: "No matter the job, finding a roofer with the right skills ensures your home stays dry, safe, and looking great without the stress.",
+    notMarginBottom: true
   },
-   {
+  {
     type: "QuotesBanner",
     className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
   },

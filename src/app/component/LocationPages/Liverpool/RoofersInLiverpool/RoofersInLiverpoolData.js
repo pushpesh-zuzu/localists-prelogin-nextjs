@@ -83,6 +83,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
   {
     type: 'p',
     text: "Two houses on the same street can end up with very different quotes,  roofs are a bit like fingerprints, no two are quite the same.",
+    notMarginBottom: true
   },
   {
     type: "QuotesBanner",
