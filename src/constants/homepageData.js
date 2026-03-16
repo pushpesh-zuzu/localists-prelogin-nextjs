@@ -180,18 +180,18 @@ export const articles = [
   },
 ];
 export const tabData = {
-    professionals: [
-      "Electricians in London",
-      "Roofers in Edinburgh",
-      "Roofers in Norwich",
-      "Plumbers in Birmingham",
-      "Electricians in London",
-      "Roofers in Edinburgh",
-      "Garden Designers Cardiff",
-      "Maths Tutor in Manchester",
-      "Patio Layers in Manchester",
-      "Gardeners in Wolverhampton",
-    ],
+  professionals: [
+    { title: "Electricians in London", url: "" },
+    { title: "Roofers in Edinburgh", url: "" },
+    { title: "Roofers in Norwich", url: "" },
+    { title: "Plumbers in Birmingham", url: "" },
+    { title: "Roofers in Chester", url: "/en/gb/roofers-near-me/chester" },
+    { title: "Roofers in Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+    { title: "Garden Designers in Cardiff", url: "" },
+    { title: "Maths Tutor in Manchester", url: "" },
+    { title: "Patio Layers in Manchester", url: "" },
+    { title: "Gardeners in Wolverhampton", url: "" },
+  ],
     popular: [
       {
         title: "Landscapers Near Me",

@@ -1,16 +1,16 @@
 "use client";
 import React, { useRef } from "react";
 import {
-  BREADCRUM_DATA_ROOFERS_RUNCORN,
-  ROOFERS_FREQUENTLY_DATA_RUNCORN,
-  POPULAR_SERVICES_ROOFERS_RUNCORN,
-  QUESTION_AND_ABOUT_SERVICE_ROOFERS_RUNCORN,
-  ROOFERS_ADVICEINSIGHT_RUNCORN,
-  ROOFERS_FEEDBACK_RUNCORN,
-  ROOFERS_DATA_RUNCORN,
-  ROOFERS_TABDATA_RUNCORN,
-  VETTED_DATA_ROOFERS_RUNCORN,
-} from "./RoofersInRuncornData";
+  BREADCRUM_DATA_ROOFERS_NORTHWICH,
+  ROOFERS_FREQUENTLY_DATA_NORTHWICH,
+  POPULAR_SERVICES_ROOFERS_NORTHWICH,
+  QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTHWICH,
+  ROOFERS_ADVICEINSIGHT_NORTHWICH,
+  ROOFERS_FEEDBACK_NORTHWICH,
+  ROOFERS_DATA_NORTHWICH,
+  ROOFERS_TABDATA_NORTHWICH,
+  VETTED_DATA_ROOFERS_NORTHWICH,
+} from "./RoofersInNorthwichData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
 import PopularJobNearMe from "../../../Nearme/PopularJobNearMe";
@@ -30,18 +30,18 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 
-function RoofersInRuncorn() {
+function RoofersInNorthwich() {
   useScrollToTop()
   useRegistrationRedirect()
   const featureRef = useRef(null);
   return (
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-      <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_RUNCORN} />
+      <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_NORTHWICH} />
       <HeroSectionLocation
         heading1="Roofers"
-        heading2="Runcorn"
-        description="If you need a roofer in Runcorn, you can get free solid quotes from the highest quality roofers in your local area without having to ring round half the town. Enter your postcode, give us a few details, and that’s it - only takes under a minute!"
+        heading2="Northwich"
+        description="Get free quotes from trusted Roofers in Northwich with no obligation to commit. Enter your postcode, share details about the issues you’re dealing with, and get quotes in minutes. It's that straightforward."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -50,16 +50,16 @@ function RoofersInRuncorn() {
         serviceName="Roofing"
       />
       <VettedSection
-        paragraph={VETTED_DATA_ROOFERS_RUNCORN}
+        paragraph={VETTED_DATA_ROOFERS_NORTHWICH}
         vettedHeading1="Find Local Vetted Roofers in "
-        vettedHeading2="Runcorn"
-        breadcrumb={BREADCRUM_DATA_ROOFERS_RUNCORN}
+        vettedHeading2="Northwich"
+        breadcrumb={BREADCRUM_DATA_ROOFERS_NORTHWICH}
         extraButton
         featureRef={featureRef}
       />
 
       <PopularJobNearMe
-        services={POPULAR_SERVICES_ROOFERS_RUNCORN}
+        services={POPULAR_SERVICES_ROOFERS_NORTHWICH}
         popularImage="/nearme/Roofing/roofslate.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
         mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -68,30 +68,30 @@ function RoofersInRuncorn() {
       <AboutServicesAndQuestions
         serviceId={113}
         serviceName="Roofing"
-        contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_RUNCORN}
+        contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTHWICH}
       />
 
       <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-        <Feature county='Halton' cityName='Runcorn' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+        <Feature county='Cheshire' cityName='Northwich' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
       <AdviceInsightNearMe
-        articles={ROOFERS_ADVICEINSIGHT_RUNCORN}
+        articles={ROOFERS_ADVICEINSIGHT_NORTHWICH}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
       />
      
       <FAQ
       headdingblue="FAQ's on roofers "
-      headingblack="Runcorn"
+      headingblack="Northwich"
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
-        data={ROOFERS_FREQUENTLY_DATA_RUNCORN}
+        data={ROOFERS_FREQUENTLY_DATA_NORTHWICH}
       />
-      <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_RUNCORN} />
-      <DiscoverNearMe homeData={ROOFERS_DATA_RUNCORN} />
+      <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_NORTHWICH} />
+      <DiscoverNearMe homeData={ROOFERS_DATA_NORTHWICH} />
       <HireRelatedToServiceNearMe
         heading1="Hire with"
         heading2="confidence."
-        tabData={ROOFERS_TABDATA_RUNCORN}
+        tabData={ROOFERS_TABDATA_NORTHWICH}
         activeTabkey="popular"
       />
       <NearmeMember
@@ -103,4 +103,4 @@ function RoofersInRuncorn() {
     </>
   );
 }
-export default RoofersInRuncorn;
+export default RoofersInNorthwich;
