@@ -269,26 +269,34 @@ export default function MegaMenu({
                     }}
                   >
                     <div className="flex items-center gap-3 flex-1">
+                     {item.path ? (
                       <Link
                         href={`/${currentLang}/${currentCountry}/${item.path}`}
                         onClick={(e) => {
-                          e.stopPropagation(); // 🔑
+                          e.stopPropagation();
                           handleClose();
                         }}
                         className="flex items-center gap-3"
                       >
-                        {item.icon && <Image
-                          src={item.icon}
-                          alt=""
-                          width={20}
-                          height={20}
-                          aria-hidden="true"
-                        />}
-                        {!item.icon && <div className="h-5 w-5 md:hidden"/>}
+                        {item.icon && (
+                          <Image src={item.icon} alt="" width={20} height={20} aria-hidden="true" />
+                        )}
+                        {!item.icon && <div className="h-5 w-5 md:hidden" />}
                         <span className="text-sm font-bold text-gray-700 group-hover:text-gray-900">
                           {item.name}
                         </span>
                       </Link>
+                    ) : (
+                      <div className="flex items-center gap-3 cursor-default">
+                        {item.icon && (
+                          <Image src={item.icon} alt="" width={20} height={20} aria-hidden="true" />
+                        )}
+                        {!item.icon && <div className="h-5 w-5 md:hidden" />}
+                        <span className="text-sm font-bold text-gray-700">
+                          {item.name}
+                        </span>
+                      </div>
+                    )}
                     </div>
 
                     {item?.subcategory?.length > 0 && (
