@@ -65,17 +65,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
     text: "It gives you space to compare without feeling pushed. No awkward follow-up calls. No pressure to say yes on the spot. Just information, options, and the freedom to choose when you’re ready.",
     notMarginBottom: true
   },
-  // {
-  //   type: "QuotesBanner",
-  //   className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[154px] lg:mb-[154px]"
-  // },
-  {
-    type: "QuotesBanner",
-    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
-  },
+
   {
     type: "h2",
-    text: "How much does roofing cost in Wrexham?"
+    text: "How much does roofing cost in Wrexham?",
+    className: "mt-6 lg:mt-[72px]"
   },
   {
     type: "p",
@@ -117,14 +111,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
     ],
     className: "lg:pb-[0px] pb-[0px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px]"
   },
-  // {
-  //   type: "p",
-  //   text: "These numbers are there to give you a sense of scale, not a fixed promise. Every roof is different. The best way to know what yours will cost is to have it looked at properly and compare a few quotes before making a decision."
-  // },
-  // {
-  //   type: "PostCodeSectionLocation",
-  //   className: "mb-[0px] mt-[0px] lg:mt-[0px] lg:mb-[0px]"
-  // }
+  {
+    type: "QuotesBanner",
+    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+  },
 ];
 export const ROOFERS_FREQUENTLY_DATA_WREXHAM = [
   {

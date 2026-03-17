@@ -11,39 +11,6 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
     type: "p",
     text: "So here’s a rough idea of what people in Mold often pay:"
   },
-  // {
-  //   type: "AveragePriceLocation",
-  //   title: "Average cost of roofing Mold ",
-  //   calculatorText: "click here.",
-  //   calculatorLink: "/en/gb/roofing-multi-form-ppc",
-  //   disclaimerText:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
-  //   priceCards: [
-  //     {
-  //       description: "For general roofing jobs, homeowners usually spend around £2,858",
-  //       // price: "£2,858",
-  //       // className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[120px] lg:max-h-[120px]"
-
-  //     },
-  //     {
-  //       description: "Most straightforward repairs, including fixing leaks, replacing broken tiles, come in at about £862.",
-  //       // price: "£862",
-  //       // className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[120px] lg:max-h-[120px]"
-
-  //     },
-  //     {
-  //       description: "Emergency call-outs for roofers tend to average around £445",
-  //       // price: "£445",
-  //       // className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-14 min-[360px]:max-h-14 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
-
-  //     },
-  //     {
-  //       description: "For a full replacement new roof, the average cost in Mold is around £7,495.",
-  //       // price: "£7,495",
-  //       // className: "max-[360]:min-h-16 max-[360]:max-h-14 min-[360px]:min-h-14 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[100px] md:max-h-[100px] lg:min-h-[100px] lg:max-h-[100px]"
-  //     },
-  //   ],
-
-  // },
   {
     type: "pricingTable",
     title: "Average cost of roofing Mold",
@@ -122,17 +89,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
     text: "If you’re not sure whether it’s a quick repair or something more serious, it’s usually worth having someone take a proper look. Sometimes what seems like a big issue turns out to be straightforward, and sometimes catching it early prevents a much larger job later on.",
     notMarginBottom: true
   },
-  // {
-  //   type: "QuotesBanner",
-  //   className: "mb-[30px] mt-[30px] md:mt-[80px] md:mb-[80px] lg:mt-[154px] lg:mb-[154px]"
-  // },
-  {
-    type: "QuotesBanner",
-    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
-  },
   {
     type: "h2",
-    text: "Why many homeowners use Localists to find Roofers in Mold"
+    text: "Why many homeowners use Localists to find Roofers in Mold",
+    className: "mt-6 lg:mt-[72px]"
   },
   {
     type: "p",
@@ -151,10 +111,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
     text: "In the end, it’s about having a bit more control over the process. You look at your options, ask your questions, and move forward when you’re comfortable. That’s why many homeowners prefer doing it this way.",
     notMarginBottom: true
   },
-  // {
-  //   type: "PostCodeSectionLocation",
-  //   className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
-  // }
+  {
+    type: "QuotesBanner",
+    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+  },
 ];
 export const ROOFERS_FREQUENTLY_DATA_MOLD = [
   {

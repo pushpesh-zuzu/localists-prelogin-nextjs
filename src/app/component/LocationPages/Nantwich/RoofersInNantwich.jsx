@@ -1,16 +1,16 @@
 "use client";
 import React, { useRef } from "react";
 import {
-    BREADCRUM_DATA_ROOFERS_ALTRINCHAM,
-    ROOFERS_FREQUENTLY_DATA_ALTRINCHAM,
-    POPULAR_SERVICES_ROOFERS_ALTRINCHAM,
-    QUESTION_AND_ABOUT_SERVICE_ROOFERS_ALTRINCHAM,
-    ROOFERS_ADVICEINSIGHT_ALTRINCHAM,
-    ROOFERS_FEEDBACK_ALTRINCHAM,
-    ROOFERS_DATA_ALTRINCHAM,
-    ROOFERS_TABDATA_ALTRINCHAM,
-    VETTED_DATA_ROOFERS_ALTRINCHAM,
-} from "./RoofersInAltrinchamData";
+    BREADCRUM_DATA_ROOFERS_NANTWICH,
+    ROOFERS_FREQUENTLY_DATA_NANTWICH,
+    POPULAR_SERVICES_ROOFERS_NANTWICH,
+    QUESTION_AND_ABOUT_SERVICE_ROOFERS_NANTWICH,
+    ROOFERS_ADVICEINSIGHT_NANTWICH,
+    ROOFERS_FEEDBACK_NANTWICH,
+    ROOFERS_DATA_NANTWICH,
+    ROOFERS_TABDATA_NANTWICH,
+    VETTED_DATA_ROOFERS_NANTWICH,
+} from "./RoofersInNantwichData";
 import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../Nearme/VettedSection";
 import PopularJobNearMe from "../../Nearme/PopularJobNearMe";
@@ -30,18 +30,18 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../PostCodeSectionLocation2";
 
-function RoofersInAltrincham() {
+function RoofersInNantwich() {
     useScrollToTop()
     useRegistrationRedirect()
     const featureRef = useRef(null);
     return (
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_ALTRINCHAM} />
+            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_NANTWICH} />
             <HeroSectionLocation
                 heading1="Roofers"
-                heading2="Altrincham"
-                description="Looking for local roofing professionals in Altrincham? Just enter your postcode, explain what’s going on, and you’ll receive free, no obligation quotes from the qualified expert specialists in your area."
+                heading2="Nantwich"
+                description="Are you in need of high-quality roofers in Nantwich? All you need to do is enter your postcode here, tell us a few details about the work you need done, and get quotes straight to your inbox from roofing professionals near you."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -50,16 +50,16 @@ function RoofersInAltrincham() {
                 serviceName="Roofing"
             />
             <VettedSection
-                paragraph={VETTED_DATA_ROOFERS_ALTRINCHAM}
+                paragraph={VETTED_DATA_ROOFERS_NANTWICH}
                 vettedHeading1="Find Local Vetted Roofers in "
-                vettedHeading2="Altrincham"
-                breadcrumb={BREADCRUM_DATA_ROOFERS_ALTRINCHAM}
+                vettedHeading2="Nantwich"
+                breadcrumb={BREADCRUM_DATA_ROOFERS_NANTWICH}
                 extraButton
                 featureRef={featureRef}
             />
 
             <PopularJobNearMe
-                services={POPULAR_SERVICES_ROOFERS_ALTRINCHAM}
+                services={POPULAR_SERVICES_ROOFERS_NANTWICH}
                 popularImage="/nearme/Roofing/roofslate.webp"
                 altText="two roofers installing slate tiles onto a brand new roof URL"
                 mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -68,15 +68,15 @@ function RoofersInAltrincham() {
             <AboutServicesAndQuestions
                 serviceId={113}
                 serviceName="Roofing"
-                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_ALTRINCHAM}
+                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_NANTWICH}
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-                <Feature cityName="Altrincham" county='Altrincham' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+                <Feature cityName="Nantwich" county='Cheshire East' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
             <AdviceInsightNearMe
-                articles={ROOFERS_ADVICEINSIGHT_ALTRINCHAM}
+                articles={ROOFERS_ADVICEINSIGHT_NANTWICH}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
             />
             <WrapperBGWidth>
@@ -88,14 +88,14 @@ function RoofersInAltrincham() {
                 containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
                 headdingblue="FAQ's"
                 headingblack=""
-                data={ROOFERS_FREQUENTLY_DATA_ALTRINCHAM}
+                data={ROOFERS_FREQUENTLY_DATA_NANTWICH}
             />
-            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_ALTRINCHAM} />
-            <DiscoverNearMe homeData={ROOFERS_DATA_ALTRINCHAM} />
+            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_NANTWICH} />
+            <DiscoverNearMe homeData={ROOFERS_DATA_NANTWICH} />
             <HireRelatedToServiceNearMe
                 heading1="Hire with"
                 heading2="confidence."
-                tabData={ROOFERS_TABDATA_ALTRINCHAM}
+                tabData={ROOFERS_TABDATA_NANTWICH}
                 activeTabkey="popular"
             />
             <NearmeMember
@@ -107,4 +107,4 @@ function RoofersInAltrincham() {
         </>
     );
 }
-export default RoofersInAltrincham;
+export default RoofersInNantwich;

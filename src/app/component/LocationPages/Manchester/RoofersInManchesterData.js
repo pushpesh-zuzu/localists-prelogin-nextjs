@@ -86,13 +86,9 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MANCHESTER = [
     noMarginBottom: true,
   },
   {
-    type: "QuotesBanner",
-    className:
-      "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]",
-  },
-  {
     type: "h2",
     text: "What to look for when hiring a roofer",
+    className: "mt-6 lg:mt-[72px]"
   },
   {
     type: "p",
@@ -117,10 +113,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MANCHESTER = [
   {
     type: "li",
     text: "Memberships – Look for professional bodies like the NFRC (National Federation of Roofing Contractors) or CORC (Council of Roofing Contractors). Membership shows they stick to industry standards and best practices.",
+    className: "mb-0"
   },
   {
-    type: "PostCodeSectionLocation",
-    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    type: "QuotesBanner",
+    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
   },
 ];
 export const FREQUENTLY_DATA_MANCHESTER = [

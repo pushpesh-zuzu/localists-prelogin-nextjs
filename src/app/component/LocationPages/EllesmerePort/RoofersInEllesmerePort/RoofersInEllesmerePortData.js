@@ -27,7 +27,6 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ELLESMEREPORT = [
         type: "p",
         text: "A slipped tile isn’t the same as a sagging flat roof. Each quote reflects what you’ve described, so you’re not dealing with generic estimates."
     },
-    { type: "PostCodeSectionLocation" },
     {
         type: "pbold",
         text: "You control the timing"
@@ -77,7 +76,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ELLESMEREPORT = [
         title: "Average cost of roofers in Ellesmere Port",
         calculatorText: "click here.",
         calculatorLink: "/en/gb/roofing-multi-form-ppc",
-        disclaimer:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+        disclaimer: "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
         prices: [
             {
                 text: "General roofing work comes in at around",
@@ -195,52 +194,52 @@ export const ROOFERS_TABDATA_ELLESMEREPORT = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
     ],
-     related: [
-    {
-      title: "Roofers Leeds",
-      url: "/en/gb/roofers-near-me/leeds"
-    },
-    {
-      title: "Roofers York",
-      url: "/en/gb/roofers-near-me/york"
-    },
-    {
-      title: "Roofers Hull",
-      url: ""
-    },
-    {
-      title: "Roofers Bolton",
-      url: ""
-    },
-    {
-      title: "Roofers Chester",
-      url: "/en/gb/roofers-near-me/chester"
-    },
-    {
-      title: "Roofers Cheshire",
-      url: ""
-    },
-    {
-      title: "Roofers Harrogate",
-      url: ""
-    },
-    {
-      title: "Roofers Liverpool",
-      url: "/en/gb/roofers-near-me/liverpool"
-    },
-    {
-      title: "Roofers Manchester",
-      url: "/en/gb/roofers-near-me/manchester"
-    },
-    {
-      title: "Roofers Stockport",
-      url: "/en/gb/roofers-near-me/stockport"
-    },
-    {
-      title: "Roofers North Yorkshire",
-      url: ""
-    }
-  ],
+    related: [
+        {
+            title: "Roofers Leeds",
+            url: "/en/gb/roofers-near-me/leeds"
+        },
+        {
+            title: "Roofers York",
+            url: "/en/gb/roofers-near-me/york"
+        },
+        {
+            title: "Roofers Hull",
+            url: ""
+        },
+        {
+            title: "Roofers Bolton",
+            url: ""
+        },
+        {
+            title: "Roofers Chester",
+            url: "/en/gb/roofers-near-me/chester"
+        },
+        {
+            title: "Roofers Cheshire",
+            url: ""
+        },
+        {
+            title: "Roofers Harrogate",
+            url: ""
+        },
+        {
+            title: "Roofers Liverpool",
+            url: "/en/gb/roofers-near-me/liverpool"
+        },
+        {
+            title: "Roofers Manchester",
+            url: "/en/gb/roofers-near-me/manchester"
+        },
+        {
+            title: "Roofers Stockport",
+            url: "/en/gb/roofers-near-me/stockport"
+        },
+        {
+            title: "Roofers North Yorkshire",
+            url: ""
+        }
+    ],
     findMore: [],
 };
 export const VETTED_DATA_ROOFERS_ELLESMEREPORT = [

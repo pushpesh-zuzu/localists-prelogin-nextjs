@@ -16,7 +16,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_YORK = [
     title: "Average cost of roofing in York",
     calculatorText: "click here.",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimerText:"Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price",
+    disclaimerText: "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price",
     priceCards: [
       {
         description: "For general roofing jobs, homeowners usually spend around",
@@ -49,11 +49,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_YORK = [
     marginBottom: true,
   },
   {
-   type: "h2", text: "Common roofing services in York:", 
-
+    type: "h2", text: "Common roofing services in York:",
   },
 
-{ type: "li", text: "Roof repairs – fixing leaks, slipped tiles, or damaged flashing before small problems turn into big headaches." },
+  { type: "li", text: "Roof repairs – fixing leaks, slipped tiles, or damaged flashing before small problems turn into big headaches." },
 
   { type: "li", text: "Full roof replacements – from pitched to flat roofs, for homes that need a complete overhaul." },
 
@@ -63,20 +62,22 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_YORK = [
 
   { type: "li", text: "Flat roof installation or resealing – perfect for garages, extensions, or tricky modern builds." },
 
-  { type: "li", text: "Roof inspections and surveys – spotting potential issues early so you can plan repairs before they become urgent." },
-   {
-    type: "QuotesBanner",
-    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
+  {
+    type: "li", text: "Roof inspections and surveys – spotting potential issues early so you can plan repairs before they become urgent.",
+    className: "mb-0"
   },
-  { type: "h2", text: "What to look for in a York roofer – Qualifications and timings" },
+  {
+    type: "h2", text: "What to look for in a York roofer – Qualifications and timings",
+    className: "mt-6 lg:mt-[72px]"
+  },
   {
     type: "p",
     text: "Finding a roofer who knows what they’re doing is more than just spotting a ladder and a van. Here’s how to make sure you’re hiring someone qualified, safe, and reliable.",
   },
   {
- type:"pbold",
- text:"Key qualifications and certifications:",
- className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+    type: "pbold",
+    text: "Key qualifications and certifications:",
+    className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
 
   },
   { type: "li", text: "NVQ Level 2 in Roofing (or equivalent) – proof they know the trade inside out." },
@@ -88,29 +89,28 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_YORK = [
   { type: "li", text: "Public liability insurance – essential protection if anything goes wrong." },
 
   { type: "li", text: "Membership of professional trade bodies – like the NFRC or CORC, which signal credibility and experience." }
-,
-{
-  type:"pbold",
-  text:"How long jobs usually take in York:",
- className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+  ,
+  {
+    type: "pbold",
+    text: "How long jobs usually take in York:",
+    className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
 
-},
-{ type: "li", text: "Small repairs – a day or two is often enough to fix leaks, slipped tiles, or minor damage." },
-
-{ type: "li", text: "Roof sections – replacing part of a roof or tackling larger repairs usually takes 2–5 days." },
-
-{ type: "li", text: "Full roof replacement – bigger projects can stretch from 1 to 3 weeks, depending on the roof type, size, and, of course, York’s famously unpredictable weather." },
-
-{
-    type: "p",
-    text: "By checking qualifications and understanding realistic timings, you can avoid surprises and feel confident that your York roof is in capable hands."
   },
-      {
-    type: "PostCodeSectionLocation",
-    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
-  }
+  { type: "li", text: "Small repairs – a day or two is often enough to fix leaks, slipped tiles, or minor damage." },
 
+  { type: "li", text: "Roof sections – replacing part of a roof or tackling larger repairs usually takes 2–5 days." },
 
+  { type: "li", text: "Full roof replacement – bigger projects can stretch from 1 to 3 weeks, depending on the roof type, size, and, of course, York’s famously unpredictable weather." },
+
+  {
+    type: "p",
+    text: "By checking qualifications and understanding realistic timings, you can avoid surprises and feel confident that your York roof is in capable hands.",
+    notMarginBottom: true
+  },
+  {
+    type: "QuotesBanner",
+    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+  },
 ];
 export const ROOFERS_FREQUENTLY_DATA_YORK = [
   {
@@ -203,7 +203,7 @@ export const ROOFERS_TABDATA_YORK = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-    related: [
+  related: [
     {
       title: "Roofers Leeds",
       url: "/en/gb/roofers-near-me/leeds"
@@ -242,7 +242,7 @@ export const ROOFERS_TABDATA_YORK = {
     },
     {
       title: "Roofers Stockport",
-       url: "/en/gb/roofers-near-me/stockport"
+      url: "/en/gb/roofers-near-me/stockport"
     },
     {
       title: "Roofers North Yorkshire",
@@ -259,7 +259,7 @@ export const VETTED_DATA_ROOFERS_YORK = [
 That’s where Localists come in. We connect you with experienced, vetted roofers in York who can handle any roofing job. You don’t need to wonder whether they’ve got capacity to do your job, or worry if they’re reliable. We’ve done all that for you.
 <br/><br/>
 `,
-`
+  `
 Zero cost. Zero obligation. Zero stress
 `
 ];

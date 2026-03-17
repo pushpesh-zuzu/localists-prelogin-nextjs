@@ -39,85 +39,13 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
   {
     type: "p",
     text: "Already know what needs doing? Use our Job Value Estimator for a quick, tailored cost estimate; no guesswork required.",
+    notMarginBottom: true
   },
-  // {
-  //   type: "pbold",
-  //   text: "General roofing work"
-  // },
-  // {
-  //   type: "p",
-  //   text: "For standard roofing projects, whether it’s minor upgrades or general maintenance, costs usually sit between £1,350 and £3,350, with most jobs coming in around £2,150. It’s the kind of work that quietly keeps your home dry and drama-free.",
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "Roof repairs"
-  // },
-  // {
-  //   type: "p",
-  //   text: "General roof repairs cost £750 on average but this can go increase or decrease based on the complexity of the job and scale of the damage. Small leaks, cracked tiles, or early signs of wear can cost anywhere between £350 and £1,450 to repair. Catching these early can save you from much bigger bills later."
-  // },
-  { type: "PostCodeSectionLocation" },
-  // {
-  //   type: "pbold",
-  //   text: "Flat roof repairs"
-  // },
-  // {
-  //   type: "p",
-  //   text: "Flat roofs need a bit of extra care. Repairs and resealing typically fall between £625 and £2,100, with an average spend of £1,150, ideal for garages, extensions, and low-pitch roofs."
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "Pitched roof repairs"
-  // },
-  // {
-  //   type: "p",
-  //   text: "For sloped roofs, repair costs usually range from £350 to £1,500, averaging £725. A small fix now can prevent water damage down the line."
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "Emergency roofing services"
-  // },
-  // {
-  //   type: "p",
-  //   text: "When a storm hits or water starts coming in unexpectedly, emergency callouts generally cost £370 to £1,170, with an average of £630. Quick action often stops minor issues turning into major repairs."
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "Flat roof installation"
-  // },
-  // {
-  //   type: "p",
-  //   text: "The average cost of a flat roof replacement is £2700 - but this can vary based on the complexity and scale of the job, with flat roof installation prices ranging from £1,500 to £8,000 "
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "Pitched roof installation"
-  // },
-  // {
-  //   type: "p",
-  //   text: "A pitched roof installation costs on average For a full pitched roof installation, expect prices between £5,000 and £8,000, with the average sitting around £5,609. It’s a bigger investment, but one that offers long-term protection and peace of mind."
-  // },
-  // {
-  //   type: "pbold",
-  //   text: "Roof replacement"
-  // },
-  // {
-  //   type: "p",
-  //   text: "When repairs are no longer enough, a complete roof replacement usually costs £5,000 to £9,445, averaging £6,837. A major job, yes, but one that resets the clock on your roof entirely."
-  // },
-  // {
-  //   type: "p",
-  //   text: "Good to know: Final prices depend on factors like roof size, materials, access, and whether extras such as scaffolding or insulation are needed. Always ask for a detailed quote before booking so there are no surprises."
-  // },
-  // {
-  //   type: "p",
-  //   text: "Already know what needs doing? Use our Job Value Estimator for a quick, tailored cost estimate; no guesswork required."
-  // },
+  // { type: "PostCodeSectionLocation" },
   {
     type: 'h2',
     text: "What Should Be Included in Your Roofing Quote",
     className: "mt-6 lg:mt-[72px]"
-
   },
   {
     type: "p",
@@ -145,7 +73,8 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
   },
   {
     type: "p",
-    text: "If a quote feels vague or leaves things out, don’t be afraid to ask questions. A trustworthy roofer will be happy to explain exactly what you’re paying for, no fine print, no confusion, no awkward conversations."
+    text: "If a quote feels vague or leaves things out, don’t be afraid to ask questions. A trustworthy roofer will be happy to explain exactly what you’re paying for, no fine print, no confusion, no awkward conversations.",
+    notMarginBottom: true
   },
   // {
   //   type: "QuotesBanner",

@@ -32,11 +32,6 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RHYL = [
             }
         ]
     },
-    // {
-    //     type: "p",
-    //     text: "Think of these as rough reference points, not promises. The only way to know for sure is to have someone take a proper look and talk it through with you. Seeing a few quotes side by side usually makes it much easier to understand what feels fair.",
-    //     notMarginBottom: true
-    // },
     {
         type: "image",
         src: "/nearme/Roofing/roofinstalling.webp",
@@ -59,19 +54,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RHYL = [
         type: "p",
         text: "With Localists, you simply describe what’s happening, and we connect you with high-quality roofers right here in Rhyl. Because these professionals are local, they can respond quickly in cases of an emergency. Also, every free quote you receive is tailored to your specific roof problem, so you aren't just guessing based on a generic price list. You get to see exactly how different professionals approach the same problem side-by-side, giving you the clarity you need to decide what to do next."
     },
-    // {
-    //     type: "QuotesBanner",
-    //     className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
-    // },
     {
         type: "p",
         text: "The best part is that there’s absolutely no pressure to hire. You can take your time to look through your options and ask questions without any hard sales or being pushed into a decision. You only move forward and hire when you’re 100% ready and comfortable with your choice. Plus, you’re safe in the knowledge that the roofers that get in touch with you all have capacity to fit you in.",
         notMarginBottom: true
     },
-    // {
-    //     type: "PostCodeSectionLocation",
-    //     className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
-    // }
     {
         type: "QuotesBanner",
         className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"

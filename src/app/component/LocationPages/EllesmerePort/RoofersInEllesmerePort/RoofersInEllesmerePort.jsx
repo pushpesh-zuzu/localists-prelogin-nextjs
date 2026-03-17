@@ -27,6 +27,8 @@ import Feature from "../../FetureComponent/Feature";
 import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
+import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
+import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 
 function RoofersInEllesmerePort() {
     useScrollToTop()
@@ -46,7 +48,7 @@ function RoofersInEllesmerePort() {
                 blackHeadinginline="inline"
                 serviceId={113}
                 serviceName="Roofing"
-                // margin='m-start'
+            // margin='m-start'
             />
             <VettedSection
                 paragraph={VETTED_DATA_ROOFERS_ELLESMEREPORT}
@@ -78,6 +80,11 @@ function RoofersInEllesmerePort() {
                 articles={ROOFERS_ADVICEINSIGHT_ELLESMEREPORT}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
             />
+            <WrapperBGWidth>
+                <div className="px-[30px] sm:px-10 md:px-16 xl:px-[120px]">
+                    <PostCodeSectionLocation2 classNamePostCode="mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px] lg:justify-center lg:gap-12" serviceId={113} serviceName="Roofing" />
+                </div>
+            </WrapperBGWidth>
             <FAQ
                 containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
                 headdingblue="FAQ's"
@@ -94,7 +101,7 @@ function RoofersInEllesmerePort() {
             />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
-                 desktopImage="/nearme/Roofing/roofingmember.webp"
+                desktopImage="/nearme/Roofing/roofingmember.webp"
                 mobileImage="/nearme/Roofing/roofingmembermobile.webp"
             />
             <Footer />

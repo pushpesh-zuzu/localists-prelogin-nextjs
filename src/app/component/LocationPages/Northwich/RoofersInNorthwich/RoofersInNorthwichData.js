@@ -1,20 +1,20 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTHWICH = [
-{
-  type: "h2",
-  text: "What might you pay for roofing work in Northwich?",
-},
-{
-  type: "p",
-  text: "There isn’t a fixed price when it comes to roofing. It really depends on what’s going on up there. A simple repair is one thing. A roof that needs major work or replacing entirely is another story.",
-},
-{
-        type: "pricingTable",
-        title: "Average cost of roofers in Northwich",
-        calculatorText: "click here",
-        calculatorLink: "/en/gb/roofing-multi-form-ppc",
-        disclaimer: "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",
-        prices: [
-               {
+  {
+    type: "h2",
+    text: "What might you pay for roofing work in Northwich?",
+  },
+  {
+    type: "p",
+    text: "There isn’t a fixed price when it comes to roofing. It really depends on what’s going on up there. A simple repair is one thing. A roof that needs major work or replacing entirely is another story.",
+  },
+  {
+    type: "pricingTable",
+    title: "Average cost of roofers in Northwich",
+    calculatorText: "click here",
+    calculatorLink: "/en/gb/roofing-multi-form-ppc",
+    disclaimer: "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",
+    prices: [
+      {
         text: "In Northwich, general roofing jobs tend to average around ",
         price: "£2,121",
       },
@@ -33,41 +33,39 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTHWICH = [
         price: "£6,837",
       },
 
-        ]
-    },
-    {
+    ]
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
+    marginBottom: true,
   },
   {
-        type: "QuotesBanner",
-        className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
-    },
-    {
-  type: "h2",
-  text: "Why Northwich homeowners use Localists to find roofers",
-},
-{
-  type: "p",
-  text: "When looking to hire a roofer in Northwich, you don’t just want someone who says they can fix it. You want someone who actually knows what they’re doing and won’t cut corners.",
-},
-{
-  type: "p",
-  text: "Localists helps with that part. Instead of calling different numbers and waiting to see who responds, you can look at real options straight away. You can see who’s available, read what other homeowners have said, and get proper quotes based on your roof, not a rough guess.",
-},
-{
-  type: "p",
-  text: "You can compare prices, ask questions, and take your time before deciding. If it’s urgent, you can move quickly. If it’s something you’ve been putting off, you can plan it properly.",
-},
-{
-  type: "p",
-  text: "At the end of the day, it’s about feeling comfortable with who you hire. Knowing they’re insured, experienced, and accountable makes that decision a lot easier.",
-},
+    type: "h2",
+    text: "Why Northwich homeowners use Localists to find roofers",
+  },
   {
-    type: "PostCodeSectionLocation",
-    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
-  }
+    type: "p",
+    text: "When looking to hire a roofer in Northwich, you don’t just want someone who says they can fix it. You want someone who actually knows what they’re doing and won’t cut corners.",
+  },
+  {
+    type: "p",
+    text: "Localists helps with that part. Instead of calling different numbers and waiting to see who responds, you can look at real options straight away. You can see who’s available, read what other homeowners have said, and get proper quotes based on your roof, not a rough guess.",
+  },
+  {
+    type: "p",
+    text: "You can compare prices, ask questions, and take your time before deciding. If it’s urgent, you can move quickly. If it’s something you’ve been putting off, you can plan it properly.",
+  },
+  {
+    type: "p",
+    text: "At the end of the day, it’s about feeling comfortable with who you hire. Knowing they’re insured, experienced, and accountable makes that decision a lot easier.",
+    notMarginBottom: true
+  },
+  {
+    type: "QuotesBanner",
+    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+  },
 ];
 export const ROOFERS_FREQUENTLY_DATA_NORTHWICH = [
   {

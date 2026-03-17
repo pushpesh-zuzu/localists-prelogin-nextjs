@@ -90,13 +90,9 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
     notMarginBottom: true
   },
   {
-    type: "QuotesBanner",
-    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
-  },
-
-  {
     type: "h2",
     text: "When is it a repair… And when is it time to replace?",
+    className: "mt-6 lg:mt-[72px]"
   },
   {
     type: "p",
@@ -113,11 +109,12 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
   {
     type: "p",
     text: "Age plays a part too. Some roofs last decades, others less so, depending on materials and how well they’ve been looked after. If yours is edging towards that 25-30 year mark, it’s reasonable to think ahead (possible replacement) rather than just react to the next leak.",
+    notMarginBottom: true
   },
   {
-    type: "PostCodeSectionLocation",
-    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
-  }
+    type: "QuotesBanner",
+    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+  },
 ];
 export const ROOFERS_FREQUENTLY_DATA_CREW = [
   {

@@ -30,11 +30,6 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MACCLESFIELD = [
     {
         type: "p",
         text: "Flat roofs can be tricky, but repairs don’t have to be painful. Expect to pay £619–£2,076, with the average job around £1,149. Perfect for garages, extensions, or low-pitch roofs that need a little TLC.",
-        notMarginBottom: true
-    },
-    {
-        type: "QuotesBanner",
-        className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
     },
     {
         type: "pbold",
@@ -138,9 +133,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MACCLESFIELD = [
         notMarginBottom: true
     },
     {
-        type: "PostCodeSectionLocation",
-        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
-    }];
+        type: "QuotesBanner",
+        className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    },
+];
 
 export const ROOFERS_FREQUENTLY_DATA_MACCLESFIELD = [
     {

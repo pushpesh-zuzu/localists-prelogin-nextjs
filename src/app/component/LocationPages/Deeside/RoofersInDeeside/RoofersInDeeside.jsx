@@ -27,7 +27,9 @@ import Feature from "../../FetureComponent/Feature";
 import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
-import QuotesBanner from "@/app/component/common/QuotesBanner/QuotesBanner";
+// import QuotesBanner from "@/app/component/common/QuotesBanner/QuotesBanner";
+import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
+import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 
 function RoofersInDeeside() {
   useScrollToTop()
@@ -78,9 +80,11 @@ function RoofersInDeeside() {
         articles={ROOFERS_ADVICEINSIGHT_DEESIDE}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
       />
-      <div className="flex justify-center px-[30px] md:px-16 xl:px-0">
-        <QuotesBanner serviceId={113} serviceName={'Roofing'} classQuote="mb-[50px] mt-[20px] md:mt-[40px] md:mb-[80px] lg:mt-[108] lg:mb-[180px] w-full md:max-w-[1000px]  " />
-      </div>
+      <WrapperBGWidth>
+        <div className="px-[30px] sm:px-10 md:px-16 xl:px-[120px]">
+          <PostCodeSectionLocation2 classNamePostCode="mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px] lg:justify-center lg:gap-12" serviceId={113} serviceName="Roofing" />
+        </div>
+      </WrapperBGWidth>
       <FAQ
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
         data={ROOFERS_FREQUENTLY_DATA_DEESIDE}

@@ -38,12 +38,9 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_STOCKPORT = [
         notMarginBottom: true
     },
     {
-        type: "QuotesBanner",
-        className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
-    },
-    {
         type: 'h2',
         text: "Key things to expect in your roof quote",
+        className: "mt-6 lg:mt-[72px]"
     },
     {
         type: "p",
@@ -74,16 +71,9 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_STOCKPORT = [
         text: "A detailed quote gives you peace of mind and ensures you’re comparing like-for-like when getting multiple quotes. With Localists, you can quickly receive up to five free, no-obligation quotes from vetted Stockport roofers, all transparent and hassle-free.",
         notMarginBottom: true
     },
-    // {
-    //     type: "image",
-    //     src: "/nearme/Roofing/roofinstalling.webp",
-    //     alt: "two roofers installing slate tiles onto a brand new roof",
-    //     marginBottom: true,
-    //     marginTop: true
-    // },
     {
-        type: "PostCodeSectionLocation",
-        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
+        type: "QuotesBanner",
+        className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
     },
 ];
 export const FREQUENTLY_DATA_STOCKPORT = [
