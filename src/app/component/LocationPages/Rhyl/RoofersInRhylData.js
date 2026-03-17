@@ -133,79 +133,67 @@ export const ROOFERS_ADVICEINSIGHT_RHYL = [
     },
 ];
 export const ROOFERS_TABDATA_RHYL = {
-    popular: [
-        {
-            title: "Landscapers Near Me",
-            url: "/en/gb/landscape-gardeners-near-me",
-        },
-        {
-            title: "Gardeners Near Me",
-            url: "",
-        },
-        {
-            title: "Architects Near Me",
-            url: "",
-        },
-        {
-            title: "Gutter Cleaners Near Me",
-            url: "/en/gb/gutter-cleaning-near-me",
-        },
-        {
-            title: "Fencing Contractors Near Me",
-            url: "/en/gb/fencing-contractors-near-me",
-        },
-        {
-            title: "Artificial Grass Installers Near Me",
-            url: "/en/gb/artificial-grass-installers-near-me",
-        },
-    ],
-    related: [
-        {
-            title: "Roofers Leeds",
-            url: "/en/gb/roofers-near-me/leeds"
-        },
-        {
-            title: "Roofers York",
-            url: "/en/gb/roofers-near-me/york"
-        },
-        {
-            title: "Roofers Hull",
-            url: ""
-        },
-        {
-            title: "Roofers Bolton",
-            url: ""
-        },
-        {
-            title: "Roofers Chester",
-            url: "/en/gb/roofers-near-me/chester"
-        },
-        {
-            title: "Roofers Cheshire",
-            url: ""
-        },
-        {
-            title: "Roofers Harrogate",
-            url: ""
-        },
-        {
-            title: "Roofers Liverpool",
-            url: "/en/gb/roofers-near-me/liverpool"
-        },
-        {
-            title: "Roofers Manchester",
-            url: "/en/gb/roofers-near-me/manchester"
-        },
-        {
-            title: "Roofers Stockport",
-            url: "/en/gb/roofers-near-me/stockport"
-        },
-        {
-            title: "Roofers North Yorkshire",
-            url: ""
-        }
-    ],
-    findMore: [],
+  popular: [
+    {
+      title: "Landscapers Near Me",
+      url: "/en/gb/landscape-gardeners-near-me",
+    },
+    {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
+      title: "Architects Near Me",
+      url: "",
+    },
+    {
+      title: "Gutter Cleaners Near Me",
+      url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Fencing Contractors Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
+    },
+    {
+      title: "Artificial Grass Installers Near Me",
+      url: "/en/gb/artificial-grass-installers-near-me",
+    },
+  ],
+  related: [
+    { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
+    { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+    { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+    { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+    { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+    { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+    { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+    { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+    { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+    { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+    { title: "Roofers Anglesey", url: "/en/gb/roofers-near-me/anglesey" },
+    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+    { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
+    { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+    { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+    { title: "Roofers Colwyn Bay", url: "/en/gb/roofers-near-me/colwyn-bay" },
+    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+    {
+      title: "Roofers Macclesfield",
+      url: "/en/gb/roofers-near-me/macclesfield",
+    },
+    {
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
+    },
+  ],
+  findMore: [],
 };
 export const VETTED_DATA_ROOFERS_RHYL = [
     `We all have that one neighbour who thinks a YouTube video and a ladder makes them an expert, only for them to get on your roof and leave you with more problems than you started with.  When it comes to your home, you need a professional who knows what they’re doing.

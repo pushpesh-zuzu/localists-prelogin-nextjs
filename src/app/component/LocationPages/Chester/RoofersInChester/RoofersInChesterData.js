@@ -294,50 +294,38 @@ export const ROOFERS_TABDATA_CHESTER = {
     },
   ],
   related: [
+    { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
+    { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+    { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+    { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+    { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+    { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+    { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+    { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+    { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+    { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+    { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+    { title: "Roofers Anglesey", url: "/en/gb/roofers-near-me/anglesey" },
+    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+    { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
+    { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+    { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+    { title: "Roofers Colwyn Bay", url: "/en/gb/roofers-near-me/colwyn-bay" },
+    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
     {
-      title: "Roofers Leeds",
-      url: "/en/gb/roofers-near-me/leeds"
+      title: "Roofers Macclesfield",
+      url: "/en/gb/roofers-near-me/macclesfield",
     },
     {
-      title: "Roofers York",
-      url: "/en/gb/roofers-near-me/york"
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-    {
-      title: "Roofers Hull",
-      url: ""
-    },
-    {
-      title: "Roofers Bolton",
-      url: ""
-    },
-    {
-      title: "Roofers Chester",
-      url: "/en/gb/roofers-near-me/chester"
-    },
-    {
-      title: "Roofers Cheshire",
-      url: ""
-    },
-    {
-      title: "Roofers Harrogate",
-      url: ""
-    },
-    {
-      title: "Roofers Liverpool",
-      url: "/en/gb/roofers-near-me/liverpool"
-    },
-    {
-      title: "Roofers Manchester",
-      url: "/en/gb/roofers-near-me/manchester"
-    },
-    {
-      title: "Roofers Stockport",
-      url: "/en/gb/roofers-near-me/stockport"
-    },
-    {
-      title: "Roofers North Yorkshire",
-      url: ""
-    }
   ],
   findMore: [],
 };
@@ -384,7 +372,6 @@ export const ROOFERS_FEEDBACK_CHESTER = [
     id: 3,
     text: "We had our flat roof resealed and it couldn’t have gone smoother. Friendly team, no hidden costs, and a job done properly.",
     name: "Anwen K.",
-
   },
   {
     id: 4,
