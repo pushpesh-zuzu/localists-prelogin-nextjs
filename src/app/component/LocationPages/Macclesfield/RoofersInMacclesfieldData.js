@@ -259,7 +259,7 @@ export const ROOFERS_TABDATA_MACCLESFIELD = {
 };
 
 export const VETTED_DATA_ROOFERS_MACCLESFIELD = [
-    `Roofing problems can pop up out of nowhere, and at anytime. Really unpredictable, but fixing them doesn’t have to be a drama. Whether it’s a quick patch, a stubborn leak, or a full roof replacement, we connect you with the best <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3; text-decoration:underline;">local roofers</a> in Macclesfield who actually know their stuff, and won’t ghost you after quoting.
+    `Roofing problems can pop up out of nowhere, and at anytime. Really unpredictable, but fixing them doesn’t have to be a drama. Whether it’s a quick patch, a stubborn leak, or a full roof replacement, we connect you with the best <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">local roofers</a> in Macclesfield who actually know their stuff, and won’t ghost you after quoting.
   <br/><br/> 
   `,
     `
