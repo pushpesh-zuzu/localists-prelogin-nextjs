@@ -233,7 +233,7 @@ export const VETTED_DATA_ROOFERS_ST_HELENS = [
   <br/><br/> 
   `,
     `
-If you’re in St. Helens and need it looked at, we can connect you with qualified expert roofers near you. Pop in your postcode, explain what’s going on, and get free quotes from local roofers. It’s that simple. No long search. Just a clearer way to move things forward.
+If you’re in St. Helens and need it looked at, we can connect you with qualified expert <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">roofers near you</a>. Pop in your postcode, explain what’s going on, and get free quotes from local roofers. It’s that simple. No long search. Just a clearer way to move things forward.
 <br/><br/>
 `
 ];

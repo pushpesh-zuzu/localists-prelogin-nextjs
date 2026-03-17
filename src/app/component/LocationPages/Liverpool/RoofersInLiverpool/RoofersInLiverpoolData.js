@@ -339,7 +339,7 @@ export const VETTED_DATA_ROOFERS_LIVERPOOL = [
   <br/><br/> 
   `,
   `
-At Localists, we make finding experienced roofers in Liverpool, quick, simple, and completely hassle-free. Tell us what you need, and we’ll connect you with vetted Liverpool roofers near you, ready to help. No obligation. No hassle.
+At Localists, we make finding <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">experienced roofers</a> in Liverpool, quick, simple, and completely hassle-free. Tell us what you need, and we’ll connect you with vetted Liverpool roofers near you, ready to help. No obligation. No hassle.
 `,
 ];
 

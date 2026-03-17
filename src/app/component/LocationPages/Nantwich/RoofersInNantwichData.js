@@ -202,7 +202,7 @@ export const VETTED_DATA_ROOFERS_NANTWICH = [
   <br/><br/> 
   `,
     `
-If you’re tired of putting off that roof repair or replacement, we’ll connect you with the <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3; text-decoration:underline;">best roofers</a> in Nantwich. Vetted, local, and highly skilled. Get free quotes when you're ready.
+If you’re tired of putting off that roof repair or replacement, we’ll connect you with the <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">best roofers</a> in Nantwich. Vetted, local, and highly skilled. Get free quotes when you're ready.
 `,
 ];
 

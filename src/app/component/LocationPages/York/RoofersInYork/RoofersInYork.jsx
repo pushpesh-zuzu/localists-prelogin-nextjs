@@ -41,7 +41,7 @@ function RoofersInYork() {
       <HeroSectionLocation
         heading1="Roofers"
         heading2="York"
-        description={`Find the best roofers in York - Just enter your postcode and answer a few questions, and we’ll match you with up to 5 <a href="/en/gb/roofers-near-me" <a target='_blank' rel='noopener noreferrer' style='text-decoration:underline;'>roofers near you</a> who’ll be able to give you a quote on your job.`}
+        description={`Find the best roofers in York - Just enter your postcode and answer a few questions, and we’ll match you with up to 5 <a href="/en/gb/roofers-near-me" <a target='_blank' rel='noopener noreferrer'>roofers near you</a> who’ll be able to give you a quote on your job.`}
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
