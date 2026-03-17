@@ -83,12 +83,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
   {
     type: 'p',
     text: "Two houses on the same street can end up with very different quotes,  roofs are a bit like fingerprints, no two are quite the same.",
-    notMarginBottom: true
   },
-  {
-    type: "QuotesBanner",
-    className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
-  },
+  // {
+  //   type: "QuotesBanner",
+  //   className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
+  // },
   // {
   //   type: "PostCodeSectionLocation",
   //   className: "mb-[30px] mt-[30px] lg:mt-[60px] lg:mb-[60px]"
@@ -168,10 +167,12 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
   {
     type: 'p',
     text: `If you need urgent help, Localists can connect you with reliable emergency <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">roofers near you</a> in minutes. No endless searching, no stress, just fast, practical help when you need it most.`,
+    notMarginBottom: true
   },
   {
     type: "h2",
     text: "How to choose the right roofer in Liverpool",
+    className: "mt-6 lg:mt-[72px]"
   },
   {
     type: 'p',
@@ -208,10 +209,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
   {
     type: 'p',
     text: "Remember, your roof protects everything underneath it. Choosing the right roofer is about value and trust, not just saving a few pounds.",
+    notMarginBottom: true
   },
   {
-    type: "PostCodeSectionLocation",
-    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
+    type: "QuotesBanner",
+    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
   },
 ];
 export const FREQUENTLY_DATA_LIVERPOOL = [

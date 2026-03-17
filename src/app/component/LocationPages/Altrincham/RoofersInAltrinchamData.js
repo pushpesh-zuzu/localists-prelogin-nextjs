@@ -86,12 +86,9 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ALTRINCHAM = [
         notMarginBottom: true
     },
     {
-        type: "QuotesBanner",
-        className: "mb-[50px] mt-[50px] md:mt-[80px] md:mb-[80px] lg:mt-[180px] lg:mb-[180px]"
-    },
-    {
         type: 'h2',
         text: "Why using Localists makes finding Altrincham Roofers easier",
+        className: "mt-6 lg:mt-[72px]"
     },
     {
         type: "p",
@@ -111,9 +108,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ALTRINCHAM = [
         notMarginBottom: true
     },
     {
-        type: "PostCodeSectionLocation",
-        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]"
-    }];
+        type: "QuotesBanner",
+        className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    },
+];
 
 export const ROOFERS_FREQUENTLY_DATA_ALTRINCHAM = [
     {

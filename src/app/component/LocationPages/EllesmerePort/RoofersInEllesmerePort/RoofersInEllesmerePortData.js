@@ -27,7 +27,6 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ELLESMEREPORT = [
         type: "p",
         text: "A slipped tile isn’t the same as a sagging flat roof. Each quote reflects what you’ve described, so you’re not dealing with generic estimates."
     },
-    { type: "PostCodeSectionLocation" },
     {
         type: "pbold",
         text: "You control the timing"
@@ -77,7 +76,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ELLESMEREPORT = [
         title: "Average cost of roofers in Ellesmere Port",
         calculatorText: "click here.",
         calculatorLink: "/en/gb/roofing-multi-form-ppc",
-        disclaimer:"Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+        disclaimer: "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
         prices: [
             {
                 text: "General roofing work comes in at around",

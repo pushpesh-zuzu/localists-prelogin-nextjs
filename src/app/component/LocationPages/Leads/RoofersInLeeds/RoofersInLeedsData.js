@@ -1,10 +1,5 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
   {
-    type: "QuotesBanner",
-    className:
-      "mb-[50px] mt-[22px] md:mt-[42px] md:mb-[80px] lg:mt-[114px] lg:mb-[180px]",
-  },
-  {
     type: "h2",
     text: "Counting the Pennies: What Roofers Charge in Leeds",
   },
@@ -124,10 +119,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
   {
     type: "p",
     text: "Whatever your roofing challenge, Localists makes it easy to find trusted Leeds roofers who can handle the job, so you can stay dry, safe, and stress-free.",
+    notMarginBottom: true
   },
   {
-    type: "PostCodeSectionLocation",
-    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    type: "QuotesBanner",
+    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
   },
 ];
 export const ROOFERS_FREQUENTLY_DATA_LEEDS = [
