@@ -77,7 +77,7 @@ function RoofingNearMe() {
                 heading1="Roofers"
                 heading2="in your area"
                 tabData={ROOFING_TABDATA}
-                heightClass="min-h-[400px] h-auto md:h-auto lg:h-[640px]"
+                heightClass="min-h-[400px] h-auto md:h-auto lg:min-h-[594px] lg:h-auto"
             />
             <UserFeedbackNearMe2 feedbackData={ROOFING_FEEDBACK} />
             <AboutServicesAndQuestions

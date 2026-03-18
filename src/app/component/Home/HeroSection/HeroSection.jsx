@@ -49,6 +49,7 @@ export default function HeroSection() {
     },
     {
       title: "Painter Decorators",
+      slug: "/en/gb/painter-and-decorator-near-me"
     },
     {
       title: "Fence & Gate Installers",
