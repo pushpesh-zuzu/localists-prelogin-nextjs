@@ -51,7 +51,7 @@ function RoofersInColwynBay() {
       />
       <VettedSection
         paragraph={VETTED_DATA_ROOFERS_COLWNYBAY}
-        vettedHeading1="Find Trusted, Vetted Roofers in "
+        vettedHeading1="Find Local Vetted Roofers in "
         vettedHeading2="Colwyn Bay"
         breadcrumb={BREADCRUM_DATA_ROOFERS_COLWNYBAY}
         extraButton

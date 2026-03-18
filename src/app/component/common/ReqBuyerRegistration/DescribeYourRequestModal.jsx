@@ -147,7 +147,15 @@ const DescribeYourRequestModal = ({ nextStep, progressPercent, sellers }) => {
 
                                 <h4 className="pt-[20px] font-Inter tracking-[-0.03em] font-bold text-[25px] leading-[27px]
     md:text-[25px] md:leading-[25px] lg:text-[30px] lg:leading-[35px]">
-                                    Tell us your availability for someone to visit and provide you with your free quote
+                                    Tell us more about what you need for{" "}
+                                    {/* Desktop line break */}
+                                    <span className="hidden md:block">
+                                        <span className="ml-6">better responses</span>
+                                    </span>
+                                    {/* Mobile inline */}
+                                    <span className="md:hidden">
+                                        better responses
+                                    </span>
                                 </h4>
                             </div>
                             <textarea
@@ -155,7 +163,7 @@ const DescribeYourRequestModal = ({ nextStep, progressPercent, sellers }) => {
                                     }`}
                                 value={text}
                                 onChange={handleChange}
-                                placeholder="Let the professional know your availability for a free estimate"
+                                placeholder="What should the professional know to better understand your request? (Provide any relevant details here.)"
                                 rows={4}
                             />
                             {textError && (

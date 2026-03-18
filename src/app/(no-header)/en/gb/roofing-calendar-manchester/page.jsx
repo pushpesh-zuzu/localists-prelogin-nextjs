@@ -19,7 +19,7 @@ function page() {
                     </div>
                 }
             >
-                <LocalistsRoof heading='We’re Your Local Roofing Company In Mancheste' />
+                <LocalistsRoof heading='We’re Your Local Roofing Company In Manchester' />
             </Suspense>
         </>
     )

@@ -105,7 +105,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LLANDUDNO = [
   },
   {
     type: "p",
-    text: "The old way of finding a roofer - a search, multiple calls, and a gut feeling - works sometimes. But it leaves a lot to chance. You've got no way of knowing if the price is fair, no way of verifying the reviews, and no backup if something goes wrong. Most people only find out they picked the wrong person after the job has already started.",
+    text: `The old way of <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">finding a roofer</a> - a search, multiple calls, and a gut feeling - works sometimes. But it leaves a lot to chance. You've got no way of knowing if the price is fair, no way of verifying the reviews, and no backup if something goes wrong. Most people only find out they picked the wrong person after the job has already started.`,
   },
   {
     type: "p",
@@ -266,7 +266,7 @@ export const VETTED_DATA_ROOFERS_LLANDUDNO = [
   <br/><br/> 
   `,
   `
-Finally ready to get that problem fixed? Don’t worry, we can help. At Localists, we connect you with vetted roofers in Llandudno who'll come out, have a proper look, and tell you exactly what's going on. Free quotes, no pressure. 
+Finally ready to get that problem fixed? Don’t worry, we can help. At Localists, we connect you with <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">vetted roofers</a> in Llandudno who'll come out, have a proper look, and tell you exactly what's going on. Free quotes, no pressure. 
 `,
 ];
 

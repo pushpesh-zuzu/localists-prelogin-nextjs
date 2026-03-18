@@ -1,16 +1,16 @@
 "use client";
 import React, { useRef } from "react";
 import {
-    BREADCRUM_DATA_ROOFERS_MACCLESFIELD,
-    ROOFERS_FREQUENTLY_DATA_MACCLESFIELD,
-    POPULAR_SERVICES_ROOFERS_MACCLESFIELD,
-    QUESTION_AND_ABOUT_SERVICE_ROOFERS_MACCLESFIELD,
-    ROOFERS_ADVICEINSIGHT_MACCLESFIELD,
-    ROOFERS_FEEDBACK_MACCLESFIELD,
-    ROOFERS_DATA_MACCLESFIELD,
-    ROOFERS_TABDATA_MACCLESFIELD,
-    VETTED_DATA_ROOFERS_MACCLESFIELD,
-} from "./RoofersInMacclesfieldData";
+    BREADCRUM_DATA_ROOFERS_ASHTON_UNDER_LYNE,
+    ROOFERS_FREQUENTLY_DATA_ASHTON_UNDER_LYNE,
+    POPULAR_SERVICES_ROOFERS_ASHTON_UNDER_LYNE,
+    QUESTION_AND_ABOUT_SERVICE_ROOFERS_ASHTON_UNDER_LYNE,
+    ROOFERS_ADVICEINSIGHT_ASHTON_UNDER_LYNE,
+    ROOFERS_FEEDBACK_ASHTON_UNDER_LYNE,
+    ROOFERS_DATA_ASHTON_UNDER_LYNE,
+    ROOFERS_TABDATA_ASHTON_UNDER_LYNE,
+    VETTED_DATA_ROOFERS_ASHTON_UNDER_LYNE,
+} from "./RoofersInAshtonUnderLyneData";
 import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../Nearme/VettedSection";
 import PopularJobNearMe from "../../Nearme/PopularJobNearMe";
@@ -30,18 +30,18 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../PostCodeSectionLocation2";
 
-function RoofersInMacclesfield() {
+function RoofersInAshtonUnderLyne() {
     useScrollToTop()
     useRegistrationRedirect()
     const featureRef = useRef(null);
     return (
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_MACCLESFIELD} />
+            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_ASHTON_UNDER_LYNE} />
             <HeroSectionLocation
                 heading1="Roofers"
-                heading2="Macclesfield"
-                description="Find the best roofers in Macclesfield! just enter your postcode, answer a few questions, and we'll match you with 5 roofers in Macclesfield to give you a quote."
+                heading2="Ashton-under-Lyne"
+                description="Need a specialist roofer in Ashton-under-Lyne? Enter your postcode now. Tell us a bit about what you need, and get free no-obligation quotes from high-quality local roofers delivered straight to your inbox."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -50,16 +50,16 @@ function RoofersInMacclesfield() {
                 serviceName="Roofing"
             />
             <VettedSection
-                paragraph={VETTED_DATA_ROOFERS_MACCLESFIELD}
+                paragraph={VETTED_DATA_ROOFERS_ASHTON_UNDER_LYNE}
                 vettedHeading1="Find Local Vetted Roofers in "
-                vettedHeading2="Macclesfield"
-                breadcrumb={BREADCRUM_DATA_ROOFERS_MACCLESFIELD}
+                vettedHeading2="Ashton-under-Lyne"
+                breadcrumb={BREADCRUM_DATA_ROOFERS_ASHTON_UNDER_LYNE}
                 extraButton
                 featureRef={featureRef}
             />
 
             <PopularJobNearMe
-                services={POPULAR_SERVICES_ROOFERS_MACCLESFIELD}
+                services={POPULAR_SERVICES_ROOFERS_ASHTON_UNDER_LYNE}
                 popularImage="/nearme/Roofing/roofslate.webp"
                 altText="two roofers installing slate tiles onto a brand new roof URL"
                 mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -68,14 +68,15 @@ function RoofersInMacclesfield() {
             <AboutServicesAndQuestions
                 serviceId={113}
                 serviceName="Roofing"
-                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_MACCLESFIELD}
+                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_ASHTON_UNDER_LYNE}
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-                <Feature cityName="Macclesfield" county='Macclesfield' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+                <Feature cityName="Ashton under Lyne" county='Greater Manchester' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
+
             <AdviceInsightNearMe
-                articles={ROOFERS_ADVICEINSIGHT_MACCLESFIELD}
+                articles={ROOFERS_ADVICEINSIGHT_ASHTON_UNDER_LYNE}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
             />
             <WrapperBGWidth>
@@ -87,14 +88,14 @@ function RoofersInMacclesfield() {
                 containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
                 headdingblue="FAQ's"
                 headingblack=""
-                data={ROOFERS_FREQUENTLY_DATA_MACCLESFIELD}
+                data={ROOFERS_FREQUENTLY_DATA_ASHTON_UNDER_LYNE}
             />
-            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_MACCLESFIELD} />
-            <DiscoverNearMe homeData={ROOFERS_DATA_MACCLESFIELD} />
+            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_ASHTON_UNDER_LYNE} />
+            <DiscoverNearMe homeData={ROOFERS_DATA_ASHTON_UNDER_LYNE} />
             <HireRelatedToServiceNearMe
                 heading1="Hire with"
                 heading2="confidence."
-                tabData={ROOFERS_TABDATA_MACCLESFIELD}
+                tabData={ROOFERS_TABDATA_ASHTON_UNDER_LYNE}
                 activeTabkey="popular"
             />
             <NearmeMember
@@ -106,4 +107,4 @@ function RoofersInMacclesfield() {
         </>
     );
 }
-export default RoofersInMacclesfield;
+export default RoofersInAshtonUnderLyne;

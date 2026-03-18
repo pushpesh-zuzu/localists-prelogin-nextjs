@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
-import LocalistsRoof from '@/app/component/NewPPCLocalists/LocalistsRoof/LocalistsRoof'
 import LoadingIndicator from "@/app/component/common/Loader/LoaderIndicatore";
 import SEO from '@/app/component/common/seo/SEO';
+import LocalistsRoofCalendar from '@/app/component/NewPPCLocalists/LocalistsRoof/LocalistsRoofCalendar';
 
 
 function page() {
@@ -19,7 +19,7 @@ function page() {
                     </div>
                 }
             >
-                <LocalistsRoof />
+                <LocalistsRoofCalendar />
             </Suspense>
         </>
     )

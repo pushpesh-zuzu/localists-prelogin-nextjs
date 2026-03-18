@@ -1,16 +1,16 @@
 "use client";
 import React, { useRef } from "react";
 import {
-    BREADCRUM_DATA_ROOFERS_MACCLESFIELD,
-    ROOFERS_FREQUENTLY_DATA_MACCLESFIELD,
-    POPULAR_SERVICES_ROOFERS_MACCLESFIELD,
-    QUESTION_AND_ABOUT_SERVICE_ROOFERS_MACCLESFIELD,
-    ROOFERS_ADVICEINSIGHT_MACCLESFIELD,
-    ROOFERS_FEEDBACK_MACCLESFIELD,
-    ROOFERS_DATA_MACCLESFIELD,
-    ROOFERS_TABDATA_MACCLESFIELD,
-    VETTED_DATA_ROOFERS_MACCLESFIELD,
-} from "./RoofersInMacclesfieldData";
+    BREADCRUM_DATA_ROOFERS_WAKEFIELD,
+    ROOFERS_FREQUENTLY_DATA_WAKEFIELD,
+    POPULAR_SERVICES_ROOFERS_WAKEFIELD,
+    QUESTION_AND_ABOUT_SERVICE_ROOFERS_WAKEFIELD,
+    ROOFERS_ADVICEINSIGHT_WAKEFIELD,
+    ROOFERS_FEEDBACK_WAKEFIELD,
+    ROOFERS_DATA_WAKEFIELD,
+    ROOFERS_TABDATA_WAKEFIELD,
+    VETTED_DATA_ROOFERS_WAKEFIELD,
+} from "./RoofersInWakefieldData";
 import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../Nearme/VettedSection";
 import PopularJobNearMe from "../../Nearme/PopularJobNearMe";
@@ -30,18 +30,18 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../PostCodeSectionLocation2";
 
-function RoofersInMacclesfield() {
+function RoofersInWakefield() {
     useScrollToTop()
     useRegistrationRedirect()
     const featureRef = useRef(null);
     return (
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_MACCLESFIELD} />
+            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_WAKEFIELD} />
             <HeroSectionLocation
                 heading1="Roofers"
-                heading2="Macclesfield"
-                description="Find the best roofers in Macclesfield! just enter your postcode, answer a few questions, and we'll match you with 5 roofers in Macclesfield to give you a quote."
+                heading2="Wakefield"
+                description="Receive free no-obligation quotes from top-rated Wakefield roofers. Just pop in your postcode, a few details about the roof problem, and we will match you with the best local roofers in under a minute."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -50,16 +50,16 @@ function RoofersInMacclesfield() {
                 serviceName="Roofing"
             />
             <VettedSection
-                paragraph={VETTED_DATA_ROOFERS_MACCLESFIELD}
+                paragraph={VETTED_DATA_ROOFERS_WAKEFIELD}
                 vettedHeading1="Find Local Vetted Roofers in "
-                vettedHeading2="Macclesfield"
-                breadcrumb={BREADCRUM_DATA_ROOFERS_MACCLESFIELD}
+                vettedHeading2="Wakefield"
+                breadcrumb={BREADCRUM_DATA_ROOFERS_WAKEFIELD}
                 extraButton
                 featureRef={featureRef}
             />
 
             <PopularJobNearMe
-                services={POPULAR_SERVICES_ROOFERS_MACCLESFIELD}
+                services={POPULAR_SERVICES_ROOFERS_WAKEFIELD}
                 popularImage="/nearme/Roofing/roofslate.webp"
                 altText="two roofers installing slate tiles onto a brand new roof URL"
                 mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -68,14 +68,15 @@ function RoofersInMacclesfield() {
             <AboutServicesAndQuestions
                 serviceId={113}
                 serviceName="Roofing"
-                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_MACCLESFIELD}
+                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_WAKEFIELD}
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-                <Feature cityName="Macclesfield" county='Macclesfield' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+                <Feature cityName="Oldham" county='Oldham' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
+
             <AdviceInsightNearMe
-                articles={ROOFERS_ADVICEINSIGHT_MACCLESFIELD}
+                articles={ROOFERS_ADVICEINSIGHT_WAKEFIELD}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
             />
             <WrapperBGWidth>
@@ -87,14 +88,14 @@ function RoofersInMacclesfield() {
                 containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
                 headdingblue="FAQ's"
                 headingblack=""
-                data={ROOFERS_FREQUENTLY_DATA_MACCLESFIELD}
+                data={ROOFERS_FREQUENTLY_DATA_WAKEFIELD}
             />
-            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_MACCLESFIELD} />
-            <DiscoverNearMe homeData={ROOFERS_DATA_MACCLESFIELD} />
+            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_WAKEFIELD} />
+            <DiscoverNearMe homeData={ROOFERS_DATA_WAKEFIELD} />
             <HireRelatedToServiceNearMe
                 heading1="Hire with"
                 heading2="confidence."
-                tabData={ROOFERS_TABDATA_MACCLESFIELD}
+                tabData={ROOFERS_TABDATA_WAKEFIELD}
                 activeTabkey="popular"
             />
             <NearmeMember
@@ -106,4 +107,4 @@ function RoofersInMacclesfield() {
         </>
     );
 }
-export default RoofersInMacclesfield;
+export default RoofersInWakefield;

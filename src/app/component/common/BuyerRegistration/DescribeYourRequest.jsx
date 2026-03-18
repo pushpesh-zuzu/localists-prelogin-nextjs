@@ -182,8 +182,7 @@ const DescribeYourRequest = ({
       {/* Header */}
       <div className="max-[480px]:text-lg">
         <H4 className="mb-0 text-center align-middle text-2xl font-bold text-[#253238] max-[480px]:mb-2 max-[480px]:text-xl md:mt-4 md:mb-2.5">
-          Tell us your availability for someone to visit and provide you with
-          your free quote
+          Tell us more about what you need for better responses
         </H4>
       </div>
 
@@ -195,7 +194,7 @@ const DescribeYourRequest = ({
           } max-[480px]:h-20 max-[480px]:px-[10px] max-[480px]:py-[10px] max-[480px]:text-xs max-[400px]:h-[100px] max-[350px]:h-20`}
           value={text}
           onChange={handleChange}
-          placeholder="Let the professional know your availability for a free estimate "
+          placeholder="What should the professional know to better understand your request? (Provide any relevant details here.)"
           rows={2}
         />
         {textError && (
