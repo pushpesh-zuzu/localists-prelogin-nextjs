@@ -4,7 +4,6 @@ import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import Button from "../UI/Typography/Button";
 import Link from "next/link";
 
-
 const JobButton = ({ title, url }) => {
   if (url) {
     return (
@@ -17,14 +16,11 @@ const JobButton = ({ title, url }) => {
         focus:outline-none cursor-pointer
         pointer-events-none"
       >
-        <Link
-          href={url}
-          className="pointer-events-auto"
-        >
+        <Link href={url} className="pointer-events-auto">
           {title}
         </Link>
       </div>
-    )
+    );
   }
 
   return (
@@ -36,17 +32,18 @@ const JobButton = ({ title, url }) => {
     >
       {title}
     </div>
-  )
-}
+  );
+};
 
 export default function HireRelatedToServiceNearMe({
   heading1 = "Hire with",
   heading2 = "confidence",
   tabData = [],
   headingMiddle = "",
-  heightClass = "min-h-[412px] h-auto md:h-auto lg:h-[680px]",
-  activeTabkey="professionals"
+  heightClass = "min-h-[412px] h-auto md:h-auto lg:min-h-[594px] lg:h-auto",
+  activeTabkey = "professionals",
 }) {
+  const sectionRef = useRef(null);
   const [currentTab, setcurrentTab] = useState(activeTabkey);
   const [showAll, setShowAll] = useState(false);
   const [hasOverflow, setHasOverflow] = useState(false);
@@ -61,7 +58,7 @@ export default function HireRelatedToServiceNearMe({
   const COLLAPSED_HEIGHT = {
     mobile: 162,
     tablet: 196,
-    desktop: 239,
+    desktop: 240,
   };
 
   const tabs = [
@@ -71,7 +68,6 @@ export default function HireRelatedToServiceNearMe({
     { lable: "Related Service", activtab: "related" },
     { lable: "Find Out More", activtab: "findMore" },
   ].filter((tab) => tabData?.[tab.activtab]?.length > 0);
-
 
   useEffect(() => {
     const el = contentRef.current;
@@ -98,7 +94,10 @@ export default function HireRelatedToServiceNearMe({
 
   return (
     <WrapperBGWidth background={"#00AFE3"}>
-      <div className={`bg-[#00AFE3] px-[30px] md:px-16 py-[30px] md:py-[50px] lg:pl-16 xl:px-[120px] lg:py-[72px]  w-full ${heightClass}`}>
+      <div
+        ref={sectionRef}
+        className={`bg-[#00AFE3] px-[30px] md:px-16 py-[30px] md:py-[50px] lg:pl-16 xl:px-[120px] lg:py-[72px]  w-full ${heightClass}`}
+      >
         <header className="mb-5 xl:mb-12">
           <div className="flex flex-wrap md:flex-col lg:flex-row xl:justify-between items-left gap-7.5 md:gap-6 xl:gap-12">
             <h2
@@ -117,9 +116,7 @@ export default function HireRelatedToServiceNearMe({
                   {heading2}
                 </span>
               ) : (
-                <span className="text-[#253238]">
-                  {" "}{heading2}
-                </span>
+                <span className="text-[#253238]"> {heading2}</span>
               )}
             </h2>
             <nav className="flex gap-1 sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap">
@@ -143,10 +140,9 @@ export default function HireRelatedToServiceNearMe({
                 return (
                   <div
                     key={tab.activtab}
-                    className={`${isActive
-                      ? "border-2 border-white rounded-full"
-                      : ""
-                      }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em]
+                    className={`${
+                      isActive ? "border-2 border-white rounded-full" : ""
+                    }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em]
                       text-[12px] md:text-[14px]
                       xl:text-[18px] py-[3px] sm:px-3 sm:py-1.5 xl:px-4 xl:py-[11px]`}
                   >
@@ -163,39 +159,29 @@ export default function HireRelatedToServiceNearMe({
             </nav>
           </div>
         </header>
-       <div
-  ref={contentRef}
-  className={`flex flex-wrap content-start
+        <div
+          ref={contentRef}
+          className={`flex flex-wrap content-start
     gap-y-2 xl:gap-[24px] gap-2 lg:gap-[23.92px]
     overflow-hidden transition-all duration-300
     w-full md:max-w-full
-    ${showAll
-      ? "max-h-none"
-      : "max-h-[162px] min-h-[162px] md:max-h-[196px] md:min-h-[250px]  lg:min-h-[375px] lg:max-h-[433px]"
+    ${
+      showAll
+        ? "max-h-none"
+        : "max-h-[162px] min-h-[162px] md:max-h-[196px] md:min-h-[250px]  lg:min-h-[240px] lg:max-h-[240px]"
     }`}
->
+        >
           {tabData[currentTab]?.map((item, i) => {
             if (typeof item === "object") {
-              return (
-                <JobButton
-                  key={i}
-                  title={item.title}
-                  url={item.url}
-                />
-              );
+              return <JobButton key={i} title={item.title} url={item.url} />;
             }
 
-            return (
-              <JobButton
-                key={i}
-                title={item}
-              />
-            );
+            return <JobButton key={i} title={item} />;
           })}
         </div>
 
         {hasOverflow && !showAll && (
-          <div className="flex md:hidden justify-center pt-[20px]">
+          <div className="flex  justify-center pt-[20px] md:pt-12">
             <Button
               variant="primary"
               onClick={() => setShowAll(!showAll)}
@@ -209,10 +195,24 @@ export default function HireRelatedToServiceNearMe({
         )}
 
         {showAll && (
-          <div className="flex md:hidden justify-center pt-[20px]">
+          <div className="flex justify-center pt-[20px] md:pt-12">
             <Button
               variant="primary"
-              onClick={() => setShowAll(false)}
+              onClick={() => {
+                setShowAll(false);
+                setTimeout(() => {
+                  const el = sectionRef.current;
+                  if (!el) return;
+                  const rect = el.getBoundingClientRect();
+                  const sectionCenter =
+                    rect.top + window.scrollY + rect.height / 2;
+                  const viewportCenter = window.innerHeight / 2;
+                  window.scrollTo({
+                    top: sectionCenter - viewportCenter,
+                    behavior: "smooth",
+                  });
+                }, 50);
+              }}
               className="py-[7px] xl:py-4 xl:px-[30px] cursor-pointer px-[13px]
                      hover:bg-[#253238] rounded-full bg-[#253238] text-white
                      shadow-[0_0_4px_rgba(0,0,0,0.1)]"

@@ -10,14 +10,14 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BIRKENHEAD = [
   {
     type: "p",
     text: "Localists takes the guesswork out of it. Here's how we make things easier:",
-    notMarginBottom:true
+    notMarginBottom: true,
   },
   {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
     marginBottom: true,
-     marginTop: true,
+    marginTop: true,
   },
   {
     type: "p",
@@ -42,7 +42,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BIRKENHEAD = [
   {
     type: "p",
     text: "<strong>Matched to your timeline</strong> : Whether you need someone out this week or you're planning ahead, we'll match you with roofers in Birkenhead who can work around your schedule.",
-  className:"mb-6 lg:mb-[70px]"
+    className: "mb-6 lg:mb-[70px]",
   },
   {
     type: "h2",
@@ -177,8 +177,8 @@ export const ROOFERS_TABDATA_BIRKENHEAD = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
- related: [
-        { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
+    related: [
+    { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
     { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
     { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
@@ -204,6 +204,7 @@ export const ROOFERS_TABDATA_BIRKENHEAD = {
     { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
     { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
     { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
     { title: "Roofers Colwyn Bay", url: "/en/gb/roofers-near-me/colwyn-bay" },
     { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
@@ -214,14 +215,14 @@ export const ROOFERS_TABDATA_BIRKENHEAD = {
       url: "/en/gb/roofers-near-me/macclesfield",
     },
     {
-        title: "Roofers Ellesmere Port",
+      title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",
     },
     {
       title: "Roofers Ashton Under Lyne",
       url: "/en/gb/roofers-near-me/ashton-under-lyne",
     },
-    ],
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_BIRKENHEAD = [

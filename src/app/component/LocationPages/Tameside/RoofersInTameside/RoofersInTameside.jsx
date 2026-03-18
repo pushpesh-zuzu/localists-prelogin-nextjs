@@ -1,16 +1,16 @@
 "use client";
 import React, { useRef } from "react";
 import {
-  BREADCRUM_DATA_ROOFERS_BIRKENHEAD,
-  ROOFERS_FREQUENTLY_DATA_BIRKENHEAD,
-  POPULAR_SERVICES_ROOFERS_BIRKENHEAD,
-  QUESTION_AND_ABOUT_SERVICE_ROOFERS_BIRKENHEAD,
-  ROOFERS_ADVICEINSIGHT_BIRKENHEAD,
-  ROOFERS_FEEDBACK_BIRKENHEAD,
-  ROOFERS_DATA_BIRKENHEAD,
-  ROOFERS_TABDATA_BIRKENHEAD,
-  VETTED_DATA_ROOFERS_BIRKENHEAD,
-} from "./RoofersInBirkenheadData";
+  BREADCRUM_DATA_ROOFERS_TAMESIDE,
+  ROOFERS_FREQUENTLY_DATA_TAMESIDE,
+  POPULAR_SERVICES_ROOFERS_TAMESIDE,
+  QUESTION_AND_ABOUT_SERVICE_ROOFERS_TAMESIDE,
+  ROOFERS_ADVICEINSIGHT_TAMESIDE,
+  ROOFERS_FEEDBACK_TAMESIDE,
+  ROOFERS_DATA_TAMESIDE,
+  ROOFERS_TABDATA_TAMESIDE,
+  VETTED_DATA_ROOFERS_TAMESIDE,
+} from "./RoofersInTamesideData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
 import PopularJobNearMe from "../../../Nearme/PopularJobNearMe";
@@ -30,18 +30,20 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 
-function RoofersInBirkenhead() {
-  useScrollToTop()
-  useRegistrationRedirect()
+function RoofersInTameside() {
+  useScrollToTop();
+  useRegistrationRedirect();
   const featureRef = useRef(null);
   return (
     <>
-      {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-      <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_BIRKENHEAD} />
+      {typeof window !== "undefined" && (
+        <CloseBrowserAbandon serviceId={113} quote_type="req call back" />
+      )}
+      <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_TAMESIDE} />
       <HeroSectionLocation
         heading1="Roofers"
-        heading2="Birkenhead"
-        description="Get free, no-obligation quotes from trusted and vetted roofers in Birkenhead. Enter your postcode, give us a few details about the work, and get quotes straight to your inbox. It takes under a minute."
+        heading2="Tameside"
+        description="Looking for highly skilled local roofers in Tameside? Enter your postcode, tell us what you need done on your roof, and receive up to 5 free quotes straight to your inbox. Takes under a minute."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -50,16 +52,16 @@ function RoofersInBirkenhead() {
         serviceName="Roofing"
       />
       <VettedSection
-        paragraph={VETTED_DATA_ROOFERS_BIRKENHEAD}
-        vettedHeading1="Find Trusted Vetted Roofers in "
-        vettedHeading2="Birkenhead"
-        breadcrumb={BREADCRUM_DATA_ROOFERS_BIRKENHEAD}
+        paragraph={VETTED_DATA_ROOFERS_TAMESIDE}
+        vettedHeading1="Find Local Vetted Roofers in "
+        vettedHeading2="Tameside"
+        breadcrumb={BREADCRUM_DATA_ROOFERS_TAMESIDE}
         extraButton
         featureRef={featureRef}
       />
 
       <PopularJobNearMe
-        services={POPULAR_SERVICES_ROOFERS_BIRKENHEAD}
+        services={POPULAR_SERVICES_ROOFERS_TAMESIDE}
         popularImage="/nearme/Roofing/roofslate.webp"
         altText="two roofers installing slate tiles onto a brand new roof URL"
         mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -68,32 +70,42 @@ function RoofersInBirkenhead() {
       <AboutServicesAndQuestions
         serviceId={113}
         serviceName="Roofing"
-        contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_BIRKENHEAD}
+        contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_TAMESIDE}
       />
 
       <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-        <Feature county='Liverpool City Region' cityName='Birkenhead' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+        <Feature
+          county="Greater Manchester"
+          cityName="Tameside"
+          serviceId={113}
+          serviceName="Roofing"
+          featureRef={featureRef}
+        />
       </div>
 
       <AdviceInsightNearMe
-        articles={ROOFERS_ADVICEINSIGHT_BIRKENHEAD}
+        articles={ROOFERS_ADVICEINSIGHT_TAMESIDE}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
       />
       <WrapperBGWidth>
         <div className="px-[30px] sm:px-10 md:px-16 xl:px-[120px]">
-          <PostCodeSectionLocation2 classNamePostCode="mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px] lg:justify-center lg:gap-12" serviceId={113} serviceName="Roofing" />
+          <PostCodeSectionLocation2
+            classNamePostCode="mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px] lg:justify-center lg:gap-12"
+            serviceId={113}
+            serviceName="Roofing"
+          />
         </div>
       </WrapperBGWidth>
       <FAQ
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
-        data={ROOFERS_FREQUENTLY_DATA_BIRKENHEAD}
+        data={ROOFERS_FREQUENTLY_DATA_TAMESIDE}
       />
-      <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_BIRKENHEAD} />
-      <DiscoverNearMe homeData={ROOFERS_DATA_BIRKENHEAD} />
+      <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_TAMESIDE} />
+      <DiscoverNearMe homeData={ROOFERS_DATA_TAMESIDE} />
       <HireRelatedToServiceNearMe
         heading1="Hire with"
         heading2="confidence."
-        tabData={ROOFERS_TABDATA_BIRKENHEAD}
+        tabData={ROOFERS_TABDATA_TAMESIDE}
         activeTabkey="popular"
       />
       <NearmeMember
@@ -105,4 +117,4 @@ function RoofersInBirkenhead() {
     </>
   );
 }
-export default RoofersInBirkenhead;
+export default RoofersInTameside;
