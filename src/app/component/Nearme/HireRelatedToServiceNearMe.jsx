@@ -44,7 +44,7 @@ export default function HireRelatedToServiceNearMe({
   heading2 = "confidence",
   tabData = [],
   headingMiddle = "",
-  heightClass = "min-h-[412px] h-auto md:h-auto lg:h-[600px]",
+  heightClass = "min-h-[412px] h-auto md:h-auto lg:h-[680px]",
   activeTabkey="professionals"
 }) {
   const [currentTab, setcurrentTab] = useState(activeTabkey);
@@ -171,7 +171,7 @@ export default function HireRelatedToServiceNearMe({
     w-full md:max-w-full
     ${showAll
       ? "max-h-none"
-      : "max-h-[162px] min-h-[162px] md:max-h-[196px] md:min-h-[250px]  lg:min-h-[375px] lg:max-h-[400px]"
+      : "max-h-[162px] min-h-[162px] md:max-h-[196px] md:min-h-[250px]  lg:min-h-[375px] lg:max-h-[433px]"
     }`}
 >
           {tabData[currentTab]?.map((item, i) => {
