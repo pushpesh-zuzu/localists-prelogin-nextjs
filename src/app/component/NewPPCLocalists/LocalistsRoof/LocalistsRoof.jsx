@@ -2,7 +2,7 @@
 
 import React from 'react'
 import CloseBrowserAbandon from '../../common/CloseBrowserAbandon/CloseBrowserAbandon'
-import Header from '../Header'
+// import Header from '../Header'
 import RateExperience from '../RateExperience'
 import HeroSection from '../HeroSection'
 import UserFeedback from '../UserFeedback'
@@ -14,6 +14,7 @@ import { useScrollToTop } from '@/utils/handleScrollToBottom'
 import ProjectDetails from '../ProjectDetails'
 import RoofOptionsIconsData from './RoofOptionsIconsData'
 import MemberLocalistsRoof from '../BuyerRegistrationPPC/MemberLocalistsRoof'
+import Header1 from '../Header1'
 
 const roofingImages = [
     "/roofing.webp",
@@ -32,7 +33,7 @@ function LocalistsRoof({ heading ="Find Your Local Roofing Company" }) {
     return (
         <>
             <CloseBrowserAbandon />
-            <Header />
+            <Header1 />
             <RateExperience />
             <HeroSection
                 title="Get A Free Roofing Quote"
