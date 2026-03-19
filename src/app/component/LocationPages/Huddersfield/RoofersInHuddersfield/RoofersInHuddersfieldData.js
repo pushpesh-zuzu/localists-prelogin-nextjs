@@ -334,6 +334,11 @@ export const ROOFERS_FEEDBACK_HUDDERSFIELD = [
     text: "We were nervous about replacing our pitched roof, but the roofer guided us through every step, answered all our questions, and did an excellent job. Friendly, professional, and reliable.",
     name: "Joshua P.",
   },
+  {
+    id: 4,
+    text: "Big thanks to Ricky from Localists! One of my commercial properties had an issue that needed sorting, Ricky come out same day and sorted it. Will be using him again 100% and would recommend Localists to any landlord.",
+    name:"Jhon D."
+  }
 ];
 
 export const ROOFERS_DATA_HUDDERSFIELD = [

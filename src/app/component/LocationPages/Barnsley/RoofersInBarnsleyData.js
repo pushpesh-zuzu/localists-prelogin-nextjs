@@ -330,11 +330,11 @@ export const ROOFERS_FEEDBACK_BARNSLEY = [
     text: "We had a blocked gutter and some flashing issues causing minor leaks. The roofer sorted it all in one visit, gave some good maintenance tips, and even cleaned up afterwards. Nice to see someone actually cares about doing a proper job.",
     name: "Gary T.",
   },
-  // {
-  //     id: 4,
-  //     text: "We decided to have the roof fully replaced rather than keep patching it every couple of years. Got three quotes through Localists and went with the roofer who explained their approach most clearly, rather than just the cheapest price. It took four days; they kept us updated throughout, and the finish was excellent. Worth every penny for the peace of mind alone.",
-  //     name: "Rachel S.",
-  // },
+  {
+      id: 4,
+      text: "Was struggling to get a roofer to fix an urgent issue on one of my properties in Barugh Green, but had Si from Localists come out same day and sort the issue for my tenant. I'll be using him again for sure. Thanks again mate!",
+      name: "Rachel S.",
+  },
 ];
 
 export const ROOFERS_DATA_BARNSLEY = [
