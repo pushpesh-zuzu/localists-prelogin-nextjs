@@ -168,7 +168,7 @@ const ReEnterMobileNumberNewPPC = ({ onClose, setReEnterMobile }) => {
                         value={phone}
                         onChange={handlePhoneChange}
                         maxLength={11}
-                        placeholder="Enter phone number"
+                        placeholder="Enter Mobile Number (Start With 0)"
                         className={`
               px-[16px] py-[14px] rounded-[5px]
               border font-[Arial] text-[16px]
