@@ -51,7 +51,7 @@ function RoofersInBirkenhead() {
       />
       <VettedSection
         paragraph={VETTED_DATA_ROOFERS_BIRKENHEAD}
-        vettedHeading1="Find Local Roofers in "
+        vettedHeading1="Find Local Vetted Roofers in "
         vettedHeading2="Birkenhead"
         breadcrumb={BREADCRUM_DATA_ROOFERS_BIRKENHEAD}
         extraButton
