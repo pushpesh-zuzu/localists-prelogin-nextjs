@@ -1,6 +1,6 @@
 "use client"
 
-import HeroSectionNewPPC from '@/app/component/NewPPCpage/HeroSectionNewPPC';
+// import HeroSectionNewPPC from '@/app/component/NewPPCpage/HeroSectionNewPPC';
 import HowItWorkNewPPC from '@/app/component/NewPPCpage/HowItWorkNewPPC';
 import PopularServicesTypes from '@/app/component/NewPPCpage/PopularServicesTypes';
 import CostGuide from '@/app/component/NewPPCpage/CostGuide';
@@ -40,6 +40,7 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import SEO from '@/app/component/common/seo/SEO';
 import FloatingButtonWrapper from '@/app/component/common/FloatingButton.jsx/FloatingButtonWrapper';
 import CloseBrowserAbandon from '@/app/component/common/CloseBrowserAbandon/CloseBrowserAbandon';
+import HeroSectionFormNewPPC from '@/app/component/NewPPCpage/HeroSectionFormNewPPC';
 
 
 export const NEW_PPC_POPULUAR_SERVICE_TYPE = [
@@ -390,7 +391,7 @@ function page() {
                             conversion={false} />
 
                         <div ref={heroRef}>
-                            <HeroSectionNewPPC
+                            <HeroSectionFormNewPPC
                                 heading0="Find"
                                 heading1="Driveway Installation"
                                 heading2="Experts Near You"
