@@ -36,7 +36,7 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
     const { buyerRequest, questionLoader } = useSelector((s) => s.buyer);
     const { searchServiceLoader, service } = useSelector((s) => s.findJobs);
 
-    console.log("buyerRequest", buyerRequest)
+    // console.log("buyerRequest", buyerRequest)
 
     const [formData, setFormData] = useState({
         name: "",
