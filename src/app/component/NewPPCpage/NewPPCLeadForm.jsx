@@ -260,7 +260,7 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
 
             <form
                 onSubmit={handleSubmit}
-                className="flex flex-col px-[27px] max-[768px]:mt-[-20px] pb-[27px] max-[1024px]:px-[20px]"
+                className="flex flex-col px-[27px] pb-[27px] max-[1024px]:px-[20px]"
             >
                 {/* NAME */}
                 <Label>Full Name *</Label>
@@ -403,7 +403,7 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
         border border-[#D9D9D9]
         placeholder:!text-[#d9d9d9]
         resize-none
-        min-h-[70px]
+        md:min-h-[70px] min-h-[80px]
     "
                 />
 
