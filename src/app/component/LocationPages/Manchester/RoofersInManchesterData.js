@@ -88,7 +88,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MANCHESTER = [
   {
     type: "h2",
     text: "What to look for when hiring a roofer",
-    className: "mt-6 lg:mt-[72px]"
+    className: "mt-6 lg:mt-[72px]",
   },
   {
     type: "p",
@@ -113,11 +113,12 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MANCHESTER = [
   {
     type: "li",
     text: "Memberships – Look for professional bodies like the NFRC (National Federation of Roofing Contractors) or CORC (Council of Roofing Contractors). Membership shows they stick to industry standards and best practices.",
-    className: "mb-0"
+    className: "mb-0",
   },
   {
     type: "QuotesBanner",
-    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    className:
+      "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]",
   },
 ];
 export const FREQUENTLY_DATA_MANCHESTER = [
@@ -208,7 +209,7 @@ export const ROOFERS_TABDATA_MANCHESTER = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
- related: [
+  related: [
     { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
     { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
@@ -229,6 +230,7 @@ export const ROOFERS_TABDATA_MANCHESTER = {
     { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
     { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
+    { title: "Roofers keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
@@ -240,19 +242,24 @@ export const ROOFERS_TABDATA_MANCHESTER = {
     { title: "Roofers Colwyn Bay", url: "/en/gb/roofers-near-me/colwyn-bay" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+    { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
     {
-    title: "Roofers Macclesfield",
-    url: "/en/gb/roofers-near-me/macclesfield",
+      title: "Roofers Huddersfield",
+      url: "/en/gb/roofers-near-me/huddersfield",
     },
     {
-        title: "Roofers Ellesmere Port",
-    url: "/en/gb/roofers-near-me/ellesmere-port",
+      title: "Roofers Macclesfield",
+      url: "/en/gb/roofers-near-me/macclesfield",
     },
     {
-    title: "Roofers Ashton Under Lyne",
-    url: "/en/gb/roofers-near-me/ashton-under-lyne",
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-    ],
+    {
+      title: "Roofers Ashton Under Lyne",
+      url: "/en/gb/roofers-near-me/ashton-under-lyne",
+    },
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_MANCHESTER = [

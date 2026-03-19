@@ -12,25 +12,26 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
     title: "Average cost of roofing in Chester",
     calculatorText: "click here.",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimer: "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+    disclaimer:
+      "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
     prices: [
       {
         text: "For general roofing projects, the average cost comes in around",
-        price: "£2,150"
+        price: "£2,150",
       },
       {
         text: "For roof repairs like fixing leaks or cracked tiles, the average cost is about",
-        price: "£750"
+        price: "£750",
       },
       {
         text: "For emergency roofing services, you can expect to pay an average of",
-        price: "£630"
+        price: "£630",
       },
       {
         text: "For full roof replacement where repairs are no longer enough, average cost is around",
-        price: "£6,840"
-      }
-    ]
+        price: "£6,840",
+      },
+    ],
   },
   {
     type: "p",
@@ -39,42 +40,42 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
   {
     type: "p",
     text: "Already know what needs doing? Use our Job Value Estimator for a quick, tailored cost estimate; no guesswork required.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   // { type: "PostCodeSectionLocation" },
   {
-    type: 'h2',
+    type: "h2",
     text: "What Should Be Included in Your Roofing Quote",
-    className: "mt-6 lg:mt-[72px]"
+    className: "mt-6 lg:mt-[72px]",
   },
   {
     type: "p",
-    text: "A good roofing quote shouldn’t feel like a guessing game. Everything should be clear, upfront, and easy to understand before any work begins. When comparing quotes from roofers in Chester, make sure the following are clearly listed:"
+    text: "A good roofing quote shouldn’t feel like a guessing game. Everything should be clear, upfront, and easy to understand before any work begins. When comparing quotes from roofers in Chester, make sure the following are clearly listed:",
   },
   {
     type: "li",
-    text: "Labour costs – covering the time and expertise needed to complete the job properly."
+    text: "Labour costs – covering the time and expertise needed to complete the job properly.",
   },
   {
     type: "li",
-    text: "Materials – including tiles, underlay, battens, flashing, or any other components required."
+    text: "Materials – including tiles, underlay, battens, flashing, or any other components required.",
   },
   {
     type: "li",
-    text: "Scaffolding or equipment hire – especially for taller or harder-to-reach roofs."
+    text: "Scaffolding or equipment hire – especially for taller or harder-to-reach roofs.",
   },
   {
     type: "li",
-    text: "Waste removal – old tiles, damaged materials, and general site clean-up once the job’s done."
+    text: "Waste removal – old tiles, damaged materials, and general site clean-up once the job’s done.",
   },
   {
     type: "li",
-    text: "VAT (if applicable) – always worth checking so there are no last-minute surprises."
+    text: "VAT (if applicable) – always worth checking so there are no last-minute surprises.",
   },
   {
     type: "p",
     text: "If a quote feels vague or leaves things out, don’t be afraid to ask questions. A trustworthy roofer will be happy to explain exactly what you’re paying for, no fine print, no confusion, no awkward conversations.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   // {
   //   type: "QuotesBanner",
@@ -83,62 +84,62 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
   {
     type: "h2",
     text: "Find the Right Roofer in Chester for the Job",
-    className: "mt-6 lg:mt-[72px]"
+    className: "mt-6 lg:mt-[72px]",
   },
   {
     type: "p",
-    text: "A roof is more than just a few tiles sitting on top of your house; it’s protection, insulation, and sometimes even a style statement. Depending on what you need, here’s the kind of work you can search for when looking for roofers in Chester:"
+    text: "A roof is more than just a few tiles sitting on top of your house; it’s protection, insulation, and sometimes even a style statement. Depending on what you need, here’s the kind of work you can search for when looking for roofers in Chester:",
   },
   {
     type: "li",
-    text: "Roof repairs – leaks, loose tiles, or minor storm damage."
+    text: "Roof repairs – leaks, loose tiles, or minor storm damage.",
   },
   {
     type: "li",
-    text: "New roof installations – flat or pitched, for homes, garages, or extensions."
+    text: "New roof installations – flat or pitched, for homes, garages, or extensions.",
   },
   {
     type: "li",
-    text: "Gutter and fascia replacement – small fixes that prevent big water problems."
+    text: "Gutter and fascia replacement – small fixes that prevent big water problems.",
   },
   {
     type: "li",
-    text: "Flat roof installation or resealing – perfect for low-pitch areas that need extra waterproofing."
+    text: "Flat roof installation or resealing – perfect for low-pitch areas that need extra waterproofing.",
   },
   {
     type: "li",
-    text: "Chimney repairs – cracks, loose bricks, or failing flashing."
+    text: "Chimney repairs – cracks, loose bricks, or failing flashing.",
   },
   {
     type: "li",
-    text: "Lead flashing repairs – the small details that keep your roof watertight."
+    text: "Lead flashing repairs – the small details that keep your roof watertight.",
   },
   {
     type: "li",
-    text: "Skylight or Velux window installation – let the sunshine in safely."
+    text: "Skylight or Velux window installation – let the sunshine in safely.",
   },
   {
     type: "li",
-    text: "Roof insulation – keep warm in winter, cool in summer, and cut energy costs."
+    text: "Roof insulation – keep warm in winter, cool in summer, and cut energy costs.",
   },
   {
     type: "li",
-    text: "Emergency roofing – fast fixes when storms strike or leaks appear unexpectedly."
+    text: "Emergency roofing – fast fixes when storms strike or leaks appear unexpectedly.",
   },
   {
     type: "li",
-    text: "Drone roof surveys – safe, detailed inspections without climbing ladders."
+    text: "Drone roof surveys – safe, detailed inspections without climbing ladders.",
   },
   {
-    type: 'p',
+    type: "p",
     text: "No matter the job, finding a roofer with the right skills ensures your home stays dry, safe, and looking great without the stress.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "QuotesBanner",
-    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    className:
+      "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]",
   },
-
 ];
 export const FREQUENTLY_DATA_TREE_SURGEON_CHESTER = [
   {
@@ -242,6 +243,7 @@ export const ROOFERS_TABDATA_CHESTER = {
     { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
     { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
+    { title: "Roofers keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
@@ -254,19 +256,24 @@ export const ROOFERS_TABDATA_CHESTER = {
     { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+    { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
     {
-    title: "Roofers Macclesfield",
-    url: "/en/gb/roofers-near-me/macclesfield",
+      title: "Roofers Huddersfield",
+      url: "/en/gb/roofers-near-me/huddersfield",
     },
     {
-        title: "Roofers Ellesmere Port",
-    url: "/en/gb/roofers-near-me/ellesmere-port",
+      title: "Roofers Macclesfield",
+      url: "/en/gb/roofers-near-me/macclesfield",
     },
     {
-    title: "Roofers Ashton Under Lyne",
-    url: "/en/gb/roofers-near-me/ashton-under-lyne",
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-    ],
+    {
+      title: "Roofers Ashton Under Lyne",
+      url: "/en/gb/roofers-near-me/ashton-under-lyne",
+    },
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_CHESTER = [

@@ -13,35 +13,36 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
   },
   {
     type: "p",
-    text: "Here’s a realistic snapshot of what roofers in Liverpool typically charge in 2026:"
+    text: "Here’s a realistic snapshot of what roofers in Liverpool typically charge in 2026:",
   },
   {
     type: "pricingTable",
     title: "Average cost of roofing in Liverpool",
     calculatorText: "click here.",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimer: "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+    disclaimer:
+      "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
     prices: [
       {
         text: "For general roofing work, it usually cost an average of",
-        price: "£2,120"
+        price: "£2,120",
       },
       {
         text: "For roofing repairs such as leaks the average cost is  typically around",
-        price: "£740"
+        price: "£740",
       },
       {
         text: "For emergency roofing services, the average cost is roughly around",
-        price: "£630"
+        price: "£630",
       },
       {
         text: "For full roof replacements the price usually sits around",
-        price: "£6,840"
-      }
-    ]
+        price: "£6,840",
+      },
+    ],
   },
   {
-    type: 'p',
+    type: "p",
     text: "As you can see, there’s a big difference between fixing a slipped tile and installing a brand-new roof.",
   },
   {
@@ -49,39 +50,39 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
     text: "What affects the price?",
   },
   {
-    type: 'p',
+    type: "p",
     text: "Several factors can nudge the final bill up or down, including:",
   },
   {
     type: "li",
-    text: "The size and type of your roof"
+    text: "The size and type of your roof",
   },
   {
     type: "li",
-    text: "Materials used (slate, tile, felt, etc.)"
+    text: "Materials used (slate, tile, felt, etc.)",
   },
   {
     type: "li",
-    text: "How easy the roof is to access"
+    text: "How easy the roof is to access",
   },
   {
     type: "li",
-    text: "Whether scaffolding is required"
+    text: "Whether scaffolding is required",
   },
   {
     type: "li",
-    text: "The extent of any existing damage"
+    text: "The extent of any existing damage",
   },
   {
     type: "li",
-    text: "How urgent the job is"
+    text: "How urgent the job is",
   },
   {
     type: "li",
-    text: "Liverpool’s ever-unpredictable weather"
+    text: "Liverpool’s ever-unpredictable weather",
   },
   {
-    type: 'p',
+    type: "p",
     text: "Two houses on the same street can end up with very different quotes,  roofs are a bit like fingerprints, no two are quite the same.",
   },
   // {
@@ -97,123 +98,124 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
     text: "The best way to get an accurate price",
   },
   {
-    type: 'p',
+    type: "p",
     text: "These figures are solid guidelines, but they’re still averages. The only way to know exactly what your roofing job will cost is to get a tailored quote based on your specific situation.",
   },
   {
-    type: 'p',
+    type: "p",
     text: "With Localists, that part is easy.",
   },
   {
-    type: 'p',
+    type: "p",
     text: "Tell us what you need, and we’ll connect you with vetted Liverpool roofers who’ll send you free, no-obligation quotes in minutes. No guesswork, no pressure, just clear prices from real local professionals.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof",
     marginBottom: true,
-    marginTop: true
+    marginTop: true,
   },
   {
     type: "h2",
     text: "Emergency roofers in Liverpool",
   },
   {
-    type: 'p',
+    type: "p",
     text: "Roof problems have an annoying habit of choosing the worst possible timing.",
   },
   {
-    type: 'p',
+    type: "p",
     text: "One minute everything’s fine, the next a storm rolls in, and suddenly you’ve got water dripping where water definitely shouldn’t be dripping. Liverpool weather doesn’t mess about; high winds, heavy rain, and the odd flying roof tile can turn a small issue into a big headache fast.",
   },
   {
-    type: 'p',
+    type: "p",
     text: "That’s when emergency roofers in Liverpool become your new best friends.",
   },
   {
-    type: 'p',
+    type: "p",
     text: "Most local roofers offer fast call-outs for urgent issues such as:",
   },
   {
     type: "li",
-    text: "Storm damage"
+    text: "Storm damage",
   },
   {
     type: "li",
-    text: "Serious roof leaks"
+    text: "Serious roof leaks",
   },
   {
     type: "li",
-    text: "Loose or broken tiles"
+    text: "Loose or broken tiles",
   },
   {
     type: "li",
-    text: "Damaged flashing"
+    text: "Damaged flashing",
   },
   {
     type: "li",
-    text: "Blocked or collapsed gutters"
+    text: "Blocked or collapsed gutters",
   },
   {
     type: "li",
-    text: "Structural roof problems"
+    text: "Structural roof problems",
   },
   {
-    type: 'p',
+    type: "p",
     text: "Acting quickly is key. The longer a roofing problem is left, the worse (and more expensive) it usually gets. A small leak today can easily become a soaked ceiling tomorrow.",
   },
   {
-    type: 'p',
+    type: "p",
     text: `If you need urgent help, Localists can connect you with reliable emergency <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">roofers near you</a> in minutes. No endless searching, no stress, just fast, practical help when you need it most.`,
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "h2",
     text: "How to choose the right roofer in Liverpool",
-    className: "mt-6 lg:mt-[72px]"
+    className: "mt-6 lg:mt-[72px]",
   },
   {
-    type: 'p',
+    type: "p",
     text: "Finding a roofer isn’t like picking a takeaway on a Friday night, getting it wrong can be expensive and stressful.",
   },
   {
-    type: 'p',
+    type: "p",
     text: "Not all roofers are the same, so it pays to do a little homework before making your choice. Here are a few simple ways to separate the professionals from the “I’ve got a ladder and a van” crowd:",
   },
   {
     type: "li",
-    text: "Check real customer reviews – past feedback is one of the best ways to judge reliability and quality."
+    text: "Check real customer reviews – past feedback is one of the best ways to judge reliability and quality.",
   },
   {
     type: "li",
-    text: "Ask about experience and qualifications – a seasoned roofer has seen it all and knows how to handle surprises."
+    text: "Ask about experience and qualifications – a seasoned roofer has seen it all and knows how to handle surprises.",
   },
   {
     type: "li",
-    text: "Make sure they’re fully insured – this protects you, your home, and the roofer if anything goes wrong."
+    text: "Make sure they’re fully insured – this protects you, your home, and the roofer if anything goes wrong.",
   },
   {
     type: "li",
-    text: "Get everything in writing – a clear, detailed quote avoids awkward misunderstandings later."
+    text: "Get everything in writing – a clear, detailed quote avoids awkward misunderstandings later.",
   },
   {
     type: "li",
-    text: "Be cautious of cash-only requests – reputable roofers are happy to provide proper invoices and paperwork."
+    text: "Be cautious of cash-only requests – reputable roofers are happy to provide proper invoices and paperwork.",
   },
   {
     type: "li",
-    text: "Don’t just chase the lowest price – low quotes can sometimes mean low-quality materials or rushed work."
+    text: "Don’t just chase the lowest price – low quotes can sometimes mean low-quality materials or rushed work.",
   },
   {
-    type: 'p',
+    type: "p",
     text: "Remember, your roof protects everything underneath it. Choosing the right roofer is about value and trust, not just saving a few pounds.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "QuotesBanner",
-    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    className:
+      "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]",
   },
 ];
 export const FREQUENTLY_DATA_LIVERPOOL = [
@@ -319,6 +321,7 @@ export const ROOFERS_TABDATA_LIVERPOOL = {
     { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
     { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
+    { title: "Roofers keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
@@ -330,19 +333,24 @@ export const ROOFERS_TABDATA_LIVERPOOL = {
     { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+    { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
     {
-    title: "Roofers Macclesfield",
-    url: "/en/gb/roofers-near-me/macclesfield",
+      title: "Roofers Huddersfield",
+      url: "/en/gb/roofers-near-me/huddersfield",
     },
     {
-        title: "Roofers Ellesmere Port",
-    url: "/en/gb/roofers-near-me/ellesmere-port",
+      title: "Roofers Macclesfield",
+      url: "/en/gb/roofers-near-me/macclesfield",
     },
     {
-    title: "Roofers Ashton Under Lyne",
-    url: "/en/gb/roofers-near-me/ashton-under-lyne",
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-    ],
+    {
+      title: "Roofers Ashton Under Lyne",
+      url: "/en/gb/roofers-near-me/ashton-under-lyne",
+    },
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_LIVERPOOL = [
