@@ -59,7 +59,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RUNCORN = [
   {
     type: "p",
     text: "Some roofers also offer inspections or gutter cleaning to help prevent future problems, which can save money long term.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "image",
@@ -85,7 +85,8 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RUNCORN = [
     title: "Average cost of roofers in Runcorn",
     calculatorText: "click here.",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimer: "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",
+    disclaimer:
+      "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",
     prices: [
       {
         text: "General roofing work Bigger jobs that involve more time and materials tend to average around",
@@ -94,31 +95,27 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RUNCORN = [
       {
         text: "Roof repairs Straightforward repairs usually come in at about ",
         price: "£739",
-
       },
       {
         text: "Emergency call-outs If you need someone out quickly after heavy rain or storm damage, urgent work tends to average around ",
         price: "£630",
-
       },
       {
         text: "Full roof replacement For a complete new roof, homeowners in Runcorn typically pay around",
         price: "£6,837",
       },
-
-
-    ]
-
+    ],
   },
   {
     type: "p",
     text: "These numbers are just a guide to help you plan. The only way to know for certain what your roof will cost is to get a few local roofers to take a proper look and quote based on your specific job.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   //delete
   {
     type: "QuotesBanner",
-    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    className:
+      "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]",
   },
 ];
 export const ROOFERS_FREQUENTLY_DATA_RUNCORN = [
@@ -232,6 +229,7 @@ export const ROOFERS_TABDATA_RUNCORN = {
     { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
     { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
+    { title: "Roofers keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
@@ -244,19 +242,24 @@ export const ROOFERS_TABDATA_RUNCORN = {
     { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+    { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
     {
-    title: "Roofers Macclesfield",
-    url: "/en/gb/roofers-near-me/macclesfield",
+      title: "Roofers Huddersfield",
+      url: "/en/gb/roofers-near-me/huddersfield",
     },
     {
-        title: "Roofers Ellesmere Port",
-    url: "/en/gb/roofers-near-me/ellesmere-port",
+      title: "Roofers Macclesfield",
+      url: "/en/gb/roofers-near-me/macclesfield",
     },
     {
-    title: "Roofers Ashton Under Lyne",
-    url: "/en/gb/roofers-near-me/ashton-under-lyne",
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-    ],
+    {
+      title: "Roofers Ashton Under Lyne",
+      url: "/en/gb/roofers-near-me/ashton-under-lyne",
+    },
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_RUNCORN = [

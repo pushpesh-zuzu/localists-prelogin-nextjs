@@ -16,7 +16,8 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_OSWESTRY = [
     title: "Average cost of roofers in Oswestry",
     calculatorText: "click here.",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimer: "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",
+    disclaimer:
+      "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",
     prices: [
       {
         text: "General roofing work in Oswestry tends to come in somewhere around",
@@ -25,26 +26,21 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_OSWESTRY = [
       {
         text: " Straightforward repairs often average about",
         price: "£800",
-
       },
       {
         text: "Emergency call-outs, especially after storms, usually sit closer to",
         price: "£532",
-
       },
       {
         text: "A full roof replacement is a bigger commitment, and across Oswestry, the average tends to land around",
         price: "£6,557",
       },
-
-
-    ]
-
+    ],
   },
   {
     type: "p",
     text: "These numbers aren’t promises; they’re just there to help you understand what’s normal locally. The only way to know where your roof stands is to have someone take a proper look and explain it in context.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "image",
@@ -59,7 +55,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_OSWESTRY = [
   },
   {
     type: "p",
-    text: "Searching online for a roofer in Oswestry can be overwhelming. First off, the search result brings up dozens of names. Then you’re stuck choosing between a \"one-man band\" offering a suspiciously low price or a larger company with reviews that don't quite feel right. It’s hard to know who actually has the expertise to handle your home.",
+    text: 'Searching online for a roofer in Oswestry can be overwhelming. First off, the search result brings up dozens of names. Then you’re stuck choosing between a "one-man band" offering a suspiciously low price or a larger company with reviews that don\'t quite feel right. It’s hard to know who actually has the expertise to handle your home.',
   },
   {
     type: "p",
@@ -94,18 +90,19 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_OSWESTRY = [
   },
   {
     type: "pbold",
-    text: "See the \"actual\" price",
+    text: 'See the "actual" price',
     className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
   },
   {
     type: "p",
     text: "By seeing a few different quotes, you’ll get a much better feel for what’s a fair price for the work, so you don’t end up getting overcharged.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   //delete
   {
     type: "QuotesBanner",
-    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    className:
+      "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]",
   },
 ];
 export const ROOFERS_FREQUENTLY_DATA_OSWESTRY = [
@@ -192,7 +189,7 @@ export const ROOFERS_TABDATA_OSWESTRY = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
- related: [
+  related: [
     { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
     { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
@@ -212,6 +209,7 @@ export const ROOFERS_TABDATA_OSWESTRY = {
     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
     { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
+    { title: "Roofers keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
@@ -224,19 +222,24 @@ export const ROOFERS_TABDATA_OSWESTRY = {
     { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+    { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
     {
-    title: "Roofers Macclesfield",
-    url: "/en/gb/roofers-near-me/macclesfield",
+      title: "Roofers Huddersfield",
+      url: "/en/gb/roofers-near-me/huddersfield",
     },
     {
-        title: "Roofers Ellesmere Port",
-    url: "/en/gb/roofers-near-me/ellesmere-port",
+      title: "Roofers Macclesfield",
+      url: "/en/gb/roofers-near-me/macclesfield",
     },
     {
-    title: "Roofers Ashton Under Lyne",
-    url: "/en/gb/roofers-near-me/ashton-under-lyne",
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-    ],
+    {
+      title: "Roofers Ashton Under Lyne",
+      url: "/en/gb/roofers-near-me/ashton-under-lyne",
+    },
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_OSWESTRY = [

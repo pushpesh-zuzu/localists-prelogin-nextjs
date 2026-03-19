@@ -273,18 +273,18 @@ export const ROOFERS_TABDATA_HUDDERSFIELD = {
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
     { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
     {
-      title: "Roofers Macclesfield",
-      url: "/en/gb/roofers-near-me/macclesfield",
+    title: "Roofers Macclesfield",
+    url: "/en/gb/roofers-near-me/macclesfield",
     },
     {
-      title: "Roofers Ellesmere Port",
-      url: "/en/gb/roofers-near-me/ellesmere-port",
+        title: "Roofers Ellesmere Port",
+    url: "/en/gb/roofers-near-me/ellesmere-port",
     },
     {
-      title: "Roofers Ashton Under Lyne",
-      url: "/en/gb/roofers-near-me/ashton-under-lyne",
+    title: "Roofers Ashton Under Lyne",
+    url: "/en/gb/roofers-near-me/ashton-under-lyne",
     },
-  ],
+    ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_HUDDERSFIELD = [

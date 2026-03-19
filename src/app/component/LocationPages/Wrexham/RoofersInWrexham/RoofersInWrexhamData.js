@@ -17,103 +17,108 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
   },
   {
     type: "li",
-    text: "Roofers who have experience with similar jobs"
+    text: "Roofers who have experience with similar jobs",
   },
   {
     type: "li",
-    text: "Clear written quotes without hidden clauses"
+    text: "Clear written quotes without hidden clauses",
   },
   {
     type: "li",
-    text: "Straightforward communication"
+    text: "Straightforward communication",
   },
   {
     type: "li",
-    text: "Realistic timelines"
+    text: "Realistic timelines",
   },
   {
     type: "li",
-    text: "Public liability insurance"
+    text: "Public liability insurance",
   },
   {
     type: "li",
     text: "Reviews from previous customers",
-    className: 'mb-0'
+    className: "mb-0",
   },
   {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
     marginBottom: true,
-    marginTop: true
+    marginTop: true,
   },
   {
-    type: 'h2',
+    type: "h2",
     text: "Why using Localists makes finding Roofers Wrexham easier",
-
   },
   {
     type: "p",
-    text: "Finding a roofer shouldn’t feel like trial and error. Yet that’s often what it turns into. You search, you scroll, you’re not quite sure who’s still active or who actually covers your area. Then you call them and you get the “sorry love we’re fully booked”"
+    text: "Finding a roofer shouldn’t feel like trial and error. Yet that’s often what it turns into. You search, you scroll, you’re not quite sure who’s still active or who actually covers your area. Then you call them and you get the “sorry love we’re fully booked”",
   },
   {
     type: "p",
-    text: "Localists gives you a clearer starting point. Instead of guessing, you’re connected with roofers who are local and open to providing free quotes, and have the capacity for your project."
+    text: "Localists gives you a clearer starting point. Instead of guessing, you’re connected with roofers who are local and open to providing free quotes, and have the capacity for your project.",
   },
   {
     type: "p",
     text: "It gives you space to compare without feeling pushed. No awkward follow-up calls. No pressure to say yes on the spot. Just information, options, and the freedom to choose when you’re ready.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
 
   {
     type: "h2",
     text: "How much does roofing cost in Wrexham?",
-    className: "mt-6 lg:mt-[72px]"
+    className: "mt-6 lg:mt-[72px]",
   },
   {
     type: "p",
-    text: "There isn’t a flat price for roofing. The final cost usually depends on what’s actually happening up there. A small repair after a windy week is very different from removing and replacing an entire roof. Access to the property, the materials chosen, and how much labour is involved all affect the total cost."
+    text: "There isn’t a flat price for roofing. The final cost usually depends on what’s actually happening up there. A small repair after a windy week is very different from removing and replacing an entire roof. Access to the property, the materials chosen, and how much labour is involved all affect the total cost.",
   },
   {
     type: "p",
-    text: "But here’s a rough guide of what the numbers may look like:"
+    text: "But here’s a rough guide of what the numbers may look like:",
   },
   {
     type: "AveragePriceLocation",
     title: "Average cost of roofing in Wrexham",
     calculatorText: "click here.",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimerText: "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+    disclaimerText:
+      "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
     priceCards: [
       {
-        description: "For general roofing projects, homeowners in Wrexham typically pay around",
+        description:
+          "For general roofing projects, homeowners in Wrexham typically pay around",
         price: "£2,858",
-        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
+        className:
+          "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]",
       },
       {
         description: "For roofing repairs, the average cost tends to be around",
         price: "£862",
-        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
-
+        className:
+          "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]",
       },
       {
-        description: "For emergency roofing call-outs, the average sits closer to",
+        description:
+          "For emergency roofing call-outs, the average sits closer to",
         price: "£445",
-        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
-
+        className:
+          "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]",
       },
       {
         description: "For a full roof replacement, the average cost is around",
         price: "£7,495",
-        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
+        className:
+          "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]",
       },
     ],
-    className: "lg:pb-[0px] pb-[0px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px]"
+    className: "lg:pb-[0px] pb-[0px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px]",
   },
   {
     type: "QuotesBanner",
-    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    className:
+      "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]",
   },
 ];
 export const ROOFERS_FREQUENTLY_DATA_WREXHAM = [
@@ -200,7 +205,7 @@ export const ROOFERS_TABDATA_WREXHAM = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
- related: [
+  related: [
     { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
     { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
@@ -220,6 +225,7 @@ export const ROOFERS_TABDATA_WREXHAM = {
     { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
     { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
+    { title: "Roofers keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
@@ -232,19 +238,24 @@ export const ROOFERS_TABDATA_WREXHAM = {
     { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+    { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
     {
-    title: "Roofers Macclesfield",
-    url: "/en/gb/roofers-near-me/macclesfield",
+      title: "Roofers Huddersfield",
+      url: "/en/gb/roofers-near-me/huddersfield",
     },
     {
-        title: "Roofers Ellesmere Port",
-    url: "/en/gb/roofers-near-me/ellesmere-port",
+      title: "Roofers Macclesfield",
+      url: "/en/gb/roofers-near-me/macclesfield",
     },
     {
-    title: "Roofers Ashton Under Lyne",
-    url: "/en/gb/roofers-near-me/ashton-under-lyne",
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-    ],
+    {
+      title: "Roofers Ashton Under Lyne",
+      url: "/en/gb/roofers-near-me/ashton-under-lyne",
+    },
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_WREXHAM = [

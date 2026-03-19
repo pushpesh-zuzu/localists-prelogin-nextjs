@@ -16,29 +16,34 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_YORK = [
     title: "Average cost of roofing in York",
     calculatorText: "click here.",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimerText: "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price",
+    disclaimerText:
+      "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price",
     priceCards: [
       {
-        description: "For general roofing jobs, homeowners usually spend around",
+        description:
+          "For general roofing jobs, homeowners usually spend around",
         price: "£2,000",
-        className: "max-[360]:min-h-16 max-[360]:max-h-[76px] min-[360px]:min-h-12 min-[360px]:max-h-12  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[80px] lg:max-h-[80px]"
+        className:
+          "max-[360]:min-h-16 max-[360]:max-h-[76px] min-[360px]:min-h-12 min-[360px]:max-h-12  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[80px] lg:max-h-[80px]",
       },
       {
         description: "On average, roof repairs in York come in at around",
         price: "£815",
-        className: "max-[360]:min-h-16 max-[360]:max-h-[76px] min-[360px]:min-h-12 min-[360px]:max-h-12  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[80px] lg:max-h-[80px]"
-
+        className:
+          "max-[360]:min-h-16 max-[360]:max-h-[76px] min-[360px]:min-h-12 min-[360px]:max-h-12  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[80px] lg:max-h-[80px]",
       },
       {
         description: "Emergency call-outs for roofers tend to average around",
         price: "£560",
-        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
-
+        className:
+          "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]",
       },
       {
-        description: "For a full replacement new roof, the average cost in Mold is around",
+        description:
+          "For a full replacement new roof, the average cost in Mold is around",
         price: "£6,650",
-        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
+        className:
+          "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]",
       },
     ],
   },
@@ -49,26 +54,44 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_YORK = [
     marginBottom: true,
   },
   {
-    type: "h2", text: "Common roofing services in York:",
+    type: "h2",
+    text: "Common roofing services in York:",
   },
 
-  { type: "li", text: "Roof repairs – fixing leaks, slipped tiles, or damaged flashing before small problems turn into big headaches." },
-
-  { type: "li", text: "Full roof replacements – from pitched to flat roofs, for homes that need a complete overhaul." },
-
-  { type: "li", text: "Gutter cleaning and repairs – keeping water flowing properly and avoiding damp issues." },
-
-  { type: "li", text: "Chimney work – repointing, flashing repairs, or full maintenance to keep your chimney weatherproof." },
-
-  { type: "li", text: "Flat roof installation or resealing – perfect for garages, extensions, or tricky modern builds." },
+  {
+    type: "li",
+    text: "Roof repairs – fixing leaks, slipped tiles, or damaged flashing before small problems turn into big headaches.",
+  },
 
   {
-    type: "li", text: "Roof inspections and surveys – spotting potential issues early so you can plan repairs before they become urgent.",
-    className: "mb-0"
+    type: "li",
+    text: "Full roof replacements – from pitched to flat roofs, for homes that need a complete overhaul.",
+  },
+
+  {
+    type: "li",
+    text: "Gutter cleaning and repairs – keeping water flowing properly and avoiding damp issues.",
+  },
+
+  {
+    type: "li",
+    text: "Chimney work – repointing, flashing repairs, or full maintenance to keep your chimney weatherproof.",
+  },
+
+  {
+    type: "li",
+    text: "Flat roof installation or resealing – perfect for garages, extensions, or tricky modern builds.",
+  },
+
+  {
+    type: "li",
+    text: "Roof inspections and surveys – spotting potential issues early so you can plan repairs before they become urgent.",
+    className: "mb-0",
   },
   {
-    type: "h2", text: "What to look for in a York roofer – Qualifications and timings",
-    className: "mt-6 lg:mt-[72px]"
+    type: "h2",
+    text: "What to look for in a York roofer – Qualifications and timings",
+    className: "mt-6 lg:mt-[72px]",
   },
   {
     type: "p",
@@ -78,38 +101,60 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_YORK = [
     type: "pbold",
     text: "Key qualifications and certifications:",
     className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
-
   },
-  { type: "li", text: "NVQ Level 2 in Roofing (or equivalent) – proof they know the trade inside out." },
+  {
+    type: "li",
+    text: "NVQ Level 2 in Roofing (or equivalent) – proof they know the trade inside out.",
+  },
 
-  { type: "li", text: "CSCS card – confirms they’re trained to work safely on construction sites." },
+  {
+    type: "li",
+    text: "CSCS card – confirms they’re trained to work safely on construction sites.",
+  },
 
-  { type: "li", text: "CHAS accreditation – shows they meet strict health and safety standards." },
+  {
+    type: "li",
+    text: "CHAS accreditation – shows they meet strict health and safety standards.",
+  },
 
-  { type: "li", text: "Public liability insurance – essential protection if anything goes wrong." },
+  {
+    type: "li",
+    text: "Public liability insurance – essential protection if anything goes wrong.",
+  },
 
-  { type: "li", text: "Membership of professional trade bodies – like the NFRC or CORC, which signal credibility and experience." }
-  ,
+  {
+    type: "li",
+    text: "Membership of professional trade bodies – like the NFRC or CORC, which signal credibility and experience.",
+  },
   {
     type: "pbold",
     text: "How long jobs usually take in York:",
     className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
-
   },
-  { type: "li", text: "Small repairs – a day or two is often enough to fix leaks, slipped tiles, or minor damage." },
+  {
+    type: "li",
+    text: "Small repairs – a day or two is often enough to fix leaks, slipped tiles, or minor damage.",
+  },
 
-  { type: "li", text: "Roof sections – replacing part of a roof or tackling larger repairs usually takes 2–5 days." },
+  {
+    type: "li",
+    text: "Roof sections – replacing part of a roof or tackling larger repairs usually takes 2–5 days.",
+  },
 
-  { type: "li", text: "Full roof replacement – bigger projects can stretch from 1 to 3 weeks, depending on the roof type, size, and, of course, York’s famously unpredictable weather." },
+  {
+    type: "li",
+    text: "Full roof replacement – bigger projects can stretch from 1 to 3 weeks, depending on the roof type, size, and, of course, York’s famously unpredictable weather.",
+  },
 
   {
     type: "p",
     text: "By checking qualifications and understanding realistic timings, you can avoid surprises and feel confident that your York roof is in capable hands.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "QuotesBanner",
-    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    className:
+      "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]",
   },
 ];
 export const ROOFERS_FREQUENTLY_DATA_YORK = [
@@ -223,6 +268,7 @@ export const ROOFERS_TABDATA_YORK = {
     { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
     { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
+    { title: "Roofers keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
@@ -235,19 +281,24 @@ export const ROOFERS_TABDATA_YORK = {
     { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+    { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
     {
-    title: "Roofers Macclesfield",
-    url: "/en/gb/roofers-near-me/macclesfield",
+      title: "Roofers Huddersfield",
+      url: "/en/gb/roofers-near-me/huddersfield",
     },
     {
-        title: "Roofers Ellesmere Port",
-    url: "/en/gb/roofers-near-me/ellesmere-port",
+      title: "Roofers Macclesfield",
+      url: "/en/gb/roofers-near-me/macclesfield",
     },
     {
-    title: "Roofers Ashton Under Lyne",
-    url: "/en/gb/roofers-near-me/ashton-under-lyne",
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-    ],
+    {
+      title: "Roofers Ashton Under Lyne",
+      url: "/en/gb/roofers-near-me/ashton-under-lyne",
+    },
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_YORK = [
@@ -260,7 +311,7 @@ That’s where Localists come in. We connect you with experienced, vetted roofer
 `,
   `
 Zero cost. Zero obligation. Zero stress
-`
+`,
 ];
 
 export const BREADCRUM_DATA_ROOFERS_YORK = [
