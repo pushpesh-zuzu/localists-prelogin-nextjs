@@ -116,6 +116,8 @@ export default function HeroSectionFormNewPPC({
               max-[600px]:w-[120px]
               max-[600px]:h-[20px]
               max-[600px]:mb-[15px]
+
+              max-[600px]:mx-auto
             "/>
 
                     <H1 className="text-center max-lg:!text-[25px] max-lg:!leading-[30px] lg:text-left lg:leading-[80px]">
@@ -154,7 +156,7 @@ export default function HeroSectionFormNewPPC({
                                 text={text3}
                             />
                         </div>
-                        <div className="flex gap-[20px] mt-[40px]">
+                        <div className="flex gap-[20px] mt-[40px] max-[1024px]:justify-center">
                             <PrimaryButton>{quoteText}</PrimaryButton>
                         </div>
 
