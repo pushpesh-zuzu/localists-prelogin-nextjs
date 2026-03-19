@@ -39,7 +39,8 @@ function PostCodeSearchField({
   margin = true,
   buttonBg = "bg-[#7DD5F1]",
   serviceId = 112,
-  serviceName = "Tree Surgery"
+  serviceName = "Tree Surgery",
+  marginTop = "mt-[30px] md:mt-6 lg:mt-auto"
 }) {
   const [postcode, setPostcode] = useState("");
   const [isValidating, setIsValidating] = useState(false);
@@ -172,7 +173,7 @@ function PostCodeSearchField({
     <>
       <div
               className={`relative w-[83.5vw] md:w-auto md:max-w-[280px] lg:max-w-[416px] ${
-                margin ? "mt-[30px] md:mt-6 lg:mt-9" : ""
+                margin ? marginTop : ""
               }`}
             >
               <div

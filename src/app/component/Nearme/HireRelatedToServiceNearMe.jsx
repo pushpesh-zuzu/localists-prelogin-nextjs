@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import Button from "../UI/Typography/Button";
 import Link from "next/link";
@@ -35,62 +35,70 @@ const JobButton = ({ title, url }) => {
   );
 };
 
+const ROWS_PER_CHUNK = 4;
+
 export default function HireRelatedToServiceNearMe({
   heading1 = "Hire with",
   heading2 = "confidence",
   tabData = [],
   headingMiddle = "",
-  heightClass = "min-h-[412px] h-auto md:h-auto lg:min-h-[594px] lg:h-auto",
+  heightClass = "min-h-[412px] h-auto md:h-auto lg:min-h-[618px] lg:h-auto",
   activeTabkey = "professionals",
 }) {
   const sectionRef = useRef(null);
   const [currentTab, setcurrentTab] = useState(activeTabkey);
-  const [showAll, setShowAll] = useState(false);
-  const [hasOverflow, setHasOverflow] = useState(false);
-
   const contentRef = useRef(null);
+
+  const [visibleChunks, setVisibleChunks] = useState(1);
+  const [rowHeight,     setRowHeight]     = useState(0);
+  const [totalRows,     setTotalRows]     = useState(0);
 
   const handleClick = (activtab) => {
     setcurrentTab(activtab);
-    setShowAll(false);
-  };
-
-  const COLLAPSED_HEIGHT = {
-    mobile: 162,
-    tablet: 196,
-    desktop: 240,
   };
 
   const tabs = [
     { lable: "Find Professionals", activtab: "professionals" },
-    { lable: "Popular Jobs", activtab: "popular" },
-    { lable: "Advice & Insight", activtab: "insight" },
-    { lable: "Related Service", activtab: "related" },
-    { lable: "Find Out More", activtab: "findMore" },
+    { lable: "Popular Jobs",       activtab: "popular"       },
+    { lable: "Advice & Insight",   activtab: "insight"       },
+    { lable: "Related Service",    activtab: "related"       },
+    { lable: "Find Out More",      activtab: "findMore"      },
   ].filter((tab) => tabData?.[tab.activtab]?.length > 0);
 
+  // ── Measure: contentRef ke direct children (JobButton divs) se rows nikalo ──
+  const measure = useCallback(() => {
+    const container = contentRef.current;
+    if (!container) return;
+
+    // Direct children = JobButton wale divs
+    const items = Array.from(container.children);
+    if (!items.length) return;
+
+    const firstTop = items[0].offsetTop;
+
+    const nextRowItem = items.find((el) => el.offsetTop > firstTop);
+
+    const rh = nextRowItem
+      ? nextRowItem.offsetTop - firstTop        // row1 top → row2 top = 1 row height with gap
+      : items[0].offsetHeight + 8;             // single row fallback
+
+    const uniqueTops = new Set(items.map((el) => el.offsetTop));
+
+    setRowHeight(rh);
+    setTotalRows(uniqueTops.size);
+  }, []);
+
   useEffect(() => {
-    const el = contentRef.current;
-    if (!el || showAll) return;
+    const t = setTimeout(measure, 60);
+    const ro = new ResizeObserver(() => measure());
+    if (contentRef.current) ro.observe(contentRef.current);
+    return () => { clearTimeout(t); ro.disconnect(); };
+  }, [measure, currentTab, tabData]);
 
-    const observer = new ResizeObserver(() => {
-      const width = window.innerWidth;
-      const limit =
-        width >= 1024
-          ? COLLAPSED_HEIGHT.desktop
-          : width >= 768
-            ? COLLAPSED_HEIGHT.tablet
-            : COLLAPSED_HEIGHT.mobile;
-
-      const TOLERANCE = 4;
-
-      setHasOverflow(el.scrollHeight > limit + TOLERANCE);
-    });
-
-    observer.observe(el);
-
-    return () => observer.disconnect();
-  }, [currentTab, tabData, showAll]);
+  const visibleRows = visibleChunks * ROWS_PER_CHUNK;
+  const boxHeight   = rowHeight > 0 ? rowHeight * visibleRows-5 : undefined;
+  const hasMore     = totalRows > visibleRows;
+  const hasLess     = !hasMore && visibleChunks > 1 ;
 
   return (
     <WrapperBGWidth background={"#00AFE3"}>
@@ -106,7 +114,6 @@ export default function HireRelatedToServiceNearMe({
                           text-[30px] md:text-[35px] leading-[34px] md:leading-[38px]
                           lg:text-[50px] lg:leading-[55px] text-white md:whitespace-nowrap"
             >
-              {/* {heading1} <span className="text-[#253238]">{heading2}</span> */}
               {heading1}
               {headingMiddle && ` ${headingMiddle}`}
 
@@ -120,21 +127,6 @@ export default function HireRelatedToServiceNearMe({
               )}
             </h2>
             <nav className="flex gap-1 sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap">
-              {/* {tabs.map((tab, index) => (
-                <button
-                  key={tab.activtab}
-                  onClick={() => handleClick(tab.activtab)}
-                  className={`${currentTab === tab.activtab
-                    ? "border-2 border-white rounded-full"
-                    : ""
-                    }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em]
-                      text-[12px] md:text-[14px]
-                      xl:text-[18px] py-[3px] sm:px-3 sm:py-1.5 xl:px-4 xl:py-[11px] cursor-pointer`}
-                >
-                  {tab.lable}
-                </button>
-              ))} */}
-
               {tabs.map((tab) => {
                 const isActive = currentTab === tab.activtab;
                 return (
@@ -159,32 +151,37 @@ export default function HireRelatedToServiceNearMe({
             </nav>
           </div>
         </header>
+
+        {/*
+          contentRef wali div pe directly style lagao — koi extra wrapper nahi
+          height fixed = rowHeight × visibleRows  →  overflow-hidden se clip hoga
+          empty space bhi dikhegi kyunki height fixed hai maxHeight nahi
+        */}
         <div
           ref={contentRef}
-          className={`flex flex-wrap content-start
-    gap-y-2 xl:gap-[24px] gap-2 lg:gap-[23.92px]
-    overflow-hidden transition-all duration-300
-    w-full md:max-w-full
-    ${
-      showAll
-        ? "max-h-none"
-        : "max-h-[162px] min-h-[162px] md:max-h-[196px] md:min-h-[250px]  lg:min-h-[240px] lg:max-h-[240px]"
-    }`}
+          style={{
+            height:    boxHeight !== undefined ? `${boxHeight}px` : "auto",
+            minHeight: boxHeight !== undefined ? `${boxHeight}px` : undefined,
+          }}
+          className="flex flex-wrap content-start
+            gap-y-2 xl:gap-[24px] gap-2 lg:gap-[23.92px]
+            overflow-hidden transition-[height] duration-300
+            w-full md:max-w-full"
         >
           {tabData[currentTab]?.map((item, i) => {
             if (typeof item === "object") {
               return <JobButton key={i} title={item.title} url={item.url} />;
             }
-
             return <JobButton key={i} title={item} />;
           })}
         </div>
 
-        {hasOverflow && !showAll && (
-          <div className="flex  justify-center pt-[20px] md:pt-12">
+        {/* Show More */}
+        {hasMore && (
+          <div className="flex justify-center pt-[20px] md:pt-12">
             <Button
               variant="primary"
-              onClick={() => setShowAll(!showAll)}
+              onClick={() => setVisibleChunks((c) => c + 1)}
               className="py-[7px] xl:py-4 xl:px-[30px] cursor-pointer max-w-fit px-[13px]
                      hover:bg-[#253238] rounded-full bg-[#253238] text-white
                      shadow-[0_0_4px_rgba(0,0,0,0.1)]"
@@ -194,12 +191,13 @@ export default function HireRelatedToServiceNearMe({
           </div>
         )}
 
-        {showAll && (
+        {/* Show Less */}
+        {hasLess && (
           <div className="flex justify-center pt-[20px] md:pt-12">
             <Button
               variant="primary"
               onClick={() => {
-                setShowAll(false);
+                setVisibleChunks(1);
                 setTimeout(() => {
                   const el = sectionRef.current;
                   if (!el) return;
@@ -211,11 +209,11 @@ export default function HireRelatedToServiceNearMe({
                     top: sectionCenter - viewportCenter,
                     behavior: "smooth",
                   });
-                }, 50);
+                }, 350);
               }}
-              className="py-[7px] xl:py-4 xl:px-[30px] cursor-pointer px-[13px]
+              className={`${!(totalRows > ROWS_PER_CHUNK) ? 'opacity-0':'opacity-100'} py-[7px] xl:py-4 xl:px-[30px] cursor-pointer px-[13px]
                      hover:bg-[#253238] rounded-full bg-[#253238] text-white
-                     shadow-[0_0_4px_rgba(0,0,0,0.1)]"
+                     shadow-[0_0_4px_rgba(0,0,0,0.1)]`}
             >
               Show Less
             </Button>

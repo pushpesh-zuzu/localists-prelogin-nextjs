@@ -1,16 +1,16 @@
 "use client";
 import React, { useRef } from "react";
 import {
-  BREADCRUM_DATA_ROOFERS_BIRKENHEAD,
-  ROOFERS_FREQUENTLY_DATA_BIRKENHEAD,
-  POPULAR_SERVICES_ROOFERS_BIRKENHEAD,
-  QUESTION_AND_ABOUT_SERVICE_ROOFERS_BIRKENHEAD,
-  ROOFERS_ADVICEINSIGHT_BIRKENHEAD,
-  ROOFERS_FEEDBACK_BIRKENHEAD,
-  ROOFERS_DATA_BIRKENHEAD,
-  ROOFERS_TABDATA_BIRKENHEAD,
-  VETTED_DATA_ROOFERS_BIRKENHEAD,
-} from "./RoofersInBirkenheadData";
+  BREADCRUM_DATA_ROOFERS_KEIGHLEY,
+  ROOFERS_FREQUENTLY_DATA_KEIGHLEY,
+  POPULAR_SERVICES_ROOFERS_KEIGHLEY,
+  QUESTION_AND_ABOUT_SERVICE_ROOFERS_KEIGHLEY,
+  ROOFERS_ADVICEINSIGHT_KEIGHLEY,
+  ROOFERS_FEEDBACK_KEIGHLEY,
+  ROOFERS_DATA_KEIGHLEY,
+  ROOFERS_TABDATA_KEIGHLEY,
+  VETTED_DATA_ROOFERS_KEIGHLEY,
+} from "./RoofersInKeighleyData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
 import PopularJobNearMe from "../../../Nearme/PopularJobNearMe";
@@ -30,18 +30,18 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 
-function RoofersInBirkenhead() {
+function RoofersInKeighley() {
   useScrollToTop()
   useRegistrationRedirect()
   const featureRef = useRef(null);
   return (
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-      <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_BIRKENHEAD} />
+      <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_KEIGHLEY} />
       <HeroSectionLocation
         heading1="Roofers"
-        heading2="Birkenhead"
-        description="Get free, no-obligation quotes from trusted and vetted roofers in Birkenhead. Enter your postcode, give us a few details about the work, and get quotes straight to your inbox. It takes under a minute."
+        heading2="Keighley"
+        description="Need someone to check your roof in Keighley? Add your postcode, a few details of what you need, and receive free quotes from the highest quality roofers near you - within minutes."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -50,16 +50,16 @@ function RoofersInBirkenhead() {
         serviceName="Roofing"
       />
       <VettedSection
-        paragraph={VETTED_DATA_ROOFERS_BIRKENHEAD}
+        paragraph={VETTED_DATA_ROOFERS_KEIGHLEY}
         vettedHeading1="Find Local Vetted Roofers in "
-        vettedHeading2="Birkenhead"
-        breadcrumb={BREADCRUM_DATA_ROOFERS_BIRKENHEAD}
+        vettedHeading2="Keighley"
+        breadcrumb={BREADCRUM_DATA_ROOFERS_KEIGHLEY}
         extraButton
         featureRef={featureRef}
       />
 
       <PopularJobNearMe
-        services={POPULAR_SERVICES_ROOFERS_BIRKENHEAD}
+        services={POPULAR_SERVICES_ROOFERS_KEIGHLEY}
         popularImage="/nearme/Roofing/roofslate.webp"
         altText="two roofers installing slate tiles onto a brand new roof URL"
         mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -68,15 +68,15 @@ function RoofersInBirkenhead() {
       <AboutServicesAndQuestions
         serviceId={113}
         serviceName="Roofing"
-        contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_BIRKENHEAD}
+        contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_KEIGHLEY}
       />
 
       <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-        <Feature county='Liverpool City Region' cityName='Birkenhead' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+        <Feature county='Keighley' cityName='Keighley' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
       <AdviceInsightNearMe
-        articles={ROOFERS_ADVICEINSIGHT_BIRKENHEAD}
+        articles={ROOFERS_ADVICEINSIGHT_KEIGHLEY}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
       />
       <WrapperBGWidth>
@@ -86,14 +86,14 @@ function RoofersInBirkenhead() {
       </WrapperBGWidth>
       <FAQ
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
-        data={ROOFERS_FREQUENTLY_DATA_BIRKENHEAD}
+        data={ROOFERS_FREQUENTLY_DATA_KEIGHLEY}
       />
-      <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_BIRKENHEAD} />
-      <DiscoverNearMe homeData={ROOFERS_DATA_BIRKENHEAD} />
+      <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_KEIGHLEY} />
+      <DiscoverNearMe homeData={ROOFERS_DATA_KEIGHLEY} />
       <HireRelatedToServiceNearMe
         heading1="Hire with"
         heading2="confidence."
-        tabData={ROOFERS_TABDATA_BIRKENHEAD}
+        tabData={ROOFERS_TABDATA_KEIGHLEY}
         activeTabkey="popular"
       />
       <NearmeMember
@@ -105,4 +105,4 @@ function RoofersInBirkenhead() {
     </>
   );
 }
-export default RoofersInBirkenhead;
+export default RoofersInKeighley;

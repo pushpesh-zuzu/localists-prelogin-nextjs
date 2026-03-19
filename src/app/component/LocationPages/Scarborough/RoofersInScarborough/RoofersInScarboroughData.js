@@ -1,0 +1,399 @@
+export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SCARBOROUGH = [
+  {
+    type: "h2",
+    text: "What to look for when hiring roofers Scarborough",
+  },
+  {
+    type: "p",
+    text: "Choosing a roofer isn’t just about who’s cheapest. It’s about who you actually feel comfortable with. You should be able to ask questions without feeling silly, and you should get clear answers back. A good roofer will climb up, have a proper look, and then explain what’s going on in normal language. You want to know what the problem is, what it’ll take to fix it, how long it’ll take, and what it’s going to cost. Nothing vague.",
+  },
+  {
+    type: "p",
+    text: "In a place like Scarborough, the weather doesn’t exactly help. The sea air, the wind, the rain — it all wears things down faster than you think. That’s why it helps to use Roofers Scarborough who actually work around here. They know what tends to fail and what materials last longer in these conditions.",
+  },
+  {
+    type: "p",
+    text: "Roofs aren’t all the same either. A slate roof on an older house is very different from a flat roof or a standard tiled semi. It’s worth asking if they’ve done similar jobs before. Have they got photos? Can you read a few reviews? That usually tells you more than a sales pitch ever will.",
+  },
+  {
+    type: "p",
+    text: "And then there’s the practical stuff. Make sure they’re insured. Ask what the quote actually includes. Does it cover scaffolding? What happens if the weather turns? If someone avoids those questions, that’s usually a sign. If they answer them calmly and clearly, that’s a much better one.",
+    notMarginBottom: true,
+  },
+  {
+    type: "image",
+    src: "/nearme/Roofing/roofinstalling.webp",
+    alt: "two roofers installing slate tiles onto a brand new roof ",
+    marginBottom: true,
+    marginTop: true,
+  },
+  {
+    type: "h2",
+    text: "What do roofers Scarborough typically charge?",
+  },
+  {
+    type: "p",
+    text: "Roofing costs can vary widely depending on the size of your property, the condition of the roof, access requirements, the work you need done, and the materials involved. A straightforward repair will cost significantly less than a full replacement, and urgent call-outs may also affect pricing.",
+  },
+  {
+    type: "p",
+    text: "To give you a general idea, here are the average costs for common roofing jobs in Scarborough:",
+  },
+  {
+    type: "pricingTable",
+    title: "Average cost of roofing Scarborough",
+    calculatorText: "click here.",
+    calculatorLink: "/en/gb/roofing-multi-form-ppc",
+    disclaimer:
+      "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+    prices: [
+      {
+        text: "General roofing work:The average is around ",
+        price: "£2,009",
+      },
+      {
+        text: "Roofing repairs:Approximately ",
+        price: "£816",
+      },
+      {
+        text: "Emergency roofing services:Typically around ",
+        price: "£588",
+      },
+      {
+        text: "Full roof replacement:Usually around",
+        price: "£6,620",
+      },
+    ],
+  },
+  {
+    type: "p",
+    text: "These figures are guide prices only. The final cost will depend on the complexity of the work, the materials chosen, and the existing condition of your roof. For accurate pricing, it’s always best to show us what is wrong with your roof and you request tailored quotes from local Roofers Scarborough before making a decision.",
+    className: "mb-6 lg:mb-[70px]",
+  },
+  {
+    type: "h2",
+    text: "Why Homeowners Choose Roofers Scarborough Through Localists",
+  },
+  {
+    type: "p",
+    text: "Your home is a big investment, and having roof work done protects it from the most extreme weather hazards. A poorly done job can lead to damage to your structure, insulation issues, and mould. If not handled immediately and properly, these can lead to long-term higher costs.",
+  },
+  {
+    type: "p",
+    text: "That’s why so many homeowners use Localists when searching for Roofers Scarborough.",
+  },
+  {
+    type: "p",
+    text: "When you use our platform, you benefit from",
+  },
+  {
+    type: "pbold",
+    text: "Local expert matching",
+  },
+  {
+    type: "p",
+    text: `We connect you with <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">roofing professionals</a> who truly work in Scarborough and understand the local building styles and weather conditions of the area.`,
+  },
+  {
+    type: "pbold",
+    text: "Quotes tailored to your job",
+  },
+  {
+    type: "p",
+    text: "Each quote is based on the specific roofing issue you have shared with us. No generic pricing or guesswork.",
+  },
+  {
+    type: "pbold",
+    text: "Flexible timelines",
+  },
+  {
+    type: "p",
+    text: "Whether you need urgent work done due to storm damage or you are planning a roof replacement months in advance, we match you with professionals close to you who fit your schedule.",
+  },
+  {
+    type: "pbold",
+    text: "Fair pricing",
+  },
+  {
+    type: "p",
+    text: "With up to five free quotes, you can compare costs confidently and avoid overpaying.",
+  },
+  {
+    type: "pbold",
+    text: "Transparency and trust",
+  },
+  {
+    type: "p",
+    text: "View real customer reviews, previous project photos, and detailed service listings all in one place.",
+  },
+  {
+    type: "pbold",
+    text: "Ongoing maintenance options",
+  },
+  {
+    type: "p",
+    text: "Some roofing professionals also offer annual inspections and maintenance services to keep your roof in good condition year after year.",
+  },
+  {
+    type: "p",
+    text: "Choosing the wrong contractor can be costly and stressful. With Localists, quality and reliability are the standard, not the exception.",
+    notMarginBottom: true,
+  },
+  {
+    type: "QuotesBanner",
+    className:
+      "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]",
+  },
+];
+export const ROOFERS_FREQUENTLY_DATA_SCARBOROUGH = [
+  {
+    key: "1",
+    title: "How do I know if my roof needs replacing?",
+    description: `
+        If you’re seeing leaks that keep coming back, tiles that have slipped or gone missing, sagging areas, or even daylight coming through in the loft, that’s usually a sign something’s not right. Age matters too. If your roof is 20–30 years old, it might be nearing the end of its run. The best way to know for sure is to get Roofers Scarborough to take a proper look. Sometimes a repair is enough. Sometimes it’s not.
+        `,
+  },
+  {
+    key: "2",
+    title: "How long does a roof replacement take?",
+    description: `
+        For an average house, you’re usually looking at around 3 to 7 days. That depends on the size of the roof, how straightforward it is, and, of course, the weather. Bigger or more complicated roofs can take longer.
+        `,
+  },
+  {
+    key: "3",
+    title: "Is roofing work disruptive?",
+    description: `
+        It’s not silent, that’s for sure. There will be noise when tiles are being removed and replaced. But a decent team will keep things as organized as possible and clear up properly at the end of each day.
+        `,
+  },
+  {
+    key: "4",
+    title: "Do I need planning permission to replace my roof?",
+    description: `
+        Most of the time, no, especially if you’re replacing it like-for-like. But if your home is listed or in a conservation area, there might be rules to follow. Local Roofers Scarborough will usually know what applies and can point you in the right direction.
+        `,
+  },
+];
+export const ROOFERS_ADVICEINSIGHT_SCARBOROUGH = [
+  {
+    id: 1,
+    title: "How to remove a tree stump",
+    image: "/nearme/tree-remove.webp",
+  },
+  {
+    id: 2,
+    title: " How to tell if a tree is dying",
+    image: "/nearme/trees-removal.webp",
+  },
+  {
+    id: 3,
+    title: "How much does it cost to remove a tree?",
+    image: "/nearme/tree-climb-remov.webp",
+  },
+  {
+    id: 4,
+    title: "What is a tree surgeon?",
+    image: "/nearme/long-tree-remove.webp",
+  },
+  {
+    id: 5,
+    title: " What is an arborist?",
+    image: "/nearme/tree-root-remove.webp",
+  },
+];
+export const ROOFERS_TABDATA_SCARBOROUGH = {
+  popular: [
+    {
+      title: "Landscapers Near Me",
+      url: "/en/gb/landscape-gardeners-near-me",
+    },
+    {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
+      title: "Architects Near Me",
+      url: "",
+    },
+    {
+      title: "Gutter Cleaners Near Me",
+      url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Fencing Contractors Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
+    },
+    {
+      title: "Artificial Grass Installers Near Me",
+      url: "/en/gb/artificial-grass-installers-near-me",
+    },
+  ],
+  related: [
+    { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
+    { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+    { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+    { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+    { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+    { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+    { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+    { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+    { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+    { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+    { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+    { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+    { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+    { title: "Roofers Anglesey", url: "/en/gb/roofers-near-me/anglesey" },
+    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+    { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
+    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+    { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
+    { title: "Roofers keighley", url: "/en/gb/roofers-near-me/keighley" },
+    { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+    { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+    { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+    { title: "Roofers Colwyn Bay", url: "/en/gb/roofers-near-me/colwyn-bay" },
+    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+    { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+    {
+      title: "Roofers Huddersfield",
+      url: "/en/gb/roofers-near-me/huddersfield",
+    },
+    {
+      title: "Roofers Macclesfield",
+      url: "/en/gb/roofers-near-me/macclesfield",
+    },
+    {
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
+    },
+    {
+      title: "Roofers Ashton Under Lyne",
+      url: "/en/gb/roofers-near-me/ashton-under-lyne",
+    },
+  ],
+  findMore: [],
+};
+export const VETTED_DATA_ROOFERS_SCARBOROUGH = [
+  `Roofs rarely fail all at once. It begins with small warning signs: a lipped tile, a minor leak after a heavy rain, a rustling sound in strong wind, or a patch of damp in the loft you hope will sort itself out.
+  <br/><br/> 
+  `,
+  `
+But it doesn’t.
+  <br/><br/> 
+
+`,
+  `Whether it is a small repair, a full roof replacement, or emergency work after storm damage, Localists connects you with Roofers Scarborough homeowners can vouch for. Vetted, insured professionals. Clear pricing. No pressure. Just straightforward options and peace of mind.`,
+];
+
+export const BREADCRUM_DATA_ROOFERS_SCARBOROUGH = [
+  { title: "Home & Garden", path: "/en/gb/home" },
+  {
+    title: "Roofing",
+    path: "/en/gb/roofers-near-me",
+  },
+  {
+    title: "Scarborough",
+  },
+];
+
+export const POPULAR_SERVICES_ROOFERS_SCARBOROUGH = [
+  "Roof Repair",
+  "Flashing",
+  "Waterproofing",
+  "Roof Replacement",
+  "Shingle replacement",
+  "Leadworks Installation ",
+];
+
+export const ROOFERS_FEEDBACK_SCARBOROUGH = [
+  {
+    id: 1,
+    text: "We had a leak that kept coming back every winter. The roofer identified a flashing issue around the chimney that previous contractors had missed. The work was explained clearly, priced fairly, and completed on time.",
+    name: "Andrew M.",
+  },
+  {
+    id: 2,
+    text: "After storm damage, we needed urgent repairs. Using Localists made it easy to get multiple quotes quickly. The roofer we chose was professional and kept us updated throughout.",
+    name: "Helen C.",
+  },
+  {
+    id: 3,
+    text: "We decided to replace our ageing roof before it became a bigger issue. The whole process felt organized and transparent. No surprises, just solid workmanship.",
+    name: "Daniel F.",
+  },
+  {
+    id: 4,
+    text: "My search for a roofer for an extension behind our property led me to Localists. Got a couple quotes from local roofing companies in our area in minutes. Ended up with Max and his team, who got the job very professionally. Happy with the outcome of the job.",
+    name: "Larry M.",
+  },
+];
+
+export const ROOFERS_DATA_SCARBOROUGH = [
+  {
+    id: 1,
+    title: "Home & Garden",
+    image: "/homepage/image6.webp",
+    isSpecial: true,
+    bgColor: "bg-cyan-400",
+    slug: "/en/gb/home",
+  },
+  {
+    id: 2,
+    title: "Fence & Gate Installation",
+    image: "/homepage/fenceandgate.webp",
+    isSpecial: false,
+    slug: "/en/gb/fencing-contractors-near-me",
+  },
+  {
+    id: 3,
+    title: "Driveway Installation",
+    image: "/homepage/driveway.webp",
+    isSpecial: false,
+    slug: "/en/gb/driveway-installers-near-me",
+  },
+  {
+    id: 4,
+    title: "Landscaping",
+    image: "/homepage/landscapingservice.webp",
+    isSpecial: false,
+    slug: "/en/gb/landscape-gardeners-near-me",
+  },
+  {
+    id: 5,
+    title: "Artificial Grass Installation",
+    image: "/homepage/artificialgrassinstallation.webp",
+    isSpecial: false,
+    slug: "/en/gb/artificial-grass-installers-near-me",
+  },
+  {
+    id: 6,
+    title: "Patio Layer",
+    image: "/homepage/patiolayer.webp", // Aapki image path
+    isSpecial: false,
+    slug: "/en/gb/patio-layers-near-me",
+  },
+
+  {
+    id: 7,
+    title: "Gutter Cleaning",
+    image: "/homepage/guttercleaning.webp", // Aapki image path
+    isSpecial: false,
+    slug: "/en/gb/gutter-cleaning-near-me",
+  },
+  {
+    id: 8,
+    title: "Roofing",
+    image: "/roofing.webp",
+    isSpecial: false,
+    slug: "/en/gb/roofers-near-me",
+  },
+];
