@@ -96,7 +96,7 @@ export default function HireRelatedToServiceNearMe({
   }, [measure, currentTab, tabData]);
 
   const visibleRows = visibleChunks * ROWS_PER_CHUNK;
-  const boxHeight   = rowHeight > 0 ? rowHeight * visibleRows-5 : undefined;
+  const boxHeight   = rowHeight > 0 ? rowHeight * visibleRows-2 : undefined;
   const hasMore     = totalRows > visibleRows;
   const hasLess     = !hasMore && visibleChunks > 1 ;
 
