@@ -251,12 +251,12 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
 
     return (
         <FormWrapper>
-            {/* <div className="py-[16px] text-center">
+            <div className="py-[10px] text-center">
                 <H4 className="text-[#00afe3]">Get Free Customised Quotes</H4>
-                <Paragraph className="mt-[8px] font-bold mx-auto max-w-[70%] max-[640px]:max-w-[98%]">
+                {/* <Paragraph className="mt-[8px] font-bold mx-auto max-w-[70%] max-[640px]:max-w-[98%]">
                     Fill out the form to get free estimates from trusted and verified local professionals
-                </Paragraph>
-            </div> */}
+                </Paragraph> */}
+            </div>
 
             <form
                 onSubmit={handleSubmit}
