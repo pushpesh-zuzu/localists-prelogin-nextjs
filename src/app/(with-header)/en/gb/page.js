@@ -14,6 +14,7 @@ import Member from '@/app/component/Home/Member/Member'
 import PopularCard from '@/app/component/Home/PopularCard/PopularCard'
 import UserFeedback from '@/app/component/Home/UserFeedback/UserFeedback'
 import { articles, feedbackData, tabData } from '@/constants/homepageData'
+import HireRelatedToServiceNearMe from "@/app/component/Nearme/HireRelatedToServiceNearMe";
 // import LoaderIndicator from "@/app/component/common/Loader/LoaderIndicatore";
 
 
@@ -152,7 +153,7 @@ function page() {
       <DiscoverServices />
       <UserFeedback feedbackData={feedbackData} />
       <AdviceInsight articles={articles} />
-      <HireRelatedToService tabData={tabData} />
+      <HireRelatedToServiceNearMe homePageCss heightClass="min-h-[412px] h-auto md:h-auto lg:h-[484px]" tabData={tabData} />
       <Member />
       <Footer />
     </main>

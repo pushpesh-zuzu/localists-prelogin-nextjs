@@ -190,7 +190,7 @@ const AboutServicesAndQuestions = ({
         return (
           <ul key={index}
             // className="list-disc pl-5 md:pl-8 mb-2.5 md:mb-[15px]"
-            className={`list-disc pl-5 md:pl-8 ${block?.noMarginBottom
+            className={`list-disc pl-5 md:pl-8 ${block.className} ${block?.noMarginBottom
               ? "mb-0"
               : "mb-2.5 md:mb-[15px]"
               }`}>

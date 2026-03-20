@@ -44,6 +44,7 @@ export default function HireRelatedToServiceNearMe({
   headingMiddle = "",
   heightClass = "min-h-[412px] h-auto md:h-auto lg:min-h-[618px] lg:h-auto",
   activeTabkey = "professionals",
+  homePageCss=false
 }) {
   const sectionRef = useRef(null);
   const [currentTab, setcurrentTab] = useState(activeTabkey);
@@ -126,7 +127,7 @@ export default function HireRelatedToServiceNearMe({
                 <span className="text-[#253238]"> {heading2}</span>
               )}
             </h2>
-            <nav className="flex gap-1 sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap">
+            <nav className={`flex ${homePageCss ? "gap-0":"gap-1"} sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap`}>
               {tabs.map((tab) => {
                 const isActive = currentTab === tab.activtab;
                 return (
@@ -135,7 +136,7 @@ export default function HireRelatedToServiceNearMe({
                     className={`${
                       isActive ? "border-2 border-white rounded-full" : ""
                     }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em]
-                      text-[12px] md:text-[14px]
+                      text-[11px] md:text-[14px]
                       xl:text-[18px] py-[3px] sm:px-3 sm:py-1.5 xl:px-4 xl:py-[11px]`}
                   >
                     <span

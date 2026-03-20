@@ -289,7 +289,7 @@ export const VETTED_DATA_PERSONAL_TRAINERS = [
 ];
 
 export const BREADCRUM_DATA_PERSONAL_TRAINERS = [
-    { title: "Health and Wellness", path: "" },
+    { title: "Home & Garden", path: "/en/gb/home" },
     { title: "Personal Trainers" },
 ];
 
