@@ -74,7 +74,7 @@ function GutterCleaning() {
                 heading1="Gutter Cleaning Experts"
                 heading2="in your area"
                 tabData={GUTTER_CLEANING_TABDATA}
-                heightClass="min-h-[426px] h-auto md:h-auto lg:h-[484px]"
+                heightClass="min-h-[426px] h-auto md:h-auto lg:min-h-[618px] lg:h-auto"
             />
             <UserFeedbackNearMe2 feedbackData={GUTTER_CLEANING_FEEDBACK} serviceId=""
                 serviceName="" />

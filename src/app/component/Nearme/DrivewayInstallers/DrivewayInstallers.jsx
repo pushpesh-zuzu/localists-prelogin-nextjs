@@ -78,7 +78,7 @@ function DrivewayInstallers() {
                 heading1="Driveway Installers"
                 heading2="in your area"
                 tabData={DRIVEWAY_INSTALLERS_TABDATA}
-                heightClass = "min-h-[426px] h-auto md:h-auto lg:h-[484px]"
+                heightClass = "min-h-[426px] h-auto md:h-auto lg:min-h-[618px] lg:h-auto]"
 
             />
             <UserFeedbackNearMe2 feedbackData={DRIVEWAY_INSTALLERS_FEEDBACK} />

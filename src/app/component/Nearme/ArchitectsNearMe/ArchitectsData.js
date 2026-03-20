@@ -183,30 +183,30 @@ export const ARCHITECTS_ADVICEINSIGHT = [
 ];
 export const ARCHITECTS_TABDATA = {
   professionals: [
-    "Tree Surgeons Hull",
-    "Tree Surgeons York",
-    "Tree Surgeons Leeds",
-    "Tree Surgeons Bolton",
-    "Tree Surgeons Chester",
-    "Tree Surgeons Cheshire",
-    "Tree Surgeons Liverpool",
-    "Tree Surgeons Harrogate",
-    "Tree Surgeons Stockport",
-    "Tree Surgeons Manchester",
-    "Tree Surgeons North Yorkshire",
+    "Architects North Yorkshire",
+    "Architects Liverpool",
+    "Architects Manchester",
+    "Architects Chester",
+    "Architects Leeds",
+    "Architects York",
+    "Architects Harrogate",
+    "Architects Cheshire",
+    "Architects Hull",
+    "Architects Stockport",
+    "Architects Bolton",
   ],
   popular: [
     {
-      title: "Landscapers Near Me",
-      url: "/en/gb/landscape-gardeners-near-me",
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
     },
     {
       title: "Gardeners Near Me",
       url: "",
     },
     {
-      title: "Architects Near Me",
-      url: "",
+      title: "Patio Layers Near Me",
+      url: "/en/gb/patio-layers-near-me",
     },
     {
       title: "Gutter Cleaners Near Me",
