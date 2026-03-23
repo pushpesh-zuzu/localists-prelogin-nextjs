@@ -1,4 +1,5 @@
 import {
+  PersonalTrainersSlider,
   PhysicsMathsSlider,
   TutorsServiceSlider,
 } from "@/app/component/level3/imagesServices";
@@ -55,6 +56,12 @@ const LessionAndTrainingPopularCategory = [
     image: PhysicsMathsSlider,
     title: "Physics and Maths",
     path: "physics-maths-tutors-near-me",
+  },
+   {
+    id: 2,
+    image: PersonalTrainersSlider,
+    title: "Personal Trainers",
+    path: "/personal-trainers-near-me",
   },
 ];
 export { LessionAndTrainingHowItWork, LessionAndTrainingPopularCategory };

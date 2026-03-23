@@ -58,6 +58,11 @@ export default function Page() {
                         name: "Physics And Maths Tutors",
                         path: "/physics-maths-tutors-near-me",
                     },
+                    {
+                        name: "Personal Trainers",
+                        path: "/personal-trainers-near-me",
+                    },
+                    
                 ]}
             />
 
