@@ -213,16 +213,22 @@ export const tabData = {
         title: "Gutter Cleaners near me",
         url: "/en/gb/gutter-cleaning-near-me",
     },
-   
     {
-       title: "Driveway Installers near me",
-       url: "/en/gb/driveway-installers-near-me",
-   },
-    {
-        title: "Fence & Gate Installers near me",
-        url: "/en/gb/fencing-contractors-near-me",
+      title: "Tree Surgeons Near Me ",
+      url: "/en/gb/tree-surgeon-near-me",
     },
-    
+    {
+      title: "Driveway Installers near me",
+      url: "/en/gb/driveway-installers-near-me",
+    },
+    {
+      title: "Fence & Gate Installers near me",
+      url: "/en/gb/fencing-contractors-near-me",
+    },
+    {
+           title: "Painter and Decorators Near me ",
+           url: "/en/gb/painter-and-decorator-near-me",
+       },
      {
         title: "Artificial Grass Installers near me",
         url: "/en/gb/artificial-grass-installers-near-me",
