@@ -19,6 +19,7 @@ const blogs = [
     {
         title: "How long does a flat roof last",
         image: "/images/BlogPage/Howlong.webp",
+        path:"/en/gb/blog/advice/how-long-does-a-flat-roof-last"
     },
     {
         title: "Roof Replacement Cost in 2026: The full Breakdown",
@@ -66,6 +67,7 @@ export default function BlogGridSection() {
                             key={index}
                             title={item.title}
                             image={item.image}
+                            path={item?.path ? item?.path : ""}
                         />
                     ))}
                 </div>

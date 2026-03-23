@@ -236,35 +236,48 @@ export const GUTTER_CLEANING_TABDATA = {
     ],
     popular: [
 
-        // "Driveway Installers Near Me",
-        // "Gardeners Near Me",
-        // "Tree Surgeons Near Me",
-        // "Architects Near Me",
-        // "Fencing Contractors Near Me",
-        // "Artificial Grass Installers Near Me",
         {
-            title: "Tree Surgeons Near Me",
-            url: "/en/gb/tree-surgeon-near-me",
-        },
-        {
-            title: "Architects Near Me",
-            url: "",
+            title: "Landscapers Near Me",
+            url: "/en/gb/landscape-gardeners-near-me",
         },
         {
             title: "Gardeners Near Me",
             url: "",
         },
         {
+             title: "Roofers Near Me ",
+             url: "/en/gb/patio-layers-near-me",
+         },
+         
+         {
+             title: "Patio Installers Near Me ",
+            url: "/en/gb/patio-layers-near-me",
+        },
+      
+         {
+            title: "Architects Near Me",
+            url: "",
+        },
+        
+        {
+            title: "Tree Surgeons Near Me ",
+            url: "/en/gb/tree-surgeon-near-me",
+        },
+        {
             title: "Driveway Installers Near Me",
             url: "/en/gb/driveway-installers-near-me",
         },
         {
-            title: "Fencing Contractors Near Me",
-            url: "/en/gb/fencing-contractors-near-me",
-        },
+       title: "Painter and Decorators Near Me ",
+       url: "/en/gb/painter-and-decorator-near-me",
+   },
         {
             title: "Artificial Grass Installers Near Me",
             url: "/en/gb/artificial-grass-installers-near-me",
+        },
+        {
+            title: "Fence and Gate Installers Near Me",
+            url: "/en/gb/fencing-contractors-near-me",
         },
     ],
     insight: [

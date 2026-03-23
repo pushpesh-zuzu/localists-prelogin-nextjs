@@ -248,28 +248,46 @@ export const PAINTER_DECORATOR_TABDATA = {
         "Painters and Decorators North Yorkshire",
     ],
     popular: [
-        {
-            title: "Driveway Installers Near Me",
-            url: "/en/gb/driveway-installers-near-me",
+         {
+            title: "Landscapers Near Me",
+            url: "/en/gb/landscape-gardeners-near-me",
         },
         {
             title: "Gardeners Near Me",
             url: "",
         },
         {
+             title: "Roofers Near Me ",
+             url: "/en/gb/patio-layers-near-me",
+         },
+          {
+            title: "Gutter Cleaners Near Me",
+            url: "/en/gb/gutter-cleaning-near-me",
+        },
+        {
+            title: "Patio Installers Near Me ",
+            url: "/en/gb/patio-layers-near-me",
+        },
+      
+         {
             title: "Architects Near Me",
             url: "",
         },
+        
         {
-            title: "Gutter Cleaners Near Me",
-            url: "/en/gb/gutter-cleaning-near-me",
+            title: "Tree Surgeons Near Me ",
+            url: "/en/gb/tree-surgeon-near-me",
+        },
+        {
+            title: "Driveway Installers Near Me",
+            url: "/en/gb/driveway-installers-near-me",
         },
         {
             title: "Artificial Grass Installers Near Me",
             url: "/en/gb/artificial-grass-installers-near-me",
         },
         {
-            title: "Fence and Gate Installation Near Me",
+            title: "Fence and Gate Installers Near Me",
             url: "/en/gb/fencing-contractors-near-me",
         },
     ],

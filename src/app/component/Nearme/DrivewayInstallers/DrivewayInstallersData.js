@@ -272,13 +272,6 @@ export const DRIVEWAY_INSTALLERS_TABDATA = {
         "Driveway Installers North Yorkshire",
     ],
     popular: [
-        // "Landscapers Near Me",
-        // "Gardeners Near Me",
-        // "Fence and Gate Installation Near Me",
-        // "Architects Near Me",
-        // "Gutter Cleaners Near Me",
-        // "Artificial Grass Installers Near Me",
-
         {
             title: "Landscapers Near Me",
             url: "/en/gb/landscape-gardeners-near-me",
@@ -288,21 +281,40 @@ export const DRIVEWAY_INSTALLERS_TABDATA = {
             url: "",
         },
         {
-            title: "Architects Near Me",
-            url: "",
-        },
-        {
+             title: "Roofers Near Me ",
+             url: "/en/gb/patio-layers-near-me",
+         },
+          {
             title: "Gutter Cleaners Near Me",
             url: "/en/gb/gutter-cleaning-near-me",
         },
         {
-            title: "Fencing Contractors Near Me",
-            url: "/en/gb/fencing-contractors-near-me",
+            title: "Patio Installers Near Me ",
+            url: "/en/gb/patio-layers-near-me",
         },
+        
+        {
+            title: "Architects Near Me",
+            url: "",
+        },
+        
+        {
+            title: "Tree Surgeons Near Me ",
+            url: "/en/gb/tree-surgeon-near-me",
+        },
+        {
+       title: "Painter and Decorators Near Me ",
+       url: "/en/gb/painter-and-decorator-near-me",
+   },
         {
             title: "Artificial Grass Installers Near Me",
             url: "/en/gb/artificial-grass-installers-near-me",
         },
+        {
+            title: "Fence and Gate Installers Near Me",
+            url: "/en/gb/fencing-contractors-near-me",
+        },
+     
     ],
     insight: [
 
