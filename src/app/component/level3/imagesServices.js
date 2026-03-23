@@ -10,7 +10,7 @@ import GutterCleanerSlider from "./serviceImg/GutterCleanerSlider.webp";
 import AccountingSlider from "./serviceImg/AccountingSlider.webp";
 import BookkeepingServicesSlider from "./serviceImg/BookkeepingServicesSlider.webp";
 import MassageTherapySlider from "./serviceImg/MassageTherapySlider.webp";
-import PersonalTrainersSlider from "./serviceImg/PersonalTrainersSlider.webp";
+import PersonalTrainersSlider from "./serviceImg/PersonalTrainersSlider1.webp";
 import TreeSurgeonSlider from "./serviceImg/TreeSurgeon.webp";
 import RoofingSlider from "./serviceImg/roofing.webp";
 import TreeSurgeryHomeSlider from "./serviceImg/TreeSurgeryHomeSlider.webp";
