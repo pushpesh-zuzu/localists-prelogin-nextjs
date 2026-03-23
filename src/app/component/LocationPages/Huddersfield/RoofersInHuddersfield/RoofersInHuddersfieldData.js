@@ -292,10 +292,10 @@ export const VETTED_DATA_ROOFERS_HUDDERSFIELD = [
   <br/><br/> 
   `,
   `
-If you need a roofing specialist - emergency or scheduled - we have the right people for the job. Just tell us what kind of service you require, and we’ll connect you with trusted, <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">vetted roofers<a> in your local area in Huddersfield.
+If you need a roofing specialist - emergency or scheduled - we have the right people for the job. Just tell us what kind of service you require, and we’ll connect you with trusted, <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">local roofers<a> in Huddersfield.
 <br/><br/>
 `,
-  `No chasing contractors. No awkward phone calls. Zero obligation. Just free quotes from roofers.`,
+  `No chasing contractors. No awkward phone calls. Zero obligation.`,
 ];
 
 export const BREADCRUM_DATA_ROOFERS_HUDDERSFIELD = [

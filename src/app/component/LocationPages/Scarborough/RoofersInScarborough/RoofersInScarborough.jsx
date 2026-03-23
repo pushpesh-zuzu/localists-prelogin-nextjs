@@ -41,7 +41,7 @@ function RoofersInScarborough() {
       <HeroSectionLocation
         heading1="Roofers"
         heading2="Scarborough"
-        description="Get free, no-obligation quotes from the highest quality Roofers Scarborough has to offer. Enter your postcode, share a few details about your roofing job, and get matched with trusted local professionals in under a minute."
+        description="Get free, no-obligation quotes from the highest quality Roofers in Scarborough has to offer. Enter your postcode, share a few details about your roofing job, and get matched with trusted local professionals in under a minute."
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"

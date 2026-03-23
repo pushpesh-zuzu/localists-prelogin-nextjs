@@ -289,7 +289,7 @@ export const VETTED_DATA_PERSONAL_TRAINERS = [
 ];
 
 export const BREADCRUM_DATA_PERSONAL_TRAINERS = [
-    { title: "Home & Garden", path: "/en/gb/home" },
+    { title: "Lessons & Training", path: "/en/gb/lessons-training" },
     { title: "Personal Trainers" },
 ];
 
@@ -322,7 +322,7 @@ export const PERSONAL_TRAINERS_FEEDBACK = [
     {
         id: 4,
         text: "Loving the online sessions! I feel more confident at home and I’ve lost 5lbs since. Thank you Localists and my PT Graham.",
-        name: "Janet R",
+        name: "Janet R.",
     },
 ];
 
@@ -333,7 +333,7 @@ export const PERSONAL_TRAINERS_DATA = [
         image: "/homepage/image6.webp",
         isSpecial: true,
         bgColor: "bg-cyan-400",
-        slug: "/en/gb/home",
+        slug: "/en/gb/lessons-training",
     },
     {
         id: 2,
