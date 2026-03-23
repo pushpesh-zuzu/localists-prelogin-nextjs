@@ -50,6 +50,8 @@ export default function HeroSectionFormNewPPC({
     const { questionanswerData, questionLoader, buyerRequest, buyerStep } =
         useSelector((state) => state.buyer);
 
+    // console.log("buyerRequest", buyerRequest)
+
     const [localRequestId, setLocalRequestId] = useState(null);
     const [reEnterMobile, setReEnterMobile] = useState(2);
     const [backButtonTriggered, setBackButtonTriggered] = useState(false);

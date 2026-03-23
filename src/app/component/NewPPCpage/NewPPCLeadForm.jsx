@@ -1,9 +1,9 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import { useEffect, useState, useCallback } from "react";
+// import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Paragraph from "@/app/component/UI/Typography/Paragraph2";
+// import Paragraph from "@/app/component/UI/Typography/Paragraph2";
 import FormWrapper from "./FormWrapper";
 
 import {
@@ -24,19 +24,17 @@ import { checkEmailIdApi } from "@/lib/store/findjobslice"
 import { validateEmail } from "@/utils/validateEmail"
 import LocationPinIcon from "../../../../public/ReactIcons/LocationPinIcon";
 import GreenCheckIcon from "../common/icons/GreenCheckIcon";
-
-const AsyncSelect = dynamic(
-    () => import("react-select/async"),
-    { ssr: false }
-);
+import Select from "react-select";
+// const AsyncSelect = dynamic(
+//     () => import("react-select/async"),
+//     { ssr: false }
+// );
 
 function NewPPCLeadForm({ nextStep, serviceId, }) {
     const dispatch = useDispatch();
     const router = useRouter()
-    const { buyerRequest, questionLoader } = useSelector((s) => s.buyer);
-    const { searchServiceLoader, service } = useSelector((s) => s.findJobs);
-
-    // console.log("buyerRequest", buyerRequest)
+    const { questionLoader } = useSelector((s) => s.buyer);
+    const { service } = useSelector((s) => s.findJobs);
 
     const [formData, setFormData] = useState({
         name: "",
@@ -56,8 +54,8 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
     const [postcodeValid, setPostcodeValid] = useState(false);
     const [postcodeError, setPostcodeError] = useState("");
 
-    const [inputValue, setInputValue] = useState("");
-    const [menuKey, setMenuKey] = useState(0);
+    // const [inputValue, setInputValue] = useState("");
+    // const [menuKey, setMenuKey] = useState(0);
 
     const { isEmailAvailable } = useEmailCheck(formData.email);
 
@@ -76,27 +74,41 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
             if (!initialServiceLoaded && serviceId) {
                 const autoService = options.find((o) => o.value === serviceId);
                 if (autoService) {
-                    handleServiceChange(autoService, true);
+                    // handleServiceChange(autoService, true);
+                    setFormData((p) => ({
+                        ...p,
+                        service_name: autoService,
+                        service_id: autoService.value,
+                    }));
+
+                    dispatch(setbuyerRequestData({
+                        service_id: autoService.value,
+                        service_name: autoService.label,
+                    }));
                     setInitialServiceLoaded(true);
                 }
             }
         }
     }, [service, serviceId, initialServiceLoaded]);
 
-    const loadOptions = useCallback(
-        (value, callback) => {
+    // const loadOptions = useCallback(
+    //     (value, callback) => {
 
-            if (!value) {
-                dispatch(searchService({ search: "" }));
-                callback(serviceOptions); // show all services
-                return;
-            }
+    //         if (!value) {
+    //             dispatch(searchService({ search: "" }));
+    //             callback(serviceOptions); // show all services
+    //             return;
+    //         }
 
-            dispatch(searchService({ search: value }));
-            callback(serviceOptions);
-        },
-        [dispatch, serviceOptions]
-    );
+    //         dispatch(searchService({ search: value }));
+    //         callback(serviceOptions);
+    //     },
+    //     [dispatch, serviceOptions]
+    // );
+
+    // const loadOptions = (_, callback) => {
+    //     callback(serviceOptions);
+    // };
 
 
     const handleInputChange = (e) => {
@@ -322,8 +334,7 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
             ${postcodeError || (errors.postcode && !postcodeValid)
                                 ? "border-red-500"
                                 : "border-[#D9D9D9]"
-                            }
-        `}
+                            }`}
                     />
 
                     {/* LEFT ICON */}
@@ -349,8 +360,8 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
 
                 {/* SERVICE */}
                 <Label>What Service Do You Need? *</Label>
-                <AsyncSelect
-                    key={menuKey}                     // FORCE RESET
+                {/* <AsyncSelect
+                    key={menuKey}
                     instanceId="service-select"
                     // inputId="service-select-input"
 
@@ -360,29 +371,41 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
                     // options={serviceOptions}
                     // onChange={handleServiceChange}
                     value={formData.service_name}
-                    inputValue={inputValue}
-                    placeholder="Search for a service..."
+                    // inputValue=""
+                    isSearchable={false}
+                    placeholder="Select a service"
                     isLoading={searchServiceLoader}
                     styles={customStyles(errors.service)}
-                    onInputChange={(value, action) => {
-                        if (action.action === "input-change") setInputValue(value);
-                    }}
+                    // onInputChange={(value, action) => {
+                    //     if (action.action === "input-change") setInputValue(value);
+                    // }}
                     onChange={(option, action) => {
-                        if (action.action === "clear") {
-                            setInputValue("");
-                            handleServiceChange(null);
+                        // if (action.action === "clear") {
+                        //     setInputValue("");
+                        //     handleServiceChange(null);
 
-                            dispatch(searchService({ search: "" })); // reload all
-                            setMenuKey((k) => k + 1);                // RESET AsyncSelect
+                        //     dispatch(searchService({ search: "" }));
+                        //     setMenuKey((k) => k + 1);
 
-                            return;
-                        }
+                        //     return;
+                        // }
                         handleServiceChange(option);
                     }}
-                    isClearable
+                    isClearable={false}
                     menuPortalTarget={typeof window !== "undefined" ? document.body : null}
                     menuPosition="fixed"
                     menuShouldScrollIntoView={false}
+                /> */}
+                <Select
+                    options={serviceOptions}
+                    value={formData.service_name}
+                    onChange={handleServiceChange}
+                    isSearchable={false}
+                    isClearable={false}
+                    placeholder="Select a service"
+                    styles={customStyles(errors.service)}
+                    menuPortalTarget={typeof window !== "undefined" ? document.body : null}
+                    menuPosition="fixed"
                 />
                 <Error>{errors.service}</Error>
 
