@@ -61,7 +61,7 @@ const LessionAndTrainingPopularCategory = [
     id: 2,
     image: PersonalTrainersSlider,
     title: "Personal Trainers",
-    path: "/personal-trainers-near-me",
+    path: "personal-trainers-near-me",
   },
 ];
 export { LessionAndTrainingHowItWork, LessionAndTrainingPopularCategory };
