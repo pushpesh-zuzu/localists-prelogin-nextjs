@@ -53,6 +53,7 @@ export const megaMenu = [
     subcategory: [
       { name: "Physics and Maths", path: "physics-maths-tutors-near-me" },
       { name: "Tutoring", path: "tutors-near-me" },
+      { name: "Personal Trainers", path: "personal-trainers-near-me" },
     ],
   },
 ];

@@ -26,31 +26,26 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         heading: "Faster service -\u00A0",
         text: `No long wait times or “we’ll fit you in next month.”`,
         marginTop: true,
-        noMarginBottom: true
     },
     {
         type: "uili",
         heading: "Personal touch -\u00A0",
         text: "You’re not a job number, you’re a neighbour.",
-        noMarginBottom: true
     },
     {
         type: "uili",
         heading: "Accountability -\u00A0",
         text: "Local decorators thrive on word-of-mouth, so they’re extra careful about quality.",
-        noMarginBottom: true
     },
     {
         type: "uili",
         heading: "Skills and experience -\u00A0",
         text: "You are sure to achieve a professional finish and not just an ‘oh well’ look.",
-        noMarginBottom: true
     },
     {
         type: "uili",
         heading: "Expert knowledge -\u00A0",
         text: "They know the right tools and decor materials, type of paint, the right surface preparation techniques etc.",
-        noMarginBottom: true
     },
     {
         type: "p",

@@ -88,7 +88,7 @@ function PatioServicesNearme() {
         heading1="Patio Specialists "
         heading2="in your area"
         tabData={PATIO_SERVICES_NEARME_TABDATA}
-        heightClass="min-h-[426px] h-auto md:h-auto lg:h-[484px]"
+        heightClass="min-h-[426px] h-auto md:h-auto lg:min-h-[618px] lg:h-auto"
       />
       <UserFeedbackNearMe2 feedbackData={FEEDBACK_PATIO_SERVICES_NEARME} serviceId={52}
         serviceName="Patio Laying" />

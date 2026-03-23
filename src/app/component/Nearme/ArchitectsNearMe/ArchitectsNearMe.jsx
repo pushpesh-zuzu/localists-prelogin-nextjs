@@ -1,32 +1,26 @@
 "use client"
 
 import React from "react";
-// import HeroSectionNearMe from "../HeroSectionNearMe";
-// import PaddingWrapper from "../PaddingWrapper";
 import VettedSection from "../VettedSection";
 import AboutServicesAndQuestions from "../AboutServicesAndQuestions";
 import {
-  BREADCRUM_DATA_TREESURGEON,
-  FREQUENTLY_DATA_TREE_SURGEON,
-  POPULAR_SERVICES,
-  QUESTION_AND_ABOUT_SERVICE,
-  // TREE_SRUGEON_ADVICEINSIGHT,
-  TREE_SUREON_FEEDBACK,
-  TREE_SURGEON_DATA,
-  TREE_SURGEON_TABDATA,
-  VETTED_DATA_TREE_SURGEON,
-} from "./TreeSurgeonData";
-// import DiscoverServices from "../../Home/DiscoverServices/DiscoverServices";
-// import Feature from "../Feature";
+  BREADCRUM_DATA_ARCHITECTS,
+  FREQUENTLY_DATA_ARCHITECTS,
+  POPULAR_SERVICES_ARCHITECTS,
+  QUESTION_AND_ABOUT_SERVICE_ARCHITECTS,
+  // ARCHITECTS_ADVICEINSIGHT,
+  FEEDBACK_ARCHITECTS,
+  ARCHITECTS_DATA,
+  ARCHITECTS_TABDATA,
+  VETTED_DATA_ARCHITECTS,
+} from "./ArchitectsData";
+
 import { FAQ } from "../FAQ";
 import PopularJobNearMe from "../PopularJobNearMe";
 import NearmeMember from "../NearmeMember";
 import Footer from "../../Footer/Footer";
 import HowItWorkNearMe from "../HowItWorkNearMe";
 import HireRelatedToServiceNearMe from "../HireRelatedToServiceNearMe";
-// import UserFeedbackNearMe from "../UserFeedbackNearMe";
-// import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-// import AdviceInsightNearMe from "../AdviceInsightNearMe";
 import dynamic from "next/dynamic";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FAQScript from "../../common/seo/FAQScript";
@@ -44,56 +38,54 @@ const HeroSectionNearMe = dynamic(() => import("../HeroSectionNearMe"), {
   ssr: true,
 });
 
-// const FAQ = dynamic(() => import("../FAQ"), { ssr: false });
-
 const CloseBrowserAbandon = dynamic(
   () => import("../../common/CloseBrowserAbandon/CloseBrowserAbandon"),
   { ssr: false }
 );
 
-function TreeSurgeon() {
+function ArchitectsNearMe() {
   usePendingBuyerRedirect()
   useScrollToTop()
   return (
     <>
       {typeof window !== 'undefined' && <CloseBrowserAbandon />}
-      <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]} />
+      <FAQScript FAQ={FREQUENTLY_DATA_ARCHITECTS} />
       <HeroSectionNearMe
-        heading1="Find Tree Surgeons"
+        heading1="Find Architects"
         heading2="Near You"
-        description="Get free, no-obligation quotes from the highest quality tree surgeons in your area. Enter your postcode below, and give us a few details about your project - It takes under a minute!"
+        description="Find the best roofers near you! Just enter your postcode and a few details to get 5 free quotes from local architects."
         bannerImage="/nearme/tree-surgeon-header.webp"
         bannerImageMobile="/nearme/TreeSurgeon/TreeSurgeonMobile.webp"
-        altText="Tree Surgeon Hanging From a Tree trimming branches with a chainsaw"
+        altText="Two residential architects adjusting and conversing over a conceptual design"
       />
       <VettedSection
-        paragraph={VETTED_DATA_TREE_SURGEON}
-        vettedHeading1="Vetted tree surgeons you can"
+        paragraph={VETTED_DATA_ARCHITECTS}
+        vettedHeading1="Vetted Local Architects you can"
         vettedHeading2="trust"
-        breadcrumb={BREADCRUM_DATA_TREESURGEON}
+        breadcrumb={BREADCRUM_DATA_ARCHITECTS}
       />
       <PopularJobNearMe
-        services={POPULAR_SERVICES}
+        services={POPULAR_SERVICES_ARCHITECTS}
         popularImage="/nearme/treeSurgeonNearmeRounded.webp"
-        altText="a tree surgeon cutting the branches of an evergreen tree"
+        altText="two architects on site looking at a new building in the distance"
         mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
-        ctaLink="/en/gb/tree-surgeon-multi-form-ppc"
+        // ctaLink="/en/gb/tree-surgeon-multi-form-ppc"
       />
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
-        heading1="Tree Surgeons"
+        heading1="Architects"
         heading2="in your area"
-        tabData={TREE_SURGEON_TABDATA}
+        tabData={ARCHITECTS_TABDATA}
         heightClass="min-h-[426px] h-auto md:h-auto lg:min-h-[618px] lg:h-auto"
       />
-      <UserFeedbackNearMe2 feedbackData={TREE_SUREON_FEEDBACK} />
+      <UserFeedbackNearMe2 feedbackData={FEEDBACK_ARCHITECTS} />
       {/* <PaddingWrapper> */}
-      <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
+      <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE_ARCHITECTS} />
       {/* </PaddingWrapper> */}
-      <FAQ data={FREQUENTLY_DATA_TREE_SURGEON["tree-surgeons-near-me"]} />
+      <FAQ data={FREQUENTLY_DATA_ARCHITECTS} />
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}
-      <DiscoverNearMe homeData={TREE_SURGEON_DATA} />
+      <DiscoverNearMe homeData={ARCHITECTS_DATA} />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
       />
@@ -102,4 +94,4 @@ function TreeSurgeon() {
   );
 }
 
-export default TreeSurgeon;
+export default ArchitectsNearMe;

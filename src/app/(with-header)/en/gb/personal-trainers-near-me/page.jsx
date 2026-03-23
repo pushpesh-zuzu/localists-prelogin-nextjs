@@ -18,7 +18,7 @@ export default function Page() {
                 bannerImage="/nearme/personaltrainers/personaltrainers.webp"
                 breadcrumb={[
                     { title: "Home", path: "en/gb" },
-                    { title: "Health and Wellness", path: "en/gb/health-and-wellness" },
+                    { title: "Lessons & Training", path: "en/gb/lessons-training" },
                     { title: "Personal Trainers", path: "en/gb/personal-trainers-near-me" },
                 ]}
                 conversion={true}

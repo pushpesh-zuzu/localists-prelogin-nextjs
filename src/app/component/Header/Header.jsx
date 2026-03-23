@@ -21,7 +21,7 @@ const adviceMenu = [
   {
     name: "How Long Does a Flat Roof Last",
     path: "blog/advice/how-long-does-a-flat-roof-last",
-    // icon: "/MegaMenu/flatRoof.svg",  
+    // icon: "/MegaMenu/flatRoof.svg",
   },
 ];
 export const MobileMegaMenu = [
@@ -73,17 +73,20 @@ export const MobileMegaMenu = [
     subcategory: [
       { name: "Physics and Maths", path: "physics-maths-tutors-near-me" },
       { name: "Tutoring", path: "tutors-near-me" },
+      { name: "Personal Trainers", path: "personal-trainers-near-me" },
     ],
   },
-   {
+  {
     name: "Blog",
     path: "",
     icon: "/flatRoof1.svg",
     subcategory: [
-      { name: "How Long Does a Flat Roof Last", path: "blog/advice/how-long-does-a-flat-roof-last" },
+      {
+        name: "How Long Does a Flat Roof Last",
+        path: "blog/advice/how-long-does-a-flat-roof-last",
+      },
     ],
   },
-  
 ];
 const SearchResultForHeader = dynamic(() => import("./SearchResultForHeader"), {
   ssr: false,
@@ -161,7 +164,7 @@ export default function Header() {
                 <MegaMenu
                   menuId="advice"
                   menuData={adviceMenu}
-                  activeMenu={activeMenu} 
+                  activeMenu={activeMenu}
                   setActiveMenu={setActiveMenu}
                 >
                   <button className="cursor-pointer flex items-center sm:gap-1 lg:gap-1.5  text-[12px] lg:text-base font-bold whitespace-nowrap text-[#253238]">
@@ -169,6 +172,13 @@ export default function Header() {
                     <ArrowDownBlue />
                   </button>
                 </MegaMenu>
+                <div style={{display:'none'}}>
+                  {adviceMenu.map((item, i) => (
+                    <div key={i}>
+                      <a href={`/en/gb/${item.path}`}>{item.name}</a>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -228,7 +238,7 @@ export default function Header() {
           </div>
 
           <div className="flex lg:hidden items-center justify-between px-2.5 py-2.5 md:py-[9.5px] md:px-16">
-            <MegaMenu menuData={MobileMegaMenu} menuHeading="Services" >
+            <MegaMenu menuData={MobileMegaMenu} menuHeading="Services">
               <button type="button" aria-label="Open mobile menu">
                 <MobileMenuIcon className="" />
               </button>

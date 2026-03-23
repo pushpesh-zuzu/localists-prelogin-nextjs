@@ -1,7 +1,7 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SCARBOROUGH = [
   {
     type: "h2",
-    text: "What to look for when hiring roofers Scarborough",
+    text: "What to look for when hiring roofers in Scarborough",
   },
   {
     type: "p",
@@ -9,7 +9,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SCARBOROUGH = [
   },
   {
     type: "p",
-    text: "In a place like Scarborough, the weather doesn’t exactly help. The sea air, the wind, the rain — it all wears things down faster than you think. That’s why it helps to use Roofers Scarborough who actually work around here. They know what tends to fail and what materials last longer in these conditions.",
+    text: "In a place like Scarborough, the weather doesn’t exactly help. The sea air, the wind, the rain — it all wears things down faster than you think. That’s why it helps to use Roofers in Scarborough who actually work around here. They know what tends to fail and what materials last longer in these conditions.",
   },
   {
     type: "p",
@@ -29,7 +29,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SCARBOROUGH = [
   },
   {
     type: "h2",
-    text: "What do roofers Scarborough typically charge?",
+    text: "What do roofers in Scarborough typically charge?",
   },
   {
     type: "p",
@@ -67,12 +67,12 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SCARBOROUGH = [
   },
   {
     type: "p",
-    text: "These figures are guide prices only. The final cost will depend on the complexity of the work, the materials chosen, and the existing condition of your roof. For accurate pricing, it’s always best to show us what is wrong with your roof and you request tailored quotes from local Roofers Scarborough before making a decision.",
+    text: "These figures are guide prices only. The final cost will depend on the complexity of the work, the materials chosen, and the existing condition of your roof. For accurate pricing, it’s always best to show us what is wrong with your roof and you request tailored quotes from local Roofers in Scarborough before making a decision.",
     className: "mb-6 lg:mb-[70px]",
   },
   {
     type: "h2",
-    text: "Why Homeowners Choose Roofers Scarborough Through Localists",
+    text: "Why Homeowners Choose Roofers in Scarborough Through Localists",
   },
   {
     type: "p",
@@ -80,7 +80,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SCARBOROUGH = [
   },
   {
     type: "p",
-    text: "That’s why so many homeowners use Localists when searching for Roofers Scarborough.",
+    text: "That’s why so many homeowners use Localists when searching for Roofers in Scarborough.",
   },
   {
     type: "p",
@@ -150,7 +150,7 @@ export const ROOFERS_FREQUENTLY_DATA_SCARBOROUGH = [
     key: "1",
     title: "How do I know if my roof needs replacing?",
     description: `
-        If you’re seeing leaks that keep coming back, tiles that have slipped or gone missing, sagging areas, or even daylight coming through in the loft, that’s usually a sign something’s not right. Age matters too. If your roof is 20–30 years old, it might be nearing the end of its run. The best way to know for sure is to get Roofers Scarborough to take a proper look. Sometimes a repair is enough. Sometimes it’s not.
+        If you’re seeing leaks that keep coming back, tiles that have slipped or gone missing, sagging areas, or even daylight coming through in the loft, that’s usually a sign something’s not right. Age matters too. If your roof is 20–30 years old, it might be nearing the end of its run. The best way to know for sure is to get Roofers in Scarborough to take a proper look. Sometimes a repair is enough. Sometimes it’s not.
         `,
   },
   {
@@ -171,7 +171,7 @@ export const ROOFERS_FREQUENTLY_DATA_SCARBOROUGH = [
     key: "4",
     title: "Do I need planning permission to replace my roof?",
     description: `
-        Most of the time, no, especially if you’re replacing it like-for-like. But if your home is listed or in a conservation area, there might be rules to follow. Local Roofers Scarborough will usually know what applies and can point you in the right direction.
+        Most of the time, no, especially if you’re replacing it like-for-like. But if your home is listed or in a conservation area, there might be rules to follow. Local Roofers in Scarborough will usually know what applies and can point you in the right direction.
         `,
   },
 ];
@@ -283,15 +283,21 @@ export const ROOFERS_TABDATA_SCARBOROUGH = {
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_SCARBOROUGH = [
-  `Roofs rarely fail all at once. It begins with small warning signs: a lipped tile, a minor leak after a heavy rain, a rustling sound in strong wind, or a patch of damp in the loft you hope will sort itself out.
+  `Perched between sea spray and stubborn Yorkshire winds, roofs in Scarborough have a bit more to deal with than most. One minute it’s sunshine on the bay, the next it’s a full-on coastal gust testing every tile like it’s got something to prove.
   <br/><br/> 
   `,
   `
-But it doesn’t.
-  <br/><br/> 
+That’s where we come in.
+ <br/><br/> 
 
 `,
-  `Whether it is a small repair, a full roof replacement, or emergency work after storm damage, Localists connects you with Roofers Scarborough homeowners can vouch for. Vetted, insured professionals. Clear pricing. No pressure. Just straightforward options and peace of mind.`,
+  `
+We connect local homeowners with trusted Scarborough roofers who know their way around salty air, sudden squalls, and chimneys that have seen a century or two. Whether it’s a slipped slate after a blustery night or a full roof overhaul, we’ll help you find the right person for the job—no guesswork, no chasing.
+  <br/><br/>
+  ` ,
+ 
+  `Because in a town where the weather keeps you on your toes, your roof shouldn’t.
+  <br/><br/>`,
 ];
 
 export const BREADCRUM_DATA_ROOFERS_SCARBOROUGH = [

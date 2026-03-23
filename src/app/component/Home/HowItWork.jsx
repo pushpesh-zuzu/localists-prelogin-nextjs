@@ -15,7 +15,7 @@ function HowItWork() {
         <H2 className="text-[#00afe3] pb-10 md:pb-6 xl:pb-12">
           How It <span className="text-[#253238]">Works.</span>{" "}
         </H2>
-        <div className="flex flex-col md:flex-row justify-items-start gap-5 xl:gap-[50px]">
+        <div className="flex flex-col md:flex-row justify-items-start md:justify-between lg:justify-items-start gap-5 xl:gap-[50px]">
           <HowItWorksCard
             iconSrc={
               <HowItWorkIconPencingIcon className="h-15 w-15 md:h-13 md:w-20 lg:h-24 lg:w-[120px]" />
