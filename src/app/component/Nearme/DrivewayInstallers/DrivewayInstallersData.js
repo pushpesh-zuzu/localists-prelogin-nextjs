@@ -303,7 +303,7 @@ export const DRIVEWAY_INSTALLERS_TABDATA = {
             url: "/en/gb/tree-surgeon-near-me",
         },
         {
-       title: "Painter and Decorators Near Me ",
+       title: "Painters and Decorators Near Me ",
        url: "/en/gb/painter-and-decorator-near-me",
    },
         {

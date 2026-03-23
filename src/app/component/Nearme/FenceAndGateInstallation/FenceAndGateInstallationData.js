@@ -211,7 +211,7 @@ export const FENCE_AND_GATE_TABDATA = {
         },
          
           {
-            title: "Painter and Decorators Near Me ",
+            title: "Painters and Decorators Near Me ",
             url: "/en/gb/painter-and-decorator-near-me",
         },
       

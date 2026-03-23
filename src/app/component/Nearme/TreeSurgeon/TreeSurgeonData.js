@@ -261,7 +261,7 @@ export const TREE_SURGEON_TABDATA = {
           url: "",
         },
         {
-       title: "Painter and Decorators Near Me ",
+       title: "Painters and Decorators Near Me ",
        url: "/en/gb/painter-and-decorator-near-me",
    },
         {

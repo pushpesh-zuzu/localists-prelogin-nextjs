@@ -34,6 +34,7 @@ export default function HeroSection() {
     },
     {
       title: "Personal Trainers",
+      slug: "/en/gb/personal-trainers-near-me"
     },
     {
       title: "Tree Surgeons",

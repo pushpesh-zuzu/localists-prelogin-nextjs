@@ -196,10 +196,6 @@ export const ROOFING_TABDATA = {
             url: "/en/gb/gutter-cleaning-near-me",
         },
         {
-          title: "Architects Near Me",
-          url: "",
-        },
-        {
           title: "Patio Installers Near Me ",
           url: "/en/gb/patio-layers-near-me",
         },
@@ -214,7 +210,7 @@ export const ROOFING_TABDATA = {
           url: "/en/gb/driveway-installers-near-me",
         },
         {
-       title: "Painter and Decorators Near Me",
+       title: "Painters and Decorators Near Me",
        url: "/en/gb/painter-and-decorator-near-me",
    },
         {

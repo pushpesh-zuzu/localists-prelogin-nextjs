@@ -226,7 +226,7 @@ export const tabData = {
       url: "/en/gb/fencing-contractors-near-me",
     },
     {
-           title: "Painter and Decorators Near me ",
+           title: "Painters and Decorators Near Me ",
            url: "/en/gb/painter-and-decorator-near-me",
        },
      {

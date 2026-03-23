@@ -386,7 +386,7 @@ export const LANDSCAPE_NEARME_TABDATA = {
           url: "/en/gb/driveway-installers-near-me",
         },
         {
-       title: "Painter and Decorators Near Me ",
+       title: "Painters and Decorators Near Me ",
        url: "/en/gb/painter-and-decorator-near-me",
    },
         {
