@@ -184,43 +184,41 @@ export const ROOFING_TABDATA = {
   ],
   popular: [
     {
-            title: "Landscapers Near Me",
-            url: "/en/gb/landscape-gardeners-near-me",
-        },
-        {
-            title: "Gardeners Near Me",
-            url: "",
-        },
-          {
-            title: "Gutter Cleaners Near Me",
-            url: "/en/gb/gutter-cleaning-near-me",
-        },
-        {
-          title: "Patio Installers Near Me ",
-          url: "/en/gb/patio-layers-near-me",
-        },
-        
-        
-        {
-          title: "Tree Surgeons Near Me ",
-          url: "/en/gb/tree-surgeon-near-me",
-        },
-        {
-          title: "Driveway Installers Near Me",
-          url: "/en/gb/driveway-installers-near-me",
-        },
-        {
-       title: "Painters and Decorators Near Me",
-       url: "/en/gb/painter-and-decorator-near-me",
-   },
-        {
-            title: "Artificial Grass Installers Near Me",
-            url: "/en/gb/artificial-grass-installers-near-me",
-        },
-        {
-            title: "Fence and Gate Installers Near Me",
-            url: "/en/gb/fencing-contractors-near-me",
-        },
+      title: "Landscapers Near Me",
+      url: "/en/gb/landscape-gardeners-near-me",
+    },
+    {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
+      title: "Patio Installers Near Me ",
+      url: "/en/gb/patio-layers-near-me",
+    },
+    {
+      title: "Tree Surgeons Near Me ",
+      url: "/en/gb/tree-surgeon-near-me",
+    },
+    {
+      title: "Gutter Cleaners Near Me",
+      url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
+    },
+    {
+      title: "Painters and Decorators Near Me",
+      url: "/en/gb/painter-and-decorator-near-me",
+    },
+    {
+      title: "Artificial Grass Installers Near Me",
+      url: "/en/gb/artificial-grass-installers-near-me",
+    },
+    {
+      title: "Fence and Gate Installers Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
+    },
   ],
   insight: [],
 };

@@ -454,7 +454,7 @@ function page() {
                 heading0="Find"
                 heading1="Landscaping"
                 heading2="Experts Near You"
-                quoteText="Find Landscaping Experts Near You"
+                quoteText="Get Quotes From Verified Landscaping Experts"
                 questionDescription="To find the ideal landscaping specialist for your project, simply complete the quick form below."
                 serviceId={43}
               />

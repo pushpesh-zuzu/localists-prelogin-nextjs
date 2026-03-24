@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Clock, ArrowLeft } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 // import H5 from "../UI/Typography/H5";
 import CardLayoutWrapper from "./CardLayoutWrapper";
 // import Paragraph from "../UI/Typography/Paragraph";
@@ -82,7 +82,7 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
         today.getDate(),
     );
     const maxDate = new Date(todayMidnight);
-    maxDate.setDate(maxDate.getDate() + 28);
+    maxDate.setDate(maxDate.getDate() + 21);
 
     // Next month button disabled if entire next month is beyond maxDate
     const isNextDisabled = (() => {
@@ -122,11 +122,63 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
         currentMonth === today.getMonth() &&
         currentYear === today.getFullYear();
 
+    // const isPast = (day) => {
+    //     const date = new Date(currentYear, currentMonth, day);
+    //     return date <= todayMidnight || date > maxDate;
+    // }
+
     const isPast = (day) => {
         const date = new Date(currentYear, currentMonth, day);
-        return date <= todayMidnight || date > maxDate;
-    }
+        const now = new Date();
 
+        const todayDate = new Date(
+            now.getFullYear(),
+            now.getMonth(),
+            now.getDate()
+        );
+
+        const tomorrowDate = new Date(todayDate);
+        tomorrowDate.setDate(todayDate.getDate() + 1);
+
+        // Block today
+        if (date.getTime() === todayDate.getTime()) return true;
+
+        // Block tomorrow if current time is after 3 PM
+        if (
+            now.getHours() >= 15 &&
+            date.getTime() === tomorrowDate.getTime()
+        ) {
+            return true;
+        }
+
+        // Block past dates
+        if (date < todayDate) return true;
+
+        // Block beyond 3 weeks
+        if (date > maxDate) return true;
+
+        return false;
+    };
+
+    const isWithinNext24Hours = (date, slotTime) => {
+        const now = new Date();
+
+        // Get start time only (before "-")
+        const startTime = slotTime.split(" - ")[0]; // "09:00 AM"
+
+        const [time, modifier] = startTime.split(" ");
+        let [hours, minutes] = time.split(":").map(Number);
+
+        if (modifier === "PM" && hours !== 12) hours += 12;
+        if (modifier === "AM" && hours === 12) hours = 0;
+
+        const slotDateTime = new Date(date);
+        slotDateTime.setHours(hours, minutes, 0, 0);
+
+        const diff = slotDateTime - now;
+
+        return diff < 24 * 60 * 60 * 1000;
+    };
 
     const isSelected = (day) =>
         selectedDates.some((d) => {
@@ -426,6 +478,11 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
                             ))}
                         </div>
                     </div>
+                    {maxDatesReached && (
+                        <p className="text-[#E99643] text-[12px] mt-3">
+                            You have reached the maximum of 3 dates. If you want to select another date, please remove one
+                        </p>
+                    )}
 
                     {showSlotsModal && (
                         <div className="fixed inset-0 flex items-center justify-center bg-black/30 z-50">
@@ -479,17 +536,23 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
 
                                                 <button
                                                     onClick={() => toggleSlot(slot.time)}
-                                                    disabled={remainingSlots === 0 && !selected}
-                                                    className={`w-12 h-6 flex items-center rounded-full p-1 transition cursor-pointer
-                                                    ${selected ? "bg-green-500" : "bg-gray-300"}
-                                                    ${remainingSlots === 0 && !selected ? "opacity-50 cursor-not-allowed" : ""}`}
+                                                    // disabled={remainingSlots === 0 && !selected}
+                                                    disabled={
+                                                        (remainingSlots === 0 && !selected) ||
+                                                        isWithinNext24Hours(activeDate, slot.time)
+                                                    }
+                                                    className={`w-12 h-6 flex items-center rounded-full p-1 transition
+                                                ${selected ? "bg-green-500" : "bg-gray-300"}
+                                            ${(remainingSlots === 0 && !selected) || isWithinNext24Hours(activeDate, slot.time)
+                                                            ? "opacity-50 cursor-not-allowed"
+                                                            : "cursor-pointer"
+                                                        }`}
                                                 >
                                                     <div
                                                         className={`bg-white w-4 h-4 rounded-full shadow transform transition
                                                 ${selected ? "translate-x-6" : ""}`}
                                                     />
                                                 </button>
-
                                             </div>
 
                                         );

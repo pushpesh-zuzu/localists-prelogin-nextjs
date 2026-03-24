@@ -164,7 +164,7 @@ export default function HeroSectionNewPPC({
                                 text={text3}
                             />
                         </div>
-                        <div className="flex gap-[20px] mt-[40px]">
+                        <div className="flex gap-[20px] mt-[40px] max-[1024px]:justify-center">
                             <PrimaryButton>{quoteText}</PrimaryButton>
                         </div>
 

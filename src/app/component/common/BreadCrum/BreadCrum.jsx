@@ -32,7 +32,7 @@ export default function Breadcrumb({ items = [] }) {
                   lg:text-[25px] leading-[13px] sm:leading-[16px] xl:leading-[25px]
                   tracking-[-0.03em]
                   text-[#253238]
-                  whitespace-normal break-words"
+                  whitespace-normal"
               >
                 {item.title}
               </span>
@@ -45,7 +45,7 @@ export default function Breadcrumb({ items = [] }) {
                   tracking-[-0.03em]
                   text-[#959B9E]
                   hover:opacity-80 transition
-                  whitespace-normal break-words
+                  whitespace-nowrap
                 "
               >
                 {item.title}

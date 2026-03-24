@@ -183,14 +183,14 @@ function page() {
                 {(heroRef, sectionsStartRef) => (
                     <>
                         <SEO
-                         canonicalPath="/en/gb/new-ppc-fence-and-gate"
-                         conversion={false} />
+                            canonicalPath="/en/gb/new-ppc-fence-and-gate"
+                            conversion={false} />
                         <div ref={heroRef}>
                             <HeroSectionNewPPC
                                 heading0="Find"
                                 heading1="Fence Installation"
                                 heading2="Experts Near You"
-                                quoteText="Find Fence Installation Experts Near You"
+                                quoteText="Get Quotes From Verified Fence Experts"
                                 questionDescription="To find the ideal Fence Installation for your project, simply complete the quick form below"
                                 serviceId={49}
                             />
