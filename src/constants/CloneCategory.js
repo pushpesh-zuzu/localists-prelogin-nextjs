@@ -15,7 +15,8 @@ import {
   LandscapingSlider,
   PatioServicesSlider,
   TreeSurgeonSlider,
-  RoofingSlider, PainterAndDecoratorSlider
+  RoofingSlider, PainterAndDecoratorSlider,
+  ArchitectSlider
 } from "@/app/component/level3/imagesServices";
 
 // const CATEGORIES = [
@@ -156,6 +157,12 @@ const PopularCategoriesData = [
     title: "Painter and Decorator",
     image: PainterAndDecoratorSlider,
     path: "painter-and-decorator-near-me",
+  },
+   {
+    id: 9,
+    title: "Architects",
+    image: ArchitectSlider,
+    path: "architects-near-me",
   },
 ];
 

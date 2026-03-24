@@ -15,6 +15,7 @@ import TreeSurgeonSlider from "./serviceImg/TreeSurgeon.webp";
 import RoofingSlider from "./serviceImg/roofing.webp";
 import TreeSurgeryHomeSlider from "./serviceImg/TreeSurgeryHomeSlider.webp";
 import PainterAndDecoratorSlider from "./serviceImg/spray.webp";
+import ArchitectSlider from "./serviceImg/ArchitectSlider.webp";
 
 export {
   ArtificialGrassSlider,
@@ -33,5 +34,6 @@ export {
   TreeSurgeonSlider,
   RoofingSlider,
   TreeSurgeryHomeSlider,
-  PainterAndDecoratorSlider
+  PainterAndDecoratorSlider,
+  ArchitectSlider
 };
