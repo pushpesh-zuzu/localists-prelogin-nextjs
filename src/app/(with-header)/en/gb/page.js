@@ -153,7 +153,7 @@ function page() {
       <DiscoverServices />
       <UserFeedback feedbackData={feedbackData} />
       <AdviceInsight articles={articles} />
-      <HireRelatedToServiceNearMe homePageCss heightClass="min-h-[412px] h-auto md:h-auto lg:h-[484px]" tabData={tabData} />
+      <HireRelatedToServiceNearMe homePageCss heightClass="min-h-[420px] h-auto md:h-auto lg:h-[484px]" tabData={tabData} />
       <Member />
       <Footer />
     </main>

@@ -209,6 +209,10 @@ export const tabData = {
       title: "Roofers near me",
       url: "/en/gb/roofers-near-me",
     },
+    {
+      title: "Architects Near Me",
+      url: "/en/gb/architects-near-me",
+    },
      {
         title: "Gutter Cleaners near me",
         url: "/en/gb/gutter-cleaning-near-me",

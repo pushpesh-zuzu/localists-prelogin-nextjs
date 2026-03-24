@@ -140,7 +140,7 @@ export const PHYSICS_AND_MATHS_TABDATA = {
         },
         {
             title: "Architects Near Me",
-            url: "",
+            url: "/en/gb/architects-near-me",
         },
         {
             title: "Gutter Cleaners Near Me",

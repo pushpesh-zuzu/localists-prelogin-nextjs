@@ -42,7 +42,7 @@ export default function HireRelatedToServiceNearMe({
   heading2 = "confidence",
   tabData = [],
   headingMiddle = "",
-  heightClass = "min-h-[412px] h-auto md:h-auto lg:min-h-[618px] lg:h-auto",
+  heightClass = "min-h-[400px] h-auto md:h-auto lg:min-h-[592px] lg:h-auto",
   activeTabkey = "professionals",
   homePageCss=false
 }) {
@@ -53,7 +53,7 @@ export default function HireRelatedToServiceNearMe({
   const [visibleChunks, setVisibleChunks] = useState(1);
   const [rowHeight,     setRowHeight]     = useState(0);
   const [totalRows,     setTotalRows]     = useState(0);
-
+  const [rowGap, setRowGap] = useState(0);
   const handleClick = (activtab) => {
     setcurrentTab(activtab);
   };
@@ -84,7 +84,8 @@ export default function HireRelatedToServiceNearMe({
       : items[0].offsetHeight + 8;             // single row fallback
 
     const uniqueTops = new Set(items.map((el) => el.offsetTop));
-
+      const gap = parseFloat(getComputedStyle(container).rowGap) || 0;
+      setRowGap(gap-2.5);
     setRowHeight(rh);
     setTotalRows(uniqueTops.size);
   }, []);
@@ -97,7 +98,7 @@ export default function HireRelatedToServiceNearMe({
   }, [measure, currentTab, tabData]);
 
   const visibleRows = visibleChunks * ROWS_PER_CHUNK;
-  const boxHeight   = rowHeight > 0 ? rowHeight * visibleRows-2 : undefined;
+  const boxHeight   = rowHeight > 0 ? rowHeight * visibleRows-rowGap : undefined;
   const hasMore     = totalRows > visibleRows;
   const hasLess     = !hasMore && visibleChunks > 1 ;
 

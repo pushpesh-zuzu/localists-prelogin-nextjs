@@ -215,7 +215,7 @@ export const ROOFERS_TABDATA_BARNSLEY = {
     },
     {
       title: "Architects Near Me",
-      url: "",
+      url: "/en/gb/architects-near-me",
     },
     {
       title: "Gutter Cleaners Near Me",
@@ -250,7 +250,7 @@ export const ROOFERS_TABDATA_BARNSLEY = {
     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
     { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers keighley", url: "/en/gb/roofers-near-me/keighley" },
+    { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },

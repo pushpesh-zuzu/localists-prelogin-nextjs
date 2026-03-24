@@ -31,6 +31,7 @@ export default function HeroSection() {
     },
     {
       title: "Architects",
+      slug:"/en/gb/architects-near-me"
     },
     {
       title: "Personal Trainers",
@@ -74,7 +75,7 @@ export default function HeroSection() {
         <QueryToastHandler />
       </Suspense>
       <section
-        className="flex flex-col lg:flex-row gap-[40px] lg:gap-[72px] min-h-[543px] sm:min-h-[376px] xl:min-h-[670px] bg-[#00AEEF] px-[30px] pt-10 pb-5 md:px-[60px] md:pt-[38px] md:pb-6 xl:px-[120px] xl:py-[72px]"
+        className="flex flex-col lg:flex-row gap-[40px] lg:gap-[72px] min-h-[543px] sm:min-h-[376px] xl:min-h-[670px] bg-[#00AEEF] px-[30px] pt-10 pb-5 md:px-[60px] md:pt-[38px] md:pb-6 lg:pb-16 xl:pb-[72px] xl:px-[120px] xl:py-[72px]"
         role="banner"
         aria-label="Hero section"
       >
@@ -103,7 +104,7 @@ export default function HeroSection() {
           <HeroSectionSearch />
         </div>
 
-        <div className="w-full min-w-[256px] min-h-[256px] xl:min-w-[604px] lg:w-1/2 flex flex-col justify-center items-start">
+        <div className="w-full min-w-[256px] min-h-[178px] xl:min-w-[400px] lg:w-1/2 flex flex-col mt-5 sm:mt-0 md:mt-4 lg:mt-0 lg:justify-center items-start">
           <Paragraph1 className="text-white pb-4 md:pb-4 lg:pb-[30px] text-shadow-[0px_0px_4px_0px_#00000040]">
             Popular Services:
           </Paragraph1>
