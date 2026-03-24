@@ -173,11 +173,11 @@ export const FENCE_AND_GATE_TABDATA = {
         // "Architects Near Me",
         // "Gutter Cleaners Near Me",
         // "Artificial Grass Installers Near Me",
-         {
+        {
             title: "Roofers Near Me ",
             url: "/en/gb/patio-layers-near-me",
         },
-     {
+        {
             title: "Gutter Cleaners Near Me",
             url: "/en/gb/gutter-cleaning-near-me",
         },
@@ -188,6 +188,14 @@ export const FENCE_AND_GATE_TABDATA = {
         {
             title: "Tree Surgeons Near Me",
             url: "/en/gb/tree-surgeon-near-me",
+        },
+        {
+            title: "Patio Installers Near Me ",
+            url: "/en/gb/patio-layers-near-me",
+        },
+        {
+            title: "Landscapers Near Me",
+            url: "/en/gb/landscape-gardeners-near-me",
         },
         {
             title: "Architects Near Me",
@@ -202,19 +210,10 @@ export const FENCE_AND_GATE_TABDATA = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
         {
-            title: "Patio Installers Near Me ",
-            url: "/en/gb/patio-layers-near-me",
-        },
-         {
-            title: "Landscapers Near Me",
-            url: "/en/gb/landscape-gardeners-near-me",
-        },
-         
-          {
             title: "Painters and Decorators Near Me ",
             url: "/en/gb/painter-and-decorator-near-me",
         },
-      
+
     ],
     insight: [
 

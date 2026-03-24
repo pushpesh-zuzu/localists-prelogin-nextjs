@@ -281,31 +281,29 @@ export const DRIVEWAY_INSTALLERS_TABDATA = {
             url: "",
         },
         {
-             title: "Roofers Near Me ",
-             url: "/en/gb/patio-layers-near-me",
-         },
-          {
+            title: "Roofers Near Me ",
+            url: "/en/gb/patio-layers-near-me",
+        },
+        {
             title: "Gutter Cleaners Near Me",
             url: "/en/gb/gutter-cleaning-near-me",
         },
-        {
-            title: "Patio Installers Near Me ",
-            url: "/en/gb/patio-layers-near-me",
-        },
-        
-        {
-            title: "Architects Near Me",
-            url: "",
-        },
-        
         {
             title: "Tree Surgeons Near Me ",
             url: "/en/gb/tree-surgeon-near-me",
         },
         {
-       title: "Painters and Decorators Near Me ",
-       url: "/en/gb/painter-and-decorator-near-me",
-   },
+            title: "Architects Near Me",
+            url: "",
+        },
+        {
+            title: "Patio Installers Near Me ",
+            url: "/en/gb/patio-layers-near-me",
+        },
+        {
+            title: "Painters and Decorators Near Me ",
+            url: "/en/gb/painter-and-decorator-near-me",
+        },
         {
             title: "Artificial Grass Installers Near Me",
             url: "/en/gb/artificial-grass-installers-near-me",
@@ -314,7 +312,7 @@ export const DRIVEWAY_INSTALLERS_TABDATA = {
             title: "Fence and Gate Installers Near Me",
             url: "/en/gb/fencing-contractors-near-me",
         },
-     
+
     ],
     insight: [
 
