@@ -47,7 +47,7 @@ function SellerDesktopMenu({
               onClick={() => setPopoverVisible(!popoverVisible)}
             />
             {unreadCount > 0 && (
-              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 text-center justify-center flex items-center">
                 {unreadCount}
               </span>
             )}
