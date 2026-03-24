@@ -576,7 +576,7 @@ export default function CalenderFlowQuestions({ nextStep, onBack }) {
                     )}
 
                     {error && (
-                        <p className="text-red-500 text-sm font-medium lg:pt-3 md:pt-0 pt-2 text-left lg:text-center">
+                        <p className="text-red-500 text-sm font-medium lg:pt-3 md:pt-0 pt-2 text-left">
                             {error}
                         </p>
                     )}
