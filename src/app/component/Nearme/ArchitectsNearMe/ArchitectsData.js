@@ -1,7 +1,7 @@
 export const QUESTION_AND_ABOUT_SERVICE_ARCHITECTS = [
   {
     type: "image",
-    src: "/nearme/treesurgery1.webp",
+    src: "/nearme/Architects/architecturalDesigner.webp",
     alt: "An architectural designer from Localists sketching designs for a planning application",
     marginBottom: true,
   },
@@ -57,7 +57,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ARCHITECTS = [
   },
   {
     type: "image",
-    src: "/nearme/treesurgery.webp",
+    src: "/nearme/Architects/femaleArchitect.webp",
     alt: "A male architect looking at a conceptual design with a female architect making notes",
     marginBottom: true,
     marginTop: true,
@@ -89,7 +89,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ARCHITECTS = [
   },
   {
     type: "image",
-    src: "/nearme/treesurgery.webp",
+    src: "/nearme/Architects/architecturalModal.webp",
     alt: "Architect fiddling with a presentation model for a new architectural design",
     marginBottom: true,
     marginTop: true,
@@ -197,15 +197,7 @@ export const ARCHITECTS_TABDATA = {
   ],
   popular: [
     {
-      title: "Driveway Installers Near Me",
-      url: "/en/gb/driveway-installers-near-me",
-    },
-    {
-      title: "Gardeners Near Me",
-      url: "",
-    },
-    {
-      title: "Patio Layers Near Me",
+      title: "Roofers Near Me ",
       url: "/en/gb/patio-layers-near-me",
     },
     {
@@ -213,8 +205,32 @@ export const ARCHITECTS_TABDATA = {
       url: "/en/gb/gutter-cleaning-near-me",
     },
     {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
+      title: "Tree Surgeons Near Me",
+      url: "/en/gb/tree-surgeon-near-me",
+    },
+    {
+      title: "Patio Installers Near Me ",
+      url: "/en/gb/patio-layers-near-me",
+    },
+    {
+      title: "Landscapers Near Me",
+      url: "/en/gb/landscape-gardeners-near-me",
+    },
+    {
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
+    },
+    {
       title: "Artificial Grass Installers Near Me",
       url: "/en/gb/artificial-grass-installers-near-me",
+    },
+    {
+      title: "Painters and Decorators Near Me ",
+      url: "/en/gb/painter-and-decorator-near-me",
     },
     {
       title: "Fence and Gate Installation Near Me",

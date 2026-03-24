@@ -55,6 +55,11 @@ export const MobileMegaMenu = [
         name: "Painter and Decorator",
         path: "painter-and-decorator-near-me",
       },
+      {
+        id: 47,
+        name: "Architects",
+        path: "architects-near-me",
+      },
     ],
   },
   

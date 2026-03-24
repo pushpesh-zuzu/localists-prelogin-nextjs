@@ -31,6 +31,7 @@ export default function HeroSection() {
     },
     {
       title: "Architects",
+      slug:"/en/gb/architects-near-me"
     },
     {
       title: "Personal Trainers",

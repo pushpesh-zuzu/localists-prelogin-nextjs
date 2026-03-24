@@ -54,9 +54,11 @@ function ArchitectsNearMe() {
         heading1="Find Architects"
         heading2="Near You"
         description="Find the best roofers near you! Just enter your postcode and a few details to get 5 free quotes from local architects."
-        bannerImage="/nearme/tree-surgeon-header.webp"
-        bannerImageMobile="/nearme/TreeSurgeon/TreeSurgeonMobile.webp"
+        bannerImage="/nearme/Architects/architectBanner.webp"
+        bannerImageMobile="/nearme/Architects/architectBannerMobile.webp"
         altText="Two residential architects adjusting and conversing over a conceptual design"
+        serviceId=""
+        serviceName=""
       />
       <VettedSection
         paragraph={VETTED_DATA_ARCHITECTS}
@@ -66,7 +68,7 @@ function ArchitectsNearMe() {
       />
       <PopularJobNearMe
         services={POPULAR_SERVICES_ARCHITECTS}
-        popularImage="/nearme/treeSurgeonNearmeRounded.webp"
+        popularImage="/nearme/Architects/ArchitectPopularJob.webp"
         altText="two architects on site looking at a new building in the distance"
         mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
         // ctaLink="/en/gb/tree-surgeon-multi-form-ppc"
@@ -77,11 +79,11 @@ function ArchitectsNearMe() {
         heading1="Architects"
         heading2="in your area"
         tabData={ARCHITECTS_TABDATA}
-        heightClass="min-h-[426px] h-auto md:h-auto lg:min-h-[618px] lg:h-auto"
+        heightClass="min-h-[426px] h-auto md:h-auto lg:h-auto"
       />
       <UserFeedbackNearMe2 feedbackData={FEEDBACK_ARCHITECTS} />
       {/* <PaddingWrapper> */}
-      <AboutServicesAndQuestions contentBlocks={QUESTION_AND_ABOUT_SERVICE_ARCHITECTS} />
+      <AboutServicesAndQuestions serviceId="" serviceName="" contentBlocks={QUESTION_AND_ABOUT_SERVICE_ARCHITECTS} />
       {/* </PaddingWrapper> */}
       <FAQ data={FREQUENTLY_DATA_ARCHITECTS} />
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}

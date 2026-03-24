@@ -370,7 +370,7 @@ export const LANDSCAPE_NEARME_TABDATA = {
           
           {
             title: "Architects Near Me",
-            url: "",
+            url: "/en/gb/architects-near-me",
           },
           
           {
