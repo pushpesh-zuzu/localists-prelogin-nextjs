@@ -41,7 +41,7 @@ function RoofersInCastleford() {
             <HeroSectionLocation
                 heading1="Roofers"
                 heading2="Castleford"
-                description="Are you searching for highly experienced and skilled roofers in Castleford? Enter your postcode below, tell us what you need done, and get free quotes from high-quality roofing professionals near you. It takes less than a minute"
+                description="Are you searching for highly experienced and skilled roofers in Castleford? Enter your postcode below, tell us what you need done, and get free quotes from high-quality roofing professionals near you. It takes less than a minute."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
