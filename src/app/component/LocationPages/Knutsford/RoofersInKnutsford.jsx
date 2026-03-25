@@ -97,6 +97,7 @@ function RoofersInKnutsford() {
                 heading2="confidence."
                 tabData={ROOFERS_TABDATA_KNUTSFORD}
                 activeTabkey="popular"
+                heightClass="min-h-[400px] h-auto md:h-auto lg:h-auto"
             />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

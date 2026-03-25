@@ -41,7 +41,7 @@ function RoofersInCastleford() {
             <HeroSectionLocation
                 heading1="Roofers"
                 heading2="Castleford"
-                description="Are you searching for highly experienced and skilled roofers in Castleford? Enter your postcode below, tell us what you need done, and get free quotes from high-quality roofing professionals near you. It takes less than a minute"
+                description="Are you searching for highly experienced and skilled roofers in Castleford? Enter your postcode below, tell us what you need done, and get free quotes from high-quality roofing professionals near you. It takes less than a minute."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -97,6 +97,7 @@ function RoofersInCastleford() {
                 heading2="confidence."
                 tabData={ROOFERS_TABDATA_CASTLEFORD}
                 activeTabkey="popular"
+                heightClass="min-h-[400px] h-auto md:h-auto lg:h-auto"
             />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
