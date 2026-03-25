@@ -154,20 +154,36 @@ export const ROOFERS_TABDATA_DEESIDE = {
       url: "",
     },
     {
+      title: "Patio Installers Near Me ",
+      url: "/en/gb/patio-layers-near-me",
+    },
+    {
       title: "Architects Near Me",
       url: "/en/gb/architects-near-me",
+    },
+    {
+      title: "Tree Surgeons Near Me ",
+      url: "/en/gb/tree-surgeon-near-me",
     },
     {
       title: "Gutter Cleaners Near Me",
       url: "/en/gb/gutter-cleaning-near-me",
     },
     {
-      title: "Fencing Contractors Near Me",
-      url: "/en/gb/fencing-contractors-near-me",
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
+    },
+    {
+      title: "Painters and Decorators Near Me",
+      url: "/en/gb/painter-and-decorator-near-me",
     },
     {
       title: "Artificial Grass Installers Near Me",
       url: "/en/gb/artificial-grass-installers-near-me",
+    },
+    {
+      title: "Fence and Gate Installers Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
     },
   ],
 

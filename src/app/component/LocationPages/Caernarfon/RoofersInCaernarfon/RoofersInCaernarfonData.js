@@ -159,20 +159,36 @@ export const ROOFERS_TABDATA_CAERNARFONY = {
       url: "",
     },
     {
+      title: "Patio Installers Near Me ",
+      url: "/en/gb/patio-layers-near-me",
+    },
+    {
       title: "Architects Near Me",
       url: "/en/gb/architects-near-me",
+    },
+    {
+      title: "Tree Surgeons Near Me ",
+      url: "/en/gb/tree-surgeon-near-me",
     },
     {
       title: "Gutter Cleaners Near Me",
       url: "/en/gb/gutter-cleaning-near-me",
     },
     {
-      title: "Fencing Contractors Near Me",
-      url: "/en/gb/fencing-contractors-near-me",
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
+    },
+    {
+      title: "Painters and Decorators Near Me",
+      url: "/en/gb/painter-and-decorator-near-me",
     },
     {
       title: "Artificial Grass Installers Near Me",
       url: "/en/gb/artificial-grass-installers-near-me",
+    },
+    {
+      title: "Fence and Gate Installers Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
     },
   ],
   related: [
@@ -206,7 +222,7 @@ export const VETTED_DATA_ROOFERS_CAERNARFONY = [
   <br/><br/> 
   `,
   `
-When problems do show up, it helps to have the right people to call. If you’re dealing with roof issues around Caernarfon, we’ll connect you with <a href="/en/gb/roofers-near-me" target='_blank' rel='noopener noreferrer' style='color:#00afe3;'>trusted local roofers</a> - vetted, qualified, and known for high-quality work. Get free quotes now, with zero obligation.
+When problems do show up, it helps to have the right people to call. If you’re dealing with roof issues around Caernarfon, we’ll connect you with trusted local roofers - vetted, qualified, and known for high-quality work. Get free quotes now, with zero obligation.
 
 `,
 ];

@@ -213,20 +213,36 @@ export const ROOFERS_TABDATA_SCARBOROUGH = {
       url: "",
     },
     {
+      title: "Patio Installers Near Me ",
+      url: "/en/gb/patio-layers-near-me",
+    },
+    {
       title: "Architects Near Me",
       url: "/en/gb/architects-near-me",
+    },
+    {
+      title: "Tree Surgeons Near Me ",
+      url: "/en/gb/tree-surgeon-near-me",
     },
     {
       title: "Gutter Cleaners Near Me",
       url: "/en/gb/gutter-cleaning-near-me",
     },
     {
-      title: "Fencing Contractors Near Me",
-      url: "/en/gb/fencing-contractors-near-me",
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
+    },
+    {
+      title: "Painters and Decorators Near Me",
+      url: "/en/gb/painter-and-decorator-near-me",
     },
     {
       title: "Artificial Grass Installers Near Me",
       url: "/en/gb/artificial-grass-installers-near-me",
+    },
+    {
+      title: "Fence and Gate Installers Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
     },
   ],
   related: [
@@ -294,8 +310,8 @@ That’s where we come in.
   `
 We connect local homeowners with trusted Scarborough roofers who know their way around salty air, sudden squalls, and chimneys that have seen a century or two. Whether it’s a slipped slate after a blustery night or a full roof overhaul, we’ll help you find the right person for the job—no guesswork, no chasing.
   <br/><br/>
-  ` ,
- 
+  `,
+
   `Because in a town where the weather keeps you on your toes, your roof shouldn’t.
   <br/><br/>`,
 ];

@@ -1043,7 +1043,7 @@ export const professionalsTermsData = [
   },
   {
     type: "h3",
-    number: "13",
+    number: "13.",
     text: " Contact Us",
   },
   {
@@ -1060,7 +1060,7 @@ export const professionalsTermsData = [
   // },
   {
     type: "p",
-    text: "- Post: Internet Media Group Limited Chester Business Park CH4 9QJ",
+    text: "- Post: Internet Media Group Limited <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chester Business Park CH4 9QJ",
   },
    {
     type: "p",
