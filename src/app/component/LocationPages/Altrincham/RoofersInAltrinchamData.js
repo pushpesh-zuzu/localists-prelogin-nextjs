@@ -256,7 +256,6 @@ export const VETTED_DATA_ROOFERS_ALTRINCHAM = [
   `,
     `
 And we can help connect you with the highest quality <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">roofers near you</a> in Altrincham. Simply tell us what you need in detail, and you’ll receive up to 5 free quotes from reliable specialists in your area.
-<br/><br/>
 `
 ];
 
