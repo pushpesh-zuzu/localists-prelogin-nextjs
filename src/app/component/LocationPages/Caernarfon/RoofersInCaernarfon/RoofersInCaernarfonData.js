@@ -188,7 +188,7 @@ export const ROOFERS_TABDATA_CAERNARFONY = {
     { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
     { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
 
-    { title: "Roofers castleford", url: "/en/gb/roofers-near-me/castleford" },
+    { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
 
     {
       title: "Roofers Macclesfield",
