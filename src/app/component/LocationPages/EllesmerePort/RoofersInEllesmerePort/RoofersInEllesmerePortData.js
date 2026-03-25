@@ -178,23 +178,38 @@ export const ROOFERS_TABDATA_ELLESMEREPORT = {
       url: "",
     },
     {
+      title: "Patio Installers Near Me ",
+      url: "/en/gb/patio-layers-near-me",
+    },
+    {
       title: "Architects Near Me",
       url: "/en/gb/architects-near-me",
+    },
+    {
+      title: "Tree Surgeons Near Me ",
+      url: "/en/gb/tree-surgeon-near-me",
     },
     {
       title: "Gutter Cleaners Near Me",
       url: "/en/gb/gutter-cleaning-near-me",
     },
     {
-      title: "Fencing Contractors Near Me",
-      url: "/en/gb/fencing-contractors-near-me",
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
+    },
+    {
+      title: "Painters and Decorators Near Me",
+      url: "/en/gb/painter-and-decorator-near-me",
     },
     {
       title: "Artificial Grass Installers Near Me",
       url: "/en/gb/artificial-grass-installers-near-me",
     },
-  ],
-  related: [
+    {
+      title: "Fence and Gate Installers Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
+    },
+  ],  related: [
     { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
     { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
