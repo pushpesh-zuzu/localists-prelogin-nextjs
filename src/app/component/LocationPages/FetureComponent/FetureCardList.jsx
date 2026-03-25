@@ -12,13 +12,15 @@ import Paragraph from "../../UI/Typography/Paragraph";
 
 export default function FetureCardList({
   featureRef,
-  serviceProfessionName='Roofers',
+  serviceProfessionName = "Roofers",
   serviceId,
   serviceName,
   cityName = "Chester",
-  county
+  county,
 }) {
-  const { getSellerData,getSellerDataLoader } = useSelector((state) => state.buyer);
+  const { getSellerData, getSellerDataLoader } = useSelector(
+    (state) => state.buyer,
+  );
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -27,7 +29,7 @@ export default function FetureCardList({
       getFetchSellerListData({
         service_id: serviceId,
         city: cityName,
-        county:county
+        county: county,
       }),
     );
   }, [serviceId, dispatch]);
@@ -104,7 +106,9 @@ export default function FetureCardList({
         style={{ overflowAnchor: "none" }}
       >
         <div className="flex flex-col gap-4 md:gap-12">
-          {!getSellerDataLoader ? (
+          {getSellerDataLoader ? (
+            <Loader />
+          ) : visibleSellers.length ? (
             visibleSellers.map((seller, index) => (
               <div
                 key={`${seller.id}-${index}`}
@@ -122,11 +126,14 @@ export default function FetureCardList({
                 />
               </div>
             ))
-          ) : !visibleSellers.length  ?(
-            <Loader />
-          ) :<div className="flex min-h-[150px]">
-            <Paragraph className="m-auto"> No Seller Found in {cityName} </Paragraph>
-            </div>}
+          ) : (
+            <div className="flex min-h-[150px]">
+              <Paragraph className="m-auto">
+                {" "}
+                No Seller Found in {cityName}{" "}
+              </Paragraph>
+            </div>
+          )}
         </div>
       </div>
 

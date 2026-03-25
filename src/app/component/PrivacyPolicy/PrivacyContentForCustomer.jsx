@@ -33,7 +33,7 @@ export const professionalsTermsData = [
   },
   {
     type: "p",
-    text: "You may give us information about you by filling in forms on the Website or by corresponding with us by phone, e-mail or otherwise. This includes information you provide when you register to use our Website or create an Account, purchase Credits, respond to Quote Request, respond to feedback posted about you by Customers and when you report a problem with our Website. The information you give us may include (but is not limited to) your name, address, e-mail address and phone number, payment information, reviews and opinions.",
+    text: "You may give us information about you by filling in forms on the Website or by corresponding with us by phone, e-mail, Whatsapp or otherwise. This includes information you provide when you register to use our Website or create an Account, subscribe to our service, post jobs on our site (including Quote Requests), provide feedback in respect of any tradespeople you engage to carry out any and when you report a problem with our Website. The information you give us may include (but is not limited to) your name, address, e-mail address and phone number",
   },
   {
     type: "p",
@@ -55,7 +55,7 @@ export const professionalsTermsData = [
   },
   {
     type: "p",
-    text: " 1.1.2.3 Your location and the location in which you wish to receive Quote Requests; and",
+    text: " 1.1.2.3 Your location and the location in which you wish to receive Services; and",
     marginL: "10px",
   },
   {
@@ -77,12 +77,16 @@ export const professionalsTermsData = [
   },
   {
     type: "p",
-    text: "1.1.5 To enhance our existing Services, develop new features, and provide targeted marketing communications, IMG collects information regarding your use of the Services. This may include transactions you undertake, review ratings, bids submitted, comments posted, and interactions with Service Professionals.",
+    text: "1.1.5 To enhance our existing Services, develop new features, and provide targeted marketing communications, IMG collects information regarding your use of the Services. This may include transactions you undertake, review ratings, Quote Requests, comments posted, and interactions with Service Professionals.",
+  },
+  {
+    type: "p",
+    text: "1.1.6 When you create an Account on the Website you consent to being contact via email, telephone, Whatsapp, messenger and post so that we can communicate with you regarding your Quote Request including but not limited to service updates, Professional responses and Quote Request status updates. You explicitly consent to such communication when creating an Account on the Website",
   },
   {
     type: "h4",
     number: "1.2",
-    text: "Information we collect automatically when you use the Services",
+    text: " Information we collect automatically when you use the Services",
   },
 
   {
@@ -114,7 +118,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "1.3",
-    text: "Information we obtain from other sources",
+    text: " Information we obtain from other sources",
   },
   {
     type: "p",
@@ -127,7 +131,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "1.4",
-    text: "Information visible to other users",
+    text: " Information visible to other users",
   },
   {
     type: "p",
@@ -139,7 +143,7 @@ export const professionalsTermsData = [
   },
   {
     type: "p",
-    text: "1.4.2.1 Use the Services respond to a Quote Request, respond to a Customer communication, or provide feedback on other users; or",
+    text: "1.4.2.1 Use the Services to post a Quote Request, respond to a Service Professional, or provide feedback on other users or Service Professionals; or",
     marginL: "10px",
   },
   {
@@ -162,17 +166,17 @@ export const professionalsTermsData = [
   {
     type: "h3",
     number: "2.",
-    text: "Use of Your Personal Information",
+    text: " Use of Your Personal Information",
   },
   {
     type: "h4",
     number: "2.1",
-    text: "Purposes for which IMG may process your data",
+    text: " Purposes for which IMG may process your data",
   },
   {
     type: "h5",
     number: "2.1.1 ",
-    text: "Information you provide directly to us",
+    text: " Information you provide directly to us",
   },
   {
     type: "p",
@@ -180,7 +184,7 @@ export const professionalsTermsData = [
   },
   {
     type: "p",
-    text: "2.1.1.1 Fulfil our obligations arising from the Quote Requests you respond to and provide any information you request, which may include disclosing your information to Customer so they may contact you.",
+    text: "2.1.1.1 Fulfil our obligations arising from the Quote Requests you respond to and provide any information you request, which may include disclosing your information to Service Professionals so they may contact you.",
   },
   {
     type: "p",
@@ -188,7 +192,7 @@ export const professionalsTermsData = [
   },
   {
     type: "p",
-    text: "2.1.1.3 Deliver information, on behalf of third parties, regarding goods or services which we reasonably believe may be of interest to you. Such communications will only be made by electronic means (including email or SMS) and only where you have consented. You may withdraw such consent by notifying us by email or by adjusting your account settings after registration.",
+    text: "2.1.1.3 Deliver information, on behalf of third parties, regarding goods or services which we reasonably believe may be of interest to you. Such communications will only be made by electronic means (including email or SMS or Whatsapp) and only where you have consented. You may withdraw such consent by notifying us by email or by adjusting your account settings after registration.",
   },
   {
     type: "p",
@@ -205,7 +209,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "2.1.2",
-    text: "Information we collect automatically about you",
+    text: " Information we collect automatically about you",
   },
   {
     type: "p",
@@ -246,7 +250,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "2.1.3",
-    text: "Information obtained from other sources",
+    text: " Information obtained from other sources",
   },
   {
     type: "p",
@@ -255,7 +259,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "2.2",
-    text: "Legal basis for processing",
+    text: " Legal basis for processing",
   },
   {
     type: "p",
@@ -280,12 +284,12 @@ export const professionalsTermsData = [
   {
     type: "h3",
     number: "3.",
-    text: "Cookies and Similar Technologies",
+    text: " Cookies and Similar Technologies",
   },
   {
     type: "h4",
     number: "3.1",
-    text: "General",
+    text: " General",
   },
   {
     type: "p",
@@ -298,12 +302,12 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "3.2",
-    text: "Types of cookies and technologies used",
+    text: " Types of cookies and technologies used",
   },
   {
     type: "h5",
     number: "3.2.1",
-    text: "Strictly Necessary Cookies",
+    text: " Strictly Necessary Cookies",
   },
   {
     type: "p",
@@ -320,7 +324,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "3.2.2",
-    text: "Functionality Cookies",
+    text: " Functionality Cookies",
   },
   {
     type: "p",
@@ -337,7 +341,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "3.2.3",
-    text: "Performance and Analytics Cookies",
+    text: " Performance and Analytics Cookies",
   },
   {
     type: "p",
@@ -354,7 +358,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "3.2.4",
-    text: "Advertising Cookies",
+    text: " Advertising Cookies",
   },
   {
     type: "p",
@@ -371,7 +375,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "3.3",
-    text: "Browser and system controls",
+    text: " Browser and system controls",
   },
   {
     type: "p",
@@ -388,12 +392,12 @@ export const professionalsTermsData = [
   {
     type: "h3",
     number: "4.",
-    text: "How We Share Your Personal Data",
+    text: " How We Share Your Personal Data",
   },
   {
     type: "h4",
     number: "4.1",
-    text: "General",
+    text: " General",
   },
   {
     type: "p",
@@ -406,12 +410,12 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "4.2",
-    text: "Categories of recipients",
+    text: " Categories of recipients",
   },
   {
     type: "h5",
     number: "4.2.1",
-    text: "IMG Affiliates",
+    text: " IMG Affiliates",
   },
   {
     type: "p",
@@ -420,7 +424,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "4.2.2",
-    text: "Service Providers",
+    text: " Service Providers",
   },
   {
     type: "p",
@@ -429,7 +433,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "4.2.3",
-    text: "Analytics Partners",
+    text: " Analytics Partners",
   },
   {
     type: "p",
@@ -437,16 +441,16 @@ export const professionalsTermsData = [
   },
   {
     type: "liNonBold",
-    text: "You can review Google's practices at: <a href='https://www.google.com/policies/privacy/partners/' target='_blank' rel='noopener noreferrer' style='color:#00afe3;'>https://www.google.com/policies/privacy/partners/</a>",
+    text: "You can review Google's practices at: <a href='https://www.google.com/policies/privacy/partners/?utm_source=chatgpt.com' target='_blank' rel='noopener noreferrer' style='color:#00afe3;'>https://www.google.com/policies/privacy/partners/</a>",
   },
   {
     type: "liNonBold",
-    text: "You can opt out by installing the Google Analytics opt-out browser add-on available at: <a href='https://tools.google.com/dlpage/gaoptout' target='_blank' rel='noopener noreferrer' style='color:#00afe3;'>https://tools.google.com/dlpage/gaoptout</a>",
+    text: "You can opt out by installing the Google Analytics opt-out browser add-on available at: <a href='https://tools.google.com/dlpage/gaoptout?utm_source=chatgpt.com' target='_blank' rel='noopener noreferrer' style='color:#00afe3;'>https://tools.google.com/dlpage/gaoptout</a>",
   },
   {
     type: "h5",
     number: "4.2.4",
-    text: "Third Parties Acting as Independent Controllers",
+    text: " Third Parties Acting as Independent Controllers",
   },
   {
     type: "p",
@@ -469,7 +473,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "4.2.5",
-    text: "Marketing and Advertising Partners",
+    text: " Marketing and Advertising Partners",
   },
   {
     type: "p",
@@ -482,7 +486,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "4.2.6",
-    text: "Other Third Parties",
+    text: " Other Third Parties",
   },
   {
     type: "p",
@@ -503,7 +507,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "4.2.7",
-    text: "Sharing Between Users",
+    text: " Sharing Between Users",
   },
   {
     type: "p",
@@ -520,7 +524,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "4.2.8",
-    text: "Legal Matters and Safety",
+    text: " Legal Matters and Safety",
   },
   {
     type: "p",
@@ -541,7 +545,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "4.2.9",
-    text: "Sale or Transfer of Business or Assets",
+    text: " Sale or Transfer of Business or Assets",
   },
   {
     type: "p",
@@ -550,7 +554,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "4.2.10",
-    text: "With Your Consent",
+    text: " With Your Consent",
   },
   {
     type: "p",
@@ -559,12 +563,12 @@ export const professionalsTermsData = [
   {
     type: "h3",
     number: "5.",
-    text: "Security of Your Personal Data",
+    text: " Security of Your Personal Data",
   },
   {
     type: "h4",
     number: "5.1",
-    text: "Account Protection",
+    text: " Account Protection",
   },
   {
     type: "p",
@@ -577,7 +581,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "5.2",
-    text: "Measures Taken by IMG",
+    text: " Measures Taken by IMG",
   },
   {
     type: "p",
@@ -590,7 +594,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "5.3",
-    text: "Limitations of Security",
+    text: " Limitations of Security",
   },
   {
     type: "p",
@@ -607,12 +611,12 @@ export const professionalsTermsData = [
   {
     type: "h3",
     number: "6.",
-    text: "Third-Party Websites and Services",
+    text: " Third-Party Websites and Services",
   },
   {
     type: "h4",
     number: "6.1",
-    text: "Links to Third Parties",
+    text: " Links to Third Parties",
   },
   {
     type: "p",
@@ -625,7 +629,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "6.2",
-    text: "Responsibility for Third-Party Policies",
+    text: " Responsibility for Third-Party Policies",
   },
   {
     type: "p",
@@ -642,7 +646,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "6.3",
-    text: "Limitation of IMG Responsibility",
+    text: " Limitation of IMG Responsibility",
   },
   {
     type: "p",
@@ -670,12 +674,12 @@ export const professionalsTermsData = [
   {
     type: "h3",
     number: "7.",
-    text: "International Transfers of Personal Data",
+    text: " International Transfers of Personal Data",
   },
   {
     type: "h4",
     number: "7.1",
-    text: "Transfers Outside the EEA and UK",
+    text: " Transfers Outside the EEA and UK",
   },
   {
     type: "p",
@@ -692,7 +696,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "7.2",
-    text: "Safeguards for International Transfers",
+    text: " Safeguards for International Transfers",
   },
   {
     type: "p",
@@ -705,7 +709,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "7.3",
-    text: "Further Information",
+    text: " Further Information",
   },
   {
     type: "p",
@@ -714,12 +718,12 @@ export const professionalsTermsData = [
   {
     type: "h3",
     number: "8.",
-    text: "Marketing",
+    text: " Marketing",
   },
   {
     type: "h4",
     number: "8.1",
-    text: "Opt-In and Opt-Out Choices",
+    text: " Opt-In and Opt-Out Choices",
   },
   {
     type: "p",
@@ -727,7 +731,7 @@ export const professionalsTermsData = [
   },
   {
     type: "p",
-    text: "8.1.2 Such communications may be delivered through your IMG Account, by email, by post, or by telephone.",
+    text: "8.1.2 Such communications may be delivered through your IMG Account, by email, by Whatapps, by electronic messengers, by post, or by telephone.",
   },
   {
     type: "p",
@@ -736,7 +740,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "8.2",
-    text: "Withdrawal of Consent",
+    text: " Withdrawal of Consent",
   },
   {
     type: "p",
@@ -745,7 +749,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "8.3",
-    text: "Referrals",
+    text: " Referrals",
   },
   {
     type: "p",
@@ -762,7 +766,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "8.4",
-    text: "Administrative Messages",
+    text: " Administrative Messages",
   },
   {
     type: "p",
@@ -771,12 +775,12 @@ export const professionalsTermsData = [
   {
     type: "h3",
     number: "9.",
-    text: "Your Rights and Choices",
+    text: " Your Rights and Choices",
   },
   {
     type: "h4",
     number: "9.1",
-    text: "Rights in Certain Jurisdictions",
+    text: " Rights in Certain Jurisdictions",
   },
   {
     type: "p",
@@ -813,7 +817,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "9.2",
-    text: "Consent and Objections",
+    text: " Consent and Objections",
   },
   {
     type: "p",
@@ -840,7 +844,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "9.3",
-    text: "Data Retention and Deletion",
+    text: " Data Retention and Deletion",
   },
   {
     type: "p",
@@ -849,7 +853,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "9.4",
-    text: "Complaints and Concerns",
+    text: " Complaints and Concerns",
   },
   {
     type: "p",
@@ -862,7 +866,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "9.5",
-    text: "Location Information",
+    text: " Location Information",
   },
   {
     type: "p",
@@ -871,12 +875,12 @@ export const professionalsTermsData = [
   {
     type: "h3",
     number: "10.",
-    text: "Data Retention",
+    text: " Data Retention",
   },
   {
     type: "h4",
     number: "10.1",
-    text: "General Retention Period",
+    text: " General Retention Period",
   },
   {
     type: "p",
@@ -889,7 +893,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "10.2",
-    text: "Factors Considered",
+    text: " Factors Considered",
   },
   {
     type: "p",
@@ -923,7 +927,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "10.3",
-    text: "Deletion, Destruction, and Anonymisation",
+    text: " Deletion, Destruction, and Anonymisation",
   },
   {
     type: "p",
@@ -932,12 +936,12 @@ export const professionalsTermsData = [
   {
     type: "h3",
     number: "11.",
-    text: "Your Data Protection Rights",
+    text: " Your Data Protection Rights",
   },
   {
     type: "h4",
     number: "11.1",
-    text: "General",
+    text: " General",
   },
   {
     type: "p",
@@ -950,12 +954,12 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "11.2",
-    text: "Rights Available to Data Subjects",
+    text: " Rights Available to Data Subjects",
   },
   {
     type: "h5",
     number: "11.2.1",
-    text: "Right of Access",
+    text: " Right of Access",
   },
   {
     type: "p",
@@ -964,7 +968,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "11.2.2",
-    text: "Right to Rectification",
+    text: " Right to Rectification",
   },
   {
     type: "p",
@@ -973,7 +977,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "11.2.3",
-    text: "Right to Erasure",
+    text: " Right to Erasure",
   },
   {
     type: "p",
@@ -982,7 +986,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "11.2.4",
-    text: "Right to Restriction of Processing",
+    text: " Right to Restriction of Processing",
   },
   {
     type: "p",
@@ -991,7 +995,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "11.2.5",
-    text: "Right to Object to Processing",
+    text: " Right to Object to Processing",
   },
   {
     type: "p",
@@ -1000,7 +1004,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "11.2.6",
-    text: "Right to Data Portability",
+    text: " Right to Data Portability",
   },
   {
     type: "p",
@@ -1009,7 +1013,7 @@ export const professionalsTermsData = [
   {
     type: "h5",
     number: "11.2.7",
-    text: "Right to Withdraw Consent",
+    text: " Right to Withdraw Consent",
   },
   {
     type: "p",
@@ -1018,7 +1022,7 @@ export const professionalsTermsData = [
   {
     type: "h4",
     number: "11.3",
-    text: "Exercising Your Rights",
+    text: " Exercising Your Rights",
   },
   {
     type: "p",
@@ -1027,11 +1031,11 @@ export const professionalsTermsData = [
   {
     type: "h3",
     number: "12.",
-    text: "Call Recording",
+    text: " Call Recording",
   },
   {
     type: "p",
-    text: "By using the Website or Marketplace, responding to a Quote Request, completing any form on the Website and/or through any social media or other online advertising channel you consent to being contacted by us and/or the Customer(s) who have received your response to a Quote Request to discuss your matter further by telephone or electronic methods.",
+    text: "By using the Website or Marketplace, registering an Account, submitting a Quote Request, completing any form on the Website and/or through any social media or other online advertising channel you consent to being contacted by us and/or the Service Professionals who have received your Quote Request to discuss your matter further by telephone or electronic methods.",
   },
   {
     type: "p",
@@ -1040,7 +1044,7 @@ export const professionalsTermsData = [
   {
     type: "h3",
     number: "13",
-    text: "Contact Us",
+    text: " Contact Us",
   },
   {
     type: "p",
@@ -1050,17 +1054,17 @@ export const professionalsTermsData = [
     type: "p",
     text: "You can contact us at:",
   },
-  {
-    type: "p",
-    text: "- Email: terms@localists.com",
-  },
   // {
   //   type: "p",
   //   text: "- Phone: [INSERT HERE]",
   // },
   {
     type: "p",
-    text: "- Post: Suite 2A Honeycomb South, Wrexham Road, Chester, CH4 9QJ",
+    text: "- Post: Internet Media Group Limited Chester Business Park CH4 9QJ",
+  },
+   {
+    type: "p",
+    text: "- Email: contact@localists.com",
   },
 ];
 
