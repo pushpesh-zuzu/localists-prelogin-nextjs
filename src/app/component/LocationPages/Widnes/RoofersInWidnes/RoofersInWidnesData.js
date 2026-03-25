@@ -9,27 +9,27 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WIDNES = [
   },
   {
     type: "li",
-    text: "<strong>Tell us about the job</strong> : describe what's going on and where you are. A rough description is enough to get started.",
+    text: "<strong>Tell us about the job</strong>: describe what's going on and where you are. A rough description is enough to get started.",
   },
 
   {
     type: "li",
-    text: "<strong>We match you with the right roofers</strong> : vetted local professionals who work in Widnes and are suited to your property type and the work involved.",
+    text: "<strong>We match you with the right roofers</strong>: vetted local professionals who work in Widnes and are suited to your property type and the work involved.",
   },
 
   {
     type: "li",
-    text: "<strong>Free quotes arrive without the chasing</strong> : no callbacks to follow up, no sitting on hold waiting for a roofer to get back to you before the roof collapses. Quotes come to you, ready to compare.",
+    text: "<strong>Free quotes arrive without the chasing</strong>: no callbacks to follow up, no sitting on hold waiting for a roofer to get back to you before the roof collapses. Quotes come to you, ready to compare.",
   },
 
   {
     type: "li",
-    text: "<strong>Qualifications and insurance already checked</strong> : every roofer we recommend has been verified before appearing in your results; no guesswork required.",
+    text: "<strong>Qualifications and insurance already checked</strong>: every roofer we recommend has been verified before appearing in your results; no guesswork required.",
   },
 
   {
     type: "li",
-    text: "<strong>You decide on your terms</strong> : take your time, ask questions, and hire whoever feels right. Nobody is pushing you for a decision.",
+    text: "<strong>You decide on your terms</strong>: take your time, ask questions, and hire whoever feels right. Nobody is pushing you for a decision.",
     className: "mb-0",
   },
   {
