@@ -136,8 +136,8 @@ export const ROOFERS_ADVICEINSIGHT_CASTLEFORD = [
 export const ROOFERS_TABDATA_CASTLEFORD = {
     popular: [
         {
-            title: "Landscapers Near Me",
-            url: "/en/gb/landscape-gardeners-near-me",
+            title: "Patio Installers Near Me ",
+            url: "/en/gb/patio-layers-near-me",
         },
         {
             title: "Gardeners Near Me",
@@ -152,8 +152,24 @@ export const ROOFERS_TABDATA_CASTLEFORD = {
             url: "/en/gb/gutter-cleaning-near-me",
         },
         {
+            title: "Tree Surgeons Near Me ",
+            url: "/en/gb/tree-surgeon-near-me",
+        },
+        {
+            title: "Landscapers Near Me",
+            url: "/en/gb/landscape-gardeners-near-me",
+        },
+        {
+            title: "Driveway Installers Near Me",
+            url: "/en/gb/driveway-installers-near-me",
+        },
+        {
             title: "Fencing Contractors Near Me",
             url: "/en/gb/fencing-contractors-near-me",
+        },
+        {
+            title: "Painters and Decorators Near Me",
+            url: "/en/gb/painter-and-decorator-near-me",
         },
         {
             title: "Artificial Grass Installers Near Me",
