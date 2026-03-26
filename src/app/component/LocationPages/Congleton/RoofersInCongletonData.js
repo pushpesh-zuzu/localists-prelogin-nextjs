@@ -68,7 +68,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CONGLETON = [
     },
     {
         type: "p",
-        text: "<Strong>The vetting is already done—every</Strong> roofer we recommend has been checked for qualifications, insurance, and track record before appearing in your results.",
+        text: "<Strong>The vetting is already done</Strong>—every roofer we recommend has been checked for qualifications, insurance, and track record before appearing in your results.",
     },
     {
         type: "p",
