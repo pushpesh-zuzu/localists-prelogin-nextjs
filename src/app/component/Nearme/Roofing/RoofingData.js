@@ -136,7 +136,7 @@ export const ROOFING_TABDATA = {
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
     { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
-    { title: "Roofers Congleton", url: "" },
+    { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
     { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
     { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },

@@ -30,17 +30,17 @@ function OtherServiceStep({
 }) {
   const [isPostcodeFromSuggestion, setIsPostcodeFromSuggestion] =
     useState(false);
-    const dropdownRef = useRef(null);
-    const inputRef = useRef(null);
+  const dropdownRef = useRef(null);
+  const inputRef = useRef(null);
   const [Input, setInput] = useState("");
   const [isFocused, setIsFocused] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [show, setShow] = useState(false);
   const [errors, setErrors] = useState({});
- const [randomFallback] = useState(
-  () => Math.floor(Math.random() * (20 - 15 + 1)) + 15
-);
+  const [randomFallback] = useState(
+    () => Math.floor(Math.random() * (20 - 15 + 1)) + 15
+  );
   const [isLoading, setIsLoading] = useState(false);
   const [expandedRadius, setExpandedRadius] = useState(0);
 
@@ -56,6 +56,8 @@ function OtherServiceStep({
   const campaign = allParams.utm_campaign || "";
   const utm_source = allParams.utm_source || "";
   const utm_medium = allParams.utm_medium || "";
+  const awc = allParams.awc || "";
+
 
   const {
     service,
@@ -305,6 +307,7 @@ function OtherServiceStep({
     if (utm_source) payload.utm_source = utm_source;
     if (utm_medium) payload.utm_medium = utm_medium;
     if (campaign) payload.campaign = campaign;
+    if (awc) payload.awc = awc;
     payload.coordinates = JSON.stringify(payload.coordinates);
     delete payload.password;
     delete payload.suite;
@@ -330,24 +333,24 @@ function OtherServiceStep({
   };
 
   useEffect(() => {
-  const handleClickOutside = (event) => {
-    if (
-      dropdownRef.current &&
-      !dropdownRef.current.contains(event.target) && 
-      inputRef.current &&
-      !inputRef.current.contains(event.target)
-    ) {
-      setIsDropdownOpen(false);
-      setIsFocused(false);
-    }
-  };
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        inputRef.current &&
+        !inputRef.current.contains(event.target)
+      ) {
+        setIsDropdownOpen(false);
+        setIsFocused(false);
+      }
+    };
 
-  document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, []);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <>
       <SellerFormCardWrappper
@@ -513,9 +516,8 @@ function OtherServiceStep({
                     type="text"
                     placeholder="Enter Postcode (No Spaces)"
                     style={{ boxShadow: "0 0 2px .5px #0000001a" }}
-                    className={`relative w-full px-6 py-2 rounded-sm text-gray-900 text-base border transition-all duration-200 placeholder:text-gray-400 focus:outline-1 focus:ring-1 ${
-                      errors.postcode2 ? "border-red-500" : "border-[#ccc]"
-                    }`}
+                    className={`relative w-full px-6 py-2 rounded-sm text-gray-900 text-base border transition-all duration-200 placeholder:text-gray-400 focus:outline-1 focus:ring-1 ${errors.postcode2 ? "border-red-500" : "border-[#ccc]"
+                      }`}
                     name="postcode2"
                     value={formData?.postcode2 || ""}
                     onChange={handlePostcode2Change}
@@ -548,9 +550,8 @@ function OtherServiceStep({
 
         {/* ✅ Expand Radius Button */}
         <Button
-          className={`bg-[#00afe3] text-white py-1.5 px-3 rounded-[3px] text-[20px] rounded-full ${
-            disableWithService ? "cursor-pointer" : ""
-          }`}
+          className={`bg-[#00afe3] text-white py-1.5 px-3 rounded-[3px] text-[20px] rounded-full ${disableWithService ? "cursor-pointer" : ""
+            }`}
           onClick={handleExpandRadius}
           disabled={!disableWithService}
         >
