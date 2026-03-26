@@ -170,7 +170,7 @@ export const ROOFERS_TABDATA_SANDBACH = {
     },
   ],
   related: [
-   { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+    { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
     { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
@@ -178,6 +178,11 @@ export const ROOFERS_TABDATA_SANDBACH = {
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
     { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+    { title: "Roofers congleton", url: "/en/gb/roofers-near-me/congleton" },
+    {
+      title: "Roofers Cheadle Hulme",
+      url: "/en/gb/roofers-near-me/cheadle-hulme",
+    },
     {
       title: "Roofers Macclesfield",
       url: "/en/gb/roofers-near-me/macclesfield",

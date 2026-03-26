@@ -191,17 +191,21 @@ export const ROOFERS_TABDATA_WIDNES = {
     { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
     { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
-    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
     { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+    { title: "Roofers congleton", url: "/en/gb/roofers-near-me/congleton" },
     {
       title: "Roofers Macclesfield",
       url: "/en/gb/roofers-near-me/macclesfield",
     },
     {
+      title: "Roofers Cheadle Hulme",
+      url: "/en/gb/roofers-near-me/cheadle-hulme",
+    },
+    {
       title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-
   ],
   findMore: [],
 };
