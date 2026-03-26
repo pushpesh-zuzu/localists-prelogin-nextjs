@@ -68,7 +68,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CONGLETON = [
     },
     {
         type: "p",
-        text: "<Strong>The vetting is already done—every</Strong> roofer we recommend has been checked for qualifications, insurance, and track record before appearing in your results.",
+        text: "<Strong>The vetting is already done</Strong>—every roofer we recommend has been checked for qualifications, insurance, and track record before appearing in your results.",
     },
     {
         type: "p",
@@ -218,7 +218,7 @@ export const ROOFERS_TABDATA_CONGLETON = {
         { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
         { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
         { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-        { title: "Roofers Cheadle Hulme", url: "" },
+        { title: "Roofers Cheadle Hulme", url: "/en/gb/roofers-near-me/cheadle-hulme" },
         {
             title: "Roofers Macclesfield",
             url: "/en/gb/roofers-near-me/macclesfield",
