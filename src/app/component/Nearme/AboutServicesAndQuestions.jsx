@@ -131,6 +131,7 @@ const AboutServicesAndQuestions = ({
             disclaimer={block?.disclaimer}
             calculatorText={block?.calculatorText}
             calculatorLink={block?.calculatorLink}
+            heading={block?.heading}
           />
         );
 
