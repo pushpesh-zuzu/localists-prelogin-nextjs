@@ -59,6 +59,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_HALIFAX = [
     {
         type: "p",
         text: `Localists makes that "where do I even start?" phase much easier.`,
+        notMarginBottom: true,
     },
     {
         type: "pbold",
