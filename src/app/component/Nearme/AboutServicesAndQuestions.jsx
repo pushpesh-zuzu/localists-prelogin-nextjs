@@ -108,7 +108,7 @@ const AboutServicesAndQuestions = ({
           />
         );
 
-         case "AveragePriceLocation":
+      case "AveragePriceLocation":
         return (
           <AveragePriceLocation
             key={index}
@@ -119,9 +119,9 @@ const AboutServicesAndQuestions = ({
             heading={block?.heading}
             calculatorLink={block?.calculatorLink}
             className={block?.className}
-            />
+          />
         );
-        
+
       case "pricingTable":
         return (
           <DynamicPricingTable
@@ -157,27 +157,26 @@ const AboutServicesAndQuestions = ({
             </li>
           </ul>
         );
-        case "liNumber":
-  return (
-    <div
-      key={index}
-      className={` ${textBase} flex ${
-        block?.className
-          ? block?.className
-          : "mb-2.5 md:mb-[15px]"
-      }`}
-    >
-      <span className="mr-2 pl-2.5 md:pl-4">{block.number}.</span>
-      <span className={textBase}>
-        {block.heading}
-        {block.text && (
-          <span
-            dangerouslySetInnerHTML={{ __html: block.text }}
-          />
-        )}
-      </span>
-    </div>
-  );
+      case "liNumber":
+        return (
+          <div
+            key={index}
+            className={` ${textBase} flex ${block?.className
+                ? block?.className
+                : "mb-2.5 md:mb-[15px]"
+              }`}
+          >
+            <span className="mr-2 pl-2.5 md:pl-4">{block.number}.</span>
+            <span className={textBase}>
+              {block.heading}
+              {block.text && (
+                <span
+                  dangerouslySetInnerHTML={{ __html: block.text }}
+                />
+              )}
+            </span>
+          </div>
+        );
 
       case "libold":
         return (

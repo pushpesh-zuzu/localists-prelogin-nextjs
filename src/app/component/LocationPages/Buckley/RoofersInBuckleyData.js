@@ -49,10 +49,12 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BUCKLEY = [
     {
         type: "p",
         text: `Spring or Summer is the best time – Roofers can get the work done without extreme weather slowing them down and it is also off-peak season – so you are likely to get a cheaper roofing quote at this time of year.`,
+        notMarginBottom: true,
     },
     {
-        type: "p",
-        text: `Using Localists to find a roofer in the Buckley area just makes sense.`,
+        type: "h2",
+        text: "Using Localists to find a roofer in the Buckley area just makes sense",
+        className: "mt-6 lg:mt-[72px]",
     },
     {
         type: "p",
@@ -90,7 +92,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BUCKLEY = [
     },
     {
         type: "p",
-        text: `With Buckley being in North Wales, and just over an hour from the slate mines of Blanau Ffestiniog, you’d expect the most common roof tile to be slate. But our own internal data of jobs completed indicates that there are more slate tiles. The most common house in Wales is a semidetached so it’s likely that the most common roof in Buckley would be a gable roof.`,
+        text: `With Buckley being in North Wales, and just over an hour from the slate mines of Blanau Ffestiniog, you’d expect the most common roof tile to be slate. But our own internal data of jobs completed indicates that there are more clay tiles being used in Buckley. The most common house in Wales is a semi-detached so it’s likely that the most common roof in Buckley would be a gable roof.`,
         notMarginBottom: true,
     },
     {
