@@ -11,34 +11,32 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
     type: "p",
     text: "Here’s a rough idea of what people in Deeside tend to pay:",
   },
-  {
-    type: "AveragePriceLocation",
+   {
+    type: "pricingTable",
     title: "Average cost of roofing Deeside",
     calculatorText: "click here.",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimerText: "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+    disclaimer:
+      "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
     heading: "Typical roofing costs in Deeside",
-    priceCards: [
+
+    prices: [
       {
-        description: "General roofing work in deeside costs on average around Bigger roofing jobs usually average around",
+        text: "General roofing work in deeside costs on average around Bigger roofing jobs usually average around",
         price: "£2,858",
-        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
       },
       {
-        description: "Roof repairs on average cost about",
+        text: "Roof repairs on average cost about",
         price: "£862",
-        className: "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]"
 
       },
       {
-        description: "Emergency roofing services in deeside cost on average around",
+        text: "Emergency roofing services in deeside cost on average around",
         price: "£445",
-        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]"
       },
       {
-        description: "For a complete new roof, homeowners in Deeside typically pay on average around",
+        text: "For a complete new roof, homeowners in Deeside typically pay on average around",
         price: "£7,495",
-        className: "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[81px] lg:max-h-[81px]"
       },
     ],
   },

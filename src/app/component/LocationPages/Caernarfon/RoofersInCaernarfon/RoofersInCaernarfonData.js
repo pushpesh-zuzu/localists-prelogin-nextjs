@@ -203,6 +203,11 @@ export const ROOFERS_TABDATA_CAERNARFONY = {
     { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
     { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
     { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+    { title: "Roofers congleton", url: "/en/gb/roofers-near-me/congleton" },
+    {
+      title: "Roofers Cheadle Hulme",
+      url: "/en/gb/roofers-near-me/cheadle-hulme",
+    },
 
     { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
 

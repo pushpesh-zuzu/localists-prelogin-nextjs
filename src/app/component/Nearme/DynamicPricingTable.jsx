@@ -2,6 +2,7 @@ import React from "react";
 import GetQuote from "../common/GetQuotes/GetQuote";
 import H2 from "../UI/Typography/H2";
 import Paragraph from "../UI/Typography/Paragraph";
+import NearmeH2Heading from "./NearmeH2Heading";
 
 export default function DynamicPricingTable({
     title,
@@ -9,10 +10,15 @@ export default function DynamicPricingTable({
     disclaimer,
     calculatorLink,
     calculatorText = "Roofing Calculator",
+    heading = ''
 }) {
     return (
         <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px]">
             <div className="w-full max-w-[1000px]">
+                {heading && <NearmeH2Heading
+                          headdingblue={heading}
+                          className={`mb-5 mt-[7px] md:mt-0 md:mb-[25px]`}
+                        />}
                 <div
                     className="w-full rounded-[30px] md:rounded-[25px]"
                     style={{ backgroundColor: "#8BFFCF" }}
@@ -43,9 +49,9 @@ export default function DynamicPricingTable({
                                             {item.text}
                                         </Paragraph>
 
-                                        <p className="text-3xl md:text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center text-[#253238] mt-3 md:mt-3 lg:mt-3">
+                                        {item?.price && <p className="text-3xl md:text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center text-[#253238] mt-3 md:mt-3 lg:mt-3">
                                             {item.price}
-                                        </p>
+                                        </p>}
                                     </div>
 
                                     {index === 1 && (

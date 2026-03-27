@@ -227,6 +227,11 @@ export const ROOFERS_TABDATA_STALYBRIDGE = {
             title: "Roofers Macclesfield",
             url: "/en/gb/roofers-near-me/macclesfield",
         },
+        { title: "Roofers congleton", url: "/en/gb/roofers-near-me/congleton" },
+        {
+        title: "Roofers Cheadle Hulme",
+        url: "/en/gb/roofers-near-me/cheadle-hulme",
+        },
         {
             title: "Roofers Ellesmere Port",
             url: "/en/gb/roofers-near-me/ellesmere-port",
