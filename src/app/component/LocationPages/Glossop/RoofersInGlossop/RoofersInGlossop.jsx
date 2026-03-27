@@ -72,7 +72,7 @@ function RoofersInGlossop() {
       />
 
       <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-        <Feature county='Cheshire East' cityName='Glossop' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+        <Feature county='Derbyshire' cityName='Glossop' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
       <AdviceInsightNearMe
