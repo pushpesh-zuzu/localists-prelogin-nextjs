@@ -49,9 +49,9 @@ export default function DynamicPricingTable({
                                             {item.text}
                                         </Paragraph>
 
-                                        <p className="text-3xl md:text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center text-[#253238] mt-3 md:mt-3 lg:mt-3">
+                                        {item?.price && <p className="text-3xl md:text-4xl lg:text-5xl tracking-[-0.03em] font-black text-center text-[#253238] mt-3 md:mt-3 lg:mt-3">
                                             {item.price}
-                                        </p>
+                                        </p>}
                                     </div>
 
                                     {index === 1 && (

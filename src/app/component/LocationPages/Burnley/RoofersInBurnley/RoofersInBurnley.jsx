@@ -1,16 +1,16 @@
 "use client";
 import React, { useRef } from "react";
 import {
-  BREADCRUM_DATA_ROOFERS_SCARBOROUGH,
-  ROOFERS_FREQUENTLY_DATA_SCARBOROUGH,
-  POPULAR_SERVICES_ROOFERS_SCARBOROUGH,
-  QUESTION_AND_ABOUT_SERVICE_ROOFERS_SCARBOROUGH,
-  ROOFERS_ADVICEINSIGHT_SCARBOROUGH,
-  ROOFERS_FEEDBACK_SCARBOROUGH,
-  ROOFERS_DATA_SCARBOROUGH,
-  ROOFERS_TABDATA_SCARBOROUGH,
-  VETTED_DATA_ROOFERS_SCARBOROUGH,
-} from "./RoofersInScarboroughData";
+  BREADCRUM_DATA_ROOFERS_BURNLEY,
+  ROOFERS_FREQUENTLY_DATA_BURNLEY,
+  POPULAR_SERVICES_ROOFERS_BURNLEY,
+  QUESTION_AND_ABOUT_SERVICE_ROOFERS_BURNLEY,
+  ROOFERS_ADVICEINSIGHT_BURNLEY,
+  ROOFERS_FEEDBACK_BURNLEY,
+  ROOFERS_DATA_BURNLEY,
+  ROOFERS_TABDATA_BURNLEY,
+  VETTED_DATA_ROOFERS_BURNLEY,
+} from "./RoofersInBurnleyData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
 import PopularJobNearMe from "../../../Nearme/PopularJobNearMe";
@@ -30,36 +30,38 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 
-function RoofersInScarborough() {
-  useScrollToTop()
-  useRegistrationRedirect()
+function RoofersInBurnley() {
+  useScrollToTop();
+  useRegistrationRedirect();
   const featureRef = useRef(null);
   return (
     <>
-      {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-      <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_SCARBOROUGH} />
+      {typeof window !== "undefined" && (
+        <CloseBrowserAbandon serviceId={113} quote_type="req call back" />
+      )}
+      <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_BURNLEY} />
       <HeroSectionLocation
         heading1="Roofers"
-        heading2="Scarborough"
-        description="Get free, no-obligation quotes from the highest quality Roofers in Scarborough has to offer. Enter your postcode, share a few details about your roofing job, and get matched with trusted local professionals in under a minute."
+        heading2="Burnley"
+        description="Searching for local roofers in Burnley? Get no-obligation quotes from the highest quality roofing professionals near you now. Enter your postcode and a few details to get started. Only takes a minute. "
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
-        blackHeadinginline="block md:inline"
+        blackHeadinginline="inline"
         serviceId={113}
         serviceName="Roofing"
       />
       <VettedSection
-        paragraph={VETTED_DATA_ROOFERS_SCARBOROUGH}
+        paragraph={VETTED_DATA_ROOFERS_BURNLEY}
         vettedHeading1="Find Local Vetted Roofers in "
-        vettedHeading2="Scarborough"
-        breadcrumb={BREADCRUM_DATA_ROOFERS_SCARBOROUGH}
+        vettedHeading2="Burnley"
+        breadcrumb={BREADCRUM_DATA_ROOFERS_BURNLEY}
         extraButton
         featureRef={featureRef}
       />
 
       <PopularJobNearMe
-        services={POPULAR_SERVICES_ROOFERS_SCARBOROUGH}
+        services={POPULAR_SERVICES_ROOFERS_BURNLEY}
         popularImage="/nearme/Roofing/roofslate.webp"
         altText="two roofers installing slate tiles onto a brand new roof URL"
         mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -68,34 +70,46 @@ function RoofersInScarborough() {
       <AboutServicesAndQuestions
         serviceId={113}
         serviceName="Roofing"
-        contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_SCARBOROUGH}
+        contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_BURNLEY}
       />
 
       <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-        <Feature county='North Yorkshire' cityName='Scarborough' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+        <Feature
+          cityName="Burnley"
+          county="Burnley"
+          serviceId={113}
+          serviceName="Roofing"
+          featureRef={featureRef}
+        />
       </div>
 
       <AdviceInsightNearMe
-        articles={ROOFERS_ADVICEINSIGHT_SCARBOROUGH}
+        articles={ROOFERS_ADVICEINSIGHT_BURNLEY}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
       />
       <WrapperBGWidth>
         <div className="px-[30px] sm:px-10 md:px-16 xl:px-[120px]">
-          <PostCodeSectionLocation2 classNamePostCode="mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px] lg:justify-center lg:gap-12" serviceId={113} serviceName="Roofing" />
+          <PostCodeSectionLocation2
+            classNamePostCode="mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px] lg:justify-center lg:gap-12"
+            serviceId={113}
+            serviceName="Roofing"
+          />
         </div>
       </WrapperBGWidth>
       <FAQ
         containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
-        data={ROOFERS_FREQUENTLY_DATA_SCARBOROUGH}
+        headdingblue="FAQ's"
+        headingblack=""
+        data={ROOFERS_FREQUENTLY_DATA_BURNLEY}
       />
-      <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_SCARBOROUGH} />
-      <DiscoverNearMe homeData={ROOFERS_DATA_SCARBOROUGH} />
+      <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_BURNLEY} />
+      <DiscoverNearMe homeData={ROOFERS_DATA_BURNLEY} />
       <HireRelatedToServiceNearMe
         heading1="Hire with"
         heading2="confidence."
-        tabData={ROOFERS_TABDATA_SCARBOROUGH}
+        tabData={ROOFERS_TABDATA_BURNLEY}
         activeTabkey="popular"
-        heightClass="min-h-[400px] h-auto md:h-auto lg:min-h-[489.5px] lg:h-auto"
+        heightClass="min-h-[390px] h-auto md:h-auto lg:min-h-[485.5px] lg:h-auto"
       />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
@@ -106,4 +120,4 @@ function RoofersInScarborough() {
     </>
   );
 }
-export default RoofersInScarborough;
+export default RoofersInBurnley;
