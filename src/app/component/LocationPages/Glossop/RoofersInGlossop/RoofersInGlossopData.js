@@ -1,11 +1,5 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_GLOSSOP = [
   {
-    type: "image",
-    src: "/nearme/Roofing/roofinstalling.webp",
-    alt: "two roofers installing slate tiles onto a brand new roof ",
-    marginBottom: true,
-  },
-  {
     type: "h2",
     text: " What do people in Glossop end up paying for roofing work?",
   },
@@ -42,6 +36,12 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_GLOSSOP = [
         price: "£6670",
       },
     ],
+  },
+    {
+    type: "image",
+    src: "/nearme/Roofing/roofinstalling.webp",
+    alt: "two roofers installing slate tiles onto a brand new roof ",
+    marginBottom: true,
   },
   {
     type: "h2",
