@@ -224,7 +224,6 @@ export const ROOFERS_TABDATA_ROTHERHAM = {
         },
     ],
     related: [
-        { title: "Roofers South Yorkshire", url: "" },
         { title: "Roofers Barnsley", url: "barnsley" },
     ],
     findMore: [],
