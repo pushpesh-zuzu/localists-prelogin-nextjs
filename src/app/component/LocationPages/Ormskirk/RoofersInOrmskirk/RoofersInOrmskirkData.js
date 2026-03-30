@@ -182,9 +182,11 @@ export const ROOFERS_TABDATA_ORMSKIRK = {
   ],
   related: [
     { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
-  { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+    { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
     { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
     { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+    { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
+
   ],
   findMore: [],
 };

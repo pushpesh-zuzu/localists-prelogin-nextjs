@@ -62,7 +62,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BURNLEY = [
   {
     type: "li",
     text: "<strong>Drone roof surveys</strong> - a clever way to spot hidden damage without climbing up there yourself.",
-    className:"mb-0"
+    className: "mb-0"
   },
   {
     type: "image",
@@ -254,7 +254,8 @@ export const ROOFERS_TABDATA_BURNLEY = {
     { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
     { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
-    { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },    
+    { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+    { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
   ],
   findMore: [],
 };
@@ -267,7 +268,7 @@ export const VETTED_DATA_ROOFERS_BURNLEY = [
 That’s where Localists step in. We take the stress out of the search by connecting you only with vetted, trusted roofers in Burnley. Just tell us a bit about your job, and you’ll get up to 5 free quotes from professionals who actually show up, do the work properly, and won’t try to pull a fast one.
  <br/><br/>
 `,
-`
+  `
 Zero cost. Zero obligation. Zero drama.
 `
 ];
