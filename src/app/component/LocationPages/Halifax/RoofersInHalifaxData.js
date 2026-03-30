@@ -217,7 +217,6 @@ export const ROOFERS_TABDATA_HALIFAX = {
         { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
         { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
         { title: "Roofers Huddersfield", url: "/en/gb/roofers-near-me/huddersfield" },
-        { title: "Roofers West Yorkshire", url: "" },
     ],
     findMore: [],
 };
