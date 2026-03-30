@@ -15,54 +15,54 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BURNLEY = [
 
   { type: "p", text: "Here’s what roofing professionals on Localists tackle:" },
   {
-    type: "p",
+    type: "li",
     text: "<strong>Roof repairs</strong> - leaks, loose tiles, storm damage, small jobs that stop problems before they get messy.",
   },
 
   {
-    type: "p",
+    type: "li",
     text: "<strong>New roof installations</strong> - flat or pitched, giving your home long-term protection.",
   },
 
   {
-    type: "p",
+    type: "li",
     text: "<strong>Gutter and fascia replacement</strong> - keep water flowing where it should, not dripping inside.",
   },
 
   {
-    type: "p",
+    type: "li",
     text: "<strong>Flat roof installation or resealing</strong> - perfect for extensions, garages, or tricky low-pitch areas.",
   },
 
   {
-    type: "p",
+    type: "li",
     text: "<strong>Chimney repairs</strong> - cracked bricks, missing mortar, or dodgy flashing.",
   },
 
   {
-    type: "p",
+    type: "li",
     text: "<strong>Lead flashing</strong> - tiny strips that prevent a big watery headache.",
   },
 
   {
-    type: "p",
+    type: "li",
     text: "<strong>Skylight or Velux window installation</strong> - let the sunshine in safely.",
   },
 
   {
-    type: "p",
+    type: "li",
     text: "<strong>Roof insulation</strong> - stay warmer in winter, cooler in summer, and save on energy bills.",
   },
 
   {
-    type: "p",
+    type: "li",
     text: "<strong>Emergency roofing</strong> - sudden leaks, storm damage, or anything that can’t wait.",
   },
 
   {
-    type: "p",
+    type: "li",
     text: "<strong>Drone roof surveys</strong> - a clever way to spot hidden damage without climbing up there yourself.",
-    notMarginBottom: true,
+    className:"mb-0"
   },
   {
     type: "image",

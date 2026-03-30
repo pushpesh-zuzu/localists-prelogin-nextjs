@@ -1,17 +1,17 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
   {
     type: "h2",
-    text: "What roofing work usually costs in Deeside"
+    text: "What roofing work usually costs in Deeside",
   },
   {
     type: "p",
-    text: "There isn’t a single price for roofing because no two houses are exactly the same. The cost usually depends on the requirements and complexity of the job."
+    text: "There isn’t a single price for roofing because no two houses are exactly the same. The cost usually depends on the requirements and complexity of the job.",
   },
   {
     type: "p",
     text: "Here’s a rough idea of what people in Deeside tend to pay:",
   },
-   {
+  {
     type: "pricingTable",
     title: "Average cost of roofing Deeside",
     calculatorText: "click here",
@@ -28,7 +28,6 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
       {
         text: "Roof repairs on average cost about",
         price: "£862",
-
       },
       {
         text: "Emergency roofing services in deeside cost on average around",
@@ -45,36 +44,37 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "Specialist on a roof repairing and replacing old roof with new one",
     marginBottom: true,
-    marginTop: false
+    marginTop: false,
   },
   {
     type: "h2",
-    text: "Why homeowners use Localists to find Roofers in Deeside"
+    text: "Why homeowners use Localists to find Roofers in Deeside",
   },
   {
     type: "p",
-    text: "Just like any home improvement job, the hardest part is often deciding who to call. You search online, and suddenly there are dozens of companies, all saying they’re reliable and experienced. That doesn’t always help narrow it down."
+    text: "Just like any home improvement job, the hardest part is often deciding who to call. You search online, and suddenly there are dozens of companies, all saying they’re reliable and experienced. That doesn’t always help narrow it down.",
   },
   {
     type: "p",
-    text: "Using Localists just gives you a more organised way to approach things. Rather than choosing someone at random or going with whoever answers first, you can see a few options and think it through. You’re not under pressure or any sort of obligation with our free quotes."
+    text: "Using Localists just gives you a more organised way to approach things. Rather than choosing someone at random or going with whoever answers first, you can see a few options and think it through. You’re not under pressure or any sort of obligation with our free quotes.",
   },
   {
     type: "p",
-    text: "If it’s urgent, you will also find emergency roofers who offer quick services. If it isn’t, simply take a bit of time to ask questions, request samples of similar jobs, all in one place."
+    text: "If it’s urgent, you will also find emergency roofers who offer quick services. If it isn’t, simply take a bit of time to ask questions, request samples of similar jobs, all in one place.",
   },
   {
     type: "p",
-    text: "Being able to see some background before you even speak to someone makes that first conversation easier too. It feels less like a cold call and more like a normal discussion about the job."
+    text: "Being able to see some background before you even speak to someone makes that first conversation easier too. It feels less like a cold call and more like a normal discussion about the job.",
   },
   {
     type: "p",
     text: "More so, when you have more than one quote in front of you, you start to get a clearer idea of what’s reasonable. That alone makes you feel more confident.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "QuotesBanner",
-    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    className:
+      "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]",
   },
 ];
 export const ROOFERS_FREQUENTLY_DATA_DEESIDE = [
@@ -185,54 +185,19 @@ export const ROOFERS_TABDATA_DEESIDE = {
     },
   ],
 
- related: [
-    { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
-    { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+  related: [
     { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
-    { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
-    { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+    { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
     { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
     { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
-    { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
-    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
-    { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+    { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
     { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
-    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
     { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
-    { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
-    { title: "Roofers Anglesey", url: "/en/gb/roofers-near-me/anglesey" },
-    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-    { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
-    { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
-    { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
-    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
-    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
-    { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
-    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    { title: "Roofers Colwyn Bay", url: "/en/gb/roofers-near-me/colwyn-bay" },
-    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
-    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+    { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
+    { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
-    { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
-    { title: "Roofers Huddersfield", url: "/en/gb/roofers-near-me/huddersfield" },
-    {
-    title: "Roofers Macclesfield",
-    url: "/en/gb/roofers-near-me/macclesfield",
-    },
-    {
-        title: "Roofers Ellesmere Port",
-    url: "/en/gb/roofers-near-me/ellesmere-port",
-    },
-    {
-    title: "Roofers Ashton Under Lyne",
-    url: "/en/gb/roofers-near-me/ashton-under-lyne",
-    },
-    ],
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_DEESIDE = [
