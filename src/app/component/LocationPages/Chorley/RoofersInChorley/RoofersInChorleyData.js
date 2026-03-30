@@ -51,7 +51,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHORLEY = [
     prices: [
       {
         text: "For general roofing work in Chorley, people often end up paying somewhere around",
-        price: "£2121",
+        price: "£2,121",
       },
       {
         text: "If it is a more straightforward repair, such as replacing a few tiles or sorting out some flashing, the typical figure tends to sit closer to",
@@ -63,7 +63,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHORLEY = [
       },
       {
         text: "A full roof replacement is naturally a much bigger job and costs around",
-        price: "£6837",
+        price: "£6,837",
       },
     ],
   },

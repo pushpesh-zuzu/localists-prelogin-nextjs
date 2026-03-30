@@ -1,56 +1,57 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
   {
     type: "h2",
-    text: "What roofing work tends to cost in Mold"
+    text: "What roofing work tends to cost in Mold",
   },
   {
     type: "p",
-    text: "There isn’t a fixed price for roofing because every house is different. The cost depends on what actually needs doing, how big the roof is, what materials are involved and whether access is simple or a bit awkward. It goes without saying that fixing a small problem is different from replacing a whole roof."
+    text: "There isn’t a fixed price for roofing because every house is different. The cost depends on what actually needs doing, how big the roof is, what materials are involved and whether access is simple or a bit awkward. It goes without saying that fixing a small problem is different from replacing a whole roof.",
   },
   {
     type: "p",
-    text: "So here’s a rough idea of what people in Mold often pay:"
+    text: "So here’s a rough idea of what people in Mold often pay:",
   },
   {
     type: "pricingTable",
     title: "Average cost of roofing Mold",
     calculatorText: "click here.",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimer: "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+    disclaimer:
+      "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
     prices: [
       {
         text: "For general roofing jobs, homeowners usually spend around",
-        price: "£2,858"
+        price: "£2,858",
       },
       {
         text: "Most straightforward repairs, including fixing leaks, replacing broken tiles, come in at about",
-        price: "£862"
+        price: "£862",
       },
       {
         text: "Emergency call-outs for roofers tend to average around",
-        price: "£445"
+        price: "£445",
       },
       {
         text: "For a full replacement new roof, the average cost in Mold is around",
-        price: "£7,495"
-      }
-    ]
+        price: "£7,495",
+      },
+    ],
   },
   {
     type: "p",
     text: "These figures are just to give you a ballpark. The only way to know what your roof will actually cost is to have a local roofer take a proper look and give you a written quote.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
     marginBottom: true,
-    marginTop: true
+    marginTop: true,
   },
   {
     type: "h2",
-    text: "Common roofing services in Mold"
+    text: "Common roofing services in Mold",
   },
   {
     type: "p",
@@ -58,62 +59,63 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
   },
   {
     type: "li",
-    text: "Fixing roof leaks"
+    text: "Fixing roof leaks",
   },
   {
     type: "li",
-    text: "Replacing cracked or slipped tiles and slates"
+    text: "Replacing cracked or slipped tiles and slates",
   },
   {
     type: "li",
-    text: "Repairing or installing flat roofs"
+    text: "Repairing or installing flat roofs",
   },
   {
     type: "li",
-    text: "Repointing chimneys and replacing worn flashing"
+    text: "Repointing chimneys and replacing worn flashing",
   },
   {
     type: "li",
-    text: "Sorting out damaged or leaking gutters"
+    text: "Sorting out damaged or leaking gutters",
   },
   {
     type: "li",
-    text: "Repairing storm damage"
+    text: "Repairing storm damage",
   },
   {
     type: "li",
-    text: "Carrying out full roof replacements"
+    text: "Carrying out full roof replacements",
   },
   {
     type: "p",
     text: "If you’re not sure whether it’s a quick repair or something more serious, it’s usually worth having someone take a proper look. Sometimes what seems like a big issue turns out to be straightforward, and sometimes catching it early prevents a much larger job later on.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "h2",
     text: "Why many homeowners use Localists to find Roofers in Mold",
-    className: "mt-6 lg:mt-[72px]"
+    className: "mt-6 lg:mt-[72px]",
   },
   {
     type: "p",
-    text: "When there’s a problem with the roof, it’s not something you want to get wrong. It’s your home underneath it. Even a small issue can turn into something bigger if it’s handled badly, so picking the first name you see? Not a very brilliant idea."
+    text: "When there’s a problem with the roof, it’s not something you want to get wrong. It’s your home underneath it. Even a small issue can turn into something bigger if it’s handled badly, so picking the first name you see? Not a very brilliant idea.",
   },
   {
     type: "p",
-    text: "With Localists, instead of calling around blindly or guessing who’s reliable, we have done the legwork for you. Every roofer we recommend has been thoroughly vetted and can be trusted to deliver high-quality work."
+    text: "With Localists, instead of calling around blindly or guessing who’s reliable, we have done the legwork for you. Every roofer we recommend has been thoroughly vetted and can be trusted to deliver high-quality work.",
   },
   {
     type: "p",
-    text: "Also, with multiple quotes to compare, you start to get a feel of what the job should cost and what’s actually needed. There’s no feeling pressured into agreeing on the spot."
+    text: "Also, with multiple quotes to compare, you start to get a feel of what the job should cost and what’s actually needed. There’s no feeling pressured into agreeing on the spot.",
   },
   {
     type: "p",
     text: "In the end, it’s about having a bit more control over the process. You look at your options, ask your questions, and move forward when you’re comfortable. That’s why many homeowners prefer doing it this way.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "QuotesBanner",
-    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    className:
+      "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]",
   },
 ];
 export const ROOFERS_FREQUENTLY_DATA_MOLD = [
@@ -217,53 +219,18 @@ export const ROOFERS_TABDATA_MOLD = {
     },
   ],
   related: [
-    { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
-    { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
-    { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
     { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
     { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+    { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
     { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
-    { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
-    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
-    { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
     { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
-    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
     { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
-    { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
-    { title: "Roofers Anglesey", url: "/en/gb/roofers-near-me/anglesey" },
-    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-    { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
-    { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
-    { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
-    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
-    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
-    { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
-    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    { title: "Roofers Colwyn Bay", url: "/en/gb/roofers-near-me/colwyn-bay" },
-    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
-    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+    { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
+    { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
-    { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
-    { title: "Roofers Huddersfield", url: "/en/gb/roofers-near-me/huddersfield" },
-    {
-    title: "Roofers Macclesfield",
-    url: "/en/gb/roofers-near-me/macclesfield",
-    },
-    {
-        title: "Roofers Ellesmere Port",
-    url: "/en/gb/roofers-near-me/ellesmere-port",
-    },
-    {
-    title: "Roofers Ashton Under Lyne",
-    url: "/en/gb/roofers-near-me/ashton-under-lyne",
-    },
-    ],
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_MOLD = [

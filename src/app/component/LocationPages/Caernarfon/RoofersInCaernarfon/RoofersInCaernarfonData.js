@@ -192,34 +192,18 @@ export const ROOFERS_TABDATA_CAERNARFONY = {
     },
   ],
   related: [
-    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-    { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
-    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
-    { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
-    { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
-    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
-    { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
-    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-    { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
-    { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
-    { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
-    { title: "Roofers congleton", url: "/en/gb/roofers-near-me/congleton" },
-    {
-      title: "Roofers Cheadle Hulme",
-      url: "/en/gb/roofers-near-me/cheadle-hulme",
-    },
-
-    { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
-
-    {
-      title: "Roofers Macclesfield",
-      url: "/en/gb/roofers-near-me/macclesfield",
-    },
-    {
-      title: "Roofers Ellesmere Port",
-      url: "/en/gb/roofers-near-me/ellesmere-port",
-    },
-  ],
+        { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+        { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+        { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+        { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+        { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
+        { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+        { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+        { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+        { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+        { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
+        { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+    ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_CAERNARFONY = [
