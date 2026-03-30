@@ -53,7 +53,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BUCKLEY = [
     },
     {
         type: "h2",
-        text: "Using Localists to find a roofer in the Buckley area just makes sense",
+        text: "Using Localists to find a roofer in the Buckley area just makes sense.",
         className: "mt-6 lg:mt-[72px]",
     },
     {

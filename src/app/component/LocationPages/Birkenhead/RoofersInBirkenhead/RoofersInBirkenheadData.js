@@ -59,7 +59,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BIRKENHEAD = [
   {
     type: "pricingTable",
     title: "Average cost of roofing Birkenhead",
-    calculatorText: "click here.",
+    calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
       "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",

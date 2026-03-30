@@ -14,7 +14,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTHALLERTON = [
     {
         type: "pricingTable",
         title: "Average cost of roofers in Northallerton",
-        calculatorText: "click here.",
+        calculatorText: "click here",
         calculatorLink: "/en/gb/roofing-multi-form-ppc",
         disclaimer: "These figures aren’t firm quotes; they’re simply there to give you context. The only way to know what your own roof will cost is to have it looked at properly and compare estimates from local roofers who can assess the job firsthand,",
         prices: [
@@ -24,7 +24,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTHALLERTON = [
             },
             {
                 text: "Roof repairs usually come in at roughly",
-                price: "£2,121"
+                price: "£816"
             },
             {
                 text: "Emergency roofing call-outs often sit close to",

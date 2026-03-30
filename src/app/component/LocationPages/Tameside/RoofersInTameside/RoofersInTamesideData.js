@@ -39,7 +39,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_TAMESIDE = [
   {
     type: "pricingTable",
     title: "Average cost of roofing Tameside",
-    calculatorText: "click here.",
+    calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
       "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",

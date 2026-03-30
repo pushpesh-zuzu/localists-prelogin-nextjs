@@ -95,7 +95,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ROTHERHAM = [
     {
         type: "pricingTable",
         title: "Average cost of roofing Rotherham",
-        calculatorText: "click here.",
+        calculatorText: "click here",
         calculatorLink: "/en/gb/roofing-multi-form-ppc",
         disclaimer: "These figures are just a guide. The final price you will get will depend greatly on the complexity of the job you need done and the materials you choose. To get a clearer idea of what your project might cost, we recommend you request a detailed quote before booking,",
         prices: [

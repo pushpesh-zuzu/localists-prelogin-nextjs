@@ -14,7 +14,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_HALIFAX = [
     {
         type: "pricingTable",
         title: "Average cost of roofers in Halifax",
-        calculatorText: "click here.",
+        calculatorText: "click here",
         calculatorLink: "/en/gb/roofing-multi-form-ppc",
         disclaimer: "These figures aren’t fixed quotes; they're there to help you understand what most homeowners in Halifax end up paying. The most accurate way to know where your own roof falls within that range is to have it assessed properly and compare responses from local roofers who can see the job firsthand,",
         prices: [

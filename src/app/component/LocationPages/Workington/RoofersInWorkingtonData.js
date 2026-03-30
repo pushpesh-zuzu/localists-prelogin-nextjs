@@ -10,7 +10,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WORKINGTON = [
     {
         type: "pricingTable",
         title: "Average cost of roofers in Workington",
-        calculatorText: "click here.",
+        calculatorText: "click here",
         calculatorLink: "/en/gb/roofing-multi-form-ppc",
         disclaimer: "These numbers are not guarantees. They are just there to give you a feel for what is normal locally. The real figure depends on your roof, not just the postcode,",
         prices: [

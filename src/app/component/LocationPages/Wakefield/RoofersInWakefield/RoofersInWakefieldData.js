@@ -64,7 +64,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WAKEFIELD = [
   {
     type: "AveragePriceLocation",
     title: "Average cost of roofers in Wakefield",
-    calculatorText: "click here.",
+    calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimerText:
       "These figures are meant as a guide rather than a fixed quote. The best way to understand what your specific roofing job will cost is to compare tailored quotes from Roofers Wakefield, who can properly assess your property,",

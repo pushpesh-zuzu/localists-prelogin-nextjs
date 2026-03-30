@@ -10,7 +10,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_FORMBY = [
     {
         type: "pricingTable",
         title: "Average Cost of roofing in Formby",
-        calculatorText: "click here.",
+        calculatorText: "click here",
         calculatorLink: "/en/gb/roofing-multi-form-ppc",
         disclaimer: "These figures are only a guide. The most accurate way to know what your roofing job will cost is to compare tailored quotes from local Formby roofers,",
         prices: [

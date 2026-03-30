@@ -16,9 +16,9 @@ export default function DynamicPricingTable({
         <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px]">
             <div className="w-full max-w-[1000px]">
                 {heading && <NearmeH2Heading
-                          headdingblue={heading}
-                          className={`mb-5 mt-[7px] md:mt-0 md:mb-[25px]`}
-                        />}
+                    headdingblue={heading}
+                    className={`mb-5 mt-[7px] md:mt-0 md:mb-[25px]`}
+                />}
                 <div
                     className="w-full rounded-[30px] md:rounded-[25px]"
                     style={{ backgroundColor: "#8BFFCF" }}
@@ -73,13 +73,19 @@ export default function DynamicPricingTable({
                     <p className="text-[12px] leading-[12px] lg:text-[20px] lg:leading-[24px] font-[Arial] tracking-[0em]! font-bold">
                         {disclaimer}{" "}
                         {calculatorLink ? (
-                            <a href={calculatorLink} className="underline text-[#00AFE3] font-bold">
-                                {calculatorText}
-                            </a>
+                            <>
+                                <a href={calculatorLink} className="underline text-[#00AFE3] font-bold">
+                                    {calculatorText}
+                                </a>
+                                .
+                            </>
                         ) : (
-                            <span className="underline text-[#00AFE3] font-bold cursor-default">
-                                {calculatorText}
-                            </span>
+                            <>
+                                <span className="underline text-[#00AFE3] font-bold cursor-default">
+                                    {calculatorText}
+                                </span>
+                                .
+                            </>
                         )}
                     </p>
                 </div>

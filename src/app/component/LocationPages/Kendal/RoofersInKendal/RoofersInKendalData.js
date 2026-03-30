@@ -51,7 +51,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_KENDAL = [
   },
   {
     type: "h2",
-    text: "How Much Do Roofers in Kendall Charge?",
+    text: "How Much Do Roofers in Kendal Charge?",
   },
   {
     type: "p",
@@ -64,26 +64,26 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_KENDAL = [
   {
     type: "pricingTable",
     title: "Average Cost of roofing in Kendal",
-    calculatorText: "click here.",
+    calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
       "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
     prices: [
       {
-        text: "General roofing projects: About £2,121 on average",
-        // price: "£2,121",
+        text: "General roofing projects: About on average",
+        price: "£2,121",
       },
       {
-        text: "Standard roof repairs: Roughly £739",
-        // price: "£739",
+        text: "Standard roof repairs: Roughly",
+        price: "£739",
       },
       {
-        text: "Emergency roofing call-outs: Around £630",
-        // price: "£630",
+        text: "Emergency roofing call-outs: Around",
+        price: "£630",
       },
       {
-        text: "Complete roof replacement: In the region of £6,837",
-        // price: "£6,837",
+        text: "Complete roof replacement: In the region of",
+        price: "£6,837",
       },
     ],
   },

@@ -38,7 +38,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CONWY = [
   {
     type: "pricingTable",
     title: "Average cost of roofers in Conwy",
-    calculatorText: "click here.",
+    calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
       "Use these as a starting point, not a budget. The only number worth acting on is one a roofer gives you after they've actually seen the job - ",

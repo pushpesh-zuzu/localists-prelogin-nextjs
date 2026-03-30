@@ -14,7 +14,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_OSWESTRY = [
   {
     type: "pricingTable",
     title: "Average cost of roofers in Oswestry",
-    calculatorText: "click here.",
+    calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
       "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",

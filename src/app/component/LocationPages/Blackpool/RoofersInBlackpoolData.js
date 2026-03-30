@@ -39,7 +39,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BLACKPOOL = [
     {
         type: "pricingTable",
         title: "Average cost of roofing in Blackpool",
-        calculatorText: "click here.",
+        calculatorText: "click here",
         calculatorLink: "/en/gb/roofing-multi-form-ppc",
         disclaimer: "These figures are there to give you a rough benchmark, not a fixed promise. Every roof is different, so it’s always worth getting a proper quote before committing to any work,",
         prices: [

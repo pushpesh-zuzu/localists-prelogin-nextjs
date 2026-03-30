@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInWakefield from '@/app/component/LocationPages/Wakefield/RoofersInWakefield';
+import RoofersInWakefield from '@/app/component/LocationPages/Wakefield/RoofersInWakefield/RoofersInWakefield';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Find Trusted Roofers Wakefield | Localists.com",

@@ -66,7 +66,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SCUNTHORPE = [
     {
         type: "pricingTable",
         title: "Average cost of roofers in Scunthorpe",
-        calculatorText: "click here.",
+        calculatorText: "click here",
         calculatorLink: "/en/gb/roofing-multi-form-ppc",
         disclaimer: "These numbers aren’t fixed quotes. They’re simply there to give you a feel for what’s normal. The clearest way to understand your own cost is to have the roof looked at and compare what different roofers recommend,",
         prices: [
