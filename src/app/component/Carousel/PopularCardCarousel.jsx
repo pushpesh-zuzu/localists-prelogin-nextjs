@@ -21,10 +21,10 @@ export default function PopularCardCarousel({
   //   scrollableCards.length === 0
   //     ? []
   //     : scrollableCards.length >= MIN_SLIDES_FOR_LOOP
-  //     ? scrollableCards
-  //     : Array.from({
-  //         length: Math.ceil(MIN_SLIDES_FOR_LOOP / scrollableCards.length),
-  //       }).flatMap(() => scrollableCards);
+  //       ? scrollableCards
+  //       : Array.from({
+  //           length: Math.ceil(MIN_SLIDES_FOR_LOOP / scrollableCards.length),
+  //         }).flatMap(() => scrollableCards);
   const loopableCards =
   scrollableCards.length === 0
     ? []
@@ -155,21 +155,21 @@ export default function PopularCardCarousel({
   }, [emblaApiMobile, onInitMobile, onSelectMobile]);
 
   useEffect(() => {
-  if (!emblaApi) return;
+    if (!emblaApi) return;
 
-  let count = 0;
-  const interval = setInterval(() => {
-    if (count < 5) {
-      nextButtonRef.current?.click();
-      console.log('clicked')
-      count++;
-    } else {
-      clearInterval(interval);
-    }
-  }, 20);
+    let count = 0;
+    const interval = setInterval(() => {
+      if (count < 5) {
+        nextButtonRef.current?.click();
+        console.log("clicked");
+        count++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 20);
 
-  return () => clearInterval(interval);
-}, [emblaApi]);
+    return () => clearInterval(interval);
+  }, [emblaApi]);
 
   return (
     <div className="w-full">
@@ -177,9 +177,9 @@ export default function PopularCardCarousel({
       <div className="hidden sm:block">
         <div className="relative mx-auto">
           {/* Navigation Arrows */}
-          <div className="hidden lg:flex justify-end items-end mb-3.5 mr-[1%]">
+          <div className="hidden lg:flex justify-end items-end mb-3.5 mr-[0%] xl:mr-[1%]">
             <NavigationArrows
-             nextButtonRef={nextButtonRef}
+              nextButtonRef={nextButtonRef}
               onPrev={scrollPrev}
               onNext={scrollNext}
               canScrollPrev={canScrollPrev}
@@ -188,13 +188,16 @@ export default function PopularCardCarousel({
           </div>
 
           {/* sm/md screens - Only 3 cards, no special card */}
-          <div className="lg:hidden overflow-hidden ">
+          <div className="lg:hidden overflow-hidden -mr-6">
             <div ref={emblaRefMd} className="overflow-hidden">
-              <div className="flex gap-6">
+              <div className="flex">
+                {" "}
+                {/* gap-6 hatao */}
                 {loopableCards.map((card, index) => (
                   <div
                     key={`${card.id}-${index}`}
-                    className="shrink-0 w-[calc((100%-48px)/3)]"
+                    className="shrink-0 w-1/3 pr-6"
+                    style={{ boxSizing: "border-box" }}
                   >
                     {renderCard(card, index)}
                   </div>
@@ -209,13 +212,14 @@ export default function PopularCardCarousel({
               <div className="hidden lg:grid grid-cols-4 gap-6">
                 <div>{specialCard || renderCard(specialCardData, -1)}</div>
 
-                <div className="col-span-3 overflow-hidden">
+                <div className="col-span-3 overflow-hidden -mr-6">
                   <div ref={emblaRef} className="overflow-hidden">
-                    <div className="flex gap-6">
+                    <div className="flex">
                       {loopableCards.map((card, index) => (
                         <div
                           key={`${card.id}-${index}`}
-                          className="shrink-0 w-[calc((100%-48px)/3)]"
+                          className="shrink-0 w-1/3 pr-6"
+                          style={{ boxSizing: "border-box" }}
                         >
                           {renderCard(card, index)}
                         </div>
@@ -243,13 +247,14 @@ export default function PopularCardCarousel({
               </button>
             </>
           ) : (
-            <div className="hidden lg:block overflow-hidden">
+            <div className="hidden lg:block overflow-hidden md:-mr-6 lg:-mr-12">
               <div ref={emblaRef} className="overflow-hidden">
-                <div className="flex gap-6">
+                <div className="flex">
                   {loopableCards.map((card, index) => (
                     <div
                       key={`${card.id}-${index}`}
-                      className="shrink-0 w-[calc((100%-52px)/4)] 2xl:w-[calc((100%-40px)/4)]"
+                      className="shrink-0 w-1/4 pr-6"
+                      style={{ boxSizing: "border-box" }}
                     >
                       {renderCard(card, index)}
                     </div>
@@ -310,16 +315,15 @@ export default function PopularCardCarousel({
           onClick={scrollPrevMobile}
           style={{ left: `${mobileArrowSpacing - 1}px` }}
           className="absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 rounded-full z-10 hover:bg-gray-100"
-           aria-label="Previous slide"
+          aria-label="Previous slide"
         >
-
           <LeftArrowBlack />
         </button>
         <button
           onClick={scrollNextMobile}
           style={{ right: `${mobileArrowSpacing}px` }}
           className="absolute top-[40%]  -translate-y-1/2 bg-transparent text-gray-800  rounded-full z-10 hover:bg-gray-100"
-           aria-label="next slide"
+          aria-label="next slide"
         >
           <RightArrowBlack />
         </button>

@@ -28,10 +28,10 @@ export default function HomeGardenCarousel({
   //       }).flatMap(() => scrollableCards);
 
   const loopableCards =
-  scrollableCards.length === 0
-    ? []
-    : [...scrollableCards, ...scrollableCards];
-    
+    scrollableCards.length === 0
+      ? []
+      : [...scrollableCards, ...scrollableCards];
+
   const specialCardData = data.find((card) => card.isSpecial);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -91,26 +91,22 @@ export default function HomeGardenCarousel({
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
-
     const rawIndex = emblaApi.selectedScrollSnap();
-    const normalizedIndex = rawIndex % originalSlideCount;
-
-    setSelectedIndex(normalizedIndex);
+    setSelectedIndex(rawIndex % originalSlideCount);
   }, [emblaApi, originalSlideCount]);
 
   const onSelectMd = useCallback(() => {
     if (!emblaApiMd) return;
-
     const rawIndex = emblaApiMd.selectedScrollSnap();
-    const normalizedIndex = rawIndex % originalSlideCount;
-
-    setSelectedIndexMd(normalizedIndex);
+    setSelectedIndexMd(rawIndex % originalSlideCount);
   }, [emblaApiMd, originalSlideCount]);
 
+  // ✅ Fix 2: Mobile dots normalize
   const onSelectMobile = useCallback(() => {
     if (!emblaApiMobile) return;
-    setSelectedIndexMobile(emblaApiMobile.selectedScrollSnap());
-  }, [emblaApiMobile]);
+    const rawIndex = emblaApiMobile.selectedScrollSnap();
+    setSelectedIndexMobile(rawIndex % originalSlideCount);
+  }, [emblaApiMobile, originalSlideCount]);
 
   const onInit = useCallback(() => {
     if (!emblaApi) return;
@@ -161,23 +157,26 @@ export default function HomeGardenCarousel({
       <div className="hidden sm:block">
         <div className="relative max-w-full md:max-w-[90%] lg:max-w-full mx-auto">
           {/* Navigation Arrows */}
-          {showArrow && <div className="hidden lg:flex justify-end items-end mb-3.5 mr-[1%]">
-            <NavigationArrows
-              onPrev={scrollPrev}
-              onNext={scrollNext}
-              canScrollPrev={canScrollPrev}
-              canScrollNext={canScrollNext}
-            />
-          </div>}
+          {showArrow && (
+            <div className="hidden lg:flex justify-end items-end mb-3.5 mr-[1%]">
+              <NavigationArrows
+                onPrev={scrollPrev}
+                onNext={scrollNext}
+                canScrollPrev={canScrollPrev}
+                canScrollNext={canScrollNext}
+              />
+            </div>
+          )}
 
-          {/* sm/md screens - Only 3 cards, no special card */}
-          <div className="lg:hidden overflow-hidden ">
+          {/* ✅ Fix 3: sm/md — gap hatao, pr + negative margin lagao */}
+          <div className="lg:hidden overflow-hidden -mr-6">
             <div ref={emblaRefMd} className="overflow-hidden">
-              <div className="flex gap-6">
+              <div className="flex">
                 {loopableCards.map((card, index) => (
                   <div
                     key={`${card.id}-${index}`}
-                    className="shrink-0 w-[calc((100%-48px)/3)]"
+                    className="shrink-0 w-1/3 pr-6"
+                    style={{ boxSizing: "border-box" }}
                   >
                     {renderCard(card, index)}
                   </div>
@@ -186,19 +185,21 @@ export default function HomeGardenCarousel({
             </div>
           </div>
 
-          {/* lg+ screens - Special card + carousel */}
+          {/* lg+ screens */}
           {showSpecial && specialCardData ? (
             <>
+              {/* ✅ Fix 4: Special card wala carousel */}
               <div className="hidden lg:grid grid-cols-4 gap-6">
                 <div>{specialCard || renderCard(specialCardData, -1)}</div>
 
-                <div className="col-span-3 overflow-hidden">
+                <div className="col-span-3 overflow-hidden -mr-6">
                   <div ref={emblaRef} className="overflow-hidden">
-                    <div className="flex gap-6">
+                    <div className="flex">
                       {loopableCards.map((card, index) => (
                         <div
                           key={`${card.id}-${index}`}
-                          className="shrink-0 w-[calc((100%-48px)/3)]"
+                          className="shrink-0 w-1/3 pr-6"
+                          style={{ boxSizing: "border-box" }}
                         >
                           {renderCard(card, index)}
                         </div>
@@ -228,12 +229,12 @@ export default function HomeGardenCarousel({
                     strokeLinejoin="round"
                   />
                 </svg> */}
-                <LeftArrowBlack className="h-7 w-5"/>
+                <LeftArrowBlack className="h-7 w-5" />
               </button>
               <button
                 onClick={scrollNextMd}
                 style={{ right: `-5%` }}
-                className="lg:hidden absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800  rounded-full z-10 hover:bg-gray-100"
+                className="lg:hidden absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 rounded-full z-10 hover:bg-gray-100"
               >
                 {/* <svg
                   width="20"
@@ -251,17 +252,19 @@ export default function HomeGardenCarousel({
                     strokeLinejoin="round"
                   />
                 </svg> */}
-                <RightArrowBlack className="h-7 w-5"/>
+                <RightArrowBlack className="h-7 w-5" />
               </button>
             </>
           ) : (
-            <div className="hidden lg:block overflow-hidden">
+            // ✅ Fix 5: No special card (4 cards)
+            <div className="hidden lg:block overflow-hidden -mr-6">
               <div ref={emblaRef} className="overflow-hidden">
-                <div className="flex gap-6">
+                <div className="flex">
                   {loopableCards.map((card, index) => (
                     <div
                       key={`${card.id}-${index}`}
-                      className="shrink-0 w-[calc((100%-52px)/4)] 2xl:w-[calc((100%-40px)/4)]"
+                      className="shrink-0 w-1/4 pr-6"
+                      style={{ boxSizing: "border-box" }}
                     >
                       {renderCard(card, index)}
                     </div>
@@ -276,7 +279,6 @@ export default function HomeGardenCarousel({
             {Array.from({ length: originalSlideCount }).map((_, index) => {
               const isMd =
                 typeof window !== "undefined" && window.innerWidth < 1024;
-
               const activeIndex = isMd ? selectedIndexMd : selectedIndex;
 
               return (
@@ -322,19 +324,17 @@ export default function HomeGardenCarousel({
           onClick={scrollPrevMobile}
           style={{ left: `${mobileArrowSpacing - 1}px` }}
           className="absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 rounded-full z-10 hover:bg-gray-100"
-           aria-label="Previous slide"
+          aria-label="Previous slide"
         >
-         
-          <LeftArrowBlack className="h-7 w-5"/>
+          <LeftArrowBlack className="h-7 w-5" />
         </button>
         <button
           onClick={scrollNextMobile}
           style={{ right: `${mobileArrowSpacing}px` }}
-          className="absolute top-[40%]  -translate-y-1/2 bg-transparent text-gray-800  rounded-full z-10 hover:bg-gray-100"
+          className="absolute top-[40%] -translate-y-1/2 bg-transparent text-gray-800 rounded-full z-10 hover:bg-gray-100"
           aria-label="next slide"
         >
-          
-          <RightArrowBlack className="h-7 w-5"/>
+          <RightArrowBlack className="h-7 w-5" />
         </button>
 
         {/* Dot Indicators */}
@@ -344,7 +344,9 @@ export default function HomeGardenCarousel({
               key={index}
               onClick={() => emblaApiMobile?.scrollTo(index)}
               className={`${
-                index === selectedIndexMobile ? "w-[51px] h-[13px]" : "w-[11.59px] h-[11.59px]"
+                index === selectedIndexMobile
+                  ? "w-[51px] h-[13px]"
+                  : "w-[11.59px] h-[11.59px]"
               } rounded-full transition-all duration-700 ease-in-out bg-black`}
               aria-label={`Go to slide ${index + 1}`}
             />
