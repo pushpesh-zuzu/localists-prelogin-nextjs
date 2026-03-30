@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInBebington from '@/app/component/LocationPages/Bebington/RoofersInBebington';
+import RoofersInBebington from '@/app/component/LocationPages/Bebington/RoofersInBebington/RoofersInBebington';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Find Trusted Roofers in Bebington | Localists.com",

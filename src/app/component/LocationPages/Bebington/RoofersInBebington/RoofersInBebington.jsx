@@ -1,47 +1,47 @@
 "use client";
 import React, { useRef } from "react";
 import {
-    BREADCRUM_DATA_ROOFERS_ASHTON_UNDER_LYNE,
-    ROOFERS_FREQUENTLY_DATA_ASHTON_UNDER_LYNE,
-    POPULAR_SERVICES_ROOFERS_ASHTON_UNDER_LYNE,
-    QUESTION_AND_ABOUT_SERVICE_ROOFERS_ASHTON_UNDER_LYNE,
-    ROOFERS_ADVICEINSIGHT_ASHTON_UNDER_LYNE,
-    ROOFERS_FEEDBACK_ASHTON_UNDER_LYNE,
-    ROOFERS_DATA_ASHTON_UNDER_LYNE,
-    ROOFERS_TABDATA_ASHTON_UNDER_LYNE,
-    VETTED_DATA_ROOFERS_ASHTON_UNDER_LYNE,
-} from "./RoofersInAshtonUnderLyneData";
-import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-import VettedSection from "../../Nearme/VettedSection";
-import PopularJobNearMe from "../../Nearme/PopularJobNearMe";
-import Footer from "../../Footer/Footer";
-import AboutServicesAndQuestions from "../../Nearme/AboutServicesAndQuestions";
-import { FAQ } from "../../Nearme/FAQ";
-import UserFeedbackNearMe2 from "../../Nearme/UserFeedbackNearMe2";
-import DiscoverNearMe from "../../Nearme/DiscoverNearMe";
-import NearmeMember from "../../Nearme/NearmeMember";
-import FAQScript from "../../common/seo/FAQScript";
-import HireRelatedToServiceNearMe from "../../Nearme/HireRelatedToServiceNearMe";
-import AdviceInsightNearMe from "../../Nearme/AdviceInsightNearMe";
-import Feature from "../FetureComponent/Feature";
-import HeroSectionLocation from "../HeroSectionLocation";
+    BREADCRUM_DATA_ROOFERS_BEBINGTON,
+    ROOFERS_FREQUENTLY_DATA_BEBINGTON,
+    POPULAR_SERVICES_ROOFERS_BEBINGTON,
+    QUESTION_AND_ABOUT_SERVICE_ROOFERS_BEBINGTON,
+    ROOFERS_ADVICEINSIGHT_BEBINGTON,
+    ROOFERS_FEEDBACK_BEBINGTON,
+    ROOFERS_DATA_BEBINGTON,
+    ROOFERS_TABDATA_BEBINGTON,
+    VETTED_DATA_ROOFERS_BEBINGTON,
+} from "./RoofersInBebingtonData";
+import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+import VettedSection from "../../../Nearme/VettedSection";
+import PopularJobNearMe from "../../../Nearme/PopularJobNearMe";
+import Footer from "../../../Footer/Footer";
+import AboutServicesAndQuestions from "../../../Nearme/AboutServicesAndQuestions";
+import { FAQ } from "../../../Nearme/FAQ";
+import UserFeedbackNearMe2 from "../../../Nearme/UserFeedbackNearMe2";
+import DiscoverNearMe from "../../../Nearme/DiscoverNearMe";
+import NearmeMember from "../../../Nearme/NearmeMember";
+import FAQScript from "../../../common/seo/FAQScript";
+import HireRelatedToServiceNearMe from "../../../Nearme/HireRelatedToServiceNearMe";
+import AdviceInsightNearMe from "../../../Nearme/AdviceInsightNearMe";
+import Feature from "../../FetureComponent/Feature";
+import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
-import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
-import PostCodeSectionLocation2 from "../PostCodeSectionLocation2";
+import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
+import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 
-function RoofersInAshtonUnderLyne() {
+function RoofersInBebington() {
     useScrollToTop()
     useRegistrationRedirect()
     const featureRef = useRef(null);
     return (
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_ASHTON_UNDER_LYNE} />
+            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_BEBINGTON} />
             <HeroSectionLocation
                 heading1="Roofers"
-                heading2="Ashton-under-Lyne"
-                description="Need a specialist roofer in Ashton-under-Lyne? Enter your postcode now. Tell us a bit about what you need, and get free no-obligation quotes from high-quality local roofers delivered straight to your inbox."
+                heading2="Bebington"
+                description="Get up to 5 free quotes from top-quality local and vetted roofers in Oldham. All you need is to enter your postcode, and we will match you with a local professional who will send quotes straight to your inbox in less than a minute."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -50,16 +50,16 @@ function RoofersInAshtonUnderLyne() {
                 serviceName="Roofing"
             />
             <VettedSection
-                paragraph={VETTED_DATA_ROOFERS_ASHTON_UNDER_LYNE}
+                paragraph={VETTED_DATA_ROOFERS_BEBINGTON}
                 vettedHeading1="Find Local Vetted Roofers in "
-                vettedHeading2="Ashton-under-Lyne"
-                breadcrumb={BREADCRUM_DATA_ROOFERS_ASHTON_UNDER_LYNE}
+                vettedHeading2="Bebington"
+                breadcrumb={BREADCRUM_DATA_ROOFERS_BEBINGTON}
                 extraButton
                 featureRef={featureRef}
             />
 
             <PopularJobNearMe
-                services={POPULAR_SERVICES_ROOFERS_ASHTON_UNDER_LYNE}
+                services={POPULAR_SERVICES_ROOFERS_BEBINGTON}
                 popularImage="/nearme/Roofing/roofslate.webp"
                 altText="two roofers installing slate tiles onto a brand new roof URL"
                 mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -68,15 +68,15 @@ function RoofersInAshtonUnderLyne() {
             <AboutServicesAndQuestions
                 serviceId={113}
                 serviceName="Roofing"
-                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_ASHTON_UNDER_LYNE}
+                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_BEBINGTON}
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-                <Feature cityName="Ashton under Lyne" county='Greater Manchester' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+                <Feature cityName="Bebington" county='Bebington' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
             <AdviceInsightNearMe
-                articles={ROOFERS_ADVICEINSIGHT_ASHTON_UNDER_LYNE}
+                articles={ROOFERS_ADVICEINSIGHT_BEBINGTON}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
             />
             <WrapperBGWidth>
@@ -88,15 +88,16 @@ function RoofersInAshtonUnderLyne() {
                 containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
                 headdingblue="FAQ's"
                 headingblack=""
-                data={ROOFERS_FREQUENTLY_DATA_ASHTON_UNDER_LYNE}
+                data={ROOFERS_FREQUENTLY_DATA_BEBINGTON}
             />
-            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_ASHTON_UNDER_LYNE} />
-            <DiscoverNearMe homeData={ROOFERS_DATA_ASHTON_UNDER_LYNE} />
+            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_BEBINGTON} />
+            <DiscoverNearMe homeData={ROOFERS_DATA_BEBINGTON} />
             <HireRelatedToServiceNearMe
                 heading1="Hire with"
                 heading2="confidence."
-                tabData={ROOFERS_TABDATA_ASHTON_UNDER_LYNE}
+                tabData={ROOFERS_TABDATA_BEBINGTON}
                 activeTabkey="popular"
+                heightClass="min-h-[400px] h-auto md:h-auto lg:h-auto"
             />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
@@ -107,4 +108,4 @@ function RoofersInAshtonUnderLyne() {
         </>
     );
 }
-export default RoofersInAshtonUnderLyne;
+export default RoofersInBebington;

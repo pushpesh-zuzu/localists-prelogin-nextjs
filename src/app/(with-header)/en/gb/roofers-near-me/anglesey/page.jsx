@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInAnglesey from '@/app/component/LocationPages/Anglesey/RoofersInAnglesey';
+import RoofersInAnglesey from '@/app/component/LocationPages/Anglesey/RoofersInAnglesey/RoofersInAnglesey';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Find Vetted Roofers in Anglesey | Localists.com",

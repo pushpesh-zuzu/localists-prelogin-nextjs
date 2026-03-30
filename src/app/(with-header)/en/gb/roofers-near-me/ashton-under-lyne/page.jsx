@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInAshtonUnderLyne from '@/app/component/LocationPages/Ashton-under-Lyne/RoofersInAshtonUnderLyne';
+import RoofersInAshtonUnderLyne from '@/app/component/LocationPages/Ashton-under-Lyne/RoofersInAshtonUnderLyne/RoofersInAshtonUnderLyne';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Local Roofers in Ashton-under-Lyne | Localists.com",
