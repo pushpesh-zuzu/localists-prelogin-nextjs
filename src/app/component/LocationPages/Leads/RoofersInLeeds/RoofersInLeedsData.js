@@ -236,7 +236,6 @@ export const ROOFERS_TABDATA_LEEDS = {
       title: "Roofers Huddersfield",
       url: "/en/gb/roofers-near-me/huddersfield",
     },
-    { title: "Roofers West Yorkshire", url: "" },
   ],
   findMore: [],
 };

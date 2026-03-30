@@ -173,28 +173,10 @@ export const ROOFERS_TABDATA_BEBINGTON = {
         },
     ],
     related: [
-        { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
-        { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-        { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
-        { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
-        { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
-        { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
-        { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
-        { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
-        { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-        { title: "Roofers congleton", url: "/en/gb/roofers-near-me/congleton" },
-        {
-        title: "Roofers Cheadle Hulme",
-        url: "/en/gb/roofers-near-me/cheadle-hulme",
-        },
-        {
-            title: "Roofers Macclesfield",
-            url: "/en/gb/roofers-near-me/macclesfield",
-        },
-        {
-            title: "Roofers Ellesmere Port",
-            url: "/en/gb/roofers-near-me/ellesmere-port",
-        },
+        { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
+        { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+        { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+        { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
     ],
     findMore: [],
 };

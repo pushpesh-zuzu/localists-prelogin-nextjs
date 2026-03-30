@@ -98,6 +98,7 @@ function RooferInLiverpool() {
         heading2="confidence."
         tabData={ROOFERS_TABDATA_LIVERPOOL}
         activeTabkey="popular"
+        heightClass="min-h-[400px] h-auto md:h-auto lg:h-[485.5px]"
       />
       <NearmeMember
         // mobileImage="/location/tree_surgeon_member_location_mobile.webp"
