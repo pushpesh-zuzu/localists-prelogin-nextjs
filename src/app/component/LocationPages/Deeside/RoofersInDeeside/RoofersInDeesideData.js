@@ -26,7 +26,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
         price: "£2,858",
       },
       {
-        text: "Roof repairs on average cost about",
+        text: "Roof repairs On average cost about",
         price: "£862",
       },
       {
