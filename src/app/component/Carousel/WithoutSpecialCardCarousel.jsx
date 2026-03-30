@@ -134,24 +134,22 @@ export default function WithoutSpecialCardCarousel({
           )}
 
           {/* Carousel - Maximum 4 cards, no cut-off */}
-          <div className="overflow-hidden">
+          <div className="overflow-hidden -mr-4 sm:-mr-5 lg:-mr-6">
             <div ref={emblaRef} className="overflow-hidden">
-              <div className="flex gap-4 sm:gap-5 lg:gap-6">
+              <div className="flex">
+                {" "}
+                {/* remove gap from here */}
                 {loopableCards.map((card, index) => (
                   <div
                     key={`${card.id}-${index}`}
-                    // className="flex-[0_0_calc(50%-10px)]
-                    //            sm:flex-[0_0_calc(50%-12.5px)]
-                    //            md:flex-[0_0_calc(33.333%-13.33px)]
-                    //            lg:flex-[0_0_calc(25%-18px)]
-                    //            xl:flex-[0_0_calc(25%-18px)]
-                    //            min-w-0"
-                    className="flex-[0_0_calc(50%-10px)] 
-                                  sm:flex-[0_0_calc(50%-12.5px)]
-                                  md:flex-[0_0_calc(25%-15px)]
-                                  lg:flex-[0_0_calc(25%-18px)]
-                                  xl:flex-[0_0_calc(25%-18px)]
-                                  min-w-0"
+                    className="flex-[0_0_calc(50%)] 
+                     sm:flex-[0_0_calc(50%)]
+                     md:flex-[0_0_calc(25%)]
+                     lg:flex-[0_0_calc(25%)]
+                     xl:flex-[0_0_calc(25%)]
+                     min-w-0
+                     pr-4 sm:pr-5 lg:pr-6"
+                    style={{ boxSizing: "border-box" }}
                   >
                     {renderCard(card, index)}
                   </div>
