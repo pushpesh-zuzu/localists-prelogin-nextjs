@@ -83,7 +83,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RUNCORN = [
   {
     type: "pricingTable",
     title: "Average cost of roofers in Runcorn",
-    calculatorText: "click here.",
+    calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
       "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",

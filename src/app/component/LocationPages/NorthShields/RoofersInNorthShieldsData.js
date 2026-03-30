@@ -14,7 +14,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTH_SHIELDS = [
     {
         type: "pricingTable",
         title: "Average cost of Roofers in North Shields",
-        calculatorText: "click here.",
+        calculatorText: "click here",
         calculatorLink: "/en/gb/roofing-multi-form-ppc",
         disclaimer: "These figures aren’t fixed quotes; they’re simply a helpful benchmark. The most accurate way to understand what your roof will cost is to compare tailored quotes from Roofers North Shields, who can assess the job properly and explain your options clearly,",
         prices: [

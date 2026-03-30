@@ -55,7 +55,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BARNSLEY = [
   {
     type: "pricingTable",
     title: "Average cost of roofers in Oldham",
-    calculatorText: "click here.",
+    calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
       "These numbers are just to give you a ballpark idea. The only way to know what your roof will cost is to have it properly looked at and get a written quote,",

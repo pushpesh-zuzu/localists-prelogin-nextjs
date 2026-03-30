@@ -42,7 +42,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_HOLYWELL = [
   {
     type: "pricingTable",
     title: "Average cost of roofing in Holywell",
-    calculatorText: "click here.",
+    calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
       "These aren't fixed prices, just realistic guide figures. The only way to know what your roof will actually cost is to have someone take a proper look. Getting a couple of quotes side by side usually gives you a clear sense of what's fair - ",
