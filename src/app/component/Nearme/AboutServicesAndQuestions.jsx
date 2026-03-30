@@ -149,7 +149,7 @@ const AboutServicesAndQuestions = ({
 
       case "li":
         return (
-          <ul key={index} className={`${block?.className ? block?.className : 'mb-2.5 md:mb-[15px]'} list-disc pl-5 md:pl-8`}>
+          <ul key={index} className={`${block?.className ? block?.className : 'mb-2.5 md:mb-[15px]'} ${block?.listNone? "list-none":"list-disc pl-5 md:pl-8"}`}>
             <li className={textBase}>
               {block.heading}
               {block.text && (

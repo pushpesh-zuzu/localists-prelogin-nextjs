@@ -1,5 +1,5 @@
 export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MORECAMBE = [
-   {
+  {
     type: "h2",
     text: "What do roofers in Morecambe usually charge?",
   },
@@ -72,28 +72,44 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MORECAMBE = [
     text: "Many homeowners in Morecambe prefer using Localists because it really takes stress out of the process of finding one. ",
   },
 
-  { type: "pbold", text: "1. You are not relying on one voice" },
+  {
+    type: "li",
+    text: "<strong>1. You are not relying on one voice</strong>",
+    listNone: true,
+  },
   {
     type: "p",
     text: "When you only get a single quote, it can be hard to know whether the advice or the price is reasonable. Hearing from a few different roofers gives you perspective. If several say similar things, that builds confidence. If opinions differ, you can ask questions and understand why.",
+    listNone: true,
   },
 
   {
-    type: "pbold",
-    text: "2. You hear from roofers who already work in Morecambe",
+    type: "li",
+    text: "<strong>2. You hear from roofers who already work in Morecambe<strong>",
+    listNone: true,
   },
   {
     type: "p",
     text: "Coastal weather affects roofs differently. Salt in the air, steady wind, and heavy rain all play their part over time. Roofers who regularly work locally tend to recognise those patterns. That familiarity usually shows in the way they explain things.",
+    listNone: true,
   },
 
-  { type: "pbold", text: "3. You keep control of the pace" },
+  {
+    type: "li",
+    text: "<strong>3. You keep control of the pace<strong>",
+    listNone: true,
+  },
   {
     type: "p",
     text: "There is no pressure to agree on the spot. You can read through responses, think it over, and decide what feels right for your home and your budget. For many people, that breathing space makes a big difference.",
+    listNone: true,
   },
 
-  { type: "pbold", text: "4. You get a clearer sense of what is normal" },
+  {
+    type: "li",
+    text: "<strong>4. You get a clearer sense of what is normal<strong>",
+    listNone: true,
+  },
   {
     type: "p",
     text: "Roofing costs can vary, and without context, it is easy to feel unsure. Seeing more than one estimate helps you understand what sits within a realistic range for the type of work needed.",
@@ -209,9 +225,10 @@ export const ROOFERS_TABDATA_MORECAMBE = {
     },
   ],
   related: [
-    { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
     { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
     { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+    { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
   ],
   findMore: [],
 };
