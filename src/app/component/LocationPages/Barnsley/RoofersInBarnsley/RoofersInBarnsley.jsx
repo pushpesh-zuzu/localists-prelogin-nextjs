@@ -1,47 +1,47 @@
 "use client";
 import React, { useRef } from "react";
 import {
-    BREADCRUM_DATA_ROOFERS_BEBINGTON,
-    ROOFERS_FREQUENTLY_DATA_BEBINGTON,
-    POPULAR_SERVICES_ROOFERS_BEBINGTON,
-    QUESTION_AND_ABOUT_SERVICE_ROOFERS_BEBINGTON,
-    ROOFERS_ADVICEINSIGHT_BEBINGTON,
-    ROOFERS_FEEDBACK_BEBINGTON,
-    ROOFERS_DATA_BEBINGTON,
-    ROOFERS_TABDATA_BEBINGTON,
-    VETTED_DATA_ROOFERS_BEBINGTON,
-} from "./RoofersInBebingtonData";
-import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-import VettedSection from "../../Nearme/VettedSection";
-import PopularJobNearMe from "../../Nearme/PopularJobNearMe";
-import Footer from "../../Footer/Footer";
-import AboutServicesAndQuestions from "../../Nearme/AboutServicesAndQuestions";
-import { FAQ } from "../../Nearme/FAQ";
-import UserFeedbackNearMe2 from "../../Nearme/UserFeedbackNearMe2";
-import DiscoverNearMe from "../../Nearme/DiscoverNearMe";
-import NearmeMember from "../../Nearme/NearmeMember";
-import FAQScript from "../../common/seo/FAQScript";
-import HireRelatedToServiceNearMe from "../../Nearme/HireRelatedToServiceNearMe";
-import AdviceInsightNearMe from "../../Nearme/AdviceInsightNearMe";
-import Feature from "../FetureComponent/Feature";
-import HeroSectionLocation from "../HeroSectionLocation";
+    BREADCRUM_DATA_ROOFERS_BARNSLEY,
+    ROOFERS_FREQUENTLY_DATA_BARNSLEY,
+    POPULAR_SERVICES_ROOFERS_BARNSLEY,
+    QUESTION_AND_ABOUT_SERVICE_ROOFERS_BARNSLEY,
+    ROOFERS_ADVICEINSIGHT_BARNSLEY,
+    ROOFERS_FEEDBACK_BARNSLEY,
+    ROOFERS_DATA_BARNSLEY,
+    ROOFERS_TABDATA_BARNSLEY,
+    VETTED_DATA_ROOFERS_BARNSLEY,
+} from "./RoofersInBarnsleyData";
+import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+import VettedSection from "../../../Nearme/VettedSection";
+import PopularJobNearMe from "../../../Nearme/PopularJobNearMe";
+import Footer from "../../../Footer/Footer";
+import AboutServicesAndQuestions from "../../../Nearme/AboutServicesAndQuestions";
+import { FAQ } from "../../../Nearme/FAQ";
+import UserFeedbackNearMe2 from "../../../Nearme/UserFeedbackNearMe2";
+import DiscoverNearMe from "../../../Nearme/DiscoverNearMe";
+import NearmeMember from "../../../Nearme/NearmeMember";
+import FAQScript from "../../../common/seo/FAQScript";
+import HireRelatedToServiceNearMe from "../../../Nearme/HireRelatedToServiceNearMe";
+import AdviceInsightNearMe from "../../../Nearme/AdviceInsightNearMe";
+import Feature from "../../FetureComponent/Feature";
+import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
-import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
-import PostCodeSectionLocation2 from "../PostCodeSectionLocation2";
+import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
+import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 
-function RoofersInBebington() {
+function RoofersInBarnsley() {
     useScrollToTop()
     useRegistrationRedirect()
     const featureRef = useRef(null);
     return (
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_BEBINGTON} />
+            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_BARNSLEY} />
             <HeroSectionLocation
                 heading1="Roofers"
-                heading2="Bebington"
-                description="Get up to 5 free quotes from top-quality local and vetted roofers in Oldham. All you need is to enter your postcode, and we will match you with a local professional who will send quotes straight to your inbox in less than a minute."
+                heading2="Barnsley"
+                description="Find the best roofers in Barnsley! just enter your postcode, answer a few questions, and we'll match you with 5 roofers in Barnsley to give you a quote."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -50,16 +50,16 @@ function RoofersInBebington() {
                 serviceName="Roofing"
             />
             <VettedSection
-                paragraph={VETTED_DATA_ROOFERS_BEBINGTON}
+                paragraph={VETTED_DATA_ROOFERS_BARNSLEY}
                 vettedHeading1="Find Local Vetted Roofers in "
-                vettedHeading2="Bebington"
-                breadcrumb={BREADCRUM_DATA_ROOFERS_BEBINGTON}
+                vettedHeading2="Barnsley"
+                breadcrumb={BREADCRUM_DATA_ROOFERS_BARNSLEY}
                 extraButton
                 featureRef={featureRef}
             />
 
             <PopularJobNearMe
-                services={POPULAR_SERVICES_ROOFERS_BEBINGTON}
+                services={POPULAR_SERVICES_ROOFERS_BARNSLEY}
                 popularImage="/nearme/Roofing/roofslate.webp"
                 altText="two roofers installing slate tiles onto a brand new roof URL"
                 mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -68,15 +68,15 @@ function RoofersInBebington() {
             <AboutServicesAndQuestions
                 serviceId={113}
                 serviceName="Roofing"
-                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_BEBINGTON}
+                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_BARNSLEY}
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-                <Feature cityName="Bebington" county='Bebington' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+                <Feature cityName="Barnsley" county='South Yorkshire' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
             <AdviceInsightNearMe
-                articles={ROOFERS_ADVICEINSIGHT_BEBINGTON}
+                articles={ROOFERS_ADVICEINSIGHT_BARNSLEY}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
             />
             <WrapperBGWidth>
@@ -88,16 +88,15 @@ function RoofersInBebington() {
                 containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
                 headdingblue="FAQ's"
                 headingblack=""
-                data={ROOFERS_FREQUENTLY_DATA_BEBINGTON}
+                data={ROOFERS_FREQUENTLY_DATA_BARNSLEY}
             />
-            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_BEBINGTON} />
-            <DiscoverNearMe homeData={ROOFERS_DATA_BEBINGTON} />
+            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_BARNSLEY} />
+            <DiscoverNearMe homeData={ROOFERS_DATA_BARNSLEY} />
             <HireRelatedToServiceNearMe
                 heading1="Hire with"
                 heading2="confidence."
-                tabData={ROOFERS_TABDATA_BEBINGTON}
+                tabData={ROOFERS_TABDATA_BARNSLEY}
                 activeTabkey="popular"
-                heightClass="min-h-[400px] h-auto md:h-auto lg:h-auto"
             />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
@@ -108,4 +107,4 @@ function RoofersInBebington() {
         </>
     );
 }
-export default RoofersInBebington;
+export default RoofersInBarnsley;

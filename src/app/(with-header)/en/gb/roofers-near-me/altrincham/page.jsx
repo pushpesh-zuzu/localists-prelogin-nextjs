@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInAltrincham from '@/app/component/LocationPages/Altrincham/RoofersInAltrincham';
+import RoofersInAltrincham from '@/app/component/LocationPages/Altrincham/RoofersInAltrincham/RoofersInAltrincham';
 import React, { Suspense } from 'react'
 export const metadata = {
   title: "Find Reliable Roofers Altrincham | Localists",

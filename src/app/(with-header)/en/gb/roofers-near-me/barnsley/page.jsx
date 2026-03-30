@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInBarnsley from '@/app/component/LocationPages/Barnsley/RoofersInBarnsley';
+import RoofersInBarnsley from '@/app/component/LocationPages/Barnsley/RoofersInBarnsley/RoofersInBarnsley';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Roofers Barnsley |Free Quotes in Minutes |Localists.com",
