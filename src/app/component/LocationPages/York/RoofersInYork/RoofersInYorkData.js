@@ -12,38 +12,28 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_YORK = [
     text: "The final bill will depend on things like the size of your roof, the materials you choose, how easy the property is to access, and how much work is involved. That’s why getting a proper quote from a local roofer is always the smartest move. ",
   },
   {
-    type: "AveragePriceLocation",
+    type: "pricingTable",
     title: "Average cost of roofing in York",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimerText:
+    disclaimer:
       "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
-    priceCards: [
+    prices: [
       {
-        description:
-          "For general roofing jobs, homeowners usually spend around",
+        text: "For general roofing jobs, homeowners usually spend around",
         price: "£2,000",
-        className:
-          "max-[360]:min-h-16 max-[360]:max-h-[76px] min-[360px]:min-h-12 min-[360px]:max-h-12  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[80px] lg:max-h-[80px]",
       },
       {
-        description: "On average, roof repairs in York come in at around",
+        text: "On average, roof repairs in York come in at around",
         price: "£815",
-        className:
-          "max-[360]:min-h-16 max-[360]:max-h-[76px] min-[360px]:min-h-12 min-[360px]:max-h-12  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[80px] lg:max-h-[80px]",
       },
       {
-        description: "Emergency call-outs for roofers tend to average around",
+        text: "Emergency call-outs for roofers tend to average around",
         price: "£560",
-        className:
-          "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]",
       },
       {
-        description:
-          "For a full replacement new roof, the average cost in Mold is around",
+        text: "For a full replacement new roof, the average cost in York is around",
         price: "£6,650",
-        className:
-          "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]",
       },
     ],
   },

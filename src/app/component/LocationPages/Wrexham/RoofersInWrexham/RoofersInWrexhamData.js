@@ -79,46 +79,35 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
     text: "But here’s a rough guide of what the numbers may look like:",
   },
   {
-    type: "AveragePriceLocation",
+    type: "pricingTable",
     title: "Average cost of roofing in Wrexham",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimerText:
+    disclaimer:
       "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
-    priceCards: [
+    prices: [
       {
-        description:
-          "For general roofing projects, homeowners in Wrexham typically pay around",
+        text: "For general roofing projects, homeowners in Wrexham typically pay around",
         price: "£2,858",
-        className:
-          "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]",
       },
       {
-        description: "For roofing repairs, the average cost tends to be around",
+        text: "For roofing repairs, the average cost tends to be around",
         price: "£862",
-        className:
-          "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[80px] md:max-h-[80px] lg:min-h-[105px] lg:max-h-[105px]",
       },
       {
-        description:
-          "For emergency roofing call-outs, the average sits closer to",
+        text: "For emergency roofing call-outs, the average sits closer to",
         price: "£445",
-        className:
-          "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]",
       },
       {
-        description: "For a full roof replacement, the average cost is around",
+        text: "For a full roof replacement, the average cost is around",
         price: "£7,495",
-        className:
-          "max-[360]:min-h-16 max-[360]:max-h-16 min-[360px]:min-h-12 min-[360px]:max-h-12 min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[64px] md:max-h-[64px] lg:min-h-[80px] lg:max-h-[80px]",
       },
     ],
-    className: "lg:pb-[0px] pb-[0px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px]",
   },
   {
     type: "QuotesBanner",
     className:
-      "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]",
+      "mb-[22px] mt-[20px] md:mt-[50px] md:mb-[42px] lg:mt-[108px] lg:mb-[114px]",
   },
 ];
 export const ROOFERS_FREQUENTLY_DATA_WREXHAM = [
