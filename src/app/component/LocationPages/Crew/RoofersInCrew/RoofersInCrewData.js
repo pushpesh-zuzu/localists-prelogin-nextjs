@@ -11,7 +11,6 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
     type: "pbold",
     text: "Here’s what you get:",
     className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
-
   },
   {
     type: "uili",
@@ -42,7 +41,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
     marginBottom: true,
-    marginTop: true
+    marginTop: true,
   },
   {
     type: "h2",
@@ -61,7 +60,8 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
     title: "Average cost of roofers in Crewe",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimer: "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+    disclaimer:
+      "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
     prices: [
       {
         text: "General roofing work tends to average around",
@@ -70,29 +70,26 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
       {
         text: "Roof repairs usually come in at roughly ",
         price: "£740",
-
       },
       {
         text: "Emergency roofing call-outs often sit around",
         price: "£630",
-
       },
       {
         text: "Full roof replacements are a larger investment, averaging around",
         price: "£6,830",
       },
-
-    ]
+    ],
   },
   {
     type: "p",
     text: "These figures are only meant as a guide. The only way to know where your roof sits within that range is to have it looked at properly and compare quotes from local roofers who can assess the situation firsthand.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "h2",
     text: "When is it a repair… And when is it time to replace?",
-    className: "mt-6 lg:mt-[72px]"
+    className: "mt-6 lg:mt-[72px]",
   },
   {
     type: "p",
@@ -109,11 +106,12 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
   {
     type: "p",
     text: "Age plays a part too. Some roofs last decades, others less so, depending on materials and how well they’ve been looked after. If yours is edging towards that 25-30 year mark, it’s reasonable to think ahead (possible replacement) rather than just react to the next leak.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "QuotesBanner",
-    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    className:
+      "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]",
   },
 ];
 export const ROOFERS_FREQUENTLY_DATA_CREW = [
@@ -210,53 +208,25 @@ export const ROOFERS_TABDATA_CREW = {
     },
   ],
   related: [
-    { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
-    { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
-    { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
-    { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
-    { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
-    { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
-    { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
-    { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
     { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
-    { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
-    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
-    { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
     { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
-    { title: "Roofers Anglesey", url: "/en/gb/roofers-near-me/anglesey" },
-    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-    { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
-    { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
+    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+    { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+    { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
-    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
-    { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
-    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
-    { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
-    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    { title: "Roofers Colwyn Bay", url: "/en/gb/roofers-near-me/colwyn-bay" },
-    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+    { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-    { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
-    { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
-    { title: "Roofers Huddersfield", url: "/en/gb/roofers-near-me/huddersfield" },
     {
-    title: "Roofers Macclesfield",
-    url: "/en/gb/roofers-near-me/macclesfield",
+      title: "Roofers Macclesfield",
+      url: "/en/gb/roofers-near-me/macclesfield",
     },
     {
-        title: "Roofers Ellesmere Port",
-    url: "/en/gb/roofers-near-me/ellesmere-port",
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-    {
-    title: "Roofers Ashton Under Lyne",
-    url: "/en/gb/roofers-near-me/ashton-under-lyne",
-    },
-    ],
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_CREW = [

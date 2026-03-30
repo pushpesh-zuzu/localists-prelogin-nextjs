@@ -169,20 +169,17 @@ export const ROOFERS_TABDATA_SANDBACH = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+   related: [
     { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
     { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+    { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
     { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+    { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
     { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-    { title: "Roofers congleton", url: "/en/gb/roofers-near-me/congleton" },
-    {
-      title: "Roofers Cheadle Hulme",
-      url: "/en/gb/roofers-near-me/cheadle-hulme",
-    },
     {
       title: "Roofers Macclesfield",
       url: "/en/gb/roofers-near-me/macclesfield",

@@ -12,7 +12,8 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTHWICH = [
     title: "Average cost of roofers in Northwich",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimer: "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",
+    disclaimer:
+      "Please be aware, that prices can vary, and the prices you see here are based on our own internal data of roofing jobs completed and the price of the roofing job. Sometimes the price of a job can be much smaller than even our average. To get an accurate quote - ",
     prices: [
       {
         text: "In Northwich, general roofing jobs tend to average around ",
@@ -21,19 +22,16 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTHWICH = [
       {
         text: "If it’s a repair you’re dealing with, most homeowners pay somewhere close to ",
         price: "£739",
-
       },
       {
         text: "When it’s urgent, like after heavy rain or strong winds, emergency call-outs tend to cost around",
         price: "£630",
-
       },
       {
         text: "For a full roof replacement, the average cost in Northwich comes in at about",
         price: "£6,837",
       },
-
-    ]
+    ],
   },
   {
     type: "image",
@@ -60,11 +58,12 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTHWICH = [
   {
     type: "p",
     text: "At the end of the day, it’s about feeling comfortable with who you hire. Knowing they’re insured, experienced, and accountable makes that decision a lot easier.",
-    notMarginBottom: true
+    notMarginBottom: true,
   },
   {
     type: "QuotesBanner",
-    className: "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]"
+    className:
+      "mb-[22px] mt-[50px] md:mt-[80px] md:mb-[42px] lg:mt-[180px] lg:mb-[114px]",
   },
 ];
 export const ROOFERS_FREQUENTLY_DATA_NORTHWICH = [
@@ -161,53 +160,25 @@ export const ROOFERS_TABDATA_NORTHWICH = {
     },
   ],
   related: [
-    { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
-    { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
-    { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
     { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
-    { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
-    { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
-    { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
-    { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
-    { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
     { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
-    { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
-    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
-    { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
     { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
-    { title: "Roofers Anglesey", url: "/en/gb/roofers-near-me/anglesey" },
-    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-    { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
-    { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
-    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
-    { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
-    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
-    { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
-    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    { title: "Roofers Colwyn Bay", url: "/en/gb/roofers-near-me/colwyn-bay" },
-    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+    { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+    { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+    { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-    { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
-    { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
-    { title: "Roofers Huddersfield", url: "/en/gb/roofers-near-me/huddersfield" },
     {
-    title: "Roofers Macclesfield",
-    url: "/en/gb/roofers-near-me/macclesfield",
+      title: "Roofers Macclesfield",
+      url: "/en/gb/roofers-near-me/macclesfield",
     },
     {
-        title: "Roofers Ellesmere Port",
-    url: "/en/gb/roofers-near-me/ellesmere-port",
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-    {
-    title: "Roofers Ashton Under Lyne",
-    url: "/en/gb/roofers-near-me/ashton-under-lyne",
-    },
-    ],
+  ],
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_NORTHWICH = [
