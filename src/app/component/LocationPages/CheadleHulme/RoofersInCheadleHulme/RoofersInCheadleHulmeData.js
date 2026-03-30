@@ -184,14 +184,16 @@ export const ROOFERS_TABDATA_CHEADLE_HULME = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-   related: [
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  related: [
     { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
-    { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+    { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
     { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+    { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
     {
-      title: "Roofers Ashton Under Lyne",
+      title: "Roofers Ashton-Under-Lyne",
       url: "/en/gb/roofers-near-me/ashton-under-lyne",
     },
   ],

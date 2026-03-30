@@ -224,10 +224,8 @@ export const ROOFERS_TABDATA_KENDAL = {
     },
   ],
   related: [
-    { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
-    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
-    { title: "Roofers Liverpool ", url: "/en/gb/roofers-near-me/liverpool" },
-    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+    { title: "Roofers Penrith", url: "en/gb/roofers-near-me/penrith" },
+    { title: "Roofers Whitehaven", url: "en/gb/roofers-near-me/Whitehaven" },
   ],
   findMore: [],
 };

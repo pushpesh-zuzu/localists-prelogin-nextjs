@@ -251,17 +251,19 @@ export const ROOFERS_TABDATA_BARNSLEY = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-   related: [
+  related: [
+    { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
     { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
     { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
     {
       title: "Roofers Cheadle Hulme",
       url: "/en/gb/roofers-near-me/cheadle-hulme",
     },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
     {
-      title: "Roofers Ashton Under Lyne",
+      title: "Roofers Ashton-Under-Lyne",
       url: "/en/gb/roofers-near-me/ashton-under-lyne",
     },
   ],

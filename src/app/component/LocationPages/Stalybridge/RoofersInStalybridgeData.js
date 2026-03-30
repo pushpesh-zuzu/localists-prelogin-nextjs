@@ -213,20 +213,22 @@ export const ROOFERS_TABDATA_STALYBRIDGE = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
     ],
-     related: [
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
-    { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
-    {
-      title: "Roofers Cheadle Hulme",
-      url: "/en/gb/roofers-near-me/cheadle-hulme",
-    },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    {
-      title: "Roofers Ashton Under Lyne",
-      url: "/en/gb/roofers-near-me/ashton-under-lyne",
-    },
-  ],
+    related: [
+        { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+        { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+        { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+        { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+        { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+        { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+        {
+            title: "Roofers Cheadle Hulme",
+            url: "/en/gb/roofers-near-me/cheadle-hulme",
+        },
+        {
+            title: "Roofers Ashton Under Lyne",
+            url: "/en/gb/roofers-near-me/ashton-under-lyne",
+        },
+    ],
     findMore: [],
 };
 

@@ -172,15 +172,17 @@ export const ROOFERS_TABDATA_ASHTON_UNDER_LYNE = {
     },
   ],
   related: [
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
     { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+    { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
     { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
     {
       title: "Roofers Cheadle Hulme",
       url: "/en/gb/roofers-near-me/cheadle-hulme",
     },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
   ],
   findMore: [],
 };

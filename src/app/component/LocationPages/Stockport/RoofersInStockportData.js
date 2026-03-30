@@ -188,7 +188,9 @@ export const ROOFERS_TABDATA_STOCKPORT = {
 
   related: [
     { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+    { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
     { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
     { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
     {
