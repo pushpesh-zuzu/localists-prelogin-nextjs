@@ -213,30 +213,20 @@ export const ROOFERS_TABDATA_STALYBRIDGE = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
     ],
-    related: [
-        { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
-        { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-        { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
-        { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
-        { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
-        { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
-        { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
-        { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
-        { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-        {
-            title: "Roofers Macclesfield",
-            url: "/en/gb/roofers-near-me/macclesfield",
-        },
-        { title: "Roofers congleton", url: "/en/gb/roofers-near-me/congleton" },
-        {
-        title: "Roofers Cheadle Hulme",
-        url: "/en/gb/roofers-near-me/cheadle-hulme",
-        },
-        {
-            title: "Roofers Ellesmere Port",
-            url: "/en/gb/roofers-near-me/ellesmere-port",
-        },
-    ],
+     related: [
+    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+    { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+    {
+      title: "Roofers Cheadle Hulme",
+      url: "/en/gb/roofers-near-me/cheadle-hulme",
+    },
+    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+    {
+      title: "Roofers Ashton Under Lyne",
+      url: "/en/gb/roofers-near-me/ashton-under-lyne",
+    },
+  ],
     findMore: [],
 };
 
