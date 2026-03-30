@@ -13,7 +13,7 @@ function page() {
     <>
       {/* // <div><BlogFlateRoofLast/></div> */}
       <SEO
-        canonicalPath="/en/gb/blog/news/how-long-does-a-flat-roof-last"
+        canonicalPath="/en/gb/blog/advice/how-long-does-a-flat-roof-last"
         bannerImage="/blog/blogflatroofbanner3.webp"
         
         conversion={true} /><Suspense
