@@ -79,7 +79,7 @@ export default function HeroSection() {
         role="banner"
         aria-label="Hero section"
       >
-        <div className="w-full lg:w-1/2 flex flex-col">
+        <div className="w-full lg:w-[57%] xl:w-1/2  flex flex-col">
           <TrustpioletIcon className="lg:min-h-[54px] max-h-[28px] max-w-[184px] md:max-w-[177px] lg:max-w-[360px] mb-[16.54px] md:mb-3 lg:mb-[30px] lg:max-h-12" />
 
 
