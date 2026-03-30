@@ -193,6 +193,7 @@ export const ROOFERS_TABDATA_DEESIDE = {
     { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
     { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
     { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+    { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
     { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
     { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },

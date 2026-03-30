@@ -250,6 +250,7 @@ export const ROOFERS_TABDATA_LLANDUDNO = {
     { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
     { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
     { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+    { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
     { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
     { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
