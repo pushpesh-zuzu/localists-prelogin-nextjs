@@ -62,41 +62,29 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WAKEFIELD = [
     text: "To give you a realistic idea of what homeowners in Wakefield tend to pay, here’s a rough guide based on common jobs:",
   },
   {
-    type: "AveragePriceLocation",
+    type: "pricingTable",
     title: "Average cost of roofers in Wakefield",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
-    disclaimerText:
+    disclaimer:
       "These figures are meant as a guide rather than a fixed quote. The best way to understand what your specific roofing job will cost is to compare tailored quotes from Roofers Wakefield, who can properly assess your property,",
     heading: "Typical roofing costs in Wakefield",
-    priceCards: [
+    prices: [
       {
-        description:
-          "For broader roofing work that goes beyond a minor repair, the average cost sits around",
+        text: "For broader roofing work that goes beyond a minor repair, the average cost sits around",
         price: "£2,009",
-        className:
-          "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[97px] md:max-h-[97px] lg:min-h-[108px] lg:max-h-[108px]",
       },
       {
-        description:
-          "Standard repair work, such as fixing leaks, replacing damaged tiles, or addressing flashing issues, averages around",
+        text: "Standard repair work, such as fixing leaks, replacing damaged tiles, or addressing flashing issues, averages around",
         price: "£816",
-        className:
-          "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[97px] md:max-h-[97px] lg:min-h-[108px] lg:max-h-[108px]",
       },
       {
-        description:
-          "If you need urgent help after storm damage or sudden leaks, emergency call-outs in Wakefield average around",
+        text: "If you need urgent help after storm damage or sudden leaks, emergency call-outs in Wakefield average around",
         price: "£588",
-        className:
-          "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[97px] md:max-h-[97px] lg:min-h-[108px] lg:max-h-[108px]",
       },
       {
-        description:
-          "A complete roof replacement is a larger investment. Across Wakefield, the average cost is around",
+        text: "A complete roof replacement is a larger investment. Across Wakefield, the average cost is around",
         price: "£6,620",
-        className:
-          "max-[360]:min-h-[76px] max-[360]:max-h-[76px] min-[360px]:min-h-14 min-[360px]:max-h-14  min-[1023px]:min-h-20 max-[1023px]:max-h-20 md:min-h-[97px] md:max-h-[97px] lg:min-h-[108px] lg:max-h-[108px]",
       },
     ],
   },
