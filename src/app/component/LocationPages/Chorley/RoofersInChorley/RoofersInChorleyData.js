@@ -176,6 +176,7 @@ export const ROOFERS_TABDATA_CHORLEY = {
     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
     { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
     { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+    { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
   ],
   findMore: [],
 };

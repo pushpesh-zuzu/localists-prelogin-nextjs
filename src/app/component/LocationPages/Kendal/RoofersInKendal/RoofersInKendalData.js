@@ -224,8 +224,7 @@ export const ROOFERS_TABDATA_KENDAL = {
     },
   ],
   related: [
-    { title: "Roofers Penrith", url: "en/gb/roofers-near-me/penrith" },
-    { title: "Roofers Whitehaven", url: "en/gb/roofers-near-me/Whitehaven" },
+    { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
   ],
   findMore: [],
 };
