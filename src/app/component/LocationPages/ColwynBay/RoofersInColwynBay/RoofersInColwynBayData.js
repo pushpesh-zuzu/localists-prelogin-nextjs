@@ -196,6 +196,7 @@ export const ROOFERS_TABDATA_COLWNYBAY = {
     { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
     { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
     { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+    { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
     { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
