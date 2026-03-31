@@ -94,13 +94,13 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
                   {[...Array(fullStars)].map((_, i) => (
                     <StarIconFeature
                       key={`full-${i}`}
-                      className="h-[18px] w-[18px] md:h-[30px] md:w-[30px]"
+                      className="max-[360px]:h-3.5 max-[360px]:w-3.5 h-[18px] w-[18px] md:h-[30px] md:w-[30px]"
                     />
                   ))}
 
                   {/* HALF STAR */}
                   {showHalf && (
-                    <HalfStarIconFeature className="h-[18px] w-[18px] md:h-[30px] md:w-[30px] lg:h-" />
+                    <HalfStarIconFeature className="max-[360px]:h-3.5 max-[360px]:w-3.5 h-[18px] w-[18px] md:h-[30px] md:w-[30px] lg:h-" />
                   )}
 
                   {/* EMPTY STARS */}
@@ -110,7 +110,7 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
                         background1="#dfdfe8"
                         background2="#dfdfe8"
                         key={`empty-${i}`}
-                        className="h-[18px] w-[18px] md:h-[30px] md:w-[30px] text-gray-300"
+                        className="max-[360px]:h-3.5 max-[360px]:w-3.5 h-[18px] w-[18px] md:h-[30px] md:w-[30px] text-gray-300"
                       />
                     ))}
                 </div>
