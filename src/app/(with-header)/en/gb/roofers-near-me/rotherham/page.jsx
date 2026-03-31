@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInRotherham from '@/app/component/LocationPages/Rotherham/RoofersInRotherham';
+import RoofersInRotherham from '@/app/component/LocationPages/Rotherham/RoofersInRotherham/RoofersInRotherham';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Get Trusted Roofers Rotherham | Localists.com",

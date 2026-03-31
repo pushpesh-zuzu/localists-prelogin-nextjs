@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInNantwich from '@/app/component/LocationPages/Nantwich/RoofersInNantwich';
+import RoofersInNantwich from '@/app/component/LocationPages/Nantwich/RoofersInNantwich/RoofersInNantwich';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Find Reliable Roofers in Nantwich | Localists.com",

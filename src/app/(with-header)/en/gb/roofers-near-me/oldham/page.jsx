@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInOldham from '@/app/component/LocationPages/Oldham/RoofersInOldham';
+import RoofersInOldham from '@/app/component/LocationPages/Oldham/RoofersInOldham/RoofersInOldham';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Find Trusted Roofers Oldham | Localists.com",

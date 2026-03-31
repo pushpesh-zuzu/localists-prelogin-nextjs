@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInScunthorpe from '@/app/component/LocationPages/Scunthorpe/RoofersInScunthorpe';
+import RoofersInScunthorpe from '@/app/component/LocationPages/Scunthorpe/RoofersInScunthorpe/RoofersInScunthorpe';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Discover Roofers Scunthorpe | Localists",

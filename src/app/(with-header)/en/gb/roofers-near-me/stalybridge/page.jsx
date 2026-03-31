@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInStalybridge from '@/app/component/LocationPages/Stalybridge/RoofersInStalybridge';
+import RoofersInStalybridge from '@/app/component/LocationPages/Stalybridge/RoofersInStalybridge/RoofersInStalybridge';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Vetted Roofers in Stalybridge | Localists.com",

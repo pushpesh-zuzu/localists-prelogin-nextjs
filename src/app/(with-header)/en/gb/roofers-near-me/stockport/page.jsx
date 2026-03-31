@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInStockport from '@/app/component/LocationPages/Stockport/RoofersInStockport';
+import RoofersInStockport from '@/app/component/LocationPages/Stockport/RoofersInStockport/RoofersInStockport';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Roofers Stockport | Free Quotes in Minutes| Localists.com",

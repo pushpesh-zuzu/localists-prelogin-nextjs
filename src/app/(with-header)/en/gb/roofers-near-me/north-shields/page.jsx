@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInNorthShields from '@/app/component/LocationPages/NorthShields/RoofersInNorthShields';
+import RoofersInNorthShields from '@/app/component/LocationPages/NorthShields/RoofersInNorthShields/RoofersInNorthShields';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Find Trusted Roofers North Shields | Localists.com",

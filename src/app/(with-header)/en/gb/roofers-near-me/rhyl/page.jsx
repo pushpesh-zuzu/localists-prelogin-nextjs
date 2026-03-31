@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInRhyl from '@/app/component/LocationPages/Rhyl/RoofersInRhyl';
+import RoofersInRhyl from '@/app/component/LocationPages/Rhyl/RoofersInRhyl/RoofersInRhyl';
 
 import React, { Suspense } from 'react'
 export const metadata = {

@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInStHelens from '@/app/component/LocationPages/StHelens/RoofersInStHelens';
+import RoofersInStHelens from '@/app/component/LocationPages/StHelens/RoofersInStHelens/RoofersInStHelens';
 import React, { Suspense } from 'react'
 export const metadata = {
   title: "Find Reliable Roofers St Helens | Localists.com",

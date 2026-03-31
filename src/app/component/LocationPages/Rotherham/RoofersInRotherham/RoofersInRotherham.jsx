@@ -1,47 +1,47 @@
 "use client";
 import React, { useRef } from "react";
 import {
-    BREADCRUM_DATA_ROOFERS_NORTHALLERTON,
-    ROOFERS_FREQUENTLY_DATA_NORTHALLERTON,
-    POPULAR_SERVICES_ROOFERS_NORTHALLERTON,
-    QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTHALLERTON,
-    ROOFERS_ADVICEINSIGHT_NORTHALLERTON,
-    ROOFERS_FEEDBACK_NORTHALLERTON,
-    ROOFERS_DATA_NORTHALLERTON,
-    ROOFERS_TABDATA_NORTHALLERTON,
-    VETTED_DATA_ROOFERS_NORTHALLERTON,
-} from "./RoofersInNorthallertonData";
-import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-import VettedSection from "../../Nearme/VettedSection";
-import PopularJobNearMe from "../../Nearme/PopularJobNearMe";
-import Footer from "../../Footer/Footer";
-import AboutServicesAndQuestions from "../../Nearme/AboutServicesAndQuestions";
-import { FAQ } from "../../Nearme/FAQ";
-import UserFeedbackNearMe2 from "../../Nearme/UserFeedbackNearMe2";
-import DiscoverNearMe from "../../Nearme/DiscoverNearMe";
-import NearmeMember from "../../Nearme/NearmeMember";
-import FAQScript from "../../common/seo/FAQScript";
-import HireRelatedToServiceNearMe from "../../Nearme/HireRelatedToServiceNearMe";
-import AdviceInsightNearMe from "../../Nearme/AdviceInsightNearMe";
-import Feature from "../FetureComponent/Feature";
-import HeroSectionLocation from "../HeroSectionLocation";
+    BREADCRUM_DATA_ROOFERS_ROTHERHAM,
+    ROOFERS_FREQUENTLY_DATA_ROTHERHAM,
+    POPULAR_SERVICES_ROOFERS_ROTHERHAM,
+    QUESTION_AND_ABOUT_SERVICE_ROOFERS_ROTHERHAM,
+    ROOFERS_ADVICEINSIGHT_ROTHERHAM,
+    ROOFERS_FEEDBACK_ROTHERHAM,
+    ROOFERS_DATA_ROTHERHAM,
+    ROOFERS_TABDATA_ROTHERHAM,
+    VETTED_DATA_ROOFERS_ROTHERHAM,
+} from "./RoofersInRotherhamData";
+import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+import VettedSection from "../../../Nearme/VettedSection";
+import PopularJobNearMe from "../../../Nearme/PopularJobNearMe";
+import Footer from "../../../Footer/Footer";
+import AboutServicesAndQuestions from "../../../Nearme/AboutServicesAndQuestions";
+import { FAQ } from "../../../Nearme/FAQ";
+import UserFeedbackNearMe2 from "../../../Nearme/UserFeedbackNearMe2";
+import DiscoverNearMe from "../../../Nearme/DiscoverNearMe";
+import NearmeMember from "../../../Nearme/NearmeMember";
+import FAQScript from "../../../common/seo/FAQScript";
+import HireRelatedToServiceNearMe from "../../../Nearme/HireRelatedToServiceNearMe";
+import AdviceInsightNearMe from "../../../Nearme/AdviceInsightNearMe";
+import Feature from "../../FetureComponent/Feature";
+import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
-import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
-import PostCodeSectionLocation2 from "../PostCodeSectionLocation2";
+import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
+import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 
-function RoofersInNorthallerton() {
+function RoofersInRotherham() {
     useScrollToTop()
     useRegistrationRedirect()
     const featureRef = useRef(null);
     return (
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_NORTHALLERTON} />
+            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_ROTHERHAM} />
             <HeroSectionLocation
                 heading1="Roofers"
-                heading2="Northallerton"
-                description="Get free, no-obligation quotes from experienced Northallerton roofers. Simply enter your postcode below and share a few quick details about the job; it takes less than a minute to get things moving."
+                heading2="Rotherham"
+                description="Get free, no-obligation quotes from reliable Rotherham roofers near you. Simply enter your postcode, tell us a few details about what you need, and get matched with trusted professionals in under a minute."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -50,16 +50,16 @@ function RoofersInNorthallerton() {
                 serviceName="Roofing"
             />
             <VettedSection
-                paragraph={VETTED_DATA_ROOFERS_NORTHALLERTON}
+                paragraph={VETTED_DATA_ROOFERS_ROTHERHAM}
                 vettedHeading1="Find Local Vetted Roofers in "
-                vettedHeading2="Northallerton"
-                breadcrumb={BREADCRUM_DATA_ROOFERS_NORTHALLERTON}
+                vettedHeading2="Rotherham"
+                breadcrumb={BREADCRUM_DATA_ROOFERS_ROTHERHAM}
                 extraButton
                 featureRef={featureRef}
             />
 
             <PopularJobNearMe
-                services={POPULAR_SERVICES_ROOFERS_NORTHALLERTON}
+                services={POPULAR_SERVICES_ROOFERS_ROTHERHAM}
                 popularImage="/nearme/Roofing/roofslate.webp"
                 altText="two roofers installing slate tiles onto a brand new roof URL"
                 mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -68,15 +68,15 @@ function RoofersInNorthallerton() {
             <AboutServicesAndQuestions
                 serviceId={113}
                 serviceName="Roofing"
-                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTHALLERTON}
+                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_ROTHERHAM}
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-                <Feature cityName="Northallerton" county='North Yorkshire' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+                <Feature cityName="Rotherham" county='South Yorkshire' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
             <AdviceInsightNearMe
-                articles={ROOFERS_ADVICEINSIGHT_NORTHALLERTON}
+                articles={ROOFERS_ADVICEINSIGHT_ROTHERHAM}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
             />
             <WrapperBGWidth>
@@ -88,14 +88,14 @@ function RoofersInNorthallerton() {
                 containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
                 headdingblue="FAQ's"
                 headingblack=""
-                data={ROOFERS_FREQUENTLY_DATA_NORTHALLERTON}
+                data={ROOFERS_FREQUENTLY_DATA_ROTHERHAM}
             />
-            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_NORTHALLERTON} />
-            <DiscoverNearMe homeData={ROOFERS_DATA_NORTHALLERTON} />
+            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_ROTHERHAM} />
+            <DiscoverNearMe homeData={ROOFERS_DATA_ROTHERHAM} />
             <HireRelatedToServiceNearMe
                 heading1="Hire with"
                 heading2="confidence."
-                tabData={ROOFERS_TABDATA_NORTHALLERTON}
+                tabData={ROOFERS_TABDATA_ROTHERHAM}
                 activeTabkey="popular"
                 heightClass="min-h-[400px] h-auto md:h-auto lg:h-[485.5px]"
             />
@@ -108,4 +108,4 @@ function RoofersInNorthallerton() {
         </>
     );
 }
-export default RoofersInNorthallerton;
+export default RoofersInRotherham;
