@@ -108,7 +108,7 @@ export default function HireRelatedToServiceNearMe({
         ref={sectionRef}
         className={`bg-[#00AFE3] px-[30px] md:px-16 py-[30px] md:py-[50px] lg:pl-16 xl:px-[120px] lg:py-[72px]  w-full ${heightClass}`}
       >
-        <header className="mb-5 xl:mb-12">
+        <header className="mb-5 md:mb-[35px] xl:mb-12">
           <div className="flex flex-wrap md:flex-col lg:flex-row xl:justify-between items-left gap-7.5 md:gap-6 xl:gap-12">
             <h2
               className="font-Inter font-black

@@ -30,12 +30,12 @@ function VettedSection({
     <WrapperBGWidth>
       <div className="md:block py-[35px] px-[30px]  sm:px-10 md:px-16 md:py-10 xl:px-[120px] xl:pt-[71px] xl:pb-[72px]">
         <Breadcrumb items={breadcrumb} />
-        <div className="pt-4 lg:pt-10 lg:pt-[58px] max-w-[99%] md:max-h-full">
+        <div className="pt-4 md:pt-10 lg:pt-[58px] max-w-[99%] md:max-h-full">
           <NearmeH2Heading
             headdingblue={vettedHeading1}
             headingblack={vettedHeading2}
           />
-          <div className="mt-5 md:mt-6 lg:mt-12 flex flex-col">
+          <div className="mt-5 md:mt-[35px] lg:mt-12 flex flex-col">
             {paragraph.map((item, index) => (
               <Paragraph
                 key={index}

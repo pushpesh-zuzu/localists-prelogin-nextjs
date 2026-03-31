@@ -76,7 +76,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_KEIGHLEY = [
   {
     type: "p",
     text: "These figures aren’t fixed prices. They’re simply there to give you a sense of what’s common locally. The best way to know what your own roof will cost is to get a proper inspection and a written quote before agreeing to anything.",
-    className: "mb-6 lg:mb-[70px]",
+    className: "mb-6 md:mb-9 lg:mb-[70px]",
     notMarginBottom: true,
   },
   {

@@ -45,7 +45,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESHIRE = [
   {
     type: "p",
     text: "Every roofer you find through Localists has already been checked for these points. However, knowing what to look for yourself never hurts.",
-    className: "mb-6 lg:mb-[70px]",
+    className: "mb-6 md:mb-9 lg:mb-[70px]",
   },
   {
     type: "h2",

@@ -12,7 +12,7 @@ function UserFeedbackNearMe2({feedbackData=[]}) {
   return (
     <WrapperBGWidth background={"#edfcf8"}>
       <div className="h-auto min-h-[400px] lg:min-h-[687px] px-[30px] py-[30px] sm:px-10 md:px-16 md:py-[38px] xl:px-[120px] lg:py-[72px] bg-[#EDFCF8]">
-        <H2 className="text-[#00afe3] pb-10 lg:pb-[53px]">
+        <H2 className="text-[#00afe3] pb-10 md:pb-35px lg:pb-[53px]">
           Rated <span className="text-[#253238]">excellent.</span>
         </H2>
         <div className="flex flex-wrap justify-between select-none">
