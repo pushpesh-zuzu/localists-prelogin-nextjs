@@ -68,7 +68,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SCARBOROUGH = [
   {
     type: "p",
     text: "These figures are guide prices only. The final cost will depend on the complexity of the work, the materials chosen, and the existing condition of your roof. For accurate pricing, it’s always best to show us what is wrong with your roof and you request tailored quotes from local Roofers in Scarborough before making a decision.",
-    className: "mb-6 lg:mb-[70px]",
+    className: "mb-6 md:mb-9 lg:mb-[70px]",
   },
   {
     type: "h2",

@@ -14,7 +14,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BANGOR = [
   {
     type: "p",
     text: "Localists take that risk off the table. Every roofer we recommend has been vetted for qualifications, insurance, and track record before appearing in your results. You get free quotes from local Bangor roofers matched to your specific job, and you compare them at your own pace. Nobody is chasing you. No commitment until you're completely ready.",
-    className: "mb-6 lg:mb-[70px]",
+    className: "mb-6 md:mb-9 lg:mb-[70px]",
   },
   {
     type: "h2",

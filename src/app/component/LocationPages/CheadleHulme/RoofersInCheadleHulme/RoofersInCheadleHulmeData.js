@@ -46,7 +46,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHEADLE_HULME = [
   {
     type: "p",
     text: "Cheadle Hulme's housing stock spans more than a century of building styles, and roofing costs reflect that range. The tall Victorian villas on Hulme Hall Road and Swann Lane, with their steep pitches, chimneys, and period detailing, are a more complex proposition than a 1930s semi off Cheadle Road or a newer build closer to the village center. Scaffolding requirements, roof pitch, the age and type of materials, and what turns up once a roofer is actually up there all feed into what the job ends up costing.",
-    // className: "mb-6 lg:mb-[70px]",
+    // className: "mb-6 md:mb-9 lg:mb-[70px]",
   },
   {
     type: "p",

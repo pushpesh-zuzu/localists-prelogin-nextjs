@@ -45,7 +45,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CAERNARFONY = [
   {
     type: "p",
     text: "Not sure what you're dealing with? A proper inspection will give you a clear picture. Sometimes what looks serious is a simple fix. Sometimes what looks minor has been quietly causing damage for longer than it should. Either way, knowing is better than guessing.",
-    className: "mb-6 lg:mb-[70px]",
+    className: "mb-6 md:mb-9 lg:mb-[70px]",
     notMarginBottom: true,
   },
   { type: "h2", text: "What does roofing work cost in Caernarfon?" },

@@ -4,7 +4,7 @@ import Paragraph from "../UI/Typography/Paragraph";
 
 export default function AveragePrice() {
   return (
-    <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] lg:pb-0 pt-2 md:pt-6 lg:pt-[47px] ">
+    <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] md:pb-10 lg:pb-0 pt-2 md:pt-6 lg:pt-[47px] ">
       <div className="w-full max-w-[1000px]">
         <div
           className="w-full rounded-[30px] md:rounded-[25px]"

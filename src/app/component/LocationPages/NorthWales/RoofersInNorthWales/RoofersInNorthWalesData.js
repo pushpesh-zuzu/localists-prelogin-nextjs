@@ -83,7 +83,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTH_WALES = [
   {
     type: "p",
     text: "If a quote arrives as a single number with no breakdown, ask for more detail before agreeing to anything. A roofer confident in their pricing won't have any problem providing it.",
-    className: "mb-6 lg:mb-[70px]",
+    className: "mb-6 md:mb-9 lg:mb-[70px]",
     notMarginBottom: true,
   },
   {

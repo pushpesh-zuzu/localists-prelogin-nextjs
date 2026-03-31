@@ -16,7 +16,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ARCHITECTS = [
   {
     type: "p",
     text: "Having a professional to guide you through each step (design, planning, tendering, and construction) is essential. A local architect ensures your project stays compliant with local council rules, planning requirements, and building regulations, saving you time, stress, and preventing any costly mistakes.",
-    className: "mb-6 lg:mb-[70px]",
+    className: "mb-6 md:mb-9 lg:mb-[70px]",
   },
   {
     type: "h2",
