@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInHalifax from '@/app/component/LocationPages/Halifax/RoofersInHalifax';
+import RoofersInHalifax from '@/app/component/LocationPages/Halifax/RoofersInHalifax/RoofersInHalifax';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Find Trusted Roofers Halifax | Localists",

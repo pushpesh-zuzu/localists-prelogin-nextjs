@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInMacclesfield from '@/app/component/LocationPages/Macclesfield/RoofersInMacclesfield';
+import RoofersInMacclesfield from '@/app/component/LocationPages/Macclesfield/RoofersInMacclesfield/RoofersInMacclesfield';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: `Vetted Roofers Macclesfield | Free Quotes | Localists.com`,

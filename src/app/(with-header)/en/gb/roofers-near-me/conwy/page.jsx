@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInConwy from '@/app/component/LocationPages/Conwy/RoofersInConwy';
+import RoofersInConwy from '@/app/component/LocationPages/Conwy/RoofersInConwy/RoofersInConwy';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Find Skilled Roofers in Conwy | Localists.com",
