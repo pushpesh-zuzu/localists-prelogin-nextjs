@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInCongleton from '@/app/component/LocationPages/Congleton/RoofersInCongleton';
+import RoofersInCongleton from '@/app/component/LocationPages/Congleton/RoofersInCongleton/RoofersInCongleton';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: " Find Skilled Roofers in Congleton | Localists",

@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInKnutsford from '@/app/component/LocationPages/Knutsford/RoofersInKnutsford';
+import RoofersInKnutsford from '@/app/component/LocationPages/Knutsford/RoofersInKnutsford/RoofersInKnutsford';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Discover Vetted Roofers in Knutsford | Localists.com",

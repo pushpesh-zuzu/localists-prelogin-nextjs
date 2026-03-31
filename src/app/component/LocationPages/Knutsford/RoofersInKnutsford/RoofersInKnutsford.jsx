@@ -1,47 +1,47 @@
 "use client";
 import React, { useRef } from "react";
 import {
-    BREADCRUM_DATA_ROOFERS_BLACKPOOL,
-    ROOFERS_FREQUENTLY_DATA_BLACKPOOL,
-    POPULAR_SERVICES_ROOFERS_BLACKPOOL,
-    QUESTION_AND_ABOUT_SERVICE_ROOFERS_BLACKPOOL,
-    ROOFERS_ADVICEINSIGHT_BLACKPOOL,
-    ROOFERS_FEEDBACK_BLACKPOOL,
-    ROOFERS_DATA_BLACKPOOL,
-    ROOFERS_TABDATA_BLACKPOOL,
-    VETTED_DATA_ROOFERS_BLACKPOOL,
-} from "./RoofersInBlackpoolData";
-import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-import VettedSection from "../../Nearme/VettedSection";
-import PopularJobNearMe from "../../Nearme/PopularJobNearMe";
-import Footer from "../../Footer/Footer";
-import AboutServicesAndQuestions from "../../Nearme/AboutServicesAndQuestions";
-import { FAQ } from "../../Nearme/FAQ";
-import UserFeedbackNearMe2 from "../../Nearme/UserFeedbackNearMe2";
-import DiscoverNearMe from "../../Nearme/DiscoverNearMe";
-import NearmeMember from "../../Nearme/NearmeMember";
-import FAQScript from "../../common/seo/FAQScript";
-import HireRelatedToServiceNearMe from "../../Nearme/HireRelatedToServiceNearMe";
-import AdviceInsightNearMe from "../../Nearme/AdviceInsightNearMe";
-import Feature from "../FetureComponent/Feature";
-import HeroSectionLocation from "../HeroSectionLocation";
+    BREADCRUM_DATA_ROOFERS_KNUTSFORD,
+    ROOFERS_FREQUENTLY_DATA_KNUTSFORD,
+    POPULAR_SERVICES_ROOFERS_KNUTSFORD,
+    QUESTION_AND_ABOUT_SERVICE_ROOFERS_KNUTSFORD,
+    ROOFERS_ADVICEINSIGHT_KNUTSFORD,
+    ROOFERS_FEEDBACK_KNUTSFORD,
+    ROOFERS_DATA_KNUTSFORD,
+    ROOFERS_TABDATA_KNUTSFORD,
+    VETTED_DATA_ROOFERS_KNUTSFORD,
+} from "./RoofersInKnutsfordData";
+import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+import VettedSection from "../../../Nearme/VettedSection";
+import PopularJobNearMe from "../../../Nearme/PopularJobNearMe";
+import Footer from "../../../Footer/Footer";
+import AboutServicesAndQuestions from "../../../Nearme/AboutServicesAndQuestions";
+import { FAQ } from "../../../Nearme/FAQ";
+import UserFeedbackNearMe2 from "../../../Nearme/UserFeedbackNearMe2";
+import DiscoverNearMe from "../../../Nearme/DiscoverNearMe";
+import NearmeMember from "../../../Nearme/NearmeMember";
+import FAQScript from "../../../common/seo/FAQScript";
+import HireRelatedToServiceNearMe from "../../../Nearme/HireRelatedToServiceNearMe";
+import AdviceInsightNearMe from "../../../Nearme/AdviceInsightNearMe";
+import Feature from "../../FetureComponent/Feature";
+import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
-import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
-import PostCodeSectionLocation2 from "../PostCodeSectionLocation2";
+import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
+import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 
-function RoofersInBlackpool() {
+function RoofersInKnutsford() {
     useScrollToTop()
     useRegistrationRedirect()
     const featureRef = useRef(null);
     return (
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_BLACKPOOL} />
+            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_KNUTSFORD} />
             <HeroSectionLocation
                 heading1="Roofers"
-                heading2="Blackpool"
-                description="Find local expert roofers in Blackpool for all kinds of roofing work. Add your postcode, pop in a few details and get matched instantly with specialists in your area. Get free, no obligation quotes delivered straight to your inbox."
+                heading2="Knutsford"
+                description="Get free no-obligation quotes from high-quality roofers in Knutsford. Just enter your postcode, tell us what's going on, and high-quality local roofers will reach out to you. It only takes a minute."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -50,16 +50,16 @@ function RoofersInBlackpool() {
                 serviceName="Roofing"
             />
             <VettedSection
-                paragraph={VETTED_DATA_ROOFERS_BLACKPOOL}
+                paragraph={VETTED_DATA_ROOFERS_KNUTSFORD}
                 vettedHeading1="Find Local Vetted Roofers in "
-                vettedHeading2="Blackpool"
-                breadcrumb={BREADCRUM_DATA_ROOFERS_BLACKPOOL}
+                vettedHeading2="Knutsford"
+                breadcrumb={BREADCRUM_DATA_ROOFERS_KNUTSFORD}
                 extraButton
                 featureRef={featureRef}
             />
 
             <PopularJobNearMe
-                services={POPULAR_SERVICES_ROOFERS_BLACKPOOL}
+                services={POPULAR_SERVICES_ROOFERS_KNUTSFORD}
                 popularImage="/nearme/Roofing/roofslate.webp"
                 altText="two roofers installing slate tiles onto a brand new roof URL"
                 mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -68,15 +68,15 @@ function RoofersInBlackpool() {
             <AboutServicesAndQuestions
                 serviceId={113}
                 serviceName="Roofing"
-                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_BLACKPOOL}
+                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_KNUTSFORD}
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-                <Feature cityName="Blackpool" county='Borough of Blackpool' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+                <Feature cityName="Knutsford" county='Cheshire East' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
             <AdviceInsightNearMe
-                articles={ROOFERS_ADVICEINSIGHT_BLACKPOOL}
+                articles={ROOFERS_ADVICEINSIGHT_KNUTSFORD}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
             />
             <WrapperBGWidth>
@@ -88,16 +88,16 @@ function RoofersInBlackpool() {
                 containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
                 headdingblue="FAQ's"
                 headingblack=""
-                data={ROOFERS_FREQUENTLY_DATA_BLACKPOOL}
+                data={ROOFERS_FREQUENTLY_DATA_KNUTSFORD}
             />
-            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_BLACKPOOL} />
-            <DiscoverNearMe homeData={ROOFERS_DATA_BLACKPOOL} />
+            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_KNUTSFORD} />
+            <DiscoverNearMe homeData={ROOFERS_DATA_KNUTSFORD} />
             <HireRelatedToServiceNearMe
                 heading1="Hire with"
                 heading2="confidence."
-                tabData={ROOFERS_TABDATA_BLACKPOOL}
+                tabData={ROOFERS_TABDATA_KNUTSFORD}
                 activeTabkey="popular"
-                heightClass="min-h-[390px] h-auto md:h-auto lg:min-h-[485.5px] lg:h-auto"
+                heightClass="min-h-[400px] h-auto md:h-auto lg:h-auto"
             />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
@@ -108,4 +108,4 @@ function RoofersInBlackpool() {
         </>
     );
 }
-export default RoofersInBlackpool;
+export default RoofersInKnutsford;

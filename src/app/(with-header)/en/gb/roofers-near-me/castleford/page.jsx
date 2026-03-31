@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInCastleford from '@/app/component/LocationPages/Castleford/RoofersInCastleford';
+import RoofersInCastleford from '@/app/component/LocationPages/Castleford/RoofersInCastleford/RoofersInCastleford';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Vetted Qualified Roofers in Castleford | Localists.com",

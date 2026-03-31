@@ -1,47 +1,47 @@
 "use client";
 import React, { useRef } from "react";
 import {
-    BREADCRUM_DATA_ROOFERS_CASTLEFORD,
-    ROOFERS_FREQUENTLY_DATA_CASTLEFORD,
-    POPULAR_SERVICES_ROOFERS_CASTLEFORD,
-    QUESTION_AND_ABOUT_SERVICE_ROOFERS_CASTLEFORD,
-    ROOFERS_ADVICEINSIGHT_CASTLEFORD,
-    ROOFERS_FEEDBACK_CASTLEFORD,
-    ROOFERS_DATA_CASTLEFORD,
-    ROOFERS_TABDATA_CASTLEFORD,
-    VETTED_DATA_ROOFERS_CASTLEFORD,
-} from "./RoofersInCastlefordData";
-import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-import VettedSection from "../../Nearme/VettedSection";
-import PopularJobNearMe from "../../Nearme/PopularJobNearMe";
-import Footer from "../../Footer/Footer";
-import AboutServicesAndQuestions from "../../Nearme/AboutServicesAndQuestions";
-import { FAQ } from "../../Nearme/FAQ";
-import UserFeedbackNearMe2 from "../../Nearme/UserFeedbackNearMe2";
-import DiscoverNearMe from "../../Nearme/DiscoverNearMe";
-import NearmeMember from "../../Nearme/NearmeMember";
-import FAQScript from "../../common/seo/FAQScript";
-import HireRelatedToServiceNearMe from "../../Nearme/HireRelatedToServiceNearMe";
-import AdviceInsightNearMe from "../../Nearme/AdviceInsightNearMe";
-import Feature from "../FetureComponent/Feature";
-import HeroSectionLocation from "../HeroSectionLocation";
+    BREADCRUM_DATA_ROOFERS_CONWY,
+    ROOFERS_FREQUENTLY_DATA_CONWY,
+    POPULAR_SERVICES_ROOFERS_CONWY,
+    QUESTION_AND_ABOUT_SERVICE_ROOFERS_CONWY,
+    ROOFERS_ADVICEINSIGHT_CONWY,
+    ROOFERS_FEEDBACK_CONWY,
+    ROOFERS_DATA_CONWY,
+    ROOFERS_TABDATA_CONWY,
+    VETTED_DATA_ROOFERS_CONWY,
+} from "./RoofersInConwyData";
+import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+import VettedSection from "../../../Nearme/VettedSection";
+import PopularJobNearMe from "../../../Nearme/PopularJobNearMe";
+import Footer from "../../../Footer/Footer";
+import AboutServicesAndQuestions from "../../../Nearme/AboutServicesAndQuestions";
+import { FAQ } from "../../../Nearme/FAQ";
+import UserFeedbackNearMe2 from "../../../Nearme/UserFeedbackNearMe2";
+import DiscoverNearMe from "../../../Nearme/DiscoverNearMe";
+import NearmeMember from "../../../Nearme/NearmeMember";
+import FAQScript from "../../../common/seo/FAQScript";
+import HireRelatedToServiceNearMe from "../../../Nearme/HireRelatedToServiceNearMe";
+import AdviceInsightNearMe from "../../../Nearme/AdviceInsightNearMe";
+import Feature from "../../FetureComponent/Feature";
+import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
-import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
-import PostCodeSectionLocation2 from "../PostCodeSectionLocation2";
+import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
+import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 
-function RoofersInCastleford() {
+function RoofersInConwy() {
     useScrollToTop()
     useRegistrationRedirect()
     const featureRef = useRef(null);
     return (
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_CASTLEFORD} />
+            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_CONWY} />
             <HeroSectionLocation
                 heading1="Roofers"
-                heading2="Castleford"
-                description="Are you searching for highly experienced and skilled roofers in Castleford? Enter your postcode below, tell us what you need done, and get free quotes from high-quality roofing professionals near you. It takes less than a minute."
+                heading2="Conwy"
+                description="If you need a roofer in Conwy, you can get free quotes from vetted local professionals without having to ring round half the town. Enter your postcode, give us a few details about the work, and that's all. It only takes a couple of minutes."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -50,16 +50,16 @@ function RoofersInCastleford() {
                 serviceName="Roofing"
             />
             <VettedSection
-                paragraph={VETTED_DATA_ROOFERS_CASTLEFORD}
+                paragraph={VETTED_DATA_ROOFERS_CONWY}
                 vettedHeading1="Find Local Vetted Roofers in "
-                vettedHeading2="Castleford"
-                breadcrumb={BREADCRUM_DATA_ROOFERS_CASTLEFORD}
+                vettedHeading2="Conwy"
+                breadcrumb={BREADCRUM_DATA_ROOFERS_CONWY}
                 extraButton
                 featureRef={featureRef}
             />
 
             <PopularJobNearMe
-                services={POPULAR_SERVICES_ROOFERS_CASTLEFORD}
+                services={POPULAR_SERVICES_ROOFERS_CONWY}
                 popularImage="/nearme/Roofing/roofslate.webp"
                 altText="two roofers installing slate tiles onto a brand new roof URL"
                 mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -68,15 +68,15 @@ function RoofersInCastleford() {
             <AboutServicesAndQuestions
                 serviceId={113}
                 serviceName="Roofing"
-                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_CASTLEFORD}
+                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_CONWY}
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-                <Feature cityName="Castleford" county='Castleford' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+                <Feature cityName="Conwy" county='Conwy' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
             <AdviceInsightNearMe
-                articles={ROOFERS_ADVICEINSIGHT_CASTLEFORD}
+                articles={ROOFERS_ADVICEINSIGHT_CONWY}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
             />
             <WrapperBGWidth>
@@ -88,16 +88,15 @@ function RoofersInCastleford() {
                 containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
                 headdingblue="FAQ's"
                 headingblack=""
-                data={ROOFERS_FREQUENTLY_DATA_CASTLEFORD}
+                data={ROOFERS_FREQUENTLY_DATA_CONWY}
             />
-            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_CASTLEFORD} />
-            <DiscoverNearMe homeData={ROOFERS_DATA_CASTLEFORD} />
+            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_CONWY} />
+            <DiscoverNearMe homeData={ROOFERS_DATA_CONWY} />
             <HireRelatedToServiceNearMe
                 heading1="Hire with"
                 heading2="confidence."
-                tabData={ROOFERS_TABDATA_CASTLEFORD}
+                tabData={ROOFERS_TABDATA_CONWY}
                 activeTabkey="popular"
-                heightClass="min-h-[400px] h-auto md:h-auto lg:h-[485.5px]"
             />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
@@ -108,4 +107,4 @@ function RoofersInCastleford() {
         </>
     );
 }
-export default RoofersInCastleford;
+export default RoofersInConwy;

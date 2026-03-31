@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInFormby from '@/app/component/LocationPages/Formby/RoofersInFormby';
+import RoofersInFormby from '@/app/component/LocationPages/Formby/RoofersInFormby/RoofersInFormby';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Find Trusted Roofers Formby | Localists.com",

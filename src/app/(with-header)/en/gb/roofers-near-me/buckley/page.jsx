@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInBuckley from '@/app/component/LocationPages/Buckley/RoofersInBuckley';
+import RoofersInBuckley from '@/app/component/LocationPages/Buckley/RoofersInBuckley/RoofersInBuckley';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "16 Trusted Roofers in Buckley | Quotes in 30 secs | Localists",

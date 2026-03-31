@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInManchester from '@/app/component/LocationPages/Manchester/RoofersInManchester';
+import RoofersInManchester from '@/app/component/LocationPages/Manchester/RoofersInManchester/RoofersInManchester';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Roofers Manchester | Localists.com",

@@ -1,47 +1,47 @@
 "use client";
 import React, { useRef } from "react";
 import {
-    BREADCRUM_DATA_ROOFERS_CONGLETON,
-    ROOFERS_FREQUENTLY_DATA_CONGLETON,
-    POPULAR_SERVICES_ROOFERS_CONGLETON,
-    QUESTION_AND_ABOUT_SERVICE_ROOFERS_CONGLETON,
-    ROOFERS_ADVICEINSIGHT_CONGLETON,
-    ROOFERS_FEEDBACK_CONGLETON,
-    ROOFERS_DATA_CONGLETON,
-    ROOFERS_TABDATA_CONGLETON,
-    VETTED_DATA_ROOFERS_CONGLETON,
-} from "./RoofersInCongletonData";
-import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-import VettedSection from "../../Nearme/VettedSection";
-import PopularJobNearMe from "../../Nearme/PopularJobNearMe";
-import Footer from "../../Footer/Footer";
-import AboutServicesAndQuestions from "../../Nearme/AboutServicesAndQuestions";
-import { FAQ } from "../../Nearme/FAQ";
-import UserFeedbackNearMe2 from "../../Nearme/UserFeedbackNearMe2";
-import DiscoverNearMe from "../../Nearme/DiscoverNearMe";
-import NearmeMember from "../../Nearme/NearmeMember";
-import FAQScript from "../../common/seo/FAQScript";
-import HireRelatedToServiceNearMe from "../../Nearme/HireRelatedToServiceNearMe";
-import AdviceInsightNearMe from "../../Nearme/AdviceInsightNearMe";
-import Feature from "../FetureComponent/Feature";
-import HeroSectionLocation from "../HeroSectionLocation";
+    BREADCRUM_DATA_ROOFERS_HOLYWELL,
+    ROOFERS_FREQUENTLY_DATA_HOLYWELL,
+    POPULAR_SERVICES_ROOFERS_HOLYWELL,
+    QUESTION_AND_ABOUT_SERVICE_ROOFERS_HOLYWELL,
+    ROOFERS_ADVICEINSIGHT_HOLYWELL,
+    ROOFERS_FEEDBACK_HOLYWELL,
+    ROOFERS_DATA_HOLYWELL,
+    ROOFERS_TABDATA_HOLYWELL,
+    VETTED_DATA_ROOFERS_HOLYWELL,
+} from "./RoofersInHolywellData";
+import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+import VettedSection from "../../../Nearme/VettedSection";
+import PopularJobNearMe from "../../../Nearme/PopularJobNearMe";
+import Footer from "../../../Footer/Footer";
+import AboutServicesAndQuestions from "../../../Nearme/AboutServicesAndQuestions";
+import { FAQ } from "../../../Nearme/FAQ";
+import UserFeedbackNearMe2 from "../../../Nearme/UserFeedbackNearMe2";
+import DiscoverNearMe from "../../../Nearme/DiscoverNearMe";
+import NearmeMember from "../../../Nearme/NearmeMember";
+import FAQScript from "../../../common/seo/FAQScript";
+import HireRelatedToServiceNearMe from "../../../Nearme/HireRelatedToServiceNearMe";
+import AdviceInsightNearMe from "../../../Nearme/AdviceInsightNearMe";
+import Feature from "../../FetureComponent/Feature";
+import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
-import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
-import PostCodeSectionLocation2 from "../PostCodeSectionLocation2";
+import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
+import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 
-function RoofersInCongleton() {
+function RoofersInHolywell() {
     useScrollToTop()
     useRegistrationRedirect()
     const featureRef = useRef(null);
     return (
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
-            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_CONGLETON} />
+            <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_HOLYWELL} />
             <HeroSectionLocation
                 heading1="Roofers"
-                heading2="Congleton"
-                description="Receive up to 5 free no-obligation quotes from skilled and qualified Congleton roofers. Enter your postcode below and share a few details about your roof. It takes a minute to get started."
+                heading2="Holywell"
+                description="Need a roofer in Holywell you can actually rely on? Share your postcode and a few details about the work, and you'll receive free no-obligation quotes from vetted local professionals straight to your inbox. It takes under a minute."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -50,16 +50,16 @@ function RoofersInCongleton() {
                 serviceName="Roofing"
             />
             <VettedSection
-                paragraph={VETTED_DATA_ROOFERS_CONGLETON}
+                paragraph={VETTED_DATA_ROOFERS_HOLYWELL}
                 vettedHeading1="Find Local Vetted Roofers in "
-                vettedHeading2="Congleton"
-                breadcrumb={BREADCRUM_DATA_ROOFERS_CONGLETON}
+                vettedHeading2="Holywell"
+                breadcrumb={BREADCRUM_DATA_ROOFERS_HOLYWELL}
                 extraButton
                 featureRef={featureRef}
             />
 
             <PopularJobNearMe
-                services={POPULAR_SERVICES_ROOFERS_CONGLETON}
+                services={POPULAR_SERVICES_ROOFERS_HOLYWELL}
                 popularImage="/nearme/Roofing/roofslate.webp"
                 altText="two roofers installing slate tiles onto a brand new roof URL"
                 mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
@@ -68,15 +68,15 @@ function RoofersInCongleton() {
             <AboutServicesAndQuestions
                 serviceId={113}
                 serviceName="Roofing"
-                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_CONGLETON}
+                contentBlocks={QUESTION_AND_ABOUT_SERVICE_ROOFERS_HOLYWELL}
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-                <Feature cityName="Congleton" county='Cheshire East' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+                <Feature cityName="Holywell" county='Flintshire' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
             <AdviceInsightNearMe
-                articles={ROOFERS_ADVICEINSIGHT_CONGLETON}
+                articles={ROOFERS_ADVICEINSIGHT_HOLYWELL}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
             />
             <WrapperBGWidth>
@@ -88,16 +88,15 @@ function RoofersInCongleton() {
                 containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
                 headdingblue="FAQ's"
                 headingblack=""
-                data={ROOFERS_FREQUENTLY_DATA_CONGLETON}
+                data={ROOFERS_FREQUENTLY_DATA_HOLYWELL}
             />
-            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_CONGLETON} />
-            <DiscoverNearMe homeData={ROOFERS_DATA_CONGLETON} />
+            <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_HOLYWELL} />
+            <DiscoverNearMe homeData={ROOFERS_DATA_HOLYWELL} />
             <HireRelatedToServiceNearMe
                 heading1="Hire with"
                 heading2="confidence."
-                tabData={ROOFERS_TABDATA_CONGLETON}
+                tabData={ROOFERS_TABDATA_HOLYWELL}
                 activeTabkey="popular"
-                heightClass="min-h-[400px] h-auto md:h-auto lg:h-auto"
             />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
@@ -108,4 +107,4 @@ function RoofersInCongleton() {
         </>
     );
 }
-export default RoofersInCongleton;
+export default RoofersInHolywell;

@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInBlackpool from '@/app/component/LocationPages/Blackpool/RoofersInBlackpool';
+import RoofersInBlackpool from '@/app/component/LocationPages/Blackpool/RoofersInBlackpool/RoofersInBlackpool';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Find Reliable Roofers Blackpool | Localists",
