@@ -27,13 +27,13 @@ function PostCodeSectionLocation2({
   return (
     <div
       className={`${classNamePostCode} rounded-[20px]
-        md:rounded-[27.5px] bg-[#7ED5F1] px-8 py-5 lg:px-[186px] lg:py-[40px] 
+        md:rounded-[27.5px] bg-[#7ED5F1] px-8 py-5 lg:px-[140px] lg:py-[40px] 
         
       `}
     >
       <div
         className="flex flex-col gap-6
-        xl:flex-row lg:items-center lg:justify-between"
+        xl:flex-row lg:items-center lg:justify-between w-full xl:max-w-[908px] mx-auto"
       >
         <p
           className="block lg:hidden text-center
@@ -71,14 +71,14 @@ function PostCodeSectionLocation2({
           text-[25px] leading-[28px]
           md:text-[30px] md:leading-[35px]
           lg:text-[40px] lg:leading-[55px]
-          md:text-right
+          md:text-right lg:md:text-center xl:md:text-right
           drop-shadow-[0_0px_3.67px_rgba(0,0,0,0.25)]
         "
         >
           Free quotes. Zero obligation.
         </p>
       </div>
-      <div className="flex justify-center xl:justify-end mt-[30px] xl:mt-2.5">
+      <div className="flex justify-center xl:justify-end mt-[30px] xl:mt-2.5 w-full xl:max-w-[940px]">
         <LogoWhiteIcon className="h-[28px] w-[153px] md:h-auto md:w-auto" />
       </div>
     </div>
