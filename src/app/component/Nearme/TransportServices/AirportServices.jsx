@@ -69,7 +69,7 @@ function AirportServices() {
         heading1="Airport Transfer"
         heading2="in your area"
         tabData={AIRPORT_TRANSPORT_TABDATA}
-        heightClass="min-h-[420px] h-auto md:h-auto lg:h-auto"
+        heightClass="min-h-[420px] md:min-h-[392px] h-auto md:h-auto lg:h-auto"
       />
       <UserFeedbackNearMe feedbackData={FEEDBACK_AIRPORT_TRANSPORT} />
       <AboutServicesAndQuestions

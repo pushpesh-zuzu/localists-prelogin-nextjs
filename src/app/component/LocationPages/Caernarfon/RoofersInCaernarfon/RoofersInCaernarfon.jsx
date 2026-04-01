@@ -95,7 +95,7 @@ function RoofersInCaernarfon() {
         heading2="confidence."
         tabData={ROOFERS_TABDATA_CAERNARFONY}
         activeTabkey="popular"
-        heightClass = "min-h-[400px] h-auto md:h-auto lg:h-auto"
+        heightClass = "min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-auto"
       />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

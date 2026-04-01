@@ -43,7 +43,7 @@ export default function HireRelatedToService({
   heading1 = "Hire with",
   heading2 = "confidence",
   tabData = [],
-  heightClass = "min-h-[400px] h-auto md:h-auto lg:h-[484px]",
+  heightClass = "min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[484px]",
 }) {
   const [currentTab, setcurrentTab] = useState("professionals");
   const [showAll, setShowAll] = useState(false);

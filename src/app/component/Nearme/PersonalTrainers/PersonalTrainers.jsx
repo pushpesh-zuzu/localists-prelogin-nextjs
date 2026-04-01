@@ -76,7 +76,7 @@ function PainterAndDecoratorNearMe() {
                 heading1="Personal Trainers"
                 heading2="in your area"
                 tabData={PERSONAL_TRAINERS_TABDATA}
-                heightClass="min-h-[420px] h-auto md:h-auto lg:h-auto"
+                heightClass="min-h-[426px] md:min-h-[400px] h-auto md:h-auto lg:h-auto"
 
             />
             <UserFeedbackNearMe feedbackData={PERSONAL_TRAINERS_FEEDBACK} />

@@ -42,7 +42,7 @@ export default function HireRelatedToServiceNearMe({
   heading2 = "confidence",
   tabData = [],
   headingMiddle = "",
-  heightClass = "min-h-[400px] h-auto md:h-auto lg:min-h-[489.5px] lg:h-auto",
+  heightClass = "min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:min-h-[489.5px] lg:h-auto",
   activeTabkey = "professionals",
   homePageCss=false
 }) {
@@ -85,7 +85,7 @@ export default function HireRelatedToServiceNearMe({
 
     const uniqueTops = new Set(items.map((el) => el.offsetTop));
       const gap = parseFloat(getComputedStyle(container).rowGap) || 0;
-      setRowGap(gap-2.5);
+      setRowGap(gap-2.6);
     setRowHeight(rh);
     setTotalRows(uniqueTops.size);
   }, []);
@@ -180,7 +180,7 @@ export default function HireRelatedToServiceNearMe({
 
         {/* Show More */}
         {hasMore && (
-          <div className="flex justify-center pt-[20px] md:pt-12">
+          <div className="flex justify-center pt-[20px] lg:pt-12 md:pt-[30px]">
             <Button
               variant="primary"
               onClick={() => setVisibleChunks((c) => c + 1)}
@@ -195,7 +195,7 @@ export default function HireRelatedToServiceNearMe({
 
         {/* Show Less */}
         {hasLess && (
-          <div className="flex justify-center pt-[20px] md:pt-12">
+          <div className="flex justify-center pt-[20px] lg:pt-12 md:pt-[30px]">
             <Button
               variant="primary"
               onClick={() => {

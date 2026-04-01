@@ -79,7 +79,7 @@ function ArchitectsNearMe() {
         heading1="Architects"
         heading2="in your area"
         tabData={ARCHITECTS_TABDATA}
-        heightClass="min-h-[426px] h-auto md:h-auto lg:h-auto"
+        heightClass="min-h-[400px] h-auto md:h-auto lg:h-auto"
       />
       <UserFeedbackNearMe2 feedbackData={FEEDBACK_ARCHITECTS} />
       {/* <PaddingWrapper> */}
