@@ -70,7 +70,7 @@ function Tutors() {
                 heading1="Tutors"
                 heading2="in your area"
                 tabData={TUTORS_TABDATA}
-                heightClass="min-h-[400px] h-auto md:h-auto lg:h-auto"
+                heightClass="min-h-[390px] md:min-h-[460px] [@media(max-width:360px)]:min-h-[388px]  h-auto md:h-auto lg:h-auto"
 
             />
             <UserFeedbackNearMe2 feedbackData={TUTORS_FEEDBACK} />

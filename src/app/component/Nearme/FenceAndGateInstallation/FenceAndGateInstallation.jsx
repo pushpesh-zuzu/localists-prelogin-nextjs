@@ -77,7 +77,7 @@ function FenceAndGateInstallation() {
                 heading1="Fencing Contractors"
                 heading2="in your area"
                 tabData={FENCE_AND_GATE_TABDATA}
-                heightClass="min-h-[426px] h-auto md:h-auto  lg:h-auto"
+                heightClass="min-h-[400px] h-auto md:h-auto  lg:h-auto"
             />
             <UserFeedbackNearMe2 feedbackData={FENCE_AND_GATE_FEEDBACK} />
             <AboutServicesAndQuestions

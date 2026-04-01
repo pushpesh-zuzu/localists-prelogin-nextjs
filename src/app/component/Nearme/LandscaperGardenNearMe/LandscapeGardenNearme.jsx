@@ -92,7 +92,7 @@ function LandscapeGardenNearme() {
         heading1="Landscapers"
         heading2="in your area"
         tabData={LANDSCAPE_NEARME_TABDATA}
-        heightClass="min-h-[426px] h-auto md:h-auto  lg:h-auto"
+        heightClass="min-h-[400px] h-auto md:h-auto lg:h-auto"
       />
       <UserFeedbackNearMe2 feedbackData={FEEDBACK_LANDSCAPE_NEARME} />
       {/* <PaddingWrapper> */}

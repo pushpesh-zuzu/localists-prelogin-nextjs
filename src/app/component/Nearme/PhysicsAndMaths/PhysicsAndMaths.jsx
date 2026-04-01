@@ -71,7 +71,7 @@ function PhysicsAndMaths() {
                 headingMiddle="Tutors"
                 heading2="in your area"
                 tabData={PHYSICS_AND_MATHS_TABDATA}
-                heightClass="min-h-[420px] h-auto md:h-auto lg:h-auto"
+                heightClass="min-h-[420px] md:min-h-[500px] h-auto md:h-auto lg:h-auto"
             />
             <UserFeedbackNearMe2 feedbackData={PHYSICS_AND_MATHS_FEEDBACK} />
             <AboutServicesAndQuestions
