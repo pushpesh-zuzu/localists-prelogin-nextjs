@@ -40,10 +40,12 @@ export const QUESTION_AND_ABOUT_SERVICE_AIRPORT_TRANSPORT = [
     type: "li",
     heading:
       "Pet friendly options, for those travelling with their furry friends.",
+       className:"mb-0"
   },
   {
     type: "h2",
     text: "Choosing the right holiday taxi service",
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
   },
   {
     type: "p",
@@ -89,11 +91,13 @@ export const QUESTION_AND_ABOUT_SERVICE_AIRPORT_TRANSPORT = [
   {
     type: "p",
     text: "Options for luxury vehicles, mobility-friendly vans, or extra luggage capacity. Customised to fit your needs.",
+    notMarginBottom:true
   },
 
   {
     type: "h2",
     text: "How to pick the right airport transfer driver",
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
   },
   {
     type: "p",
@@ -144,11 +148,13 @@ export const QUESTION_AND_ABOUT_SERVICE_AIRPORT_TRANSPORT = [
     type: "uili",
     heading: "Pet Friendly:\u00A0",
     text: "If you’re bringing your pet, ensure the driver you choose allows pets in the vehicle.",
-    marginTop: false,
+    noMarginBottom: true,
   },
   {
     type: "h2",
     text: "How much do airport transfers cost?",
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
+
   },
   {
     type: "p",

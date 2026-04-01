@@ -50,6 +50,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         type: "p",
         text: `At Localist, you can easily compare trainer profiles, read reviews, and get free quotes from local trainers. That way, you’re not just finding “a personal trainer near me”, you’re finding a personal trainer that’s “just right for <i>you</i>”.`,
         className: "mt-[15px] xl:mt-[25px]",
+        notMarginBottom:true
     },
     {
         type: "h2",

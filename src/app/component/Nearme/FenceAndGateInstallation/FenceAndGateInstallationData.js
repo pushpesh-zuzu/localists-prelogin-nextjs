@@ -16,7 +16,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "p",
         text: "You can find any type of specialist you need to cover everything from residential fencing, commercial fencing, agricultural fencing, and even custom-built solutions. Whatever the style or scale of your project, you’ll find professionals who combine craftsmanship with quality to deliver impeccable results, wherever you are.",
-        // notMarginBottom: true,
+        notMarginBottom: true,
     },
     {
         type: "h2",
