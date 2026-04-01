@@ -194,7 +194,7 @@ export const ROOFERS_TABDATA_WORKINGTON = {
         },
     ],
     related: [
-        { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/Whitehaven" },
+        { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
     ],
     findMore: [],
 };
