@@ -23,6 +23,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_TAMESIDE = [
     type: "li",
     text: "There is zero pressure and no awkward follow-up calls - you choose the person who feels right, or you simply walk away",
     className: "mb-6 md:mb-9 lg:mb-[70px]",
+    notMarginBottom: true,
   },
   {
     type: "h2",

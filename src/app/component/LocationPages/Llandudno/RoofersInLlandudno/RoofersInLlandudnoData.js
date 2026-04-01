@@ -50,6 +50,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LLANDUDNO = [
     type: "p",
     text: "The good news is that finding someone like that is exactly what Localists does for you.",
     className: "mb-6 md:mb-9 lg:mb-[70px]",
+    notMarginBottom: true,
   },
   {
     type: "h2",
@@ -98,6 +99,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LLANDUDNO = [
     type: "p",
     text: "Older and seafront properties in Llandudno can push costs higher than these figures suggest. The only accurate number is one a roofer gives you after they've actually been up there.",
     className: "mb-6 md:mb-9 lg:mb-[70px]",
+    notMarginBottom: true,
   },
   {
     type: "h2",

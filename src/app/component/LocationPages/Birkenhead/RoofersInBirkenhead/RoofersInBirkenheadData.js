@@ -43,6 +43,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BIRKENHEAD = [
     type: "p",
     text: "<strong>Matched to your timeline</strong> : Whether you need someone out this week or you're planning ahead, we'll match you with roofers in Birkenhead who can work around your schedule.",
     className: "mb-6 md:mb-9 lg:mb-[70px]",
+    notMarginBottom: true,
   },
   {
     type: "h2",
@@ -194,8 +195,8 @@ export const ROOFERS_TABDATA_BIRKENHEAD = {
     },
   ],
   related: [
-   { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
-   { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+    { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
+    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
   ],

@@ -23,6 +23,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SANDBACH = [
     type: "p",
     text: "That's the gap Localists fills. Before a roofer appears in your results, we've already checked their qualifications, insurance, and track record. You tell us about the job, and we match you with vetted local professionals who are right for your specific property. Free quotes arrive without the chasing; you compare them at your own pace, and you hire whoever feels right. No pressure, no awkward callbacks, and no obligation until you're completely comfortable with your choice.",
     className: "mb-6 md:mb-9 lg:mb-[70px]",
+    notMarginBottom: true,
   },
   {
     type: "h2",
@@ -169,7 +170,7 @@ export const ROOFERS_TABDATA_SANDBACH = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-   related: [
+  related: [
     { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },

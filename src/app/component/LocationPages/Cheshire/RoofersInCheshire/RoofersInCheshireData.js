@@ -46,6 +46,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESHIRE = [
     type: "p",
     text: "Every roofer you find through Localists has already been checked for these points. However, knowing what to look for yourself never hurts.",
     className: "mb-6 md:mb-9 lg:mb-[70px]",
+    notMarginBottom: true,
   },
   {
     type: "h2",
@@ -228,7 +229,7 @@ export const ROOFERS_TABDATA_CHESHIRE = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-    related: [
+  related: [
     { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
