@@ -12,6 +12,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "Having work done on your property can significantly increase its value - especially on your garden. But hiring the wrong landscaper can leave you out of pocket and even de-value your properties value. That’s where we come in. At Localists, we do all the vetting for you, and make sure that only the best local landscapers are present on our platform. All of the landscape gardeners on our platform are put through a rigorous  vetting procedure, and we source all of their reviews from various review sites across the web and put it all in one convenient place for you. Just enter your postcode and a few details to get started!",
+    notMarginBottom:true
   },
   {
     type: "h2",
