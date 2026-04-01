@@ -65,7 +65,7 @@ function TreeSurgeonInChester() {
         altText="a tree surgeon cutting the branches of an evergreen tree"
         mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
         ctaLink="/en/gb/tree-surgeon-multi-form-ppc"
-        paddingClass="px-[17.5px] py-[30px]  sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[0px]"
+        paddingClass="px-[17.5px] py-[30px] sm:px-10 md:px-16 lg:px-16 md:pb-0 xl:px-[120px] pt-0 xl:pb-[0px]"
       />
       <AboutServicesAndQuestions
         contentBlocks={QUESTION_AND_ABOUT_SERVICE_TREE_SURGEON_CHESTER}

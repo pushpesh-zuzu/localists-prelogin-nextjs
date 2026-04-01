@@ -44,7 +44,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BUCKLEY = [
     {
         type: "h2",
         text: "When is the cheapest time to replace my roof?",
-        className: "mt-6 lg:mt-[72px]",
+        className: "mt-6 md:mt-9 lg:mt-[70px]",
     },
     {
         type: "p",
@@ -54,7 +54,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BUCKLEY = [
     {
         type: "h2",
         text: "Using Localists to find a roofer in the Buckley area just makes sense.",
-        className: "mt-6 lg:mt-[72px]",
+        className: "mt-6 md:mt-9 lg:mt-[70px]",
     },
     {
         type: "p",
@@ -68,7 +68,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BUCKLEY = [
     {
         type: "h2",
         text: "What’s the most expensive part of replacing a roof?",
-        className: "mt-6 lg:mt-[72px]",
+        className: "mt-6 md:mt-9 lg:mt-[70px]",
     },
     {
         type: "p",
@@ -78,7 +78,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BUCKLEY = [
     {
         type: "h2",
         text: "How long does it take to replace a roof?",
-        className: "mt-6 lg:mt-[72px]",
+        className: "mt-6 md:mt-9 lg:mt-[70px]",
     },
     {
         type: "p",
@@ -88,7 +88,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BUCKLEY = [
     {
         type: "h2",
         text: "What’s the most common roof type in Buckley?",
-        className: "mt-6 lg:mt-[72px]",
+        className: "mt-6 md:mt-9 lg:mt-[70px]",
     },
     {
         type: "p",

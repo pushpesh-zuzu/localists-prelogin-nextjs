@@ -21,7 +21,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "h2",
         text: "Why hiring through Localists just makes sense.",
-        className: "mt-6 lg:mt-[72px]"
+        className: "mt-6 md:mt-9 lg:mt-[70px]"
     },
     {
         type: "p",

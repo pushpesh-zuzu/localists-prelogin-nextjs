@@ -89,7 +89,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ALTRINCHAM = [
   {
     type: "h2",
     text: "Why using Localists makes finding Altrincham Roofers easier",
-    className: "mt-6 lg:mt-[72px]",
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
   },
   {
     type: "p",

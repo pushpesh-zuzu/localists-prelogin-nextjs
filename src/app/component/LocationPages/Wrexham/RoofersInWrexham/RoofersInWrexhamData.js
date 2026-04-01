@@ -68,7 +68,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
   {
     type: "h2",
     text: "How much does roofing cost in Wrexham?",
-    className: "mt-6 lg:mt-[72px]",
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
   },
   {
     type: "p",

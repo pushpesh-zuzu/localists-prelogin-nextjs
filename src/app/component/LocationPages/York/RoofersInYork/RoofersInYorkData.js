@@ -81,7 +81,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_YORK = [
   {
     type: "h2",
     text: "What to look for in a York roofer – Qualifications and timings",
-    className: "mt-6 lg:mt-[72px]",
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
   },
   {
     type: "p",

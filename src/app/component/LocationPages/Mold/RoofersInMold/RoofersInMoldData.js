@@ -93,7 +93,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
   {
     type: "h2",
     text: "Why many homeowners use Localists to find Roofers in Mold",
-    className: "mt-6 lg:mt-[72px]",
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
   },
   {
     type: "p",

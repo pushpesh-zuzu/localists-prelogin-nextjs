@@ -75,7 +75,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WARRINGTON = [
   {
     type: "h2",
     text: "Need a Roofer Fast in Warrington?",
-    className: "mt-6 lg:mt-[72px]",
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
   },
   {
     type: "p",

@@ -173,7 +173,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
   {
     type: "h2",
     text: "How to choose the right roofer in Liverpool",
-    className: "mt-6 lg:mt-[72px]",
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
   },
   {
     type: "p",

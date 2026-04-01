@@ -89,7 +89,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
   {
     type: "h2",
     text: "When is it a repair… And when is it time to replace?",
-    className: "mt-6 lg:mt-[72px]",
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
   },
   {
     type: "p",

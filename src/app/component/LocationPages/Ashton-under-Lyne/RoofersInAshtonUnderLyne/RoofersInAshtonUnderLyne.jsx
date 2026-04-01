@@ -63,7 +63,7 @@ function RoofersInAshtonUnderLyne() {
                 popularImage="/nearme/Roofing/roofslate.webp"
                 altText="two roofers installing slate tiles onto a brand new roof URL"
                 mobileCardClass="w-[285px] min-[440px]:w-[302px] min-[512px]:w-[350px]"
-                paddingClass="px-[17.5px] py-[30px] sm:px-10 md:px-16 lg:px-16 md:pb-10 xl:px-[120px] pt-0 xl:pb-[0px]"
+                paddingClass="px-[17.5px] py-[30px] sm:px-10 md:px-16 lg:px-16 md:pb-0 xl:px-[120px] pt-0 xl:pb-[0px]"
             />
             <AboutServicesAndQuestions
                 serviceId={113}

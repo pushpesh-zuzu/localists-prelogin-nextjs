@@ -56,7 +56,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "h2",
         text: "What does a painter and decorator actually do?",
-        className: "mt-6 lg:mt-[72px]"
+        className: "mt-6 md:mt-9 lg:mt-[70px]"
     },
     // {
     //     type: "h3",
@@ -99,7 +99,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "h2",
         text: "How much should you pay for a painter and decorator?",
-        className: "mt-6 lg:mt-[72px]"
+        className: "mt-6 md:mt-9 lg:mt-[70px]"
     },
     {
         type: "p",
