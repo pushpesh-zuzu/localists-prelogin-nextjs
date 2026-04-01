@@ -55,7 +55,7 @@ function HeroSectionLocation({
 
         <div className="relative z-10 max-w-[1536px] mx-auto md:h-full">
           <section
-            className="flex flex-col  justify-around h-[550px] max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full md:flex-row px-[30px] pt-8 pb-[31.33px] md:pb-[60.33px] md:px-[60px] lg:pb-[64px] xl:pb-[78px] md:pt-9 lg:pt-8 xl:px-[120px] xl:pt-[73.88px] relative z-10"
+            className="flex flex-col  justify-around h-[550px] max-h-[550px] max-[353px]:max-h-[550px] md:max-h-full md:flex-row px-[30px] pt-8 pb-[31.33px] md:pb-8 md:px-[60px] lg:pb-[64px] xl:pb-[78px] md:pt-8 lg:pt-8 xl:px-[120px] xl:pt-[73.88px] relative z-10"
             role="banner"
             aria-label="Hero section"
           >
