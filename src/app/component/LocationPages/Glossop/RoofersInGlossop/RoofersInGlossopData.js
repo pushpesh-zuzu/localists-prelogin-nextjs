@@ -21,7 +21,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_GLOSSOP = [
     prices: [
       {
         text: "If it’s a general roofing job, the average tends to sit around",
-        price: "£2620",
+        price: "£2,620",
       },
       {
         text: "For straightforward repairs, like fixing a leak or replacing a few tiles, it’s often somewhere near",
@@ -33,7 +33,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_GLOSSOP = [
       },
       {
         text: "And if the roof has reached the point where it needs to be fully replaced, people usually find themselves spending around ",
-        price: "£6670",
+        price: "£6,670",
       },
     ],
   },

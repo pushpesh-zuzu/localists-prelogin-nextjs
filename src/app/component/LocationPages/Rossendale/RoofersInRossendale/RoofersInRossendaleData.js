@@ -21,7 +21,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ROSSENDALE = [
     prices: [
       {
         text: "General roofing work Many jobs average around",
-        price: "£2184",
+        price: "£2,184",
       },
       {
         text: "Roof repairs For typical repairs, homeowners often spend around",
@@ -33,7 +33,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ROSSENDALE = [
       },
       {
         text: "Full roof replacement Replacing a whole roof usually comes in around",
-        price: "£7567",
+        price: "£7,567",
       },
     ],
   },

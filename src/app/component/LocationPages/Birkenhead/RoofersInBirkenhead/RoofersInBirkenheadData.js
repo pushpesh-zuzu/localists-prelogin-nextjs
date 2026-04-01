@@ -66,7 +66,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BIRKENHEAD = [
     prices: [
       {
         text: "For general roofing work, the average cost comes in at",
-        price: "£2120",
+        price: "£2,120",
       },
       {
         text: "For standard roofing repairs, the average is around",
@@ -78,7 +78,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BIRKENHEAD = [
       },
       {
         text: "For a full roof replacement, homeowners usually pay in the region of",
-        price: "£6840",
+        price: "£6,840",
       },
     ],
   },

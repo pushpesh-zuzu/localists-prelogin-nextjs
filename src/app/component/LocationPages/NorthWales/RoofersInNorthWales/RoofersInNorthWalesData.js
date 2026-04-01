@@ -31,7 +31,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTH_WALES = [
     prices: [
       {
         text: "For general roofing jobs, homeowners usually spend around",
-        price: "£2010",
+        price: "£2,010",
       },
       {
         text: "Most straightforward repairs, including fixing leaks and replacing broken tiles, come in at about",
@@ -43,7 +43,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTH_WALES = [
       },
       {
         text: "For a full replacement of a new roof, the average cost in Mold is around",
-        price: "£6620",
+        price: "£6,620",
       },
     ],
   },

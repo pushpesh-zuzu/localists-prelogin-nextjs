@@ -67,7 +67,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CAERNARFONY = [
     prices: [
       {
         text: "For general roofing work, the average tends to be around ",
-        price: "£2860",
+        price: "£2,860",
       },
       {
         text: "If it’s a repair, such as sorting out a leak or replacing a few tiles, it usually costs around ",
@@ -79,7 +79,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CAERNARFONY = [
       },
       {
         text: "And if the roof needs to be fully replaced, the average cost sits around ",
-        price: "£7500",
+        price: "£7,500",
       },
     ],
   },
