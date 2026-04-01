@@ -81,7 +81,7 @@ function RoofersInChester() {
       />
       <WrapperBGWidth>
         <div className="px-[30px] sm:px-10 md:px-16 xl:px-[120px]">
-          <PostCodeSectionLocation2 classNamePostCode="mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px] lg:justify-center lg:gap-12" serviceId={113} serviceName="Roofing" />
+          <PostCodeSectionLocation2 classNamePostCode="mb-[30px] md:mb-10 mt-[0px] lg:mt-[0px] lg:mb-[60px] lg:justify-center lg:gap-12" serviceId={113} serviceName="Roofing" />
         </div>
       </WrapperBGWidth>
       <FAQ
