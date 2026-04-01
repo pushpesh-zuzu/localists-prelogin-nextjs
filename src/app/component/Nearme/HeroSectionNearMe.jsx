@@ -65,7 +65,7 @@ function HeroSectionNearMe({
               <H1 className="text-white block drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
                 <span>
                   {heading1}
-                  <span className={`text-[#253238] ${blackHeadinginline}`}>{headingMiddle && <span className="text-white">{headingMiddle}</span>} {heading2}</span>
+                  <span className={`text-[#253238] ${blackHeadinginline}`}>{headingMiddle && <span className="text-white"> {headingMiddle}</span>} {heading2}</span>
                 </span>
               </H1>
               <p className="font-[Arial] font-bold  text-[18px] leading-[18px]

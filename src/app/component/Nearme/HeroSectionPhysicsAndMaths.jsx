@@ -8,6 +8,7 @@ import PostCodeSearchField from "./PostCodeSearchField";
 
 function HeroSectionPhysicsAndMaths({
   heading1 = "Find Tree Surgeons",
+  headingMiddle="",
   heading2 = "Near You.",
   description = `Find the best tree surgeons for your job, just enter your postcode
               and a few details for instant quotes.`,
@@ -18,6 +19,8 @@ function HeroSectionPhysicsAndMaths({
   serviceName = "Tree Surgery",
   containerHight = "relative w-full md:h-[375px] lg:h-[550px] xl:h-[570px] xl:max-h-[570px]",
   desktopImageClass = "object-cover h-10 w-10 md:h-[375px] min-[900px]:h-[400px] lg:h-[550px] xl:h-[570px]",
+  blackHeadinginline="block"
+
 }) {
   return (
     <>
@@ -60,7 +63,7 @@ function HeroSectionPhysicsAndMaths({
               <H1 className="text-white block drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
                 <span>
                   {heading1}
-                  <span className="text-[#253238] block">{heading2}</span>
+                  <span className={`text-[#253238] ${blackHeadinginline}`}>{headingMiddle && <span className="text-white"> {headingMiddle}</span>} {heading2}</span>
                 </span>
               </H1>
               <Paragraph1 className="tracking-[0em]! text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] sm:max-w-[60%] md:max-w-[600px] lg:max-w-[700px] text-white pt-[18px] md:pt-3 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
@@ -69,6 +72,7 @@ function HeroSectionPhysicsAndMaths({
               <PostCodeSearchField
                 serviceId={serviceId}
                 serviceName={serviceName}
+                marginTop="mt-[30px] md:mt-6 lg:mt-9"
               />
             </div>
             <div className="flex h-[12px] ml-auto mr-auto justify-center mb-3.5 mt-[30px] md:hidden relative z-1">

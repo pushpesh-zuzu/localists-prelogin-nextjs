@@ -61,7 +61,7 @@ function HeroSectionNearMeOtherTheHome({
               <H1 className="text-white block drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]">
                 <span>
                   {heading1}
-                  <span className={`text-[#253238] ${blackHeadinginline}`}>{headingMiddle && <span className="text-white">{headingMiddle}</span>} {heading2}</span>
+                  <span className={`text-[#253238] ${blackHeadinginline}`}>{headingMiddle && <span className="text-white"> {headingMiddle}</span>} {heading2}</span>
                 </span>
               </H1>
               <Paragraph1 className="tracking-[0em]! text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-[80%] sm:max-w-[60%] md:max-w-[450px] lg:max-w-[590px] text-white pt-[18px] md:pt-4 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
