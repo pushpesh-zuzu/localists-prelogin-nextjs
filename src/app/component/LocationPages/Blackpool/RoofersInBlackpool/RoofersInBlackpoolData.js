@@ -79,6 +79,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BLACKPOOL = [
   {
     type: "p",
     text: "Some roofers also provide guarantees on their workmanship. It’s worth asking what’s covered and for how long.",
+    className:"mb-6 md:mb-9 lg:mb-[70px]"
   },
   {
     type: "h2",
