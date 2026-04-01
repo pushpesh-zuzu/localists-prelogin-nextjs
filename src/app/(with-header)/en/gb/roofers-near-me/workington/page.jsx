@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInWorkington from '@/app/component/LocationPages/Workington/RoofersInWorkington';
+import RoofersInWorkington from '@/app/component/LocationPages/Workington/RoofersInWorkington/RoofersInWorkington';
 import React, { Suspense } from 'react'
 export const metadata = {
     title: "Discover Roofers Workington | Localists",

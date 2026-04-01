@@ -69,7 +69,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESHIRE = [
     prices: [
       {
         text: "For general roofing work, the average cost comes in at",
-        price: "£2120",
+        price: "£2,120",
       },
       {
         text: "For standard roofing repairs, the average is around",
@@ -81,7 +81,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESHIRE = [
       },
       {
         text: "For a full roof replacement, homeowners usually pay in the region of",
-        price: "£7570",
+        price: "£7,570",
       },
     ],
   },

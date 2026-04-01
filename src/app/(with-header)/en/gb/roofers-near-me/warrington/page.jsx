@@ -1,6 +1,6 @@
 import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
 import SEO from '@/app/component/common/seo/SEO';
-import RoofersInWarrington from '@/app/component/LocationPages/Warrington/RoofersInWarrington';
+import RoofersInWarrington from '@/app/component/LocationPages/Warrington/RoofersInWarrington/RoofersInWarrington';
 import React, { Suspense } from 'react'
 export const metadata = {
   title: "Find Vetted Roofers Warrington |Free Quotes| Localists.com",

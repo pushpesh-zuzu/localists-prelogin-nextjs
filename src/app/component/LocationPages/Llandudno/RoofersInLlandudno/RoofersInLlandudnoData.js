@@ -78,7 +78,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LLANDUDNO = [
     prices: [
       {
         text: "For general roofing work, the average cost comes in at",
-        price: "£2858",
+        price: "£2,858",
       },
       {
         text: "For standard roofing repairs, the average is around",
@@ -90,7 +90,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LLANDUDNO = [
       },
       {
         text: "For a full roof replacement, homeowners usually pay in the region of",
-        price: "£7495",
+        price: "£7,495",
       },
     ],
   },

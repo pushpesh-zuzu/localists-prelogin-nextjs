@@ -65,7 +65,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
     prices: [
       {
         text: "General roofing work tends to average around",
-        price: "£21,21",
+        price: "£2,121",
       },
       {
         text: "Roof repairs usually come in at roughly ",

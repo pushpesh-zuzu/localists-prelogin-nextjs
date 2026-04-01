@@ -65,7 +65,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_COLWNYBAY = [
     prices: [
       {
         text: "For general roofing work, the average cost comes in at",
-        price: "£2860",
+        price: "£2,860",
       },
       {
         text: "For standard roofing repairs, the average is around",
@@ -77,7 +77,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_COLWNYBAY = [
       },
       {
         text: "For a full roof replacement, homeowners usually pay in the region of",
-        price: "£7500",
+        price: "£7,500",
       },
     ],
   },

@@ -177,6 +177,7 @@ export const ROOFERS_TABDATA_ANGLESEY = {
         { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
         { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
         { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+        { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
         { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
         { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
         { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },

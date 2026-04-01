@@ -62,7 +62,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WIDNES = [
     prices: [
       {
         text: "General roofing work Usually comes out at around ",
-        price: "£2120",
+        price: "£2,120",
       },
       {
         text: "Roof repairs Things like fixing a leak or replacing damaged tiles tend to cost around",
@@ -74,7 +74,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WIDNES = [
       },
       {
         text: "Full roof replacement Replacing the whole roof typically costs around",
-        price: "£6840",
+        price: "£6,840",
       },
     ],
   },

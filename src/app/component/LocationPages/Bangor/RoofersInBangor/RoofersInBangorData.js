@@ -38,7 +38,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BANGOR = [
     prices: [
       {
         text: "For general roofing work, the average cost comes in at",
-        price: "£2840",
+        price: "£2,840",
       },
       {
         text: "For standard roofing repairs, the average is around",
@@ -50,7 +50,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BANGOR = [
       },
       {
         text: "For a full roof replacement, homeowners usually pay in the region of",
-        price: "£8660",
+        price: "£8,660",
       },
     ],
   },

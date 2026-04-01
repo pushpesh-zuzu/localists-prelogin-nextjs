@@ -47,7 +47,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SANDBACH = [
     prices: [
       {
         text: "General roofing work tends to average around",
-        price: "£2120",
+        price: "£2,120",
       },
       {
         text: "Roof repairs often come in at roughly",
@@ -59,7 +59,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SANDBACH = [
       },
       {
         text: "Full roof replacements are a larger investment, averaging about",
-        price: "£6840",
+        price: "£6,840",
       },
     ],
   },
