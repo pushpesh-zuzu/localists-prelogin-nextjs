@@ -136,8 +136,8 @@ export default function HireRelatedToServiceNearMe({
                     key={tab.activtab}
                     className={`${
                       isActive ? "border-2 border-white rounded-full" : ""
-                    }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em]
-                      text-[11px] md:text-[14px]
+                    }  font-[Arial] font-bold text-white px-2.5 tracking-[-0.03em] 
+                      max-[360px]:text-[9px] text-[11px] md:text-[14px]
                       xl:text-[18px] py-[3px] sm:px-3 sm:py-1.5 xl:px-4 xl:py-[11px]`}
                   >
                     <span
