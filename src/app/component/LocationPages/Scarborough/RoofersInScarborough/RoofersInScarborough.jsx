@@ -94,7 +94,7 @@ function RoofersInScarborough() {
         heading1="Hire with"
         heading2="confidence."
         tabData={ROOFERS_TABDATA_SCARBOROUGH}
-        activeTabkey="popular"
+         activeTabkey="related"
         heightClass="min-h-[400px] h-auto md:h-auto lg:min-h-[489.5px] lg:h-auto"
       />
       <NearmeMember

@@ -96,7 +96,7 @@ function RoofersInKnutsford() {
                 heading1="Hire with"
                 heading2="confidence."
                 tabData={ROOFERS_TABDATA_KNUTSFORD}
-                activeTabkey="popular"
+                 activeTabkey="related"
                 heightClass="min-h-[400px] h-auto md:h-auto lg:h-auto"
             />
             <NearmeMember
