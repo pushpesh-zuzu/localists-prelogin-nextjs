@@ -94,7 +94,7 @@ function RoofersInLlandudno() {
         heading1="Hire with"
         heading2="confidence."
         tabData={ROOFERS_TABDATA_LLANDUDNO}
-         activeTabkey="related"
+        activeTabkey="popular"
       />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

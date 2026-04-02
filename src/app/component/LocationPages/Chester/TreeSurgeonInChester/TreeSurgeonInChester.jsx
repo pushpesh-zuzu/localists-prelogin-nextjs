@@ -91,7 +91,7 @@ function TreeSurgeonInChester() {
         heading1="Hire with"
         heading2="confidence."
         tabData={TREE_SURGEON_TABDATA_CHESTER}
-         activeTabkey="related"
+        activeTabkey="popular"
         heightClass="min-h-[400px] h-auto md:h-auto lg:h-[546px]"
       />
       <NearmeMember

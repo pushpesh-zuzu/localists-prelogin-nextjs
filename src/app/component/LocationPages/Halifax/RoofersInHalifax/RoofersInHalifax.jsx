@@ -96,7 +96,7 @@ function RoofersInHalifax() {
                 heading1="Hire with"
                 heading2="confidence."
                 tabData={ROOFERS_TABDATA_HALIFAX}
-                 activeTabkey="related"
+                activeTabkey="popular"
                 heightClass="min-h-[400px] h-auto md:h-auto lg:h-[485.5px]"
             />
             <NearmeMember

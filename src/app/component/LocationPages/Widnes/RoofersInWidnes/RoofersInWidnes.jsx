@@ -94,7 +94,7 @@ function RoofersInWidnes() {
         heading1="Hire with"
         heading2="confidence."
         tabData={ROOFERS_TABDATA_WIDNES}
-         activeTabkey="related"
+        activeTabkey="popular"
         heightClass = "min-h-[400px] h-auto md:h-auto lg:h-auto"
       />
       <NearmeMember

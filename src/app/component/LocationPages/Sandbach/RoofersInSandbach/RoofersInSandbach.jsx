@@ -94,7 +94,7 @@ function RoofersInSandbach() {
         heading1="Hire with"
         heading2="confidence."
         tabData={ROOFERS_TABDATA_SANDBACH}
-         activeTabkey="related"
+        activeTabkey="popular"
         heightClass = "min-h-[400px] h-auto md:h-auto lg:h-auto"
       />
       <NearmeMember

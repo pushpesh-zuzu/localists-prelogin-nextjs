@@ -96,7 +96,7 @@ function RoofersInBlackpool() {
                 heading1="Hire with"
                 heading2="confidence."
                 tabData={ROOFERS_TABDATA_BLACKPOOL}
-                 activeTabkey="related"
+                activeTabkey="popular"
                 heightClass="min-h-[390px] h-auto md:h-auto lg:min-h-[485.5px] lg:h-auto"
             />
             <NearmeMember

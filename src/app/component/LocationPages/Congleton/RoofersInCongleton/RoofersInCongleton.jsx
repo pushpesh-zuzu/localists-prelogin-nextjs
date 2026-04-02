@@ -96,7 +96,7 @@ function RoofersInCongleton() {
                 heading1="Hire with"
                 heading2="confidence."
                 tabData={ROOFERS_TABDATA_CONGLETON}
-                 activeTabkey="related"
+                activeTabkey="popular"
                 heightClass="min-h-[400px] h-auto md:h-auto lg:h-auto"
             />
             <NearmeMember
