@@ -11,6 +11,7 @@ import OtpVerificationModal from "./OtpverificationModal";
 import ReEnterMobileNumberModal from "./ReEnterMobileNumberModal";
 import DescribeYourRequestModal from "./DescribeYourRequestModal";
 import SeeMyMatchesModal from "./SeeMyMatchesModal";
+import AddressFields from "../../common/ReqBuyerRegistration/AddressFields";
 
 function RequestARegistration({
     onClose,
@@ -54,11 +55,11 @@ function RequestARegistration({
 
     const stepFlow = useMemo(() => {
         if (isAdminOrRemembered) {
-            return hasSellers ? [2, 3, 4, 5] : [2, 3, 4];
+            return hasSellers ? [2, 3, 4, 5, 6] : [2, 3, 4, 5];
         } else {
-            return hasSellers ? [1, 2, 3, 4, 5] : [1, 2, 3, 4];
+            return hasSellers ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5];
         }
-    }, [isAdminOrRemembered, hasSellers]);
+        }, [isAdminOrRemembered, hasSellers]);
 
     const nextStep = () => {
         const currentIndex = stepFlow.indexOf(buyerStep);
@@ -132,13 +133,13 @@ function RequestARegistration({
 
     let currentPosition = 0;
 
-    if (buyerStep === 2 && totalQuestions > 0) {
-        const baseIndex = stepFlow.indexOf(2);
+    if (buyerStep === 3 && totalQuestions > 0) {
+        const baseIndex = stepFlow.indexOf(3);
         currentPosition = baseIndex + questionIndex + 1;
     } else {
         const stepIndex = stepFlow.indexOf(buyerStep);
 
-        if (totalQuestions > 0 && stepIndex > stepFlow.indexOf(2)) {
+        if (totalQuestions > 0 && stepIndex > stepFlow.indexOf(3)) {
             // After questions, shift position forward by (questionCount - 1)
             currentPosition =
                 stepIndex + totalQuestions;
@@ -147,9 +148,21 @@ function RequestARegistration({
         }
     }
 
-    let progressPercent = Math.round(
+    // let progressPercent = Math.round(
+    //     (currentPosition / totalSteps) * 100
+    // );
+     let progressPercent = 0
+    if (buyerStep === 1) {
+    progressPercent = 10;
+    }
+    else if (buyerStep === 2) {
+        progressPercent = 20;
+    }
+    else {
+     progressPercent = Math.round(
         (currentPosition / totalSteps) * 100
     );
+    }
 
     if (stepFlow.indexOf(buyerStep) === stepFlow.length - 1) {
         progressPercent = 100;
@@ -170,6 +183,7 @@ function RequestARegistration({
 
     return (
         <>
+            
             {buyerStep === 1 && (
                 <NameEmailPostCodePhone
                     nextStep={nextStep}
@@ -183,6 +197,15 @@ function RequestARegistration({
                 />
             )}
             {buyerStep === 2 && (
+                    <AddressFields
+                        nextStep={nextStep}
+                        previousStep={previousStep}
+                        onClose={handleClose}
+                        setShowConfirmModal={setShowConfirmModal}
+                        progressPercent={progressPercent}
+                    />
+                )}
+            {buyerStep === 3 && (
                 <QuestionModal
                     ref={questionModalRef}
                     questions={questionanswerData}
@@ -200,7 +223,7 @@ function RequestARegistration({
                 />
             )}
 
-            {buyerStep === 3 && reEnterMobile === 2 && (
+            {buyerStep === 4 && reEnterMobile === 2 && (
                 <OtpVerificationModal
                     nextStep={nextStep}
                     previousStep={previousStep}
@@ -222,7 +245,7 @@ function RequestARegistration({
                 />
             )}
 
-            {buyerStep === 4 && (
+            {buyerStep === 5 && (
                 <DescribeYourRequestModal
                     nextStep={nextStep}
                     previousStep={previousStep}
@@ -233,7 +256,7 @@ function RequestARegistration({
                 />
             )}
 
-            {buyerStep === 5 && hasSellers && (
+            {buyerStep === 6 && hasSellers && (
                 <SeeMyMatchesModal
                     onClose={handleClose}
                     nextStep={nextStep}

@@ -25,7 +25,8 @@ function NameEmailPhone({
     isStartWithQuestionModal = false,
     isPPCPages = false,
     serviceId,
-    progressPercent
+    progressPercent,
+    previousStep
 }) {
     const router = useRouter();
     const dispatch = useDispatch();
@@ -222,6 +223,7 @@ function NameEmailPhone({
             buttongroup="lg:mx-[75.4px] md:mx-[63px] mx-[18px]"
             progressPercent={progressPercent}
             marginTop="lg:mt-[10vh] mt-[5vh]"
+            onBack={previousStep}
         >
             <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
                 <InputField
