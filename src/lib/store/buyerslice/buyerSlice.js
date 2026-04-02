@@ -75,6 +75,8 @@ const initialState = {
   autoBidListLoader: false,
   manualBidLoader: false,
   showBookingModal: false,
+  addressList: [],
+  addressLoader: false,
 };
 
 // ----------------------------
@@ -204,7 +206,7 @@ export const getFetchSellerListData = (data) => {
       return response.data
     } catch (error) {
       const errorMessage =
-      error?.response?.data?.message?.county?.[0]
+        error?.response?.data?.message?.county?.[0]
       console.error("Error get seller data:", errorMessage);
       showToast("error", errorMessage || "Data not found");
       throw error;
@@ -631,6 +633,35 @@ export const checkEmailIdApi = createAsyncThunk(
   }
 );
 
+export const getAddressListFromPostcode = (postcodeData) => {
+  return async (dispatch) => {
+    dispatch(setAddressLoader(true));
+
+    try {
+      const response = await axiosInstance.post(
+        `get-address-list-from-postcode`,
+        postcodeData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response) {
+        // console.log("AddressList", response.data.data);
+        dispatch(setAddressList(response?.data?.data || []));
+        return response.data;
+      }
+    } catch (error) {
+      console.log("Error fetching address list:", error?.response?.data);
+      throw error;
+    } finally {
+      dispatch(setAddressLoader(false));
+    }
+  };
+};
+
 // ----------------------------
 // Buyer Slice
 // ----------------------------
@@ -639,6 +670,12 @@ const buyerSlice = createSlice({
   name: "buyer",
   initialState: initialState,
   reducers: {
+    setAddressList: (state, action) => {
+      state.addressList = action.payload;
+    },
+    setAddressLoader: (state, action) => {
+      state.addressLoader = action.payload;
+    },
     setPostCodeLoader: (state, action) => {
       state.postCodeLoader = action.payload;
     },
@@ -792,6 +829,8 @@ const buyerSlice = createSlice({
 });
 
 export const {
+  setAddressList,
+  setAddressLoader,
   setPostCodeLoader,
   setResendOtpLoader,
   setquestionLoader,

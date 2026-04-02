@@ -14,6 +14,8 @@ import {
   setbuyerRequestData,
   setcitySerach,
   questionAnswerData,
+  getAddressListFromPostcode,
+  setAddressList
 } from "@/lib/store/buyerslice/buyerSlice";
 import { useParams } from "next/navigation";
 import { getBarkToken } from "@/utils/CookiesHelper";
@@ -46,15 +48,20 @@ const ServiceAndPostCodeModal = ({
   const [postalCodeValidate, setPostalCodeValidate] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const [errors, setErrors] = useState({ service: "", pincode: "" });
+  const [errors, setErrors] = useState({ service: "", pincode: "", house: "", street: "" });
   const [loading, setLoading] = useState(false);
   const [checkingPostcode, setCheckingPostcode] = useState(false);
+
+  const [house, setHouse] = useState("");
+  const [street, setStreet] = useState("");
+  const [selectedAddressId, setSelectedAddressId] = useState("");
+  const [hasFetchedAddress, setHasFetchedAddress] = useState(false);
 
   const { slug } = useParams();
   const { searchServiceLoader, service, registerData } = useSelector(
     (state) => state.findJobs
   );
-  const { citySerach } = useSelector((state) => state.buyer);
+  const { citySerach, addressList, addressLoader } = useSelector((state) => state.buyer);
   const dispatch = useDispatch();
   const inputRef = useRef(null);
   const dropdownRef = useRef(null);
@@ -206,14 +213,35 @@ const ServiceAndPostCodeModal = ({
     setPincode(value);
   };
 
-  const handleContinue = useCallback(async () => {
-    let newErrors = { service: "", pincode: "" };
 
+  const handleContinue = useCallback(async () => {
+    let newErrors = { service: "", pincode: "", house: "", street: "" };
+
+
+    let houseValue = house;
+    let streetValue = street;
+
+    if (selectedAddressId !== "" && (!houseValue || !streetValue)) {
+      const selected = addressList[selectedAddressId];
+      if (selected) {
+        houseValue = selected.house_name || "";
+        streetValue = selected.street_address || "";
+      }
+    }
     if (!selectedService?.id) newErrors.service = "Please select a service!";
     if (!pincode) newErrors.pincode = "Postcode is required!";
+    if (!houseValue?.trim()) {
+      newErrors.house = "House name is required!";
+    }
+
+    if (!streetValue?.trim()) {
+      newErrors.street = "Street address is required!";
+    }
 
     setErrors(newErrors);
-    if (newErrors.service || newErrors.pincode) return;
+    if (newErrors.service || newErrors.pincode || newErrors.house || newErrors.street) return;
+
+    setErrors({ service: "", pincode: "", house: "", street: "" });
 
     setLoading(true);
     try {
@@ -256,6 +284,10 @@ const ServiceAndPostCodeModal = ({
     nextStep,
     getService,
     service,
+    house,
+    street,
+    selectedAddressId,
+    addressList
   ]);
 
   const handleCloseClick = () => {
@@ -271,6 +303,10 @@ const ServiceAndPostCodeModal = ({
       setSelectedService(null);
       setPincode("");
       setCity("");
+      setSelectedAddressId("");
+      setHouse("");
+      setStreet("");
+      dispatch(setAddressList([]));
       onClose();
     }
   };
@@ -300,6 +336,24 @@ const ServiceAndPostCodeModal = ({
     setErrors((prev) => ({ ...prev, service: "" }));
   };
 
+  useEffect(() => {
+    if (postalCodeValidate && pincode) {
+      dispatch(getAddressListFromPostcode({ postcode: pincode }))
+        .then(() => setHasFetchedAddress(true));
+    }
+  }, [postalCodeValidate, pincode, dispatch]);
+
+  useEffect(() => {
+    if (!pincode) {
+      setSelectedAddressId("");
+      setHouse("");
+      setStreet("");
+
+      dispatch(setAddressList([]));
+      setHasFetchedAddress(false);
+    }
+  }, [pincode, dispatch]);
+
   return (
     <div className="px-7.5 py-6">
       <Modal
@@ -307,9 +361,9 @@ const ServiceAndPostCodeModal = ({
         title="What service do you need?"
         onNext={handleContinue}
         nextButtonText={loading ? "Validating..." : "Continue"}
-        disableNext={loading || !selectedService || !postalCodeValidate}
+        disableNext={loading || !selectedService || !postalCodeValidate || !(house?.trim() && street?.trim() || selectedAddressId !== "")}
         maxWidth="max-w-[90%] md:max-w-[550px]"
-        onClose={()=>{handleCloseClick()}}
+        onClose={() => { handleCloseClick() }}
         padding="px-3 py-4 md:px-7.5 md:pt-3 pb-6"
         radius="rounded-[20px]"
       >
@@ -373,6 +427,80 @@ const ServiceAndPostCodeModal = ({
           ) : (
             ""
           )}
+        </div>
+
+        <div className="mt-4">
+          <label className="text-[20px] leading-[100%] tracking-[-0.03em] font-bold font-[Arial] text-[#253238]">
+            Select an address
+          </label>
+
+          <select
+            value={selectedAddressId}
+            onChange={(e) => {
+              const index = Number(e.target.value);
+              setSelectedAddressId(index);
+
+              const selected = addressList[index];
+
+              if (selected) {
+                const houseValue = (selected.house_name || "").trim();
+                const streetValue = (selected.street_address || "").trim();
+
+                setHouse(houseValue);
+                setStreet(streetValue);
+                setErrors((prev) => ({
+                  ...prev,
+                  house: "",
+                  street: "",
+                }));
+              }
+            }}
+            className={`w-full max-w-full border border-gray-300 rounded-sm p-2 mt-1 
+    overflow-hidden text-ellipsis whitespace-nowrap
+    ${selectedAddressId ? "text-black" : "text-[#959595]"}
+  `}
+          >
+            <option value="" disabled hidden>
+              Please select...
+            </option>
+
+            {addressList.map((addr, index) => (
+              <option key={index} value={index}>
+                {`${addr.house_name || ""}, ${addr.street_address?.slice(0, 40)}...`}
+              </option>
+            ))}
+          </select>
+          {hasFetchedAddress && !addressLoader && addressList.length === 0 && postalCodeValidate && (
+            <p className="text-sm text-orange-700 mt-1">
+              No address found. Please enter manually.
+            </p>
+          )}
+        </div>
+
+        <div className="mt-4">
+          <InputField
+            label="Building or House Number / Name"
+            value={house}
+            placeholder="e.g. 221B or Rose Villa"
+            onChange={(e) => {
+              setHouse(e.target.value);
+              setSelectedAddressId("");
+              setErrors((prev) => ({ ...prev, house: "" }));
+            }} error={errors.house}
+          />
+        </div>
+
+        <div className="mt-4">
+          <InputField
+            label="Street Address"
+            value={street}
+            placeholder="e.g. Baker Street"
+            onChange={(e) => {
+              setStreet(e.target.value);
+              setSelectedAddressId("");
+              setErrors((prev) => ({ ...prev, street: "" }));
+            }} error={errors.street}
+          />
         </div>
       </Modal>
     </div>
