@@ -472,7 +472,7 @@ const ServiceAndPostCodeModal = ({
           </select>
           {hasFetchedAddress && !addressLoader && addressList.length === 0 && postalCodeValidate && (
             <p className="text-sm text-orange-700 mt-1">
-              No address found. Please enter manually.
+              No address found. Please enter below.
             </p>
           )}
         </div>
