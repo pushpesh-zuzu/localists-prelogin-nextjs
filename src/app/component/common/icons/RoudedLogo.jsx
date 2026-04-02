@@ -1,5 +1,5 @@
 const RoundedLogo = ({ width = 200, height = 150, className = "" }) => (
-    <svg width={width} height={height} viewBox="0 0 324 323" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={width} height={height} viewBox="0 0 324 323" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
         <rect x="157.906" width="7.17969" height="23.1934" rx="3.58984" fill="white" />
         <rect x="157.906" y="299.809" width="7.17969" height="23.1934" rx="3.58984" fill="white" />
         <rect x="170.016" y="0.185547" width="7.17969" height="23.1934" rx="3.58984" transform="rotate(4.29575 170.016 0.185547)" fill="white" />

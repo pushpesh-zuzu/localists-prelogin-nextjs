@@ -176,7 +176,7 @@ export default function QuotesBanner({
 px-6 md:px-5 py-10 md:py-3 
 flex flex-row items-center justify-between 
 relative overflow-hidden md:pr-[170px]"> */}
-          <div className="bg-[#00afe3] rounded-3xl 
+          <div className="bg-[#00afe3] rounded-3xl max-[360px]:py-4
 px-3 md:px-6 lg:px-[44px] py-2 md:py-3
 flex flex-row items-center md:items-center justify-between 
 relative overflow-hidden">
@@ -184,7 +184,7 @@ relative overflow-hidden">
             {/* LEFT CONTENT */}
             <div className="z-10 flex-1 text-left">
               <H3 className="text-white tracking-wide md:tracking-[-0.03em] md:!text-[22px] md:!leading-[24px]
-        lg:!text-[45px] lg:!leading-[31.3px] xl:!text-[45px] xl:!leading-[31.3px] !text-[15px] !leading-[15px]">{text}
+        lg:!text-[40px] lg:!leading-[45.3px] xl:!text-[45px] xl:!leading-[31.3px] !text-[15px] !leading-[15px]">{text}
               </H3>
 
               <div className="mt-3 md:mt-6 relative">
@@ -197,7 +197,7 @@ relative overflow-hidden">
                       onKeyDown={handleKeyPress}
                       disabled={disabled}
                       autoComplete="off"
-                      placeholder="Post Code"
+                      placeholder="Postcode"
                       className="custom-input px-4 py-2 md:px-6 md:py-3 lg:py-2.5 text-left md:text-center font-bold rounded-full bg-white text-gray-500 outline-none w-27 md:w-40 lg:w-74 !text-[16px] md:!text-[16px] lg:!text-[28px] placeholder:!text-[16px] md:placeholder:!text-[16px] lg:placeholder:!text-[28px]"
                     />
                     {postcode && (
@@ -233,15 +233,15 @@ relative overflow-hidden">
             </div>
 
             {/* RIGHT SIDE (30 SEC CIRCLE) */}
-            <div className="mt-0 relative flex items-center justify-center md:mr-38 lg:mr-62">
+            <div className="max-[360px]:hidden mt-0 relative flex items-center justify-center  md:mr-38 lg:mr-62">
               <div className="relative w-[100px] h-[100px] md:w-[145px] md:h-[145px] lg:w-[194px] lg:h-[194px] flex items-center justify-center">
                 {/* Rounded SVG */}
-                <RoundedLogo width={194} height={194} />
+                <RoundedLogo width={194} height={194} className=" md:h-[170px] md:w-[170px] xl:h-[194px] xl:w-[194px]" />
                 <div className="absolute inset-0 mt-2 md:mt-[10px] flex flex-col items-center justify-center text-white rotate-[15deg]">
-                  <span className="font-Inter tracking-[-0.03em] text-[50px] leading-[50px] md:text-[80px] font-bold md:leading-[80px] lg:text-[110px] lg:leading-[110px]">
+                  <span className="font-Inter tracking-[-0.03em] -[32px] text-[32px]:leading-[40px] text-[50px] leading-[50px] md:text-[80px] font-bold md:leading-[80px] lg:text-[100px] lg:leading-[100px] xl:text-[110px] xl:leading-[110px]">
                     30
                   </span>
-                  <span className="font-[Arial] tracking-[-0.03em] text-[18px] md:text-[22px] lg:text-[30px] md:-mt-3 -mt-2 lg:-mt-5">
+                  <span className="font-[Arial] tracking-[-0.03em]  text-[18px] md:text-[22px] lg:text-[26px] xl:text-[30px] md:-mt-3 -mt-2 lg:-mt-5">
                     Sec
                   </span>
                 </div>
