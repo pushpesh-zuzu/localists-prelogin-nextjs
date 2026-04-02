@@ -96,7 +96,7 @@ function RoofersInAshtonUnderLyne() {
                 heading1="Hire with"
                 heading2="confidence."
                 tabData={ROOFERS_TABDATA_ASHTON_UNDER_LYNE}
-                activeTabkey="popular"
+                activeTabkey="related"
                 heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto lg:h-auto"
             />
             <NearmeMember
