@@ -106,7 +106,7 @@ function RoofersInRossendale() {
         heading1="Hire with"
         heading2="confidence."
         tabData={ROOFERS_TABDATA_ROSSENDALE}
-        activeTabkey="popular"
+        activeTabkey="related"
         heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
       />
       <NearmeMember
