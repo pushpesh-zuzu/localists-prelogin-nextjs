@@ -230,6 +230,7 @@ const ServiceAndPostCodeModal = ({
     }
     if (!selectedService?.id) newErrors.service = "Please select a service!";
     if (!pincode) newErrors.pincode = "Postcode is required!";
+
     if (!houseValue?.trim()) {
       newErrors.house = "House name is required!";
     }
@@ -242,6 +243,15 @@ const ServiceAndPostCodeModal = ({
     if (newErrors.service || newErrors.pincode || newErrors.house || newErrors.street) return;
 
     setErrors({ service: "", pincode: "", house: "", street: "" });
+
+    // Save to Redux and go next
+    dispatch(
+      setbuyerRequestData({
+        house: houseValue,
+        street: streetValue,
+        address: `${houseValue}, ${streetValue}`,
+      }),
+    );
 
     setLoading(true);
     try {
@@ -456,7 +466,7 @@ const ServiceAndPostCodeModal = ({
               }
             }}
             className={`w-full max-w-full border border-gray-300 rounded-sm p-2 mt-1 
-    overflow-hidden text-ellipsis whitespace-nowrap
+    overflow-hidden text-ellipsis whitespace-nowrap cursor-pointer
     ${selectedAddressId ? "text-black" : "text-[#959595]"}
   `}
           >
@@ -465,14 +475,14 @@ const ServiceAndPostCodeModal = ({
             </option>
 
             {addressList.map((addr, index) => (
-              <option key={index} value={index}>
+              <option key={index} value={index} className="cursor-pointer">
                 {`${addr.house_name || ""}, ${addr.street_address?.slice(0, 40)}...`}
               </option>
             ))}
           </select>
           {hasFetchedAddress && !addressLoader && addressList.length === 0 && postalCodeValidate && (
             <p className="text-sm text-orange-700 mt-1">
-              No address found. Please enter below.
+              No address found? Please enter below
             </p>
           )}
         </div>
