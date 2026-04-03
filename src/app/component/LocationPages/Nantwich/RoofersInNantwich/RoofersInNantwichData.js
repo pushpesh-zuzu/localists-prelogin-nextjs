@@ -187,6 +187,7 @@ export const ROOFERS_TABDATA_NANTWICH = {
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
     { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+    { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
     { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
     { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
     { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },

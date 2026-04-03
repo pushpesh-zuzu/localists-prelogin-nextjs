@@ -253,6 +253,7 @@ export const ROOFERS_TABDATA_BURNLEY = {
   related: [
     { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+    { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
     { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
     { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },

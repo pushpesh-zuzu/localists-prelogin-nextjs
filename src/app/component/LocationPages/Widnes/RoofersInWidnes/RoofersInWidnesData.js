@@ -184,7 +184,7 @@ export const ROOFERS_TABDATA_WIDNES = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-   related: [
+  related: [
     { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
     { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
@@ -193,7 +193,12 @@ export const ROOFERS_TABDATA_WIDNES = {
     { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
     { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+    { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
     {
       title: "Roofers Macclesfield",
