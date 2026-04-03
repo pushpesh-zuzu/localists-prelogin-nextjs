@@ -234,8 +234,13 @@ export const ROOFERS_TABDATA_RUNCORN = {
     { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
     { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+    { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },    
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
     {
       title: "Roofers Macclesfield",
       url: "/en/gb/roofers-near-me/macclesfield",

@@ -210,6 +210,13 @@ export const ROOFERS_TABDATA_KNUTSFORD = {
     { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+    {
+      title: "Roofers Cheadle Hulme",
+      url: "/en/gb/roofers-near-me/cheadle-hulme",
+    },
+
     {
       title: "Roofers Macclesfield",
       url: "/en/gb/roofers-near-me/macclesfield",

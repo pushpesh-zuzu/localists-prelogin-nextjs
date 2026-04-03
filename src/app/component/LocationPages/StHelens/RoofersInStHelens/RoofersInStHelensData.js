@@ -214,6 +214,13 @@ export const ROOFERS_TABDATA_ST_HELENS = {
     { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
     { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
     { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+    { title: "Roofers warrington", url: "/en/gb/roofers-near-me/warrington" },
+    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+    {
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
+    },
   ],
   findMore: [],
 };

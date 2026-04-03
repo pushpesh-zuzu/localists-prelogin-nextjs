@@ -321,6 +321,15 @@ export const ROOFERS_TABDATA_LIVERPOOL = {
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
     { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+
+    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+    {
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
+    },
   ],
   findMore: [],
 };

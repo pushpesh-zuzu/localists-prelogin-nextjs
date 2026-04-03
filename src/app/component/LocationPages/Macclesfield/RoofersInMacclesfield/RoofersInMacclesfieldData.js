@@ -246,13 +246,17 @@ export const ROOFERS_TABDATA_MACCLESFIELD = {
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
     { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+    { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
     { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
     { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
     { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
     { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
     { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+
     {
       title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",

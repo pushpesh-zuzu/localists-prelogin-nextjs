@@ -230,6 +230,7 @@ export const ROOFERS_TABDATA_MORECAMBE = {
     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
     { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
     { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
+    { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
   ],
   findMore: [],
 };

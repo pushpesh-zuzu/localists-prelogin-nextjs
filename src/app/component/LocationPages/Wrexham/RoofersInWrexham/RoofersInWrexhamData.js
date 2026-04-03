@@ -215,6 +215,7 @@ export const ROOFERS_TABDATA_WREXHAM = {
     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
     { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
     { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
     { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
     { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
     { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
@@ -224,6 +225,10 @@ export const ROOFERS_TABDATA_WREXHAM = {
     { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
     { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+    {
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
+    },
   ],
   findMore: [],
 };

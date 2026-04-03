@@ -214,6 +214,8 @@ export const ROOFERS_TABDATA_WHITEHAVEN = {
     },
   ],
   related: [
+    { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
+    { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
     { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
   ],
   findMore: [],
