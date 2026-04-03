@@ -79,7 +79,12 @@ export default function HeroSectionFormNewPPC({
 
     useEffect(() => {
         const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
-        dispatch(setBuyerStep(pendingModal?.shouldOpen ? 4 : 1));
+        // dispatch(setBuyerStep(pendingModal?.shouldOpen ? 4 : 1));
+        if (pendingModal?.shouldOpen) {
+            dispatch(setBuyerStep(showAddress ? 5 : 4));
+        } else {
+            dispatch(setBuyerStep(1));
+        }
     }, [dispatch, isAdminOrRemembered]);
 
     useEffect(() => {
