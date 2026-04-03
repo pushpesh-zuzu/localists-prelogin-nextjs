@@ -36,6 +36,9 @@ const initialState = {
     name: "",
     ip: "",
     entryUrl: "",
+    address:"",
+    house:"",
+    street:""
   },
   buyerRequestInternalQuestion: {
     questions: [],
@@ -773,6 +776,8 @@ const buyerSlice = createSlice({
         recevive_online: "",
         email: "",
         name: "",
+        house:"",
+        street:""
       };
       state.buyerStep = 1
     },

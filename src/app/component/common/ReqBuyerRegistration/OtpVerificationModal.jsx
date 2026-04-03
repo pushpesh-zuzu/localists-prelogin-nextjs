@@ -126,6 +126,7 @@ const OtpVerificationModal = ({
         formData.append("form_status", "1");
         formData.append("request_id", requestId);
         formData.append("user_id", requestUserId);
+        formData.append("address", buyerRequest?.address || "") 
 
         dispatch(createRequestData(formData)).then((res) => {
           if (res?.success) {

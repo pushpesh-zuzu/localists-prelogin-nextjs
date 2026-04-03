@@ -107,6 +107,7 @@ const Modal = ({
 
                 max-[480px]:pt-[20px]
                 max-[480px]:gap-[8px]
+                cursor-pointer
               `}
                         >
                             {/* Back Button */}
@@ -169,7 +170,7 @@ const Modal = ({
                   `}>  {viewMatchesIcon && (
                                         <MenCircle className="w-5 h-5" />
                                     )}
-                                    {!disabled && nextButtonText}
+                                    {nextButtonText}
                                 </button>
                             )}
                         </div>
