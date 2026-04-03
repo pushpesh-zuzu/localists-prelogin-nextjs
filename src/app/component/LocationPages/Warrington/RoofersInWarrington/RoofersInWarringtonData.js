@@ -216,7 +216,7 @@ export const ROOFERS_TABDATA_WARRINGTON = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-   related: [
+  related: [
     { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
@@ -226,7 +226,9 @@ export const ROOFERS_TABDATA_WARRINGTON = {
     { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
     { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
     { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
     {
       title: "Roofers Macclesfield",
       url: "/en/gb/roofers-near-me/macclesfield",

@@ -44,15 +44,15 @@ export default function HireRelatedToServiceNearMe({
   headingMiddle = "",
   heightClass = "min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:min-h-[489.5px] lg:h-auto",
   activeTabkey = "professionals",
-  homePageCss=false
+  homePageCss = false,
 }) {
   const sectionRef = useRef(null);
   const [currentTab, setcurrentTab] = useState(activeTabkey);
   const contentRef = useRef(null);
 
   const [visibleChunks, setVisibleChunks] = useState(1);
-  const [rowHeight,     setRowHeight]     = useState(0);
-  const [totalRows,     setTotalRows]     = useState(0);
+  const [rowHeight, setRowHeight] = useState(0);
+  const [totalRows, setTotalRows] = useState(0);
   const [rowGap, setRowGap] = useState(0);
   const handleClick = (activtab) => {
     setcurrentTab(activtab);
@@ -60,10 +60,10 @@ export default function HireRelatedToServiceNearMe({
 
   const tabs = [
     { lable: "Find Professionals", activtab: "professionals" },
-    { lable: "Popular Jobs",       activtab: "popular"       },
-    { lable: "Advice & Insight",   activtab: "insight"       },
-    { lable: "Related Service",    activtab: "related"       },
-    { lable: "Find Out More",      activtab: "findMore"      },
+    { lable: "Popular Jobs", activtab: "popular" },
+    { lable: "Advice & Insight", activtab: "insight" },
+    { lable: "Related Service", activtab: "related" },
+    { lable: "Find Out More", activtab: "findMore" },
   ].filter((tab) => tabData?.[tab.activtab]?.length > 0);
 
   // ── Measure: contentRef ke direct children (JobButton divs) se rows nikalo ──
@@ -80,12 +80,12 @@ export default function HireRelatedToServiceNearMe({
     const nextRowItem = items.find((el) => el.offsetTop > firstTop);
 
     const rh = nextRowItem
-      ? nextRowItem.offsetTop - firstTop        // row1 top → row2 top = 1 row height with gap
-      : items[0].offsetHeight + 8;             // single row fallback
+      ? nextRowItem.offsetTop - firstTop // row1 top → row2 top = 1 row height with gap
+      : items[0].offsetHeight + 8; // single row fallback
 
     const uniqueTops = new Set(items.map((el) => el.offsetTop));
-      const gap = parseFloat(getComputedStyle(container).rowGap) || 0;
-      setRowGap(gap-2.6);
+    const gap = parseFloat(getComputedStyle(container).rowGap) || 0;
+    setRowGap(gap - 2.6);
     setRowHeight(rh);
     setTotalRows(uniqueTops.size);
   }, []);
@@ -94,13 +94,17 @@ export default function HireRelatedToServiceNearMe({
     const t = setTimeout(measure, 60);
     const ro = new ResizeObserver(() => measure());
     if (contentRef.current) ro.observe(contentRef.current);
-    return () => { clearTimeout(t); ro.disconnect(); };
+    return () => {
+      clearTimeout(t);
+      ro.disconnect();
+    };
   }, [measure, currentTab, tabData]);
 
   const visibleRows = visibleChunks * ROWS_PER_CHUNK;
-  const boxHeight   = rowHeight > 0 ? rowHeight * visibleRows-rowGap : undefined;
-  const hasMore     = totalRows > visibleRows;
-  const hasLess     = !hasMore && visibleChunks > 1 ;
+  const boxHeight =
+    rowHeight > 0 ? rowHeight * visibleRows - rowGap : undefined;
+  const hasMore = totalRows > visibleRows;
+  const hasLess = !hasMore && visibleChunks > 1;
 
   return (
     <WrapperBGWidth background={"#00AFE3"}>
@@ -128,7 +132,9 @@ export default function HireRelatedToServiceNearMe({
                 <span className="text-[#253238]"> {heading2}</span>
               )}
             </h2>
-            <nav className={`flex ${homePageCss ? "gap-0":"gap-1"} sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap`}>
+            <nav
+              className={`flex ${homePageCss ? "gap-0" : "gap-1"} sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap`}
+            >
               {tabs.map((tab) => {
                 const isActive = currentTab === tab.activtab;
                 return (
@@ -153,7 +159,19 @@ export default function HireRelatedToServiceNearMe({
             </nav>
           </div>
         </header>
-
+             <div style={{ display: "none" }} aria-hidden="true">
+          {Object.keys(tabData)
+            .filter((tabKey) => tabKey !== currentTab)
+            .map((tabKey) =>
+              tabData[tabKey]?.map((item, i) =>
+                typeof item === "object" ? (
+                  <JobButton key={`${tabKey}-${i}`} title={item.title} url={item.url} />
+                ) : (
+                  <JobButton key={`${tabKey}-${i}`} title={item} />
+                )
+              )
+            )}
+        </div>
         {/*
           contentRef wali div pe directly style lagao — koi extra wrapper nahi
           height fixed = rowHeight × visibleRows  →  overflow-hidden se clip hoga
@@ -162,7 +180,7 @@ export default function HireRelatedToServiceNearMe({
         <div
           ref={contentRef}
           style={{
-            height:    boxHeight !== undefined ? `${boxHeight}px` : "auto",
+            height: boxHeight !== undefined ? `${boxHeight}px` : "auto",
             minHeight: boxHeight !== undefined ? `${boxHeight}px` : undefined,
           }}
           className="flex flex-wrap content-start
@@ -213,7 +231,7 @@ export default function HireRelatedToServiceNearMe({
                   });
                 }, 350);
               }}
-              className={`${!(totalRows > ROWS_PER_CHUNK) ? 'opacity-0':'opacity-100'} py-[7px] xl:py-4 xl:px-[30px] cursor-pointer px-[13px]
+              className={`${!(totalRows > ROWS_PER_CHUNK) ? "opacity-0" : "opacity-100"} py-[7px] xl:py-4 xl:px-[30px] cursor-pointer px-[13px]
                      hover:bg-[#253238] rounded-full bg-[#253238] text-white
                      shadow-[0_0_4px_rgba(0,0,0,0.1)]`}
             >

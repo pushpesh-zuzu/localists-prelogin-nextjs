@@ -196,9 +196,16 @@ export const ROOFERS_TABDATA_BIRKENHEAD = {
   ],
   related: [
     { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
+    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+    { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
     { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+    {
+      title: "Roofers Ellesmere Port",
+      url: "/en/gb/roofers-near-me/ellesmere-port",
+    },
   ],
   findMore: [],
 };
