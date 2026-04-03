@@ -70,7 +70,7 @@ export default function HeroSectionFormNewPPC({
         }
     };
 
-    console.log("buyerstep", buyerStep, showAddress)
+    // console.log("buyerstep", buyerStep, showAddress)
     // const prevStep = () => {
     //     setBackButtonTriggered(true);
     //     const index = stepFlow.indexOf(buyerStep);
