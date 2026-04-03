@@ -17,7 +17,7 @@ const OTPVerificationMultiStep = ({
   isThankuPageOnlyShow = false,
   setUpdateNumberStep,
   onBack,
-  className="p-6"
+  className = "p-6"
 }) => {
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [timer, setTimer] = useState(60);
@@ -41,8 +41,8 @@ const OTPVerificationMultiStep = ({
   // Get last segment from pathname
   // const pathSegments = pathname?.split("/") || [];
   // const lastSegment = pathSegments[pathSegments.length - 1];
-     const pathSegments = pathname?.split("/").filter(Boolean) || []; 
-     const lastSegment = pathSegments[pathSegments.length - 1];
+  const pathSegments = pathname?.split("/").filter(Boolean) || [];
+  const lastSegment = pathSegments[pathSegments.length - 1];
 
 
   useEffect(() => {
@@ -105,7 +105,7 @@ const OTPVerificationMultiStep = ({
     const data = {
       user_id: requestUserId,
       otp: enteredOtp,
-      request_id: requestId? requestId : userId,
+      request_id: requestId ? requestId : userId,
     };
 
     dispatch(verifyPhoneNumberData(data)).then((result) => {
@@ -125,6 +125,8 @@ const OTPVerificationMultiStep = ({
         formData.append("form_status", "1");
         formData.append("request_id", requestId);
         formData.append("user_id", requestUserId);
+        formData.append("address", buyerRequest?.address || "");
+
 
         dispatch(createRequestData(formData)).then((res) => {
           if (res?.success) {
@@ -139,7 +141,7 @@ const OTPVerificationMultiStep = ({
                 city: citySerach,
                 serviceId: buyerRequest?.service_id,
                 // baseRedirectPath: lastSegment ? lastSegment : "root",
-                baseRedirectPath : localePattern.test(lastSegment) ? "root" : lastSegment
+                baseRedirectPath: localePattern.test(lastSegment) ? "root" : lastSegment
               };
 
               // LocalStorage will be used later

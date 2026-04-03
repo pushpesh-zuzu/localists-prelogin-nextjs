@@ -41,11 +41,11 @@ const OtpVerification = ({
   } = useSelector((state) => state.buyer || {});
 
   // Get last segment from pathname
-   const pathSegments = pathname?.split("/").filter(Boolean) || [];
-    const localeSegmentPattern = /^[a-z]{2}$/i;
-    const nonLocaleSegments = pathSegments.filter((seg) => !localeSegmentPattern.test(seg));
-    const fullPagePath = nonLocaleSegments.join("/") || "root";
-     
+  const pathSegments = pathname?.split("/").filter(Boolean) || [];
+  const localeSegmentPattern = /^[a-z]{2}$/i;
+  const nonLocaleSegments = pathSegments.filter((seg) => !localeSegmentPattern.test(seg));
+  const fullPagePath = nonLocaleSegments.join("/") || "root";
+
   useEffect(() => {
     if (timer > 0) {
       const countdown = setInterval(() => setTimer((prev) => prev - 1), 1000);
@@ -126,6 +126,8 @@ const OtpVerification = ({
         formData.append("form_status", "1");
         formData.append("request_id", requestId);
         formData.append("user_id", requestUserId);
+        formData.append("address", buyerRequest?.address || "");
+
 
         dispatch(createRequestData(formData)).then((res) => {
           if (res?.success) {
@@ -138,7 +140,7 @@ const OtpVerification = ({
                 buyerRequest: buyerRequest,
                 city: citySerach,
                 serviceId: buyerRequest?.service_id,
-                baseRedirectPath : fullPagePath
+                baseRedirectPath: fullPagePath
 
               };
 
@@ -149,7 +151,7 @@ const OtpVerification = ({
                   JSON.stringify(modalData)
                 );
               }
-               router.push(`/thank-you`);
+              router.push(`/thank-you`);
             } else {
               nextStep();
             }
@@ -276,7 +278,7 @@ const OtpVerification = ({
           <span className="mr-[5px] text-sm font-bold font-[Arial] tracking-[-0.03em] text-[#00ADD8]">
             Go Back
           </span>
-          <BackButtonOTP/>
+          <BackButtonOTP />
         </div>
 
         {/* Mobile number notice */}

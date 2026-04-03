@@ -28,6 +28,7 @@ import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import NewPPCLeadForm from "./NewPPCLeadForm";
 import DescribeYourRequestFormNewPPC from "./DescribeYourRequestFormNewPPC";
 import QuestionModalFormNewPPC from "./QuestionModalFormNewPPC";
+import AddressFormNewPPC from "./AddressFormNewPPC";
 
 
 
@@ -41,6 +42,7 @@ export default function HeroSectionFormNewPPC({
     quoteText = "Get Free Quotes Now",
     questionDescription = "",
     serviceId,
+    showAddress = false
 }) {
     usePendingBuyerRedirect()
     const dispatch = useDispatch();
@@ -57,7 +59,7 @@ export default function HeroSectionFormNewPPC({
     const [backButtonTriggered, setBackButtonTriggered] = useState(false);
 
 
-    const stepFlow = [1, 2, 3, 4];
+    const stepFlow = showAddress ? [1, 2, 3, 4, 5] : [1, 2, 3, 4];
     const isAdminOrRemembered = authToken || userToken?.remember_tokens;
 
     const nextStep = () => {
@@ -68,6 +70,7 @@ export default function HeroSectionFormNewPPC({
         }
     };
 
+    console.log("buyerstep", buyerStep, showAddress)
     // const prevStep = () => {
     //     setBackButtonTriggered(true);
     //     const index = stepFlow.indexOf(buyerStep);
@@ -195,13 +198,17 @@ export default function HeroSectionFormNewPPC({
                     </div>
                 </div>
 
-                {/* RIGHT FORM */}
-
                 {buyerStep === 1 && (
                     <NewPPCLeadForm nextStep={nextStep} serviceId={serviceId} />
                 )}
 
-                {buyerStep === 2 && (
+                {
+                    showAddress && buyerStep === 2 && (
+                        <AddressFormNewPPC nextStep={nextStep} />
+                    )
+                }
+
+                {((showAddress && buyerStep === 3) || (!showAddress && buyerStep === 2)) && (
                     <Suspense fallback={null}>
                         <QuestionModalFormNewPPC
                             questions={questionanswerData}
@@ -215,28 +222,30 @@ export default function HeroSectionFormNewPPC({
                     </Suspense>
                 )}
 
-                {buyerStep === 3 && reEnterMobile === 2 && (
-                    <OTPVerificationNewPPC
-                        setReEnterMobile={setReEnterMobile}
-                        isThankuPageOnlyShow
-                    />
-                )}
+                {((showAddress && buyerStep === 4) || (!showAddress && buyerStep === 3)) &&
+                    reEnterMobile === 2 && (
+                        <OTPVerificationNewPPC
+                            setReEnterMobile={setReEnterMobile}
+                            isThankuPageOnlyShow
+                        />
+                    )}
 
-                {buyerStep === 3 && reEnterMobile === 1 && (
-                    <ReEnterMobileNumberNewPPC
-                        setReEnterMobile={setReEnterMobile}
-                        onClose={() => setReEnterMobile(2)}
-                    />
-                )}
+                {((showAddress && buyerStep === 4) || (!showAddress && buyerStep === 3)) &&
+                    reEnterMobile === 1 && (
+                        <ReEnterMobileNumberNewPPC
+                            setReEnterMobile={setReEnterMobile}
+                            onClose={() => setReEnterMobile(2)}
+                        />
+                    )}
 
-                {buyerStep === 4 && (
+                {((showAddress && buyerStep === 5) || (!showAddress && buyerStep === 4)) && (
                     <FormWrapper>
                         <DescribeYourRequestFormNewPPC />
                     </FormWrapper>
                 )}
 
             </div>
-        </section>
+        </section >
     );
 }
 
