@@ -66,11 +66,11 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   },
   {
     type: "h3",
-    text: "On average cost of a new roof is £7,000 in the UK. The cost per sqm usually falls between £120 - £275 – with the type of roof and materials used (such as slate or clay tiles) largely affecting the price.",
+    text: "On average cost of a new roof is £7,000 in the UK. The cost per sqm  usually falls between £120 - £275 – with the type of roof and materials used (such as slate or clay tiles) largely affecting the price.",
   },
   {
     type: "p",
-    text: "The cost of hiring a roofer depends on several factors: the type of roof, its size, the materials used, and the complexity of the work. Labour costs are a significant part of the total, and hourly rates could be anywhere from £25 - £45 per hour. Smaller repairs and partial roofing, like patching, leak fixes, or tile replacement, you can expect to pay £150 - £500. Medium-sized reroofing or partial replacements generally range from £3,000 - £6,000.",
+    text: "On average the cost of a new roof is £7,000 in the UK. The cost per sqm usually falls between £120 - £275 – with the type of roof and materials used (such as slate or clay tiles) largely affecting the price.",
     notMarginBottom: true,
   },
   {
