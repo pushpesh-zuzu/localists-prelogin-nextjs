@@ -13,6 +13,8 @@ import {
 } from "@/lib/store/buyerslice/buyerSlice";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
+import Select from "react-select";
+
 
 function AddressFields({
   onClose,
@@ -33,9 +35,9 @@ function AddressFields({
   const [errors, setErrors] = useState({ house: "", street: "" });
 
   // Fetch address list when buyerRequest.postcode is available
-const lastFetchedPostcode = useRef(null);
+  const lastFetchedPostcode = useRef(null);
 
-useEffect(() => {
+  useEffect(() => {
     if (buyerRequest.postcode && buyerRequest.postcode !== lastFetchedPostcode.current) {
       lastFetchedPostcode.current = buyerRequest.postcode;
       dispatch(
@@ -134,10 +136,24 @@ useEffect(() => {
           Select an address
         </label>
 
-        <select
-          value={selectedAddressId}
-          onChange={(e) => {
-            const index = Number(e.target.value);
+        <Select
+          options={addressList.map((addr, index) => ({
+            value: index,
+            label: `${addr.house_name || ""}, ${addr.street_address || ""}`,
+          }))}
+
+          value={
+            selectedAddressId !== ""
+              ? {
+                value: selectedAddressId,
+                label: `${addressList[selectedAddressId]?.house_name || ""}, ${addressList[selectedAddressId]?.street_address || ""
+                  }`,
+              }
+              : null
+          }
+
+          onChange={(option) => {
+            const index = option.value;
             setSelectedAddressId(index);
 
             const selected = addressList[index];
@@ -148,6 +164,7 @@ useEffect(() => {
 
               setHouse(houseValue);
               setStreet(streetValue);
+
               setErrors((prev) => ({
                 ...prev,
                 house: "",
@@ -155,26 +172,16 @@ useEffect(() => {
               }));
             }
           }}
-          disabled={addressList.length === 0}
-          style={{ boxShadow: "0 0 2px .5px #0000001a" }}
-          className={`px-3 py-2.5 max-h-[41.6px] rounded-[10px]
-            text-gray-900 text-base border border-[#ccc]
-            transition-all duration-200 placeholder:text-[#959595]
-            focus:outline-1 focus:ring-1 disabled:bg-gray-100
-            custom-placeholder bg-white w-full max-w-full p-2
-            overflow-hidden text-ellipsis whitespace-nowrap md:mt-3 mt-2
-            ${selectedAddressId !== "" ? "text-black" : "text-[#959595]"}
-          `}
-        >
-          <option value="" disabled hidden>
-            Please select...
-          </option>
-          {addressList.map((addr, index) => (
-            <option key={index} value={index}>
-              {`${addr.house_name || ""}, ${addr.street_address?.slice(0, 40)}...`}
-            </option>
-          ))}
-        </select>
+
+          placeholder="Please select..."
+          isSearchable={false}
+          isDisabled={addressList.length === 0}
+          menuPlacement="bottom"
+          menuPosition="fixed"
+          menuPortalTarget={typeof window !== "undefined" ? document.body : null}
+          menuShouldScrollIntoView={false}
+          styles={selectStyles}
+        />
 
         {!addressLoader && addressList.length === 0 && !(house && street) && (
           <p className="text-sm text-orange-700 mt-1 mb-3">
@@ -212,5 +219,46 @@ useEffect(() => {
     </Modal>
   );
 }
+
+const selectStyles = {
+  control: (base, state) => ({
+    ...base,
+    minHeight: "41.6px",
+    height: "41.6px",
+    borderRadius: "10px",
+    borderColor: state.isFocused ? "#00aeef" : "#d1d5db",
+    boxShadow: state.isFocused
+      ? "0 0 0 2px rgba(0,174,239,0.2)"
+      : "none",
+    "&:hover": {
+      borderColor: "#00aeef",
+    },
+    cursor: "pointer",
+  }),
+
+  menuPortal: (base) => ({
+    ...base,
+    zIndex: 9999,
+  }),
+
+  menu: (base) => ({
+    ...base,
+    zIndex: 9999,
+  }),
+
+  menuList: (base) => ({
+    ...base,
+    maxHeight: "250px",
+    overflowY: "auto",
+    paddingBottom: "8px",
+  }),
+
+  option: (base, state) => ({
+    ...base,
+    cursor: "pointer",
+    backgroundColor: state.isFocused ? "#f0f9ff" : "#fff",
+    color: "#000",
+  }),
+};
 
 export default AddressFields;

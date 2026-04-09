@@ -223,6 +223,8 @@ const PostcodeSearchRoofing = ({
               placeholder="Please select..."
               isSearchable={false}
               styles={selectStyles}
+              menuPlacement="auto"
+              menuPosition="fixed"
             />
 
             {!addressLoader && addressList.length === 0 && postalCodeValidate && (
@@ -300,6 +302,22 @@ const selectStyles = {
     "&:hover": {
       borderColor: "#0096c4",
     },
+  }),
+
+  menuPortal: (base) => ({
+    ...base,
+    zIndex: 9999, //
+  }),
+
+  menu: (base) => ({
+    ...base,
+    maxHeight: "250px",
+  }),
+
+  menuList: (base) => ({
+    ...base,
+    maxHeight: "250px",
+    overflowY: "auto",
   }),
 
   option: (base, state) => ({

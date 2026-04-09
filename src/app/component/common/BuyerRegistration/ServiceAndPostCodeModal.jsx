@@ -22,6 +22,7 @@ import { getBarkToken } from "@/utils/CookiesHelper";
 import { megaMenu } from "../MegaMenu";
 import { searchService, setService } from "@/lib/store/findjobslice";
 import { showToast } from "@/utils/toaster";
+import Select from "react-select";
 
 function getNameFromSlug(slug, categoryList) {
   if (typeof slug !== "string" || !slug || !Array.isArray(categoryList))
@@ -444,10 +445,24 @@ const ServiceAndPostCodeModal = ({
             Select an address
           </label>
 
-          <select
-            value={selectedAddressId}
-            onChange={(e) => {
-              const index = Number(e.target.value);
+          <Select
+            options={addressList.map((addr, index) => ({
+              value: index,
+              label: `${addr.house_name || ""}, ${addr.street_address || ""}`,
+            }))}
+
+            value={
+              selectedAddressId !== ""
+                ? {
+                  value: selectedAddressId,
+                  label: `${addressList[selectedAddressId]?.house_name || ""}, ${addressList[selectedAddressId]?.street_address || ""
+                    }`,
+                }
+                : null
+            }
+
+            onChange={(option) => {
+              const index = option.value;
               setSelectedAddressId(index);
 
               const selected = addressList[index];
@@ -458,6 +473,7 @@ const ServiceAndPostCodeModal = ({
 
                 setHouse(houseValue);
                 setStreet(streetValue);
+
                 setErrors((prev) => ({
                   ...prev,
                   house: "",
@@ -465,21 +481,17 @@ const ServiceAndPostCodeModal = ({
                 }));
               }
             }}
-            className={`w-full max-w-full border border-gray-300 rounded-sm p-2 mt-1 
-    overflow-hidden text-ellipsis whitespace-nowrap cursor-pointer
-    ${selectedAddressId ? "text-black" : "text-[#959595]"}
-  `}
-          >
-            <option value="" disabled hidden>
-              Please select...
-            </option>
 
-            {addressList.map((addr, index) => (
-              <option key={index} value={index} className="cursor-pointer">
-                {`${addr.house_name || ""}, ${addr.street_address?.slice(0, 40)}...`}
-              </option>
-            ))}
-          </select>
+            placeholder="Please select..."
+            isSearchable={false}
+            isDisabled={addressList.length === 0}
+            menuPlacement="bottom"
+            menuPosition="fixed"
+            menuPortalTarget={typeof window !== "undefined" ? document.body : null}
+            menuShouldScrollIntoView={false}
+
+            styles={selectStyles}
+          />
           {hasFetchedAddress && !addressLoader && addressList.length === 0 && postalCodeValidate && (
             <p className="text-sm text-orange-700 mt-1">
               No address found? Please enter below
@@ -515,6 +527,47 @@ const ServiceAndPostCodeModal = ({
       </Modal>
     </div>
   );
+};
+
+const selectStyles = {
+  control: (base, state) => ({
+    ...base,
+    minHeight: "41.6px",
+    height: "41.6px",
+    borderRadius: "4px",
+    borderColor: state.isFocused ? "#00aeef" : "#d1d5db",
+    boxShadow: state.isFocused
+      ? "0 0 0 0.2px #000000"
+      : "none",
+    "&:hover": {
+      borderColor: "#000000",
+    },
+    cursor: "pointer",
+  }),
+
+  menuPortal: (base) => ({
+    ...base,
+    zIndex: 9999,
+  }),
+
+  menu: (base) => ({
+    ...base,
+    zIndex: 9999,
+  }),
+
+  menuList: (base) => ({
+    ...base,
+    maxHeight: "250px",
+    overflowY: "auto",
+    paddingBottom: "8px",
+  }),
+
+  option: (base, state) => ({
+    ...base,
+    cursor: "pointer",
+    backgroundColor: state.isFocused ? "#f0f9ff" : "#fff",
+    color: "#000",
+  }),
 };
 
 export default ServiceAndPostCodeModal;

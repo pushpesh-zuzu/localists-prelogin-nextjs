@@ -223,13 +223,15 @@ const PostcodeSearchDriveways = ({
 
                   if (onNext) {
                     onNext();
-                    setPercetangForPost(5);
+                    getProgressPercentage(prev => prev + 5);
                   }
                 }
               }}
               placeholder="Please select..."
               isSearchable={false}
               styles={selectStyles}
+              menuPlacement="auto"
+              menuPosition="fixed"
             />
 
             {!addressLoader && addressList.length === 0 && postalCodeValidate && (
@@ -310,7 +312,23 @@ const selectStyles = {
     },
   }),
 
-  option: (base, state) => ({
+  menuPortal: (base) => ({
+    ...base,
+    zIndex: 9999, //
+  }),
+
+  menu: (base) => ({
+    ...base,
+    maxHeight: "250px",
+  }),
+
+  menuList: (base) => ({
+    ...base,
+    maxHeight: "250px",
+    overflowY: "auto",
+  }),
+
+  option: (base) => ({
     ...base,
     cursor: "pointer",
   }),
