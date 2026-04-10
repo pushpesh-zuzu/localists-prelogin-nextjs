@@ -428,7 +428,7 @@ const ServiceAndPostCodeModal = ({
             error={errors.pincode}
           />
           {checkingPostcode ? (
-            <div className="absolute top-[55%] right-2 h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-[#00aeef]"></div>
+            <div className="absolute top-[60%] right-2 h-5 w-5 animate-spin rounded-full border-2 border-gray-300 border-t-[#00aeef]"></div>
           ) : postalCodeValidate && city ? (
             <CheckIcon
               size={24}
@@ -441,7 +441,7 @@ const ServiceAndPostCodeModal = ({
         </div>
 
         <div className="mt-4">
-          <label className="text-[20px] leading-[100%] tracking-[-0.03em] font-bold font-[Arial] text-[#253238]">
+          <label className="text-[20px] leading-[100%] tracking-[-0.03em] font-bold font-[Arial] text-[#253238] mb-3 block">
             Select an address
           </label>
 

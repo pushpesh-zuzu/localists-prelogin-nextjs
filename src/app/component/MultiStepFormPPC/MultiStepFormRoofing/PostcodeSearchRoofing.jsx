@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import CheckVerifiedIcon from "../../common/icons/LandingPPCIcon/CheckVerifiedIcon";
+// import CheckVerifiedIcon from "../../common/icons/LandingPPCIcon/CheckVerifiedIcon";
 import {
   getAddressListFromPostcode,
   getCityName,
@@ -13,6 +13,7 @@ import CardLayoutWrapper from "../../common/MultiStepFormPPC/CardLayoutWrappper"
 import LocationMapIcon from "../../common/icons/SellerRegistration/LocationMapIcon";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import Select from "react-select";
+import { CheckIcon } from "lucide-react";
 
 
 const PostcodeSearchRoofing = ({
@@ -54,6 +55,21 @@ const PostcodeSearchRoofing = ({
     if (!value.trim()) {
       setError("");
       setCity("");
+      setSelectedAddress(null);
+      setHouse("");
+      setStreet("");
+      setFieldErrors({
+        house: "",
+        street: "",
+      });
+      dispatch(
+        setbuyerRequestData({
+          postal_code: "",
+          house: "",
+          street: "",
+          address: "",
+        })
+      );
       setPostalCodeValidate(false);
       return;
     }
@@ -138,6 +154,32 @@ const PostcodeSearchRoofing = ({
     label: `${addr.house_name}, ${addr.street_address}`,
   }));
 
+  useEffect(() => {
+    if (!postalCodeValidate || addressList.length === 0) {
+      return;
+    }
+
+    if (!buyerRequest?.address) {
+      setSelectedAddress(null);
+      return;
+    }
+
+    const selectedIndex = addressList.findIndex((addr) => {
+      const addressLabel = `${addr.house_name || ""}, ${addr.street_address || ""}`;
+      return addressLabel === buyerRequest.address;
+    });
+
+    if (selectedIndex >= 0) {
+      setSelectedAddress({
+        value: selectedIndex,
+        label: `${addressList[selectedIndex].house_name}, ${addressList[selectedIndex].street_address}`,
+      });
+      return;
+    }
+
+    setSelectedAddress(null);
+  }, [addressList, buyerRequest?.address, postalCodeValidate]);
+
   return (
     <div>
       <h1 className="font-extrabold max-w-[592px] mx-auto text-2xl md:text-[35px] leading-8 md:leading-[48px] text-center mt-5 text-black">
@@ -178,8 +220,8 @@ const PostcodeSearchRoofing = ({
                 <LoaderIndicator size="small" />
               </div>
             ) : postalCodeValidate ? (
-              <div className="h-4 w-4">
-                <CheckVerifiedIcon className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5" />
+              <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                <CheckIcon className="w-5 text-white h-5 bg-green-500 rounded-full" />
               </div>
             ) : null}
           </div>
@@ -187,52 +229,49 @@ const PostcodeSearchRoofing = ({
             <p className="text-red-500 text-xs mt-1 text-left">{error}</p>
           )}
 
-          <div className="text-start">
-            <label className="block mt-3 mb-2 font-bold text-md text-[#253238]">
-              Select an address
-            </label>
-            <Select
-              options={addressOptions}
-              value={selectedAddress}
-              onChange={(option) => {
-                setSelectedAddress(option);
+          {postalCodeValidate && (
+            <div className="text-start">
+              <label className="block mt-3 mb-2 font-bold text-md text-[#253238]">
+                Select an address
+              </label>
+              <Select
+                options={addressOptions}
+                value={selectedAddress}
+                onChange={(option) => {
+                  setSelectedAddress(option);
 
-                const selected = addressList[option.value];
+                  const selected = addressList[option.value];
 
-                if (selected) {
-                  const houseVal = selected.house_name || "";
-                  const streetVal = selected.street_address || "";
+                  if (selected) {
+                    const houseVal = selected.house_name || "";
+                    const streetVal = selected.street_address || "";
 
-                  setHouse(houseVal);
-                  setStreet(streetVal);
+                    setHouse(houseVal);
+                    setStreet(streetVal);
 
-                  dispatch(
-                    setbuyerRequestData({
-                      house: houseVal,
-                      street: streetVal,
-                      address: `${houseVal}, ${streetVal}`,
-                    })
-                  );
-
-                  if (onNext) {
-                    onNext();
-                    setPercetangForPost(5);
+                    dispatch(
+                      setbuyerRequestData({
+                        house: houseVal,
+                        street: streetVal,
+                        address: `${houseVal}, ${streetVal}`,
+                      })
+                    );
                   }
-                }
-              }}
-              placeholder="Please select..."
-              isSearchable={false}
-              styles={selectStyles}
-              menuPlacement="auto"
-              menuPosition="fixed"
-            />
+                }}
+                placeholder="Please select..."
+                isSearchable={false}
+                styles={selectStyles}
+                menuPlacement="auto"
+                menuPosition="fixed"
+              />
 
-            {!addressLoader && addressList.length === 0 && postalCodeValidate && (
-              <p className="text-sm text-orange-700 mt-1">
-                No address found? Please enter below
-              </p>
-            )}
-          </div>
+              {!addressLoader && addressList.length === 0 && (
+                <p className="text-sm text-orange-700 mt-1">
+                  No address found? Please enter below
+                </p>
+              )}
+            </div>
+          )}
 
           <div className="text-start">
             <label className="block mt-3 mb-1 font-bold text-md">
@@ -242,9 +281,19 @@ const PostcodeSearchRoofing = ({
             <input
               value={house}
               onChange={(e) => {
-                setHouse(e.target.value);
+                const value = e.target.value;
+                setHouse(value);
                 setSelectedAddress(null);
                 setFieldErrors((prev) => ({ ...prev, house: "" }));
+                if (!value.trim()) {
+                  dispatch(
+                    setbuyerRequestData({
+                      house: "",
+                      street: "",
+                      address: "",
+                    })
+                  );
+                }
               }}
               className={`w-full border border-[#e1e5e9] rounded-lg px-4 py-3 text-base
   transition-all duration-300
@@ -259,21 +308,31 @@ const PostcodeSearchRoofing = ({
 
           <div className="text-start">
             <label className="block mt-3 mb-1 font-bold text-md">
-              Building or House Number / Name
+              Street Address
             </label>
 
             <input
               value={street}
               onChange={(e) => {
-                setStreet(e.target.value);
+                const value = e.target.value;
+                setStreet(value);
                 setSelectedAddress(null);
                 setFieldErrors((prev) => ({ ...prev, street: "" }));
+                if (!value.trim()) {
+                  dispatch(
+                    setbuyerRequestData({
+                      house: "",
+                      street: "",
+                      address: "",
+                    })
+                  );
+                }
               }}
               className={`w-full border border-[#e1e5e9] rounded-lg px-4 py-3 text-base
   transition-all duration-300
   focus:outline-none focus:border-[#0096c4]
   focus:ring-3 focus:ring-[#0096c4]/10`}
-              placeholder="e.g. 221B or Rose Villa"
+              placeholder="e.g. Baker Street or Park Lane"
             />
             {fieldErrors.street && (
               <p className="text-red-500 text-xs mt-1">{fieldErrors.street}</p>

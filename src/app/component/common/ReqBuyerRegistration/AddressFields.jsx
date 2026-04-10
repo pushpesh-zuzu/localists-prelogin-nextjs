@@ -14,14 +14,15 @@ import {
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import Select from "react-select";
+import { getBarkToken } from "@/utils/CookiesHelper";
 
 
 function AddressFields({
   onClose,
   nextStep,
-  // setShowConfirmModal,
+  setShowConfirmModal,
   progressPercent,
-  previousStep
+  previousStep,
 }) {
   const router = useRouter();
   const dispatch = useDispatch();
@@ -56,6 +57,30 @@ function AddressFields({
       setHasFetchedAddress(false);
     }
   }, [buyerRequest.postcode, dispatch]);
+
+  useEffect(() => {
+    if (addressList.length === 0) {
+      setSelectedAddressId("");
+      return;
+    }
+
+    if (!buyerRequest?.address) {
+      setSelectedAddressId("");
+      return;
+    }
+
+    const selectedIndex = addressList.findIndex((addr) => {
+      const addressLabel = `${addr.house_name || ""}, ${addr.street_address || ""}`;
+      return addressLabel === buyerRequest.address;
+    });
+
+    if (selectedIndex >= 0) {
+      setSelectedAddressId(selectedIndex);
+      return;
+    }
+
+    setSelectedAddressId("");
+  }, [addressList, buyerRequest?.address]);
 
   // const handleAddressSelect = (e) => {
   //   const index = Number(e.target.value);
@@ -103,6 +128,13 @@ function AddressFields({
   };
 
   const handleCloseClick = () => {
+    if (typeof previousStep === "function") {
+      if (!getBarkToken()) {
+        setShowConfirmModal?.(true);
+        return;
+      }
+    }
+
     onClose();
     dispatch(clearSetbuyerRequestData());
     dispatch(clearBuyerRegisterFormData());
@@ -128,8 +160,18 @@ function AddressFields({
       buttongroup="lg:mx-[75.4px] md:mx-[63px] mx-[18px]"
       progressPercent={progressPercent}
       marginTop="lg:mt-[10vh] mt-[5vh]"
-      onBack={previousStep}
-    >
+      onBack={typeof previousStep === "function"
+        ? () => {
+          dispatch(
+            setbuyerRequestData({
+              house: "",
+              street: "",
+              address: "",
+            })
+          );
+          previousStep();
+        }
+        : null} >
       <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
         {/* Select Address Dropdown */}
         <label className="text-[20px] leading-[100%] tracking-[-0.03em] font-bold font-[Arial] text-[#253238]">

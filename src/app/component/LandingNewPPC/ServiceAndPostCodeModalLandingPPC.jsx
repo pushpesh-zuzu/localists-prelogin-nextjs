@@ -12,6 +12,8 @@ import {
   setbuyerRequestData,
   setcitySerach,
   questionAnswerData,
+  getAddressListFromPostcode,
+  setAddressList
 } from "@/lib/store/buyerslice/buyerSlice";
 import { useParams } from "next/navigation";
 import { getBarkToken } from "@/utils/CookiesHelper";
@@ -20,6 +22,14 @@ import { showToast } from "@/utils/toaster";
 import FormWrapper from "./FormWrapper";
 import InputField from "../UI/Inputs/InputField";
 import { megaMenu } from "../common/MegaMenu";
+import Select from "react-select";
+
+const getResponsiveWidth = () => {
+  if (typeof window === "undefined") return "540px";
+  if (window.innerWidth <= 768) return "320px";
+  if (window.innerWidth <= 1024) return "250px";
+  return "440px";
+};
 
 function getNameFromSlug(slug, categoryList) {
   if (typeof slug !== "string" || !slug || !Array.isArray(categoryList))
@@ -49,11 +59,16 @@ const ServiceAndPostCodeModalLandingPPC = ({
   const [loading, setLoading] = useState(false);
   const [checkingPostcode, setCheckingPostcode] = useState(false);
 
+  const [house, setHouse] = useState("");
+  const [street, setStreet] = useState("");
+  const [selectedAddressId, setSelectedAddressId] = useState("");
+  const [hasFetchedAddress, setHasFetchedAddress] = useState(false);
+
   const { slug } = useParams();
   const { searchServiceLoader, service, registerData } = useSelector(
     (state) => state.findJobs
   );
-  const { citySerach } = useSelector((state) => state.buyer);
+  const { citySerach, addressList, addressLoader } = useSelector((state) => state.buyer);
   const dispatch = useDispatch();
   const inputRef = useRef(null);
   const dropdownRef = useRef(null);
@@ -206,13 +221,43 @@ const ServiceAndPostCodeModalLandingPPC = ({
   };
 
   const handleContinue = useCallback(async () => {
-    let newErrors = { service: "", pincode: "" };
+    let newErrors = { service: "", pincode: "", house: "", street: "" };
+
+    let houseValue = house;
+    let streetValue = street;
+
+    if (selectedAddressId !== "" && (!houseValue || !streetValue)) {
+      const selected = addressList[selectedAddressId];
+      if (selected) {
+        houseValue = selected.house_name || "";
+        streetValue = selected.street_address || "";
+      }
+    }
 
     if (!selectedService?.id) newErrors.service = "Please select a service!";
     if (!pincode) newErrors.pincode = "Postcode is required!";
 
+    if (!houseValue?.trim()) {
+      newErrors.house = "House name is required!";
+    }
+
+    if (!streetValue?.trim()) {
+      newErrors.street = "Street address is required!";
+    }
+
     setErrors(newErrors);
-    if (newErrors.service || newErrors.pincode) return;
+    if (newErrors.service || newErrors.pincode || newErrors.house || newErrors.street) return;
+
+    setErrors({ service: "", pincode: "", house: "", street: "" });
+
+    // Save to Redux and go next
+    dispatch(
+      setbuyerRequestData({
+        house: houseValue,
+        street: streetValue,
+        address: `${houseValue}, ${streetValue}`,
+      }),
+    );
 
     setLoading(true);
     try {
@@ -255,6 +300,10 @@ const ServiceAndPostCodeModalLandingPPC = ({
     nextStep,
     getService,
     service,
+    house,
+    street,
+    selectedAddressId,
+    addressList
   ]);
 
   const handleCloseClick = () => {
@@ -270,6 +319,10 @@ const ServiceAndPostCodeModalLandingPPC = ({
       setSelectedService(null);
       setPincode("");
       setCity("");
+      setSelectedAddressId("");
+      setHouse("");
+      setStreet("");
+      dispatch(setAddressList([]));
       onClose();
     }
   };
@@ -299,6 +352,24 @@ const ServiceAndPostCodeModalLandingPPC = ({
     setErrors((prev) => ({ ...prev, service: "" }));
   };
 
+  useEffect(() => {
+    if (postalCodeValidate && pincode) {
+      dispatch(getAddressListFromPostcode({ postcode: pincode }))
+        .then(() => setHasFetchedAddress(true));
+    }
+  }, [postalCodeValidate, pincode, dispatch]);
+
+  useEffect(() => {
+    if (!pincode) {
+      setSelectedAddressId("");
+      setHouse("");
+      setStreet("");
+
+      dispatch(setAddressList([]));
+      setHasFetchedAddress(false);
+    }
+  }, [pincode, dispatch]);
+
   return (
     <div>
       <FormWrapper
@@ -314,70 +385,226 @@ const ServiceAndPostCodeModalLandingPPC = ({
         padding="px-3 py-4 md:px-7.5 md:pt-3 pb-3"
         showCloseIcon={false}
       >
-        {/* Service Input */}
-        <div className="relative" ref={dropdownRef}>
-          <InputField
-            label="What service do you need?"
-            placeholder="e.g. Landscaping, Driveway Installation"
-            value={input}
-            onChange={handleInputChange}
-            onFocus={handleInputFocus}
-            error={errors.service}
-            icon={<Search className="w-4 h-4 text-gray-400" />}
-            disabled
-          />
-
-          {isDropdownOpen && service?.length > 0 && (
-            <div className="absolute z-10 w-full bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto mt-1">
-              {searchServiceLoader ? (
-                <div className="p-2 text-center text-gray-500">
-                  <div className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-blue-500"></div>
-                  <span className="ml-2">Searching...</span>
-                </div>
-              ) : (
-                service.map((item) => (
-                  <div
-                    key={item.id}
-                    className="p-2 cursor-pointer hover:bg-blue-50 border-b border-gray-100 last:border-b-0"
-                    onClick={() => handleSelectService(item)}
-                  >
-                    <div className="flex items-center">
-                      <span className="text-sm text-gray-700">{item.name}</span>
-                      {selectedService?.id === item.id && (
-                        <CheckIcon className="ml-auto w-4 h-4 text-[green]" />
-                      )}
-                    </div>
-                  </div>
-                ))
-              )}
-            </div>
-          )}
-        </div>
-
-        {/* Postcode Input */}
-        <div className="mt-4 relative">
-          <InputField
-            label="Where do you need it?"
-            placeholder="Enter Postcode (No Spaces)"
-            value={pincode}
-            onChange={handlePincodeChange}
-            error={errors.pincode}
-          />
-          {checkingPostcode ? (
-            <div className="absolute top-[55%] right-2 h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-[#00aeef]"></div>
-          ) : postalCodeValidate && city ? (
-            <CheckIcon
-              size={24}
-              color="white"
-              className="absolute p-1 bg-green-500 rounded-full top-[55%] right-2"
+        <div
+          className="w-full mx-auto min-w-0"
+          style={{ maxWidth: getResponsiveWidth() }}
+        >
+          {/* Service Input */}
+          <div className="relative w-full min-w-0" ref={dropdownRef}>
+            <InputField
+              label="What service do you need?"
+              placeholder="e.g. Landscaping, Driveway Installation"
+              value={input}
+              onChange={handleInputChange}
+              onFocus={handleInputFocus}
+              error={errors.service}
+              icon={<Search className="w-4 h-4 text-gray-400" />}
+              disabled
             />
-          ) : (
-            ""
-          )}
+
+            {isDropdownOpen && service?.length > 0 && (
+              <div className="absolute z-10 w-full bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto mt-1">
+                {searchServiceLoader ? (
+                  <div className="p-2 text-center text-gray-500">
+                    <div className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-blue-500"></div>
+                    <span className="ml-2">Searching...</span>
+                  </div>
+                ) : (
+                  service.map((item) => (
+                    <div
+                      key={item.id}
+                      className="p-2 cursor-pointer hover:bg-blue-50 border-b border-gray-100 last:border-b-0"
+                      onClick={() => handleSelectService(item)}
+                    >
+                      <div className="flex items-center">
+                        <span className="text-sm text-gray-700">{item.name}</span>
+                        {selectedService?.id === item.id && (
+                          <CheckIcon className="ml-auto w-4 h-4 text-[green]" />
+                        )}
+                      </div>
+                    </div>
+                  ))
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* Postcode Input */}
+          <div className="mt-4 relative w-full min-w-0">
+            <InputField
+              label="Where do you need it?"
+              placeholder="Enter Postcode (No Spaces)"
+              value={pincode}
+              onChange={handlePincodeChange}
+              error={errors.pincode}
+            />
+            {checkingPostcode ? (
+              <div className="absolute top-[60%] right-2 h-5 w-5 animate-spin rounded-full border-2 border-gray-300 border-t-[#00aeef]"></div>
+            ) : postalCodeValidate && city ? (
+              <CheckIcon
+                size={24}
+                color="white"
+                className="absolute p-1 bg-green-500 rounded-full top-[55%] right-2"
+              />
+            ) : (
+              ""
+            )}
+          </div>
+
+          <div className="mt-4 w-full min-w-0">
+            <label className="text-[20px] leading-[100%] tracking-[-0.03em] font-bold font-[Arial] text-[#253238] mb-3 block">
+              Select an address
+            </label>
+
+            <Select
+              options={addressList.map((addr, index) => ({
+                value: index,
+                label: `${addr.house_name || ""}, ${addr.street_address || ""}`,
+              }))}
+
+              value={
+                selectedAddressId !== ""
+                  ? {
+                    value: selectedAddressId,
+                    label: `${addressList[selectedAddressId]?.house_name || ""}, ${addressList[selectedAddressId]?.street_address || ""
+                      }`,
+                  }
+                  : null
+              }
+
+              onChange={(option) => {
+                const index = option.value;
+                setSelectedAddressId(index);
+
+                const selected = addressList[index];
+
+                if (selected) {
+                  const houseValue = (selected.house_name || "").trim();
+                  const streetValue = (selected.street_address || "").trim();
+
+                  setHouse(houseValue);
+                  setStreet(streetValue);
+
+                  setErrors((prev) => ({
+                    ...prev,
+                    house: "",
+                    street: "",
+                  }));
+                }
+              }}
+
+              placeholder="Please select..."
+              isSearchable={false}
+              isDisabled={addressList.length === 0}
+              menuPlacement="bottom"
+              menuPosition="fixed"
+              menuPortalTarget={typeof window !== "undefined" ? document.body : null}
+              menuShouldScrollIntoView={false}
+              styles={selectStyles}
+            />
+            {hasFetchedAddress && !addressLoader && addressList.length === 0 && postalCodeValidate && (
+              <p className="text-sm text-orange-700 mt-1">
+                No address found? Please enter below
+              </p>
+            )}
+          </div>
+
+          <div className="mt-4 w-full min-w-0">
+            <InputField
+              label="Building or House Number / Name"
+              value={house}
+              placeholder="e.g. 221B or Rose Villa"
+              onChange={(e) => {
+                setHouse(e.target.value);
+                setSelectedAddressId("");
+                setErrors((prev) => ({ ...prev, house: "" }));
+              }} error={errors.house}
+            />
+          </div>
+
+          <div className="mt-4 w-full min-w-0">
+            <InputField
+              label="Street Address"
+              value={street}
+              placeholder="e.g. Baker Street"
+              onChange={(e) => {
+                setStreet(e.target.value);
+                setSelectedAddressId("");
+                setErrors((prev) => ({ ...prev, street: "" }));
+              }} error={errors.street}
+            />
+          </div>
         </div>
       </FormWrapper>
     </div>
   );
+};
+
+const selectStyles = {
+  control: (base, state) => ({
+    ...base,
+    width: getResponsiveWidth(),
+    maxWidth: getResponsiveWidth(),
+    minWidth: 0,
+    minHeight: "41.6px",
+    height: "41.6px",
+    borderRadius: "4px",
+    borderColor: state.isFocused ? "#00aeef" : "#d1d5db",
+    boxShadow: state.isFocused
+      ? "0 0 0 0.2px #000000"
+      : "none",
+    "&:hover": {
+      borderColor: "#000000",
+    },
+    cursor: "pointer",
+  }),
+
+  container: (base) => ({
+    ...base,
+    width: getResponsiveWidth(),
+    maxWidth: getResponsiveWidth(),
+    minWidth: 0,
+  }),
+
+  valueContainer: (base) => ({
+    ...base,
+    width: getResponsiveWidth(),
+    maxWidth: getResponsiveWidth(),
+    minWidth: 0,
+    overflow: "hidden",
+  }),
+
+  singleValue: (base) => ({
+    ...base,
+    maxWidth: "100%",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap",
+  }),
+
+  menuPortal: (base) => ({
+    ...base,
+    zIndex: 9999,
+  }),
+
+  menu: (base) => ({
+    ...base,
+    zIndex: 9999,
+  }),
+
+  menuList: (base) => ({
+    ...base,
+    maxHeight: "250px",
+    overflowY: "auto",
+    paddingBottom: "8px",
+  }),
+
+  option: (base, state) => ({
+    ...base,
+    cursor: "pointer",
+    backgroundColor: state.isFocused ? "#f0f9ff" : "#fff",
+    color: "#000",
+  }),
 };
 
 export default ServiceAndPostCodeModalLandingPPC;

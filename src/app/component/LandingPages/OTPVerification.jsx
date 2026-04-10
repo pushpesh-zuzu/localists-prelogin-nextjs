@@ -13,9 +13,9 @@ import { showToast } from "@/utils/toaster";
 import { formatUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
 import BackButtonOTP from "../common/icons/Registration/BackButtonOTP";
 import H5 from "../UI/Typography/H5";
-import Paragraph from "../UI/Typography/Paragraph2";
+// import Paragraph from "../UI/Typography/Paragraph2";
 import Paragraph2 from "../UI/Typography/Paragraph2";
-import Paragraph1 from "../UI/Typography/Paragraph1";
+// import Paragraph1 from "../UI/Typography/Paragraph1";
 
 const OtpVerification = ({
   open,
@@ -126,12 +126,13 @@ const OtpVerification = ({
         formData.append("form_status", 1);
         formData.append("request_id", requestId);
         formData.append("user_id", requestUserId);
+        formData.append("address", buyerRequest?.address || "");
 
         dispatch(createRequestData(formData)).then((res) => {
           if (res?.success) {
             showToast("success", res?.message);
 
-              const localePattern = /^[a-z]{2}$/i;
+            const localePattern = /^[a-z]{2}$/i;
             if (isThankuPageOnlyShow) {
               const modalData = {
                 shouldOpen: true,
@@ -140,7 +141,7 @@ const OtpVerification = ({
                 city: citySerach,
                 serviceId: buyerRequest?.service_id,
                 // baseRedirectPath: lastSegment ? lastSegment : "root",
-                baseRedirectPath : localePattern.test(lastSegment) ? "root" : lastSegment
+                baseRedirectPath: localePattern.test(lastSegment) ? "root" : lastSegment
               };
 
               // LocalStorage will be used later
