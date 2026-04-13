@@ -225,6 +225,7 @@ export const ROOFERS_TABDATA_ROTHERHAM = {
     ],
     related: [
         { title: "Roofers Barnsley", url: "barnsley" },
+        { title: "Roofers Doncaster", url: "doncaster" },
     ],
     findMore: [],
 };

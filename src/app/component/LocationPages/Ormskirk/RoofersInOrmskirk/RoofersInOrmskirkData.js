@@ -186,6 +186,7 @@ export const ROOFERS_TABDATA_ORMSKIRK = {
     { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+    { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
     { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
     { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
     { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },

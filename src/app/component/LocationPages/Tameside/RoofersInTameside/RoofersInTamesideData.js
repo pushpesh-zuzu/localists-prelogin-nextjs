@@ -208,6 +208,7 @@ export const ROOFERS_TABDATA_TAMESIDE = {
     },
   ],
   related: [
+    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
     { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
     { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
     { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
