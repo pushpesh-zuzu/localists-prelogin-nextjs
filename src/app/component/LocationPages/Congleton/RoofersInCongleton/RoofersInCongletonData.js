@@ -223,13 +223,10 @@ export const ROOFERS_TABDATA_CONGLETON = {
     { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
     {
-      title: "Roofers Macclesfield",
-      url: "/en/gb/roofers-near-me/macclesfield",
+      title: "Roofers Macclesfield", url: "/en/gb/roofers-near-me/macclesfield",
     },
-    {
-      title: "Roofers Ellesmere Port",
-      url: "/en/gb/roofers-near-me/ellesmere-port",
-    },
+    { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
+    { title: "Roofers Ellesmere Port", url: "/en/gb/roofers-near-me/ellesmere-port", },
   ],
   findMore: [],
 };

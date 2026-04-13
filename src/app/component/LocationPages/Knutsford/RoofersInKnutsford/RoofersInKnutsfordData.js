@@ -216,15 +216,10 @@ export const ROOFERS_TABDATA_KNUTSFORD = {
       title: "Roofers Cheadle Hulme",
       url: "/en/gb/roofers-near-me/cheadle-hulme",
     },
+    { title: "Roofers Macclesfield", url: "/en/gb/roofers-near-me/macclesfield", },
+    { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
+    { title: "Roofers Ellesmere Port", url: "/en/gb/roofers-near-me/ellesmere-port" },
 
-    {
-      title: "Roofers Macclesfield",
-      url: "/en/gb/roofers-near-me/macclesfield",
-    },
-    {
-      title: "Roofers Ellesmere Port",
-      url: "/en/gb/roofers-near-me/ellesmere-port",
-    },
   ],
   findMore: [],
 };

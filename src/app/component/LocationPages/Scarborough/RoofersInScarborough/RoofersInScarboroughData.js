@@ -248,8 +248,10 @@ export const ROOFERS_TABDATA_SCARBOROUGH = {
   ],
   related: [
     { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
+    { title: "Roofers Driffield", url: "/en/gb/roofers-near-me/driffield" },
     { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
     { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
+    { title: "Roofers Middlesbrough", url: "/en/gb/roofers-near-me/middlesbrough" },
   ],
   findMore: [],
 };

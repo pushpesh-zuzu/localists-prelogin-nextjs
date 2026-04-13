@@ -192,6 +192,7 @@ export const ROOFERS_TABDATA_CHEADLE_HULME = {
     { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
     { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
     { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+    { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
     {
       title: "Roofers Ashton-Under-Lyne",
       url: "/en/gb/roofers-near-me/ashton-under-lyne",

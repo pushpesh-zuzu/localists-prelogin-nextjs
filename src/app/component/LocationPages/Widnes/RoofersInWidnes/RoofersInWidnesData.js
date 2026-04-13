@@ -186,6 +186,7 @@ export const ROOFERS_TABDATA_WIDNES = {
   ],
   related: [
     { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+    { title: "Roofers Crosby", url: "/en/gb/roofers-near-me/crosby" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
     { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
     { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },

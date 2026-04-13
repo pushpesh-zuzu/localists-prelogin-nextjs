@@ -232,6 +232,7 @@ export const ROOFERS_TABDATA_ALTRINCHAM = {
       title: "Roofers Macclesfield",
       url: "/en/gb/roofers-near-me/macclesfield",
     },
+    { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
     {
       title: "Roofers Cheadle Hulme",
       url: "/en/gb/roofers-near-me/cheadle-hulme",

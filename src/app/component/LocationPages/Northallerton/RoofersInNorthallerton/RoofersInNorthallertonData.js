@@ -190,6 +190,7 @@ export const ROOFERS_TABDATA_NORTHALLERTON = {
         { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
         { title: "Roofers Scarborough ", url: "/en/gb/roofers-near-me/scarborough" },
         { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
+        { title: "Roofers Middlesbrough", url: "/en/gb/roofers-near-me/middlesbrough" },
     ],
     findMore: [],
 };

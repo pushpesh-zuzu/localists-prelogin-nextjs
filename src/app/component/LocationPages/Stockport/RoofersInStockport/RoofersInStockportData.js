@@ -198,13 +198,10 @@ export const ROOFERS_TABDATA_STOCKPORT = {
       title: "Roofers Macclesfield",
       url: "/en/gb/roofers-near-me/macclesfield",
     },
+    { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
+    { title: "Roofers Cheadle Hulme", url: "/en/gb/roofers-near-me/cheadle-hulme" },
     {
-      title: "Roofers Cheadle Hulme",
-      url: "/en/gb/roofers-near-me/cheadle-hulme",
-    },
-    {
-      title: "Roofers Ashton Under Lyne",
-      url: "/en/gb/roofers-near-me/ashton-under-lyne",
+      title: "Roofers Ashton Under Lyne", url: "/en/gb/roofers-near-me/ashton-under-lyne",
     },
   ],
   findMore: [],
