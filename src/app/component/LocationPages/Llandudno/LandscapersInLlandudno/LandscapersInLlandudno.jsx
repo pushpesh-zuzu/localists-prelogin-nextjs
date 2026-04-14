@@ -1,16 +1,16 @@
 "use client";
 import React, { useRef } from "react";
 import {
-    BREADCRUM_DATA_LANDSCAPING_STOCKPORT,
-    FREQUENTLY_DATA_STOCKPORT,
-    POPULAR_SERVICES_LANDSCAPING_STOCKPORT,
-    QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_STOCKPORT,
-    LANDSCAPING_ADVICEINSIGHT_STOCKPORT,
-    LANDSCAPING_FEEDBACK_STOCKPORT,
-    LANDSCAPING_DATA_STOCKPORT,
-    LANDSCAPING_TABDATA_STOCKPORT,
-    VETTED_DATA_LANDSCAPING_STOCKPORT,
-} from "./LandscapersInStockportData";
+    BREADCRUM_DATA_LANDSCAPING_LLANDUDNO,
+    FREQUENTLY_DATA_LLANDUDNO,
+    POPULAR_SERVICES_LANDSCAPING_LLANDUDNO,
+    QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_LLANDUDNO,
+    LANDSCAPING_ADVICEINSIGHT_LLANDUDNO,
+    LANDSCAPING_FEEDBACK_LLANDUDNO,
+    LANDSCAPING_DATA_LLANDUDNO,
+    LANDSCAPING_TABDATA_LLANDUDNO,
+    VETTED_DATA_LANDSCAPING_LLANDUDNO,
+} from "./LandscapersInLlandudnoData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
 import Footer from "../../../Footer/Footer";
@@ -30,18 +30,18 @@ import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 import LandScapingGardenPopularJobs from "@/app/component/Nearme/LandscaperGardenNearMe/LandScapingGardenPopularJobs";
 
-function LandscapersInStockport() {
+function LandscapersInLlandudno() {
     useScrollToTop()
     useRegistrationRedirect()
     const featureRef = useRef(null);
     return (
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={43} quote_type="req call back" />}
-            <FAQScript FAQ={FREQUENTLY_DATA_STOCKPORT} />
+            <FAQScript FAQ={FREQUENTLY_DATA_LLANDUDNO} />
             <HeroSectionLocation
                 heading1="Landscapers"
-                heading2="Stockport"
-                description="Looking for an expert local landscaper in Stockport? We connect you with the best quality landscapers in the area. Simply enter your postcode and tell us what you need, and in less than a minute, you’ll get free quotes sent straight to your inbox."
+                heading2="Llandudno"
+                description="Looking for landscaping professionals in Llandudno? Look no further! Just enter your postcode below and tell us exactly what you need, and you’ll receive free quotes from the highest quality landscapers in the area - takes only a minute"
                 bannerImage="/nearme/Landscaping/Landscapingbanner.webp"
                 bannerImageMobile="/nearme/Landscaping/landscapingMobile1.webp"
                 altText="A Landscaper carefully laying a large concrete slab amongst a garden of flowers and grey pebble dash"
@@ -49,16 +49,16 @@ function LandscapersInStockport() {
                 serviceName="Landscaping"
             />
             <VettedSection
-                paragraph={VETTED_DATA_LANDSCAPING_STOCKPORT}
+                paragraph={VETTED_DATA_LANDSCAPING_LLANDUDNO}
                 vettedHeading1="Find Local Vetted Landscapers in "
-                vettedHeading2="Stockport"
-                breadcrumb={BREADCRUM_DATA_LANDSCAPING_STOCKPORT}
+                vettedHeading2="Llandudno"
+                breadcrumb={BREADCRUM_DATA_LANDSCAPING_LLANDUDNO}
                 extraButton
                 featureRef={featureRef}
                 featureButtonText="View Landscapers"
             />
             <LandScapingGardenPopularJobs
-                services={POPULAR_SERVICES_LANDSCAPING_STOCKPORT}
+                services={POPULAR_SERVICES_LANDSCAPING_LLANDUDNO}
                 popularImage="/nearme/Landscaping/pathwayPopularJob.png"
                 altText="beautifully landscaped garden with pathway and decorative paving edges "
                 mobileCardClass="w-[285px] min-[390px]:w-[221px] min-[412px]:w-[300px] min-[440px]:w-[307px] min-[512px]:w-[350px]"
@@ -68,17 +68,17 @@ function LandscapersInStockport() {
             <AboutServicesAndQuestions
                 serviceId={43}
                 serviceName="Landscaping"
-                contentBlocks={QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_STOCKPORT}
+                contentBlocks={QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_LLANDUDNO}
                 quotesBannerText="LANDSCAPING QUOTES IN"
                 mobileFrame="/nearme/Landscaping/mobilelandscaping.webp"
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-                <Feature county='Greater Manchester' cityName='Stockport' serviceId={43} serviceName="Landscaping" featureRef={featureRef} />
+                <Feature county='Conwy' cityName='Llandudno' serviceId={43} serviceName="Landscaping" featureRef={featureRef} />
             </div>
 
             <AdviceInsightNearMe
-                articles={LANDSCAPING_ADVICEINSIGHT_STOCKPORT}
+                articles={LANDSCAPING_ADVICEINSIGHT_LLANDUDNO}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
             />
             <WrapperBGWidth>
@@ -90,14 +90,14 @@ function LandscapersInStockport() {
                 containerClass="w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] mx-auto pb-10 xl:pb-[72px] xl:px-[120px]"
                 headdingblue="FAQ's"
                 headingblack=""
-                data={FREQUENTLY_DATA_STOCKPORT}
+                data={FREQUENTLY_DATA_LLANDUDNO}
             />
-            <UserFeedbackNearMe2 feedbackData={LANDSCAPING_FEEDBACK_STOCKPORT} />
-            <DiscoverNearMe homeData={LANDSCAPING_DATA_STOCKPORT} />
+            <UserFeedbackNearMe2 feedbackData={LANDSCAPING_FEEDBACK_LLANDUDNO} />
+            <DiscoverNearMe homeData={LANDSCAPING_DATA_LLANDUDNO} />
             <HireRelatedToServiceNearMe
                 heading1="Hire with"
                 heading2="confidence."
-                tabData={LANDSCAPING_TABDATA_STOCKPORT}
+                tabData={LANDSCAPING_TABDATA_LLANDUDNO}
                 activeTabkey="related"
             />
             <NearmeMember
@@ -109,4 +109,4 @@ function LandscapersInStockport() {
         </>
     );
 }
-export default LandscapersInStockport;
+export default LandscapersInLlandudno;

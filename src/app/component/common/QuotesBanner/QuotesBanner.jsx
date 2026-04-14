@@ -29,6 +29,7 @@ export default function QuotesBanner({
   disabled = false,
   onValidationSuccess,
   onValidationError,
+  mobileFrame = "/nearme/Roofing/mobileroof.webp",
 }) {
 
   const [postcode, setPostcode] = useState("");
@@ -254,7 +255,7 @@ relative overflow-hidden">
           {/* PHONE IMAGE (Desktop only) */}
           <div className="hidden md:block absolute md:right-6 lg:right-11 top-1/2 transform -translate-y-1/2">
             <Image
-              src="/nearme/Roofing/mobileroof.webp"
+              src={mobileFrame}
               alt="phone"
               width={140}
               height={200}

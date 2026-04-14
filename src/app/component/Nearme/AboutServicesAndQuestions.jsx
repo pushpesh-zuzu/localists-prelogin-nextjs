@@ -25,6 +25,7 @@ const AboutServicesAndQuestions = ({
   serviceId = 112,
   serviceName = "Tree Surgery",
   quotesBannerText,
+  mobileFrame,
 }) => {
   const renderBlock = (block, index) => {
     switch (block.type) {
@@ -77,7 +78,7 @@ const AboutServicesAndQuestions = ({
         return <PostCodeSectionLocation serviceId={serviceId} serviceName={serviceName} classNamePostCode={block?.className} key={index} />;
 
       case "QuotesBanner":
-        return <QuotesBanner serviceId={serviceId} quotesBannerText={quotesBannerText} serviceName={serviceName} key={index} classQuote={block?.className} />;
+        return <QuotesBanner serviceId={serviceId} quotesBannerText={quotesBannerText} serviceName={serviceName} key={index} classQuote={block?.className} mobileFrame={mobileFrame} />;
 
       case "p":
         return (

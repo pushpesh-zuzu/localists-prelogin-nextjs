@@ -52,7 +52,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_STOCKPORT = [
         type: "pricingTable",
         title: "Average cost of Landscaping in Stockport",
         calculatorText: "click here",
-        calculatorLink: "/en/gb/roofing-multi-form-ppc",
+        calculatorLink: "/en/gb/landscaping-multi-form-ppc",
         disclaimer:
             "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
         prices: [
@@ -178,8 +178,8 @@ export const LANDSCAPING_ADVICEINSIGHT_STOCKPORT = [
 export const LANDSCAPING_TABDATA_STOCKPORT = {
     popular: [
         {
-            title: "Landscapers Near Me",
-            url: "/en/gb/landscape-gardeners-near-me",
+            title: "Roofers Near Me",
+            url: "/en/gb/roofers-near-me",
         },
         {
             title: "Gardeners Near Me",
@@ -220,7 +220,6 @@ export const LANDSCAPING_TABDATA_STOCKPORT = {
     ],
 
     related: [
-        { title: "Landscapers Wigan", url: "" },
         { title: "Landscapers Oldham", url: "" },
         { title: "Landscapers Glossop", url: "" },
         { title: "Landscapers Tameside", url: "" },
