@@ -74,7 +74,7 @@ function LandscapersInLlandudno() {
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-                <Feature county='Conwy' cityName='Llandudno' serviceId={43} serviceName="Landscaping" featureRef={featureRef} />
+                <Feature county='Conwy' cityName='Llandudno' serviceId={43} serviceName="Landscaping" featureRef={featureRef} serviceProfessionName="Landscapers" />
             </div>
 
             <AdviceInsightNearMe

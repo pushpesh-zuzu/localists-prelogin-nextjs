@@ -74,7 +74,7 @@ function LandscapersInStockport() {
             />
 
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-                <Feature county='Greater Manchester' cityName='Stockport' serviceId={43} serviceName="Landscaping" featureRef={featureRef} />
+                <Feature county='Greater Manchester' cityName='Stockport' serviceId={43} serviceName="Landscaping" featureRef={featureRef} serviceProfessionName="Landscapers" />
             </div>
 
             <AdviceInsightNearMe
