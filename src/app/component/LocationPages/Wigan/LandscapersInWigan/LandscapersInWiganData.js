@@ -224,7 +224,7 @@ export const LANDSCAPING_TABDATA_WIGAN = {
     },
   ],
   related: [
-    { title: "Landscapers Stockport", url: "" },
+    { title: "Landscapers Stockport", url: "/en/gb/landscapers-near-me/stockport" },
     { title: "Landscapers Oldham", url: "" },
     { title: "Landscapers Glossop", url: "" },
     { title: "Landscapers Tameside", url: "" },

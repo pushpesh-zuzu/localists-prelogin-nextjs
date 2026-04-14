@@ -201,8 +201,8 @@ export const LANDSCAPING_ADVICEINSIGHT_HUDDERSFIELD = [
 export const LANDSCAPING_TABDATA_HUDDERSFIELD = {
   popular: [
     {
-      title: "Landscapers Near Me",
-      url: "/en/gb/landscape-gardeners-near-me",
+      title: "Roofers Near Me",
+      url: "/en/gb/roofers-near-me",
     },
     {
       title: "Gardeners Near Me",
@@ -243,11 +243,13 @@ export const LANDSCAPING_TABDATA_HUDDERSFIELD = {
   ],
   related: [
     { title: "Landscapers Leeds", url: "" },
-{ title: "Landscapers Halifax", url: "" },
-{ title: "Landscapers Keighley", url: "" },
-{ title: "Landscapers Wakefield", url: "" },
-{ title: "Landscapers Castleford", url: "" },
-
+    { title: "Landscapers Halifax", url: "" },
+    { title: "Landscapers Keighley", url: "" },
+    {
+      title: "Landscapers Wakefield",
+      url: "/en/gb/landscapers-near-me/wakefield",
+    },
+    { title: "Landscapers Castleford", url: "" },
   ],
   findMore: [],
 };
