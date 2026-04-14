@@ -153,7 +153,7 @@ const AboutServicesAndQuestions = ({
         return (
           <ul key={index} className={`${block?.className ? block?.className : 'mb-2.5 md:mb-[15px]'} ${block?.listNone ? "list-none" : "list-disc pl-5 md:pl-8"}`}>
             <li className={textBase}>
-              {block.heading}
+              <span className="" dangerouslySetInnerHTML={{ __html: block.heading}} />
               {block.text && (
                 <span className="" dangerouslySetInnerHTML={{ __html: block.text }} />
               )}
