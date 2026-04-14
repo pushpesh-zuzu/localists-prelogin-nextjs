@@ -5,11 +5,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ROSSENDALE = [
   },
   {
     type: "p",
-    text: "Roofing work can vary quite a bit in price. It depends on what needs doing, how big the roof is, and whether it is a planned job or something urgent. A small repair is obviously very different from replacing an entire roof.",
+    text: "Everything from the size of your roof to whether you’re in a rush for an  emergency fix, changes the final bill for your roofing project. So there’s never really a “standard flat rate”. We always recommend getting at least three different quotes because, let’s be honest, every roofer sees a job slightly differently.",
   },
   {
     type: "p",
-    text: "To give you a rough idea of what people in Rossendale often pay:",
+    text: "Also, the materials involved in your project can affect costs. A typical example is - if you’re living in a traditional stone terrace in say…Rawtenstall town centre, you’re likely looking at reclaimed Yorkshire Stone, or high end slate (stunning but they cost an arm and a leg). Now, if you live around the newer estates in Bacup or Haslingden, chances are you might be needing concrete tiles as a lot of buildings in the area - they’re much easier on the wallet so you end up paying less.",
+  },
+  {
+    type: "p",
+    text: "That said, to give you a rough idea of what people in Rossendale often pay:",
   },
   {
     type: "pricingTable",
@@ -17,18 +21,18 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ROSSENDALE = [
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
-      "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+      "These are just average prices based on our own internal data of completed jobs. The final price of your project may be higher or a lot lower than the average cost presented above. To get an accurate price please,",
     prices: [
       {
         text: "General roofing work Many jobs average around",
-        price: "£2,184",
+        price: "£2,484",
       },
       {
         text: "Roof repairs For typical repairs, homeowners often spend around",
         price: " £875",
       },
       {
-        text: "Emergency roofing call-outs If you need someone quickly, the costs tend to average around ",
+        text: "Emergency roofing call-outs If you need someone quickly, the costs tend to average around",
         price: "£503",
       },
       {
@@ -38,16 +42,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ROSSENDALE = [
     ],
   },
   {
-    type: "p",
-    text: "These are just guide prices. The best way to know what your roof will cost is to have it looked at properly and get a written quote. Comparing a few options can also help you feel more confident about the price and the work involved.",
-    notMarginBottom: true,
-  },
-  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
     marginBottom: true,
-    marginTop: true,
   },
   {
     type: "h2",
@@ -55,50 +53,38 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ROSSENDALE = [
   },
   {
     type: "p",
-    text: 'When you need a roofer in Rossendale, the hardest part isn’t usually the repair itself - it’s knowing who to trust. It’s a lot to weigh up when every contractor promises the same "high-quality" results, but you’re the one left living under the roof if they get it wrong.',
+    text: `When you need a roofer in Rossendale, the hardest part isn’t usually the repair itself - it’s knowing who to trust. It’s a lot to weigh up when every contractor promises the same "high-quality" results, but you’re the one left living under the roof if they get it wrong.`,
   },
-
   {
     type: "p",
-    text: "When you use Localists, you aren’t just getting a random name and a phone number. You’re getting:",
+    text: 'When you use Localists, you aren’t just getting a random name and a phone number. You’re getting:',
   },
-
   { type: "pbold", text: "Roofers who know the area" },
-
   {
     type: "p",
     text: "Roofers in Rossendale deal with everything from older stone terraces to newer builds. That local experience matters when it comes to understanding common issues and the right way to fix them.",
   },
-
   { type: "pbold", text: "Quotes that reflect your specific roof" },
-
   {
     type: "p",
     text: "No two roofs are the same. The age, materials, condition, and layout all play a part. The quotes you receive are based on your situation, not a rough guess over the phone.",
   },
-
   { type: "pbold", text: "The chance to compare on your terms" },
-
   {
     type: "p",
     text: "If you need someone quickly, you can focus on roofers who are available now. If the work can wait, you can plan it around your schedule.",
   },
-
   { type: "pbold", text: "See real reviews and previous work" },
-
   {
     type: "p",
     text: "Before committing, you can read feedback, look at previous work, and understand what is included. That extra visibility makes it easier to feel comfortable with your choice.",
   },
-
   { type: "pbold", text: "Confidence that the price is fair" },
-
   {
     type: "p",
     text: "Having more than one option helps you spot what feels fair and reasonable. It also gives you confidence that you are not overpaying.",
     notMarginBottom: true,
   },
-
   {
     type: "QuotesBanner",
     className:
@@ -209,11 +195,11 @@ export const ROOFERS_TABDATA_ROSSENDALE = {
   findMore: [],
 };
 export const VETTED_DATA_ROOFERS_ROSSENDALE = [
-  `We’ve all done it - ignored that small damp patch or a slightly loose tile until a typical Rossendale downpour turns it into a real problem. But when this happens, the last thing you need is the stress of wondering which roofer is actually going to turn up and do a decent job. 
+  `Are your roof tiles starting to shift every time the wind picks up? Or did you actually manage to find a roofer, but the job’s taking even longer to finish than the Rawtenstall gyratory road works? You don’t have to keep chasing. 
   <br/><br/> 
   `,
   `
-At Localists, we take the guesswork out of finding the right professional. Whether you have a traditional stone-built terrace in Rawtenstall or a newer home in Bacup, we match you with high-quality, vetted roofers. No need to call around. You get up to 5 free quotes in minutes.
+At Localists, we’ve got a load of vetted roofers working right across the Valley - covering everywhere from Bacup to Haslingden. So no matter where you are, we’ll match you with high-quality roofers who deliver outstanding jobs. They’ll give you competitive quotes and more importantly, they have the capacity to get stuck in when you need them.
 `,
 ];
 

@@ -43,7 +43,7 @@ function RoofersInRossendale() {
       <HeroSectionLocation
         heading1="Roofers"
         heading2="Rossendale"
-        description="If you need high-quality roofers in Rossendale, enter your postcode, a few details about the project, and receive free, no-obligation quotes straight to your inbox. It takes only a minute."
+        description="Looking for high-quality, trusted local roofers in Rossendale? Look no further! Enter your postcode and give us a few details of what you need below. Within minutes, you’ll receive up to 5 free, no-obligation quotes directly to your inbox - it’s that easy!"
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"

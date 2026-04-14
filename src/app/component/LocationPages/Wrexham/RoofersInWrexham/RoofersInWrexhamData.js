@@ -5,19 +5,19 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
   },
   {
     type: "p",
-    text: "When it comes to roofing, trust matters. A roof protects everything inside your home, so cutting corners can cause more stress later on.",
+    text: "You know the saying that goes, “if a job’s worth doing, it’s worth doing right “ - well, that couldn’t be truer when it’s the roof over your head. At the end of the day, your roof is that one thing that keeps your home protected, so cutting corners usually leads to more stress - and a bigger bill down the line.",
   },
   {
     type: "p",
-    text: "A reliable roofer will want to see the problem up close before giving firm answers. That might mean climbing up to inspect the tiles or checking the loft space. If someone is willing to give a full diagnosis without a proper look, that’s worth questioning.",
+    text: "We always find that most roofers on our platform won’t just guess from your driveway. They always want to get their eyes on the problem properly - whether that’s climbing up to check the tiles or poking around the loft space. Honestly, if someone says they are going to give you an accurate diagnosis of the problem without even getting their ladder out, it’s worth questioning why.",
   },
   {
     type: "p",
-    text: "When comparing roofers in Wrexham, it’s sensible to look for:",
+    text: "So when  comparing roofers in Wrexham, we highly suggest that you look out for:",
   },
   {
     type: "li",
-    text: "Roofers who have experience with similar jobs",
+    text: "Roofers who have experience with similar jobs (with proven samples of project)",
   },
   {
     type: "li",
@@ -72,11 +72,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
   },
   {
     type: "p",
-    text: "There isn’t a flat price for roofing. The final cost usually depends on what’s actually happening up there. A small repair after a windy week is very different from removing and replacing an entire roof. Access to the property, the materials chosen, and how much labour is involved all affect the total cost.",
+    text: "Honestly, there isn’t a flat price for roofing. The final bill usually just depends on what’s actually happening up there once someone gets a proper look. Our biggest bit of advice with the money side is to always get a few different quotes from local tradespeople, as this helps you understand what to expect as an average.",
   },
   {
     type: "p",
-    text: "But here’s a rough guide of what the numbers may look like:",
+    text: "The reality is, fixing a few loose tiles after a windy week will cost less (perhaps as a one man job) but stripping and replacing an entire roof will definitely cost more. Also things like property access issues, the materials you decide to use, and just how much labor is involved are what really move the needle on price. But here’s a rough guide of what the numbers may look like:",
   },
   {
     type: "pricingTable",
@@ -84,7 +84,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WREXHAM = [
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
-      "Please note, these are average prices based on our own internal data. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+      "These numbers are there to give you a sense of scale, not a fixed promise. Every roof is different.  So what you might pay for your roofing project could be higher or lower than the figures above. To get an accurate estimate,",
     prices: [
       {
         text: "For general roofing projects, homeowners in Wrexham typically pay around",
@@ -115,28 +115,28 @@ export const ROOFERS_FREQUENTLY_DATA_WREXHAM = [
     key: "1",
     title: "Which roof is best for a house?",
     description: `
-        There isn’t one single answer because it depends on the house itself. The pitch of the roof, the age of the property, your budget, and even the local weather all play a part. Concrete tiles are common because they’re practical and cost-effective. Slate looks great and lasts a long time but comes at a higher price. The “best” option is usually the one that suits your home and how long you plan to stay in it.
+        Honestly, there’s no single best roof for a house - it really depends on the property itself. You’ve mostly got to look at the age of the place and obviously what kind of budget you’re working with. You take a walk through Wrexham town center or over in Hightown, you see a sea of dark grey slate. Since the best quarries in the world were right in North Wales, it was the obvious choice for those old Victorian terraces. In newer spots like Rossett or Marford, you’ll notice a lot more concrete tiles instead. These are the go-to  for most newer builds because they’re budget-friendly and quick to install. They won’t give you the hundred years as natural slates, but they do the job well.
         `,
   },
   {
     key: "2",
     title: "Should I pay a roofer in cash?",
     description: `
-        Paying in cash isn’t automatically a problem, but what matters more is having everything clearly written down. You should always have a proper quote before work starts and a receipt once it’s finished. Many people prefer bank transfer because it leaves a record, but the key thing is transparency. Avoid large upfront payments unless it’s for agreed materials.
+        Paying in cash isn’t a problem in itself, but if you think about it - you’ve got to protect yourself. Many roofers  are happy to take cash, but we always recommend having everything clearly written down. It’s best to get a proper quote before a single tile is even touched, and definitely make sure you get a receipt once the job is wrapped up. Whether you go for a bank transfer (which is a lot easier these days and leaves an automatic paper trail) or any other way, the main thing is to never hand over  a massive pile of cash upfront. The only real exception is if you’ve both agreed it’s to cover materials that are already sitting on your driveway.
         `,
   },
   {
     key: "3",
     title: "Which roof material lasts the longest?",
     description: `
-        Natural slate is often considered the longest-lasting roofing material. When it’s installed properly and maintained, it can last for decades. Clay tiles also have a strong lifespan. Of course, durability depends on installation quality and exposure to the elements as much as the material itself.
+        If you want something that’s going to last for decades, we suggest you go for natural slate. Because it’s natural stone, it’s incredibly dense and won’t soak up water - the rain literally just runs straight off it - which is exactly why it  handles the Welsh rain and frost better than other material types. In terms of how long you’re actually looking at; while a decent clay tile may give you a solid 50 or 60 years, a well fitted slate roof can easily last a century or more. And we wouldn’t be true localists if we didn’t recommend Welsh slate now would we?
         `,
   },
   {
     key: "4",
     title: "What is the best time of year to replace a roof?",
     description: `
-        Most roofers prefer steady, dry weather. Spring and summer are popular because conditions are usually more predictable. That said, roofing work can be done at other times of the year if the weather allows. Timing often comes down to urgency and availability rather than a perfect calendar month.
+        Most people will say spring and summer. Actually, our internal data shows that they’re naturally the busiest times for most of our local Wrexham roofers, because the conditions are just much more predictable. But to be honest, work doesn’t just grind to a halt when autumn or winter hits. Roofing can be done at any time of the year as long as the weather plays ball. For instance, if it’s an urgent leak that has water pouring into your home. There’s definitely no waiting for the “perfect weather” to get it sorted.
         `,
   },
 ];
@@ -238,7 +238,7 @@ export const VETTED_DATA_ROOFERS_WREXHAM = [
   `,
   `
 Just input your postcode, answer a few questions, and we’ll send you quotes from 5 of the
-<a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">best roofers</a> in Wrexham. Or just take a loot at a Wrexham roofer that takes your fancy and request a callback. All of our roofers have been vetted and verified to ensure you only get the best service..
+<a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">best roofers</a> in Wrexham. Or just take a loot at a Wrexham roofer that takes your fancy and request a callback. All of our roofers have been vetted and verified to ensure you only get the best service.
 `,
 ];
 
@@ -264,22 +264,22 @@ export const POPULAR_SERVICES_ROOFERS_WREXHAM = [
 export const ROOFERS_FEEDBACK_WREXHAM = [
   {
     id: 1,
-    text: "We’d been hearing a faint rattling sound on windy nights but couldn’t work out what it was. Turned out a few tiles had shifted slightly. It wasn’t a huge job, but I’m glad we didn’t ignore it. The roofer explained it in simple terms and had it sorted quicker than expected.",
+    text: "We’d been hearing a faint rattling sound on windy nights but couldn’t work out what it was. Turns out a few tiles had shifted slightly. It wasn’t a huge job, so the roofer we found had it all fixed the same day.",
     name: "Owain G.",
   },
   {
     id: 2,
-    text: "There was a small leak above the landing that only showed up when it rained heavily. I assumed it would mean replacing half the roof, but it didn’t. They found the issue around the flashing and fixed it without turning it into something bigger. It felt honest, which I appreciated.",
+    text: "There was a small leak above the landing that only showed up when it rained heavily. Got a local roofer through Localists, who found an issue around the flashing and fixed it. Very professional job!",
     name: "Megan P.",
   },
   {
     id: 3,
-    text: "We bought an older property and knew the roof would need attention at some point. After getting a few quotes, we felt more confident about what actually needed doing versus what could wait. The work took a few days and was noisier than we expected, but it was handled properly.",
+    text: "We bought an older property and knew the roof would need attention at some point. After getting a few quotes, we settled for the one within our budget. The work took a few days and was noisier than we expected, but it was handled properly.",
     name: "Rhys B.",
   },
   {
     id: 4,
-    text: "Noticed a damp patch forming in our spare bedroom ceiling but couldn’t see anything obvious from outside. The roofer did a proper check and found a small issue near the ridge tiles. He was local to us so booked us in for a next day fix. Highly recommend Localists.",
+    text: "We noticed a damp patch forming in our spare bedroom ceiling but couldn’t see anything obvious from outside. The roofer did a proper check and found a small issue near the ridge tiles. He was local to us so booked us in for a next day fix. Highly recommend Localists.",
     name: "Catrin H.",
   },
 ];

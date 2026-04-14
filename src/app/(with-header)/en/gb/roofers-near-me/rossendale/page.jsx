@@ -5,7 +5,7 @@ import React, { Suspense } from 'react'
 export const metadata = {
   title: "Find Trusted Roofers Rossendale | Localists.com",
   description:
-    "Are you looking to hire reliable roofers in Rossendale? Compare free quotes from vetted local roofing professionals today. No hassle. No pressure.",
+    "Looking to hire reliable roofers in Rossendale? Click now to compare free quotes from vetted local roofing professionals today. No hassle. No pressure.",
 };
 function page() {
   return (

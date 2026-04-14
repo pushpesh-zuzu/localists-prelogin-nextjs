@@ -3,7 +3,7 @@ import SEO from '@/app/component/common/seo/SEO';
 import RoofersInWrexham from '@/app/component/LocationPages/Wrexham/RoofersInWrexham/RoofersInWrexham';
 import React, { Suspense } from 'react'
 export const metadata = {
-  title: "Roofers Wrexham | Find vetted roofers at Localists.com",
+  title: "26 Roofers Wrexham | Find vetted roofers at Localists.com",
   description:
     "Searching for Roofers near you in Wrexham? Click now to get matched with vetted local roofers. Get up to 5 free quotes to your inbox in minutes.",
 };
