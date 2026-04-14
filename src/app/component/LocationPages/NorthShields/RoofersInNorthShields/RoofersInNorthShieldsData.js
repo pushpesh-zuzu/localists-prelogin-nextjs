@@ -195,6 +195,7 @@ export const ROOFERS_TABDATA_NORTH_SHIELDS = {
     ],
     related: [
         { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
+        { title: "Roofers Ashington", url: "/en/gb/roofers-near-me/ashington" },
         { title: "Roofers Scarborough ", url: "/en/gb/roofers-near-me/scarborough" },
         { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
         { title: "Roofers Middlesbrough", url: "/en/gb/roofers-near-me/middlesbrough" },
