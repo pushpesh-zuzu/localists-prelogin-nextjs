@@ -196,6 +196,7 @@ export const ROOFERS_TABDATA_WORKINGTON = {
     related: [
         { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
         { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
+        { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
         { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
     ],
     findMore: [],
