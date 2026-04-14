@@ -179,14 +179,14 @@ export const LANDSCAPING_TABDATA_WAKEFIELD = {
     ],
 
     related: [
-        { title: "Roofers Leeds", url: "" },
-        { title: "Roofers Halifax", url: "" },
-        { title: "Roofers Keighley", url: "" },
-        { title: "Roofers Barnsley", url: "" },
-        { title: "Roofers Castleford", url: "" },
+        { title: "Landscapers Leeds", url: "" },
+        { title: "Landscapers Halifax", url: "" },
+        { title: "Landscapers Keighley", url: "" },
+        { title: "Landscapers Barnsley", url: "" },
+        { title: "Landscapers Castleford", url: "" },
         {
-            title: "Roofers Huddersfield",
-            url: "",
+            title: "Landscapers Huddersfield",
+            url: "/en/gb/landscape-gardeners-near-me/huddersfield",
         },
     ],
     findMore: [],
