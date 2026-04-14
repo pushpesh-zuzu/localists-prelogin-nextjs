@@ -166,7 +166,7 @@ export const LANDSCAPING_TABDATA_WREXHAM = {
   popular: [
     {
       title: "Roofers Near Me",
-      url: "/en/gb/landscape-gardeners-near-me",
+      url: "/en/gb/roofers-near-me",
     },
     {
       title: "Gardeners Near Me",
@@ -217,7 +217,10 @@ export const LANDSCAPING_TABDATA_WREXHAM = {
     { title: "Landscapers Chester", url: "" },
     { title: "Landscapers Anglesey", url: "" },
     { title: "Landscapers Colwyn Bay", url: "" },
-    { title: "Landscapers Llandudno", url: "/en/gb/landscapers-near-me/llandudno" },
+    {
+      title: "Landscapers Llandudno",
+      url: "/en/gb/landscapers-near-me/llandudno",
+    },
     { title: "Landscapers Caernarfon", url: "" },
     { title: "Landscapers North Wales", url: "" },
     { title: "Landscapers Ellesmere Port", url: "" },

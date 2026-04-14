@@ -183,8 +183,8 @@ export const LANDSCAPING_ADVICEINSIGHT_WIGAN = [
 export const LANDSCAPING_TABDATA_WIGAN = {
   popular: [
     {
-      title: "Landscapers Near Me",
-      url: "/en/gb/landscape-gardeners-near-me",
+      title: "Roofers Near Me",
+      url: "/en/gb/roofers-near-me",
     },
     {
       title: "Gardeners Near Me",
@@ -224,7 +224,10 @@ export const LANDSCAPING_TABDATA_WIGAN = {
     },
   ],
   related: [
-    { title: "Landscapers Stockport", url: "/en/gb/landscapers-near-me/stockport" },
+    {
+      title: "Landscapers Stockport",
+      url: "/en/gb/landscapers-near-me/stockport",
+    },
     { title: "Landscapers Oldham", url: "" },
     { title: "Landscapers Glossop", url: "" },
     { title: "Landscapers Tameside", url: "" },
