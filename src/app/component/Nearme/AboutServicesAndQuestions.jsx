@@ -24,6 +24,7 @@ const AboutServicesAndQuestions = ({
   buttonText,
   serviceId = 112,
   serviceName = "Tree Surgery",
+  quotesBannerText,
 }) => {
   const renderBlock = (block, index) => {
     switch (block.type) {
@@ -76,7 +77,7 @@ const AboutServicesAndQuestions = ({
         return <PostCodeSectionLocation serviceId={serviceId} serviceName={serviceName} classNamePostCode={block?.className} key={index} />;
 
       case "QuotesBanner":
-        return <QuotesBanner serviceId={serviceId} serviceName={serviceName} key={index} classQuote={block?.className} />;
+        return <QuotesBanner serviceId={serviceId} quotesBannerText={quotesBannerText} serviceName={serviceName} key={index} classQuote={block?.className} />;
 
       case "p":
         return (
@@ -149,7 +150,7 @@ const AboutServicesAndQuestions = ({
 
       case "li":
         return (
-          <ul key={index} className={`${block?.className ? block?.className : 'mb-2.5 md:mb-[15px]'} ${block?.listNone? "list-none":"list-disc pl-5 md:pl-8"}`}>
+          <ul key={index} className={`${block?.className ? block?.className : 'mb-2.5 md:mb-[15px]'} ${block?.listNone ? "list-none" : "list-disc pl-5 md:pl-8"}`}>
             <li className={textBase}>
               {block.heading}
               {block.text && (
@@ -163,8 +164,8 @@ const AboutServicesAndQuestions = ({
           <div
             key={index}
             className={` ${textBase} flex ${block?.className
-                ? block?.className
-                : "mb-2.5 md:mb-[15px]"
+              ? block?.className
+              : "mb-2.5 md:mb-[15px]"
               }`}
           >
             <span className="mr-2 pl-2.5 md:pl-4">{block.number}.</span>
