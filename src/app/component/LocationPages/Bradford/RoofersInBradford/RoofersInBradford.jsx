@@ -43,7 +43,7 @@ function RoofersInBradford() {
       <HeroSectionLocation
         heading1="Roofers"
         heading2="Bradford"
-        description="Need a local roofer in Bradford? Input your postcode, a few details about the project, and get free quotes now from trusted professionals in your area. No pressure, no guesses."
+        description="Find the best roofers in Bradford! Just enter your postcode below, answer a few questions and we’ll get connect you with up to 5 local roofers to give you a quote on your roofing work!"
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"

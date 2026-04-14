@@ -330,6 +330,11 @@ export const ROOFERS_FEEDBACK_BRADFORD = [
     text: "Emergency roofing was a lifesaver! A leak appeared on a rainy weekend, and the roofer patched it quickly and gave tips to avoid future problems.",
     name: "Derek T.",
   },
+  {
+    id: 4,
+    text: "Had a few slipped tiles which needed sorting, so I got the",
+    name: "kane W.",
+  },
 ];
 
 export const ROOFERS_DATA_BRADFORD = [
