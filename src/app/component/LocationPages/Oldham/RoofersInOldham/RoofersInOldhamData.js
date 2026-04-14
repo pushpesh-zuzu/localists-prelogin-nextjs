@@ -252,6 +252,7 @@ export const ROOFERS_TABDATA_BARNSLEY = {
     },
   ],
   related: [
+    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
     { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
     { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },

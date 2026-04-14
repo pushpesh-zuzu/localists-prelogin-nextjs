@@ -217,6 +217,7 @@ export const ROOFERS_TABDATA_BLACKPOOL = {
     { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
     { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+    { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
     { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
     { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
   ],

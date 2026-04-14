@@ -230,6 +230,7 @@ export const ROOFERS_TABDATA_LEEDS = {
   related: [
     { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
     { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
+    { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
     { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
     { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },

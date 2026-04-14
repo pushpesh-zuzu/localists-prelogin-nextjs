@@ -247,9 +247,11 @@ export const ROOFERS_TABDATA_BARNSLEY = {
     },
   ],
   related: [
+    { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
     { title: "Roofers Rotherham", url: "/en/gb/roofers-near-me/rotherham" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
     { title: "Roofers CastlefordBarnsley", url: "/en/gb/roofers-near-me/castleford" },
+
   ],
   findMore: [],
 };

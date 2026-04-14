@@ -202,6 +202,7 @@ export const ROOFERS_TABDATA_KEIGHLEY = {
     { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
     { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+    { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
     { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
     {
       title: "Roofers Huddersfield",
