@@ -172,6 +172,7 @@ export const ROOFERS_TABDATA_CHORLEY = {
     },
   ],
   related: [
+    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
     { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
     { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },

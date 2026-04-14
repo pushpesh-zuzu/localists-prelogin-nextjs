@@ -181,6 +181,7 @@ export const ROOFERS_TABDATA_ORMSKIRK = {
     },
   ],
   related: [
+    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
     { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
     { title: "Roofers Crosby", url: "/en/gb/roofers-near-me/crosby" },
     { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },

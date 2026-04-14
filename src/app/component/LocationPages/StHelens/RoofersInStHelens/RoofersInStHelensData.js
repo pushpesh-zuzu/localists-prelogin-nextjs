@@ -210,6 +210,7 @@ export const ROOFERS_TABDATA_ST_HELENS = {
     },
   ],
   related: [
+    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
     { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
     { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
     { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },

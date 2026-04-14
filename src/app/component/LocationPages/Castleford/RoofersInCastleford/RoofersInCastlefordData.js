@@ -183,6 +183,7 @@ export const ROOFERS_TABDATA_CASTLEFORD = {
     { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
     { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
+    { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
     { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
     {
