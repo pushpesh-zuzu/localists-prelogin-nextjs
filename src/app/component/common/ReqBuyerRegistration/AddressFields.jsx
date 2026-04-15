@@ -10,11 +10,15 @@ import {
   getAddressListFromPostcode,
   setAddressList,
   clearSetbuyerRequestData,
+  registerQuoteCustomer
 } from "@/lib/store/buyerslice/buyerSlice";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import Select from "react-select";
 import { getBarkToken } from "@/utils/CookiesHelper";
+import useUserInfo from "@/utils/getUserIp";
+import { extractAllParams } from "@/utils/decodeURLParams";
+import { useSearchParams } from "next/navigation";
 
 
 function AddressFields({
@@ -23,6 +27,7 @@ function AddressFields({
   setShowConfirmModal,
   progressPercent,
   previousStep,
+  serviceId,
 }) {
   const router = useRouter();
   const dispatch = useDispatch();
@@ -33,10 +38,31 @@ function AddressFields({
   const [street, setStreet] = useState(buyerRequest?.street || "");
   const [selectedAddressId, setSelectedAddressId] = useState("");
   const [hasFetchedAddress, setHasFetchedAddress] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({ house: "", street: "" });
 
   // Fetch address list when buyerRequest.postcode is available
   const lastFetchedPostcode = useRef(null);
+
+  const { ip, url } = useUserInfo();
+
+  const { search } = useSearchParams();
+
+  const allParams =
+    typeof window !== "undefined" &&
+    extractAllParams(search || window.location.search);
+  const campaignid = allParams.campaign_id || "";
+  const keyword = allParams.keyword || "";
+  const gclid = allParams.gclid || "";
+  const msclkid = allParams.msclkid || "";
+  const adgroup_id = allParams.adgroup_id;
+  const platform_source = allParams.source || "";
+  const campaign = allParams.campaign || "";
+  const adgroup = allParams.adgroup || "";
+  const matchtype = allParams.matchtype || "";
+  const device = allParams.device || "";
+  const loc_physical_ms = allParams.loc_physical_ms || "";
+  const utm_search_term = allParams.utm_search_term || "";
 
   useEffect(() => {
     if (buyerRequest.postcode && buyerRequest.postcode !== lastFetchedPostcode.current) {
@@ -45,56 +71,49 @@ function AddressFields({
         getAddressListFromPostcode({ postcode: buyerRequest.postcode }),
       ).then(() => setHasFetchedAddress(true));
     }
-  }, [buyerRequest.postcode]);
+  }, [buyerRequest.postcode, dispatch]);
 
 
   useEffect(() => {
     if (!buyerRequest.postcode) {
-      setSelectedAddressId("");
-      setHouse("");
-      setStreet("");
+      const timer = setTimeout(() => {
+        setSelectedAddressId("");
+        setHouse("");
+        setStreet("");
+        setHasFetchedAddress(false);
+      }, 0);
+
       dispatch(setAddressList([]));
-      setHasFetchedAddress(false);
+      return () => clearTimeout(timer);
     }
   }, [buyerRequest.postcode, dispatch]);
 
   useEffect(() => {
+    let nextSelectedAddressId = "";
+
     if (addressList.length === 0) {
-      setSelectedAddressId("");
-      return;
+      nextSelectedAddressId = "";
+    } else if (buyerRequest?.address) {
+      const selectedIndex = addressList.findIndex((addr) => {
+        const addressLabel = `${addr.house_name || ""}, ${addr.street_address || ""}`;
+        return addressLabel === buyerRequest.address;
+      });
+
+      if (selectedIndex >= 0) {
+        nextSelectedAddressId = selectedIndex;
+      }
     }
 
-    if (!buyerRequest?.address) {
-      setSelectedAddressId("");
-      return;
-    }
+    const timer = setTimeout(() => {
+      setSelectedAddressId(nextSelectedAddressId);
+    }, 0);
 
-    const selectedIndex = addressList.findIndex((addr) => {
-      const addressLabel = `${addr.house_name || ""}, ${addr.street_address || ""}`;
-      return addressLabel === buyerRequest.address;
-    });
-
-    if (selectedIndex >= 0) {
-      setSelectedAddressId(selectedIndex);
-      return;
-    }
-
-    setSelectedAddressId("");
+    return () => clearTimeout(timer);
   }, [addressList, buyerRequest?.address]);
 
-  // const handleAddressSelect = (e) => {
-  //   const index = Number(e.target.value);
-  //   setSelectedAddressId(index);
-
-  //   const selected = addressList[index];
-  //   if (selected) {
-  //     setHouse((selected.house_name || "").trim());
-  //     setStreet((selected.street_address || "").trim());
-  //     setErrors({ house: "", street: "" });
-  //   }
-  // };
-
   const handleSubmit = () => {
+    if (isSubmitting) return;
+
     const canContinue = checkAuthenticatedUser(router);
     if (!canContinue) return;
 
@@ -124,7 +143,42 @@ function AddressFields({
         address: `${houseValue}, ${streetValue}`,
       }),
     );
-    nextStep();
+
+    const formData = new FormData();
+    formData.append("name", buyerRequest?.name);
+    formData.append("email", buyerRequest?.email);
+    formData.append("phone", buyerRequest?.phone);
+    formData.append("questions", buyerRequest?.questions ? JSON.stringify(buyerRequest.questions) : "");
+    formData.append("service_id", buyerRequest?.service_id || serviceId || "");
+    formData?.append("city", citySerach);
+    formData.append("postcode", buyerRequest?.postcode);
+    formData.append("form_status", "1");
+    formData.append("campaignid", campaignid || "");
+    formData.append("gclid", gclid || "");
+    formData.append("campaign", campaign || "");
+    formData.append("adgroup", adgroup || "");
+    formData.append("msclickid", msclkid || "");
+    formData.append("adgroup_id", adgroup_id || "");
+    formData.append("matchtype", matchtype || "");
+    formData.append("device", device || "");
+    formData.append("loc_physical_ms", loc_physical_ms || "");
+    formData.append("utm_search_term", utm_search_term || "");
+    formData.append("platform_source", platform_source);
+    formData.append("keyword", keyword || "");
+
+    formData.append("entry_url", url);
+    formData.append("user_ip_address", ip);
+
+    setIsSubmitting(true);
+    dispatch(registerQuoteCustomer(formData))
+      .then((result) => {
+        if (result) {
+          nextStep();
+        }
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   const handleCloseClick = () => {
@@ -141,7 +195,7 @@ function AddressFields({
   };
 
   const isDisabled =
-    !(house?.trim() && street?.trim()) && selectedAddressId === "";
+    isSubmitting || (!(house?.trim() && street?.trim()) && selectedAddressId === "");
 
   return (
     <Modal

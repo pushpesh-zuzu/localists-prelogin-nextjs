@@ -1,21 +1,17 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useSearchParams } from "next/navigation";
 import {
     setbuyerRequestData,
     clearSetbuyerRequestData,
-    registerQuoteCustomer,
     questionAnswerData,
 } from "@/lib/store/buyerslice/buyerSlice";
-import useUserInfo from "@/utils/getUserIp";
-import InputField from "../../UI/Inputs/InputField";
+import Modal from "../Modal";
+import InputField from "../UI/InputField";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import { getBarkToken } from "@/utils/CookiesHelper";
-import { extractAllParams } from "@/utils/decodeURLParams";
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
-import Modal from "../Modal";
 import QuestionOptionsBox from "./QuestionOptionsBox";
 
 const QuestionModal = ({
@@ -29,85 +25,17 @@ const QuestionModal = ({
     setShowConfirmModal,
     isStartWithQuestionModal = false,
     onQuestionChange,
+    initialQuestionIndex = 0,
     progressPercent,
 }) => {
     const dispatch = useDispatch();
-    const { buyerStep, buyerRequest, requestLoader, citySerach, questionanswerData } =
+    const { buyerStep, buyerRequest, citySerach, questionanswerData } =
         useSelector((state) => state.buyer);
-    const { service, registerData } = useSelector((state) => state.findJobs);
+    const { service } = useSelector((state) => state.findJobs);
 
     const hasFetchedQuestions = useRef(false);
 
-    const { ip, url } = useUserInfo();
-
-    const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [selectedOption, setSelectedOption] = useState([]);
-    const [otherText, setOtherText] = useState("");
-    const [error, setError] = useState("");
-    const [questionHistory, setQuestionHistory] = useState([0]);
-
-    // Get URL params
-    const { search } = useSearchParams();
-    const allParams =
-        typeof window !== "undefined" &&
-        extractAllParams(search || window.location.search);
-    const campaignid = allParams.campaign_id || "";
-    const keyword = allParams.keyword || "";
-    const gclid = allParams.gclid || "";
-    const msclkid = allParams.msclkid || "";
-    const adgroup_id = allParams.adgroup_id;
-    const platform_source = allParams.source || "";
-    const campaign = allParams.campaign || "";
-    const adgroup = allParams.adgroup || "";
-    const matchtype = allParams.matchtype || "";
-    const device = allParams.device || "";
-    const loc_physical_ms = allParams.loc_physical_ms || "";
-    const utm_search_term = allParams.utm_search_term || "";
-
-    useEffect(() => {
-        if (questions.length > 0 && currentQuestion === -1) {
-            setCurrentQuestion(0);
-        }
-    }, [questions, currentQuestion]);
-
-    useEffect(() => {
-        if (onQuestionChange) {
-            onQuestionChange(currentQuestion);
-        }
-    }, [currentQuestion]);
-
-    useEffect(() => {
-        if (questions.length > 0 && buyerRequest?.questions?.length > 0) {
-            const savedAnswer = buyerRequest.questions[currentQuestion]?.ans || [];
-
-            const savedArray =
-                typeof savedAnswer === "string"
-                    ? savedAnswer.split(",").map((a) => a.trim())
-                    : savedAnswer;
-
-            setSelectedOption(savedArray);
-            const otherVal = savedArray.find(
-                (ans) =>
-                    ans.toLowerCase() !== "yes" &&
-                    ans.toLowerCase() !== "no" &&
-                    ans.toLowerCase() !== "maybe"
-            );
-            setOtherText(
-                savedArray.includes("Something else (please describe)")
-                    ? otherVal || ""
-                    : ""
-            );
-        }
-    }, [currentQuestion, buyerRequest, questions]);
-
-    useEffect(() => {
-        setSelectedOption([]);
-        setOtherText("");
-    }, [currentQuestion]);
-
-    const totalQuestions = questions?.length;
-
-    const formattedQuestions = questions.map((q) => ({
+    const formattedQuestions = useMemo(() => questions.map((q) => ({
         ...q,
         parsedAnswers: Array.isArray(q.answer)
             ? q.answer
@@ -118,27 +46,87 @@ const QuestionModal = ({
                     return [];
                 }
             })(),
-    }));
+    })), [questions]);
+
+    const getQuestionHistoryFromAnswers = () => {
+        const savedQuestions = buyerRequest?.questions || [];
+        const savedHistory = savedQuestions
+            .map((answer) =>
+                formattedQuestions.findIndex(
+                    (question) => question?.questions === answer?.ques
+                )
+            )
+            .filter((index) => index !== -1);
+
+        if (savedHistory.length > 0) {
+            return savedHistory;
+        }
+
+        return [initialQuestionIndex];
+    };
+
+    const initialHistory = getQuestionHistoryFromAnswers();
+    const [currentQuestion, setCurrentQuestion] = useState(
+        initialHistory[initialHistory.length - 1] ?? initialQuestionIndex
+    );
+    const [selectedOption, setSelectedOption] = useState([]);
+    const [otherText, setOtherText] = useState("");
+    const [error, setError] = useState("");
+    const [questionHistory, setQuestionHistory] = useState(initialHistory);
+
+    useEffect(() => {
+        if (onQuestionChange) {
+            onQuestionChange(currentQuestion);
+        }
+    }, [currentQuestion, onQuestionChange]);
+
+    useEffect(() => {
+        if (questions.length > 0) {
+            const questionText = formattedQuestions[currentQuestion]?.questions;
+            const savedAnswerData = buyerRequest?.questions?.find(
+                (question) => question?.ques === questionText
+            );
+            const savedAnswer = savedAnswerData?.ans || [];
+
+            const savedArray =
+                typeof savedAnswer === "string"
+                    ? savedAnswer.split(",").map((a) => a.trim())
+                    : savedAnswer;
+
+            if (savedArray.length === 0) {
+                const timer = setTimeout(() => {
+                    setSelectedOption([]);
+                    setOtherText("");
+                }, 0);
+
+                return () => clearTimeout(timer);
+            }
+
+            const otherVal = savedArray.find(
+                (ans) =>
+                    ans.toLowerCase() !== "yes" &&
+                    ans.toLowerCase() !== "no" &&
+                    ans.toLowerCase() !== "maybe"
+            );
+            const timer = setTimeout(() => {
+                setSelectedOption(savedArray);
+                setOtherText(
+                    savedArray.includes("Something else (please describe)")
+                        ? otherVal || ""
+                        : ""
+                );
+            }, 0);
+
+            return () => clearTimeout(timer);
+        }
+    }, [currentQuestion, buyerRequest, formattedQuestions, questions]);
+
+    const totalQuestions = questions?.length;
 
     const questionIndexMap = {};
     formattedQuestions.forEach((q, index) => {
         questionIndexMap[q.question_no] = index;
     });
-
-    // const handleOptionChange = (e) => {
-    //     const { value, checked } = e.target;
-    //     const isSingle = questions[currentQuestion]?.option_type === "single";
-
-    //     if (isSingle) {
-    //         setSelectedOption([value]);
-    //         setError("");
-    //     } else {
-    //         setSelectedOption((prev) =>
-    //             checked ? [...prev, value] : prev.filter((opt) => opt !== value)
-    //         );
-    //         setError("");
-    //     }
-    // };
 
     const handleNext = (directValue = null) => {
         const finalSelection = directValue ? [directValue] : selectedOption;
@@ -207,40 +195,9 @@ const QuestionModal = ({
             } else if (getBarkToken()) {
                 nextStep();
             } else {
-                const formData = new FormData();
-                formData.append("name", buyerRequest?.name);
-                formData.append("email", buyerRequest?.email);
-                formData.append("phone", buyerRequest?.phone);
-                formData.append("questions", JSON.stringify(updatedAnswers));
-                formData.append("service_id", serviceId || buyerRequest?.service_id);
-                formData?.append("city", citySerach);
-                formData.append("postcode", buyerRequest?.postcode);
-                formData.append("form_status", "1");
-                formData.append("campaignid", campaignid || "");
-                formData.append("gclid", gclid || "");
-                formData.append("campaign", campaign || "");
-                formData.append("adgroup", adgroup || "");
-                formData.append("msclickid", msclkid || "");
-                formData.append("adgroup_id", adgroup_id || "");
-                formData.append("matchtype", matchtype || "");
-                formData.append("device", device || "");
-                formData.append("loc_physical_ms", loc_physical_ms || "");
-                formData.append("utm_search_term", utm_search_term || "");
-                formData.append("platform_source", platform_source);
-                formData.append("keyword", keyword || "");
-
-                formData.append("entry_url", url);
-                formData.append("user_ip_address", ip);
-                formData.append("quote_type", "req call back");
-
-
-                dispatch(registerQuoteCustomer(formData)).then((result) => {
-                    if (result) {
-                        nextStep();
-                    }
-                });
+                nextStep();
             }
-        } else if (nextQ && questionIndexMap[nextQ]) {
+        } else if (nextQ && questionIndexMap[nextQ] !== undefined) {
             setQuestionHistory((prev) => [...prev, questionIndexMap[nextQ]]);
             setCurrentQuestion(questionIndexMap[nextQ]);
         } else {
@@ -275,7 +232,7 @@ const QuestionModal = ({
             );
 
             if (indexInAnswers !== -1) {
-                const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
+                const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers + 1);
 
                 dispatch(setbuyerRequestData({ questions: updatedAnswers }));
             }
@@ -289,14 +246,14 @@ const QuestionModal = ({
 
     const handleCloseClick = () => {
         if (questionanswerData?.length === 0) {
-            onClose();
+            onClose?.();
             dispatch(clearSetbuyerRequestData());
             dispatch(clearBuyerRegisterFormData());
         } else {
             if (!getBarkToken()) {
                 setShowConfirmModal(true);
             } else {
-                onClose();
+                onClose?.();
                 dispatch(clearSetbuyerRequestData());
                 dispatch(clearBuyerRegisterFormData());
             }
@@ -305,12 +262,13 @@ const QuestionModal = ({
 
     useEffect(() => {
         if (hasFetchedQuestions.current) return;
+        if (questionanswerData?.length > 0) return;
 
         if (serviceId) {
             dispatch(questionAnswerData({ service_id: serviceId }));
             hasFetchedQuestions.current = true;
         }
-    }, [dispatch, serviceId]);
+    }, [dispatch, questionanswerData?.length, serviceId]);
 
     return (
         <Modal
@@ -322,7 +280,7 @@ const QuestionModal = ({
             onNext={() => handleNext()}
             onBack={handleBack}
             maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
-            maxHeight="max-h-[95vh]"
+            maxHeight="max-h-[87vh]"
             padding="pb-[20px] md:pb-[30px] lg:pb-[30px]"
             buyerStep={buyerStep}
             fixedHeight={true}
@@ -331,6 +289,7 @@ const QuestionModal = ({
             showButtons={true}
             buttongroup="lg:mx-[76px] md:mx-[60.4px] mx-4.5"
             progressPercent={progressPercent}
+            marginTop="lg:mt-[12vh] mt-[5vh]"
         >
             <div className="border border-[#D9D9D9] rounded-[30px] mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
                 {loading ? (
@@ -344,8 +303,10 @@ const QuestionModal = ({
                             {formattedQuestions[currentQuestion]?.parsedAnswers.map(
                                 (opt, index, arr) => {
 
-                                    const isSingle =
-                                        formattedQuestions[currentQuestion]?.option_type === "single";
+                                    const optionType =
+                                        formattedQuestions[currentQuestion]?.option_type;
+
+                                    const isSingle = optionType === "single";
 
                                     const isSelected = selectedOption.includes(opt.option);
 
@@ -370,14 +331,14 @@ const QuestionModal = ({
                                     return (
                                         <div
                                             key={index}
-                                            className={isLastSingle ? "sm:col-span-2 sm:flex sm:justify-center" : ""}>
-                                            <div className={isLastSingle ? "w-full sm:w-1/2" : "w-full"}>
-                                                <QuestionOptionsBox
-                                                    label={opt.option}
-                                                    isSelected={isSelected}
-                                                    onSelect={handleSelect}
-                                                    isMulti={!isSingle}
-                                                />
+                                        className={isLastSingle ? "sm:col-span-2 sm:flex sm:justify-center" : ""}>
+                                        <div className={isLastSingle ? "w-full sm:w-1/2" : "w-full"}
+                                        >
+                                            <QuestionOptionsBox
+                                                label={opt.option}
+                                                isSelected={isSelected}
+                                                onSelect={handleSelect}
+                                            />
                                             </div>
                                         </div>
                                     );

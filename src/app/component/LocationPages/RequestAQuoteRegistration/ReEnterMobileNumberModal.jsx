@@ -11,11 +11,11 @@ import {
 import { validateUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
 import { showToast } from "@/utils/toaster";
 import Paragraph from "@/app/component/UI/Typography/Paragraph";
-import { CheckIcon } from "lucide-react";
+// import { CheckIcon } from "lucide-react";
 
 function ReEnterMobileNumber({ onClose, setReEnterMobile, progressPercent }) {
     const dispatch = useDispatch();
-    const { buyerRequest, requestLoader, requestUserId, buyerStep } = useSelector(
+    const { buyerRequest, requestUserId, buyerStep } = useSelector(
         (state) => state.buyer
     );
 
@@ -76,19 +76,19 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile, progressPercent }) {
         }
     };
 
-    const handlePostcodeChange = () => {
-        setPostcode(e.target.value);
-        setErrors((prev) => ({ ...prev, postcode: "" }));
-        dispatch(
-            setbuyerRequestData({
-                ...buyerRequest,
-                name,
-                email,
-                phone,
-                postcode: e.target.value,
-            })
-        );
-    }
+    // const handlePostcodeChange = () => {
+    //     setPostcode(e.target.value);
+    //     setErrors((prev) => ({ ...prev, postcode: "" }));
+    //     dispatch(
+    //         setbuyerRequestData({
+    //             ...buyerRequest,
+    //             name,
+    //             email,
+    //             phone,
+    //             postcode: e.target.value,
+    //         })
+    //     );
+    // }
 
     const handleSubmit = () => {
         const newErrors = {
@@ -203,7 +203,7 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile, progressPercent }) {
                     placeholder="Phone Number"
                 />
 
-                <div className="mt-4 relative">
+                {/* <div className="mt-4 relative">
                     <InputField
                         label="Postcode"
                         type={inputType}
@@ -218,7 +218,7 @@ function ReEnterMobileNumber({ onClose, setReEnterMobile, progressPercent }) {
                         color="white"
                         className="absolute top-10.5 right-3 p-1 bg-green-500 rounded-full text-white"
                     />
-                </div>
+                </div> */}
 
             </div>
         </Modal>
