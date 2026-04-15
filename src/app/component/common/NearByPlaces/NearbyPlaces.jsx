@@ -5,7 +5,7 @@ import WrapperBGWidth from "../WrapperBGWidth/WrapperBGWidth";
 const vettedHeading1 = "Nearby";
 const vettedHeading2 = "Places.";
 
-export default function NearbyPlaces({ background = "#fafafa", related = [] }) {
+export default function NearbyPlaces({ background = "#fafafa", NearByPlacesData = [] }) {
   return (
     <WrapperBGWidth background={background}>
       <div className="px-[30px] md:px-16 py-[30px] md:py-[50px] lg:pl-16 xl:px-[120px] lg:py-[72px]">
@@ -17,7 +17,7 @@ export default function NearbyPlaces({ background = "#fafafa", related = [] }) {
         <div className="mb-3.5 xl:mb-6" />
 
         <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-x-5 md:gap-x-6 xl:gap-x-[86px]">
-          {related.map(({ title, url }, index, arr) => {
+          {NearByPlacesData.map(({ title, url }, index, arr) => {
             const totalItems = arr.length;
             const cols = 4;
             const mobileCols = 2;
