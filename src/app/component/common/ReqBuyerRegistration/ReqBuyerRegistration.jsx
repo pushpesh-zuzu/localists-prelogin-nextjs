@@ -5,13 +5,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { setBuyerStep, getAutoBid, setbuyerRequestData } from "@/lib/store/buyerslice/buyerSlice";
 import QuestionModal from "./QuestionModal";
 import { getBarkToken } from "@/utils/CookiesHelper";
-import NameEmailPhone from "./NameEmailPhone";
+// import NameEmailPhone from "./NameEmailPhone";
 import ConfirmationModal from "./ConfirmationModal";
 import OtpVerificationModal from "./OtpVerificationModal";
 import ReEnterMobileNumberModal from "./ReEnterMobileNumberModal";
 import DescribeYourRequestModal from "./DescribeYourRequestModal";
 import SeeMyMatchesModal from "./SeeMyMatchesModal";
 import AddressFields from "./AddressFields";
+import NameEmail from "./NameEmail";
+import PhoneNumber from "./PhoneNumber";
 
 function ReqBuyerRegistration({
     onClose,
@@ -49,16 +51,15 @@ function ReqBuyerRegistration({
     const hasSellers = sellers.length > 0;
 
     // console.log("buyerRequest", buyerRequest)
+    // console.log("sellers", sellers)
 
     const isAdminOrRemembered = getBarkToken();
 
-    // const stepFlow = isAdminOrRemembered ? [2, 3, 4, 5] : [1, 2, 3, 4, 5];
-
     const stepFlow = useMemo(() => {
         if (isAdminOrRemembered) {
-            return hasSellers ? [2, 3, 4, 5, 6] : [2, 3, 4, 5];
+            return hasSellers ? [2, 3, 4, 5, 6, 7] : [2, 3, 4, 5, 6];
         } else {
-            return hasSellers ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5];
+            return hasSellers ? [1, 2, 3, 4, 5, 6, 7] : [1, 2, 3, 4, 5, 6];
         }
     }, [isAdminOrRemembered, hasSellers]);
 
@@ -82,7 +83,14 @@ function ReqBuyerRegistration({
     const previousStep = () => {
         const currentIndex = stepFlow.indexOf(buyerStep);
         if (currentIndex > 0) {
-            dispatch(setBuyerStep(stepFlow[currentIndex - 1]));
+            const previousBuyerStep = stepFlow[currentIndex - 1];
+
+            if (previousBuyerStep === 1) {
+                setQuestionIndex(0);
+                dispatch(setbuyerRequestData({ questions: [] }));
+            }
+
+            dispatch(setBuyerStep(previousBuyerStep));
         }
     };
     // const getService = (service) => {
@@ -107,15 +115,7 @@ function ReqBuyerRegistration({
             dispatch(setBuyerStep(1));
             onClose?.();
         }
-    }, [shouldClose]);
-
-    if (!buyerStep) return null;
-
-    useEffect(() => {
-        if (buyerStep === 2 && questionModalRef.current) {
-            questionModalRef.current.resetQuestions?.();
-        }
-    }, [buyerStep]);
+    }, [dispatch, onClose, shouldClose]);
 
     const confirmClose = () => {
         setShowConfirmModal(false);
@@ -146,13 +146,13 @@ function ReqBuyerRegistration({
 
     let currentPosition = 0;
 
-    if (buyerStep === 3 && totalQuestions > 0) {
-        const baseIndex = stepFlow.indexOf(3);
+    if (buyerStep === 2 && totalQuestions > 0) {
+        const baseIndex = stepFlow.indexOf(2);
         currentPosition = baseIndex + questionIndex + 1;
     } else {
         const stepIndex = stepFlow.indexOf(buyerStep);
 
-        if (totalQuestions > 0 && stepIndex > stepFlow.indexOf(3)) {
+        if (totalQuestions > 0 && stepIndex > stepFlow.indexOf(2)) {
             // After questions, shift position forward by (questionCount - 1)
             currentPosition =
                 stepIndex + totalQuestions;
@@ -161,26 +161,18 @@ function ReqBuyerRegistration({
         }
     }
 
-    // let progressPercent = progressPercent = Math.round(
-    //     (currentPosition / totalSteps) * 100
-    // );
-    let progressPercent = 0
-    if (buyerStep === 1) {
-    progressPercent = 10;
-    }
-    else if (buyerStep === 2) {
-        progressPercent = 20;
-    }
-    else {
-     progressPercent = Math.round(
+    let progressPercent = Math.round(
         (currentPosition / totalSteps) * 100
     );
+
+    if (buyerStep === 1) {
+        progressPercent = 10;
     }
 
     if (stepFlow.indexOf(buyerStep) === stepFlow.length - 1) {
         progressPercent = 100;
     }
- console.log(buyerRequest,'progressPercent')
+    // console.log(buyerRequest, 'progressPercent')
     // Call API once
     useEffect(() => {
         if (!hasFetched.current && requestId && requestUserId) {
@@ -194,30 +186,24 @@ function ReqBuyerRegistration({
         }
     }, [dispatch, requestId, requestUserId]);
 
+    if (!buyerStep) return null;
+
     return (
         <>
-         {buyerStep === 1 && (
-                <AddressFields
-                    nextStep={nextStep}
-                    onClose={handleClose}
-                    setShowConfirmModal={setShowConfirmModal}
-                    progressPercent={progressPercent}
-                />
-            )}
+            {
+                buyerStep === 1 && (
+                    <NameEmail
+                        nextStep={nextStep}
+                        onClose={handleClose}
+                        formData={buyerRequest}
+                        setEmails={setEmails}
+                        setShowConfirmModal={setShowConfirmModal}
+                        progressPercent={progressPercent}
+                    />
+                )
+            }
+
             {buyerStep === 2 && (
-                <NameEmailPhone
-                    nextStep={nextStep}
-                    previousStep={previousStep}
-                    onClose={handleClose}
-                    formData={buyerRequest}
-                    setEmails={setEmails}
-                    setShowConfirmModal={setShowConfirmModal}
-                    serviceId={service_Id}
-                    progressPercent={progressPercent}
-                    
-                />
-            )}
-            {buyerStep === 3 && (
                 <QuestionModal
                     ref={questionModalRef}
                     questions={questionanswerData}
@@ -230,12 +216,36 @@ function ReqBuyerRegistration({
                     setShowConfirmModal={setShowConfirmModal}
                     formData={buyerRequest}
                     onQuestionChange={setQuestionIndex}
+                    initialQuestionIndex={questionIndex}
                     progressPercent={progressPercent}
-
                 />
             )}
 
-            {buyerStep === 4 && reEnterMobile === 2 && (
+            {
+                buyerStep === 3 && (
+                    <PhoneNumber
+                        nextStep={nextStep}
+                        previousStep={previousStep}
+                        onClose={handleClose}
+                        formData={buyerRequest}
+                        setShowConfirmModal={setShowConfirmModal}
+                        progressPercent={progressPercent}
+                    />
+                )
+            }
+
+            {buyerStep === 4 && (
+                <AddressFields
+                    nextStep={nextStep}
+                    previousStep={previousStep}
+                    onClose={handleClose}
+                    setShowConfirmModal={setShowConfirmModal}
+                    progressPercent={progressPercent}
+                    serviceId={service_Id}
+                />
+            )}
+
+            {buyerStep === 5 && reEnterMobile === 2 && (
                 <OtpVerificationModal
                     nextStep={nextStep}
                     previousStep={previousStep}
@@ -245,7 +255,6 @@ function ReqBuyerRegistration({
                     setReEnterMobile={setReEnterMobile}
                     serviceId={service_Id}
                     progressPercent={progressPercent}
-
                 />
             )}
 
@@ -257,10 +266,9 @@ function ReqBuyerRegistration({
                 />
             )}
 
-            {buyerStep === 5 && (
+            {buyerStep === 6 && (
                 <DescribeYourRequestModal
                     nextStep={nextStep}
-                    previousStep={previousStep}
                     onClose={handleClose}
                     setShowConfirmModal={setShowConfirmModal}
                     progressPercent={progressPercent}
@@ -268,11 +276,10 @@ function ReqBuyerRegistration({
                 />
             )}
 
-            {buyerStep === 6 && hasSellers && (
+            {buyerStep === 7 && hasSellers && (
                 <SeeMyMatchesModal
                     onClose={handleClose}
                     nextStep={nextStep}
-                    previousStep={previousStep}
                     setShowConfirmModal={setShowConfirmModal}
                     progressPercent={progressPercent}
                 />

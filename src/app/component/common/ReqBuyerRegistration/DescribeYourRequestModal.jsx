@@ -84,7 +84,7 @@ const DescribeYourRequestModal = ({ nextStep, progressPercent, sellers }) => {
         );
 
         if (hasSellers) {
-            //  Stay in modal flow → go to Step 5
+            //  Stay in modal flow → go to Step 7
             nextStep();
         } else {
             //  No sellers → Clear everything & go to Step 10

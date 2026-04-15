@@ -292,17 +292,13 @@ function SeeMyMatchesModal({ previousStep, progressPercent }) {
         }
     };
 
-    const handleBack = () => {
-        previousStep();
-    };
-
     return (
         <Modal
             showClosIcon={false}
             isOpen={true}
             title="Select up to 5 companies to get a quote"
             onNext={handleSubmit}
-            onBack={handleBack}
+            onBack={previousStep}
             maxWidth="max-w-[90%] md:max-w-[80%] lg:max-w-[760px]"
             maxHeight="lg:max-h-[85vh] max-h-[90vh]"
             padding="pb-[20px] md:pb-[30px] lg:pb-[30px]"
