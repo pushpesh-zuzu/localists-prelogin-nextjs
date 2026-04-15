@@ -184,19 +184,19 @@ export const LANDSCAPING_TABDATA_LLANDUDNO = {
     ],
 
     related: [
-        { title: "Landscapers Mold", url: "" },
-        { title: "Landscapers Rhyl", url: "" },
-        { title: "Landscapers Conwy", url: "" },
-        { title: "Landscapers Bangor", url: "" },
-        { title: "Landscapers Buckley", url: "" },
-        { title: "Landscapers Deeside", url: "" },
+        // { title: "Landscapers Mold", url: "" },
+        // { title: "Landscapers Rhyl", url: "" },
+        // { title: "Landscapers Conwy", url: "" },
+        // { title: "Landscapers Bangor", url: "" },
+        // { title: "Landscapers Buckley", url: "" },
+        // { title: "Landscapers Deeside", url: "" },
         { title: "Landscapers Wrexham", url: "/en/gb/landscape-gardeners-near-me/wrexham" },
-        { title: "Landscapers Holywell", url: "" },
-        { title: "Landscapers Oswestry", url: "" },
-        { title: "Landscapers Anglesey ", url: "" },
-        { title: "Landscapers Caernarfon", url: "" },
-        { title: "Landscapers Colwyn Bay ", url: "" },
-        { title: "Landscapers North Wales", url: "" },
+        // { title: "Landscapers Holywell", url: "" },
+        // { title: "Landscapers Oswestry", url: "" },
+        // { title: "Landscapers Anglesey ", url: "" },
+        // { title: "Landscapers Caernarfon", url: "" },
+        // { title: "Landscapers Colwyn Bay ", url: "" },
+        // { title: "Landscapers North Wales", url: "" },
     ],
     findMore: [],
 };
@@ -223,12 +223,12 @@ export const BREADCRUM_DATA_LANDSCAPING_LLANDUDNO = [
 ];
 
 export const POPULAR_SERVICES_LANDSCAPING_LLANDUDNO = [
-    "Roof Repair",
-    "Flashing",
-    "Waterproofing",
-    "Roof Replacement",
-    "Shingle replacement",
-    "Leadworks Installation ",
+"Sleepers",
+"Garden brickwork",
+"Paving",
+  "Shed building",
+  "Turfing",
+  "Irrigation systems",
 ];
 export const LANDSCAPING_FEEDBACK_LLANDUDNO = [
     {

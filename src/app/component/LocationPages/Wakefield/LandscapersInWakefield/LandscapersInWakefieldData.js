@@ -179,11 +179,11 @@ export const LANDSCAPING_TABDATA_WAKEFIELD = {
     ],
 
     related: [
-        { title: "Landscapers Leeds", url: "" },
-        { title: "Landscapers Halifax", url: "" },
-        { title: "Landscapers Keighley", url: "" },
-        { title: "Landscapers Barnsley", url: "" },
-        { title: "Landscapers Castleford", url: "" },
+        // { title: "Landscapers Leeds", url: "" },
+        // { title: "Landscapers Halifax", url: "" },
+        // { title: "Landscapers Keighley", url: "" },
+        // { title: "Landscapers Barnsley", url: "" },
+        // { title: "Landscapers Castleford", url: "" },
         {
             title: "Landscapers Huddersfield",
             url: "/en/gb/landscape-gardeners-near-me/huddersfield",
@@ -214,12 +214,12 @@ export const BREADCRUM_DATA_LANDSCAPING_WAKEFIELD = [
 ];
 
 export const POPULAR_SERVICES_LANDSCAPING_WAKEFIELD = [
-    "Roof Repair",
-    "Flashing",
-    "Waterproofing",
-    "Roof Replacement",
-    "Shingle replacement",
-    "Leadworks Installation ",
+  "Sleepers",
+  "Garden brickwork",
+  "Paving",
+  "Shed building",
+  "Turfing",
+  "Irrigation systems",
 ];
 export const LANDSCAPING_FEEDBACK_WAKEFIELD = [
     {

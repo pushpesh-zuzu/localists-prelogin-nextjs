@@ -1,33 +1,98 @@
-import LoaderIndicator from '@/app/component/common/Loader/LoaderIndicatore';
-import SEO from '@/app/component/common/seo/SEO';
-import RoofersInConwy from '@/app/component/LocationPages/Conwy/RoofersInConwy/RoofersInConwy';
-import React, { Suspense } from 'react'
-export const metadata = {
-    title: "Find Skilled Roofers in Conwy | Localists.com",
-    description:
-        "Need a qualified Conwy roofer trusted by homeowners? Compare up to 5 free quotes from qualified, local roofing professionals near you.",
-};
-function page() {
-    return (
-        <>
-            <SEO
-                canonicalPath="/en/gb/roofers-near-me/conwy"
-                bannerImage="/nearme/Roofing/roofingbanner.webp"
-                breadcrumb={[
-                    { title: "Home", path: "en/gb" },
-                    { title: "Home & Garden", path: "en/gb/home" },
-                    { title: "Roofing", path: "en/gb/roofers-near-me" },
-                    { title: "Conwy", path: "en/gb/roofers-near-me/conwy" },
-                ]}
-                conversion={true} /><Suspense
-                    fallback={<div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
-                        <LoaderIndicator size="large" />
-                    </div>}
-                >
+import LoaderIndicator from "@/app/component/common/Loader/LoaderIndicatore";
+import SEO from "@/app/component/common/seo/SEO";
+import RoofersInConwy from "@/app/component/LocationPages/Conwy/RoofersInConwy/RoofersInConwy";
+import React, { Suspense } from "react";
 
-                <RoofersInConwy />
-            </Suspense></>
-    )
+export const metadata = {
+  title: "Find Skilled Roofers in Conwy | Localists.com",
+  description:
+    "Need a qualified Conwy roofer trusted by homeowners? Compare up to 5 free quotes from qualified, local roofing professionals near you.",
+};
+
+const businessSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Skelly Home Improvements",
+    image:
+      "https://localists.com/admin/storage/app/public/images/users/6915a1efeb6a2_1763025391.jpg",
+    url: "https://www.localists.com/en/gb/roofers-near-me/conwy",
+    telephone: "01544303020",
+    description:
+      "Roofing and home improvement services in Conwy and nearby areas.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Conwy",
+      postalCode: "LL18 1EL",
+      addressCountry: "GB",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      ratingCount: "46",
+      bestRating: "5",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Trust style roofing",
+    image:
+      "https://localists.com/admin/storage/app/public/images/users/697c8e1def0c8_1769770525.jpg",
+    url: "https://www.localists.com/en/gb/roofers-near-me/conwy",
+    telephone: "01544303020",
+    description:
+      "Roofing and home improvement services in Conwy and nearby areas.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Conwy",
+      postalCode: "CH2 4NY",
+      addressCountry: "GB",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      ratingCount: "5",
+      bestRating: "5",
+    },
+  },
+];
+
+function page() {
+  return (
+    <>
+      {/* Schema Scripts */}
+      {businessSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+
+      <SEO
+        canonicalPath="/en/gb/roofers-near-me/conwy"
+        bannerImage="/nearme/Roofing/roofingbanner.webp"
+        breadcrumb={[
+          { title: "Home", path: "en/gb" },
+          { title: "Home & Garden", path: "en/gb/home" },
+          { title: "Roofing", path: "en/gb/roofers-near-me" },
+          { title: "Conwy", path: "en/gb/roofers-near-me/conwy" },
+        ]}
+        conversion={true}
+      />
+
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
+            <LoaderIndicator size="large" />
+          </div>
+        }
+      >
+        <RoofersInConwy />
+      </Suspense>
+    </>
+  );
 }
 
-export default page
+export default page;

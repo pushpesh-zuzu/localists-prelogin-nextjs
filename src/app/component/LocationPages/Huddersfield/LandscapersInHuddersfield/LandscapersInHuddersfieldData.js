@@ -242,14 +242,22 @@ export const LANDSCAPING_TABDATA_HUDDERSFIELD = {
     },
   ],
   related: [
-    { title: "Landscapers Leeds", url: "" },
-    { title: "Landscapers Halifax", url: "" },
-    { title: "Landscapers Keighley", url: "" },
+    // { title: "Landscapers Leeds", url: "" },
+    // { title: "Landscapers Halifax", url: "" },
+    // { title: "Landscapers Keighley", url: "" },
     {
       title: "Landscapers Wakefield",
-      url: "/en/gb/landscapers-near-me/wakefield",
+      url: "/en/gb/landscape-gardeners-near-me/wakefield",
     },
-    { title: "Landscapers Castleford", url: "" },
+    //  {
+    //   title: "Landscapers Barnsley",
+    //   url: "/en/gb/landscapers-near-me/barnsley",
+    // },
+    // {
+    //   title: "Landscapers Bradford",
+    //   url: "/en/gb/landscapers-near-me/bradford",
+    // },
+    // { title: "Landscapers Castleford", url: "" },
   ],
   findMore: [],
 };
