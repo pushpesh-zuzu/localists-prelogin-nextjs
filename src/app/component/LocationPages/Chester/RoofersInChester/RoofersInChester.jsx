@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_CHESTER,
   ROOFERS_TABDATA_CHESTER,
   VETTED_DATA_ROOFERS_CHESTER,
+  NEARBY_PLACES_ROOFER_CHESTER,
 } from "./RoofersInChesterData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInChester() {
   useScrollToTop()
@@ -96,8 +98,9 @@ function RoofersInChester() {
         heading1="Hire with"
         heading2="confidence."
         tabData={ROOFERS_TABDATA_CHESTER}
-        activeTabkey="related"
+        activeTabkey="popular"
       />
+      <NearbyPlaces related={NEARBY_PLACES_ROOFER_CHESTER}/>
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
