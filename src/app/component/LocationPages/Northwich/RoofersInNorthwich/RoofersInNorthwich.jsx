@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_NORTHWICH,
   ROOFERS_TABDATA_NORTHWICH,
   VETTED_DATA_ROOFERS_NORTHWICH,
+  NEARBY_PLACES_ROOFER_NORTHWICH,
 } from "./RoofersInNorthwichData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
