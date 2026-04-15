@@ -213,16 +213,24 @@ export const ROOFERS_TABDATA_BLACKPOOL = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
+  //   { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+  //   { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  //   { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
+  //   { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  //   { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_BLACKPOOL = [
     { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
     { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
     { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
     { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
     { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
-  ],
-  findMore: [],
-};
+  ]
 
 export const VETTED_DATA_ROOFERS_BLACKPOOL = [
   `Planning a major home improvement? Maybe you’ve spotted wear and tear, or you just want your roof checked before winter. Whatever the reason, it helps to speak to someone who actually knows what they’re doing.

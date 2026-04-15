@@ -250,7 +250,18 @@ export const ROOFERS_TABDATA_BURNLEY = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+  //   { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  //   { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
+  //   { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
+  //   { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
+  //   { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  //   { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_BURNLEY = [
     { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
     { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
@@ -258,9 +269,7 @@ export const ROOFERS_TABDATA_BURNLEY = {
     { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
     { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
     { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
-  ],
-  findMore: [],
-};
+  ]
 
 export const VETTED_DATA_ROOFERS_BURNLEY = [
   `Picking the right roofer isn’t always easy. There are plenty of “experts” out there, but how do you know who’s legit and who’s just a bloke with a ladder and a van or someone whose five-star reviews come from their mum and mates?

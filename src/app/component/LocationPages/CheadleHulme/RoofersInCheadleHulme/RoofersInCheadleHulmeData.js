@@ -184,7 +184,24 @@ export const ROOFERS_TABDATA_CHEADLE_HULME = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  //   { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+  //   { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  //   { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+  //   { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  //   { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  //   { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  //   { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+  //   { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
+  //   {
+  //     title: "Roofers Ashton-Under-Lyne",
+  //     url: "/en/gb/roofers-near-me/ashton-under-lyne",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_CHEADLE_HULME = [
     { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
     { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
     { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
@@ -198,9 +215,7 @@ export const ROOFERS_TABDATA_CHEADLE_HULME = {
       title: "Roofers Ashton-Under-Lyne",
       url: "/en/gb/roofers-near-me/ashton-under-lyne",
     },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_CHEADLE_HULME = [
   `We spend half our lives complaining about the British weather, yet we always forget the one thing that takes the biggest beating - our roofs. Yeah we’re all guilty of that.
   <br/><br/> 

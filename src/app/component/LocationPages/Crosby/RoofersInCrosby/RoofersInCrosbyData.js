@@ -167,7 +167,23 @@ export const ROOFERS_TABDATA_CROSBY = {
             url: "/en/gb/fencing-contractors-near-me",
         },
     ],
-    related: [
+    // related: [
+    //     { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
+    //     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+    //     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+    //     { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+    //     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+    //     { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+    //     { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+    //     {
+    //         title: "Roofers Ellesmere Port",
+    //         url: "/en/gb/roofers-near-me/ellesmere-port",
+    //     },
+    // ],
+    findMore: [],
+};
+
+export const NEARBY_PLACES_ROOFER_CROSBY = [
         { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
         { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
         { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
@@ -179,9 +195,7 @@ export const ROOFERS_TABDATA_CROSBY = {
             title: "Roofers Ellesmere Port",
             url: "/en/gb/roofers-near-me/ellesmere-port",
         },
-    ],
-    findMore: [],
-};
+    ]
 export const VETTED_DATA_ROOFERS_CROSBY = [
     `A roof problem has a way of catching you off guard. One week, it's a mark on the ceiling you barely notice. The next one's bigger, wetter, and before you know it, it's taken over your weekend. The last thing you need is the stress of finding a roofer you can actually trust.
   <br/><br/> 

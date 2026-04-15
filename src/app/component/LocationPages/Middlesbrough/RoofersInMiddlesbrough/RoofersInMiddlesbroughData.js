@@ -274,14 +274,20 @@ export const ROOFERS_TABDATA_MIDDLESBROUGH = {
             url: "/en/gb/fencing-contractors-near-me",
         },
     ],
-    related: [
+    // related: [
+    //     { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
+    //     { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
+    //     { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
+    //     { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
+    // ],
+    findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_MIDDLESBROUGH = [
         { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
         { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
         { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
         { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
-    ],
-    findMore: [],
-};
+    ]
 export const VETTED_DATA_ROOFERS_MIDDLESBROUGH = [
     `Has bad weather sent your roof tiles flying into the next street, or is your roof simply past its prime? Suddenly, you’re dealing with leaks, thinking about repairs, possibly a new roof, worrying about costs, and wondering who you can actually trust to do the job.
   <br/><br/> 

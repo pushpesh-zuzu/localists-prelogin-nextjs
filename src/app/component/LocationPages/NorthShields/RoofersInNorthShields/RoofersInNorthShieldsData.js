@@ -193,16 +193,23 @@ export const ROOFERS_TABDATA_NORTH_SHIELDS = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
     ],
-    related: [
+    // related: [
+    //     { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
+    //     { title: "Roofers Ashington", url: "/en/gb/roofers-near-me/ashington" },
+    //     { title: "Roofers Scarborough ", url: "/en/gb/roofers-near-me/scarborough" },
+    //     { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
+    //     { title: "Roofers Middlesbrough", url: "/en/gb/roofers-near-me/middlesbrough" },
+    // ],
+    findMore: [],
+};
+
+export const NEARBY_PLACES_ROOFER_NORTH_SHIELDS = [
         { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
         { title: "Roofers Ashington", url: "/en/gb/roofers-near-me/ashington" },
         { title: "Roofers Scarborough ", url: "/en/gb/roofers-near-me/scarborough" },
         { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
         { title: "Roofers Middlesbrough", url: "/en/gb/roofers-near-me/middlesbrough" },
-    ],
-    findMore: [],
-};
-
+    ]
 export const VETTED_DATA_ROOFERS_NORTH_SHIELDS = [
     `Does your roof sound like it’s hosting its own wind concert on stormy nights? Need an experienced roofer to check what’s actually going on up there? We connect you with the best roofers in North Shields.
   <br/><br/> 

@@ -198,7 +198,20 @@ export const ROOFERS_TABDATA_KEIGHLEY = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+  //   { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
+  //   { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+  //   { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
+  //   { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
+  //   {
+  //     title: "Roofers Huddersfield",
+  //     url: "/en/gb/roofers-near-me/huddersfield",
+  //   },
+  // ],
+  findMore: [],
+};
+export  const NEARBY_PLACES_ROOFER_KEIGHLEY = [
     { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
     { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
@@ -208,9 +221,7 @@ export const ROOFERS_TABDATA_KEIGHLEY = {
       title: "Roofers Huddersfield",
       url: "/en/gb/roofers-near-me/huddersfield",
     },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_KEIGHLEY = [
   `With roofs, small problems don’t stay small for long. It can go from manageable to urgent faster than you’d expect. If something does not look right, it is worth having it checked.  
   <br/><br/> 

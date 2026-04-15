@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_LIVERPOOL,
   ROOFERS_TABDATA_LIVERPOOL,
   VETTED_DATA_ROOFERS_LIVERPOOL,
+  NEARBY_PLACES_ROOFER_LIVERPOOL
 } from "./RoofersInLiverpoolData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RooferInLiverpool() {
   useRegistrationRedirect();
@@ -97,9 +99,10 @@ function RooferInLiverpool() {
         heading1="Hire with"
         heading2="confidence."
         tabData={ROOFERS_TABDATA_LIVERPOOL}
-        activeTabkey="related"
+        activeTabkey="popular"
         heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_LIVERPOOL} />
       <NearmeMember
         // mobileImage="/location/tree_surgeon_member_location_mobile.webp"
         // desktopImage="/location/tree_surgeon_member_location_desktop.webp"

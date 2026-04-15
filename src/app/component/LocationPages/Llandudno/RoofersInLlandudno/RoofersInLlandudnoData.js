@@ -243,7 +243,24 @@ export const ROOFERS_TABDATA_LLANDUDNO = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+  //   { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+  //   { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+  //   { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+  //   { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
+  //   { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+  //   { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+  //   { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+  //   { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
+  //   { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
+  //   { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
+  //   { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
+  //   { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_LLANDUDNO = [
     { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
     { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
@@ -257,9 +274,7 @@ export const ROOFERS_TABDATA_LLANDUDNO = {
     { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
     { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_LLANDUDNO = [
   `There's a damp patch you've been blaming on condensation for two winters. A tile you spotted from the driveway that you keep meaning to do something about. A gutter that sounds wrong in heavy rain but hasn't actually caused a problem. Yet. 
   <br/><br/> 

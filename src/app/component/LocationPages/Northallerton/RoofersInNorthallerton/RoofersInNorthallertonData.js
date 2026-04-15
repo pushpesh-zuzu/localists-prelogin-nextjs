@@ -186,14 +186,21 @@ export const ROOFERS_TABDATA_NORTHALLERTON = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
     ],
-    related: [
+    // related: [
+    //     { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
+    //     { title: "Roofers Scarborough ", url: "/en/gb/roofers-near-me/scarborough" },
+    //     { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
+    //     { title: "Roofers Middlesbrough", url: "/en/gb/roofers-near-me/middlesbrough" },
+    // ],
+    findMore: [],
+};
+
+export const NEARBY_PLACES_ROOFER_NORTHALLERTON = [
         { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
         { title: "Roofers Scarborough ", url: "/en/gb/roofers-near-me/scarborough" },
         { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
         { title: "Roofers Middlesbrough", url: "/en/gb/roofers-near-me/middlesbrough" },
-    ],
-    findMore: [],
-};
+    ]
 
 export const VETTED_DATA_ROOFERS_NORTHALLERTON = [
     `Emptying buckets or DIY patches shouldn’t be a regular part of your weekend routine. If you’re looking for a roofer to help you fix things in your area, look no further.

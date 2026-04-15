@@ -183,7 +183,20 @@ export const ROOFERS_TABDATA_GLOSSOP = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  //   { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+  //   { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+  //   { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  //   { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  //   { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  //   { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+  //   { title: "Roofers Cheadle Hulme", url: "/en/gb/roofers-near-me/cheadle-hulme" },
+  //   { title: "Roofers Ashton-under-Lyne", url: "/en/gb/roofers-near-me/ashton-under-lyne" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_GLOSSOP = [
     { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
     { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
@@ -193,9 +206,7 @@ export const ROOFERS_TABDATA_GLOSSOP = {
     { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
     { title: "Roofers Cheadle Hulme", url: "/en/gb/roofers-near-me/cheadle-hulme" },
     { title: "Roofers Ashton-under-Lyne", url: "/en/gb/roofers-near-me/ashton-under-lyne" },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_GLOSSOP = [
   `If there is any part of your home where you need to put the DIY manual down and call in a professional ASAP, it is definitely your roof. Small issues like a slipped tile or a minor drip have a way of spiralling into massive, expensive headaches if they aren't caught early. 
   <br/><br/> 

@@ -207,7 +207,29 @@ export const ROOFERS_TABDATA_CREW = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  //   { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  //   { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  //   { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  //   { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  //   { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  //   { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  //   { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  //   { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  //   { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  //   {
+  //     title: "Roofers Macclesfield",
+  //     url: "/en/gb/roofers-near-me/macclesfield",
+  //   },
+  //   {
+  //     title: "Roofers Ellesmere Port",
+  //     url: "/en/gb/roofers-near-me/ellesmere-port",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_CREWE = [
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
     { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
@@ -226,9 +248,7 @@ export const ROOFERS_TABDATA_CREW = {
       title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_CREW = [
   `When roofs need attention, they have a funny way of demanding it. Whether it’s a persistent leak, rattling gutters, a loose tile, or those frustrating damp marks on the ceiling - whatever your roof is demanding, Localists is here to help.
   <br/><br/> 

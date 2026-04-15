@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_CAERNARFONY,
   ROOFERS_TABDATA_CAERNARFONY,
   VETTED_DATA_ROOFERS_CAERNARFONY,
+  NEARBY_PLACES_ROOFER_CAERNARFON
 } from "./RoofersInCaernarfonData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInCaernarfon() {
   useScrollToTop()
@@ -94,9 +96,10 @@ function RoofersInCaernarfon() {
         heading1="Hire with"
         heading2="confidence."
         tabData={ROOFERS_TABDATA_CAERNARFONY}
-        activeTabkey="related"
+        activeTabkey="popular"
         heightClass = "min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-auto"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_CAERNARFON} />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"

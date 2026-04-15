@@ -191,7 +191,24 @@ export const ROOFERS_TABDATA_CAERNARFONY = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+  //   { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+  //   { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+  //   { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+  //   { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
+  //   { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+  //   { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+  //   { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+  //   { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
+  //   { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
+  //   { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+  //   { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
+  //   { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_CAERNARFON = [
     { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
     { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
@@ -205,9 +222,7 @@ export const ROOFERS_TABDATA_CAERNARFONY = {
     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
     { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_CAERNARFONY = [
   `Caernarfon sits between Snowdonia and the Menai Strait, which means the weather arrives from two directions and rarely takes a day off. Wind off the water, rain from the mountains, and constant coastal exposure can quickly turn small issues into bigger ones.
   <br/><br/> 

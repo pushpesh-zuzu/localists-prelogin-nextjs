@@ -229,7 +229,29 @@ export const ROOFERS_TABDATA_CHESHIRE = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+  //   { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  //   { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  //   { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  //   { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  //   { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  //   { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  //   { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  //   { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  //   { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  //   {
+  //     title: "Roofers Macclesfield",
+  //     url: "/en/gb/roofers-near-me/macclesfield",
+  //   },
+  //   {
+  //     title: "Roofers Ellesmere Port",
+  //     url: "/en/gb/roofers-near-me/ellesmere-port",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_CHESHIRE = [
     { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
@@ -248,9 +270,7 @@ export const ROOFERS_TABDATA_CHESHIRE = {
       title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_CHESHIRE = [
   `Cheshire might be known for its rolling countryside and half-timbered houses, but those roofs still need looking after. Wet winters and gusty winds have a way of finding the weak spots, and usually at the worst possible time. 
   <br/><br/> 

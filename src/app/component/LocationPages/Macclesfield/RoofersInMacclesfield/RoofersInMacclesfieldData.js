@@ -241,7 +241,30 @@ export const ROOFERS_TABDATA_MACCLESFIELD = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+  //   { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  //   { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  //   { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  //   { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  //   { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  //   { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  //   { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  //   { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  //   { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  //   { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  //   { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  //   { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  //   { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  //   { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
+  //   {
+  //     title: "Roofers Ellesmere Port",
+  //     url: "/en/gb/roofers-near-me/ellesmere-port",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_MACCLESFIELD = [
     { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
@@ -261,9 +284,7 @@ export const ROOFERS_TABDATA_MACCLESFIELD = {
       title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-  ],
-  findMore: [],
-};
+  ]
 
 export const VETTED_DATA_ROOFERS_MACCLESFIELD = [
   `Roofing problems can pop up out of nowhere, and at anytime. Really unpredictable, but fixing them doesn’t have to be a drama. Whether it’s a quick patch, a stubborn leak, or a full roof replacement, we connect you with the best <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">local roofers</a> in Macclesfield who actually know their stuff, and won’t ghost you after quoting.

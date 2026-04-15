@@ -168,8 +168,24 @@ export const ROOFERS_TABDATA_ANGLESEY = {
             url: "/en/gb/fencing-contractors-near-me",
         },
     ],
-    related: [
-        { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+    // related: [
+    //     { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+    //     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+    //     { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+    //     { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+    //     { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
+    //     { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+    //     { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+    //     { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+    //     { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
+    //     { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+    //     { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
+    //     { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
+    //     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+    // ],
+    findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_ANGLESEY=[ { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
         { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
         { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
         { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
@@ -181,10 +197,7 @@ export const ROOFERS_TABDATA_ANGLESEY = {
         { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
         { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
         { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
-        { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
-    ],
-    findMore: [],
-};
+        { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },]
 export const VETTED_DATA_ROOFERS_ANGLESEY = [
     `Picture this: it's 11 pm, the wind is rattling the windows, and you're lying in bed listening to something on the roof that definitely wasn't there last week. By morning, there's a wet patch on the ceiling, and you're standing in the kitchen wondering who on earth you're supposed to call.
   <br/><br/> 

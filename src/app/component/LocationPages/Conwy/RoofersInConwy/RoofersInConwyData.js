@@ -184,7 +184,24 @@ export const ROOFERS_TABDATA_CONWY = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+  //   { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+  //   { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+  //   { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
+  //   { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+  //   { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+  //   { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+  //   { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
+  //   { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
+  //   { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+  //   { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
+  //   { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
+  //   { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_CONWY = [
     { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
     { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
@@ -198,9 +215,7 @@ export const ROOFERS_TABDATA_CONWY = {
     { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
     { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_CONWY = [
   `There's a very particular kind of stress that comes with a roof problem. You know something's wrong. You just don't know how bad it is, what it'll cost, or who to trust with it. So you Google it, get overwhelmed, close the tab, and hope it holds until the weekend. It never just holds until the weekend.
   <br/><br/> 

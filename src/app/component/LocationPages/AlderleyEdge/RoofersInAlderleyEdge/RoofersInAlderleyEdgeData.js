@@ -187,8 +187,23 @@ export const ROOFERS_TABDATA_ALDERLEY_EDGE = {
             url: "/en/gb/fencing-contractors-near-me",
         },
     ],
-    related: [
-        { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+    // related: [
+    //     { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+    //     { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+    //     { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+    //     { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+    //     {
+    //         title: "Roofers Macclesfield",
+    //         url: "/en/gb/roofers-near-me/macclesfield",
+    //     },
+    //     {
+    //         title: "Roofers Cheadle Hulme",
+    //         url: "/en/gb/roofers-near-me/cheadle-hulme",
+    //     },
+    // ],
+    findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_ALDERLEY_EDGE =[ { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
         { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
         { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
         { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
@@ -199,10 +214,7 @@ export const ROOFERS_TABDATA_ALDERLEY_EDGE = {
         {
             title: "Roofers Cheadle Hulme",
             url: "/en/gb/roofers-near-me/cheadle-hulme",
-        },
-    ],
-    findMore: [],
-};
+        },]
 export const VETTED_DATA_ROOFERS_ALDERLEY_EDGE = [
     `It's Sunday evening. You've just noticed water dripping where it shouldn't be. You've got work tomorrow, no idea who to call, and no idea what it's going to cost. The last thing you need is to spend the next three days chasing callbacks from roofers who may or may not know what they're doing.
   <br/><br/>

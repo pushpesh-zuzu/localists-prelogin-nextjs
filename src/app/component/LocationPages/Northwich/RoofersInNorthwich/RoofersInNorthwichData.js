@@ -159,7 +159,29 @@ export const ROOFERS_TABDATA_NORTHWICH = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+  //   { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  //   { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  //   { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  //   { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  //   { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  //   { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  //   { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  //   { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  //   { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  //   {
+  //     title: "Roofers Macclesfield",
+  //     url: "/en/gb/roofers-near-me/macclesfield",
+  //   },
+  //   {
+  //     title: "Roofers Ellesmere Port",
+  //     url: "/en/gb/roofers-near-me/ellesmere-port",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_NORTHWICH =  [
     { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
@@ -178,9 +200,7 @@ export const ROOFERS_TABDATA_NORTHWICH = {
       title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-  ],
-  findMore: [],
-};
+  ] 
 export const VETTED_DATA_ROOFERS_NORTHWICH = [
   `It’s easy to put off a roof check until the weather forces your hand. Most of the time, it’s because something’s started leaking or you’ve finally realised the damp stain is getting wider. Then you’re left thinking: who do I even call?
   <br/><br/> 

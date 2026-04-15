@@ -246,15 +246,22 @@ export const ROOFERS_TABDATA_BARNSLEY = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
+  //   { title: "Roofers Rotherham", url: "/en/gb/roofers-near-me/rotherham" },
+  //   { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+  //   { title: "Roofers CastlefordBarnsley", url: "/en/gb/roofers-near-me/castleford" },
+
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_BARNSLEY = [
     { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
     { title: "Roofers Rotherham", url: "/en/gb/roofers-near-me/rotherham" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
     { title: "Roofers CastlefordBarnsley", url: "/en/gb/roofers-near-me/castleford" },
 
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_BARNSLEY = [
   `Roof issues have a habit of appearing like that one friend who only calls when something’s gone wrong. No warning, no timing, just suddenly there. When that happens, you need a roofer who’s reliable, efficient, and won’t take advantage of the situation.
   <br/><br/> 

@@ -173,7 +173,18 @@ export const ROOFERS_TABDATA_FLEETWOOD = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+  //   { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
+  //   { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  //   { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
+  //   { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
+  //   { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  //   { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_FLEETWOOD =[
     { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
     { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
@@ -181,9 +192,7 @@ export const ROOFERS_TABDATA_FLEETWOOD = {
     { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
     { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
     { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_FLEETWOOD = [
   `Having to hire someone to work on your roof could feel like rolling a die - you never know which side it will land on. You might get lucky, or you might just hire a 'self-proclaimed expert' who leaves things in a worse state than when they started.
   <br/><br/> 

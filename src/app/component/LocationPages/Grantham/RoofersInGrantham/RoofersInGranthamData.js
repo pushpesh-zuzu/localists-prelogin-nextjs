@@ -171,11 +171,15 @@ export const ROOFERS_TABDATA_GRANTHAM = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-  related: [
-    { title: "Roofers Scunthorpe", url: "/en/gb/roofers-near-me/scunthorpe" },
-  ],
+  // related: [
+  //   { title: "Roofers Scunthorpe", url: "/en/gb/roofers-near-me/scunthorpe" },
+  // ],
   findMore: [],
 };
+
+export const NEARBY_PLACES_ROOFER_GRANTHAM =  [
+    { title: "Roofers Scunthorpe", url: "/en/gb/roofers-near-me/scunthorpe" },
+  ]
 
 export const VETTED_DATA_ROOFERS_GRANTHAM = [
   `

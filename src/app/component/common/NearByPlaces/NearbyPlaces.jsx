@@ -30,8 +30,8 @@ export default function NearbyPlaces({ background = "#fafafa", NearByPlacesData 
 
             const borderClasses = [
               "w-full py-4 md:py-5 xl:py-6",
-              isLastRowMobile ? "border-b-0" : "border-b border-[#D0F7EB]",
-              isLastRowDesktop
+              isLastRowMobile && arr.length > 2 ? "border-b-0" : "border-b border-[#D0F7EB]",
+              isLastRowDesktop && arr.length > 4
                 ? "md:border-b-0"
                 : "md:border-b md:border-[#D0F7EB]",
             ].join(" ");

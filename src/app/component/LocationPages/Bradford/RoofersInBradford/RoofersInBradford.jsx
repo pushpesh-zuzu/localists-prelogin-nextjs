@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_BRADFORD,
   ROOFERS_TABDATA_BRADFORD,
   VETTED_DATA_ROOFERS_BRADFORD,
+  NEARBY_PLACES_ROOFER_BRADFORD
 } from "./RoofersInBradfordData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -28,6 +29,7 @@ import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 
 function RoofersInBradford() {
@@ -108,8 +110,9 @@ function RoofersInBradford() {
         heading1="Hire with"
         heading2="confidence."
         tabData={ROOFERS_TABDATA_BRADFORD}
-        activeTabkey="related"
+        activeTabkey="popular"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_BRADFORD} />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
