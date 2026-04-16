@@ -69,7 +69,7 @@ function LandscapersInStockport() {
                 serviceId={43}
                 serviceName="Landscaping"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_STOCKPORT}
-                quotesBannerText="LANDSCAPING QUOTES IN"
+                quotesBannerText="GET A QUOTES IN"
                 mobileFrame="/nearme/Landscaping/mobilelandscaping.webp"
             />
 
