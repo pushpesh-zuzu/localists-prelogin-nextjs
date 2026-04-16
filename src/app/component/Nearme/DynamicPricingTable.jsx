@@ -27,7 +27,7 @@ export default function DynamicPricingTable({
 
                         {/* Left Section */}
                         <div className="flex flex-col justify-between px-2.5 pt-[30px] lg:pl-[38px] lg:pt-[54px] lg:pb-[52px] lg:max-w-[50%] lg:min-w-[386px] xl:min-w-[386px] xl:max-w-[50%]">
-                            <H2 variant="optional" className="text-center min-[460px]:mx-auto md:mx-0 md:max-w-full lg:text-left xl:max-w-[85%]">
+                            <H2 variant="optional" className="text-center min-[460px]:mx-auto md:mx-0 md:max-w-full lg:text-left ">
                                 {title}
                             </H2>
 
