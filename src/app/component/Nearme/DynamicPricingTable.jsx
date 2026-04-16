@@ -26,7 +26,7 @@ export default function DynamicPricingTable({
                     <div className="flex flex-col lg:flex-row lg:gap-6">
 
                         {/* Left Section */}
-                        <div className="flex flex-col justify-between px-2.5 pt-[30px] lg:pl-[38px] lg:pt-[54px] lg:pb-[52px] lg:max-w-[50%] lg:min-min-w-[386px] xl:min-w-[386px] xl:max-w-[50%]">
+                        <div className="flex flex-col justify-between px-2.5 pt-[30px] lg:pl-[38px] lg:pt-[54px] lg:pb-[52px] lg:max-w-[50%] lg:min-w-[386px] xl:min-w-[386px] xl:max-w-[50%]">
                             <H2 variant="optional" className="text-center min-[460px]:mx-auto md:mx-0 md:max-w-full lg:text-left xl:max-w-[85%]">
                                 {title}
                             </H2>
@@ -37,7 +37,7 @@ export default function DynamicPricingTable({
                         </div>
 
                         {/* Price Grid */}
-                        <div className="xl:max-w-[50%] xl:min-w-[45%] grid grid-cols-2 lg:grid-cols-2 gap-x-[14px] gap-y-5 lg:gap-x-5 px-[10px] min-[450px]:px-20 lg:px-0 pt-[23px] pb-[38px] lg:py-16 lg:pr-7">
+                        <div className="xl:max-w-[57%] xl:min-w-[50%] grid grid-cols-2 lg:grid-cols-2 gap-x-[14px] gap-y-5 lg:gap-x-5 px-[10px] min-[450px]:px-20 lg:px-0 pt-[23px] pb-[38px] lg:py-16 lg:pr-7">
 
                             {prices.map((item, index) => (
                                 <React.Fragment key={index}>

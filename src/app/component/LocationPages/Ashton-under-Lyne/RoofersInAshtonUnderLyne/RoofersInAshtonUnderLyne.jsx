@@ -40,7 +40,7 @@ function RoofersInAshtonUnderLyne() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_ASHTON_UNDER_LYNE} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Ashton-under-Lyne"
                 description="Need a specialist roofer in Ashton-under-Lyne? Enter your postcode now. Tell us a bit about what you need, and get free no-obligation quotes from high-quality local roofers delivered straight to your inbox."
@@ -76,7 +76,13 @@ function RoofersInAshtonUnderLyne() {
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
                 <Feature cityName="Ashton under Lyne" county='Greater Manchester' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
-
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_ASHTON_UNDER_LYNE}
+                activeTabkey="popular"
+                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto lg:h-auto"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_ASHTON_UNDER_LYNE}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,13 +100,7 @@ function RoofersInAshtonUnderLyne() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_ASHTON_UNDER_LYNE} />
             <DiscoverNearMe homeData={ROOFERS_DATA_ASHTON_UNDER_LYNE} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_ASHTON_UNDER_LYNE}
-                activeTabkey="popular"
-                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto lg:h-auto"
-            />
+            
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_ASHTON_UNDER_LYNE} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

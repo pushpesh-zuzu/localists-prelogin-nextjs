@@ -40,7 +40,7 @@ function RoofersInHalifax() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_HALIFAX} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Halifax"
                 description="Receive free, no-obligation quotes from experienced roofers working across Halifax. Enter your postcode and share a few details about the work. It only takes a moment to get things started."
@@ -77,6 +77,13 @@ function RoofersInHalifax() {
                 <Feature cityName="Halifax" county='West Yorkshire' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_HALIFAX}
+                activeTabkey="popular"
+                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto lg:h-[485.5px]"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_HALIFAX}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,13 +101,6 @@ function RoofersInHalifax() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_HALIFAX} />
             <DiscoverNearMe homeData={ROOFERS_DATA_HALIFAX} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_HALIFAX}
-                activeTabkey="popular"
-                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto lg:h-[485.5px]"
-            />
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_HALIFAX} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

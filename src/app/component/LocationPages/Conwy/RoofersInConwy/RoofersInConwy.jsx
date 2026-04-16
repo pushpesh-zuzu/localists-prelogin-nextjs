@@ -40,7 +40,7 @@ function RoofersInConwy() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_CONWY} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Conwy"
                 description="If you need a roofer in Conwy, you can get free quotes from vetted local professionals without having to ring round half the town. Enter your postcode, give us a few details about the work, and that's all. It only takes a couple of minutes."
@@ -77,6 +77,12 @@ function RoofersInConwy() {
                 <Feature cityName="Conwy" county='Conwy' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_CONWY}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_CONWY}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,12 +100,6 @@ function RoofersInConwy() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_CONWY} />
             <DiscoverNearMe homeData={ROOFERS_DATA_CONWY} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_CONWY}
-                activeTabkey="popular"
-            />
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_CONWY} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

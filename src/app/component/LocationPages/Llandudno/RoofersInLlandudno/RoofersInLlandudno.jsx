@@ -40,7 +40,7 @@ function RoofersInLlandudno() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_LLANDUDNO} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Llandudno"
         description="If you are looking for top skilled roofers in Llandudno, you can get 5 free no-obligation quotes from local professionals in the area. Just enter your postcode, give us a few details, and receive quotes within minutes."
@@ -77,6 +77,12 @@ function RoofersInLlandudno() {
         <Feature county='Conwy' cityName='Llandudno' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_LLANDUDNO}
+        activeTabkey="popular"
+      />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_LLANDUDNO}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -92,12 +98,6 @@ function RoofersInLlandudno() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_LLANDUDNO} />
       <DiscoverNearMe homeData={ROOFERS_DATA_LLANDUDNO} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_LLANDUDNO}
-        activeTabkey="popular"
-      />
       <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_LLANDUDNO} />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

@@ -40,7 +40,7 @@ function RoofersInNorthShields() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_NORTH_SHIELDS} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="North Shields"
                 description="Get free, no-obligation quotes from the best Roofers in North Shields. Just enter your postcode, give us a few more details, and instantly get matched with trusted local roofers in your area."
@@ -77,6 +77,13 @@ function RoofersInNorthShields() {
                 <Feature cityName="North Shields" county='North Tyneside' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_NORTH_SHIELDS}
+                activeTabkey="popular"
+                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto lg:h-[485.5px]"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_NORTH_SHIELDS}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,13 +101,6 @@ function RoofersInNorthShields() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_NORTH_SHIELDS} />
             <DiscoverNearMe homeData={ROOFERS_DATA_NORTH_SHIELDS} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_NORTH_SHIELDS}
-                activeTabkey="popular"
-                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto lg:h-[485.5px]"
-            />
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_NORTH_SHIELDS} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

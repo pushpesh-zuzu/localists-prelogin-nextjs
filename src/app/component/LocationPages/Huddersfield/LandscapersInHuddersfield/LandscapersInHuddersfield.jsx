@@ -42,7 +42,7 @@ function LandscapersInHuddersfield() {
         <CloseBrowserAbandon serviceId={43} quote_type="req call back" />
       )}
       <FAQScript FAQ={FREQUENTLY_DATA_LANDSCAPING_HUDDERSFIELD} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Landscapers "
         heading2="Huddersfield "
         description="Get free, no obligation quotes now from the highest quality landscapers in Huddersfield. All you need to do is enter your postcode, a few quick details and we’ll match you with local professionals who are ready to quote. "
@@ -88,6 +88,12 @@ function LandscapersInHuddersfield() {
         />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={LANDSCAPING_TABDATA_HUDDERSFIELD}
+        activeTabkey="popular"
+      />
       <AdviceInsightNearMe
         articles={LANDSCAPING_ADVICEINSIGHT_HUDDERSFIELD}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -109,12 +115,6 @@ function LandscapersInHuddersfield() {
       />
       <UserFeedbackNearMe2 feedbackData={LANDSCAPING_FEEDBACK_HUDDERSFIELD} />
       <DiscoverNearMe homeData={LANDSCAPING_DATA_HUDDERSFIELD} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={LANDSCAPING_TABDATA_HUDDERSFIELD}
-        activeTabkey="popular"
-      />
       <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_HUDDERSFIELD}/>
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

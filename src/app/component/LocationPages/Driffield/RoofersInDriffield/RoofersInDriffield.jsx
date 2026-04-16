@@ -40,7 +40,7 @@ function RoofersInDriffield() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_DRIFFIELD} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Driffield"
                 description="If you’re looking for where to find the highest quality roofers in Driffield, you’ve come to the right place. Simply enter your postcode, and get free quotes in minutes from the best roofing specialists in your local area."
@@ -77,6 +77,12 @@ function RoofersInDriffield() {
                 <Feature county='East Riding of Yorkshire' cityName='Driffield' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_DRIFFIELD}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_DRIFFIELD}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -92,12 +98,6 @@ function RoofersInDriffield() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_DRIFFIELD} />
             <DiscoverNearMe homeData={ROOFERS_DATA_DRIFFIELD} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_DRIFFIELD}
-                activeTabkey="popular"
-            />
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_DRIFFIELD} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

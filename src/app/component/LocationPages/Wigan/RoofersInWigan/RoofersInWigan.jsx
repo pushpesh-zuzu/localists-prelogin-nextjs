@@ -42,7 +42,7 @@ function RoofersInWigan() {
         <CloseBrowserAbandon serviceId={113} quote_type="req call back" />
       )}
       <FAQScript FAQ={FREQUENTLY_DATA_WIGAN} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Wigan"
         description="Need a roofer in Wigan? Get free, no obligation quotes directly to your inbox from local roofers in your area. Simply share your postcode and a few details - takes under a minute! "
@@ -85,6 +85,12 @@ function RoofersInWigan() {
         />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_WIGAN}
+        activeTabkey="popular"
+      />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_WIGAN}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -106,12 +112,6 @@ function RoofersInWigan() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_WIGAN} />
       <DiscoverNearMe homeData={ROOFERS_DATA_WIGAN} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_WIGAN}
-        activeTabkey="popular"
-      />
       <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_WIGAN}/>
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

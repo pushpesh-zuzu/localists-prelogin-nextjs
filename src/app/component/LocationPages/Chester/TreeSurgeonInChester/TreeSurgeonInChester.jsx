@@ -37,7 +37,7 @@ function TreeSurgeonInChester() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon />}
       <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON_CHESTER} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Tree Surgeons"
         heading2="Chester."
         description="Find the best tree surgeons in Chester. Click ‘start a quote’ to get free instant quotes from local tree surgeons, or browse through our list of vetted and verified tree surgeons below."
@@ -77,8 +77,15 @@ function TreeSurgeonInChester() {
           serviceId={112}
           serviceName="Tree Surgery"
           featureRef={featureRef}
-        />
+          />
       </div>
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={TREE_SURGEON_TABDATA_CHESTER}
+        activeTabkey="popular"
+        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[546px]"
+      />
       <AdviceInsightNearMe
         articles={TREE_SRUGEON_ADVICEINSIGHT_CHESTER}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10  xl:px-[120px]  lg:py-[72px]"
@@ -87,13 +94,6 @@ function TreeSurgeonInChester() {
       <UserFeedbackNearMe2 feedbackData={TREE_SUREON_FEEDBACK_CHESTER} />
 
       <DiscoverNearMe homeData={TREE_SURGEON_DATA_CHESTER} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={TREE_SURGEON_TABDATA_CHESTER}
-        activeTabkey="popular"
-        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[546px]"
-      />
       <NearmeMember
         mobileImage="/location/tree_surgeon_member_location_mobile.webp"
         desktopImage="/location/tree_surgeon_member_location_desktop.webp"

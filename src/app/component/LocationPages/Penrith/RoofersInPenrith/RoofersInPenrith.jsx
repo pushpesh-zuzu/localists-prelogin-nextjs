@@ -42,7 +42,7 @@ function RoofersInPenrith() {
         <CloseBrowserAbandon serviceId={113} quote_type="req call back" />
       )}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_PENRITH} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Penrith"
         description="Receive free, no-obligation quotes from experienced high quality roofers working across Penrith. Enter your postcode and share a few details about the work. It only takes a moment to get started."
@@ -85,6 +85,13 @@ function RoofersInPenrith() {
         />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_PENRITH}
+        activeTabkey="popular"
+        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
+      />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_PENRITH}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -106,13 +113,6 @@ function RoofersInPenrith() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_PENRITH} />
       <DiscoverNearMe homeData={ROOFERS_DATA_PENRITH} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_PENRITH}
-        activeTabkey="popular"
-        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
-      />
       <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_PENRITH}/>
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

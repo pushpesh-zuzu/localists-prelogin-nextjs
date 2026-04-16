@@ -40,7 +40,7 @@ function RoofersInChester() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={FREQUENTLY_DATA_TREE_SURGEON_CHESTER} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Chester"
         description="Find the best roofers in Chester! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
@@ -77,6 +77,12 @@ function RoofersInChester() {
         <Feature county='Cheshire' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
+        <HireRelatedToServiceNearMe
+          heading1="Hire with"
+          heading2="confidence."
+          tabData={ROOFERS_TABDATA_CHESTER}
+          activeTabkey="popular"
+        />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_CHESTER}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,12 +100,6 @@ function RoofersInChester() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_CHESTER} />
       <DiscoverNearMe homeData={ROOFERS_DATA_CHESTER} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_CHESTER}
-        activeTabkey="popular"
-      />
       <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_CHESTER}/>
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

@@ -41,7 +41,7 @@ function RoofersInAshington() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_ASHINGTON} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Ashington"
                 description="Need a reliable roofer for repairs, replacement, or any type of roofing emergency in Ashington? Get free, no obligation quotes now from the highest quality roofers in your area. Enter your postcode and a few details and receive quotes to your inbox - takes only a minute!"
@@ -77,7 +77,12 @@ function RoofersInAshington() {
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
                 <Feature county='Northumberland' cityName='Ashington' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
-
+            <HireRelatedToServiceNearMe
+                            heading1="Hire with"
+                            heading2="confidence."
+                            tabData={ROOFERS_TABDATA_ASHINGTON}
+                            activeTabkey="popular"
+                        />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_ASHINGTON}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -93,12 +98,7 @@ function RoofersInAshington() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_ASHINGTON} />
             <DiscoverNearMe homeData={ROOFERS_DATA_ASHINGTON} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_ASHINGTON}
-                activeTabkey="popular"
-            />
+           
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_ASHINGTON} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

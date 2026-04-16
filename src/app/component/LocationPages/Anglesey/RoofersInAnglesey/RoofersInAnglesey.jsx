@@ -40,7 +40,7 @@ function RoofersInAnglesey() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_ANGLESEY} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Anglesey"
                 description="Looking for a roofer in Anglesey who can deliver a perfect job? Input your postcode, tell us a little about the work, and receive free no-obligation quotes from vetted local professionals. It only takes a minute."
@@ -76,7 +76,12 @@ function RoofersInAnglesey() {
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
                 <Feature cityName="Anglesey" county='Staffordshire' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
-
+        <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_ANGLESEY}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_ANGLESEY}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,12 +99,7 @@ function RoofersInAnglesey() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_ANGLESEY} />
             <DiscoverNearMe homeData={ROOFERS_DATA_ANGLESEY} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_ANGLESEY}
-                activeTabkey="popular"
-            />
+            
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_ANGLESEY} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

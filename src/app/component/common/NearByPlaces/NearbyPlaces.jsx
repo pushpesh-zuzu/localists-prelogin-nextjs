@@ -6,12 +6,12 @@ const vettedHeading1 = "Nearby";
 const vettedHeading2 = "Places.";
 
 export default function NearbyPlaces({
-  background = "#fafafa",
+  background = "#fff",
   NearByPlacesData = [],
 }) {
   return (
     <WrapperBGWidth background={background}>
-      <div className="px-[30px] md:px-16 py-[30px] md:py-[50px] lg:pl-16 xl:px-[120px] lg:py-[72px]">
+      <div className="px-[30px] md:px-16 pt-[30px] md:pt-[50px] lg:pl-16 xl:px-[120px] lg:pt-[72px]">
         <NearmeH2Heading
           headdingblue={vettedHeading1}
           headingblack={vettedHeading2}

@@ -40,7 +40,7 @@ function RoofersInCaernarfon() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_CAERNARFONY} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Caernarfon"
         description="Need a roofer in Caernarfon? Enter your postcode, tell us what's going on, and get free no-obligation quotes from vetted local professionals straight to your inbox. Takes under a minute."
@@ -76,6 +76,13 @@ function RoofersInCaernarfon() {
       <div ref={featureRef} style={{ overflowAnchor: "none" }}>
         <Feature county='Gwynedd' cityName='Caernarfon' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_CAERNARFONY}
+        activeTabkey="popular"
+        heightClass = "min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-auto"
+      />
 
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_CAERNARFONY}
@@ -92,13 +99,6 @@ function RoofersInCaernarfon() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_CAERNARFONY} />
       <DiscoverNearMe homeData={ROOFERS_DATA_CAERNARFONY} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_CAERNARFONY}
-        activeTabkey="popular"
-        heightClass = "min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-auto"
-      />
       <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_CAERNARFON} />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

@@ -40,7 +40,7 @@ function RoofersInBlackpool() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_BLACKPOOL} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Blackpool"
                 description="Find local expert roofers in Blackpool for all kinds of roofing work. Add your postcode, pop in a few details and get matched instantly with specialists in your area. Get free, no obligation quotes delivered straight to your inbox."
@@ -77,6 +77,13 @@ function RoofersInBlackpool() {
                 <Feature cityName="Blackpool" county='Borough of Blackpool' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_BLACKPOOL}
+                activeTabkey="popular"
+                heightClass="min-h-[390px] h-auto md:h-auto lg:min-h-[485.5px] lg:h-auto"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_BLACKPOOL}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,13 +101,6 @@ function RoofersInBlackpool() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_BLACKPOOL} />
             <DiscoverNearMe homeData={ROOFERS_DATA_BLACKPOOL} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_BLACKPOOL}
-                activeTabkey="popular"
-                heightClass="min-h-[390px] h-auto md:h-auto lg:min-h-[485.5px] lg:h-auto"
-            />
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_BLACKPOOL} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

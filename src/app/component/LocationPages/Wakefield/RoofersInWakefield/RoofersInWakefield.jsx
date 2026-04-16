@@ -40,7 +40,7 @@ function RoofersInWakefield() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_WAKEFIELD} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Wakefield"
                 description="Receive free no-obligation quotes from top-rated Wakefield roofers. Just pop in your postcode, a few details about the roof problem, and we will match you with the best local roofers in under a minute."
@@ -77,6 +77,13 @@ function RoofersInWakefield() {
                 <Feature cityName="Oldham" county='Oldham' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_WAKEFIELD}
+                activeTabkey="popular"
+                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto lg:h-[485.5px]"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_WAKEFIELD}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,13 +101,6 @@ function RoofersInWakefield() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_WAKEFIELD} />
             <DiscoverNearMe homeData={ROOFERS_DATA_WAKEFIELD} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_WAKEFIELD}
-                activeTabkey="popular"
-                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto lg:h-[485.5px]"
-            />
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_WAKEFIELD}/>
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

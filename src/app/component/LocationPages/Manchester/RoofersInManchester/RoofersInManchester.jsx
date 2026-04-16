@@ -40,7 +40,7 @@ function RoofersInManchester() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={FREQUENTLY_DATA_MANCHESTER} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Manchester"
                 description="Need a roofing specialist in Manchester? Look no further! Get free no obligation quotes now from local roofers in your area. Simply share your postcode and a few details - takes under a minute!"
@@ -77,6 +77,12 @@ function RoofersInManchester() {
                 <Feature county='Greater Manchester' cityName='Manchester' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_MANCHESTER}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_MANCHESTER}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,12 +100,6 @@ function RoofersInManchester() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_MANCHESTER} />
             <DiscoverNearMe homeData={ROOFERS_DATA_MANCHESTER} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_MANCHESTER}
-                activeTabkey="popular"
-            />
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_MANCHESTER} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

@@ -40,7 +40,7 @@ function RoofersInUlverston() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={FREQUENTLY_DATA_ULVERSTON} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Ulverston"
                 description="Get free, no-obligation quotes from the highest quality Ulverston roofers in your local area. Enter your postcode and share a few details about the work. It only takes a moment to get started."
@@ -77,6 +77,12 @@ function RoofersInUlverston() {
                 <Feature county='Westmorland and Furness' cityName='Ulverston' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_ULVERSTON}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_ULVERSTON}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,12 +100,6 @@ function RoofersInUlverston() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_ULVERSTON} />
             <DiscoverNearMe homeData={ROOFERS_DATA_ULVERSTON} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_ULVERSTON}
-                activeTabkey="popular"
-            />
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_ULVERSTON}/>
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

@@ -40,7 +40,7 @@ function RoofersInBebington() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_BEBINGTON} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Bebington"
                 description="Get up to 5 free quotes from top-quality local and vetted roofers in Oldham. All you need is to enter your postcode, and we will match you with a local professional who will send quotes straight to your inbox in less than a minute."
@@ -76,7 +76,13 @@ function RoofersInBebington() {
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
                 <Feature cityName="Bebington" county='Bebington' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
-
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_BEBINGTON}
+                activeTabkey="popular"
+                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto lg:h-[485.5px]"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_BEBINGTON}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,13 +100,7 @@ function RoofersInBebington() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_BEBINGTON} />
             <DiscoverNearMe homeData={ROOFERS_DATA_BEBINGTON} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_BEBINGTON}
-                activeTabkey="popular"
-                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto lg:h-[485.5px]"
-            />
+            
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_BEBINGTON} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

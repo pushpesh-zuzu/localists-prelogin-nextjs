@@ -40,7 +40,7 @@ function RoofersInAltrincham() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_ALTRINCHAM} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Altrincham"
                 description="Looking for local roofing professionals in Altrincham? Just enter your postcode, explain what’s going on, and you’ll receive free, no obligation quotes from the qualified expert specialists in your area."
@@ -76,7 +76,12 @@ function RoofersInAltrincham() {
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
                 <Feature cityName="Altrincham" county='Altrincham' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
-
+              <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_ALTRINCHAM}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_ALTRINCHAM}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,12 +99,7 @@ function RoofersInAltrincham() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_ALTRINCHAM} />
             <DiscoverNearMe homeData={ROOFERS_DATA_ALTRINCHAM} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_ALTRINCHAM}
-                activeTabkey="popular"
-            />
+          
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_ALTRINCHAM} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

@@ -40,7 +40,7 @@ function RoofersInMacclesfield() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_MACCLESFIELD} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Macclesfield"
                 description="Find the best roofers in Macclesfield! just enter your postcode, answer a few questions, and we'll match you with 5 roofers in Macclesfield to give you a quote."
@@ -76,6 +76,12 @@ function RoofersInMacclesfield() {
             <div ref={featureRef} style={{ overflowAnchor: "none" }}>
                 <Feature cityName="Macclesfield" county='Macclesfield' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_MACCLESFIELD}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_MACCLESFIELD}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -93,12 +99,6 @@ function RoofersInMacclesfield() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_MACCLESFIELD} />
             <DiscoverNearMe homeData={ROOFERS_DATA_MACCLESFIELD} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_MACCLESFIELD}
-                activeTabkey="popular"
-            />
             <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_MACCLESFIELD} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
