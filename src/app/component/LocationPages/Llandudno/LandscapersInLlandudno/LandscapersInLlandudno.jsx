@@ -71,7 +71,7 @@ function LandscapersInLlandudno() {
                 serviceId={43}
                 serviceName="Landscaping"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_LLANDUDNO}
-                quotesBannerText="LANDSCAPING QUOTES IN"
+                quotesBannerText="GET A QUOTES IN"
                 mobileFrame="/nearme/Landscaping/mobilelandscaping.webp"
             />
 

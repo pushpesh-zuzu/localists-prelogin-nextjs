@@ -203,7 +203,7 @@ export const NEARBY_PLACES_ROOFER_ROSSENDALE = [
     { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
   ]
 export const VETTED_DATA_ROOFERS_ROSSENDALE = [
-  `Are your roof tiles starting to shift every time the wind picks up? Or did you actually manage to find a roofer, but the job’s taking even longer to finish than the Rawtenstall gyratory road works? You don’t have to keep chasing. 
+  `Are your roof tiles starting to shift every time the wind picks up?  Or are your roof improvements taking longer than the Rawtenstall Gyratory? - Well it doesn't need to take that long. 
   <br/><br/> 
   `,
   `
