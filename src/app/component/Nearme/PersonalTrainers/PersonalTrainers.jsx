@@ -73,6 +73,7 @@ function PainterAndDecoratorNearMe() {
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
+                showRightTabButtons
                 heading1="Personal Trainers"
                 heading2="in your area"
                 tabData={PERSONAL_TRAINERS_TABDATA}

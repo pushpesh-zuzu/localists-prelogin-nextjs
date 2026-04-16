@@ -85,6 +85,7 @@ function PatioServicesNearme() {
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
+        showRightTabButtons
         heading1="Patio Specialists "
         heading2="in your area"
         tabData={PATIO_SERVICES_NEARME_TABDATA}

@@ -73,6 +73,7 @@ function PainterAndDecoratorNearMe() {
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
+                showRightTabButtons
                 heading1="Painting and Decorating"
                 headingMiddle="Experts"
                 heading2="in your area"

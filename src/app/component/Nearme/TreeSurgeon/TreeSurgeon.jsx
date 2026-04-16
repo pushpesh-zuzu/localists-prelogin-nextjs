@@ -82,6 +82,7 @@ function TreeSurgeon() {
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
+       showRightTabButtons
         heading1="Tree Surgeons"
         heading2="in your area"
         tabData={TREE_SURGEON_TABDATA}

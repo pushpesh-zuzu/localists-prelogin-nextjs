@@ -45,6 +45,7 @@ export default function HireRelatedToServiceNearMe({
   heightClass = "min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:min-h-[489.5px] lg:h-auto",
   activeTabkey = "professionals",
   homePageCss = false,
+  showRightTabButtons=false
 }) {
   const sectionRef = useRef(null);
   const [currentTab, setcurrentTab] = useState(activeTabkey);
@@ -132,7 +133,7 @@ export default function HireRelatedToServiceNearMe({
                 <span className="text-[#253238]"> {heading2}</span>
               )}
             </h2>
-            <nav
+            { showRightTabButtons && <nav
               className={`flex ${homePageCss ? "gap-0" : "gap-1"} sm:gap-4 md:gap-4  xl:gap-7 items-center flex-wrap`}
             >
               {tabs.map((tab) => {
@@ -156,7 +157,7 @@ export default function HireRelatedToServiceNearMe({
                   </div>
                 );
               })}
-            </nav>
+            </nav>}
           </div>
         </header>
              <div style={{ display: "none" }} aria-hidden="true">

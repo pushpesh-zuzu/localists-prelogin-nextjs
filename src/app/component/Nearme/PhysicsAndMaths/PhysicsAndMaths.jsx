@@ -67,6 +67,7 @@ function PhysicsAndMaths() {
 
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
+                showRightTabButtons
                 heading1="Physics and Maths"
                 headingMiddle="Tutors"
                 heading2="in your area"

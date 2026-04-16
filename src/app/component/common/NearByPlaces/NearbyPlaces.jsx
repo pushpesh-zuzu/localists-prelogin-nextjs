@@ -5,7 +5,10 @@ import WrapperBGWidth from "../WrapperBGWidth/WrapperBGWidth";
 const vettedHeading1 = "Nearby";
 const vettedHeading2 = "Places.";
 
-export default function NearbyPlaces({ background = "#fafafa", NearByPlacesData = [] }) {
+export default function NearbyPlaces({
+  background = "#fafafa",
+  NearByPlacesData = [],
+}) {
   return (
     <WrapperBGWidth background={background}>
       <div className="px-[30px] md:px-16 py-[30px] md:py-[50px] lg:pl-16 xl:px-[120px] lg:py-[72px]">
@@ -37,13 +40,16 @@ export default function NearbyPlaces({ background = "#fafafa", NearByPlacesData 
             ].join(" ");
 
             return url ? (
-              <a key={index} href={url} className={`group ${borderClasses}`}>
-                <Paragraph variant="secondary">
-                  <span className="group-hover:text-[#2196F3] transition-colors duration-200 cursor-pointer">
+              <Paragraph
+                variant="secondary"
+                className={`group ${borderClasses}`}
+              >
+                <a key={index} href={url} className="group-hover:text-[#00afe3] transition-colors duration-200 cursor-pointer">
+                  <span >
                     {title}
                   </span>
-                </Paragraph>
-              </a>
+                </a>
+              </Paragraph>
             ) : (
               <div key={index} className={borderClasses}>
                 <Paragraph variant="secondary">{title}</Paragraph>

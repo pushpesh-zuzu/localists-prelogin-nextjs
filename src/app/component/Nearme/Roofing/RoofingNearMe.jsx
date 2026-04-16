@@ -74,6 +74,7 @@ function RoofingNearMe() {
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
+                showRightTabButtons
                 heading1="Roofers"
                 heading2="in your area"
                 tabData={ROOFING_TABDATA}

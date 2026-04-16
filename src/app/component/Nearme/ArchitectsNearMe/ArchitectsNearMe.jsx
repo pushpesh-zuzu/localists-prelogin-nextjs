@@ -76,6 +76,7 @@ function ArchitectsNearMe() {
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
+        showRightTabButtons
         heading1="Architects"
         heading2="in your area"
         tabData={ARCHITECTS_TABDATA}

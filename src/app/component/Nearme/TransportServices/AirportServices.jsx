@@ -66,6 +66,7 @@ function AirportServices() {
       />
       <HowItWorkNearMe />
       <HireRelatedToServiceNearMe
+        showRightTabButtons
         heading1="Airport Transfer"
         heading2="in your area"
         tabData={AIRPORT_TRANSPORT_TABDATA}

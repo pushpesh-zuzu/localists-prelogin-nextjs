@@ -85,6 +85,7 @@ function ArtificialGrassInstallationNearme() {
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
+        showRightTabButtons
         heading1="Artificial Grass Installers "
         heading2="in your area"
         tabData={ARTIFICIAL_GRASS_NEARME_TABDATA}

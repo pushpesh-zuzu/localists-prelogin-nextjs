@@ -67,6 +67,7 @@ function Tutors() {
 
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
+                showRightTabButtons
                 heading1="Tutors"
                 heading2="in your area"
                 tabData={TUTORS_TABDATA}

@@ -75,6 +75,7 @@ function DrivewayInstallers() {
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
+                showRightTabButtons
                 heading1="Driveway Installers"
                 heading2="in your area"
                 tabData={DRIVEWAY_INSTALLERS_TABDATA}

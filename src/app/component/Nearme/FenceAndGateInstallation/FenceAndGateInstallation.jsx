@@ -74,6 +74,7 @@ function FenceAndGateInstallation() {
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
+                showRightTabButtons
                 heading1="Fencing Contractors"
                 heading2="in your area"
                 tabData={FENCE_AND_GATE_TABDATA}
