@@ -13,7 +13,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
   },
   {
     type: "pricingTable",
-    title: "Average cost of roofing Mold",
+    title: "Average cost of roofing in Mold",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:

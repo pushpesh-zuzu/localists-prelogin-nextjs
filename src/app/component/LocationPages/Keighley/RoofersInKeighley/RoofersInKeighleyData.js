@@ -49,7 +49,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_KEIGHLEY = [
   },
   {
     type: "pricingTable",
-    title: "Average cost of roofing Keighley",
+    title: "Average cost of roofing in Keighley",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:

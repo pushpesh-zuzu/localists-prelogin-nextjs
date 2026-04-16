@@ -23,7 +23,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTH_WALES = [
   },
   {
     type: "pricingTable",
-    title: "Average cost of roofing North Wales",
+    title: "Average cost of roofing in North Wales",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:

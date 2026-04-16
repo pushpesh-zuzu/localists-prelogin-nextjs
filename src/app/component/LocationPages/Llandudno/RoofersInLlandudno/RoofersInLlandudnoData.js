@@ -71,7 +71,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LLANDUDNO = [
   },
   {
     type: "pricingTable",
-    title: "Average cost of roofing Llandudno",
+    title: "Average cost of roofing in Llandudno",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:

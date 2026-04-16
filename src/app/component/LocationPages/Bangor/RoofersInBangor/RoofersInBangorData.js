@@ -31,7 +31,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BANGOR = [
   },
   {
     type: "pricingTable",
-    title: "Average cost of roofing Bangor",
+    title: "Average cost of roofing in Bangor",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:

@@ -41,7 +41,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SCARBOROUGH = [
   },
   {
     type: "pricingTable",
-    title: "Average cost of roofing Scarborough",
+    title: "Average cost of roofing in Scarborough",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:

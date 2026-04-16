@@ -45,7 +45,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ORMSKIRK = [
   },
   {
     type: "pricingTable",
-    title: "Average cost of roofing Ormskirk",
+    title: "Average cost of roofing in Ormskirk",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:

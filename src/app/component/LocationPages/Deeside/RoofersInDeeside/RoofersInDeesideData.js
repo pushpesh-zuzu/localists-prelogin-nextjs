@@ -13,7 +13,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
   },
   {
     type: "pricingTable",
-    title: "Average cost of roofing Deeside",
+    title: "Average cost of roofing in Deeside",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:

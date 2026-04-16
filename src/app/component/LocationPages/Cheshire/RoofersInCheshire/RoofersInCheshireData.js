@@ -62,7 +62,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESHIRE = [
   },
   {
     type: "pricingTable",
-    title: "Average cost of roofing Cheshire",
+    title: "Average cost of roofing in Cheshire",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:

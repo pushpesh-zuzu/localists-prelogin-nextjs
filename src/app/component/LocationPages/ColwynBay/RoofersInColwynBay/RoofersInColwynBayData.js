@@ -57,7 +57,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_COLWNYBAY = [
   },
   {
     type: "pricingTable",
-    title: "Average cost of roofing Colwyn Bay",
+    title: "Average cost of roofing in Colwyn Bay",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
