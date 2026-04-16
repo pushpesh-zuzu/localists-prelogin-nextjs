@@ -178,7 +178,21 @@ export const LANDSCAPING_TABDATA_WAKEFIELD = {
         },
     ],
 
-    related: [
+    // related: [
+    //     // { title: "Landscapers Leeds", url: "" },
+    //     // { title: "Landscapers Halifax", url: "" },
+    //     // { title: "Landscapers Keighley", url: "" },
+    //     // { title: "Landscapers Barnsley", url: "" },
+    //     // { title: "Landscapers Castleford", url: "" },
+    //     {
+    //         title: "Landscapers Huddersfield",
+    //         url: "/en/gb/landscape-gardeners-near-me/huddersfield",
+    //     },
+    // ],
+    findMore: [],
+};
+
+export const NEARBY_PLACES_ROOFER_WAKEFIELD = [
         // { title: "Landscapers Leeds", url: "" },
         // { title: "Landscapers Halifax", url: "" },
         // { title: "Landscapers Keighley", url: "" },
@@ -188,9 +202,7 @@ export const LANDSCAPING_TABDATA_WAKEFIELD = {
             title: "Landscapers Huddersfield",
             url: "/en/gb/landscape-gardeners-near-me/huddersfield",
         },
-    ],
-    findMore: [],
-};
+    ]
 export const VETTED_DATA_LANDSCAPING_WAKEFIELD = [
     `Theres nothing like a Spring walk walk through Thornes Park or Purgneys Country Park to awaken those green thumbs from their long hibernation.
   <br/><br/> 

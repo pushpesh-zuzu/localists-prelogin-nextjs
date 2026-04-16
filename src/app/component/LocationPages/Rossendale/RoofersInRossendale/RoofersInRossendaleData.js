@@ -184,16 +184,24 @@ export const ROOFERS_TABDATA_ROSSENDALE = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
+  //   { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+  //   { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  //   { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
+  //   { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
+  //   { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_ROSSENDALE = [
     { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
     { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
     { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
     { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
     { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_ROSSENDALE = [
   `Are your roof tiles starting to shift every time the wind picks up? Or did you actually manage to find a roofer, but the job’s taking even longer to finish than the Rawtenstall gyratory road works? You don’t have to keep chasing. 
   <br/><br/> 

@@ -186,7 +186,28 @@ export const ROOFERS_TABDATA_STOCKPORT = {
     },
   ],
 
-  related: [
+  // related: [
+  //   { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  //   { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+  //   { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  //   { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+  //   { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  //   { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  //   { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  //   { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+  //   {
+  //     title: "Roofers Macclesfield",
+  //     url: "/en/gb/roofers-near-me/macclesfield",
+  //   },
+  //   { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
+  //   { title: "Roofers Cheadle Hulme", url: "/en/gb/roofers-near-me/cheadle-hulme" },
+  //   {
+  //     title: "Roofers Ashton Under Lyne", url: "/en/gb/roofers-near-me/ashton-under-lyne",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_STOCKPORT = [
     { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
     { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
     { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
@@ -204,9 +225,7 @@ export const ROOFERS_TABDATA_STOCKPORT = {
     {
       title: "Roofers Ashton Under Lyne", url: "/en/gb/roofers-near-me/ashton-under-lyne",
     },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_STOCKPORT = [
   `After one too many quick fixes and a failed recommendation that went nowhere, finding a roofer can start to feel risky. Who can you trust? How much will it cost? And how do you avoid ending up with someone who disappears halfway through the job?
   <br/><br/> 

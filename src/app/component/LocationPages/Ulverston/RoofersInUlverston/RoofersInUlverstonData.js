@@ -166,16 +166,24 @@ export const ROOFERS_TABDATA_ULVERSTON = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
+  //   { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
+  //   { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  //   { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
+  //   { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
+  //   { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_ULVERSTON = [
     { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
     { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
     { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
     { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
     { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
     { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_ULVERSTON = [
   `Unless you specifically asked for an indoor water feature, that puddle in your living room is your roof trying to tell you something. And you should listen to it.
   <br/><br/> 

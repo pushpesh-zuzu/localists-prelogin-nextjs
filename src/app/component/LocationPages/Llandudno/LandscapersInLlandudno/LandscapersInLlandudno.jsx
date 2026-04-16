@@ -10,6 +10,7 @@ import {
     LANDSCAPING_DATA_LLANDUDNO,
     LANDSCAPING_TABDATA_LLANDUDNO,
     VETTED_DATA_LANDSCAPING_LLANDUDNO,
+    NEARBY_PLACES_ROOFER_LLANDUDNO
 } from "./LandscapersInLlandudnoData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 import LandScapingGardenPopularJobs from "@/app/component/Nearme/LandscaperGardenNearMe/LandScapingGardenPopularJobs";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function LandscapersInLlandudno() {
     useScrollToTop()
@@ -100,6 +102,7 @@ function LandscapersInLlandudno() {
                 tabData={LANDSCAPING_TABDATA_LLANDUDNO}
                 activeTabkey="popular"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_LLANDUDNO}/>
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Landscaping/landscapingmember.webp"

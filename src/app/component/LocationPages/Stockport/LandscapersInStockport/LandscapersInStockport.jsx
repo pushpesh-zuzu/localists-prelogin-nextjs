@@ -10,6 +10,7 @@ import {
     LANDSCAPING_DATA_STOCKPORT,
     LANDSCAPING_TABDATA_STOCKPORT,
     VETTED_DATA_LANDSCAPING_STOCKPORT,
+    NEARBY_PLACES_ROOFER_STOCKPORT
 } from "./LandscapersInStockportData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 import LandScapingGardenPopularJobs from "@/app/component/Nearme/LandscaperGardenNearMe/LandScapingGardenPopularJobs";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function LandscapersInStockport() {
     useScrollToTop()
@@ -98,8 +100,9 @@ function LandscapersInStockport() {
                 heading1="Hire with"
                 heading2="confidence."
                 tabData={LANDSCAPING_TABDATA_STOCKPORT}
-                activeTabkey="related"
+                activeTabkey="popular"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_STOCKPORT}/>
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Landscaping/landscapingmember.webp"

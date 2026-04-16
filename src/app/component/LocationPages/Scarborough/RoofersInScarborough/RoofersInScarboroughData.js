@@ -246,15 +246,22 @@ export const ROOFERS_TABDATA_SCARBOROUGH = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
+  //   { title: "Roofers Driffield", url: "/en/gb/roofers-near-me/driffield" },
+  //   { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
+  //   { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
+  //   { title: "Roofers Middlesbrough", url: "/en/gb/roofers-near-me/middlesbrough" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_SCARBOROUGH = [
     { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
     { title: "Roofers Driffield", url: "/en/gb/roofers-near-me/driffield" },
     { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
     { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
     { title: "Roofers Middlesbrough", url: "/en/gb/roofers-near-me/middlesbrough" },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_SCARBOROUGH = [
   `Perched between sea spray and stubborn Yorkshire winds, roofs in Scarborough have a bit more to deal with than most. One minute it’s sunshine on the bay, the next it’s a full-on coastal gust testing every tile like it’s got something to prove.
   <br/><br/> 

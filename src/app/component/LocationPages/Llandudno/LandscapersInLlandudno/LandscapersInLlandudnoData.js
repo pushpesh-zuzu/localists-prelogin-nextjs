@@ -183,7 +183,24 @@ export const LANDSCAPING_TABDATA_LLANDUDNO = {
         },
     ],
 
-    related: [
+    // related: [
+    //     // { title: "Landscapers Mold", url: "" },
+    //     // { title: "Landscapers Rhyl", url: "" },
+    //     // { title: "Landscapers Conwy", url: "" },
+    //     // { title: "Landscapers Bangor", url: "" },
+    //     // { title: "Landscapers Buckley", url: "" },
+    //     // { title: "Landscapers Deeside", url: "" },
+    //     { title: "Landscapers Wrexham", url: "/en/gb/landscape-gardeners-near-me/wrexham" },
+    //     // { title: "Landscapers Holywell", url: "" },
+    //     // { title: "Landscapers Oswestry", url: "" },
+    //     // { title: "Landscapers Anglesey ", url: "" },
+    //     // { title: "Landscapers Caernarfon", url: "" },
+    //     // { title: "Landscapers Colwyn Bay ", url: "" },
+    //     // { title: "Landscapers North Wales", url: "" },
+    // ],
+    findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_LLANDUDNO = [
         // { title: "Landscapers Mold", url: "" },
         // { title: "Landscapers Rhyl", url: "" },
         // { title: "Landscapers Conwy", url: "" },
@@ -197,9 +214,7 @@ export const LANDSCAPING_TABDATA_LLANDUDNO = {
         // { title: "Landscapers Caernarfon", url: "" },
         // { title: "Landscapers Colwyn Bay ", url: "" },
         // { title: "Landscapers North Wales", url: "" },
-    ],
-    findMore: [],
-};
+    ]
 export const VETTED_DATA_LANDSCAPING_LLANDUDNO = [
     `With the Great Orme in eyeshot and the world famous Llandudno Pier on your doorstep - there is plenty of beauty around Llandudno to give you the inspiration to make your little green space into a little green paradise.
   <br/><br/> 

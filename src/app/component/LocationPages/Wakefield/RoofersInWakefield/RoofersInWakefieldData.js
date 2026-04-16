@@ -213,7 +213,22 @@ export const ROOFERS_TABDATA_WAKEFIELD = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+  //   { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
+  //   { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
+  //   { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
+  //   { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
+  //   { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
+  //   {
+  //     title: "Roofers Huddersfield",
+  //     url: "/en/gb/roofers-near-me/huddersfield",
+  //   },
+  // ],
+  findMore: [],
+};
+
+export const NEARBY_PLACES_ROOFER_WAKEFIELD = [
     { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
     { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
     { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
@@ -224,9 +239,7 @@ export const ROOFERS_TABDATA_WAKEFIELD = {
       title: "Roofers Huddersfield",
       url: "/en/gb/roofers-near-me/huddersfield",
     },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_WAKEFIELD = [
   `When something goes wrong with your roof, it’s hard to ignore. A new leak, damp spreading across the ceiling, tiles shifting after a rough night of wind and rain. It’s not the sort of problem you can leave and hope it improves on its own.
   <br/><br/> 

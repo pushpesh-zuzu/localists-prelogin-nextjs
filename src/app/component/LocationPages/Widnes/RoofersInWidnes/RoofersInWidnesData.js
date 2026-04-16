@@ -184,7 +184,36 @@ export const ROOFERS_TABDATA_WIDNES = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+  //   { title: "Roofers Crosby", url: "/en/gb/roofers-near-me/crosby" },
+  //   { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  //   { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  //   { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  //   { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  //   { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  //   { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  //   { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  //   { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+  //   { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  //   { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+  //   { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+  //   { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+  //   { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  //   { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  //   {
+  //     title: "Roofers Macclesfield",
+  //     url: "/en/gb/roofers-near-me/macclesfield",
+  //   },
+  //   {
+  //     title: "Roofers Ellesmere Port",
+  //     url: "/en/gb/roofers-near-me/ellesmere-port",
+  //   },
+  // ],
+  findMore: [],
+};
+
+export const NEARBY_PLACES_ROOFER_WIDNES = [
     { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
     { title: "Roofers Crosby", url: "/en/gb/roofers-near-me/crosby" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
@@ -209,9 +238,7 @@ export const ROOFERS_TABDATA_WIDNES = {
       title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_WIDNES = [
   `Somewhere on the home improvement to-do list, usually sits the item that never quite gets ticked off - The roof. It’s not urgent enough to panic about, not cheap enough to do on a whim, and just enough of a hassle to keep bumping down the list. Until it rains. Then it’s very much at the top.
   <br/><br/> 

@@ -223,7 +223,27 @@ export const LANDSCAPING_TABDATA_WIGAN = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   {
+  //     title: "Landscapers Stockport",
+  //     url: "/en/gb/landscape-gardeners-near-me/stockport",
+  //   },
+  //   // { title: "Landscapers Oldham", url: "" },
+  //   // { title: "Landscapers Glossop", url: "" },
+  //   // { title: "Landscapers Tameside", url: "" },
+  //   // { title: "Landscapers Manchester", url: "" },
+  //   // { title: "Landscapers Altrincham", url: "" },
+  //   // { title: "Landscapers Stalybridge", url: "" },
+  //   // { title: "Landscapers Ashton Under Lyne", url: "" },
+  //   // { title: "Landscapers Cheadle Hulme", url: "" },
+  //   // { title: "Landscapers St Helens", url: "" },
+  //   // { title: "Landscapers Chorley", url: "" },
+  //   // { title: "Landscapers Ormskirk", url: "" },
+  //   // { title: "Landscapers Warrington", url: "" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_WIGAN =  [
     {
       title: "Landscapers Stockport",
       url: "/en/gb/landscape-gardeners-near-me/stockport",
@@ -240,9 +260,7 @@ export const LANDSCAPING_TABDATA_WIGAN = {
     // { title: "Landscapers Chorley", url: "" },
     // { title: "Landscapers Ormskirk", url: "" },
     // { title: "Landscapers Warrington", url: "" },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_LANDSCAPING_WIGAN = [
   `Ever gone for a walk at Mesnes Park or Haigh Woodland Park, looked at the lush greenery and thought, “Hmm… my garden could really do with some TLC”? Well, here’s the thing - your garden does have potential. It might not be showing it right now, but you just need the right touch from the right professional to bring it out.  <br/><br/> 
   `,

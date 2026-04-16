@@ -186,15 +186,21 @@ export const ROOFERS_TABDATA_PENRITH = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
+  //   { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
+  //   { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
+  //   { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
+  // ],
+  findMore: [],
+};
+
+export const NEARBY_PLACES_ROOFER_PENRITH = [
     { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
     { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
     { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
     { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
-  ],
-  findMore: [],
-};
-
+  ]
 export const VETTED_DATA_ROOFERS_PENRITH = [
   `If it feels like it’s raining inside your home as much as it is outside, don't just reach for another bucket - call in the experts.
   <br/><br/> 

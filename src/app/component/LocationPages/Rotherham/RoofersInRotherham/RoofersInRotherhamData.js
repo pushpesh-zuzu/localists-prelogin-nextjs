@@ -223,12 +223,16 @@ export const ROOFERS_TABDATA_ROTHERHAM = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
     ],
-    related: [
-        { title: "Roofers Barnsley", url: "barnsley" },
-        { title: "Roofers Doncaster", url: "doncaster" },
-    ],
+    // related: [
+    //     { title: "Roofers Barnsley", url: "barnsley" },
+    //     { title: "Roofers Doncaster", url: "doncaster" },
+    // ],
     findMore: [],
 };
+export const NEARBY_PLACES_ROOFER_ROTHERHAM = [
+        { title: "Roofers Barnsley", url: "barnsley" },
+        { title: "Roofers Doncaster", url: "doncaster" },
+    ]
 
 export const VETTED_DATA_ROOFERS_ROTHERHAM = [
     `When things go wrong with roofs, it doesn’t take long before it slips into full SOS mode. One minute everything seems fine; the next, you’re scrambling for buckets or searching for a roofer at 12 am.

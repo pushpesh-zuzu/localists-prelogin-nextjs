@@ -193,14 +193,20 @@ export const ROOFERS_TABDATA_WORKINGTON = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
     ],
-    related: [
+    // related: [
+    //     { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
+    //     { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
+    //     { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
+    //     { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
+    // ],
+    findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_WORKINGTON = [
         { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
         { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
         { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
         { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
-    ],
-    findMore: [],
-};
+    ]
 
 export const VETTED_DATA_ROOFERS_WORKINGTON = [
     `Maybe it’s a drip you hear late at night, or you spot daylight in the loft where it shouldn’t be. When you start looking for Roofers in Workington, you need someone reliable and trustworthy.

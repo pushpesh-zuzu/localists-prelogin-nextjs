@@ -205,7 +205,24 @@ export const ROOFERS_TABDATA_OSWESTRY = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+  //   { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+  //   { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+  //   { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+  //   { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
+  //   { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+  //   { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+  //   { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+  //   { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
+  //   { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+  //   { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
+  //   { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
+  //   { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_OSWESTRY  = [
     { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
     { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
@@ -219,9 +236,7 @@ export const ROOFERS_TABDATA_OSWESTRY = {
     { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
     { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_OSWESTRY = [
   `If you’re tired of playing ‘‘catch the drip’’ with a bucket every time it rains, it’s probably time to get a roofing professional to have a look at what's happening up there.
   <br/><br/> 
