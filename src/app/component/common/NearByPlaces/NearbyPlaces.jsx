@@ -6,7 +6,7 @@ const vettedHeading1 = "Nearby";
 const vettedHeading2 = "Places.";
 
 export default function NearbyPlaces({
-  background = "#fff",
+  background = "#f7f7f7",
   NearByPlacesData = [],
 }) {
   return (
