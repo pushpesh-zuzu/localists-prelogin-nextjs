@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import FeatureCard from "./FeatureCard";
-import { FetureSearchBox } from "./FetureSearchBox";
 import { useDispatch, useSelector } from "react-redux";
 import { getFetchSellerListData } from "@/lib/store/buyerslice/buyerSlice";
 import Loader from "../../common/Loader/Loader";
@@ -50,70 +49,78 @@ export default function FetureCardList({
 
   const containerRef = useRef(null);
   const newItemRef = useRef(null);
-  const touchStartY = useRef(0);
+  const lastTouchY = useRef(0);
 
-  // ✅ FIX 1: Desktop wheel scroll chaining
-  // Jab inner container ka scroll end ho jae to window ko scroll karo
-  const handleWheel = useCallback(
+  // ✅ Desktop: wheel scroll chaining
+  const handleWheel = useCallback((e) => {
+    const el = containerRef.current;
+    if (!el) return;
+    const { scrollTop, scrollHeight, clientHeight } = el;
+    const isAtTop = scrollTop <= 0;
+    const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+    if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+      e.preventDefault();
+      window.scrollBy({ top: e.deltaY });
+    }
+  }, []);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || !enableInnerScroll) return;
+    el.addEventListener("wheel", handleWheel, { passive: false });
+    return () => el.removeEventListener("wheel", handleWheel);
+  }, [enableInnerScroll, handleWheel]);
+
+  // ✅ iOS Safari: touchmove pe manually window.scrollBy — ye hi real fix hai
+  const handleTouchStart = useCallback((e) => {
+    lastTouchY.current = e.touches[0].clientY;
+  }, []);
+
+  const handleTouchMove = useCallback(
     (e) => {
+      if (!enableInnerScroll) return;
       const el = containerRef.current;
       if (!el) return;
+
+      const currentY = e.touches[0].clientY;
+      const deltaY = lastTouchY.current - currentY; // positive = niche ja raha hai
+      lastTouchY.current = currentY;
 
       const { scrollTop, scrollHeight, clientHeight } = el;
       const isAtTop = scrollTop <= 0;
       const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
 
-      if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
-        e.preventDefault(); // inner scroll rok do
-        window.scrollBy({ top: e.deltaY }); // window ko scroll karo
+      const goingDown = deltaY > 0;
+      const goingUp = deltaY < 0;
+
+      // Boundary pe hai aur usi direction mein — inner scroll rok ke window scroll karo
+      if ((isAtTop && goingUp) || (isAtBottom && goingDown)) {
+        e.preventDefault(); // inner scroll band
+        window.scrollBy({ top: deltaY }); // window scroll
       }
     },
-    [],
+    [enableInnerScroll],
   );
 
+  // passive: false ZAROORI hai — warna e.preventDefault() iOS pe kaam nahi karta
   useEffect(() => {
     const el = containerRef.current;
     if (!el || !enableInnerScroll) return;
 
-    // passive: false zaroori hai taaki preventDefault() kaam kare
-    el.addEventListener("wheel", handleWheel, { passive: false });
-    return () => el.removeEventListener("wheel", handleWheel);
-  }, [enableInnerScroll, handleWheel]);
+    el.addEventListener("touchstart", handleTouchStart, { passive: true });
+    el.addEventListener("touchmove", handleTouchMove, { passive: false });
 
-  // ✅ FIX 2: iOS Safari touch scroll chaining
-  const handleTouchStart = (e) => {
-    touchStartY.current = e.touches[0].clientY;
-    const el = containerRef.current;
-    if (!el) return;
-    const { scrollTop, scrollHeight, clientHeight } = el;
-    // Boundary pe 1px nudge — iOS scroll chain trick
-    if (scrollTop <= 0) el.scrollTop = 1;
-    if (scrollTop + clientHeight >= scrollHeight) {
-      el.scrollTop = scrollHeight - clientHeight - 1;
-    }
-  };
-
-  const handleTouchMove = (e) => {
-    const el = containerRef.current;
-    if (!el || !enableInnerScroll) return;
-
-    const { scrollTop, scrollHeight, clientHeight } = el;
-    const isAtTop = scrollTop <= 0;
-    const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
-    const movingDown = e.touches[0].clientY < touchStartY.current;
-
-    // Boundary pe hain aur usi direction mein ja rahe hain — parent ko scroll karne do
-    if ((isAtTop && !movingDown) || (isAtBottom && movingDown)) {
-      e.stopPropagation();
-    }
-  };
+    return () => {
+      el.removeEventListener("touchstart", handleTouchStart);
+      el.removeEventListener("touchmove", handleTouchMove);
+    };
+  }, [enableInnerScroll, handleTouchStart, handleTouchMove]);
 
   const handleShowMore = () => {
     setVisibleCount((prev) => prev + STEP);
     if (!enableInnerScroll) {
       setEnableInnerScroll(true);
     }
-
     setTimeout(() => {
       if (newItemRef.current) {
         const containerTop = containerRef.current.getBoundingClientRect().top;
@@ -145,7 +152,6 @@ export default function FetureCardList({
         headingblack="Near You"
       />
 
-      {/* Scrollbar hide CSS — Safari ke liye inline style zaroori */}
       {enableInnerScroll && (
         <style>{`
           .feature-scroll-fix {
@@ -169,13 +175,8 @@ export default function FetureCardList({
         `}
         style={{
           overflowAnchor: "none",
-          // ✅ FIX 3: "touch !important" React mein kaam nahi karta — hata diya
           WebkitOverflowScrolling: "touch",
-          // ✅ FIX 4: overscroll-behavior auto — browser level scroll chain allow karta hai
-          overscrollBehaviorY: "auto",
         }}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
       >
         <div className="flex flex-col gap-4 md:gap-12 px-1">
           {getSellerDataLoader ? (
@@ -201,8 +202,7 @@ export default function FetureCardList({
           ) : (
             <div className="flex min-h-[150px]">
               <Paragraph className="m-auto">
-                {" "}
-                No Seller Found in {cityName}{" "}
+                No Seller Found in {cityName}
               </Paragraph>
             </div>
           )}

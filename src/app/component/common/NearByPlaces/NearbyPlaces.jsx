@@ -11,6 +11,7 @@ export default function NearbyPlaces({
 }) {
   return (
     <WrapperBGWidth background={background}>
+      <div className="bg-[#f7f7f7]">
       <div className="px-[30px] md:px-16 pt-[30px] md:pt-[50px] lg:pl-16 xl:px-[120px] lg:pt-[72px]">
         <NearmeH2Heading
           headdingblue={vettedHeading1}
@@ -58,6 +59,7 @@ export default function NearbyPlaces({
           })}
         </div>
       </div>
+    </div>
     </WrapperBGWidth>
   );
 }
