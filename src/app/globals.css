@@ -15,6 +15,7 @@
 body {
   color: var(--primary-text);
   letter-spacing: -0.03em;
+  overscroll-behavior: auto;
 }
 input,
 textarea,

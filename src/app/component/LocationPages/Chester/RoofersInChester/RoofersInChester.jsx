@@ -82,6 +82,8 @@ function RoofersInChester() {
           heading2="confidence."
           tabData={ROOFERS_TABDATA_CHESTER}
           activeTabkey="popular"
+          heightClass="min-h-[330px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto md:h-auto lg:h-[484px]"
+
         />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_CHESTER}
