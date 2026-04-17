@@ -119,9 +119,19 @@ export default function FetureCardList({
   `}
   style={{
     overflowAnchor: "none",
-        WebkitOverflowScrolling: "touch !important" ,
+    WebkitOverflowScrolling: "touch !important" ,
 
   }}
+   onTouchStart={() => {
+          const el = containerRef.current;
+          if (!el) return;
+          const { scrollTop, scrollHeight, clientHeight } = el;
+          if (scrollTop === 0) {
+            el.scrollTop = 2;
+          } else if (scrollTop + clientHeight >= scrollHeight) {
+            el.scrollTop = scrollHeight - clientHeight - 2;
+          }
+        }}
 >
         <div className="flex flex-col gap-4 md:gap-12 px-1">
           {getSellerDataLoader ? (

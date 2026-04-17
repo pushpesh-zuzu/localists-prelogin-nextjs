@@ -42,7 +42,7 @@ export default function HireRelatedToServiceNearMe({
   heading2 = "confidence",
   tabData = [],
   headingMiddle = "",
-  heightClass = "min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:min-h-[489.5px] lg:h-auto",
+  heightClass = "min-h-[330px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:min-h-[489.5px] lg:h-auto",
   activeTabkey = "professionals",
   homePageCss = false,
   showRightTabButtons=false
