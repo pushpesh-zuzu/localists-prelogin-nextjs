@@ -93,17 +93,36 @@ export default function FetureCardList({
         headingblack="Near You"
       />
 
+      {/* FIX 1: Safari iOS webkit scrollbar hide — Tailwind [&::-webkit-scrollbar] kaam nahi karta Safari me */}
+      {enableInnerScroll && (
+        <style>{`
+          .feature-scroll-fix::-webkit-scrollbar { display: none !important; width: 0 !important; }
+        `}</style>
+      )}
+
       {/* Card Container */}
       <div
         ref={containerRef}
         className={`
           ${
             enableInnerScroll
-              ? "max-h-[1205px] overflow-y-auto [&::-webkit-scrollbar]:w-0 md:[&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full px-1 pb-0.5 md:pb-[5px] mt-[34px] xl:mt-[46px]"
+              ? "feature-scroll-fix max-h-[1205px] overflow-y-auto [&::-webkit-scrollbar]:w-0 md:[&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full px-1 pb-0.5 md:pb-[5px] mt-[34px] xl:mt-[46px]"
               : "mt-[34px] xl:mt-[46px]"
           }
         `}
         style={{ overflowAnchor: "none" }}
+        // FIX 2: iOS Safari me inner scroll container window scroll ko block kar deta he
+        // boundary pe 1px offset se Safari touch event window ko pass kar deta he
+        onTouchStart={() => {
+          const el = containerRef.current;
+          if (!el) return;
+          const { scrollTop, scrollHeight, clientHeight } = el;
+          if (scrollTop === 0) {
+            el.scrollTop = 1;
+          } else if (scrollTop + clientHeight >= scrollHeight) {
+            el.scrollTop = scrollHeight - clientHeight - 1;
+          }
+        }}
       >
         <div className="flex flex-col gap-4 md:gap-12">
           {getSellerDataLoader ? (
