@@ -98,12 +98,12 @@ function RoofersInDriffield() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_DRIFFIELD} />
             <DiscoverNearMe homeData={ROOFERS_DATA_DRIFFIELD} />
-            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_DRIFFIELD} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Roofing/roofingmember.webp"
                 mobileImage="/nearme/Roofing/roofingmembermobile.webp"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_DRIFFIELD} />
             <Footer />
         </>
     );

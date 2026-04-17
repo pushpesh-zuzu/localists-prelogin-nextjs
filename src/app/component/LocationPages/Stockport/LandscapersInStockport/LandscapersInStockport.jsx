@@ -102,12 +102,12 @@ function LandscapersInStockport() {
             />
             <UserFeedbackNearMe2 feedbackData={LANDSCAPING_FEEDBACK_STOCKPORT} />
             <DiscoverNearMe homeData={LANDSCAPING_DATA_STOCKPORT} />
-            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_STOCKPORT}/>
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Landscaping/landscapingmember.webp"
                 mobileImage="/nearme/Landscaping/landscapingmember.webp"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_STOCKPORT}/>
             <Footer />
         </>
     );

@@ -102,7 +102,6 @@ function RooferInLiverpool() {
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_LIVERPOOL} />
 
       <DiscoverNearMe homeData={ROOFERS_DATA_LIVERPOOL} />
-      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_LIVERPOOL} />
       <NearmeMember
         // mobileImage="/location/tree_surgeon_member_location_mobile.webp"
         // desktopImage="/location/tree_surgeon_member_location_desktop.webp"
@@ -110,6 +109,7 @@ function RooferInLiverpool() {
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_LIVERPOOL} />
       <Footer />
     </>
   );
