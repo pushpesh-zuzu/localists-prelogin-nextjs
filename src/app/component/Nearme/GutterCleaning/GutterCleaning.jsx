@@ -88,7 +88,7 @@ function GutterCleaning() {
                 data={FREQUENTLY_DATA_GUTTER_CLEANING["gutter-cleaning-near-me"]}
             />
 
-            <DiscoverNearMe homeData={GUTTER_CLEANING_DATA} />
+            <DiscoverNearMe background="#f7f7f7f7" homeData={GUTTER_CLEANING_DATA} />
 
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

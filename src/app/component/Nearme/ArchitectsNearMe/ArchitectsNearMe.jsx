@@ -88,7 +88,7 @@ function ArchitectsNearMe() {
       {/* </PaddingWrapper> */}
       <FAQ data={FREQUENTLY_DATA_ARCHITECTS} />
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}
-      <DiscoverNearMe homeData={ARCHITECTS_DATA} />
+      <DiscoverNearMe homeData={ARCHITECTS_DATA} background="#f7f7f7f7" />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
       />

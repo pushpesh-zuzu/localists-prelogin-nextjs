@@ -108,7 +108,7 @@ function ArtificialGrassInstallationNearme() {
         />
       </div> */}
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}
-      <DiscoverNearMe homeData={DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA} />
+      <DiscoverNearMe background="#f7f7f7f7" homeData={DISCOVER_ARTIFICIAL_GRASS_NEARME_DATA} />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
       />

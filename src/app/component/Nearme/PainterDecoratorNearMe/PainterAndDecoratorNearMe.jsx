@@ -90,7 +90,7 @@ function PainterAndDecoratorNearMe() {
                 data={FREQUENTLY_DATA_PAINTER_DECORATOR}
             />
 
-            <DiscoverNearMe homeData={PAINTER_DECORATOR_DATA} />
+            <DiscoverNearMe background="#f7f7f7f7" homeData={PAINTER_DECORATOR_DATA} />
 
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
