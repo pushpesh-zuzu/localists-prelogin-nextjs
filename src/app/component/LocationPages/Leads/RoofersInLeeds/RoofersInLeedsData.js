@@ -247,6 +247,7 @@ export const NEARBY_PLACES_ROOFER_LEEDS = [
   { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
   { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
   { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+  { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
   { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
   {
     title: "Roofers Huddersfield",

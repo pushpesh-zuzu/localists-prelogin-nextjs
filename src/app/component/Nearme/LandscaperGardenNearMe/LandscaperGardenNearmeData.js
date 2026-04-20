@@ -342,18 +342,59 @@ export const ADVICEINSIGHT_LANDSCAPE_NEARME = [
 ];
 export const LANDSCAPE_NEARME_TABDATA = {
   professionals: [
-    "Landscapers York",
-    "Landscapers Hull",
-    "Landscapers Leeds",
-    "Landscapers Bolton",
-    "Landscapers Chester",
-    "Landscapers Cheshire",
-    "Landscapers Liverpool",
-    "Landscapers Harrogate",
-    "Landscapers Stockport",
-    "Landscapers Manchester",
-    "Landscapers North Yorkshire",
-  ],
+  {
+    title: "Landscapers Belfast",
+    url: "/en/gb/landscape-gardeners-near-me/belfast",
+  },
+   {
+    title: "Landscapers Northwich",
+    url: "/en/gb/landscape-gardeners-near-me/northwich",
+  },
+  {
+    title: "Landscapers York",
+    url: "",
+  },
+  {
+    title: "Landscapers Hull",
+    url: "",
+  },
+  {
+    title: "Landscapers Leeds",
+    url: "",
+  },
+  {
+    title: "Landscapers Bolton",
+    url: "",
+  },
+  {
+    title: "Landscapers Chester",
+    url: "",
+  },
+  {
+    title: "Landscapers Cheshire",
+    url: "",
+  },
+  {
+    title: "Landscapers Liverpool",
+    url: "",
+  },
+  {
+    title: "Landscapers Harrogate",
+    url: "",
+  },
+  {
+    title: "Landscapers Stockport",
+    url: "",
+  },
+  {
+    title: "Landscapers Manchester",
+    url: "",
+  },
+  {
+    title: "Landscapers North Yorkshire",
+    url: "",
+  },
+],
   popular: [
   
         {

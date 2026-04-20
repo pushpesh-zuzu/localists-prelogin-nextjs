@@ -201,6 +201,7 @@ export const NEARBY_PLACES_ROOFER_CASTLEFORD = [
     { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
     { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+    { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
     {
       title: "Roofers Huddersfield",
       url: "/en/gb/roofers-near-me/huddersfield",

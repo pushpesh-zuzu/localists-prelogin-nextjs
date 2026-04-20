@@ -1,25 +1,26 @@
 import LoaderIndicator from "@/app/component/common/Loader/LoaderIndicatore";
 import SEO from "@/app/component/common/seo/SEO";
+import LandscapersInPrestatyn from "@/app/component/LocationPages/Prestatyn/LandscapersInPrestatyn/LandscapersInPrestatyn";
 import LandscapersInWakefield from "@/app/component/LocationPages/Wakefield/LandscapersInWakefield/LandscapersInWakefield";
 import React, { Suspense } from "react";
 export const metadata = {
-  title: "17 Local Skilled Landscapers Wakefield | Localists",
+  title: " 23 Vetted Local Landscapers Prestatyn",
   description:
-    " Looking for trusted landscapers in Wakefield? Get up to 5 free no-obligation quotes from qualified, vetted landscapers now. Only on Localists.",
+    "Need to hire reliable landscapers in Prestatyn? Click now to get free expert quotes from local landscaping professionals near you. Only on Localists today.",
 };
 function page() {
   return (
     <>
       <SEO
-        canonicalPath="/en/gb/landscape-gardeners-near-me/wakefield"
+        canonicalPath="/en/gb/landscape-gardeners-near-me/prestatyn"
         bannerImage="/nearme/Landscaping/Landscapingbanner.webp"
         breadcrumb={[
           { title: "Home", path: "en/gb" },
           { title: "Home & Garden", path: "en/gb/home" },
           { title: "Landscaping", path: "en/gb/landscape-gardeners-near-me" },
           {
-            title: "Wakefield",
-            path: "en/gb/landscape-gardeners-near-me/wakefield",
+            title: "Prestatyn",
+            path: "en/gb/landscape-gardeners-near-me/prestatyn",
           },
         ]}
         conversion={true}
@@ -31,7 +32,7 @@ function page() {
           </div>
         }
       >
-        <LandscapersInWakefield />
+        <LandscapersInPrestatyn />
       </Suspense>
     </>
   );

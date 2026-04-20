@@ -271,7 +271,9 @@ export const  NEARBY_PLACES_ROOFER_HUDDERSFIELD =  [
     { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
     { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+    { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
     { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
+
   ]
   
 export const VETTED_DATA_ROOFERS_HUDDERSFIELD = [

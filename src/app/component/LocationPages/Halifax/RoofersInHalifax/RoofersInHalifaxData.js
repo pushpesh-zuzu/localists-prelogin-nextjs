@@ -229,6 +229,8 @@ export const NEARBY_PLACES_ROOFER_HALIFAX = [
         { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
         { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
         { title: "Roofers Huddersfield", url: "/en/gb/roofers-near-me/huddersfield" },
+        { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
+
     ]
 
 export const VETTED_DATA_ROOFERS_HALIFAX = [
