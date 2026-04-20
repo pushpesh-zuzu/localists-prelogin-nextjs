@@ -75,7 +75,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ULVERSTON = [
   },
   {
     type: "p",
-    text: `Annually, Ulverston has one of the highest [<a href="https://www.timeanddate.com/weather/@7298117/climate" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">Rainfall by Month</a>]monthly rainfall statistics at 1,637mm per month compared to the national average of 1,163mm per month. Along with having an average of 200 wet days per year (with the UK average being 159 days per year). So if your roof isn't suffice, you'll know about it. We'd recommend getting regular roofing surveys done if you have a home in ulverston. `,
+    text: `Annually, Ulverston has one of the highest monthly <a href="https://weather-and-climate.com/average-monthly-precipitation-Rainfall,ulverston-cumbria-gb,United-Kingdom" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">rainfall statistics</a> at 1,637mm per month compared to the national average of 1,163mm per month. Along with having an average of 200 wet days per year (with the UK average being 159 days per year). So if your roof isn't suffice, you'll know about it. We'd recommend getting regular roofing surveys done if you have a home in Ulverston.  You may also want to look for Gutter cleaners in Ulverston or Gutter Installation in Ulverston as that extra rain will take its toll on your gutters.`,
   },
   {
     type: "h3",
