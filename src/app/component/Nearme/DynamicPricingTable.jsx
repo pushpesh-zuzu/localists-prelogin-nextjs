@@ -20,13 +20,13 @@ export default function DynamicPricingTable({
                     className={`mb-5 mt-[7px] md:mt-0 md:mb-[25px]`}
                 />}
                 <div
-                    className="w-full rounded-[30px] md:rounded-[25px]"
+                    className="w-full rounded-[30px] h-full md:rounded-[25px]"
                     style={{ backgroundColor: "#8BFFCF" }}
                 >
-                    <div className="flex flex-col lg:flex-row lg:gap-6 items-stretch">
+                    <div className="flex flex-col min-h-full lg:flex-row lg:gap-6 items-stretch">
 
                         {/* Left Section */}
-                        <div className="flex flex-col h-full flex-1 justify-between px-2.5 pt-[30px] lg:pl-[38px] lg:pt-[54px] lg:pb-[52px] lg:max-w-[50%] lg:min-w-[386px] xl:min-w-[386px] xl:max-w-[50%]">
+                        <div className="flex flex-col h-auto flex-1 justify-between px-2.5 pt-[30px] lg:pl-[38px] lg:pt-[54px] lg:pb-[52px] lg:max-w-[50%] lg:min-w-[386px] xl:min-w-[386px] xl:max-w-[50%]">
                             <H2 variant="optional" className="text-center min-[460px]:mx-auto md:mx-0 md:max-w-full lg:text-left ">
                                 {title}
                             </H2>
