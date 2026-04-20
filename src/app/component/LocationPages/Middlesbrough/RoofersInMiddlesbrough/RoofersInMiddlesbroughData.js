@@ -289,13 +289,11 @@ export const NEARBY_PLACES_ROOFER_MIDDLESBROUGH = [
         { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
     ]
 export const VETTED_DATA_ROOFERS_MIDDLESBROUGH = [
-    `Has bad weather sent your roof tiles flying into the next street, or is your roof simply past its prime? Suddenly, you’re dealing with leaks, thinking about repairs, possibly a new roof, worrying about costs, and wondering who you can actually trust to do the job.
+    `Has bad weather sent your roof tiles flying into next week? Or are you starting to see an unwanted skylight due to the lack of tiles? Then it might be time to get fixed in with your local Middlesborough roofer. And we know just the people!
   <br/><br/> 
   `,
     `
-That’s where Localists steps in. Skip the guesswork, obscure online prices, and awkward neighbour recommendations. Simply share a few details about your project and get up to five free, no-obligation quotes from trusted Middlesbrough roofers who actually want the job.
-<br/><br/>
-No stress, no chasing, no fuss.
+Here at Localists, Skip the guesswork, obscure online prices, and awkward neighbour recommendations. Simply share a few details about your project and get up to five free, no-obligation quotes from trusted Middlesbrough roofers who actually want the job.
 `,
 ];
 

@@ -197,11 +197,11 @@ export const NEARBY_PLACES_ROOFER_CROSBY = [
         },
     ]
 export const VETTED_DATA_ROOFERS_CROSBY = [
-    `A roof problem has a way of catching you off guard. One week, it's a mark on the ceiling you barely notice. The next one's bigger, wetter, and before you know it, it's taken over your weekend. The last thing you need is the stress of finding a roofer you can actually trust.
-  <br/><br/> 
+    `With the blistering winds of the Crosby coastline, getting your roof checked out on the regular is a must. But sometimes it can seem easier to get a roofing quote from the iron men on Crosby beach than it can with a local roofer. That's where we come in. 
+ <br/><br/> 
   `,
     `
-At Localists, we do the groundwork for you. Every roofer we recommend in Crosby has been vetted for qualifications, insurance, and track record, all checked. Get free quotes straight to your inbox and decide in your own time. Simple as that.
+Here at Localists, we cover all the legwork for you. All of the roofers on our platform are vetted for skills, qualifications and reviews. And we hook you up with roofers in your local area that can fit you in and give you a free no-obligation quote. Just enter your postcode to get started or view scroll down and check out some of the Crosby roofers in your area.
 `,
 ];
 

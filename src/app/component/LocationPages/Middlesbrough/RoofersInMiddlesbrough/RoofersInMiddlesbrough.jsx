@@ -53,8 +53,8 @@ function RoofersInMiddlesbrough() {
             />
             <VettedSection
                 paragraph={VETTED_DATA_ROOFERS_MIDDLESBROUGH}
-                vettedHeading1="Find Local Vetted Roofers in "
-                vettedHeading2="Middlesbrough"
+                vettedHeading1="Find Local Roofers in "
+                vettedHeading2="Middlesborough"
                 breadcrumb={BREADCRUM_DATA_ROOFERS_MIDDLESBROUGH}
                 extraButton
                 featureRef={featureRef}

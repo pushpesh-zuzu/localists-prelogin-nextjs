@@ -3,7 +3,7 @@ import SEO from '@/app/component/common/seo/SEO';
 import RoofersInWarrington from '@/app/component/LocationPages/Warrington/RoofersInWarrington/RoofersInWarrington';
 import React, { Suspense } from 'react'
 export const metadata = {
-  title: "Find Vetted Roofers Warrington |Free Quotes| Localists.com",
+  title: "35 Vetted Roofers Warrington | Localists.com",
   description:
     "Need reliable roofers in Warrington? Get free expert, no-obligation quotes from vetted roofers near you for repairs, replacements, and emergency roofing.",
 };

@@ -23,7 +23,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ALDERLEY_EDGE = [
     {
         type: "uili",
         heading: "We also match based on your specific property :\u00A0",
-        text: "Alderley Edge has Victorian villas, newer executive builds, and everything in between, and the right roofer for one isn't necessarily the right roofer for another. We take that into account.",
+        text: "Alderley Edge has Victorian villas, newer executive builds, and everything in between. So the right roofer for one isn't necessarily the right roofer for another. We take that into account.",
     },
     {
         type: "uili",
@@ -216,11 +216,11 @@ export const NEARBY_PLACES_ROOFER_ALDERLEY_EDGE =[ { title: "Roofers Stockport",
             url: "/en/gb/roofers-near-me/cheadle-hulme",
         },]
 export const VETTED_DATA_ROOFERS_ALDERLEY_EDGE = [
-    `It's Sunday evening. You've just noticed water dripping where it shouldn't be. You've got work tomorrow, no idea who to call, and no idea what it's going to cost. The last thing you need is to spend the next three days chasing callbacks from roofers who may or may not know what they're doing.
+    `Have you noticed dripping where it shouldn't be? Roof tile debris in the gutter? Or is this small scale roofing job starting to look like a job that's even too much for the Alderley Edge Wizard? Well no need to fret. We've got you covered. 
   <br/><br/>
   `,
     `
-Localists can help. We’ll match you with the highest quality, vetted roofers in Alderley Edge. Once you start your search, you’ll get free no-obligation quotes sent directly to your inbox within minutes.
+At Localists, we've got a whole host of roofers in your area who can work their magic on whatever scale job is needed.And the best bit is, they'll be able to fit you in when you need them. So no more ghosting, and certainly no more "I've got nothing till next month" - get free, no-obilgation roofing estimates from roofers in Alderley Edge today.
 `,
 ];
 
