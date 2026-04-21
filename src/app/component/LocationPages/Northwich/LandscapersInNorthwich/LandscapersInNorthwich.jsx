@@ -43,7 +43,7 @@ function LandscapersInNorthwich() {
             <HeroSectionLocation 
                 heading1="Landscapers"
                 heading2="Northwich"
-                description="Looking for landscapers in Northwich? Pop in your postcode and a few quick details of what needs doing below and receive several quotes in your inbox in minutes. It’s really that easy."
+                description="Looking for landscapers in Northwich? Pop in your postcode and a few quick details of what needs doing below, and receive several quotes in your inbox in minutes. It’s really that easy."
                 bannerImage="/nearme/Landscaping/Landscapingbanner.webp"
                 bannerImageMobile="/nearme/Landscaping/landscapingMobile1.webp"
                 altText="A Landscaper carefully laying a large concrete slab amongst a garden of flowers and grey pebble dash"

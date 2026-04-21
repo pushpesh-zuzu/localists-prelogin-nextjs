@@ -41,7 +41,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_PRESTATYN = [
     prices: [
       {
         text: "General Landscaping:",
-        price: "£2486",
+        price: "£2,486",
       },
       {
         text: "Turfing:",
@@ -49,11 +49,11 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_PRESTATYN = [
       },
       {
         text: "Garden decking installation:",
-        price: "£1914",
+        price: "£1,914",
       },
       {
         text: "Artificial grass installation:",
-        price: "£2439",
+        price: "£2,439",
       },
     ],
   },

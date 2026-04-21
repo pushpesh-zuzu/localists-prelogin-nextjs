@@ -72,7 +72,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_NORTHWICH = [
   },
   {
     type: "p",
-    text: "But if you’re after a rough guide, see some average costs below based on our internal data of some common jobs completed by our local landscapers in Northwich",
+    text: "But if you’re after a rough guide, see some average costs below based on our internal data of some common jobs completed by our local landscapers in Northwich.",
   },
   {
     type: "pricingTable",
@@ -116,7 +116,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_NORTHWICH = [
   },
   {
     type: "p",
-    text: "Well, we’ve found that with basic turfing, planting basic patio or anything around soft landscaping, it’s usually fine. It’s when you start doing bigger changes like - raised decking, leveling, and anything that affects drainage - that can get a bit tricky. I expect advice to check in with your landscaper or have a quick check with your local council before commencing your project.",
+    text: `Well, we’ve found that with basic turfing, planting, basic patio or anything around soft landscaping, it’s usually fine. It’s when you start doing bigger changes like raised decking, levelling, and anything that affects drainage - that things can get a bit tricky. We always advise checking in with your landscaper or having a quick check with your <a href="https://www.northwichtowncouncil.gov.uk/contact/" target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>local council</a> before commencing your project.`,
     notMarginBottom: true,
   },
 
@@ -131,7 +131,7 @@ export const FREQUENTLY_DATA_NORTHWICH = [
     key: "1",
     title: "How much should a landscaper charge per day?",
     description: `
-    To be honest, most landscaper’s day rate falls somewhere between £150 to £350, depending on the nature of the job. But we always advise that you double check with your landscaper if this covers only labour costs, and whether materials and equipment will be charged separately - placing the day rate much higher.
+    To be honest, most landscapers’ day rate falls somewhere between £150 and £350, depending on the nature of the job. But we always advise that you double check with your landscaper if this covers only labour costs, and whether materials and equipment will be charged separately - placing the day rate much higher.
     `,
   },
   {

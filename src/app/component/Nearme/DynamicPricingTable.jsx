@@ -10,7 +10,8 @@ export default function DynamicPricingTable({
     disclaimer,
     calculatorLink,
     calculatorText = "Roofing Calculator",
-    heading = ''
+    heading = '',
+    classNameLeft ="justify-between"
 }) {
     return (
         <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] md:pb-9 pt-2 md:pt-3 lg:pt-[47px]">
@@ -26,7 +27,7 @@ export default function DynamicPricingTable({
                     <div className="flex flex-col min-h-full lg:flex-row lg:gap-6 items-stretch">
 
                         {/* Left Section */}
-                        <div className="flex flex-col h-auto flex-1 justify-between px-2.5 pt-[30px] lg:pl-[38px] lg:pt-[54px] lg:pb-[52px] lg:max-w-[50%] lg:min-w-[386px] xl:min-w-[386px] xl:max-w-[50%]">
+                        <div className={`flex flex-col h-auto flex-1 ${classNameLeft}  px-2.5 pt-[30px] lg:pl-[38px] lg:pt-[54px] lg:pb-[52px] lg:max-w-[50%] lg:min-w-[386px] xl:min-w-[386px] xl:max-w-[50%]`}>
                             <H2 variant="optional" className="text-center min-[460px]:mx-auto md:mx-0 md:max-w-full lg:text-left ">
                                 {title}
                             </H2>

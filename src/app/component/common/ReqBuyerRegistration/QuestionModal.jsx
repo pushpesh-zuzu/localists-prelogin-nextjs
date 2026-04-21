@@ -290,7 +290,13 @@ const QuestionModal = ({
         }
     }, [dispatch, questionanswerData?.length, serviceId]);
    
+    const currentOptions =
+        formattedQuestions[currentQuestion]?.parsedAnswers || [];
 
+    const isOnlyOther =
+        currentOptions.length === 1 &&
+        currentOptions[0].option === "Something else (please describe)";
+        
     return (
         <Modal
             onClose={() => {
@@ -312,7 +318,7 @@ const QuestionModal = ({
             progressPercent={progressPercent}
             marginTop="lg:mt-[12vh] mt-[5vh]"
         >
-            <div className="border border-[#D9D9D9] rounded-[30px] mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
+            <div className={`${isOnlyOther ? "" : "border"} border-[#D9D9D9] rounded-[30px] mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]`}>
                 {loading ? (
                     <div className="flex-1 flex items-center justify-center py-4">
                         <LoaderIndicator size="large" />
@@ -320,7 +326,7 @@ const QuestionModal = ({
                 ) : questions.length > 0 ? (
                     <>
                         {/* Options Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-[20px] md:p-[40px]">
+                        {!isOnlyOther && <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-[20px] md:p-[40px]">
                             {formattedQuestions[currentQuestion]?.parsedAnswers.map(
                                 (opt, index, arr) => {
 
@@ -365,7 +371,7 @@ const QuestionModal = ({
                                     );
                                 }
                             )}
-                        </div>
+                        </div>}
 
                         {/* Other Input */}
                         {formattedQuestions[currentQuestion]?.parsedAnswers.some(
@@ -373,7 +379,7 @@ const QuestionModal = ({
                         ) &&
                             selectedOption.includes(
                                 "Something else (please describe)"
-                            ) && (
+                            ) && !isOnlyOther && (
                                 <div className="px-5 md:px-9.5 mb-5 md:mb-10">
                                     <InputField
                                         placeholder="Please Enter..."
@@ -385,6 +391,50 @@ const QuestionModal = ({
                                 {error}
                             </p>)}
                                 </div>
+                                
+                            )}
+                             {formattedQuestions[currentQuestion]?.parsedAnswers.some(
+                            (opt) => opt.option === "Something else (please describe)"
+                        ) &&
+                            selectedOption.includes(
+                                "Something else (please describe)"
+                            ) && isOnlyOther && (
+                                <div className="px-5 md:px-9.5 my-5 md:y-10">
+                                    {/* <InputField
+                                        placeholder="Please Enter..."
+                                        value={otherText}
+                                        onChange={(e) => {setOtherText(e.target.value);setError(""); }}
+                                    /> */}
+                                    <textarea 
+                                        rows={3}
+                                        type="textarea"
+                                         placeholder="Please Enter..."
+                                        onChange={(e) => {setOtherText(e.target.value);setError(""); }}
+                                        value={otherText}
+                                        
+                                        style={{ boxShadow: "0 0 8px .5px #0000001a" }}
+                                        className={`
+                                            relative w-full px-3 py-2 rounded-[16px]
+                                            text-gray-900 text-base
+                                            border border-[#00aef3]
+                                            transition-all duration-200
+                                        placeholder:text-[#959595]
+                                            focus:outline-1 outline-[#00aef3] focus:ring-1
+                                            disabled:bg-gray-100 
+                                            custom-placeholder
+                                            ${error
+                                            ? "border-red-500 focus:ring-red-500 focus:border-red-500"
+                                            : "focus:ring-black"
+                                            }
+    
+                                        `}
+                                        />
+                        {error && (
+                            <p className="text-sm text-red-600  pt-2">
+                                {error}
+                            </p>)}
+                                </div>
+                                
                             )}
 
                         {/* Error */}

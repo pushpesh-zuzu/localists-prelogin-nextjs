@@ -46,7 +46,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BRIGHOUSE = [
     prices: [
       {
         text: "For general roofing work, the average tends to be around",
-        price: "£2010",
+        price: "£2,010",
       },
       {
         text: "If it’s a repair, such as sorting out a leak or replacing a few tiles, it usually costs around",
@@ -58,7 +58,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BRIGHOUSE = [
       },
       {
         text: "And if the roof needs to be fully replaced, the average cost sits around",
-        price: "£6620",
+        price: "£6,620",
       },
     ],
   },

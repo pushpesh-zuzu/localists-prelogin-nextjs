@@ -5,15 +5,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
   },
   {
     type: "p",
-    text: "We’ll keep it simple - “Your house is not the same as your neighbours”. Yes! In Crewe, you find different types of properties, even on the same streets. So if you currently live in a 1930s semi in Wistaston, or a modern detached home in Haslington, a traditional railway terrace near the station, it’s very important to work with a roofer who knows your type of roofing material.",
+    text: "We’ll keep it simple - “Your house is not the same as your neighbours”. Yes! In Crewe, you find different types of properties, even on the same streets. So if you currently live in a 1930s semi in Wistaston, a modern detached home in Haslington, or a traditional railway terrace near the station, it’s very important to work with a roofer who knows your type of roofing material.",
   },
   {
     type: "p",
-    text: "Think about it - your roof is the only thing protecting your home and every single one of your valuables from the elements. If that barrier fails for any reason, everything inside is at risk. So he goes without saying that roofing mistakes are very expensive but the good thing is, you can certainly avoid them. And that’s why most homeowners and even property managers in Crewe trust us.",
+    text: "Think about it - your roof is the only thing protecting your home and every single one of your valuables from the elements. If that barrier fails for any reason, everything inside is at risk. So it goes without saying that roofing mistakes are very expensive, but the good thing is, you can certainly avoid them!. And that’s why most homeowners and even property managers in Crewe trust us.",
   },
   {
     type: "pbold",
-    text: "Here’s a straightforward summary of what you get when you hire a roofer through :",
+    text: "Here’s a straightforward summary of what you get when you hire a roofer through",
   },
   {
     type: "pbold",
@@ -21,29 +21,29 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
   },
   {
     type: "uili",
-    heading: "Matches with local vetted specialists\u00A0",
-    text: ": We connect you with roofers who are already working in the area and have been thoroughly vetted by us (experience, qualification and background checked).",
+    heading: "Matches with local vetted specialists:\u00A0",
+    text: "We connect you with roofers who are already working in the area and have been thoroughly vetted by us (experience, qualification and background checked).",
     marginTop: true,
   },
   {
     type: "uili",
-    heading: "Quotes based on your specific project\u00A0",
-    text: ": No generic pricing. The details you provide shape the tailored responses you receive.",
+    heading: "Quotes based on your specific project:\u00A0",
+    text: "No generic pricing. The details you provide shape the tailored responses you receive.",
   },
   {
     type: "uili",
-    heading: "Clear, transparent options\u00A0",
-    text: ": View experience, services offerings and past projects at a glance before you commit to anything.",
+    heading: "Clear, transparent options:\u00A0",
+    text: "View experience, service offerings and past projects at a glance before you commit to anything.",
   },
   {
     type: "uili",
-    heading: "Honest reviews\u00A0",
-    text: ": We've done the legwork by pulling together reviews from every corner of the web - Facebook, Google, Yelp, Trustpilot - so you can trust every roofers reviews on our platform.",
+    heading: "Honest reviews:\u00A0",
+    text: "We've done the legwork by pulling together reviews from every corner of the web - Facebook, Google, Yelp, Trustpilot - so you can trust every roofer's reviews on our platform.",
   },
   {
     type: "uili",
-    heading: "Fair market pricing\u00A0",
-    text: ": You'll receive multiple competitive quotes from local roofers in your area, so you’ll know exactly what is reasonable for the work involved.",
+    heading: "Fair market pricing:\u00A0",
+    text: "You'll receive multiple competitive quotes from local roofers in your area, so you’ll know exactly what is reasonable for the work involved.",
     noMarginBottom: true,
   },
   {
@@ -59,11 +59,11 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
   },
   {
     type: "p",
-    text: "Roofing prices aren’t fixed in the way people sometimes expect - no two requirements I exactly the same. What you’ll spend largely depends on a few factors like: the complexity of the problem, the size of your roof, how easy the roofer is to access, and whether scaffolding or specialist materials are needed.",
+    text: "Roofing prices aren’t fixed in the way people sometimes expect - no two requirements are exactly the same. What you’ll spend largely depends on a few factors like the complexity of the problem, the size of your roof, how easy the roof is to access, and whether scaffolding or specialist materials are needed.",
   },
   {
     type: "p",
-    text: "We always advise getting quotes from different roofing specialists near you. That way you get a good understanding of expected averages in your area.",
+    text: "We always advise getting quotes from different roofing specialists near you. That way, you get a good understanding of expected averages in your area.",
   },
   {
     type: "p",
@@ -109,7 +109,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
   },
   {
     type: "p",
-    text: "Age plays a part too. Some roofs last decades, others less, depending on materials and how well they’ve been looked after. If yours is edging towards that 25-30 year mark, we advise that you get a proper assessment from a roofing specialist, as they’ll be able to provide expert guidance and tell you exactly what you’re dealing with.",
+    text: "Age plays a part too. Some roofs last decades, others less, depending on materials and how well they’ve been looked after. If yours is edging towards that 25-30year mark, we advise that you get a proper assessment from a roofing specialist, as they’ll be able to provide expert guidance and tell you exactly what you’re dealing with.",
     notMarginBottom: true,
   },
   {
@@ -123,14 +123,14 @@ export const ROOFERS_FREQUENTLY_DATA_CREW = [
     key: "1",
     title: "How do you know if a roofer is any good?",
     description: `
-    Our best advice is - start by using a platform you can trust like Localists, so you’re not just picking a random number off a van. Have a proper look at their profile - check the reviews and pictures of their past work. It’s also worth asking if they’ve handle your specific type of roof before (and if they can show you a few examples).
+    Our best advice is - start by using a platform you can trust, like Localists, so you’re not just picking a random number off a van. Have a proper look at their profile - check the reviews and pictures of their past work. It’s also worth asking if they’ve handled your specific type of roof before (and if they can show you a few examples).
     `,
   },
   {
     key: "2",
     title: "Should you pay a roofer in cash?",
     description: `
-    Your choice is ultimately yours. If you feel comfortable paying in cash, we advise that you get a receipt for your payment. Otherwise, a bank transfer is always good as it leaves an automatic payment evidence you can access and use at any time.
+    Your choice is ultimately yours. If you feel comfortable paying in cash, we advise that you get a receipt for your payment. Otherwise, a bank transfer is always good as it leaves an automatic payment record you can access and use at any time.
     `,
   },
   {
@@ -254,7 +254,7 @@ export const NEARBY_PLACES_ROOFER_CREWE = [
   },
 ];
 export const VETTED_DATA_ROOFERS_CREW = [
-  `Crewe is not the kind of place where people don’t take care of their homes - it’s quite the opposite. Across town, you’ll find some really decent buildings that are well looked after. For instance…you see those railway terraces near the station or the Victorian-era homes around Nantwich road, most of them still have their original slate roofs from a century ago!. It just shows how much pride people take here in their homes. 
+  `Crewe is not the kind of place where people don’t take care of their homes - it’s quite the opposite. Across town, you’ll find some really decent buildings that are well looked after. For instance…you see those railway terraces near the station or the Victorian-era homes around Nantwich road, most of them still have their original slate roofs from a century ago!. It just shows how much pride people here take in their homes. 
    <br/><br/> 
   `,
   `
@@ -262,8 +262,7 @@ But the reality is - the weather doesn’t care how well you look after your pla
  <br/><br/>
 `,
   `
-With Localists, you give us your postcode and tell us what you need, and we’ll match you with the right, vetted professionals who know the area so we’ll - simple as that! 
-
+With Localists, you give us your postcode and tell us what you need, and we’ll match you with the right, vetted professionals who know the area so well - simple as that!
 `,
 ];
 
@@ -299,7 +298,7 @@ export const ROOFERS_FEEDBACK_CREW = [
   },
   {
     id: 3,
-    text: "Our house is older, and we weren’t sure whether we were looking at another repair or finally replacing the roof. Got 4 quotes from Localists, all pointing to replacement unfortunately. But we’ve sorted it out now.",
+    text: "Our house is older, and we weren’t sure whether we were looking at another repair or finally replacing the roof. Got 4 quotes from Localists, all pointing to replacement, unfortunately. But we’ve sorted it out now",
     name: "Meera P.",
   },
   {

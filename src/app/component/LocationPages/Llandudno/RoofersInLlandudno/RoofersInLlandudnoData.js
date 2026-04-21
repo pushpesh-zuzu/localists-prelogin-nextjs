@@ -274,6 +274,10 @@ export const NEARBY_PLACES_ROOFER_LLANDUDNO = [
     { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
     { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
     { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+     {
+    title: "Landscapers Prestatyn",
+    url: "/en/gb/landscape-gardeners-near-me/prestatyn",
+  },
   ]
 export const VETTED_DATA_ROOFERS_LLANDUDNO = [
   `There's a damp patch you've been blaming on condensation for two winters. A tile you spotted from the driveway that you keep meaning to do something about. A gutter that sounds wrong in heavy rain but hasn't actually caused a problem. Yet. 

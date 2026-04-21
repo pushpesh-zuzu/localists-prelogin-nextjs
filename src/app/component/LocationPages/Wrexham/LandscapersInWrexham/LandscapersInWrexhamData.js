@@ -230,7 +230,11 @@ export const LANDSCAPING_TABDATA_WREXHAM = {
 export const NEARBY_PLACES_ROOFER_WREXHAM =  [{
       title: "Landscapers Llandudno",
       url: "/en/gb/landscape-gardeners-near-me/llandudno",
-    }]
+ }, {
+    title: "Landscapers Prestatyn",
+    url: "/en/gb/landscape-gardeners-near-me/prestatyn",
+  },
+    ]
 export const VETTED_DATA_LANDSCAPING_WREXHAM = [
   `With the Clwydian Range and Alyn Waters Country Park on your doorstep, theres plenty of inspiration around you to dust off those green fingers and get to work on the garden of your dreams.  <br/><br/> 
   `,

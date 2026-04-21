@@ -43,7 +43,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WARRINGTON = [
   },
   {
     type: "p",
-    text: "Flat roof repairs range between £619–£2,076, with an average of £1,149. Size and materials will influence the final cost.",
+    text: "Flat roof repairs range between £619–£2,076, with an average of £1,149 - size and materials will influence the final cost.",
   },
   {
     type: "pbold",
@@ -51,7 +51,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WARRINGTON = [
   },
   {
     type: "p",
-    text: "Repairs for pitched roofs usually fall between <Strong>£339–£1,498</Strong>, averaging <Strong>£714.</Strong> Steeper or hard-to-access roofs may cost slightly more.",
+    text: "Repairs for pitched roofs usually fall between <strong>£339–£1,498</strong>, averaging <strong>£714</strong> - steeper or hard-to-access roofs may cost slightly more.",
   },
   {
     type: "pbold",

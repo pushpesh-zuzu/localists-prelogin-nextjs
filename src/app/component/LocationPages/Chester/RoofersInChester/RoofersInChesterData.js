@@ -294,7 +294,7 @@ export const VETTED_DATA_ROOFERS_CHESTER = [
   <br/><br/> 
   `,
   `
-Whether it’s a quick repair, a complete roof overhaul, or an urgent fix after a storm, we’ll connect you with the <a href="/en/gb/roofers-near-me" <a target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>best roofers</a> in Chester. Get started and receive free no obligation quotes from local experts near you. No chasing callbacks. No technical waffle. No headaches, which you didn’t sign up for.
+Whether it’s a quick repair, a complete roof overhaul, or an urgent fix after a storm, we’ll connect you with the <a href="/en/gb/roofers-near-me" target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>best roofers</a> in Chester. Get started and receive free no obligation quotes from local experts near you. No chasing callbacks. No technical waffle. No headaches, which you didn’t sign up for.
 `,
 ];
 
