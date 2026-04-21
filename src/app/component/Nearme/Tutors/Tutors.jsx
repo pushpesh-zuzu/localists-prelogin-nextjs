@@ -55,8 +55,8 @@ function Tutors() {
                 bannerImage="/nearme/tutors.webp"
                 bannerImageMobile="/nearme/tutorsmobile.webp"
                 altText="Tutors"
-                serviceId=""
-                serviceName="Tutor"
+                serviceId="118"
+                serviceName="Tutoring"
             />
             <VettedSection
                 paragraph={VETTED_DATA_TUTORS}
@@ -76,8 +76,8 @@ function Tutors() {
             />
             <UserFeedbackNearMe2 feedbackData={TUTORS_FEEDBACK} />
             <AboutServicesAndQuestions
-                serviceId=""
-                serviceName="Tutor"
+                serviceId="118"
+                serviceName="Tutoring"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
             <FAQ

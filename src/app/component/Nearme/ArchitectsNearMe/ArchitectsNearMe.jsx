@@ -57,8 +57,8 @@ function ArchitectsNearMe() {
         bannerImage="/nearme/Architects/architectBanner.webp"
         bannerImageMobile="/nearme/Architects/architectBannerMobile.webp"
         altText="Two residential architects adjusting and conversing over a conceptual design"
-        serviceId=""
-        serviceName=""
+        serviceId={48}
+        serviceName="Architects"
       />
       <VettedSection
         paragraph={VETTED_DATA_ARCHITECTS}
@@ -84,7 +84,7 @@ function ArchitectsNearMe() {
       />
       <UserFeedbackNearMe2 feedbackData={FEEDBACK_ARCHITECTS} />
       {/* <PaddingWrapper> */}
-      <AboutServicesAndQuestions serviceId="" serviceName="" contentBlocks={QUESTION_AND_ABOUT_SERVICE_ARCHITECTS} />
+      <AboutServicesAndQuestions serviceId={48} serviceName="Architects" contentBlocks={QUESTION_AND_ABOUT_SERVICE_ARCHITECTS} />
       {/* </PaddingWrapper> */}
       <FAQ data={FREQUENTLY_DATA_ARCHITECTS} />
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}

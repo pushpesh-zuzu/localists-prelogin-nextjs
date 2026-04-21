@@ -56,8 +56,8 @@ function PainterAndDecoratorNearMe() {
                 bannerImage="/nearme/painter/Painter.webp"
                 bannerImageMobile="/nearme/painter/painter-mobile1.webp"
                 altText="Painter pouring paint into a paint tray with clips roller"
-                serviceId=""
-                serviceName=""
+                serviceId={27}
+                serviceName="Painter and Decorator"
             />
             <VettedSection
                 paragraph={VETTED_DATA_PAINTER_DECORATOR}
@@ -82,8 +82,8 @@ function PainterAndDecoratorNearMe() {
             />
             <UserFeedbackNearMe2 feedbackData={PAINTER_DECORATOR_FEEDBACK} />
             <AboutServicesAndQuestions
-                serviceId=""
-                serviceName=""
+                serviceId={27}
+                serviceName="Painter and Decorator"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
             <FAQ

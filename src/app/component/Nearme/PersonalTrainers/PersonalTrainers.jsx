@@ -56,8 +56,8 @@ function PainterAndDecoratorNearMe() {
                 bannerImage="/nearme/personaltrainers/personaltrainers.webp"
                 bannerImageMobile="/nearme/personaltrainers/trainersmobile.webp"
                 altText="Personal trainer is showing a customer how to do correct lunges"
-                serviceId=""
-                serviceName=""
+                serviceId={22}
+                serviceName="Personal Trainers"
             />
             <VettedSection
                 paragraph={VETTED_DATA_PERSONAL_TRAINERS}
@@ -82,8 +82,8 @@ function PainterAndDecoratorNearMe() {
             />
             <UserFeedbackNearMe feedbackData={PERSONAL_TRAINERS_FEEDBACK} />
             <AboutServicesAndQuestions
-                serviceId=""
-                serviceName=""
+                serviceId={22}
+                serviceName="Personal Trainers"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
             <FAQ

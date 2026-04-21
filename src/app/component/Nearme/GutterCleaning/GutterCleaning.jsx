@@ -55,8 +55,8 @@ function GutterCleaning() {
                 bannerImage="/nearme/Gutter-Cleaning.webp"
                 bannerImageMobile="/nearme/GutterCleaning/GuttonCleaningMobile.webp"
                 altText="Close-up of dry autumn leaves piled in a house gutter and slate roof tiles."
-                serviceId=""
-                serviceName=""
+                serviceId={114}
+                serviceName="Gutter Cleaning"
             />
             <VettedSection
                 paragraph={VETTED_DATA_GUTTER_CLEANING}
@@ -77,11 +77,10 @@ function GutterCleaning() {
                 tabData={GUTTER_CLEANING_TABDATA}
                 heightClass="min-h-[400px] h-auto md:h-auto  lg:h-auto"
             />
-            <UserFeedbackNearMe2 feedbackData={GUTTER_CLEANING_FEEDBACK} serviceId=""
-                serviceName="" />
+            <UserFeedbackNearMe2 feedbackData={GUTTER_CLEANING_FEEDBACK}  />
             <AboutServicesAndQuestions
-                serviceId=""
-                serviceName=""
+                serviceId={114}
+                serviceName="Gutter Cleaning"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
             <FAQ

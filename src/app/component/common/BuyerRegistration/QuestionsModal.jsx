@@ -88,10 +88,29 @@ const QuestionModal = ({
     }
   }, [currentQuestion, buyerRequest, questions]);
 
+  // useEffect(() => {
+  //   setSelectedOption([]);
+  //   setOtherText("");
+  // }, [currentQuestion]);
   useEffect(() => {
+  const currentQ = formattedQuestions[currentQuestion];
+
+  if (!currentQ) return;
+
+  const options = currentQ.parsedAnswers || [];
+
+  // Check if only one option and it's "Something else"
+  if (
+    options.length === 1 &&
+    options[0].option === "Something else (please describe)"
+  ) {
+    setSelectedOption(["Something else (please describe)"]);
+  } else {
     setSelectedOption([]);
-    setOtherText("");
-  }, [currentQuestion]);
+  }
+
+  setOtherText("");
+}, [currentQuestion]);
 
   const totalQuestions = questions?.length;
   const progressPercent = ((currentQuestion + 1) / totalQuestions) * 100;
@@ -138,7 +157,7 @@ const QuestionModal = ({
     if (
       selectedOption.includes("Something else (please describe)") &&
       (!otherText.trim() ||
-        otherText.trim().toLowerCase() === "something else (please describe)")
+        otherText.trim().toLowerCase() === "something else (please describe)") || otherText.trim().toLowerCase() ==="yes" || otherText.trim().toLowerCase() ==="no"
     ) {
       setError("Please enter a value for 'Other' option.");
       return;
@@ -364,7 +383,7 @@ const QuestionModal = ({
                         <InputField
                           placeholder="Please Enter..."
                           value={otherText}
-                          onChange={(e) => setOtherText(e.target.value)}
+                          onChange={(e) => {setOtherText(e.target.value); setError("")}}
                           error={error && error}
                         />
                       </div>

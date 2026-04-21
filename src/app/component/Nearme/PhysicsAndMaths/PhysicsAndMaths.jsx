@@ -55,8 +55,8 @@ function PhysicsAndMaths() {
                 bannerImage="/nearme/physics-maths.webp"
                 bannerImageMobile="/nearme/physicsmobile.webp"
                 altText="Physics and Maths Tutor"
-                serviceId=""
-                serviceName="Physics And Maths"
+                serviceId={117}
+                serviceName="Physics and Maths"
             />
             <VettedSection
                 paragraph={VETTED_DATA_PHYSICS_AND_MATHS}
@@ -76,8 +76,8 @@ function PhysicsAndMaths() {
             />
             <UserFeedbackNearMe2 feedbackData={PHYSICS_AND_MATHS_FEEDBACK} />
             <AboutServicesAndQuestions
-                serviceId=""
-                serviceName="Physics And Maths"
+                serviceId={117}
+                serviceName="Physics and Maths"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
             <FAQ

@@ -6,4 +6,11 @@ export const serviceRouteMap = {
   43: "/landscape-gardeners-near-me",
   112: "/tree-surgeon-near-me",
   113: "/roofers-near-me",
+  48: "/architects-near-me",
+  22: "/personal-trainers-near-me",
+  116: "/airport-transfers-near-me",
+  114: "/gutter-cleaning-near-me",
+  118: "/tutors-near-me",
+  27: "/painter-and-decorator-near-me",
+  117: "/physics-maths-tutors-near-me",
 };
