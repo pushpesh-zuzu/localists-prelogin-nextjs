@@ -257,7 +257,6 @@ export const ROOFERS_TABDATA_HUDDERSFIELD = {
     { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
     { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
     { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
-    { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
     { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
     { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },

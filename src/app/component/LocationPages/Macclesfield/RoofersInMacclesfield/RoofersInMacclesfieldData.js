@@ -256,7 +256,6 @@ export const ROOFERS_TABDATA_MACCLESFIELD = {
     { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
     { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
     {
       title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",

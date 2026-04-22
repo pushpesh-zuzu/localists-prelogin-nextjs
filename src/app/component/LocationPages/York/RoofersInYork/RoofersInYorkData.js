@@ -256,7 +256,6 @@ export const ROOFERS_TABDATA_YORK = {
   ],
   related: [
     { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
-    { title: "Roofers Driffield", url: "/en/gb/roofers-near-me/driffield" },
     { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
     { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
     { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },

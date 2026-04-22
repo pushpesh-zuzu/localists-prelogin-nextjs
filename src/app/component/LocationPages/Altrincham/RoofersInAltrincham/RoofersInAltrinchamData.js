@@ -219,7 +219,6 @@ export const ROOFERS_TABDATA_ALTRINCHAM = {
   ],
 
   related: [
-    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
     { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
@@ -233,7 +232,6 @@ export const ROOFERS_TABDATA_ALTRINCHAM = {
       title: "Roofers Macclesfield",
       url: "/en/gb/roofers-near-me/macclesfield",
     },
-    { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
     {
       title: "Roofers Cheadle Hulme",
       url: "/en/gb/roofers-near-me/cheadle-hulme",

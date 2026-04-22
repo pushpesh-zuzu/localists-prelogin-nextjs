@@ -188,7 +188,6 @@ export const ROOFERS_TABDATA_PENRITH = {
   ],
   related: [
     { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
-    { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
     { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
     { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
   ],

@@ -251,7 +251,6 @@ export const ROOFERS_TABDATA_BARNSLEY = {
     { title: "Roofers Rotherham", url: "/en/gb/roofers-near-me/rotherham" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
     { title: "Roofers CastlefordBarnsley", url: "/en/gb/roofers-near-me/castleford" },
-
   ],
   findMore: [],
 };
