@@ -34,10 +34,10 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_PRESTATYN = [
   {
     type: "pricingTable",
     title: "Average cost of landscaping Prestatyn",
-    calculatorText: "click here",
+    calculatorText: "",
     calculatorLink: "/en/gb/landscaping-multi-form-ppc",
     disclaimer:
-      "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+      "",
     prices: [
       {
         text: "General Landscaping:",
@@ -233,22 +233,22 @@ export const LANDSCAPING_FEEDBACK_PRESTATYN = [
   {
     id: 1,
     text: "I employed a landscaper last year. He came around and turned my lawn upside down, so this time, I was a bit scared of trusting anyone. But a friend recommended localists to me, and when the landscaper came and assessed my garden, I just knew I could trust him.",
-    name: "James Owen",
+    name: "James O.",
   },
   {
     id: 2,
     text: "I don’t know how to express how happy I am that I got to learn about Localist. I had earlier used them to get someone to cut down my trees, and now I got a landscaper on here, and it was a perfect job again.",
-    name: "Amelia Lloyd",
+    name: "Amelia L.",
   },
   {
     id: 3,
     text: "I ignored my garden for two years and only decided to work on it a month ago. I thought it would be this stressful and long process, but with the landscaper I got, it took only two weeks. I don’t even know why I waited so long.",
-    name: "Leonard Powell",
+    name: "Leonard P.",
   },
   {
     id: 4,
     text: "Anytime it rains, my backyard gets all muddy. The landscaper that I got on Localists did a good job with his team, and now I don’t have to face all that mud anymore.",
-    name: "Isla Roggers",
+    name: "Isla R.",
   },
 ];
 
