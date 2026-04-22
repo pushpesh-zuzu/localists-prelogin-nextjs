@@ -70,7 +70,7 @@ export default function DynamicPricingTable({
                 </div>
 
                 {/* Disclaimer */}
-                <div className="mt-2.5 text-left">
+                {disclaimer && <div className="mt-2.5 text-left">
                     <p className="text-[12px] leading-[12px] lg:text-[20px] lg:leading-[24px] font-[Arial] tracking-[0em]! font-bold">
                         {disclaimer}{" "}
                         {calculatorLink ? (
@@ -89,7 +89,7 @@ export default function DynamicPricingTable({
                             </>
                         )}
                     </p>
-                </div>
+                </div>}
 
             </div>
         </div>
