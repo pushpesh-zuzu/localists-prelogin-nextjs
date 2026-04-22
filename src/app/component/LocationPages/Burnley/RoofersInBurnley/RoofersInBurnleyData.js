@@ -256,8 +256,8 @@ export const ROOFERS_TABDATA_BURNLEY = {
   //   { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
   //   { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
   //   { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
-  //   { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
-  //   { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
+  //   { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale},
+  //   { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" " },
   // ],
   findMore: [],
 };
