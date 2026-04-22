@@ -88,7 +88,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_LLANDUDNO = [
 export const FREQUENTLY_DATA_LLANDUDNO = [
     {
         key: "1",
-        title: "Does the coastal location affect what plants I can use in my garden?",
+        title: "Does the coastal location affect which plants I can use in my garden?",
         description: `
         Simple answer - yeah it does! Getting the planting wrong with landscaping work is just an easy way to waste money, so you have to be extra careful when choosing your plants. Good thing is, there are plenty of plants ( e.g sea thrift, tamarisk, escallonia, and pittosporum) that can actually survive the salty breeze condition. It’s important to always check in with your landscaper before you hire.
         `,
