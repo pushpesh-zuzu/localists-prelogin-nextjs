@@ -2,7 +2,7 @@ import BlogFlateRoofLast from '@/app/component/Blog/BlogFlateRoofLast/BlogFlateR
 import SEO from '@/app/component/common/seo/SEO'
 import React, { Suspense } from 'react'
 import LoadingIndicator from "@/app/component/common/Loader/LoaderIndicatore";
-import RoofRepairCost from '@/app/component/Blog/RoofRepairCost/RoofRepairCost';
+import RoofRepairCost from '@/app/component/Blog/CostGuide/RoofRepairCost/RoofRepairCost';
 export const metadata = {
   title: "Detailed Roof Repair Cost for 2026 | Localists",
   description:

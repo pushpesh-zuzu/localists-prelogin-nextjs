@@ -41,7 +41,7 @@ export const ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE = [
   },
   {
     type: "image",
-    src: "/blog/waterRoofPaint.webp",
+    src: "/blog/costGuid/roofRepair1.webp",
     alt: "a roofer dressed in protective clothing painting waterproof paint onto the flat roof deck",
     marginBottom: true,
     marginTop: true,
@@ -137,7 +137,7 @@ export const ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE = [
     text: "Notice how expensive it is to repair natural slates when compared to the clay and concrete tiles? This is actually because of how expensive it is to get the materials and how hard it is to source for it. That said, once you repair a slate properly, it could last decades with no problems.",
   },
   {
-    type: "PostCodeSection",
+    type: "PostCodeSectionBlog",
   },
   {
     type: "pbold",
@@ -249,6 +249,8 @@ export const ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "liNumber",
     className: "mb-0",
+        headingNormal:true,
+
     items: [
       {
         heading: "Ridge Tile Repairs",

@@ -1,18 +1,18 @@
 "use client";
 import React from "react";
-import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
-import BlogHeroSection from "../BlogHeroSection";
+import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+import BlogHeroSection from "../../BlogHeroSection";
 import {
   ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE,
   FREQUENTLY_DATA_ROOFREPAIRCOST_ROOF,
 } from "./RoofRepairCostData";
-import AboutServiceAndQuestionBlog from "../AboutServiceAndQuestionBlog";
-import AdviceAndInsightBlog from "../AdviceAndInsightBlog";
-import { TREE_SRUGEON_ADVICEINSIGHT } from "../../Nearme/TreeSurgeon/TreeSurgeonData";
-import Footer from "../../Footer/Footer";
-import FAQScript from "../../common/seo/FAQScript";
-import { FAQ } from "../../Nearme/FAQ";
-import PostCodeSectionBlog from "../PostCodeSectionBlog";
+import AboutServiceAndQuestionBlog from "../../AboutServiceAndQuestionBlog";
+import AdviceAndInsightBlog from "../../AdviceAndInsightBlog";
+import { TREE_SRUGEON_ADVICEINSIGHT } from "../../../Nearme/TreeSurgeon/TreeSurgeonData";
+import Footer from "../../../Footer/Footer";
+import FAQScript from "../../../common/seo/FAQScript";
+import { FAQ } from "../../../Nearme/FAQ";
+import PostCodeSectionBlog from "../../PostCodeSectionBlog";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 
@@ -29,8 +29,8 @@ function RoofRepairCost() {
         category="Roofing"
         title="Roof Repair Cost UK"
         altText="a roofer wearing protective leak roofing a roof with safety harness"
-        bannerImage="/blog/blogflatroofbanner3.webp"
-        bannerImageMobile="/blog/blogflatroofbannerMobile.webp"
+        bannerImage="/blog/costGuid/roofRepairHero.webp"
+        bannerImageMobile="/blog/costGuid/roofRepairHero.webp"
         publishedDate="21.04.26"
         updatedDate="21.04.26"
       />

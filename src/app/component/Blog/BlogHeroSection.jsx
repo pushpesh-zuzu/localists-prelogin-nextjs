@@ -58,7 +58,7 @@ function BlogHeroSection({
             </span>
 
             {/* Title */}
-            <H1 className="text-white drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)] ">
+            <H1 className="text-white drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)] lg:lg:leading-20 ">
               {title}
             </H1>
           </div>

@@ -155,12 +155,12 @@ const AboutServiceAndQuestionBlog = ({
               key={index}
               className={`
                 ${block?.className ? block?.className : "mb-2.5 md:mb-[15px]"}
-                list-decimal pl-6 md:pl-12
+                list-decimal pl-8 md:pl-16
               `}
             >
               {block.items?.map((item, i) => (
                 <li key={i} className={`${textBase} ${block?.classNameLi ? block?.classNameLi : "mb-2.5 md:mb-[15px]"}`}>
-                  <strong className="mr-0.5">{item.heading}</strong>
+                  <span className={`mr-0.5 ${block?.headingNormal? "font-normal":"font-bold"}`}>{item.heading}</span>
                   {item.text && (
                     <span
                       dangerouslySetInnerHTML={{ __html: item.text }}
