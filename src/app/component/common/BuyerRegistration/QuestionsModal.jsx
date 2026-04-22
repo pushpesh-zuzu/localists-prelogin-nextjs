@@ -302,6 +302,12 @@ const QuestionModal = ({
     }
   };
 
+  const currentOptions =
+  formattedQuestions[currentQuestion]?.parsedAnswers || [];
+
+const isOnlyOther =
+  currentOptions.length === 1 &&
+  currentOptions[0].option === "Something else (please describe)";
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-[#00000080]"
@@ -346,7 +352,7 @@ const QuestionModal = ({
                 }}
               >
                 <div className="flex flex-col gap-[7px]">
-                  {formattedQuestions[currentQuestion]?.parsedAnswers.map(
+                  {!isOnlyOther && formattedQuestions[currentQuestion]?.parsedAnswers.map(
                     (opt, index) => (
                       <label
                         key={index}
@@ -378,7 +384,7 @@ const QuestionModal = ({
                   ) &&
                     selectedOption.includes(
                       "Something else (please describe)"
-                    ) && (
+                    ) && !isOnlyOther && (
                       <div className="mt-2">
                         <InputField
                           placeholder="Please Enter..."
@@ -386,6 +392,42 @@ const QuestionModal = ({
                           onChange={(e) => {setOtherText(e.target.value); setError("")}}
                           error={error && error}
                         />
+                      </div>
+                    )}
+                     {formattedQuestions[currentQuestion]?.parsedAnswers.some(
+                    (opt) => opt.option === "Something else (please describe)"
+                  ) &&
+                    selectedOption.includes(
+                      "Something else (please describe)"
+                    ) && isOnlyOther && (
+                      <div className="mt-2 px-1">
+                        <textarea 
+                          rows={3}
+                          type="textarea"
+                          placeholder="Please Enter..."
+                          value={otherText}
+                          onChange={(e) => {setOtherText(e.target.value); setError("")}}
+                          error={error && error}
+                          className={`
+                                            relative w-full px-3 py-2 rounded-[16px]
+                                            text-gray-900 text-base
+                                            border border-[#00aef3]
+                                            transition-all duration-200
+                                        placeholder:text-[#959595]
+                                            focus:outline-1 outline-[#00aef3] focus:ring-1
+                                            disabled:bg-gray-100 
+                                            custom-placeholder
+                                            ${error
+                                            ? "border-red-500 focus:ring-red-500 focus:border-red-500"
+                                            : "focus:ring-black"
+                                            }
+    
+                                        `}
+                        />
+                         {error && (
+                            <p className="text-sm text-red-600  pt-1">
+                                {error}
+                            </p>)}
                       </div>
                     )}
                 </div>
