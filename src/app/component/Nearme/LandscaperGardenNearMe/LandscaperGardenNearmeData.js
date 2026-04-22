@@ -341,13 +341,13 @@ export const ADVICEINSIGHT_LANDSCAPE_NEARME = [
 ];
 export const LANDSCAPE_NEARME_TABDATA = {
   professionals: [
-     {
-      title: "Landscapers Wigan",
-      url: "/en/gb/landscape-gardeners-near-me/wigan",
-    },
     {
       title: "Landscapers Belfast",
       url: "/en/gb/landscape-gardeners-near-me/belfast",
+    },
+     {
+      title: "Landscapers Wigan",
+      url: "/en/gb/landscape-gardeners-near-me/wigan",
     },
     {
       title: "Landscapers Northwich",
