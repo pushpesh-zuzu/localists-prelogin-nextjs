@@ -68,9 +68,9 @@ export default function SearchResults({
             onClick={() => handleServiceClick(service)}
           >
             <h3 className="font-semibold">{service.name || "Service"}</h3>
-            {service.description && (
+            {/* {service.description && (
               <p className="text-sm text-gray-600">{service.description}</p>
-            )}
+            )} */}
           </div>
         ))}
       </div>
