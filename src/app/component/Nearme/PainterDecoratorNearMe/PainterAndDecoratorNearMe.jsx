@@ -56,8 +56,8 @@ function PainterAndDecoratorNearMe() {
                 bannerImage="/nearme/painter/Painter.webp"
                 bannerImageMobile="/nearme/painter/painter-mobile1.webp"
                 altText="Painter pouring paint into a paint tray with clips roller"
-                serviceId=""
-                serviceName=""
+                serviceId={27}
+                serviceName="Painter and Decorator"
             />
             <VettedSection
                 paragraph={VETTED_DATA_PAINTER_DECORATOR}
@@ -73,6 +73,7 @@ function PainterAndDecoratorNearMe() {
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
+                showRightTabButtons
                 heading1="Painting and Decorating"
                 headingMiddle="Experts"
                 heading2="in your area"
@@ -81,15 +82,15 @@ function PainterAndDecoratorNearMe() {
             />
             <UserFeedbackNearMe2 feedbackData={PAINTER_DECORATOR_FEEDBACK} />
             <AboutServicesAndQuestions
-                serviceId=""
-                serviceName=""
+                serviceId={27}
+                serviceName="Painter and Decorator"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
             <FAQ
                 data={FREQUENTLY_DATA_PAINTER_DECORATOR}
             />
 
-            <DiscoverNearMe homeData={PAINTER_DECORATOR_DATA} />
+            <DiscoverNearMe background="#f7f7f7f7" homeData={PAINTER_DECORATOR_DATA} />
 
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

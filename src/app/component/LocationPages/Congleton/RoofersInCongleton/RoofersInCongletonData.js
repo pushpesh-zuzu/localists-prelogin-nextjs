@@ -211,7 +211,27 @@ export const ROOFERS_TABDATA_CONGLETON = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+  //   { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  //   { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  //   { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  //   { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  //   { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  //   { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  //   { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  //   { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  //   { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  //   {
+  //     title: "Roofers Macclesfield", url: "/en/gb/roofers-near-me/macclesfield",
+  //   },
+  //   { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
+  //   { title: "Roofers Ellesmere Port", url: "/en/gb/roofers-near-me/ellesmere-port", },
+  // ],
+  findMore: [],
+};
+
+export const NEARBY_PLACES_ROOFER_CONGLETON = [
     { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
@@ -227,10 +247,7 @@ export const ROOFERS_TABDATA_CONGLETON = {
     },
     { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
     { title: "Roofers Ellesmere Port", url: "/en/gb/roofers-near-me/ellesmere-port", },
-  ],
-  findMore: [],
-};
-
+  ]
 export const VETTED_DATA_ROOFERS_CONGLETON = [
   `Sick of playing "wait and see" every time the sky turns grey? Had enough of staring at the ceiling, trying to figure out if that’s a new leak or just a bit of condensation that’ll "probably" be gone by morning? We can help.
   <br/><br/> 

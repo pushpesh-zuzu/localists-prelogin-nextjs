@@ -5,23 +5,37 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WARRINGTON = [
   },
   {
     type: "p",
-    text: "Roofing costs in Warrington can vary depending on the type of roof, its size, and how tricky it is to access. Older terraces, semi-detached homes, and steep roofs can all affect the price. Here’s a simple guide to typical costs so you can plan without any nasty surprises.",
-  },
-  {
-    type: "pbold",
-    text: "General roofing",
+    text: "Roofing cost anywhere, generally depends on a number of factors (including, but not limited to) - the type of roof (material to be used), the size of the property, and how tricky it is to access. Our best advice is always getting several quotes from different local tradespeople so you have an idea of what’s fair. Because to be honest, the price to repoint a chimney will definitely be different from what it will cost you to retile a fully detached home.",
   },
   {
     type: "p",
-    text: "Standard roofing jobs usually range from £1,343 to £3,350, averaging £2,121. This covers basic installations and routine work to keep your roof in good condition.",
+    text: "So with that said, here are some average cost below for some of the most common jobs in Warrington:",
   },
   {
-    type: "pbold",
-    text: "Roofing repairs",
-  },
-  {
-    type: "p",
-    text: "Leaks, loose tiles, or minor storm damage typically cost £386–£1,444, averaging £739. Fixing problems early can save you from bigger headaches later.",
+    type: "pricingTable",
+    title: "Average cost of roof repair in Warrington",
+    calculatorText: "",
+    calculatorLink: "/en/gb/roofing-multi-form-ppc",
+    disclaimer:
+      "",
+    prices: [
+      {
+        text: "General roofing Averaging",
+        price: "£2,121",
+      },
+      {
+        text: "Roofing repairs Averaging ",
+        price: "£739",
+      },
+      {
+        text: "Emergency roofing services Averaging",
+        price: "£630",
+      },
+      {
+        text: "Full roof replacement Averaging",
+        price: "£6,837",
+      },
+    ],
   },
   {
     type: "pbold",
@@ -29,7 +43,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WARRINGTON = [
   },
   {
     type: "p",
-    text: "Flat roof repairs range between £619–£2,076, with an average of £1,149. Size and materials will influence the final cost.",
+    text: "Flat roof repairs range between £619–£2,076, with an average of £1,149 - size and materials will influence the final cost.",
   },
   {
     type: "pbold",
@@ -37,15 +51,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WARRINGTON = [
   },
   {
     type: "p",
-    text: "Repairs for pitched roofs usually fall between <Strong>£339–£1,498</Strong>, averaging <Strong>£714.</Strong> Steeper or hard-to-access roofs may cost slightly more.",
-  },
-  {
-    type: "pbold",
-    text: "Emergency roofing services",
-  },
-  {
-    type: "p",
-    text: "Storm damage or sudden leaks can’t wait. Emergency roofing in Warrington typically costs £370–£1,169, averaging £630. Fast response can prevent more serious damage.",
+    text: "Repairs for pitched roofs usually fall between <strong>£339–£1,498</strong>, averaging <strong>£714</strong> - steeper or hard-to-access roofs may cost slightly more.",
   },
   {
     type: "pbold",
@@ -58,32 +64,60 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WARRINGTON = [
   {
     type: "li",
     text: "Pitched roof installation: £3,951–£7,998, average £5,609",
-  },
-  {
-    type: "li",
-    text: "Full roof replacement: £5,013–£9,445, average £6,837",
+    className: "mb-[15px] md:mb-[25px]",
   },
   {
     type: "p",
-    text: "Flat roofs are quicker to install, making them practical for garages, extensions, or low-pitch areas. Pitched roofs and full replacements are bigger investments, but they provide long-term protection and peace of mind.",
-  },
-  {
-    type: "p",
-    text: "Always request a detailed quote so you know exactly what’s included. Localists can connect you with up to five trusted Warrington roofers for free, no obligation, making it easy to compare prices and choose the right professional.",
+    text: "Please note that the numbers above are there to give you a sense of what you can expect to pay. Every roof is different. So what you might end up paying for your roofing project could be higher or lower than the figures provided. To get an accurate estimate <a href='/en/gb/roofing-multi-form-ppc' target='_blank' rel='noopener noreferrer' style='color:#00afe3;'>click now.</a>",
     notMarginBottom: true,
   },
   {
+    type: "image",
+    src: "/nearme/Roofing/roofinstalling.webp",
+    alt: "two roofers installing slate tiles onto a brand new roof ",
+    marginBottom: true,
+    marginTop: true,
+  },
+  {
     type: "h2",
-    text: "Need a Roofer Fast in Warrington?",
+    text: "Why hire local Warrington roofers on Localists?",
+  },
+  {
+    type: "p",
+    text: "We all know how the weather gets in Warrington and the Northwest in general. Being talked between the Irish Sea and the Pennines means there’s a specific kind of “Atlantic” weather here - think persistent dampness, high humidity, sudden downpours, gusty winds - your roof is the one thing that takes the beating.",
+  },
+  {
+    type: "p",
+    text: "So when dealing with roof issues, it’s important to find roofers who are experienced in your specific type of property. For instance, if you live in Chapelford, you find predominantly modern tiles. But if you’re over in Grappenhall where you have those older stone terrace properties, you’ll find mostly traditional slates. Do you want a river who actually specialises in your specific roof, which is exactly what we bring to you.",
+  },
+  {
+    type: "h3",
+    text: "How it works in practice",
+  },
+  {
+    type: "p",
+    text: "When you hire through localists, we take the legwork out of the vetting process. You tell us what you need and we’ll connect you with professional professionals who have been fully checked (background, insurance, qualification, and skills). You also find honest reviews that you can trust, as these have been sourced from different corners of the Internet - Facebook, Google, Trustpilot.",
+  },
+  {
+    type: "p",
+    text: "In summary:",
+  },
+  {
+    type: "li",
+    text: "Get up to 5 free quotes: First thing is you’ll receive quotes from local roofers in your area.",
+  },
+  {
+    type: "li",
+    text: "No pressure: take your time to go through the offers and see what works best for you.",
+  },
+  {
+    type: "li",
+    text: "Hire when ready: there’s no rush, and no awkward sales pitches - just hire when you’re 100% comfortable.",
+  },
+  {
+    type: "h2",
+    text: "Common roofing jobs in Warrington:",
     className: "mt-6 md:mt-9 lg:mt-[70px]",
-  },
-  {
-    type: "p",
-    text: "When the weather in Warrington decides to throw a curveball, sudden downpours, gusty winds, or that one rogue night of hail, your roof might not give you any warning. If it’s leaking, tiles are flying, or you’ve spotted damage, you need a roofer fast.",
-  },
-  {
-    type: "p",
-    text: "Common emergency roofing jobs include:",
   },
   {
     type: "li",
@@ -107,7 +141,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WARRINGTON = [
   },
   {
     type: "p",
-    text: "Need urgent help? Localists can connect you with vetted roofers in Warrington who respond quickly, secure your roof, and prevent further damage. Submit your details and get fast, free, no-obligation quotes, so you can get your home back to dry, safe, and stress-free in no time.",
+    text: "Need urgent help? If you’re dealing with an emergency our Warrington roofers are ready to jump in. When we receive your details, you get free, no obligation quotes from local professionals within minutes. You can’t even get someone out to take a look and give you an honest inspection right away!",
     notMarginBottom: true,
   },
   {
@@ -121,28 +155,34 @@ export const ROOFERS_FREQUENTLY_DATA_WARRINGTON = [
     key: "1",
     title: "How do you tell if your shingles need replacing?",
     description: `
-        Shingles may need replacing if you notice cracked, curling, or missing pieces, or if granules are piling up in your gutters. Leaks or water stains inside the home are also a sign. Regular inspections help catch small problems before they turn into major headaches.
-        `,
+    Some of the visible signs include:
+    </br></br>
+    <p style="padding-left: 16px;">- Sagging sections on your roof.</p>
+    <p style="padding-left: 16px;">- Missing tabs</p>
+    <p style="padding-left: 16px;">- Dark streaks</p>
+    <p style="padding-left: 16px;">- Energy bills that suddenly skyrocket because you’re heating is leaking out</p>
+    <p style="padding-left: 16px;">- If you can actually see the fiberglass mat underneath, your tile has definitely had it. </p>
+
+    `,
   },
   {
     key: "2",
     title: "What roof has the shortest lifespan?",
     description: `
-        Asphalt or composite shingles generally have the shortest lifespan, usually around 15–20 years. Metal, clay, or slate roofs tend to last much longer, often 50 years or more, with proper maintenance.
-        `,
+        Simple answer - Asphalt or composite shingles generally have the shortest lifespan. You’re looking at about 15 to 25 years for these types of roofing materials before they need replacing.        `,
   },
   {
     key: "3",
     title: "What is the best roof to put on a house?",
     description: `
-        The “best” roof depends on your budget, property style, and local climate. Slate and clay tiles are long-lasting and stylish, while metal roofs are durable and low-maintenance. Asphalt shingles are affordable and practical, but don’t last as long. Choosing a reputable local roofer ensures your roof is installed properly no matter the type.
+        Our honest opinion is - the “best” roof actually depends on your budget, property style, and local climate. When you hire an experienced roofer here on Localists, they’ll be in the best position to advise you on what’s best for your property. But, if your major concern is “how long they last”, slate and clay tiles are very good options.
         `,
   },
   {
     key: "4",
     title: "When is the cheapest time to replace a roof?",
     description: `
-        Spring and summer are usually ideal because dry weather makes the work quicker and easier. Some roofers may offer slightly lower rates during off-peak periods, like late autumn or winter, but planning around weather and roofer availability is key.
+        If you’re not dealing with an emergency, you can try to get booked in for late autumn or early winter. We find out most roofers offer a slightly better rate in these “off peak” months, but you have to be careful booking for a job to be done in winter as the weather is mostly unpredictable. 
         `,
   },
 ];
@@ -216,39 +256,61 @@ export const ROOFERS_TABDATA_WARRINGTON = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
-    { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
-    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
-    { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
-    { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
-    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
-    { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
-    { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
-    { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
-    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
-    { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    {
-      title: "Roofers Macclesfield",
-      url: "/en/gb/roofers-near-me/macclesfield",
-    },
-    {
-      title: "Roofers Ellesmere Port",
-      url: "/en/gb/roofers-near-me/ellesmere-port",
-    },
-  ],
+  // related: [
+  //   { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  //   { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+  //   { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  //   { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  //   { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  //   { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  //   { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  //   { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  //   { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  //   { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  //   { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+  //   { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  //   { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  //   {
+  //     title: "Roofers Macclesfield",
+  //     url: "/en/gb/roofers-near-me/macclesfield",
+  //   },
+  //   {
+  //     title: "Roofers Ellesmere Port",
+  //     url: "/en/gb/roofers-near-me/ellesmere-port",
+  //   },
+  // ],
   findMore: [],
 };
+export const NEARBY_PLACES_ROOFER_WARRINGTON = [
+  { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+  { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+  { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  {
+    title: "Roofers Macclesfield",
+    url: "/en/gb/roofers-near-me/macclesfield",
+  },
+  {
+    title: "Roofers Ellesmere Port",
+    url: "/en/gb/roofers-near-me/ellesmere-port",
+  },
+];
 export const VETTED_DATA_ROOFERS_WARRINGTON = [
-  `If your roof is starting to sag, drip, or make suspicious creaking noises, it’s probably time to bring in a pro who knows exactly what they’re dealing with.
+  `If your roof is starting to sag, drip, or make suspicious creaking noises, it’s definitely not the time to “give it to go” yourself. But luckily, you don't have to as we have a range of roofers in your area that can repair your roof just as easily as they do on those DIY youtube videos.
   <br/><br/> 
   `,
   `
-With Localists, finding <a href="/en/gb/roofers-near-me" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">reliable roofers</a> in Warrington is quick and hassle-free. Just share a few details about your property and the work you need, and we’ll match you with local specialists who know the area, the tricky rooftops, and how to handle whatever the weather throws at them.
-<br/><br/>
+At Localists, we connect you with the right, experienced roofing professional in Warrington. Whether you’re living in a Victorian Terrace in Stockton Heath dealing with those slate roofs, a 1930s semi in Padgate with heavy concrete tiles that are finally starting to show their age, or property with those classic red brick gables in Lymm, we’ve the right expert for the job. Just tell us what you need and you receive quotes straight away - no endless phone calls, no awkward back-and-forth, no pressure to hire!
 `,
-  `No endless phone calls. No awkward back-and-forths. Just fast, free quotes from roofers who turn up on time and do the job right.`,
 ];
 
 export const BREADCRUM_DATA_ROOFERS_WARRINGTON = [
@@ -273,23 +335,23 @@ export const POPULAR_SERVICES_ROOFERS_WARRINGTON = [
 export const ROOFERS_FEEDBACK_WARRINGTON = [
   {
     id: 1,
-    text: "After a sudden leak appeared in our kitchen ceiling, I was stressed. The roofer arrived quickly, patched it up, and even gave tips to prevent future leaks. Really impressed with how professional they were.",
+    text: "Amazing job on our garage roof in Great Sankey. We got a really clear breakdown of the cost before the work started so there were no surprises at all.",
     name: "Gemma H.",
   },
   {
     id: 2,
-    text: "Our old pitched roof was starting to sag, and we weren’t sure where to start. The roofer explained all our options clearly, gave a fair quote, and finished on time. Friendly, reliable, and no hidden costs.",
+    text: "Our old pitched roof was starting to sag, and the roofer we found explained all our options clearly. Afterwards we received a fair quote, and job was finished on time.",
     name: "Oliver B.",
   },
   {
     id: 3,
-    text: "Emergency call-out after a storm, the team got here within hours. They secured the roof, fixed broken tiles, and were super approachable. Definitely recommend if you don’t want the stress to pile up.",
+    text: "Used Localists to find local roofers in my area and had three local lads get back to me quickly with sensible prices. Job’s done now and very professional!",
     name: "Nina R.",
   },
   {
     id: 4,
-    text: "Had a small leak and needed someone to look at it. Got a quote from Geoff from Warrington Roofing and Building who figured I just needed some mending of the flashing around my chimny. No leaks now and Geoff was really professional. ",
-    name: "Tony M.",
+    text: "Specialist for our extension who we found through Localists was top notch. He knew exactly why our old felt failed and suggested rubber roof. Results are fantastic. Highly recommend Localists.",
+    name: "Marcus T.",
   },
 ];
 

@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_BIRKENHEAD,
   ROOFERS_TABDATA_BIRKENHEAD,
   VETTED_DATA_ROOFERS_BIRKENHEAD,
+  NEARBY_PLACES_ROOFER_BIRKENHEAD
 } from "./RoofersInBirkenheadData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInBirkenhead() {
   useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInBirkenhead() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_BIRKENHEAD} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Birkenhead"
         description="Get free, no-obligation quotes from trusted and vetted roofers in Birkenhead. Enter your postcode, give us a few details about the work, and get quotes straight to your inbox. It takes under a minute."
@@ -75,6 +77,13 @@ function RoofersInBirkenhead() {
         <Feature county='Liverpool City Region' cityName='Birkenhead' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_BIRKENHEAD}
+        activeTabkey="popular"
+        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
+      />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_BIRKENHEAD}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -90,18 +99,12 @@ function RoofersInBirkenhead() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_BIRKENHEAD} />
       <DiscoverNearMe homeData={ROOFERS_DATA_BIRKENHEAD} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_BIRKENHEAD}
-        activeTabkey="related"
-        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
-      />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_BIRKENHEAD} />
       <Footer />
     </>
   );

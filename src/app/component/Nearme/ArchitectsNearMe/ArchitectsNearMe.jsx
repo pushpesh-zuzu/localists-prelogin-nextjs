@@ -57,8 +57,8 @@ function ArchitectsNearMe() {
         bannerImage="/nearme/Architects/architectBanner.webp"
         bannerImageMobile="/nearme/Architects/architectBannerMobile.webp"
         altText="Two residential architects adjusting and conversing over a conceptual design"
-        serviceId=""
-        serviceName=""
+        serviceId={48}
+        serviceName="Architects"
       />
       <VettedSection
         paragraph={VETTED_DATA_ARCHITECTS}
@@ -76,6 +76,7 @@ function ArchitectsNearMe() {
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
+        showRightTabButtons
         heading1="Architects"
         heading2="in your area"
         tabData={ARCHITECTS_TABDATA}
@@ -83,11 +84,11 @@ function ArchitectsNearMe() {
       />
       <UserFeedbackNearMe2 feedbackData={FEEDBACK_ARCHITECTS} />
       {/* <PaddingWrapper> */}
-      <AboutServicesAndQuestions serviceId="" serviceName="" contentBlocks={QUESTION_AND_ABOUT_SERVICE_ARCHITECTS} />
+      <AboutServicesAndQuestions serviceId={48} serviceName="Architects" contentBlocks={QUESTION_AND_ABOUT_SERVICE_ARCHITECTS} />
       {/* </PaddingWrapper> */}
       <FAQ data={FREQUENTLY_DATA_ARCHITECTS} />
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}
-      <DiscoverNearMe homeData={ARCHITECTS_DATA} />
+      <DiscoverNearMe homeData={ARCHITECTS_DATA} background="#f7f7f7f7" />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
       />

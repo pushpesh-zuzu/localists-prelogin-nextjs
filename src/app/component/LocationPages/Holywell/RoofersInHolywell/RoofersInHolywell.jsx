@@ -10,6 +10,7 @@ import {
     ROOFERS_DATA_HOLYWELL,
     ROOFERS_TABDATA_HOLYWELL,
     VETTED_DATA_ROOFERS_HOLYWELL,
+    NEARBY_PLACES_ROOFER_HOLYWELL
 } from "./RoofersInHolywellData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInHolywell() {
     useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInHolywell() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_HOLYWELL} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Holywell"
                 description="Need a roofer in Holywell you can actually rely on? Share your postcode and a few details about the work, and you'll receive free no-obligation quotes from vetted local professionals straight to your inbox. It takes under a minute."
@@ -75,6 +77,12 @@ function RoofersInHolywell() {
                 <Feature cityName="Holywell" county='Flintshire' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_HOLYWELL}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_HOLYWELL}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -92,17 +100,12 @@ function RoofersInHolywell() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_HOLYWELL} />
             <DiscoverNearMe homeData={ROOFERS_DATA_HOLYWELL} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_HOLYWELL}
-                activeTabkey="related"
-            />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Roofing/roofingmember.webp"
                 mobileImage="/nearme/Roofing/roofingmembermobile.webp"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_HOLYWELL} />
             <Footer />
         </>
     );

@@ -24,6 +24,13 @@ function QuestionModalBanner({
       "Gate Installation": "bg-[url('/questions/Gate.webp')]",
       Roofing: "bg-[url('/questions/Roofing.webp')]",
       "Tree Surgery": "bg-[url('/questions/TreeSurgeon.webp')]",
+      "Airport Transfers": "bg-[url('/questions/AirportQB.webp')]",
+      "Personal Trainers": "bg-[url('/questions/PersonalTrainersQB.webp')]",
+      "Painter and Decorator": "bg-[url('/questions/PainterDecoratorQB.webp')]",
+      "Tutoring": "bg-[url('/questions/TutoringQB.webp')]",
+      "Architects": "bg-[url('/questions/ArchitectsQB.webp')]",
+      "Gutter Cleaning": "bg-[url('/questions/GutterCleaningQB.webp')]",
+      "Physics and Maths": "bg-[url('/questions/PhysicsMathsQB.webp')]",
     };
 
     return `${baseClasses} ${

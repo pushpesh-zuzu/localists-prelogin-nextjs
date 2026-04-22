@@ -75,6 +75,7 @@ function DrivewayInstallers() {
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
+                showRightTabButtons
                 heading1="Driveway Installers"
                 heading2="in your area"
                 tabData={DRIVEWAY_INSTALLERS_TABDATA}
@@ -91,7 +92,7 @@ function DrivewayInstallers() {
                 data={FREQUENTLY_DATA_DRIVEWAY_INSTALLERS["driveway-installers-near-me"]}
             />
 
-            <DiscoverNearMe homeData={DRIVEWAY_INSTALLERS_DATA} />
+            <DiscoverNearMe background="#f7f7f7f7" homeData={DRIVEWAY_INSTALLERS_DATA} />
 
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

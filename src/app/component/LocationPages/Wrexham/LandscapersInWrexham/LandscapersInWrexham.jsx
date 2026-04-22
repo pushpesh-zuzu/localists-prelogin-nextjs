@@ -10,6 +10,7 @@ import {
   LANDSCAPING_DATA_WREXHAM,
   LANDSCAPING_TABDATA_WREXHAM,
   VETTED_DATA_LANDSCAPING_WREXHAM,
+  NEARBY_PLACES_ROOFER_WREXHAM
 } from "./LandscapersInWrexhamData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 import LandScapingGardenPopularJobs from "@/app/component/Nearme/LandscaperGardenNearMe/LandScapingGardenPopularJobs";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function LandscapersInWrexham() {
   useScrollToTop();
@@ -40,7 +42,7 @@ function LandscapersInWrexham() {
         <CloseBrowserAbandon serviceId={43} quote_type="req call back" />
       )}
       <FAQScript FAQ={FREQUENTLY_DATA_LANDSCAPING_WREXHAM} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Landscapers"
         heading2="Wrexham"
         description="Looking for the best landscapers in Wrexham? Look no further! Pop in your postcode below a few quick details about your project, and we’ll pair you with local landscapers who’ll come out and give you a quote - takes less than a minute to get started. "
@@ -86,6 +88,12 @@ function LandscapersInWrexham() {
         />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={LANDSCAPING_TABDATA_WREXHAM}
+        activeTabkey="popular"
+      />
       <AdviceInsightNearMe
         articles={LANDSCAPING_ADVICEINSIGHT_WREXHAM}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -107,17 +115,12 @@ function LandscapersInWrexham() {
       />
       <UserFeedbackNearMe2 feedbackData={LANDSCAPING_FEEDBACK_WREXHAM} />
       <DiscoverNearMe homeData={LANDSCAPING_DATA_WREXHAM} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={LANDSCAPING_TABDATA_WREXHAM}
-        activeTabkey="related"
-      />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Landscaping/landscapingmember.webp"
         mobileImage="/nearme/Landscaping/landscapingmember.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_WREXHAM}/>
       <Footer />
     </>
   );

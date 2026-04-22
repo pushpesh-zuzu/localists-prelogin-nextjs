@@ -10,6 +10,7 @@ import {
     ROOFERS_DATA_SCUNTHORPE,
     ROOFERS_TABDATA_SCUNTHORPE,
     VETTED_DATA_ROOFERS_SCUNTHORPE,
+    NEARBY_PLACES_ROOFER_SCUNTHORPE
 } from "./RoofersInScunthorpeData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInScunthorpe() {
     useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInScunthorpe() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_SCUNTHORPE} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Scunthorpe"
                 description="Get free, no-obligation quotes from experienced and qualified Scunthorpe roofers. Enter your postcode below and share a few details about the work; it takes less than a minute to get started."
@@ -75,6 +77,13 @@ function RoofersInScunthorpe() {
                 <Feature cityName="Scunthorpe" county='North Lincolnshire' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_SCUNTHORPE}
+                activeTabkey="popular"
+                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto lg:h-[485.5px]"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_SCUNTHORPE}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -92,18 +101,12 @@ function RoofersInScunthorpe() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_SCUNTHORPE} />
             <DiscoverNearMe homeData={ROOFERS_DATA_SCUNTHORPE} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_SCUNTHORPE}
-                activeTabkey="related"
-                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[422px] h-auto md:h-auto lg:h-[485.5px]"
-            />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Roofing/roofingmember.webp"
                 mobileImage="/nearme/Roofing/roofingmembermobile.webp"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_SCUNTHORPE} />
             <Footer />
         </>
     );

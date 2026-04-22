@@ -213,7 +213,26 @@ export const ROOFERS_TABDATA_STALYBRIDGE = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
     ],
-    related: [
+    // related: [
+    //     { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+    //     { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+    //     { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+    //     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+    //     { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+    //     { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+    //     { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+    //     {
+    //         title: "Roofers Cheadle Hulme",
+    //         url: "/en/gb/roofers-near-me/cheadle-hulme",
+    //     },
+    //     {
+    //         title: "Roofers Ashton Under Lyne",
+    //         url: "/en/gb/roofers-near-me/ashton-under-lyne",
+    //     },
+    // ],
+    findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_STALYBRIDGE = [
         { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
         { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
         { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
@@ -229,9 +248,7 @@ export const ROOFERS_TABDATA_STALYBRIDGE = {
             title: "Roofers Ashton Under Lyne",
             url: "/en/gb/roofers-near-me/ashton-under-lyne",
         },
-    ],
-    findMore: [],
-};
+    ]
 
 export const VETTED_DATA_ROOFERS_STALYBRIDGE = [
     `It’s easy to ignore a loose tile when the sun is out, but the second the wind picks up, that rattling sound is all you can think about. Suddenly, everything else gets shoved to the side because sorting the roof shoots straight to the top of your list. We know exactly how much of a headache that is.

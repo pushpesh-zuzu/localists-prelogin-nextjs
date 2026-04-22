@@ -276,7 +276,7 @@ export default function MegaMenu({
                   >
                     <div className="flex items-center gap-3 flex-1">
                      {item.path ? (
-                      <Link
+                      <a
                         href={`/${currentLang}/${currentCountry}/${item.path}`}
                         onClick={(e) => {
                           e.stopPropagation();
@@ -291,7 +291,7 @@ export default function MegaMenu({
                         <span className="text-sm font-bold text-gray-700 group-hover:text-gray-900">
                           {item.name}
                         </span>
-                      </Link>
+                      </a>
                     ) : (
                       <div className="flex items-center gap-3 cursor-default">
                         {item.icon && (
@@ -343,18 +343,18 @@ export default function MegaMenu({
               <hr className="mb-4" />
 
               <div className="mb-4 pb-3 border-b">
-                <Link
+                <a
                   href={`/${currentLang}/${currentCountry}/${selectedCategory?.path}`}
                   className="text-lg font-bold text-gray-900 hover:text-[#00afe3] transition-colors"
                   onClick={handleClose}
                 >
                   {selectedCategory?.name}
-                </Link>
+                </a>
               </div>
 
               <nav>
                 {selectedCategory?.subcategory?.map((sub, subIndex) => (
-                  <Link
+                  <a
                     key={subIndex}
                     href={`/${currentLang}/${currentCountry}/${sub.path}`}
                     className="block py-3 px-3 hover:bg-gray-50 rounded-lg transition-colors"
@@ -376,7 +376,7 @@ export default function MegaMenu({
                     <span className="text-sm font-bold text-gray-700 hover:text-gray-900">
                       {sub.name}
                     </span>
-                  </Link>
+                  </a>
                 ))}
               </nav>
             </div>

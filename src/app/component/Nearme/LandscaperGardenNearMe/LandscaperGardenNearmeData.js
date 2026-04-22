@@ -12,12 +12,12 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "p",
     text: "Having work done on your property can significantly increase its value - especially on your garden. But hiring the wrong landscaper can leave you out of pocket and even de-value your properties value. That’s where we come in. At Localists, we do all the vetting for you, and make sure that only the best local landscapers are present on our platform. All of the landscape gardeners on our platform are put through a rigorous  vetting procedure, and we source all of their reviews from various review sites across the web and put it all in one convenient place for you. Just enter your postcode and a few details to get started!",
-    notMarginBottom:true
+    notMarginBottom: true,
   },
   {
     type: "h2",
     text: "Benefits of hiring a local landscape gardener",
-    className: "mt-6 md:mt-9 lg:mt-[70px]"
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
   },
 
   {
@@ -59,7 +59,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "li",
     text: "<strong>Creative extras</strong> - Features you may have avoided implementing yourself due to lack of experience can be implemented by our local landscape gardeners. With our landscapers, your dream of fancy water features and bespoke decking is now a reality.",
-    className: "mb-0"
+    className: "mb-0",
   },
   {
     type: "image",
@@ -116,7 +116,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
   {
     type: "PostCodeSection",
     // className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
-    className: 'mb-0 mt-[30px] lg:mt-[60px]'
+    className: "mb-0 mt-[30px] lg:mt-[60px]",
     // mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]
   },
   {
@@ -261,7 +261,6 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPE_NEARME = [
     type: "PostCodeSection",
     className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
   },
-
 ];
 export const FREQUENTLY_DATA_LANDSCAPE_NEARME = [
   {
@@ -342,62 +341,88 @@ export const ADVICEINSIGHT_LANDSCAPE_NEARME = [
 ];
 export const LANDSCAPE_NEARME_TABDATA = {
   professionals: [
-    "Landscapers York",
-    "Landscapers Hull",
-    "Landscapers Leeds",
-    "Landscapers Bolton",
-    "Landscapers Chester",
-    "Landscapers Cheshire",
-    "Landscapers Liverpool",
-    "Landscapers Harrogate",
-    "Landscapers Stockport",
-    "Landscapers Manchester",
-    "Landscapers North Yorkshire",
+    {
+      title: "Landscapers Belfast",
+      url: "/en/gb/landscape-gardeners-near-me/belfast",
+    },
+     {
+      title: "Landscapers Wigan",
+      url: "/en/gb/landscape-gardeners-near-me/wigan",
+    },
+    {
+      title: "Landscapers Northwich",
+      url: "/en/gb/landscape-gardeners-near-me/northwich",
+    },
+    {
+      title: "Landscapers Llandudno",
+      url: "/en/gb/landscape-gardeners-near-me/llandudno",
+    },
+    {
+      title: "Landscapers Prestatyn",
+      url: "/en/gb/landscape-gardeners-near-me/prestatyn",
+    },
+    {
+      title: "Landscapers Wakefield",
+      url: "/en/gb/landscape-gardeners-near-me/wakefield",
+    },
+   
+    {
+      title: "Landscapers Wrexham",
+      url: "/en/gb/landscape-gardeners-near-me/wrexham",
+    },
+    {
+      title: "Landscapers Huddersfield",
+      url: "/en/gb/landscape-gardeners-near-me/huddersfield",
+    },
+
+    {
+      title: "Landscapers Stockport",
+      url: "/en/gb/landscape-gardeners-near-me/stockport",
+    },
   ],
   popular: [
-  
-        {
-            title: "Gardeners Near Me",
-            url: "",
-        },
-        {
-             title: "Roofers Near Me ",
-             url: "/en/gb/patio-layers-near-me",
-         },
-         {
-           title: "Patio Installers Near Me ",
-           url: "/en/gb/patio-layers-near-me",
-          },
-          
-          {
-            title: "Architects Near Me",
-            url: "/en/gb/architects-near-me",
-          },
-          
-          {
-            title: "Tree Surgeons Near Me ",
-            url: "/en/gb/tree-surgeon-near-me",
-          },
-          {
-            title: "Gutter Cleaners Near Me",
-            url: "/en/gb/gutter-cleaning-near-me",
-        },
-        {
-          title: "Driveway Installers Near Me",
-          url: "/en/gb/driveway-installers-near-me",
-        },
-        {
-       title: "Painters and Decorators Near Me ",
-       url: "/en/gb/painter-and-decorator-near-me",
-   },
-        {
-            title: "Artificial Grass Installers Near Me",
-            url: "/en/gb/artificial-grass-installers-near-me",
-        },
-        {
-            title: "Fence and Gate Installers Near Me",
-            url: "/en/gb/fencing-contractors-near-me",
-        },
+    {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
+      title: "Roofers Near Me ",
+      url: "/en/gb/patio-layers-near-me",
+    },
+    {
+      title: "Patio Installers Near Me ",
+      url: "/en/gb/patio-layers-near-me",
+    },
+
+    {
+      title: "Architects Near Me",
+      url: "/en/gb/architects-near-me",
+    },
+
+    {
+      title: "Tree Surgeons Near Me ",
+      url: "/en/gb/tree-surgeon-near-me",
+    },
+    {
+      title: "Gutter Cleaners Near Me",
+      url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
+    },
+    {
+      title: "Painters and Decorators Near Me ",
+      url: "/en/gb/painter-and-decorator-near-me",
+    },
+    {
+      title: "Artificial Grass Installers Near Me",
+      url: "/en/gb/artificial-grass-installers-near-me",
+    },
+    {
+      title: "Fence and Gate Installers Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
+    },
   ],
   insight: [],
 };
@@ -501,7 +526,7 @@ export const DISCOVER_LANDSCAPE_NEARME_DATA = [
     image: "/roofing.webp",
     isSpecial: false,
     slug: "/en/gb/roofers-near-me",
-  }
+  },
 ];
 export const BREADCRUM_DATA_LANDSCAPE_NEARME = [
   { title: "Home & Garden", path: "/en/gb/home" },

@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_DEESIDE,
   ROOFERS_TABDATA_DEESIDE,
   VETTED_DATA_ROOFERS_DEESIDE,
+  NEARBY_PLACES_ROOFER_DEESIDE,
 } from "./RoofersInDeesideData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -30,6 +31,7 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 // import QuotesBanner from "@/app/component/common/QuotesBanner/QuotesBanner";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInDeeside() {
   useScrollToTop()
@@ -39,7 +41,7 @@ function RoofersInDeeside() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_DEESIDE} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Deeside"
         description="Just input your postcode and give us a few details about your project, and we’ll connect you with vetted, local roofers in Deeside for free, no-obligation quotes on your roofing project."
@@ -76,6 +78,12 @@ function RoofersInDeeside() {
         <Feature county="flintshire" cityName="Deeside" serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
+        <HireRelatedToServiceNearMe
+          heading1="Hire with"
+          heading2="confidence."
+          tabData={ROOFERS_TABDATA_DEESIDE}
+          activeTabkey="popular"
+        />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_DEESIDE}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -91,17 +99,12 @@ function RoofersInDeeside() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_DEESIDE} />
       <DiscoverNearMe homeData={ROOFERS_DATA_DEESIDE} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_DEESIDE}
-        activeTabkey="related"
-      />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_DEESIDE}/>
       <Footer />
     </>
   );

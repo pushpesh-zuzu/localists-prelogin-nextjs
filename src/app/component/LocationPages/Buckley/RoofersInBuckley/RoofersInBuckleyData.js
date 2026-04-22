@@ -212,7 +212,29 @@ export const ROOFERS_TABDATA_BUCKLEY = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+  //   { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+  //   { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+  //   { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+  //   { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+  //   { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+  //   { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  //   { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+  //   { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
+  //   { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
+  //   { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+  //   { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
+  //   { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
+  //   { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+  //   {
+  //     title: "Roofers Ellesmere Port",
+  //     url: "/en/gb/roofers-near-me/ellesmere-port",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_BUCKLEY =  [
     { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
     { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
@@ -231,9 +253,7 @@ export const ROOFERS_TABDATA_BUCKLEY = {
       title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-  ],
-  findMore: [],
-};
+  ]
 
 export const VETTED_DATA_ROOFERS_BUCKLEY = [
   `North Wales is known for its beautiful mountain landscapes and sea views – but we all know the weather here is less than predictable, and no more so than Buckley. Unfortunately that unpredictable weather means your roofs need to be in tip top condition – because if they’re not, well, you know the rest!.

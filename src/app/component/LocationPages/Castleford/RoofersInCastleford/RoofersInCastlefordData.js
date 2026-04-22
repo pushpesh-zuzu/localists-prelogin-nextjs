@@ -178,19 +178,35 @@ export const ROOFERS_TABDATA_CASTLEFORD = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+  //   { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
+  //   { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
+  //   { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
+  //   { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
+  //   { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
+  //   { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+  //   {
+  //     title: "Roofers Huddersfield",
+  //     url: "/en/gb/roofers-near-me/huddersfield",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_CASTLEFORD = [
     { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
     { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
     { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
+    { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
+    { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
     { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+    { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
     {
       title: "Roofers Huddersfield",
       url: "/en/gb/roofers-near-me/huddersfield",
     },
-  ],
-  findMore: [],
-};
+  ]
 
 export const VETTED_DATA_ROOFERS_CASTLEFORD = [
   `Up north, we’re no strangers to the rain - we’ve practically built our personalities around it. But when your roof starts losing that relationship, Localists is here to help.

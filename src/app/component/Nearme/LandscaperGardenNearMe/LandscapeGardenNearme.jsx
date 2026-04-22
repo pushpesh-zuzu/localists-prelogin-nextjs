@@ -89,6 +89,7 @@ function LandscapeGardenNearme() {
       <HowItWorkNearMe />
       {/* <Feature /> */}
       <HireRelatedToServiceNearMe
+        showRightTabButtons
         heading1="Landscapers"
         heading2="in your area"
         tabData={LANDSCAPE_NEARME_TABDATA}
@@ -104,7 +105,7 @@ function LandscapeGardenNearme() {
       {/* </PaddingWrapper> */}
       <FAQ data={FREQUENTLY_DATA_LANDSCAPE_NEARME} />
       {/* <AdviceInsightNearMe maxWidth articles={TREE_SRUGEON_ADVICEINSIGHT} /> */}
-      <DiscoverNearMe homeData={DISCOVER_LANDSCAPE_NEARME_DATA} />
+      <DiscoverNearMe background="#f7f7f7f7" homeData={DISCOVER_LANDSCAPE_NEARME_DATA} />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
       />

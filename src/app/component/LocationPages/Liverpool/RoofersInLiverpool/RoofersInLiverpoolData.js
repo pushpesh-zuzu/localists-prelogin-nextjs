@@ -316,7 +316,24 @@ export const ROOFERS_TABDATA_LIVERPOOL = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
+  //   { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+  //   { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+  //   { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+  //   { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  //   { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  //   { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+
+  //   { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  //   {
+  //     title: "Roofers Ellesmere Port",
+  //     url: "/en/gb/roofers-near-me/ellesmere-port",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_LIVERPOOL =  [
     { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
@@ -330,9 +347,7 @@ export const ROOFERS_TABDATA_LIVERPOOL = {
       title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_LIVERPOOL = [
   `You only really notice your roof when something goes wrong. And suddenly, finding reliable roofers in Liverpool shoots straight to the top of your to-do list. But who do you call? How much should it cost? How do you know you’re choosing someone trustworthy and not just a bloke with a ladder and a van? Take a breath, you’re in the right place.
   <br/><br/> 

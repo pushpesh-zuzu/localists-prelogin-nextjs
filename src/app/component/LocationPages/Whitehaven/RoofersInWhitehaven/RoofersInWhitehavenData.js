@@ -213,13 +213,20 @@ export const ROOFERS_TABDATA_WHITEHAVEN = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-  related: [
-    { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
-    { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
-    { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
-  ],
+  // related: [
+  //   { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
+  //   { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
+  //   { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
+  //   { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
+  // ],
   findMore: [],
 };
+export const NEARBY_PLACES_ROOFER_WHITEHAVEN = [
+    { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
+    { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
+    { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
+    { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
+  ]
 
 export const VETTED_DATA_ROOFERS_WHITEHAVEN = [
   `Has mopping become your full-time job every time it rains? Or are you just sick of constantly moving buckets around to catch the water before it hits your carpets?

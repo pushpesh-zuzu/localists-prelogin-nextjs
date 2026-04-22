@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_HUDDERSFIELD,
   ROOFERS_TABDATA_HUDDERSFIELD,
   VETTED_DATA_ROOFERS_HUDDERSFIELD,
+  NEARBY_PLACES_ROOFER_HUDDERSFIELD
 } from "./RoofersInHuddersfieldData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 import HowItWork from "@/app/component/Home/HowItWork";
 
 function RoofersInHuddersfield() {
@@ -39,7 +41,7 @@ function RoofersInHuddersfield() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_HUDDERSFIELD} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Huddersfield"
         description="Find the best roofers in Huddersfield! just enter your postcode, answer a few questions, and we'll match you with 5 roofers in Huddersfield to give you a quote."
@@ -78,6 +80,13 @@ function RoofersInHuddersfield() {
         <Feature county='Huddersfield' cityName='Huddersfield' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_HUDDERSFIELD}
+        activeTabkey="popular"
+        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
+      />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_HUDDERSFIELD}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -93,18 +102,12 @@ function RoofersInHuddersfield() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_HUDDERSFIELD} />
       <DiscoverNearMe homeData={ROOFERS_DATA_HUDDERSFIELD} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_HUDDERSFIELD}
-        activeTabkey="related"
-        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
-      />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_HUDDERSFIELD} />
       <Footer />
     </>
   );

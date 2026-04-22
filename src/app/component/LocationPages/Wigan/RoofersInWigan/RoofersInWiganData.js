@@ -203,7 +203,31 @@ export const ROOFERS_TABDATA_WIGAN = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+  //   { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+  //   { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  //   { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  //   { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+  //   { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+  //   { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  //   { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  //   { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  //   { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  //   { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+
+  //   {
+  //     title: "Roofers Cheadle Hulme",
+  //     url: "/en/gb/roofers-near-me/cheadle-hulme",
+  //   },
+  //   {
+  //     title: "Roofers Ashton-Under-Lyne",
+  //     url: "/en/gb/roofers-near-me/ashton-under-lyne",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_WIGAN = [
     { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
     { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
     { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
@@ -224,15 +248,13 @@ export const ROOFERS_TABDATA_WIGAN = {
       title: "Roofers Ashton-Under-Lyne",
       url: "/en/gb/roofers-near-me/ashton-under-lyne",
     },
-  ],
-  findMore: [],
-};
+  ]
+
 export const VETTED_DATA_ROOFERS_WIGAN = [
-  `Complaining about the weather in Wigan is not enough. If your roof has started making suspicious noises every time it rains, what you should be about is finding a reliable roofer.
-That’s where Localists come in. We make it easy to find trusted roofers in Wigan without the stress, the chasing, or the awkward phone calls. Tell us what you need, and we’ll connect you with vetted local roofing professionals who can provide free, no-obligation quotes, straight to your inbox.
+  `We know the weather in Wigan can be less than optimal at the best of times. But if you've add this with a roof that makes suspicious noises during a storm, - thats a recipe for diasaster. Luckily, we have the best roofers in Wigan right here on our database, so you can keep Wigans less than tropical weather at bay.  
   <br/><br/> 
   `,
-  `No pressure. No hidden costs. Just clear quotes from roofers who actually know Wigan homes.`,
+  `Just input your postcode, answer a few questions about the job you need doing and we'll get some of our top roofers to come out and give you free, no-obligation quotes on your job.`,
 ];
 
 export const BREADCRUM_DATA_ROOFERS_WIGAN = [

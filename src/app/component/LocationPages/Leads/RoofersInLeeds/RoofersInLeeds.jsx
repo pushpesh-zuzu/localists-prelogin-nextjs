@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_LEEDS,
   ROOFERS_TABDATA_LEEDS,
   VETTED_DATA_ROOFERS_LEEDS,
+  NEARBY_PLACES_ROOFER_LEEDS,
 } from "./RoofersInLeedsData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInLeeds() {
   useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInLeeds() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_LEEDS} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Leeds"
         description="Find the best roofers in Leeds! Just enter your postcode and answer a few questions and we’ll send pre-vetted roofers based in Leeds to give you a quick quote."
@@ -75,6 +77,13 @@ function RoofersInLeeds() {
         <Feature county='West Yorkshire' cityName='Leeds' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_LEEDS}
+        activeTabkey="popular"
+        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
+      />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_LEEDS}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -90,18 +99,12 @@ function RoofersInLeeds() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_LEEDS} />
       <DiscoverNearMe homeData={ROOFERS_DATA_LEEDS} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_LEEDS}
-        activeTabkey="related"
-        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
-      />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_LEEDS}/>
       <Footer />
     </>
   );

@@ -10,6 +10,7 @@ import {
     ROOFERS_DATA_WARRINGTON,
     ROOFERS_TABDATA_WARRINGTON,
     VETTED_DATA_ROOFERS_WARRINGTON,
+    NEARBY_PLACES_ROOFER_WARRINGTON
 } from "./RoofersInWarringtonData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInWarrington() {
     useScrollToTop()
@@ -38,10 +40,10 @@ function RoofersInWarrington() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_WARRINGTON} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Warrington"
-                description="Find the best roofers in Warrington! just enter your postcode, answer a few questions, and we'll match you with 5 roofers in Warrington to give you a quote."
+                description="Looking for professional roofers you can trust in Warrington? Look no further! Input your postcode now and a few details below, and you receive free, no obligation quotes from vetted roofers in your area."
                 bannerImage="/nearme/Roofing/roofingbanner.webp"
                 bannerImageMobile="/location/roofing_location.webp"
                 altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -75,6 +77,12 @@ function RoofersInWarrington() {
                 <Feature cityName="Warrington" county='Warrington' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_WARRINGTON}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_WARRINGTON}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -92,17 +100,12 @@ function RoofersInWarrington() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_WARRINGTON} />
             <DiscoverNearMe homeData={ROOFERS_DATA_WARRINGTON} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_WARRINGTON}
-                activeTabkey="related"
-            />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Roofing/roofingmember.webp"
                 mobileImage="/nearme/Roofing/roofingmembermobile.webp"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_WARRINGTON}/>
             <Footer />
         </>
     );

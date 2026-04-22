@@ -2,7 +2,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ULVERSTON = [
   { type: "h2", text: "What does roofing usually cost in Ulverston?" },
   {
     type: "p",
-    text: "Before any work begins, most people are quietly doing the math in their heads. Is this going to be a quick fix or something that eats into the savings? Most roofing costs in Ulverston are shaped by what is actually happening on your property. The height of the house, access for scaffolding, and the condition underneath the tiles all play a part.",
+    text: "Before any work begins, most people are quietly doing the maths in their heads. Is this going to be a quick fix or something that eats into the savings? A lot of the costs will come down to how hard or easy the job is to complete - so things like slopes on the roof, how much scaffolding you need to complete the job and the materials you're using will all have an impact on the price.",
   },
   {
     type: "pricingTable",
@@ -58,6 +58,44 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ULVERSTON = [
   {
     type: "p",
     text: "For many homeowners in Ulverston, that space to compare calmly is what makes the difference. It turns what could feel rushed into something considered.",
+    // notMarginBottom: true,
+  },
+  {
+    type: "h2",
+    text: "Why proper drainage and roofing in Ulverston is so important",
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
+  },
+  {
+    type: "p",
+    text: "Your roof is the main shield protecting your home and valuables from the elements. And for a place like Ulverston, this is vitally important for a number of reasons.",
+  },
+  {
+    type: "h3",
+    text: "Significant rainfall",
+  },
+  {
+    type: "p",
+    text: `Annually, Ulverston has one of the highest monthly <a href="https://weather-and-climate.com/average-monthly-precipitation-Rainfall,ulverston-cumbria-gb,United-Kingdom" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">rainfall statistics</a> at 1,637mm per month compared to the national average of 1,163mm per month. Along with having an average of 200 wet days per year (with the UK average being 159 days per year). So if your roof isn't suffice, you'll know about it. We'd recommend getting regular roofing surveys done if you have a home in Ulverston.  You may also want to look for Gutter cleaners in Ulverston or Gutter Installation in Ulverston as that extra rain will take its toll on your gutters.`,
+  },
+  {
+    type: "h3",
+    text: "Higher wind speed",
+  },
+  {
+    type: "p",
+    text: `Ulverston also faces higher wind speeds of around <a href="https://www.timeanddate.com/weather/@7298117/climate" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">23-25mph </a> in comparison to the UK average of 10.7mph. You're more likely going to see This means that tiles need to be secured properly, along with any other fittings you have on the roof. The warning signs of this being Cupped shingles (when the edge oor corner of the shingle begins to turn upward).`,
+  },
+  {
+    type: "h3",
+    text: "Higher Humidity",
+  },
+  {
+    type: "p",
+    text: `Ulverston also faces higher humidity than the national average. So, getting a roof cleaner in Ulverston should also be on your to-do list. This is because the high humidities actually create a breeding ground for moss, algae and lichen on roof tiles. While it may look nice, they can hold up to <a href="https://www.timeanddate.com/weather/@7298117/climate" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">20 times their dry weight in water.</a>`,
+  },
+  {
+    type: "p",
+    text: "So you might want to try and get regular cleaning from a roof cleaner in Ulverston.",
     notMarginBottom: true,
   },
   {
@@ -166,22 +204,30 @@ export const ROOFERS_TABDATA_ULVERSTON = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
-    { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
-    { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
-    { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
-    { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
-    { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
-    { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
-  ],
+  // related: [
+  //   { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
+  //   { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
+  //   { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  //   { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
+  //   { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
+  //   { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
+  // ],
   findMore: [],
 };
+export const NEARBY_PLACES_ROOFER_ULVERSTON = [
+  { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
+  { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
+  { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
+  { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
+  { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
+];
 export const VETTED_DATA_ROOFERS_ULVERSTON = [
-  `Unless you specifically asked for an indoor water feature, that puddle in your living room is your roof trying to tell you something. And you should listen to it.
-  <br/><br/> 
+  `Unless you specifically asked for an indoor water feature, that puddle in your living room is your roof trying to tell you something. And you should listen to it.  <br/><br/> 
   `,
   `
-At Localists, we connect you with trusted roofers in Ulverston. Let us know your requirements and receive free, no obligation quotes from roofers in your area. Compare quotes, experience, and portfolios, then pick the best roofer for your project. `,
+At Localists, we connect you with trusted roofers in Ulverston, so you can . Let us know your requirements and receive free, no obligation quotes from roofers in your area. Compare quotes, experience, and portfolios, then pick the best roofer for your project.
+ `,
 ];
 
 export const BREADCRUM_DATA_ROOFERS_ULVERSTON = [

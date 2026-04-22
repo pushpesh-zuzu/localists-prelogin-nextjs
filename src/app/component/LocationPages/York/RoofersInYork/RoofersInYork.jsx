@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_YORK,
   ROOFERS_TABDATA_YORK,
   VETTED_DATA_ROOFERS_YORK,
+  NEARBY_PLACES_ROOFER_YORK,
 } from "./RoofersInYorkData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInYork() {
   useScrollToTop()
@@ -38,10 +40,10 @@ function RoofersInYork() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_YORK} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="York"
-        description={`Find the best roofers in York - Just enter your postcode and answer a few questions, and we’ll match you with up to 5 <a href="/en/gb/roofers-near-me" <a target='_blank' rel='noopener noreferrer'>roofers near you</a> who’ll be able to give you a quote on your job.`}
+        description={`Find the best roofers in York - Just enter your postcode and answer a few questions, and we’ll match you with up to 5 <a href="/en/gb/roofers-near-me" target='_blank' rel='noopener noreferrer'>roofers near you</a> who’ll be able to give you a quote on your job.`}
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         bannerImageMobile="/location/roofing_location.webp"
         altText="A roofer installing a new roof by securing clay tiles with a drill"
@@ -79,6 +81,13 @@ function RoofersInYork() {
         articles={ROOFERS_ADVICEINSIGHT_YORK}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
       />
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_YORK}
+        activeTabkey="popular"
+        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:min-h-[485.5px] lg:h-auto"
+      />
       <WrapperBGWidth>
         <div className="px-[30px] sm:px-10 md:px-16 xl:px-[120px]">
           <PostCodeSectionLocation2 classNamePostCode="mb-[30px] md:mb-10 mt-[0px] lg:mt-[0px] lg:mb-[60px] lg:justify-center lg:gap-12" serviceId={113} serviceName="Roofing" />
@@ -90,18 +99,12 @@ function RoofersInYork() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_YORK} />
       <DiscoverNearMe homeData={ROOFERS_DATA_YORK} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_YORK}
-        activeTabkey="related"
-        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:min-h-[485.5px] lg:h-auto"
-      />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_YORK} />
       <Footer />
     </>
   );

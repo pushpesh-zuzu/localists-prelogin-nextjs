@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_LIVERPOOL,
   ROOFERS_TABDATA_LIVERPOOL,
   VETTED_DATA_ROOFERS_LIVERPOOL,
+  NEARBY_PLACES_ROOFER_LIVERPOOL
 } from "./RoofersInLiverpoolData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RooferInLiverpool() {
   useRegistrationRedirect();
@@ -38,7 +40,7 @@ function RooferInLiverpool() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={FREQUENTLY_DATA_LIVERPOOL} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Liverpool"
         description="Find the best roofers in Liverpool! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
@@ -75,6 +77,13 @@ function RooferInLiverpool() {
         {/* ✅ Feature ko wrap kiya */}
         <Feature county='Liverpool' serviceId={113} serviceName="Roofing" cityName="Liverpool" featureRef={featureRef} />
       </div>
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_LIVERPOOL}
+        activeTabkey="popular"
+        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
+      />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_LIVERPOOL}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10  xl:px-[120px]  lg:py-[72px]"
@@ -93,13 +102,6 @@ function RooferInLiverpool() {
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_LIVERPOOL} />
 
       <DiscoverNearMe homeData={ROOFERS_DATA_LIVERPOOL} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_LIVERPOOL}
-        activeTabkey="related"
-        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
-      />
       <NearmeMember
         // mobileImage="/location/tree_surgeon_member_location_mobile.webp"
         // desktopImage="/location/tree_surgeon_member_location_desktop.webp"
@@ -107,6 +109,7 @@ function RooferInLiverpool() {
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_LIVERPOOL} />
       <Footer />
     </>
   );

@@ -219,6 +219,7 @@ function ReqBuyerRegistration({
                     initialQuestionIndex={questionIndex}
                     progressPercent={progressPercent}
                 />
+                
             )}
 
             {

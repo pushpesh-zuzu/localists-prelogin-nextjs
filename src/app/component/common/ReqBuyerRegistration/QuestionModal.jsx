@@ -88,38 +88,58 @@ const QuestionModal = ({
             );
             const savedAnswer = savedAnswerData?.ans || [];
 
-            const savedArray =
-                typeof savedAnswer === "string"
-                    ? savedAnswer.split(",").map((a) => a.trim())
-                    : savedAnswer;
+        const savedArray =
+            typeof savedAnswer === "string"
+                ? savedAnswer.split(",").map((a) => a.trim())
+                : savedAnswer;
 
-            if (savedArray.length === 0) {
-                const timer = setTimeout(() => {
-                    setSelectedOption([]);
-                    setOtherText("");
-                }, 0);
+        const options =
+            formattedQuestions[currentQuestion]?.parsedAnswers || [];
 
-                return () => clearTimeout(timer);
-            }
+        const isOnlyOther =
+            options.length === 1 &&
+            options[0].option === "Something else (please describe)";
 
-            const otherVal = savedArray.find(
-                (ans) =>
-                    ans.toLowerCase() !== "yes" &&
-                    ans.toLowerCase() !== "no" &&
-                    ans.toLowerCase() !== "maybe"
-            );
+        // 🔥 CASE 1: No saved answer
+        if (savedArray.length === 0) {
             const timer = setTimeout(() => {
+                if (isOnlyOther) {
+                    setSelectedOption(["Something else (please describe)"]);
+                } else {
+                    setSelectedOption([]);
+                }
+                setOtherText("");
+            }, 0);
+
+            return () => clearTimeout(timer);
+        }
+
+        // 🔥 CASE 2: Saved answer exists (BACK case fix)
+        const otherVal = savedArray.find(
+            (ans) =>
+                ans.toLowerCase() !== "yes" &&
+                ans.toLowerCase() !== "no" &&
+                ans.toLowerCase() !== "maybe"
+        );
+
+        const timer = setTimeout(() => {
+            if (isOnlyOther) {
+                // force select "Something else"
+                setSelectedOption(["Something else (please describe)"]);
+                setOtherText(otherVal || "");
+            } else {
                 setSelectedOption(savedArray);
                 setOtherText(
                     savedArray.includes("Something else (please describe)")
                         ? otherVal || ""
                         : ""
                 );
-            }, 0);
+            }
+        }, 0);
 
-            return () => clearTimeout(timer);
-        }
-    }, [currentQuestion, buyerRequest, formattedQuestions, questions]);
+        return () => clearTimeout(timer);
+    }
+}, [currentQuestion, buyerRequest, formattedQuestions, questions]);
 
     const totalQuestions = questions?.length;
 
@@ -269,7 +289,14 @@ const QuestionModal = ({
             hasFetchedQuestions.current = true;
         }
     }, [dispatch, questionanswerData?.length, serviceId]);
+   
+    const currentOptions =
+        formattedQuestions[currentQuestion]?.parsedAnswers || [];
 
+    const isOnlyOther =
+        currentOptions.length === 1 &&
+        currentOptions[0].option === "Something else (please describe)";
+        
     return (
         <Modal
             onClose={() => {
@@ -291,7 +318,7 @@ const QuestionModal = ({
             progressPercent={progressPercent}
             marginTop="lg:mt-[12vh] mt-[5vh]"
         >
-            <div className="border border-[#D9D9D9] rounded-[30px] mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
+            <div className={`${isOnlyOther ? "" : "border"} border-[#D9D9D9] rounded-[30px] mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]`}>
                 {loading ? (
                     <div className="flex-1 flex items-center justify-center py-4">
                         <LoaderIndicator size="large" />
@@ -299,7 +326,7 @@ const QuestionModal = ({
                 ) : questions.length > 0 ? (
                     <>
                         {/* Options Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-[20px] md:p-[40px]">
+                        {!isOnlyOther && <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-[20px] md:p-[40px]">
                             {formattedQuestions[currentQuestion]?.parsedAnswers.map(
                                 (opt, index, arr) => {
 
@@ -344,7 +371,7 @@ const QuestionModal = ({
                                     );
                                 }
                             )}
-                        </div>
+                        </div>}
 
                         {/* Other Input */}
                         {formattedQuestions[currentQuestion]?.parsedAnswers.some(
@@ -352,21 +379,65 @@ const QuestionModal = ({
                         ) &&
                             selectedOption.includes(
                                 "Something else (please describe)"
-                            ) && (
-                                <div className="px-5 md:px-9.5">
+                            ) && !isOnlyOther && (
+                                <div className="px-5 md:px-9.5 mb-5 md:mb-10">
                                     <InputField
                                         placeholder="Please Enter..."
                                         value={otherText}
-                                        onChange={(e) => setOtherText(e.target.value)}
+                                        onChange={(e) => {setOtherText(e.target.value);setError(""); }}
                                     />
+                        {error && (
+                            <p className="text-sm text-red-600  pt-2">
+                                {error}
+                            </p>)}
                                 </div>
+                                
+                            )}
+                             {formattedQuestions[currentQuestion]?.parsedAnswers.some(
+                            (opt) => opt.option === "Something else (please describe)"
+                        ) &&
+                            selectedOption.includes(
+                                "Something else (please describe)"
+                            ) && isOnlyOther && (
+                                <div className="px-5 md:px-9.5 my-5 md:y-10">
+                                    {/* <InputField
+                                        placeholder="Please Enter..."
+                                        value={otherText}
+                                        onChange={(e) => {setOtherText(e.target.value);setError(""); }}
+                                    /> */}
+                                    <textarea 
+                                        rows={3}
+                                        type="textarea"
+                                         placeholder="Please Enter..."
+                                        onChange={(e) => {setOtherText(e.target.value);setError(""); }}
+                                        value={otherText}
+                                        
+                                        style={{ boxShadow: "0 0 8px .5px #0000001a" }}
+                                        className={`
+                                            relative w-full px-3 py-2 rounded-[16px]
+                                            text-gray-900 text-base
+                                            border border-[#00aef3]
+                                            transition-all duration-200
+                                        placeholder:text-[#959595]
+                                            focus:outline-1 outline-[#00aef3] focus:ring-1
+                                            disabled:bg-gray-100 
+                                            custom-placeholder
+                                            ${error
+                                            ? "border-red-500 focus:ring-red-500 focus:border-red-500"
+                                            : "focus:ring-black"
+                                            }
+    
+                                        `}
+                                        />
+                        {error && (
+                            <p className="text-sm text-red-600  pt-2">
+                                {error}
+                            </p>)}
+                                </div>
+                                
                             )}
 
                         {/* Error */}
-                        {error && (
-                            <p className="text-sm text-red-600 px-9 pt-2 pb-4">
-                                {error}
-                            </p>)}
                     </>
                 ) : (
                     <div className="flex-1 flex items-center justify-center text-base text-black">

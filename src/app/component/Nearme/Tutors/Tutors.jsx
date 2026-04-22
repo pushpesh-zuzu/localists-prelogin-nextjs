@@ -55,8 +55,8 @@ function Tutors() {
                 bannerImage="/nearme/tutors.webp"
                 bannerImageMobile="/nearme/tutorsmobile.webp"
                 altText="Tutors"
-                serviceId=""
-                serviceName="Tutor"
+                serviceId="118"
+                serviceName="Tutoring"
             />
             <VettedSection
                 paragraph={VETTED_DATA_TUTORS}
@@ -67,6 +67,7 @@ function Tutors() {
 
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
+                showRightTabButtons
                 heading1="Tutors"
                 heading2="in your area"
                 tabData={TUTORS_TABDATA}
@@ -75,14 +76,14 @@ function Tutors() {
             />
             <UserFeedbackNearMe2 feedbackData={TUTORS_FEEDBACK} />
             <AboutServicesAndQuestions
-                serviceId=""
-                serviceName="Tutor"
+                serviceId="118"
+                serviceName="Tutoring"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
             <FAQ
                 data={FREQUENTLY_DATA_TUTORS["tutors-near-me"]}
             />
-            <DiscoverNearMe homeData={TUTORS_DATA} />
+            <DiscoverNearMe background="#f7f7f7f7" homeData={TUTORS_DATA} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
             />

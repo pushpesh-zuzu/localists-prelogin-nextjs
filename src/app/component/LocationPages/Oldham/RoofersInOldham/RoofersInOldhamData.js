@@ -251,7 +251,26 @@ export const ROOFERS_TABDATA_BARNSLEY = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  //   { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  //   { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+  //   { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  //   { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  //   { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  //   { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+  //   {
+  //     title: "Roofers Cheadle Hulme",
+  //     url: "/en/gb/roofers-near-me/cheadle-hulme",
+  //   },
+  //   {
+  //     title: "Roofers Ashton-Under-Lyne",
+  //     url: "/en/gb/roofers-near-me/ashton-under-lyne",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_OLDHAM = [
     { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
     { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
     { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
@@ -267,9 +286,7 @@ export const ROOFERS_TABDATA_BARNSLEY = {
       title: "Roofers Ashton-Under-Lyne",
       url: "/en/gb/roofers-near-me/ashton-under-lyne",
     },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_BARNSLEY = [
   `Oldham's weather isn’t exactly gentle on roofs. Plenty of rain, strong winds attempting to remodel your roof, cold winters, it all adds up. One loose tile might not look like much, but leave it, and you could end up with a leak.
   <br/><br/> 

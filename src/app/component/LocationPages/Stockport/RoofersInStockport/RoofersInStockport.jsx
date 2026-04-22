@@ -10,6 +10,7 @@ import {
     ROOFERS_DATA_STOCKPORT,
     ROOFERS_TABDATA_STOCKPORT,
     VETTED_DATA_ROOFERS_STOCKPORT,
+    NEARBY_PLACES_ROOFER_STOCKPORT
 } from "./RoofersInStockportData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInStockport() {
     useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInStockport() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={FREQUENTLY_DATA_STOCKPORT} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Stockport"
                 description="Need a local roofing specialist in Stockport? Enter your postcode, tell us a bit about the project, and get free quotes to your inbox from trusted professionals in your area. Takes under a minute."
@@ -75,6 +77,12 @@ function RoofersInStockport() {
                 <Feature county='Greater Manchester' cityName='Stockport' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_STOCKPORT}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_STOCKPORT}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -92,17 +100,12 @@ function RoofersInStockport() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_STOCKPORT} />
             <DiscoverNearMe homeData={ROOFERS_DATA_STOCKPORT} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_STOCKPORT}
-                activeTabkey="related"
-            />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Roofing/roofingmember.webp"
                 mobileImage="/nearme/Roofing/roofingmembermobile.webp"
-            />
+                />
+                <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_STOCKPORT} />
             <Footer />
         </>
     );

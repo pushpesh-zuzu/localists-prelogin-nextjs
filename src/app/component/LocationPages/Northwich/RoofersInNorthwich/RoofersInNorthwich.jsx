@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_NORTHWICH,
   ROOFERS_TABDATA_NORTHWICH,
   VETTED_DATA_ROOFERS_NORTHWICH,
+  NEARBY_PLACES_ROOFER_NORTHWICH,
 } from "./RoofersInNorthwichData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInNorthwich() {
   useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInNorthwich() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_NORTHWICH} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Northwich"
         description="Get free quotes from trusted Roofers in Northwich with no obligation to commit. Enter your postcode, share details about the issues you’re dealing with, and get quotes in minutes. It's that straightforward."
@@ -74,7 +76,12 @@ function RoofersInNorthwich() {
       <div ref={featureRef} style={{ overflowAnchor: "none" }}>
         <Feature county='Cheshire' cityName='Northwich' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
-
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_NORTHWICH}
+        activeTabkey="popular"
+      />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_NORTHWICH}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -90,17 +97,12 @@ function RoofersInNorthwich() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_NORTHWICH} />
       <DiscoverNearMe homeData={ROOFERS_DATA_NORTHWICH} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_NORTHWICH}
-        activeTabkey="related"
-      />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_NORTHWICH} />
       <Footer />
     </>
   );

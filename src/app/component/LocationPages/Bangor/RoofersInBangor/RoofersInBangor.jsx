@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_BANGOR,
   ROOFERS_TABDATA_BANGOR,
   VETTED_DATA_ROOFERS_BANGOR,
+  NEARBY_PLACES_ROOFER_BANGOR
 } from "./RoofersInBangorData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInBangor() {
   useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInBangor() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_BANGOR} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Bangor"
         description="Get free no obligation quotes from the highest quality, experienced roofers in Bangor. Just enter your postcode now, tell us what the problem is, and we will handle the rest. It only takes a minute."
@@ -74,7 +76,12 @@ function RoofersInBangor() {
       <div ref={featureRef} style={{ overflowAnchor: "none" }}>
         <Feature county='Gwynedd' cityName='Bangor' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
-
+    <HireRelatedToServiceNearMe
+            heading1="Hire with"
+            heading2="confidence."
+            tabData={ROOFERS_TABDATA_BANGOR}
+            activeTabkey="popular"
+          />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_BANGOR}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -90,17 +97,13 @@ function RoofersInBangor() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_BANGOR} />
       <DiscoverNearMe homeData={ROOFERS_DATA_BANGOR} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_BANGOR}
-        activeTabkey="related"
-      />
+      
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_BANGOR} />
       <Footer />
     </>
   );

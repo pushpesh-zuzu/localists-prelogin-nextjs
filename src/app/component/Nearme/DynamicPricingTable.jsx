@@ -10,7 +10,8 @@ export default function DynamicPricingTable({
     disclaimer,
     calculatorLink,
     calculatorText = "Roofing Calculator",
-    heading = ''
+    heading = '',
+    classNameLeft ="justify-between"
 }) {
     return (
         <div className="flex items-center justify-center lg:pb-[72px] pb-[30px] md:pb-9 pt-2 md:pt-3 lg:pt-[47px]">
@@ -20,14 +21,14 @@ export default function DynamicPricingTable({
                     className={`mb-5 mt-[7px] md:mt-0 md:mb-[25px]`}
                 />}
                 <div
-                    className="w-full rounded-[30px] md:rounded-[25px]"
+                    className="w-full rounded-[30px] h-full md:rounded-[25px]"
                     style={{ backgroundColor: "#8BFFCF" }}
                 >
-                    <div className="flex flex-col lg:flex-row lg:gap-6">
+                    <div className="flex flex-col min-h-full lg:flex-row lg:gap-6 items-stretch">
 
                         {/* Left Section */}
-                        <div className="flex flex-col justify-between px-2.5 pt-[30px] lg:pl-[38px] lg:pt-[54px] lg:pb-[52px] lg:max-w-[35%] xl:min-w-[386px] xl:max-w-[55%]">
-                            <H2 variant="optional" className="text-center min-[460px]:mx-auto md:mx-0 md:max-w-full lg:text-left">
+                        <div className={`flex flex-col h-auto flex-1 ${classNameLeft}  px-2.5 pt-[30px] lg:pl-[38px] lg:pt-[54px] lg:pb-[52px] lg:max-w-[50%] lg:min-w-[386px] xl:min-w-[386px] xl:max-w-[50%]`}>
+                            <H2 variant="optional" className="text-center min-[460px]:mx-auto md:mx-0 md:max-w-full lg:text-left ">
                                 {title}
                             </H2>
 
@@ -37,7 +38,7 @@ export default function DynamicPricingTable({
                         </div>
 
                         {/* Price Grid */}
-                        <div className="xl:max-w-[57%] grid grid-cols-2 lg:grid-cols-2 gap-x-[14px] gap-y-5 lg:gap-x-5 px-[10px] min-[450px]:px-20 lg:px-0 pt-[23px] pb-[38px] lg:py-16 lg:pr-7">
+                        <div className="xl:max-w-[57%] xl:min-w-[50%] grid grid-cols-2 lg:grid-cols-2 gap-x-[14px] gap-y-5 lg:gap-x-5 px-[10px] min-[450px]:px-20 lg:px-0 pt-[23px] pb-[38px] lg:py-16 lg:pr-7">
 
                             {prices.map((item, index) => (
                                 <React.Fragment key={index}>
@@ -69,7 +70,7 @@ export default function DynamicPricingTable({
                 </div>
 
                 {/* Disclaimer */}
-                <div className="mt-2.5 text-left">
+                {disclaimer && <div className="mt-2.5 text-left">
                     <p className="text-[12px] leading-[12px] lg:text-[20px] lg:leading-[24px] font-[Arial] tracking-[0em]! font-bold">
                         {disclaimer}{" "}
                         {calculatorLink ? (
@@ -88,7 +89,7 @@ export default function DynamicPricingTable({
                             </>
                         )}
                     </p>
-                </div>
+                </div>}
 
             </div>
         </div>

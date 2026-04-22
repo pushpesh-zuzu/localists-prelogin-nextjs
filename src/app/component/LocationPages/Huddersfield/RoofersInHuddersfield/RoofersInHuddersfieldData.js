@@ -253,16 +253,29 @@ export const ROOFERS_TABDATA_HUDDERSFIELD = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+  //   { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
+  //   { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  //   { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
+  //   { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
+  //   { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+  //   { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
+  // ],
+  findMore: [],
+};
+export const  NEARBY_PLACES_ROOFER_HUDDERSFIELD =  [
     { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
     { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
     { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+    { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
     { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+    { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
     { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
-  ],
-  findMore: [],
-};
+
+  ]
+  
 export const VETTED_DATA_ROOFERS_HUDDERSFIELD = [
   `Roofs have a way of picking the worst possible moment to misbehave. One minute everything’s fine; the next, there’s a mysterious drip, a tile waving goodbye, or water making itself far too comfortable inside your home.
   <br/><br/> 

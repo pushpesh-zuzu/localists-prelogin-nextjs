@@ -254,15 +254,24 @@ export const ROOFERS_TABDATA_YORK = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+  //   { title: "Roofers Driffield", url: "/en/gb/roofers-near-me/driffield" },
+  //   { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
+  //   { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
+  //   { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
+  //   { title: "Roofers Middlesbrough", url: "/en/gb/roofers-near-me/middlesbrough" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_YORK = [
     { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+    { title: "Roofers Driffield", url: "/en/gb/roofers-near-me/driffield" },
     { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
     { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
     { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
     { title: "Roofers Middlesbrough", url: "/en/gb/roofers-near-me/middlesbrough" },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_YORK = [
   `When your roof needs attention, the last thing you want is added stress. Yet for most homeowners, the hardest part isn’t the repair - it’s knowing who to trust in the first place. Endless listings, mixed reviews, and everyone claiming to be “the best in the area” don’t make it any easier.
   <br/><br/> 

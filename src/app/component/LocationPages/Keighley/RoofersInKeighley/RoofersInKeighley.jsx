@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_KEIGHLEY,
   ROOFERS_TABDATA_KEIGHLEY,
   VETTED_DATA_ROOFERS_KEIGHLEY,
+  NEARBY_PLACES_ROOFER_KEIGHLEY
 } from "./RoofersInKeighleyData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInKeighley() {
   useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInKeighley() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_KEIGHLEY} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Keighley"
         description="Need someone to check your roof in Keighley? Add your postcode, a few details of what you need, and receive free quotes from the highest quality roofers near you - within minutes."
@@ -75,6 +77,13 @@ function RoofersInKeighley() {
         <Feature county='Keighley' cityName='Keighley' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_KEIGHLEY}
+        activeTabkey="popular"
+        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
+      />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_KEIGHLEY}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -90,18 +99,12 @@ function RoofersInKeighley() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_KEIGHLEY} />
       <DiscoverNearMe homeData={ROOFERS_DATA_KEIGHLEY} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_KEIGHLEY}
-        activeTabkey="related"
-        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
-      />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
-      />
+        />
+        <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_KEIGHLEY} />
       <Footer />
     </>
   );

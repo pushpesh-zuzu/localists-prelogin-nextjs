@@ -10,6 +10,7 @@ import {
     ROOFERS_DATA_RHYL,
     ROOFERS_TABDATA_RHYL,
     VETTED_DATA_ROOFERS_RHYL,
+    NEARBY_PLACES_ROOFER_RHYL
 } from "./RoofersInRhylData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -28,6 +29,7 @@ import HeroSectionLocation from "../../HeroSectionLocation";
 import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 
 function RoofersInRhyl() {
@@ -38,7 +40,7 @@ function RoofersInRhyl() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={FREQUENTLY_DATA_RHYL} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Rhyl"
                 description="Need a local roofer in Rhyl? Input your postcode, a few details about the project, and get free quotes now from trusted professionals in your area. No pressure, no guesses."
@@ -75,6 +77,12 @@ function RoofersInRhyl() {
                 <Feature county='Denbighshire' cityName='Rhyl' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_RHYL}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_RHYL}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -92,17 +100,12 @@ function RoofersInRhyl() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_RHYL} />
             <DiscoverNearMe homeData={ROOFERS_DATA_RHYL} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_RHYL}
-                activeTabkey="related"
-            />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Roofing/roofingmember.webp"
                 mobileImage="/nearme/Roofing/roofingmembermobile.webp"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_RHYL}/>
             <Footer />
         </>
     );

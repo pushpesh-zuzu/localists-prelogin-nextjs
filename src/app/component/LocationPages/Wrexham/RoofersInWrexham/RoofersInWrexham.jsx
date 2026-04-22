@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_WREXHAM,
   ROOFERS_TABDATA_WREXHAM,
   VETTED_DATA_ROOFERS_WREXHAM,
+  NEARBY_PLACES_ROOFER_WREXHAM,
 } from "./RoofersInWrexhamData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,16 +30,19 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInWrexham() {
-  useScrollToTop()
-  useRegistrationRedirect()
+  useScrollToTop();
+  useRegistrationRedirect();
   const featureRef = useRef(null);
   return (
     <>
-      {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
+      {typeof window !== "undefined" && (
+        <CloseBrowserAbandon serviceId={113} quote_type="req call back" />
+      )}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_WREXHAM} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Wrexham"
         description="Find the best roofers in Wrexham! Just enter your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
@@ -72,16 +76,32 @@ function RoofersInWrexham() {
       />
 
       <div ref={featureRef} style={{ overflowAnchor: "none" }}>
-        <Feature county='Wrexham County Borough' cityName='Wrexham' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
+        <Feature
+          county="Wrexham County Borough"
+          cityName="Wrexham"
+          serviceId={113}
+          serviceName="Roofing"
+          featureRef={featureRef}
+        />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_WREXHAM}
+        activeTabkey="popular"
+      />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_WREXHAM}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
       />
       <WrapperBGWidth>
         <div className="px-[30px] sm:px-10 md:px-16 xl:px-[120px]">
-          <PostCodeSectionLocation2 classNamePostCode="mb-[30px] md:mb-10 mt-[0px] lg:mt-[0px] lg:mb-[60px] lg:justify-center lg:gap-12" serviceId={113} serviceName="Roofing" />
+          <PostCodeSectionLocation2
+            classNamePostCode="mb-[30px] md:mb-10 mt-[0px] lg:mt-[0px] lg:mb-[60px] lg:justify-center lg:gap-12"
+            serviceId={113}
+            serviceName="Roofing"
+          />
         </div>
       </WrapperBGWidth>
       <FAQ
@@ -90,17 +110,12 @@ function RoofersInWrexham() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_WREXHAM} />
       <DiscoverNearMe homeData={ROOFERS_DATA_WREXHAM} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_WREXHAM}
-        activeTabkey="related"
-      />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_WREXHAM} />
       <Footer />
     </>
   );

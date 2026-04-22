@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_WHITEHAVEN,
   ROOFERS_TABDATA_WHITEHAVEN,
   VETTED_DATA_ROOFERS_WHITEHAVEN,
+  NEARBY_PLACES_ROOFER_WHITEHAVEN
 } from "./RoofersInWhitehavenData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInWhitehaven() {
   useScrollToTop();
@@ -40,7 +42,7 @@ function RoofersInWhitehaven() {
         <CloseBrowserAbandon serviceId={113} quote_type="req call back" />
       )}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_WHITEHAVEN} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Whitehaven"
         description="Get free quotes with no pressure to commit from the best Roofers in Whitehaven. All you need to do is enter your postcode below and tell us a few details about your roofing project. It takes under a minute. "
@@ -83,6 +85,13 @@ function RoofersInWhitehaven() {
         />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_WHITEHAVEN}
+        activeTabkey="popular"
+        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
+      />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_WHITEHAVEN}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -104,18 +113,12 @@ function RoofersInWhitehaven() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_WHITEHAVEN} />
       <DiscoverNearMe homeData={ROOFERS_DATA_WHITEHAVEN} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_WHITEHAVEN}
-        activeTabkey="related"
-        heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-[485.5px]"
-      />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_WHITEHAVEN}/>
       <Footer />
     </>
   );

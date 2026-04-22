@@ -271,19 +271,31 @@ export const ROOFERS_TABDATA_BRADFORD = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+  //   { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
+  //   { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
+  //   { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+  //   { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
+  //   {
+  //     title: "Roofers Huddersfield",
+  //     url: "/en/gb/roofers-near-me/huddersfield",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_BRADFORD = [
     { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
     { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
     { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+    { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
     { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
     {
       title: "Roofers Huddersfield",
       url: "/en/gb/roofers-near-me/huddersfield",
     },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_BRADFORD = [
   `Roof problems rarely book an appointment. They often turn up unannounced. And when they do, you want a roofer you can trust to fix it properly, quickly, and without overcharging. 
    <br/><br/> 

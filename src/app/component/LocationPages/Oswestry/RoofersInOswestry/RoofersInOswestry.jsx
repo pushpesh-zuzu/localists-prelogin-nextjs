@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_OSWESTRY,
   ROOFERS_TABDATA_OSWESTRY,
   VETTED_DATA_ROOFERS_OSWESTRY,
+  NEARBY_PLACES_ROOFER_OSWESTRY
 } from "./RoofersInOswestryData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInOswestry() {
   useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInOswestry() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_OSWESTRY} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="Oswestry"
         description="Get free, no-obligation quotes from reliable and vetted Oswestry roofers. Just pop in your postcode, share a few details about the work and get free quotes delivered straight to your inbox. It only takes a minute."
@@ -75,6 +77,12 @@ function RoofersInOswestry() {
         <Feature county='Shropshire' cityName='Oswestry' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_OSWESTRY}
+        activeTabkey="popular"
+      />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_OSWESTRY}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -90,17 +98,12 @@ function RoofersInOswestry() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_OSWESTRY} />
       <DiscoverNearMe homeData={ROOFERS_DATA_OSWESTRY} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_OSWESTRY}
-        activeTabkey="related"
-      />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_OSWESTRY}/>
       <Footer />
     </>
   );

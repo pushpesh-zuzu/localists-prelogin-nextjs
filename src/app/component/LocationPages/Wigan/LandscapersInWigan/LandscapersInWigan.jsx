@@ -10,6 +10,7 @@ import {
   LANDSCAPING_DATA_WIGAN,
   LANDSCAPING_TABDATA_WIGAN,
   VETTED_DATA_LANDSCAPING_WIGAN,
+  NEARBY_PLACES_ROOFER_WIGAN
 } from "./LandscapersInWiganData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 import LandScapingGardenPopularJobs from "@/app/component/Nearme/LandscaperGardenNearMe/LandScapingGardenPopularJobs";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function LandscapersInWigan() {
   useScrollToTop();
@@ -40,7 +42,7 @@ function LandscapersInWigan() {
         <CloseBrowserAbandon serviceId={43} quote_type="req call back" />
       )}
       <FAQScript FAQ={FREQUENTLY_DATA_LANDSCAPING_WIGAN} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Landscapers"
         heading2="Wigan"
         description="Looking for reliable landscapers in Wigan? Enter your postcode now, tell us a few details of your project, and we’ll match you with experienced experts ready to come and quote for you. No fuss, no pressure - takes less than a minute to get started."
@@ -86,6 +88,12 @@ function LandscapersInWigan() {
         />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={LANDSCAPING_TABDATA_WIGAN}
+        activeTabkey="popular"
+      />
       <AdviceInsightNearMe
         articles={LANDSCAPING_ADVICEINSIGHT_WIGAN}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -107,17 +115,12 @@ function LandscapersInWigan() {
       />
       <UserFeedbackNearMe2 feedbackData={LANDSCAPING_FEEDBACK_WIGAN} />
       <DiscoverNearMe homeData={LANDSCAPING_DATA_WIGAN} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={LANDSCAPING_TABDATA_WIGAN}
-        activeTabkey="related"
-      />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Landscaping/landscapingmember.webp"
         mobileImage="/nearme/Landscaping/landscapingmember.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_WIGAN}/>
       <Footer />
     </>
   );

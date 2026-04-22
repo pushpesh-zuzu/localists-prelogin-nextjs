@@ -10,6 +10,7 @@ import {
     ROOFERS_DATA_NANTWICH,
     ROOFERS_TABDATA_NANTWICH,
     VETTED_DATA_ROOFERS_NANTWICH,
+    NEARBY_PLACES_ROOFER_NANTWICH
 } from "./RoofersInNantwichData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInNantwich() {
     useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInNantwich() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_NANTWICH} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Nantwich"
                 description="Are you in need of high-quality roofers in Nantwich? All you need to do is enter your postcode here, tell us a few details about the work you need done, and get quotes straight to your inbox from roofing professionals near you."
@@ -75,6 +77,12 @@ function RoofersInNantwich() {
                 <Feature cityName="Nantwich" county='Cheshire East' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_NANTWICH}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_NANTWICH}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -92,17 +100,12 @@ function RoofersInNantwich() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_NANTWICH} />
             <DiscoverNearMe homeData={ROOFERS_DATA_NANTWICH} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_NANTWICH}
-                activeTabkey="related"
-            />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Roofing/roofingmember.webp"
                 mobileImage="/nearme/Roofing/roofingmembermobile.webp"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_NANTWICH} />
             <Footer />
         </>
     );

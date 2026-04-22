@@ -223,15 +223,24 @@ export const ROOFERS_TABDATA_KENDAL = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
+  //   { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
+  //   { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  //   { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
+  //   { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
+
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_KENDAL =[
     { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
+    { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
     { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
     { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
     { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
 
-  ],
-  findMore: [],
-};
+  ]
 
 export const VETTED_DATA_ROOFERS_KENDAL = [
   `Are your roof tiles starting to grow wings every time it gets windy? If you’re noticing loose edges, rattling, or an odd tile out of place, it’s usually a sign your roof needs attention.

@@ -10,6 +10,7 @@ import {
     ROOFERS_DATA_BLACKPOOL,
     ROOFERS_TABDATA_BLACKPOOL,
     VETTED_DATA_ROOFERS_BLACKPOOL,
+    NEARBY_PLACES_ROOFER_BLACKPOOL
 } from "./RoofersInBlackpoolData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInBlackpool() {
     useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInBlackpool() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_BLACKPOOL} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Blackpool"
                 description="Find local expert roofers in Blackpool for all kinds of roofing work. Add your postcode, pop in a few details and get matched instantly with specialists in your area. Get free, no obligation quotes delivered straight to your inbox."
@@ -75,6 +77,13 @@ function RoofersInBlackpool() {
                 <Feature cityName="Blackpool" county='Borough of Blackpool' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_BLACKPOOL}
+                activeTabkey="popular"
+                heightClass="min-h-[390px] h-auto md:h-auto lg:min-h-[485.5px] lg:h-auto"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_BLACKPOOL}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -92,18 +101,12 @@ function RoofersInBlackpool() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_BLACKPOOL} />
             <DiscoverNearMe homeData={ROOFERS_DATA_BLACKPOOL} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_BLACKPOOL}
-                activeTabkey="related"
-                heightClass="min-h-[390px] h-auto md:h-auto lg:min-h-[485.5px] lg:h-auto"
-            />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Roofing/roofingmember.webp"
                 mobileImage="/nearme/Roofing/roofingmembermobile.webp"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_BLACKPOOL} />
             <Footer />
         </>
     );

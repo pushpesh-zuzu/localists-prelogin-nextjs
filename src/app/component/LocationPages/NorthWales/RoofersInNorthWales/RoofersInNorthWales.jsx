@@ -10,6 +10,7 @@ import {
   ROOFERS_DATA_NORTH_WALES,
   ROOFERS_TABDATA_NORTH_WALES,
   VETTED_DATA_ROOFERS_NORTH_WALES,
+  NEARBY_PLACES_ROOFER_NORTH_WALES
 } from "./RoofersInNorthWalesData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInNorthWales() {
   useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInNorthWales() {
     <>
       {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
       <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_NORTH_WALES} />
-      <HeroSectionLocation
+      <HeroSectionLocation 
         heading1="Roofers"
         heading2="North Wales"
         description="Need a local roofing specialist in North Wales? Get free no obligation quotes from the highest quality roofers near you. Just enter your postcode, tell us what you need done, and you’ll receive quotes in your inbox. Takes less than a minute."
@@ -75,6 +77,12 @@ function RoofersInNorthWales() {
         <Feature county='Conwy' cityName='North Wales' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
       </div>
 
+      <HireRelatedToServiceNearMe
+        heading1="Hire with"
+        heading2="confidence."
+        tabData={ROOFERS_TABDATA_NORTH_WALES}
+        activeTabkey="popular"
+      />
       <AdviceInsightNearMe
         articles={ROOFERS_ADVICEINSIGHT_NORTH_WALES}
         padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -90,17 +98,12 @@ function RoofersInNorthWales() {
       />
       <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_NORTH_WALES} />
       <DiscoverNearMe homeData={ROOFERS_DATA_NORTH_WALES} />
-      <HireRelatedToServiceNearMe
-        heading1="Hire with"
-        heading2="confidence."
-        tabData={ROOFERS_TABDATA_NORTH_WALES}
-        activeTabkey="related"
-      />
       <NearmeMember
         description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
         desktopImage="/nearme/Roofing/roofingmember.webp"
         mobileImage="/nearme/Roofing/roofingmembermobile.webp"
       />
+      <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_NORTH_WALES} />
       <Footer />
     </>
   );

@@ -59,7 +59,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BIRKENHEAD = [
   },
   {
     type: "pricingTable",
-    title: "Average cost of roofing Birkenhead",
+    title: "Average cost of roofing in Birkenhead",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
@@ -194,7 +194,23 @@ export const ROOFERS_TABDATA_BIRKENHEAD = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
+  //   { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  //   { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+  //   { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  //   { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+  //   { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+  //   { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+  //   {
+  //     title: "Roofers Ellesmere Port",
+  //     url: "/en/gb/roofers-near-me/ellesmere-port",
+  //   },
+  // ],
+  findMore: [],
+};
+
+export const NEARBY_PLACES_ROOFER_BIRKENHEAD = [
     { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
     { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
     { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
@@ -206,9 +222,7 @@ export const ROOFERS_TABDATA_BIRKENHEAD = {
       title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_BIRKENHEAD = [
   `Roof giving you that sinking feeling? Maybe it's a damp patch that shows up every time it rains, or a tile that you’ve been "meaning to sort out" for three months now. Either way, your roof needs help, and the longer you wait, the more it will cost. 
   <br/><br/> 

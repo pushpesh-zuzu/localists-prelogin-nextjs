@@ -10,6 +10,7 @@ import {
     ROOFERS_DATA_STALYBRIDGE,
     ROOFERS_TABDATA_STALYBRIDGE,
     VETTED_DATA_ROOFERS_STALYBRIDGE,
+    NEARBY_PLACES_ROOFER_STALYBRIDGE
 } from "./RoofersInStalybridgeData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInStalybridge() {
     useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInStalybridge() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_STALYBRIDGE} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Stalybridge"
                 description="Are you in need of a roofer in Stalybridge? Get up to 5 free quotes straight to your inbox from skilled local roofers working in your local area. All you need to do is enter your postcode and tell us what's going on - takes less than a minute."
@@ -75,6 +77,13 @@ function RoofersInStalybridge() {
                 <Feature cityName="Stalybridge" county='Greater Manchester' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_STALYBRIDGE}
+                activeTabkey="popular"
+                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-auto"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_STALYBRIDGE}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -92,18 +101,12 @@ function RoofersInStalybridge() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_STALYBRIDGE} />
             <DiscoverNearMe homeData={ROOFERS_DATA_STALYBRIDGE} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_STALYBRIDGE}
-                activeTabkey="related"
-                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  h-auto md:h-auto lg:h-auto"
-            />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Roofing/roofingmember.webp"
                 mobileImage="/nearme/Roofing/roofingmembermobile.webp"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_STALYBRIDGE}/>
             <Footer />
         </>
     );

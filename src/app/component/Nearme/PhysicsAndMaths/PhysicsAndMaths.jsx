@@ -55,8 +55,8 @@ function PhysicsAndMaths() {
                 bannerImage="/nearme/physics-maths.webp"
                 bannerImageMobile="/nearme/physicsmobile.webp"
                 altText="Physics and Maths Tutor"
-                serviceId=""
-                serviceName="Physics And Maths"
+                serviceId={117}
+                serviceName="Physics and Maths"
             />
             <VettedSection
                 paragraph={VETTED_DATA_PHYSICS_AND_MATHS}
@@ -67,6 +67,7 @@ function PhysicsAndMaths() {
 
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
+                showRightTabButtons
                 heading1="Physics and Maths"
                 headingMiddle="Tutors"
                 heading2="in your area"
@@ -75,14 +76,14 @@ function PhysicsAndMaths() {
             />
             <UserFeedbackNearMe2 feedbackData={PHYSICS_AND_MATHS_FEEDBACK} />
             <AboutServicesAndQuestions
-                serviceId=""
-                serviceName="Physics And Maths"
+                serviceId={117}
+                serviceName="Physics and Maths"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
             <FAQ
                 data={FREQUENTLY_DATA_PHYSICS_AND_MATHS["physics-maths-tutors-near-me"]}
             />
-            <DiscoverNearMe homeData={PHYSICS_AND_MATHS_DATA} />
+            <DiscoverNearMe background="#f7f7f7f7" homeData={PHYSICS_AND_MATHS_DATA} />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
             />

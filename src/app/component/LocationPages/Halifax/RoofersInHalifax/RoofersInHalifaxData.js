@@ -211,16 +211,27 @@ export const ROOFERS_TABDATA_HALIFAX = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
     ],
-    related: [
+    // related: [
+    //     { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+    //     { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
+    //     { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
+    //     { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+    //     { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
+    //     { title: "Roofers Huddersfield", url: "/en/gb/roofers-near-me/huddersfield" },
+    // ],
+    findMore: [],
+};
+
+export const NEARBY_PLACES_ROOFER_HALIFAX = [
         { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
         { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
         { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
         { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
         { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
         { title: "Roofers Huddersfield", url: "/en/gb/roofers-near-me/huddersfield" },
-    ],
-    findMore: [],
-};
+        { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
+
+    ]
 
 export const VETTED_DATA_ROOFERS_HALIFAX = [
     `If you’ve spent the last few rainstorms getting more and more creative with buckets and rags, it’s probably time to call in the experts.

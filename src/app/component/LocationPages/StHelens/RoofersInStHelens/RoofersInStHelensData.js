@@ -209,7 +209,23 @@ export const ROOFERS_TABDATA_ST_HELENS = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  //   { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
+  //   { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+  //   { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+  //   { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+  //   { title: "Roofers warrington", url: "/en/gb/roofers-near-me/warrington" },
+  //   { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  //   { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  //   {
+  //     title: "Roofers Ellesmere Port",
+  //     url: "/en/gb/roofers-near-me/ellesmere-port",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_ST_HELENS = [
     { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
     { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
     { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
@@ -222,10 +238,7 @@ export const ROOFERS_TABDATA_ST_HELENS = {
       title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-  ],
-  findMore: [],
-};
-
+  ]
 export const VETTED_DATA_ROOFERS_ST_HELENS = [
   `With roofs, reality hits when you hear that persistent rattling sound and start noticing leaks in different parts of the house.
   <br/><br/> 

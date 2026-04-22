@@ -10,6 +10,7 @@ import {
     ROOFERS_DATA_WORKINGTON,
     ROOFERS_TABDATA_WORKINGTON,
     VETTED_DATA_ROOFERS_WORKINGTON,
+    NEARBY_PLACES_ROOFER_WORKINGTON
 } from "./RoofersInWorkingtonData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInWorkington() {
     useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInWorkington() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_WORKINGTON} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Workington"
                 description="Get free, no-obligation quotes from highest rated Workington Roofers. Just enter your postcode, share details about your roof problem, and within minutes, you will get matched. It's that easy."
@@ -75,6 +77,13 @@ function RoofersInWorkington() {
                 <Feature cityName="Workington" county='Cumberland' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_WORKINGTON}
+                activeTabkey="popular"
+                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[421px] h-auto md:h-auto lg:h-[485.5px]"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_WORKINGTON}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -92,18 +101,12 @@ function RoofersInWorkington() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_WORKINGTON} />
             <DiscoverNearMe homeData={ROOFERS_DATA_WORKINGTON} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_WORKINGTON}
-                activeTabkey="related"
-                heightClass="min-h-[400px] [@media(max-width:360px)]:min-h-[422px]  [@media(max-width:360px)]:min-h-[421px] h-auto md:h-auto lg:h-[485.5px]"
-            />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Roofing/roofingmember.webp"
                 mobileImage="/nearme/Roofing/roofingmembermobile.webp"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_WORKINGTON}/>
             <Footer />
         </>
     );

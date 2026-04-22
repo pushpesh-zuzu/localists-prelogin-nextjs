@@ -198,15 +198,22 @@ export const ROOFERS_TABDATA_FORMBY = {
       url: "/en/gb/artificial-grass-installers-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+  //   { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+  //   { title: "Roofers Liverpool ", url: "/en/gb/roofers-near-me/liverpool" },
+  //   { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+  //   { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_FORMBY = [
     { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
     { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
     { title: "Roofers Liverpool ", url: "/en/gb/roofers-near-me/liverpool" },
     { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
     { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-  ],
-  findMore: [],
-};
+  ]
 
 export const VETTED_DATA_ROOFERS_FORMBY = [
   `Waking up in the middle of a storm to find water dripping from the ceiling is enough to ruin anyone’s night. You’re half asleep, trying to grab a bucket, or moving furniture out of the way. When that happens, you don’t want to waste time searching blindly for help.

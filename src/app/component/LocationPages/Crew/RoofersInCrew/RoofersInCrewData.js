@@ -5,35 +5,45 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
   },
   {
     type: "p",
-    text: "Roofing mistakes are an expensive headache you don’t need; it’s vital to get the right person for the job the first time. Localists replaces endless scrolling with a simple process: describe your job once, and we’ll connect you with the right experts.",
+    text: "We’ll keep it simple - “Your house is not the same as your neighbours”. Yes! In Crewe, you find different types of properties, even on the same streets. So if you currently live in a 1930s semi in Wistaston, a modern detached home in Haslington, or a traditional railway terrace near the station, it’s very important to work with a roofer who knows your type of roofing material.",
+  },
+  {
+    type: "p",
+    text: "Think about it - your roof is the only thing protecting your home and every single one of your valuables from the elements. If that barrier fails for any reason, everything inside is at risk. So it goes without saying that roofing mistakes are very expensive, but the good thing is, you can certainly avoid them!. And that’s why most homeowners and even property managers in Crewe trust us.",
   },
   {
     type: "pbold",
-    text: "Here’s what you get:",
-    className: "mb-[15px] mt-5 md:mt-[25px] md:mb-5",
+    text: "Here’s a straightforward summary of what you get when you hire a roofer through",
+  },
+  {
+    type: "pbold",
+    text: "Localists:",
   },
   {
     type: "uili",
-    heading: "Matches with local specialists\u00A0",
-    text: ": We connect you with roofers who are already working in the area and understand the property styles common in Crewe - from Victorian terraces to the newer estates.",
+    heading: "Matches with local vetted specialists:\u00A0",
+    text: "We connect you with roofers who are already working in the area and have been thoroughly vetted by us (experience, qualification and background checked).",
     marginTop: true,
   },
   {
     type: "uili",
-    heading: "Quotes based on your specific project\u00A0",
-    text: ": No generic pricing. The details you provide shape the tailored responses you receive.",
-    marginTop: true,
+    heading: "Quotes based on your specific project:\u00A0",
+    text: "No generic pricing. The details you provide shape the tailored responses you receive.",
   },
   {
     type: "uili",
-    heading: "Clear, transparent options\u00A0",
-    text: ": View reviews, experience, and services at a glance before you commit to anything.",
-    marginTop: true,
+    heading: "Clear, transparent options:\u00A0",
+    text: "View experience, service offerings and past projects at a glance before you commit to anything.",
   },
   {
     type: "uili",
-    heading: "Fair market pricing\u00A0",
-    text: ": By comparing multiple quotes, you’ll know exactly what is reasonable for the work involved, helping you avoid overpaying.",
+    heading: "Honest reviews:\u00A0",
+    text: "We've done the legwork by pulling together reviews from every corner of the web - Facebook, Google, Yelp, Trustpilot - so you can trust every roofer's reviews on our platform.",
+  },
+  {
+    type: "uili",
+    heading: "Fair market pricing:\u00A0",
+    text: "You'll receive multiple competitive quotes from local roofers in your area, so you’ll know exactly what is reasonable for the work involved.",
     noMarginBottom: true,
   },
   {
@@ -49,11 +59,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
   },
   {
     type: "p",
-    text: "Roofing prices aren’t fixed in the way people sometimes expect. The cost depends on what’s actually wrong, how easy the roof is to access, and whether scaffolding or specialist materials are needed. A small repair on a single-story extension will naturally look very different from work on a taller, older property.",
+    text: "Roofing prices aren’t fixed in the way people sometimes expect - no two requirements are exactly the same. What you’ll spend largely depends on a few factors like the complexity of the problem, the size of your roof, how easy the roof is to access, and whether scaffolding or specialist materials are needed.",
   },
   {
     type: "p",
-    text: "To give you a sense of what’s typical in Crewe:",
+    text: "We always advise getting quotes from different roofing specialists near you. That way, you get a good understanding of expected averages in your area.",
+  },
+  {
+    type: "p",
+    text: "You can see the table below to give you a sense of what’s typical in Crewe:",
   },
   {
     type: "pricingTable",
@@ -61,14 +75,14 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
-      "Please note, these are average prices based on our own internal data of jobs completed. The price of your job may be higher or a lot lower than the average cost. To get an accurate price,",
+      "The figures above are solely meant to be treated as a guide. The only way to know where your roof sits within that range is to have an actual inspection or assessments carried out by a local roofer. To get an accurate quote",
     prices: [
       {
         text: "General roofing work tends to average around",
         price: "£2,121",
       },
       {
-        text: "Roof repairs usually come in at roughly ",
+        text: "Roof repairs usually come in at roughly",
         price: "£740",
       },
       {
@@ -82,30 +96,20 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CREW = [
     ],
   },
   {
-    type: "p",
-    text: "These figures are only meant as a guide. The only way to know where your roof sits within that range is to have it looked at properly and compare quotes from local roofers who can assess the situation firsthand.",
-    notMarginBottom: true,
-  },
-  {
     type: "h2",
     text: "When is it a repair… And when is it time to replace?",
-    className: "mt-6 md:mt-9 lg:mt-[70px]",
   },
   {
     type: "p",
-    text: "It’s something a lot of people end up thinking about once roof problems start coming back. You fix one thing, then a few months later, something else shows up, and you begin to wonder whether you’re just buying time.",
+    text: "It’s one of the questions we get asked all the time by homeowners in Crewe. But the honest answer is - you can’t really tell most of the time, except someone goes up there to ascertain the extent of damage. You fix one thing today, then a few months later, something else shows up, and you begin to wonder whether you’re just buying time.",
   },
   {
     type: "p",
-    text: "Quite often, a simple repair really is enough. A few slipped tiles, some flashing that’s come loose around the chimney, or a small leak in one spot can usually be sorted without turning the whole house upside down. If most of the roof is still solid and the timber underneath is in good shape, repairing the problem area can be the sensible way forward.",
+    text: "If you have a few tiles out of place, you can simply replace those. But if you’ve reached the point where you’re fixing a new leak every time it rains or the felt underneath has finally given up, patching it up is as good as throwing away money. A replacement roof is often the best way to go in this case.",
   },
   {
     type: "p",
-    text: "Replacement usually comes up when the issues aren’t confined to one place anymore. If different parts of the roof keep failing, tiles are cracking across larger sections - patching it may start to feel like a short-term fix. At that point, people often realise they’re spending again and again without really solving the bigger problem. A replacement roof is often the best way to go in this case.",
-  },
-  {
-    type: "p",
-    text: "Age plays a part too. Some roofs last decades, others less so, depending on materials and how well they’ve been looked after. If yours is edging towards that 25-30 year mark, it’s reasonable to think ahead (possible replacement) rather than just react to the next leak.",
+    text: "Age plays a part too. Some roofs last decades, others less, depending on materials and how well they’ve been looked after. If yours is edging towards that 25-30year mark, we advise that you get a proper assessment from a roofing specialist, as they’ll be able to provide expert guidance and tell you exactly what you’re dealing with.",
     notMarginBottom: true,
   },
   {
@@ -119,22 +123,22 @@ export const ROOFERS_FREQUENTLY_DATA_CREW = [
     key: "1",
     title: "How do you know if a roofer is any good?",
     description: `
-        It often comes down to how they handle the first conversation. Do they explain things clearly without trying to overwhelm you? Are they willing to answer questions without getting irritated? A decent roofer will provide a written quote, show evidence of insurance, and talk you through what actually needs doing, not just what could be done. If it feels steady and transparent, that’s usually a good sign.
-        `,
+    Our best advice is - start by using a platform you can trust, like Localists, so you’re not just picking a random number off a van. Have a proper look at their profile - check the reviews and pictures of their past work. It’s also worth asking if they’ve handled your specific type of roof before (and if they can show you a few examples).
+    `,
   },
   {
     key: "2",
     title: "Should you pay a roofer in cash?",
     description: `
-        Some people do, and it isn’t automatically a problem. But using a bank transfer or card gives you a clear record of what’s been paid and when. Most established roofers are happy to invoice properly. If someone pushes hard for cash only and avoids paperwork, it’s fair to pause and ask why.
-        `,
+    Your choice is ultimately yours. If you feel comfortable paying in cash, we advise that you get a receipt for your payment. Otherwise, a bank transfer is always good as it leaves an automatic payment record you can access and use at any time.
+    `,
   },
   {
     key: "3",
     title: "How can you spot a dodgy roofer?",
     description: `
-        High pressure is usually the giveaway. Unsolicited knocks at the door, dramatic warnings about “serious damage” without showing proof, or requests for large upfront payments should raise eyebrows. Vague pricing and reluctance to provide insurance details are other warning signs. Reputable roofers rely on their work and reputation; they don’t need scare tactics.
-        `,
+    High pressure is usually the giveaway. Unsolicited knocks at the door, dramatic warnings about “serious damage” without showing proof, or requests for large upfront payments should raise eyebrows. Vague pricing and reluctance to provide insurance details are other warning signs. Reputable roofers rely on their work and reputation; they don’t need scare tactics
+    `,
   },
 ];
 export const ROOFERS_ADVICEINSIGHT_CREW = [
@@ -207,34 +211,58 @@ export const ROOFERS_TABDATA_CREW = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
-    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
-    { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
-    { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
-    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
-    { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
-    { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
-    { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
-    { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
-    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-    {
-      title: "Roofers Macclesfield",
-      url: "/en/gb/roofers-near-me/macclesfield",
-    },
-    {
-      title: "Roofers Ellesmere Port",
-      url: "/en/gb/roofers-near-me/ellesmere-port",
-    },
-  ],
+  // related: [
+  //   { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  //   { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  //   { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  //   { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  //   { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  //   { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  //   { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  //   { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  //   { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  //   { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  //   {
+  //     title: "Roofers Macclesfield",
+  //     url: "/en/gb/roofers-near-me/macclesfield",
+  //   },
+  //   {
+  //     title: "Roofers Ellesmere Port",
+  //     url: "/en/gb/roofers-near-me/ellesmere-port",
+  //   },
+  // ],
   findMore: [],
 };
+export const NEARBY_PLACES_ROOFER_CREWE = [
+  { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  {
+    title: "Roofers Macclesfield",
+    url: "/en/gb/roofers-near-me/macclesfield",
+  },
+  {
+    title: "Roofers Ellesmere Port",
+    url: "/en/gb/roofers-near-me/ellesmere-port",
+  },
+];
 export const VETTED_DATA_ROOFERS_CREW = [
-  `When roofs need attention, they have a funny way of demanding it. Whether it’s a persistent leak, rattling gutters, a loose tile, or those frustrating damp marks on the ceiling - whatever your roof is demanding, Localists is here to help.
-  <br/><br/> 
+  `Crewe is not the kind of place where people don’t take care of their homes - it’s quite the opposite. Across town, you’ll find some really decent buildings that are well looked after. For instance…you see those railway terraces near the station or the Victorian-era homes around Nantwich road, most of them still have their original slate roofs from a century ago!. It just shows how much pride people here take in their homes. 
+   <br/><br/> 
   `,
   `
-We connect you directly with experienced local <a href="/en/gb/roofers-near-me" <a target='_blank' rel='noopener noreferrer' style='color:#00afe3;'>roofers near you</a> in Crewe. Simply tell us what you need and receive up to 5 free, no-obligation quotes. Zero pressure. No awkward chasing.
+But the reality is - the weather doesn’t care how well you look after your place. With the typical “Crewe weather” - the relentless rain and those gusts sweeping in from the Irish Sea - your roof takes all the stress. And now you might be tempted to get up there and sort it yourself, but trust me, it’s not the best idea unless, of course, you’re a roofer (and let’s be honest, you probably aren’t). You’ve got to let the professionals handle it, and that’s where we come in.
+ <br/><br/>
+`,
+  `
+With Localists, you give us your postcode and tell us what you need, and we’ll match you with the right, vetted professionals who know the area so well - simple as that!
 `,
 ];
 
@@ -260,22 +288,22 @@ export const POPULAR_SERVICES_ROOFERS_CREW = [
 export const ROOFERS_FEEDBACK_CREW = [
   {
     id: 1,
-    text: "We’d been putting off getting the roof checked because nothing looked urgent from the ground. Then a small leak showed up in the spare room after heavy rain. The roofer didn’t make it dramatic; he showed us photos of the cracked tiles and explained what needed to be done. It was sorted within a couple of days and hasn’t been an issue since.",
-    name: " Eleanor B.",
+    text: "We were dealing with a roof problem, and found a local roofer to sort it out the next day. No hassle, no chasing. Highly recommend Localists.",
+    name: "Eleanor B.",
   },
   {
     id: 2,
-    text: "After a windy weekend, I found bits of tile in the driveway and knew I couldn’t ignore it. I expected it to be a bigger job than it was. The quote was clear, the timing worked around my shifts, and the cleanup was thorough. It felt handled properly from start to finish.",
-    name: " Callum D.",
+    text: "We needed a local roofer to replace some missing tiles. Found one through Localists who provided us with clear quotes. Very professional from start to finish.",
+    name: "Callum D.",
   },
   {
     id: 3,
-    text: "Our house is older, and we weren’t sure whether we were looking at another repair or finally replacing the roof. What stood out was the honesty. We were given both options with pros and cons rather than being steered toward the expensive one. That made the decision much easier.",
+    text: "Our house is older, and we weren’t sure whether we were looking at another repair or finally replacing the roof. Got 4 quotes from Localists, all pointing to replacement, unfortunately. But we’ve sorted it out now",
     name: "Meera P.",
   },
   {
     id: 4,
-    text: "Our garage roof had clearly seen better days, and we knew it wouldn’t last forever. We just didn’t want to be talked into more work than necessary. The advice felt measured and practical. We replaced what needed replacing and left the rest alone. No drama, no upselling, just sensible guidance.",
+    text: "Our garage roof needed some work done. After a neighbour helped us patch it the last time, it rained and water still got in. Finally got a roofer to fix it.",
     name: "Andrew C.",
   },
 ];

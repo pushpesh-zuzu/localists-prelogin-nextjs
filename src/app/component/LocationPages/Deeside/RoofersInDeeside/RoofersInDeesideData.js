@@ -13,7 +13,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DEESIDE = [
   },
   {
     type: "pricingTable",
-    title: "Average cost of roofing Deeside",
+    title: "Average cost of roofing in Deeside",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
@@ -185,7 +185,31 @@ export const ROOFERS_TABDATA_DEESIDE = {
     },
   ],
 
-  related: [
+  // related: [
+  //   { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+  //   { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+  //   { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+  //   { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+  //   { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
+  //   { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+  //   { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  //   { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+  //   { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
+  //   { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
+  //   { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+  //   { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+  //   { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+  //   { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
+  //   { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
+  //   { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+  //   {
+  //     title: "Roofers Ellesmere Port",
+  //     url: "/en/gb/roofers-near-me/ellesmere-port",
+  //   },
+  // ],
+  findMore: [],
+};
+  export const NEARBY_PLACES_ROOFER_DEESIDE = [
     { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
     { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
     { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
@@ -206,9 +230,7 @@ export const ROOFERS_TABDATA_DEESIDE = {
       title: "Roofers Ellesmere Port",
       url: "/en/gb/roofers-near-me/ellesmere-port",
     },
-  ],
-  findMore: [],
-};
+];
 export const VETTED_DATA_ROOFERS_DEESIDE = [
   `Are your roof tiles starting to dance every time it rains? Gutters shaking, and you lying in bed hoping it holds together till morning? It might be time to get it checked by professionals.
   <br/><br/> 

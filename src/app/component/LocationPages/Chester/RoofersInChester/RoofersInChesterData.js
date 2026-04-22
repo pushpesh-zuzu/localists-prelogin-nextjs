@@ -239,38 +239,62 @@ export const ROOFERS_TABDATA_CHESTER = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
-    { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
-    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-    { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
-    { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
-    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
-    { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
-    { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
-    { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
-    { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
-    { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
-    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
-    { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
-    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
-    {
-      title: "Roofers Macclesfield",
-      url: "/en/gb/roofers-near-me/macclesfield",
-    },
-    {
-      title: "Roofers Ellesmere Port",
-      url: "/en/gb/roofers-near-me/ellesmere-port",
-    },
-  ],
+  // related: [
+  //   { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+  //   { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  //   { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  //   { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  //   { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  //   { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  //   { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+  //   { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  //   { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  //   { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  //   { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  //   { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+  //   { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+  //   { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+  //   {
+  //     title: "Roofers Macclesfield",
+  //     url: "/en/gb/roofers-near-me/macclesfield",
+  //   },
+  //   {
+  //     title: "Roofers Ellesmere Port",
+  //     url: "/en/gb/roofers-near-me/ellesmere-port",
+  //   },
+  // ],
   findMore: [],
 };
+export const NEARBY_PLACES_ROOFER_CHESTER = [
+  { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+  { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+  { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+  { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+  { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+  {
+    title: "Roofers Macclesfield",
+    url: "/en/gb/roofers-near-me/macclesfield",
+  },
+  {
+    title: "Roofers Ellesmere Port",
+    url: "/en/gb/roofers-near-me/ellesmere-port",
+  },
+];
 export const VETTED_DATA_ROOFERS_CHESTER = [
   `Roofs are great at staying out of sight and out of mind - right up until they decide to cause a scene. One day everything’s fine, the next there’s a suspicious drip, a tile that’s gone AWOL, or rain setting up camp where it definitely doesn’t belong.
   <br/><br/> 
   `,
   `
-Whether it’s a quick repair, a complete roof overhaul, or an urgent fix after a storm, we’ll connect you with the <a href="/en/gb/roofers-near-me" <a target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>best roofers</a> in Chester. Get started and receive free no obligation quotes from local experts near you. No chasing callbacks. No technical waffle. No headaches, which you didn’t sign up for.
+Whether it’s a quick repair, a complete roof overhaul, or an urgent fix after a storm, we’ll connect you with the <a href="/en/gb/roofers-near-me" target='_blank' rel='noopener noreferrer' style='color:#00AFE3;'>best roofers</a> in Chester. Get started and receive free no obligation quotes from local experts near you. No chasing callbacks. No technical waffle. No headaches, which you didn’t sign up for.
 `,
 ];
 

@@ -185,7 +185,7 @@ relative overflow-hidden">
             {/* LEFT CONTENT */}
             <div className="z-10 flex-1 text-left">
               <H3 className="text-white tracking-wide md:tracking-[-0.03em] md:!text-[22px] md:!leading-[24px]
-        lg:!text-[40px] lg:!leading-[45.3px] xl:!text-[45px] xl:!leading-[31.3px] !text-[15px] !leading-[15px]">{text}
+        lg:!text-[40px] lg:!leading-[45.3px] xl:!text-[45px] xl:!leading-[40px] !text-[15px] !leading-[15px]">{quotesBannerText}
               </H3>
 
               <div className="mt-3 md:mt-6 relative">

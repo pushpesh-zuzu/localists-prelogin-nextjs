@@ -10,6 +10,7 @@ import {
     ROOFERS_DATA_MIDDLESBROUGH,
     ROOFERS_TABDATA_MIDDLESBROUGH,
     VETTED_DATA_ROOFERS_MIDDLESBROUGH,
+    NEARBY_PLACES_ROOFER_MIDDLESBROUGH
 } from "./RoofersInMiddlesbroughData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import { useScrollToTop } from "@/utils/handleScrollToBottom";
 import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "@/app/component/common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function RoofersInMiddlesbrough() {
     useScrollToTop()
@@ -38,7 +40,7 @@ function RoofersInMiddlesbrough() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={113} quote_type="req call back" />}
             <FAQScript FAQ={ROOFERS_FREQUENTLY_DATA_MIDDLESBROUGH} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Roofers"
                 heading2="Middlesbrough"
                 description="Looking for a trusted and reliable roofer in Middlesbrough? Look no further! Enter your postcode, a few details about your project and receive free, no obligation quotes from the best quality roofers in the area. Only takes a minute."
@@ -51,8 +53,8 @@ function RoofersInMiddlesbrough() {
             />
             <VettedSection
                 paragraph={VETTED_DATA_ROOFERS_MIDDLESBROUGH}
-                vettedHeading1="Find Local Vetted Roofers in "
-                vettedHeading2="Middlesbrough"
+                vettedHeading1="Find Local Roofers in "
+                vettedHeading2="Middlesborough"
                 breadcrumb={BREADCRUM_DATA_ROOFERS_MIDDLESBROUGH}
                 extraButton
                 featureRef={featureRef}
@@ -75,6 +77,12 @@ function RoofersInMiddlesbrough() {
                 <Feature county='North Yorkshire' cityName='Middlesbrough' serviceId={113} serviceName="Roofing" featureRef={featureRef} />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={ROOFERS_TABDATA_MIDDLESBROUGH}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={ROOFERS_ADVICEINSIGHT_MIDDLESBROUGH}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -90,17 +98,12 @@ function RoofersInMiddlesbrough() {
             />
             <UserFeedbackNearMe2 feedbackData={ROOFERS_FEEDBACK_MIDDLESBROUGH} />
             <DiscoverNearMe homeData={ROOFERS_DATA_MIDDLESBROUGH} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={ROOFERS_TABDATA_MIDDLESBROUGH}
-                activeTabkey="related"
-            />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Roofing/roofingmember.webp"
                 mobileImage="/nearme/Roofing/roofingmembermobile.webp"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_MIDDLESBROUGH} />
             <Footer />
         </>
     );

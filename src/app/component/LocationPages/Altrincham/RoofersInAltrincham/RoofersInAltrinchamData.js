@@ -218,31 +218,64 @@ export const ROOFERS_TABDATA_ALTRINCHAM = {
     },
   ],
 
-  related: [
-    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-    { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
-    { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
-    { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
-    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
-    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-    { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
-    {
-      title: "Roofers Macclesfield",
-      url: "/en/gb/roofers-near-me/macclesfield",
-    },
-    {
-      title: "Roofers Cheadle Hulme",
-      url: "/en/gb/roofers-near-me/cheadle-hulme",
-    },
-    {
-      title: "Roofers Ashton-Under-Lyne",
-      url: "/en/gb/roofers-near-me/ashton-under-lyne",
-    },
-  ],
+  // related: [
+  //   { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  //   { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  //   { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+  //   { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  //   { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+  //   { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  //   { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  //   { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  //   { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  //   { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+  //   {
+  //     title: "Roofers Macclesfield",
+  //     url: "/en/gb/roofers-near-me/macclesfield",
+  //   },
+  //   {
+  //     title: "Roofers Alderley Edge",
+  //     url: "/en/gb/roofers-near-me/alderley-edge",
+  //   },
+  //   {
+  //     title: "Roofers Cheadle Hulme",
+  //     url: "/en/gb/roofers-near-me/cheadle-hulme",
+  //   },
+  //   {
+  //     title: "Roofers Ashton-Under-Lyne",
+  //     url: "/en/gb/roofers-near-me/ashton-under-lyne",
+  //   },
+  // ],
   findMore: [],
 };
+export const NEARBY_PLACES_ROOFER_ALTRINCHAM = [
+  { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+  { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+  { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+  {
+    title: "Roofers Macclesfield",
+    url: "/en/gb/roofers-near-me/macclesfield",
+  },
+  {
+    title: "Roofers Alderley Edge",
+    url: "/en/gb/roofers-near-me/alderley-edge",
+  },
+  {
+    title: "Roofers Cheadle Hulme",
+    url: "/en/gb/roofers-near-me/cheadle-hulme",
+  },
+  {
+    title: "Roofers Ashton-Under-Lyne",
+    url: "/en/gb/roofers-near-me/ashton-under-lyne",
+  },
+];
 
 export const VETTED_DATA_ROOFERS_ALTRINCHAM = [
   `When your roof starts acting up, it doesn’t take long before it goes from “minor issue” to full-on SOS. Usually, the smartest move is to let a specialist take a look before the damage spreads.

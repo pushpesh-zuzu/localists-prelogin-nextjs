@@ -258,11 +258,14 @@ export const ROOFERS_TABDATA_ASHINGTON = {
             url: "/en/gb/fencing-contractors-near-me",
         },
     ],
-    related: [
-        { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
-    ],
+    // related: [
+    //     { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
+    // ],
     findMore: [],
 };
+export const NEARBY_PLACES_ROOFER_ASHINGTON=[
+        { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
+    ]
 export const VETTED_DATA_ROOFERS_ASHINGTON = [
     `Choosing the right roofer matters - and it’s not always obvious who that is. With so many options out there, the truth is - it’s hard to tell who you can really trust. How do you know you’re choosing a professional - not just <i>a bloke with a ladder and a van, or someone whose five-star reviews are all from family and friends?</i>
   <br/><br/> 

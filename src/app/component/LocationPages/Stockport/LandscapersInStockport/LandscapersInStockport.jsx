@@ -10,6 +10,7 @@ import {
     LANDSCAPING_DATA_STOCKPORT,
     LANDSCAPING_TABDATA_STOCKPORT,
     VETTED_DATA_LANDSCAPING_STOCKPORT,
+    NEARBY_PLACES_ROOFER_STOCKPORT
 } from "./LandscapersInStockportData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 import LandScapingGardenPopularJobs from "@/app/component/Nearme/LandscaperGardenNearMe/LandScapingGardenPopularJobs";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function LandscapersInStockport() {
     useScrollToTop()
@@ -38,7 +40,7 @@ function LandscapersInStockport() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={43} quote_type="req call back" />}
             <FAQScript FAQ={FREQUENTLY_DATA_STOCKPORT} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Landscapers"
                 heading2="Stockport"
                 description="Looking for an expert local landscaper in Stockport? We connect you with the best quality landscapers in the area. Simply enter your postcode and tell us what you need, and in less than a minute, you’ll get free quotes sent straight to your inbox."
@@ -77,6 +79,12 @@ function LandscapersInStockport() {
                 <Feature county='Greater Manchester' cityName='Stockport' serviceId={43} serviceName="Landscaping" featureRef={featureRef} serviceProfessionName="Landscapers" />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={LANDSCAPING_TABDATA_STOCKPORT}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={LANDSCAPING_ADVICEINSIGHT_STOCKPORT}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,17 +102,12 @@ function LandscapersInStockport() {
             />
             <UserFeedbackNearMe2 feedbackData={LANDSCAPING_FEEDBACK_STOCKPORT} />
             <DiscoverNearMe homeData={LANDSCAPING_DATA_STOCKPORT} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={LANDSCAPING_TABDATA_STOCKPORT}
-                activeTabkey="related"
-            />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Landscaping/landscapingmember.webp"
                 mobileImage="/nearme/Landscaping/landscapingmember.webp"
             />
+            <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_STOCKPORT}/>
             <Footer />
         </>
     );

@@ -231,14 +231,20 @@ export const ROOFERS_TABDATA_DONCASTER = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
+  //   { title: "Roofers Rotherham", url: "/en/gb/roofers-near-me/rotherham" },
+  //   { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
+  //   { title: "Roofers Scunthorpe", url: "/en/gb/roofers-near-me/scunthorpe" },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_DONCASTER =[
     { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
     { title: "Roofers Rotherham", url: "/en/gb/roofers-near-me/rotherham" },
     { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
     { title: "Roofers Scunthorpe", url: "/en/gb/roofers-near-me/scunthorpe" },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_DONCASTER = [
   `When tiles start slipping, water begins dripping where it shouldn’t, or gutters clog overnight, that’s your roof’s way of waving a red flag. And when that happens, you need a roofer - fast.
   <br/><br/> 

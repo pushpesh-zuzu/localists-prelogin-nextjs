@@ -1,12 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import FeatureCard from "./FeatureCard";
-import { FetureSearchBox } from "./FetureSearchBox";
 import { useDispatch, useSelector } from "react-redux";
 import { getFetchSellerListData } from "@/lib/store/buyerslice/buyerSlice";
 import Loader from "../../common/Loader/Loader";
-import { useRef } from "react";
 import NearmeH2Heading from "../../Nearme/NearmeH2Heading";
 import Paragraph from "../../UI/Typography/Paragraph";
 
@@ -51,13 +49,78 @@ export default function FetureCardList({
 
   const containerRef = useRef(null);
   const newItemRef = useRef(null);
+  const lastTouchY = useRef(0);
+
+  // ✅ Desktop: wheel scroll chaining
+  const handleWheel = useCallback((e) => {
+    const el = containerRef.current;
+    if (!el) return;
+    const { scrollTop, scrollHeight, clientHeight } = el;
+    const isAtTop = scrollTop <= 0;
+    const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+    if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+      e.preventDefault();
+      window.scrollBy({ top: e.deltaY });
+    }
+  }, []);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || !enableInnerScroll) return;
+    el.addEventListener("wheel", handleWheel, { passive: false });
+    return () => el.removeEventListener("wheel", handleWheel);
+  }, [enableInnerScroll, handleWheel]);
+
+  // ✅ iOS Safari: touchmove pe manually window.scrollBy — ye hi real fix hai
+  const handleTouchStart = useCallback((e) => {
+    lastTouchY.current = e.touches[0].clientY;
+  }, []);
+
+  const handleTouchMove = useCallback(
+    (e) => {
+      if (!enableInnerScroll) return;
+      const el = containerRef.current;
+      if (!el) return;
+
+      const currentY = e.touches[0].clientY;
+      const deltaY = lastTouchY.current - currentY; // positive = niche ja raha hai
+      lastTouchY.current = currentY;
+
+      const { scrollTop, scrollHeight, clientHeight } = el;
+      const isAtTop = scrollTop <= 0;
+      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+
+      const goingDown = deltaY > 0;
+      const goingUp = deltaY < 0;
+
+      // Boundary pe hai aur usi direction mein — inner scroll rok ke window scroll karo
+      if ((isAtTop && goingUp) || (isAtBottom && goingDown)) {
+        e.preventDefault(); // inner scroll band
+        window.scrollBy({ top: deltaY }); // window scroll
+      }
+    },
+    [enableInnerScroll],
+  );
+
+  // passive: false ZAROORI hai — warna e.preventDefault() iOS pe kaam nahi karta
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || !enableInnerScroll) return;
+
+    el.addEventListener("touchstart", handleTouchStart, { passive: true });
+    el.addEventListener("touchmove", handleTouchMove, { passive: false });
+
+    return () => {
+      el.removeEventListener("touchstart", handleTouchStart);
+      el.removeEventListener("touchmove", handleTouchMove);
+    };
+  }, [enableInnerScroll, handleTouchStart, handleTouchMove]);
 
   const handleShowMore = () => {
     setVisibleCount((prev) => prev + STEP);
     if (!enableInnerScroll) {
       setEnableInnerScroll(true);
     }
-
     setTimeout(() => {
       if (newItemRef.current) {
         const containerTop = containerRef.current.getBoundingClientRect().top;
@@ -70,12 +133,13 @@ export default function FetureCardList({
         const element = featureRef?.current;
         if (element) {
           const top =
-            element.getBoundingClientRect().top + window.scrollY - -400;
+            element.getBoundingClientRect().top + window.scrollY + 400;
           window.scrollTo({ top, behavior: "smooth" });
         }
       }
     }, 100);
   };
+
   const visibleSellers = sellers.slice(0, visibleCount);
 
   return (
@@ -83,15 +147,21 @@ export default function FetureCardList({
       className="mx-auto max-w-[1520px] px-[30px] pt-[30px] pb-[40px] md:py-[50px] md:px-16 xl:px-[120px] lg:py-[72px]"
       style={{ overflowAnchor: "none" }}
     >
-      {/* <FetureSearchBox
-        serviceProfessionName={serviceProfessionName}
-        serviceId={serviceId}
-        serviceName={serviceName}
-      /> */}
       <NearmeH2Heading
         headdingblue={`Find ${serviceProfessionName}`}
         headingblack="Near You"
       />
+
+      {enableInnerScroll && (
+        <style>{`
+          .feature-scroll-fix {
+            scrollbar-width: none;
+          }
+          .feature-scroll-fix::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
+      )}
 
       {/* Card Container */}
       <div
@@ -99,13 +169,16 @@ export default function FetureCardList({
         className={`
           ${
             enableInnerScroll
-              ? "max-h-[1205px] overflow-y-auto [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full px-1 pb-0.5 md:pb-[5px] mt-[34px] xl:mt-[46px]"
+              ? "feature-scroll-fix max-h-[1205px] overflow-y-auto mt-[34px] xl:mt-[46px]"
               : "mt-[34px] xl:mt-[46px]"
           }
         `}
-        style={{ overflowAnchor: "none" }}
+        style={{
+          overflowAnchor: "none",
+          WebkitOverflowScrolling: "touch",
+        }}
       >
-        <div className="flex flex-col gap-4 md:gap-12">
+        <div className="flex flex-col gap-4 md:gap-12 px-1">
           {getSellerDataLoader ? (
             <Loader />
           ) : visibleSellers.length ? (
@@ -129,8 +202,7 @@ export default function FetureCardList({
           ) : (
             <div className="flex min-h-[150px]">
               <Paragraph className="m-auto">
-                {" "}
-                No Seller Found in {cityName}{" "}
+                No Seller Found in {cityName}
               </Paragraph>
             </div>
           )}

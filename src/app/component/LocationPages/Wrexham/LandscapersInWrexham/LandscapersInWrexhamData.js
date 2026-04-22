@@ -205,28 +205,36 @@ export const LANDSCAPING_TABDATA_WREXHAM = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
-    { title: "Landscapers Mold", url: "" },
-    { title: "Landscapers Rhyl", url: "" },
-    { title: "Landscapers Conwy", url: "" },
-    { title: "Landscapers Bangor", url: "" },
-    { title: "Landscapers Buckley", url: "" },
-    { title: "Landscapers Deeside", url: "" },
-    { title: "Landscapers Holywell", url: "" },
-    { title: "Landscapers Oswestry", url: "" },
-    { title: "Landscapers Chester", url: "" },
-    { title: "Landscapers Anglesey", url: "" },
-    { title: "Landscapers Colwyn Bay", url: "" },
-    {
-      title: "Landscapers Llandudno",
-      url: "/en/gb/landscapers-near-me/llandudno",
-    },
-    { title: "Landscapers Caernarfon", url: "" },
-    { title: "Landscapers North Wales", url: "" },
-    { title: "Landscapers Ellesmere Port", url: "" },
-  ],
+  // related: [
+  //   // { title: "Landscapers Mold", url: "" },
+  //   // { title: "Landscapers Rhyl", url: "" },
+  //   // { title: "Landscapers Conwy", url: "" },
+  //   // { title: "Landscapers Bangor", url: "" },
+  //   // { title: "Landscapers Buckley", url: "" },
+  //   // { title: "Landscapers Deeside", url: "" },
+  //   // { title: "Landscapers Holywell", url: "" },
+  //   // { title: "Landscapers Oswestry", url: "" },
+  //   // { title: "Landscapers Chester", url: "" },
+  //   // { title: "Landscapers Anglesey", url: "" },
+  //   // { title: "Landscapers Colwyn Bay", url: "" },
+  //   {
+  //     title: "Landscapers Llandudno",
+  //     url: "/en/gb/landscape-gardeners-near-me/llandudno",
+  //   },
+  //   // { title: "Landscapers Caernarfon", url: "" },
+  //   // { title: "Landscapers North Wales", url: "" },
+  //   // { title: "Landscapers Ellesmere Port", url: "" },
+  // ],
   findMore: [],
 };
+export const NEARBY_PLACES_ROOFER_WREXHAM =  [{
+      title: "Landscapers Llandudno",
+      url: "/en/gb/landscape-gardeners-near-me/llandudno",
+ }, {
+    title: "Landscapers Prestatyn",
+    url: "/en/gb/landscape-gardeners-near-me/prestatyn",
+  },
+    ]
 export const VETTED_DATA_LANDSCAPING_WREXHAM = [
   `With the Clwydian Range and Alyn Waters Country Park on your doorstep, theres plenty of inspiration around you to dust off those green fingers and get to work on the garden of your dreams.  <br/><br/> 
   `,
@@ -237,7 +245,6 @@ export const VETTED_DATA_LANDSCAPING_WREXHAM = [
   At Localists, we hook you up with the best landscapers in Wrexham who’ll help you plan for your dream garden and give you competitive quotes - completely free of charge.
   `,
 ];
-
 export const BREADCRUM_DATA_LANDSCAPING_WREXHAM = [
   { title: "Home & Garden", path: "/en/gb/home" },
   {

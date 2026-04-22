@@ -39,7 +39,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_TAMESIDE = [
   },
   {
     type: "pricingTable",
-    title: "Average cost of roofing Tameside",
+    title: "Average cost of roofing in Tameside",
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
@@ -207,7 +207,26 @@ export const ROOFERS_TABDATA_TAMESIDE = {
       url: "/en/gb/fencing-contractors-near-me",
     },
   ],
-  related: [
+  // related: [
+  //   { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  //   { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+  //   { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  //   { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  //   { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  //   { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  //   { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+  //   {
+  //     title: "Roofers Cheadle Hulme",
+  //     url: "/en/gb/roofers-near-me/cheadle-hulme",
+  //   },
+  //   {
+  //     title: "Roofers Ashton-Under-Lyne",
+  //     url: "/en/gb/roofers-near-me/ashton-under-lyne",
+  //   },
+  // ],
+  findMore: [],
+};
+export const NEARBY_PLACES_ROOFER_TAMESIDE = [
     { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
     { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
     { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
@@ -223,9 +242,7 @@ export const ROOFERS_TABDATA_TAMESIDE = {
       title: "Roofers Ashton-Under-Lyne",
       url: "/en/gb/roofers-near-me/ashton-under-lyne",
     },
-  ],
-  findMore: [],
-};
+  ]
 export const VETTED_DATA_ROOFERS_TAMESIDE = [
   `It starts with a brown ring on the bedroom ceiling. Small enough to ignore on a Monday. Noticeably bigger by Thursday. And suddenly you're standing in the spare room on a Saturday morning, staring upward, trying to remember the name of someone - anyone - who once did something with a roof.  
   <br/><br/> 

@@ -10,6 +10,7 @@ import {
     LANDSCAPING_DATA_LLANDUDNO,
     LANDSCAPING_TABDATA_LLANDUDNO,
     VETTED_DATA_LANDSCAPING_LLANDUDNO,
+    NEARBY_PLACES_ROOFER_LLANDUDNO
 } from "./LandscapersInLlandudnoData";
 import CloseBrowserAbandon from "../../../common/CloseBrowserAbandon/CloseBrowserAbandon";
 import VettedSection from "../../../Nearme/VettedSection";
@@ -29,6 +30,7 @@ import useRegistrationRedirect from "@/hooks/useRegistrationRedirect";
 import WrapperBGWidth from "../../../common/WrapperBGWidth/WrapperBGWidth";
 import PostCodeSectionLocation2 from "../../PostCodeSectionLocation2";
 import LandScapingGardenPopularJobs from "@/app/component/Nearme/LandscaperGardenNearMe/LandScapingGardenPopularJobs";
+import NearbyPlaces from "@/app/component/common/NearByPlaces/NearbyPlaces";
 
 function LandscapersInLlandudno() {
     useScrollToTop()
@@ -38,7 +40,7 @@ function LandscapersInLlandudno() {
         <>
             {typeof window !== "undefined" && <CloseBrowserAbandon serviceId={43} quote_type="req call back" />}
             <FAQScript FAQ={FREQUENTLY_DATA_LLANDUDNO} />
-            <HeroSectionLocation
+            <HeroSectionLocation 
                 heading1="Landscapers"
                 heading2="Llandudno"
                 description="Looking for landscaping professionals in Llandudno? Look no further! Just enter your postcode below and tell us exactly what you need, and you’ll receive free quotes from the highest quality landscapers in the area - takes only a minute"
@@ -77,6 +79,12 @@ function LandscapersInLlandudno() {
                 <Feature county='Conwy' cityName='Llandudno' serviceId={43} serviceName="Landscaping" featureRef={featureRef} serviceProfessionName="Landscapers" />
             </div>
 
+            <HireRelatedToServiceNearMe
+                heading1="Hire with"
+                heading2="confidence."
+                tabData={LANDSCAPING_TABDATA_LLANDUDNO}
+                activeTabkey="popular"
+            />
             <AdviceInsightNearMe
                 articles={LANDSCAPING_ADVICEINSIGHT_LLANDUDNO}
                 padding="px-7.5 py-[30px] sm:px-10 md:px-16 md:py-10 xl:px-[120px] lg:py-[72px]"
@@ -94,17 +102,12 @@ function LandscapersInLlandudno() {
             />
             <UserFeedbackNearMe2 feedbackData={LANDSCAPING_FEEDBACK_LLANDUDNO} />
             <DiscoverNearMe homeData={LANDSCAPING_DATA_LLANDUDNO} />
-            <HireRelatedToServiceNearMe
-                heading1="Hire with"
-                heading2="confidence."
-                tabData={LANDSCAPING_TABDATA_LLANDUDNO}
-                activeTabkey="related"
-            />
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
                 desktopImage="/nearme/Landscaping/landscapingmember.webp"
                 mobileImage="/nearme/Landscaping/landscapingmember.webp"
-            />
+                />
+                <NearbyPlaces NearByPlacesData={NEARBY_PLACES_ROOFER_LLANDUDNO}/>
             <Footer />
         </>
     );

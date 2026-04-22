@@ -213,14 +213,19 @@ export const ROOFERS_TABDATA_SCUNTHORPE = {
             url: "/en/gb/artificial-grass-installers-near-me",
         },
     ],
-    related: [
-        { title: "Roofers Grantham", url: "/en/gb/roofers-near-me/grantham" },
-        { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
+    // related: [
+    //     { title: "Roofers Grantham", url: "/en/gb/roofers-near-me/grantham" },
+    //     { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
 
-    ],
+    // ],
     findMore: [],
 };
 
+export const NEARBY_PLACES_ROOFER_SCUNTHORPE =[
+        { title: "Roofers Grantham", url: "/en/gb/roofers-near-me/grantham" },
+        { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
+
+    ]
 export const VETTED_DATA_ROOFERS_SCUNTHORPE = [
     `When you’re spending more time mopping up indoor puddles any time it rains, your roof is definitely trying to tell you something. And it’s best to look at it as soon as possible.
   <br/><br/> 
