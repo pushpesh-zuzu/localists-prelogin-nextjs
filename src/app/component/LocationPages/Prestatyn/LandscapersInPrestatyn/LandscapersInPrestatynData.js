@@ -63,7 +63,7 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_PRESTATYN = [
   },
   {
     type: "p",
-    text: `<a href="/en/gb/roofing-multi-form-ppc" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">Click here</a> to get a quote now.`,
+    text: `<a href="/en/gb/landscaping-multi-form-ppc" target="_blank" rel="noopener noreferrer" style="color:#00afe3;">Click here</a> to get a quote now.`,
     notMarginBottom: true,
   },
   {
@@ -205,7 +205,7 @@ export const NEARBY_PLACES_ROOFER_PRESTATYN = [
   },
 ];
 export const VETTED_DATA_LANDSCAPING_PRESTATYN = [
-  `If you do enjoy a picnic out with friends in Coronation Garden or family time out in the Ffrith Community Park while the kids play in the children’s play area, then you would know just how beautiful and green Prestatyn is. But oftentimes, when it comes to our own private gardens, well, that’s a whole other story.
+  `If you enjoy a picnic out with friends in Coronation Garden or family time out in the Ffrith Community Park while the kids play in the children’s play area, then you would know just how beautiful and green Prestatyn is. But oftentimes, when it comes to our own private gardens, well, that’s a whole other story.
   <br/><br/>`,
   `You see…it’s not that you don’t care for your garden - sometimes life just gets “proper busy”. And if we’re being honest, it’s usually best to leave these kinds of things to the pros. At Localists, we don’t just give you a random bloke with a van; we connect you with actual landscaping professionals who are in your area and can come take a look at your garden in no time. You can look through their reviews, qualifications, and all their past work, all in one place. You can also get multiple quotes from landscapers totally free!  No cost, no obligation.`,
 ];
