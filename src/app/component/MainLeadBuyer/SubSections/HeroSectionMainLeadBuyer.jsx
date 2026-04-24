@@ -170,7 +170,8 @@ export default function HeroSectionMainLeadBuyer() {
                 />
 
                 {/* Mobile input */}
-                <div className="relative md:hidden flex-1 max-w-[200px]">
+                <div className="relative md:hidden flex-1 ">
+                  {/* max-w-[200px] */}
                   <input
                     type="text"
                     value={input}
