@@ -11,6 +11,13 @@ const ALLOWED_SERVICES = [
   "patio-laying",
   "roofing",
   "tree-surgery",
+  "airport-transfers",
+  "personal-trainers",
+  "physics-and-maths",
+  "architects",
+  "painter-and-decorator",
+  "tutoring"
+
 ];
 
 export async function generateMetadata({ params }) {

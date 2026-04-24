@@ -9,6 +9,7 @@ import { setSelectedServiceFormData } from "@/lib/store/findjobslice";
 import Footer from "@/app/component/Footer/Footer";
 import SEO from "@/app/component/common/seo/SEO";
 import CustomerSuccessStories from "@/app/component/SellerRegistrationForm/CustomerSuccessStories";
+import MainLeadBuyer from "@/app/component/MainLeadBuyer/MainLeadBuyer";
 
 
 function page() {
@@ -36,10 +37,11 @@ function page() {
         ]}
         conversion={true}
       />
-      <FindLocalJobs />;
+      {/* <FindLocalJobs />;
       <GrowthSteps />
       <CustomerSuccessStories />
-      <Footer />
+      <Footer /> */}
+      <MainLeadBuyer/>
     </main>
   )
 }
