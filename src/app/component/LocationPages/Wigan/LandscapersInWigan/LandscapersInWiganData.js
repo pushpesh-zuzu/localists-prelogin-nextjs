@@ -271,7 +271,7 @@ export const BREADCRUM_DATA_LANDSCAPING_WIGAN = [
   { title: "Home & Garden", path: "/en/gb/home" },
   {
     title: "Landscaping",
-    path: "/landscape-gardeners-near-me",
+    path: "/en/gb/landscape-gardeners-near-me",
   },
   {
     title: "Wigan",

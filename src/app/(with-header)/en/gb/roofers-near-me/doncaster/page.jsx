@@ -12,13 +12,13 @@ function page() {
   return (
     <>
       <SEO
-        canonicalPath="/en/gb/roofers-near-me/Doncaster"
+        canonicalPath="/en/gb/roofers-near-me/doncaster"
         bannerImage="/nearme/Roofing/roofingbanner.webp"
         breadcrumb={[
           { title: "Home", path: "en/gb" },
           { title: "Home & Garden", path: "en/gb/home" },
           { title: "Roofing", path: "en/gb/roofers-near-me" },
-          { title: "Doncaster", path: "en/gb/roofers-near-me/Doncaster" },
+          { title: "Doncaster", path: "en/gb/roofers-near-me/doncaster" },
         ]}
         conversion={true}
       />
