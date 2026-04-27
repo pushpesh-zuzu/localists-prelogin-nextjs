@@ -34,6 +34,20 @@ const ServiceLocationStep = ({
   const debounceTimer = useRef(null);
   const [isValidPostCode, setIsValidPostCode] = useState(false);
 
+  const normalizePostcode = (postcode) => {
+    return postcode.replace(/\s+/g, "").toUpperCase();
+  };
+
+  const isValidUKPostcode = (postcode) => {
+    const regex = /^([A-Z]{1,2}\d[A-Z\d]?)(\s?\d[A-Z]{2})$/i;
+    return regex.test(postcode.trim());
+  };
+
+  const isFullPostcode = (postcode) => {
+    const cleaned = normalizePostcode(postcode);
+    return cleaned.length >= 5 && cleaned.length <= 7;
+  };
+
   const handlePostcodeChange = (e) => {
     const { name, value } = e.target;
 
@@ -43,14 +57,29 @@ const ServiceLocationStep = ({
       })
     );
 
+    if (!value || value.trim() === "") {
+      setIsValidPostCode(false);
+    }
+
     if (debounceTimer.current) {
       clearTimeout(debounceTimer.current);
     }
 
     debounceTimer.current = setTimeout(() => {
-      if (value && value.length >= 3) {
-        fetchCityFromPostcode(value);
+      const cleaned = normalizePostcode(value);
+
+      // Only proceed if FULL postcode
+      if (!isFullPostcode(cleaned)) return;
+
+      // If full but INVALID → show error
+      if (!isValidUKPostcode(value)) {
+        setIsValidPostCode(false);
+        showToast("error", "Invalid postcode. Please try again.");
+        return;
       }
+
+      // Valid FULL postcode → call API
+      fetchCityFromPostcode(cleaned);
     }, 800);
   };
 
@@ -98,7 +127,7 @@ const ServiceLocationStep = ({
         })
       );
       setIsValidPostCode(false);
-      showToast("error", "No PIN code found! Please try again.");
+      showToast("error", "No Postcode found! Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -141,11 +170,10 @@ const ServiceLocationStep = ({
             <div className="relative">
               <select
                 className={`w-full px-4 py-2 border rounded-sm appearance-none bg-white 
-                    ${
-                      errors?.miles1
-                        ? "border-red-500 ring-1 ring-red-500"
-                        : "border-gray-300"
-                    } 
+                    ${errors?.miles1
+                    ? "border-red-500 ring-1 ring-red-500"
+                    : "border-gray-300"
+                  } 
                     focus:outline-1 focus:ring-1
                     text-gray-700 cursor-pointer`}
                 name="miles1"
@@ -198,11 +226,10 @@ const ServiceLocationStep = ({
             placeholder:text-gray-400
             focus:outline-1 focus:ring-1
             disabled:bg-gray-100 
-            ${
-              errors.postcode
-                ? "border-red-500 focus:ring-red-500 focus:border-red-500"
-                : "focus:ring-black"
-            }
+            ${errors.postcode
+                    ? "border-red-500 focus:ring-red-500 focus:border-red-500"
+                    : "focus:ring-black"
+                  }
           `}
                 name="postcode"
                 value={formData?.postcode || ""}
