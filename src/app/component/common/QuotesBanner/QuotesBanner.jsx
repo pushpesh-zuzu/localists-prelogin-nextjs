@@ -42,8 +42,25 @@ export default function QuotesBanner({
   const dispatch = useDispatch();
   const router = useRouter();
 
+  // Helpers
+  const normalizePostcode = (postcode) => {
+    return postcode.replace(/\s+/g, "").toUpperCase();
+  };
+
+  const isValidUKPostcode = (postcode) => {
+    const regex = /^([A-Z]{1,2}\d[A-Z\d]?)(\s?\d[A-Z]{2})$/i;
+    return regex.test(postcode.trim());
+  };
+
+  const isFullPostcode = (postcode) => {
+    const cleaned = normalizePostcode(postcode);
+    return cleaned.length >= 5 && cleaned.length <= 7;
+  };
+
   useEffect(() => {
-    if (!postcode.trim() || postcode.length < 3) {
+    const cleaned = normalizePostcode(postcode);
+
+    if (!postcode.trim()) {
       setIsValid(false);
       setCity("");
       setError("");
@@ -51,10 +68,26 @@ export default function QuotesBanner({
       return;
     }
 
+    // Don't call API for partial postcode
+    if (!isFullPostcode(cleaned)) {
+      setIsValid(false);
+      setError("");
+      setCity("");
+      return;
+    }
+
+    // Full but invalid → show error
+    if (!isValidUKPostcode(postcode)) {
+      setIsValid(false);
+      setCity("");
+      setError("Please enter a valid postcode!");
+      return;
+    }
+
     const timer = setTimeout(async () => {
       setIsValidating(true);
       try {
-        const response = await dispatch(getCityName({ postcode: postcode }));
+        const response = await dispatch(getCityName({ postcode: cleaned }));
         const newResponse = response?.payload || response;
 
         if (newResponse?.data?.valid) {
@@ -67,7 +100,7 @@ export default function QuotesBanner({
           // Notify parent component - validation success
           if (onValidationSuccess) {
             onValidationSuccess({
-              postcode: postcode,
+              postcode: cleaned,
               city: newResponse.data.city,
               isValid: true,
             });
@@ -100,7 +133,7 @@ export default function QuotesBanner({
   }, [postcode, dispatch, debounceMs, onValidationSuccess, onValidationError]);
 
   const handleChange = (e) => {
-    const value = e.target.value.trim().toUpperCase().slice(0, 10);
+    const value = e.target.value.toUpperCase().slice(0, 10);
     setPostcode(value);
     setError("");
   };

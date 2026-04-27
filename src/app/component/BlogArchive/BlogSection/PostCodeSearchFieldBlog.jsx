@@ -17,8 +17,8 @@ function PostCodeSearchFieldBlog({
   onSubmit,
   margin = true,
   buttonBg = "bg-[#7DD5F1]",
-  serviceId=112,
-  serviceName="Tree Surgery"
+  serviceId = 112,
+  serviceName = "Tree Surgery"
 }) {
   const [postcode, setPostcode] = useState("");
   const [isValidating, setIsValidating] = useState(false);
@@ -27,9 +27,23 @@ function PostCodeSearchFieldBlog({
   const [error, setError] = useState("");
   const [show, setShow] = useState(false);
   const dispatch = useDispatch();
+
+  const normalizePostcode = (postcode) =>
+    postcode.replace(/\s+/g, "").toUpperCase();
+
+  const isValidUKPostcode = (postcode) =>
+    /^([A-Z]{1,2}\d[A-Z\d]?)(\s?\d[A-Z]{2})$/i.test(postcode.trim());
+
+  const isFullPostcode = (postcode) => {
+    const cleaned = normalizePostcode(postcode);
+    return cleaned.length >= 5 && cleaned.length <= 7;
+  };
+
   // Debounced API validation
   useEffect(() => {
-    if (!postcode.trim() || postcode.length < 3) {
+    const cleaned = normalizePostcode(postcode);
+
+    if (!postcode) {
       setIsValid(false);
       setCity("");
       setError("");
@@ -37,10 +51,26 @@ function PostCodeSearchFieldBlog({
       return;
     }
 
+    // Partial → no API
+    if (!isFullPostcode(cleaned)) {
+      setIsValid(false);
+      setCity("");
+      setError("");
+      return;
+    }
+
+    // Full but invalid
+    if (!isValidUKPostcode(postcode)) {
+      setIsValid(false);
+      setCity("");
+      setError("Please enter a valid postcode!");
+      return;
+    }
+
     const timer = setTimeout(async () => {
       setIsValidating(true);
       try {
-        const response = await dispatch(getCityName({ postcode: postcode }));
+        const response = await dispatch(getCityName({ postcode: cleaned }));
         const newResponse = response?.payload || response;
 
         if (newResponse?.data?.valid) {
@@ -52,7 +82,7 @@ function PostCodeSearchFieldBlog({
           // Notify parent component - validation success
           if (onValidationSuccess) {
             onValidationSuccess({
-              postcode: postcode,
+              postcode: cleaned,
               city: newResponse.data.city,
               isValid: true,
             });
@@ -85,7 +115,7 @@ function PostCodeSearchFieldBlog({
   }, [postcode, dispatch, debounceMs, onValidationSuccess, onValidationError]);
 
   const handleChange = (e) => {
-    const value = e.target.value.trim().toUpperCase().slice(0, 10);
+    const value = e.target.value.toUpperCase().slice(0, 10);
     setPostcode(value);
     setError("");
   };
@@ -109,7 +139,7 @@ function PostCodeSearchFieldBlog({
         isValid,
       });
     }
-     setShow(true);
+    setShow(true);
 
   };
 
@@ -118,30 +148,29 @@ function PostCodeSearchFieldBlog({
       handleSubmit();
     }
   };
-    const handleClose = () => {
+  const handleClose = () => {
     setShow(false);
     setPostcode("")
   };
 
-   useEffect(() => {
-      const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
-      if (pendingModal?.shouldOpen) {
-        setSelectedServiceId({
-          id: pendingModal.serviceId,
-          name: pendingModal.serviceName,
-        });
-        dispatch(setbuyerRequestData(pendingModal.buyerRequest));
-        dispatch(setcitySerach(pendingModal.city));
-        setShow(true);
-        dispatch(setBuyerStep(7));
-      }
-    }, [dispatch]);
+  useEffect(() => {
+    const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
+    if (pendingModal?.shouldOpen) {
+      setSelectedServiceId({
+        id: pendingModal.serviceId,
+        name: pendingModal.serviceName,
+      });
+      dispatch(setbuyerRequestData(pendingModal.buyerRequest));
+      dispatch(setcitySerach(pendingModal.city));
+      setShow(true);
+      dispatch(setBuyerStep(7));
+    }
+  }, [dispatch]);
   return (
     <>
       <div
-        className={`relative max-w-[260px] md:max-w-[280px] lg:max-w-[416px] ${
-          margin ? "mt-5 md:mt-6 lg:mt-[40px]" : ""
-        }`}
+        className={`relative max-w-[260px] md:max-w-[280px] lg:max-w-[416px] ${margin ? "mt-5 md:mt-6 lg:mt-[40px]" : ""
+          }`}
       >
         <div
           className="flex items-center bg-white rounded-full overflow-hidden "
@@ -183,18 +212,18 @@ function PostCodeSearchFieldBlog({
           <button
             type="button"
             onClick={handleSubmit}
-            
+
             className={` ${buttonBg} cursor-pointer min-w-[62px] lg:min-w-[100px] font-bold pl-3.5 pr-5 py-[11px] hover:bg-[#00aef3]  lg:pl-[22px] lg:pr-6 lg:py-4 text-white focus:outline-none text-base lg:text-[25px]!`}
           >
             {buttonText}
           </button>
         </div>
 
-      {error && (
-       <p className="ml-[5%] absolute whitespace-nowrap text-left text-red-600 text-base mt-1 max-w-[254px] md:max-w-[246px] lg:max-w-[404px]">
-          {error}
-        </p>
-      )}
+        {error && (
+          <p className="ml-[5%] absolute whitespace-nowrap text-left text-red-600 text-base mt-1 max-w-[254px] md:max-w-[246px] lg:max-w-[404px]">
+            {error}
+          </p>
+        )}
       </div>
       {show && (
         <BuyerRegistration

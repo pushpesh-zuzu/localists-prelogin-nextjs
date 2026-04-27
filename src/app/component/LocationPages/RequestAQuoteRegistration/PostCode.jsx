@@ -39,10 +39,26 @@ function PostCode({
 
     const inputType = "text";
 
+    const normalizePostcode = (postcode) => {
+        return postcode.replace(/\s+/g, "").toUpperCase();
+    };
+
+    const isValidUKPostcode = (postcode) => {
+        const regex = /^([A-Z]{1,2}\d[A-Z\d]?)(\s?\d[A-Z]{2})$/i;
+        return regex.test(postcode.trim());
+    };
+
+    const isFullPostcode = (postcode) => {
+        const cleaned = normalizePostcode(postcode);
+        return cleaned.length >= 5 && cleaned.length <= 7;
+    };
+
     const handlePostcodeChange = async (e) => {
-        const value = e.target.value.trim().toUpperCase().slice(0, 10);
+        const value = e.target.value.toUpperCase().slice(0, 10);
         setPostcode(value);
         setPostalCodeValidate(false);
+
+        const cleaned = normalizePostcode(value);
 
         if (!value) {
             setCity("");
@@ -51,15 +67,26 @@ function PostCode({
             return;
         }
 
-        if (value.length < 3) {
+        // Don't validate partial
+        if (!isFullPostcode(cleaned)) {
+            setCity("");
             setErrors((prev) => ({ ...prev, postcode: "" }));
+            return;
+        }
+
+        // Full but invalid → show error
+        if (!isValidUKPostcode(value)) {
+            setPostalCodeValidate(false);
+            setCity("");
+            setErrors((prev) => ({ ...prev, postcode: true }));
+            dispatch(setbuyerRequestData({ ...buyerRequest, postcode: "" }));
             return;
         }
 
         setCheckingPostcode(true);
 
         try {
-            const response = await dispatch(getCityName({ postcode: value }));
+            const response = await dispatch(getCityName({ postcode: cleaned }));
             const result = response?.unwrap ? await response.unwrap() : response;
 
             if (result?.data?.valid) {

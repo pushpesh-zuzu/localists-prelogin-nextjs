@@ -2,7 +2,6 @@
 
 import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import CheckVerifiedIcon from "../../common/icons/LandingPPCIcon/CheckVerifiedIcon";
 import {
     getCityName,
     setbuyerRequestData,
@@ -13,6 +12,7 @@ import LocationMapIcon from "../../common/icons/SellerRegistration/LocationMapIc
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import FormWrapper from "../FormWrapper";
 import H3 from "../../UI/Typography/H3";
+import { CheckIcon } from "lucide-react";
 
 const PostcodeSearch = ({
     onNext,
@@ -35,10 +35,27 @@ const PostcodeSearch = ({
 
     const showToast = (type, content) => message[type](content);
 
+    const normalizePostcode = (postcode) => {
+        return postcode.replace(/\s+/g, "").toUpperCase();
+    };
+
+    const isValidUKPostcode = (postcode) => {
+        const regex = /^([A-Z]{1,2}\d[A-Z\d]?)(\s?\d[A-Z]{2})$/i;
+        return regex.test(postcode.trim());
+    };
+
+    const isFullPostcode = (postcode) => {
+        const cleaned = normalizePostcode(postcode);
+        return cleaned.length >= 5 && cleaned.length <= 7;
+    };
+
     const handlePincodeChange = async (e) => {
-        const value = e.target.value.slice(0, 10);
+        const value = e.target.value.toUpperCase().slice(0, 10);
         setPincode(value);
-        setPostalCodeValidate(false);
+        setError("");
+        // setPostalCodeValidate(false);
+
+        const cleaned = normalizePostcode(value);
 
         if (!value.trim()) {
             setError("");
@@ -47,15 +64,29 @@ const PostcodeSearch = ({
             return;
         }
 
-        if (value.length < 3) {
+        // Don't validate partial
+        if (!isFullPostcode(cleaned)) {
+            setCity("");
             setPostalCodeValidate(false);
             return;
         }
 
+        // Full but invalid
+        if (!isValidUKPostcode(value)) {
+            setPostalCodeValidate(false);
+            setError("Please enter a valid postcode!");
+            return;
+        }
+
+        // if (value.length < 3) {
+        //     setPostalCodeValidate(false);
+        //     return;
+        // }
+
         setIsCheckingPostcode(true);
 
         try {
-            const response = await dispatch(getCityName({ postcode: value }));
+            const response = await dispatch(getCityName({ postcode: cleaned }));
             const newResponse = response?.unwrap ? await response.unwrap() : response;
 
             if (newResponse?.data?.valid) {
@@ -66,7 +97,7 @@ const PostcodeSearch = ({
                 dispatch(setbuyerRequestData({ postal_code: validPostcode }));
                 setError("");
 
-                handleNext(true);
+                // handleNext(true);
                 // setPercetangForPost(5);
             } else {
                 setPostalCodeValidate(false);
@@ -99,7 +130,7 @@ const PostcodeSearch = ({
     const handleBack = () => {
         prevStep();
     };
-    
+
     return (
         <FormWrapper>
             <div className="max-w-[780px] mx-auto w-full px-[20px] lg:px-0">
@@ -139,9 +170,7 @@ const PostcodeSearch = ({
                                     <LoaderIndicator size="small" />
                                 </div>
                             ) : postalCodeValidate ? (
-                                <div className="h-4 w-4">
-                                    <CheckVerifiedIcon className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5" />
-                                </div>
+                                <CheckIcon className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 bg-green-500 text-white rounded-full p-[2px]" />
                             ) : null}
                         </div>
                         {error && (
