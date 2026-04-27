@@ -196,17 +196,18 @@ export const ROOFERS_TABDATA_ORMSKIRK = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_ORMSKIRK = [
-    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
-    { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
-    { title: "Roofers Crosby", url: "/en/gb/roofers-near-me/crosby" },
-    { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
-    { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
-    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
-    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
-    { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
-    { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
-  ]
-  `If you’ve spent the last rainstorm getting an unwanted workout with buckets and rags, you’ve probably reached the point where that roof repair just can't be ignored any longer. And we know the best roofers near you in Ormskirk that can help.
+  { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
+  { title: "Roofers Crosby", url: "/en/gb/roofers-near-me/crosby" },
+  { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
+  { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+  { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+  { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+  { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
+  { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
+];
+
+export const VETTED_DATA_ROOFERS_ORMSKIRK = [`If you’ve spent the last rainstorm getting an unwanted workout with buckets and rags, you’ve probably reached the point where that roof repair just can't be ignored any longer. And we know the best roofers near you in Ormskirk that can help.
   <br/><br/> 
   `,
   `
