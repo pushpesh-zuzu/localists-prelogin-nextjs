@@ -13,17 +13,17 @@ const features = [
       "Only pay for the jobs you want to quote for. Big, small, or commercial only. The choice is yours!",
   },
   {
-    title: "Full and Genuine Contact Details",
+    title: "Full and genuine contact details",
     description:
       "OTP verified phone numbers, as well as the customers' full address, not just the postcode.",
   },
   {
-    title: "No Contracts",
+    title: "No contracts",
     description:
       "You're not tied down to a monthly contract. Just buy your leads, and go.",
   },
   {
-    title: "Dedicated Account Manager",
+    title: "Dedicated account manager",
     description:
       "You'll have a dedicated account manager to book in jobs for you, and support when you need it.",
   },

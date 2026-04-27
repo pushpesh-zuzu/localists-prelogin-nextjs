@@ -257,7 +257,7 @@ export default function HeroSectionMainLeadBuyer() {
         <div className="flex-1 relative hidden pr-10 lg:pr-0 md:flex justify-start">
           <div className="absolute w-[200px]  lg:w-[400px]  lg:h-[535px] bg-[#0A6EBE] rounded-full blur-2xl opacity-40"></div>
           <Image
-            src="/mainLeadBuyer/hero/leadbuyerhero.webp"
+            src="/mainLeadBuyer/hero/leadbuyerhero1.webp"
             alt="Hero"
             width={400}
             height={535}

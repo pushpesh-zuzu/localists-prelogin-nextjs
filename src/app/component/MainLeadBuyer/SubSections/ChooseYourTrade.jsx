@@ -22,7 +22,7 @@ const visibleTradesMobile = trades.slice(0, visibleCountMobile);
   const hasMoreMobile = visibleCountMobile < trades.length;
   return (
     <WrapperBGWidth className="">
-      <div className="px-7.5 sm:px-10 md:px-16 xl:px-[120px]">
+      <div className="px-7.5 sm:px-10 md:px-16 xl:px-[120px] pb-12 md:pb-15 xl:pb-[72px]">
         <HeadingWrapperMainLeadBuyer
           headdingblue="Choose Your"
           headingblack="Trade"
