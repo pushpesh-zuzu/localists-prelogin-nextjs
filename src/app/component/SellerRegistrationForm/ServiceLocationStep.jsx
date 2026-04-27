@@ -134,19 +134,35 @@ const ServiceLocationStep = ({
   };
 
   const validateAndProceed = () => {
-    if (
-      !formData?.postcode ||
-      (formData.postcode.length < 3 && formData.city)
-    ) {
+    const postcode = formData?.postcode || "";
+    const cleaned = normalizePostcode(postcode);
+
+    // Empty
+    if (!postcode) {
+      showToast("error", "Please enter postcode");
+      return;
+    }
+
+    // Partial
+    if (!isFullPostcode(cleaned)) {
+      showToast("error", "Please enter full postcode");
+      return;
+    }
+
+    // Invalid format
+    if (!isValidUKPostcode(postcode)) {
       showToast("error", "Please enter a valid postcode");
       return;
     }
-    if (!formData?.validPostCode) {
+
+    // API validation failed
+    if (!isValidPostCode) {
       showToast("error", "Please enter a valid postcode");
       return;
-    } else {
-      nextStep();
     }
+
+    // All good
+    nextStep();
   };
   useEffect(() => {
     return () => {
