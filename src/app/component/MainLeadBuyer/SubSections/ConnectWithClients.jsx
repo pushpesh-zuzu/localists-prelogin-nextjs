@@ -166,7 +166,7 @@ function ConnectWithClients({
 
               <button
                 onClick={handleGetStarted}
-                className="bg-[#00AFE3] flex md:min-w-[169px] justify-center items-center hover:bg-[#0099cc] text-white p-2 text-xs md:text-[18px] font-extrabold md:px-4.25 md:py-3.5 lg:py-5 rounded-full"
+                className="cursor-pointer bg-[#00AFE3] flex md:min-w-[169px] justify-center items-center hover:bg-[#0099cc] text-white p-2 text-xs md:text-[18px] font-extrabold md:px-4.25 md:py-3.5 lg:py-5 rounded-full"
               >
                 Get Started
               </button>
