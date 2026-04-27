@@ -21,23 +21,24 @@ function MainLeadBuyer() {
     <ExclusiveLeadsComingSoon/>
     <RealNumbers/>
     <ChooseYourTrade trades={[
-    { label: "Gardening", image: "/homepage/image1.webp" },
-    { label: "Plumbing", image: '/homepage/image3.webp' },
-    { label: "Electricial", image: '/homepage/image4.webp' },
-    { label: "Carpenter", image: '/homepage/image14.webp' },
-    { label: "Gardening", image: "/homepage/image1.webp" },
-    { label: "Plumbing", image: '/homepage/image3.webp' },
-    { label: "Electricial", image: '/homepage/image4.webp' },
-    { label: "Carpenter", image: '/homepage/image14.webp' },
-    { label: "Gardening", image: "/homepage/image1.webp" },
-    { label: "Plumbing", image: '/homepage/image3.webp' },
-    { label: "Electricial", image: '/homepage/image4.webp' },
-    { label: "Carpenter", image: '/homepage/image14.webp' },
-    { label: "Gardening", image: "/homepage/image1.webp" },
-    { label: "Plumbing", image: '/homepage/image3.webp' },
-    { label: "Electricial", image: '/homepage/image4.webp' },
-    { label: "Carpenter", image: '/homepage/image14.webp' },
-  ]}/>
+  { label: "Fence & Gate Installation", image: "/homepage/fenceandgate.webp", link: "fencing-contractors-near-me" },
+  { label: "Driveway Installation", image: "/homepage/driveway.webp", link: "driveway-installers-near-me" },
+  { label: "Patio Laying", image: "/homepage/patiolayer.webp", link: "patio-layers-near-me" },
+  { label: "Artificial Grass Installation", image: "/homepage/artificialgrassinstallation.webp", link: "artificial-grass-installers-near-me" },
+
+  { label: "Landscaping", image: "/homepage/landscapingservice.webp", link: "landscape-gardeners-near-me" },
+  { label: "Tree Surgery", image: "/homepage/treesurgery.webp", link: "tree-surgeon-near-me" },
+  { label: "Gutter Cleaning", image: "/homepage/guttercleaning.webp", link: "gutter-cleaning-near-me" },
+  { label: "Roofing", image: "/roofing.webp", link: "roofers-near-me" },
+
+  { label: "Painter and Decorator", image: "/homepage/image1.webp", link: "painter-and-decorator-near-me" },
+  { label: "Architects", image: "/homepage/image3.webp", link: "architects-near-me" },
+  { label: "Airport Transfers", image: "/homepage/image4.webp", link: "airport-transfers-near-me" },
+  { label: "Physics and Maths", image: "/homepage/image14.webp", link: "physics-maths-tutors-near-me" },
+
+  { label: "Tutoring", image: "/homepage/image1.webp", link: "tutors-near-me" },
+  { label: "Personal Trainers", image: "/homepage/image3.webp", link: "personal-trainers-near-me" },
+]}/>
   <UserFeedbackNearMe2 feedbackData={[
   {
     id: 1,

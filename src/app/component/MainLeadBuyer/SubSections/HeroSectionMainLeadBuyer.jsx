@@ -109,9 +109,11 @@ export default function HeroSectionMainLeadBuyer() {
             md:text-[60px] md:leading-[55px]
             lg:text-[81px] lg:leading-[75px] text-white block drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]"
           >
-            Tap into real leads. <br />
+            <span className="hidden md:inline">Tap into real leads.</span>
+            <span className="md:hidden inline">Real Leads.</span>
+            <br className="hidden md:block" />
             <span
-              className="text-black text-[42px] leading-[48px]
+              className="block text-black text-[42px] leading-[48px]
               md:text-[50px] md:leading-[55px]
               xl:text-[81px] lg:leading-[75px]"
             >
