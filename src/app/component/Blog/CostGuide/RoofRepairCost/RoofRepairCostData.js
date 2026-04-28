@@ -68,7 +68,7 @@ export const ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE = [
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
-      "The figures above are solely meant to be treated as a guide. The only way to know where your roof sits within that range is to have an actual inspection or assessments carried out by a local roofer. To get an accurate quote",
+      "",
     classNameLeft: "justify-between xl:gap-[40px]",
     prices: [
       {
@@ -111,7 +111,7 @@ export const ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE = [
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
-      "The figures above are solely meant to be treated as a guide. The only way to know where your roof sits within that range is to have an actual inspection or assessments carried out by a local roofer. To get an accurate quote",
+      "",
     classNameLeft: "justify-between xl:gap-[40px]",
     prices: [
       {
@@ -153,7 +153,7 @@ export const ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE = [
     calculatorText: "click here",
     calculatorLink: "/en/gb/roofing-multi-form-ppc",
     disclaimer:
-      "The figures above are solely meant to be treated as a guide. The only way to know where your roof sits within that range is to have an actual inspection or assessments carried out by a local roofer. To get an accurate quote",
+      "",
     classNameLeft: "justify-between xl:gap-[40px]",
     prices: [
       {
@@ -200,6 +200,7 @@ export const ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE = [
   },
   {
     type: "liNumber",
+    className: "mb-0",
     items: [
       {
         heading: "The type and level of damage",
@@ -223,14 +224,16 @@ export const ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE = [
       },
       {
         heading: "Whether scaffolding is needed or not",
-        text: ": We cannot talk about this enough. When it comes to getting on a roof, scaffolding is really important, and it is an additional cost that not a lot of homeowners think about at the beginning. If our roof is easy to access, then your local roofer can make use of a ladder and will manage just fine. ",
+        text: `: We cannot talk about this enough. When it comes to getting on a roof, scaffolding is really important, and it is an additional cost that not a lot of homeowners think about at the beginning. If our roof is easy to access, then your local roofer can make use of a ladder and will manage just fine.
+        </br>
+        However, you must consider the cost of scaffolding if your building will require roofers working on very high roofs and steep pitches. This could mean an additional £700 to the quote.`,
       },
     ],
   },
-  {
-    type: "p",
-    text: "However, you must consider the cost of scaffolding if your building will require roofers working on very high roofs and steep pitches. This could mean an additional £700 to the quote.",
-  },
+  // {
+  //   type: "p",
+  //   text: "However, you must consider the cost of scaffolding if your building will require roofers working on very high roofs and steep pitches. This could mean an additional £700 to the quote.",
+  // },
   {
     type: "image",
     src: "/blog/roofRepair/common-repair.webp",
@@ -295,24 +298,24 @@ export const ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE = [
     type: "liNumber",
     items: [
       {
-        heading: "Get 3-5 quotes from roofers near you",
-        text: ": you don’t just get one quote and go with it. There is no way for you to know if you are getting a fair deal. You need about three to five quotes before you make a decision. If you got five quotes, then you can compare prices and choose which fits best with your budget.",
+        heading: "Get 3-5 quotes from roofers near you:",
+        text: " you don’t just get one quote and go with it. There is no way for you to know if you are getting a fair deal. You need about three to five quotes before you make a decision. If you got five quotes, then you can compare prices and choose which fits best with your budget.",
       },
       {
-        heading: "Ask about the materials",
-        text: ": We already know some repairs require th us of material. SO when you get that quote, ask your roofer if he can source the materials needed for the job and if it is included in the quote. Make sure your roofer can get the needed materials before any work starts.",
+        heading: "Ask about the materials:",
+        text: " We already know some repairs require th us of material. SO when you get that quote, ask your roofer if he can source the materials needed for the job and if it is included in the quote. Make sure your roofer can get the needed materials before any work starts.",
       },
       {
-        heading: "Make sure the quote is itemised",
-        text: ": a good roofer will not just give you a single line number when you request a quote. They would break it down and carefully itemise everything that affects the final cost on the quotes. Things like scaffolding, materials used, waste disposal, and labour are all carefully listed out for you.",
+        heading: "Make sure the quote is itemised:",
+        text: " a good roofer will not just give you a single line number when you request a quote. They would break it down and carefully itemise everything that affects the final cost on the quotes. Things like scaffolding, materials used, waste disposal, and labour are all carefully listed out for you.",
       },
       {
-        heading: "Check to see if scaffolding is included",
-        text: ": While one roofer can include scaffolding in their quotes, the other might not. It might be listed out separately, or some might just include it in the total. You need to know the roofer you are dealing with, and do not forget to ask questions.",
+        heading: "Check to see if scaffolding is included:",
+        text: " While one roofer can include scaffolding in their quotes, the other might not. It might be listed out separately, or some might just include it in the total. You need to know the roofer you are dealing with, and do not forget to ask questions.",
       },
       {
-        heading: "Review their credentials",
-        text: ": Do not just employ any random roofer you find on the internet. Request their credentials, and make sure they are a part of a recognised body. In the UK, the NFRC is the major body. Make sure they have insurance too, and look for real reviews from verified customers.",
+        heading: "Review their credentials:",
+        text: " Do not just employ any random roofer you find on the internet. Request their credentials, and make sure they are a part of a recognised body. In the UK, the NFRC is the major body. Make sure they have insurance too, and look for real reviews from verified customers.",
       },
     ],
   },

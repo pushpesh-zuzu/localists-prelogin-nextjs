@@ -17,7 +17,7 @@ function TrustPoiletLeadBuyerMobile({className=""}) {
           height="21.9368"
           rx="10.9684"
           fill="white"
-          shape-rendering="crispEdges"
+          shapeRendering="crispEdges"
         />
         <path
           d="M71.4785 5.74185H82.088V16.3513H71.4785V5.74185ZM82.9706 5.74185H93.5801V16.3513H82.9706V5.74185ZM94.4627 5.74185H105.072V16.3513H94.4627V5.74185ZM105.955 5.74185H116.564V16.3513H105.955V5.74185ZM117.447 5.74185H128.056V16.3513H117.447V5.74185Z"
