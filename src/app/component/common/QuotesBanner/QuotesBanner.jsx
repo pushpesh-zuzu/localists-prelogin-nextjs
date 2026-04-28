@@ -14,6 +14,7 @@ import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 import { getCityName, setbuyerRequestData, setcitySerach, setBuyerStep } from "@/lib/store/buyerslice/buyerSlice";
 import { setSelectedServiceId } from "@/lib/store/findjobslice";
 import ReqBuyerRegistration from "../ReqBuyerRegistration/ReqBuyerRegistration";
+import NewBuyerRequestRestrationForm from "../ReqBuyerRegistration/NewRequestModalSteps/NewBuyerRequestRestrationForm";
 
 
 export default function QuotesBanner({
@@ -278,7 +279,7 @@ relative overflow-hidden">
         />
       )} */}
 
-      {show && (
+      {/* {show && (
         <ReqBuyerRegistration
           onClose={handleClose}
           service_Id={serviceId}
@@ -286,7 +287,16 @@ relative overflow-hidden">
           serviceName={serviceName}
           service_Name={serviceName}
         />
-      )}
+      )} */}
+       {show && (
+              <NewBuyerRequestRestrationForm
+                onClose={handleClose}
+                service_Id={serviceId}
+                postcode={postcode}
+                serviceName={serviceName}
+                service_Name={serviceName}
+              />
+            )}
     </>
   );
 }

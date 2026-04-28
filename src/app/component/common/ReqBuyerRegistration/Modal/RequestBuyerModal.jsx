@@ -54,7 +54,7 @@ const RequestBuyerModal = ({
           {/* Title */}
           <div className="flex items-center justify-between  mb-7.5 md:mb-10">
             {title && (
-              <div className="">
+              <div className="mr-4">
                 <h4
                   className={`font-Inter font-black tracking-[-0.03em] text-[24px] leading-[25px]
                     md:text-[24px] md:leading-[25px] lg:text-[30px] lg:leading-[30px] ${titleClassName}`}
@@ -66,7 +66,7 @@ const RequestBuyerModal = ({
           
               <button
                 onClick={onClose}
-                className={`${showClosIcon? "" :"hidden"} text-[white] bg-[#00afe3] max-h-9 min-h-9 min-w-9 rounded-full cursor-pointer p-1.5 transition-all`}
+                className={`${showClosIcon? "" :"hidden"} ml-auto text-[white] bg-[#00afe3] max-h-9 min-h-9 min-w-9 rounded-full cursor-pointer p-1.5 transition-all`}
                 aria-label="Close modal"
               >
                 <X size={20} className="m-auto" />
