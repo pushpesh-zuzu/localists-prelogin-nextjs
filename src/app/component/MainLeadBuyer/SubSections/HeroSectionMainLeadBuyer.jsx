@@ -109,14 +109,14 @@ export default function HeroSectionMainLeadBuyer() {
             md:text-[60px] md:leading-[55px]
             lg:text-[81px] lg:leading-[75px] text-white block drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]"
           >
-            Real leads.
+            Real Leads.
             <br className="hidden md:block" />
             <span
               className="block text-black text-[42px] leading-[48px]
               md:text-[50px] md:leading-[55px]
               xl:text-[81px] lg:leading-[75px]"
             >
-              On your terms.
+              On your Terms.
             </span>
           </h1>
 
