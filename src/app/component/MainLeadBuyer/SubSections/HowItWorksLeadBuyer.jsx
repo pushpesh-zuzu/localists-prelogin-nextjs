@@ -60,13 +60,12 @@ function HowItWorksleadBuyer({
                 giving them the option to request you personally.
               </Paragraph>
             </div>
-            <div className="flex-1 h-[178px] md:h-64 md:lg:h-[370px] w-full rounded-2xl overflow-hidden">
+            <div className="relative flex-1 h-[178px] md:h-64 lg:h-[370px] w-full min-h-[178px] rounded-2xl overflow-hidden">
               <Image
-                height={318}
-                width={357}
+                fill
                 src={stepTwoImage}
                 alt="We match them with you"
-                className=" w-full h-[178px] md:h-64 md:lg:h-[370px] object-contain lg:object-cover rounded-2xl "
+                className="object-contain rounded-2xl"
               />
             </div>
           </div>
