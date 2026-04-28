@@ -13,7 +13,7 @@ const bulletPoints = [
   "Ready for quotes",
 ];
 
-function RealNumbers({ image='/mainLeadBuyer/realNumber.webp' }) {
+function RealNumbers({ image='/mainLeadBuyer/realNumber1.webp' }) {
   return (
     <WrapperBGWidth >
       <div className="px-7.5 sm:px-10 md:px-16 xl:px-[120px] py-12 md:py-15 xl:py-[72px] flex flex-col md:flex-row items-center md:gap-10 lg:gap-[130px]">

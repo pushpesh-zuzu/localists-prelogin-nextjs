@@ -109,8 +109,7 @@ export default function HeroSectionMainLeadBuyer() {
             md:text-[60px] md:leading-[55px]
             lg:text-[81px] lg:leading-[75px] text-white block drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]"
           >
-            <span className="hidden md:inline">Tap into real leads.</span>
-            <span className="md:hidden inline">Real Leads.</span>
+            Real leads.
             <br className="hidden md:block" />
             <span
               className="block text-black text-[42px] leading-[48px]
@@ -130,9 +129,7 @@ export default function HeroSectionMainLeadBuyer() {
             text-white pt-[11px] md:pt-4 lg:pt-[20px]
             drop-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
           >
-            Set up your profile today to get access to 100's of leads in your
-            area, with verified numbers, job details, and your own personal
-            account manager.
+           Get access to 100's of leads in your area, with verified numbers, job details, and your own personal account manager.
           </p>
 
           {/* INPUT */}

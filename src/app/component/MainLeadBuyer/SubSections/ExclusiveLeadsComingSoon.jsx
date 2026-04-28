@@ -4,6 +4,7 @@ import Paragraph from "../../UI/Typography/Paragraph";
 import Button from "../../UI/Typography/Button";
 import HeadingWrapperMainLeadBuyer from "../HeadingWrapperMainLeadBuyer";
 import NearmeH2Heading from "../../Nearme/NearmeH2Heading";
+import { handleScrollToBottom } from "@/utils/handleScrollToBottom";
 
 /**
  * Props:
@@ -12,7 +13,6 @@ import NearmeH2Heading from "../../Nearme/NearmeH2Heading";
  */
 function ExclusiveLeadsComingSoon({
   backgroundImage = "/mainLeadBuyer/exclusiveLead/exlusiveLead.webp",
-  onGetStarted,
 }) {
   return (
     <WrapperBGWidth className="">
@@ -45,7 +45,9 @@ function ExclusiveLeadsComingSoon({
             <div className="mt-8 md:mt-12">
               <Button
                 variant="primary"
-                onClick={onGetStarted}
+                onClick={() => {
+                  handleScrollToBottom();
+                }}
                 className="cursor-pointer min-w-[171px] md:min-w-[189px] rounded-full bg-[#10C87B] hover:bg-[#00aef3] text-white px-[15px] py-2 xl:py-[15px] xl:px-7 leading-normal!"
               >
                 Get Started Now

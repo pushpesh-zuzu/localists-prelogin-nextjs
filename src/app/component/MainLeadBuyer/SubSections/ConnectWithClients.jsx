@@ -26,6 +26,7 @@ import PatioIcon from "../../../../../public/ReactIcons/PatioIcon";
 import H4 from "../../UI/Typography/H4";
 import NearmeH2Heading from "../../Nearme/NearmeH2Heading";
 import PainterAndDecoratorIcon from "../../../../../public/ReactIcons/PainterAndDecoratorIcon";
+import Link from "next/link";
 
 const CATEGORY_ICON_MAP = {
   Landscaping: LandscapIcon,
@@ -42,6 +43,7 @@ function ConnectWithClients({
   image = "/mainLeadBuyer/connectClient.webp",
   mobileImage = "/mainLeadBuyer/connectClientMobile.webp",
   onGetStarted,
+  trades = [],
 }) {
   const dispatch = useDispatch();
   const router = useRouter();
@@ -95,7 +97,7 @@ function ConnectWithClients({
       setIsDropdownOpen(false);
       setTimeout(() => dispatch(setService([])), 100);
     },
-    [dispatch]
+    [dispatch],
   );
 
   const handleGetStarted = () => {
@@ -108,7 +110,7 @@ function ConnectWithClients({
 
       dispatch(setSelectedServiceId(selectedService.id));
       router.push(
-        `/${currentLang}/${currentCountry}/sellers/create-account/${slug}`
+        `/${currentLang}/${currentCountry}/sellers/create-account/${slug}`,
       );
     } else if (input.trim()) {
       if (onGetStarted) onGetStarted(input.trim());
@@ -161,12 +163,12 @@ function ConnectWithClients({
                   setSelectedService(null);
                   triggerSearch(e.target.value);
                 }}
-                className="flex-1 min-w-0 px-2 text-black font-bold placeholder:font-bold placeholder:text-[#A5B8E0] outline-none text-base"
+                className="flex-1 min-w-0 px-3.5  md:px-9 text-black font-bold placeholder:font-bold placeholder:text-[#A5B8E0]! outline-none text-base"
               />
 
               <button
                 onClick={handleGetStarted}
-                className="cursor-pointer bg-[#00AFE3] flex md:min-w-[169px] justify-center items-center hover:bg-[#0099cc] text-white p-2 text-xs md:text-[18px] font-extrabold md:px-4.25 md:py-3.5 lg:py-5 rounded-full"
+                className="cursor-pointer bg-[#00AFE3] flex md:min-w-[169px] justify-center items-center hover:bg-[#0099cc] text-white py-[9.15px] px-3.5 text-xs md:text-[18px] font-extrabold md:px-4.25 md:py-3.5 lg:py-5 rounded-full"
               >
                 Get Started
               </button>
@@ -201,39 +203,36 @@ function ConnectWithClients({
           >
             <H4 className="text-[#00AFE3] mb-3">Popular services</H4>
 
-            <ul className="grid grid-col-1 md:grid-cols-2 gap-y-[16px] gap-x-6">
-              {popularList?.slice(0, 8).map((item) => {
-                const Icon = CATEGORY_ICON_MAP[item.name];
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[16px] gap-x-6">
+              {trades?.slice(0, 8).map((item) => {
+                const Icon = CATEGORY_ICON_MAP[item.label];
+                const slug = generateSlug(item.label);
 
                 return (
-                  <li
+                  <Link
                     key={item.id}
-                    className="flex items-center gap-2 cursor-pointer"
-                    onClick={() => {
+                    href={`/${currentLang}/${currentCountry}/sellers/create-account/${slug}`}
+                    onClick={(e) => {
                       const canContinue = checkAuthenticatedUser(router);
-                      if (!canContinue) return;
-
+                      if (!canContinue) {
+                        e.preventDefault();
+                        return;
+                      }
                       dispatch(setSelectedServiceId(item.id));
-
-                      const slug = generateSlug(item.name);
-
-                      router.push(
-                        `/${currentLang}/${currentCountry}/sellers/create-account/${slug}`
-                      );
                     }}
+                    className="flex items-center gap-2"
                   >
                     {Icon && <Icon />}
-
                     <Paragraph
                       variant="primarySmall"
                       className="!mt-0 font-normal text-[#253238] hover:text-[#00AFE3] transition-colors"
                     >
-                      {item.name}
+                      {item.label}
                     </Paragraph>
-                  </li>
+                  </Link>
                 );
               })}
-            </ul>
+            </div>
           </div>
         </div>
 
