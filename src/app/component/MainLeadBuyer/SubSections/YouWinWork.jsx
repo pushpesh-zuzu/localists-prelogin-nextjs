@@ -38,7 +38,7 @@ function YouWinWork({
             </h2>
 
             <Paragraph
-              bold="font-thin"
+              bold="font-normal"
               className="text-white max-w-[90%] md:max-w-[65%] tracking-[0]!"
             >
               You win the work, and take your business to the next level. Sound
