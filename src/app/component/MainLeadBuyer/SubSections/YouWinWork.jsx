@@ -2,6 +2,7 @@ import React from "react";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import Paragraph from "../../UI/Typography/Paragraph";
 import Button from "../../UI/Typography/Button";
+import { handleScrollToBottom } from "@/utils/handleScrollToBottom";
 // import WrapperBGWidth from "../components/WrapperBGWidth";
 // import Paragraph from "../UI/Typography/Paragraph";
 // import Button from "../UI/Button";
@@ -49,7 +50,9 @@ function YouWinWork({
             <div className="flex flex-wrap items-center justify-center gap-4 mt-8 md:mt-12">
               <Button
                 variant="primary"
-                onClick={onCreateProfile}
+                onClick={() => {
+                  handleScrollToBottom();
+                }}
                 className="cursor-pointer rounded-full min-w-[148px] md:min-w-[200px] bg-[#10C87B] hover:bg-[#00aef3] text-white px-[15px] py-2 xl:py-[15px] xl:px-7 leading-normal!"
               >
                 Create Free Profile
@@ -57,7 +60,7 @@ function YouWinWork({
 
               <Button
                 variant="primary"
-                onClick={onCallNow}
+                onClick={() => (window.location.href = "tel:01544303020")}
                 className="cursor-pointer min-w-[148px] md:min-w-[200px] rounded-full bg-[#00AFE3] hover:bg-[#0099cc] text-white px-[15px] py-2 xl:py-[15px] xl:px-7 leading-normal!"
               >
                 Call Now
