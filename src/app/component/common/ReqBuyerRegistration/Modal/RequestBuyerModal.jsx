@@ -8,7 +8,7 @@ import ProgressBarQuoteRequest from "../ProgressBarQuoteRequest/ProgressBarQuote
 import Link from "next/link";
 import MenCircle from "../../../../../../public/ReactIcons/MenCircle";
 import BackButtonOTP from "../../icons/Registration/BackButtonOTP";
-// import NewBuyerRequestProgressBarQuotesRequest from "../NewRequestModalSteps/NewBuyerRequestProgressBarQuotesRequest";
+import NewBuyerRequestProgressBarQuotesRequest from "../NewRequestModalSteps/NewBuyerRequestProgressBarQuotesRequest";
 
 const RequestBuyerModal = ({
   isOpen,
