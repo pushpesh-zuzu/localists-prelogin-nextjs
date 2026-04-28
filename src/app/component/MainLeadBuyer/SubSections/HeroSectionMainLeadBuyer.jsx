@@ -109,9 +109,11 @@ export default function HeroSectionMainLeadBuyer() {
             md:text-[60px] md:leading-[55px]
             lg:text-[81px] lg:leading-[75px] text-white block drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)]"
           >
-            Tap into real leads. <br />
+            <span className="hidden md:inline">Tap into real leads.</span>
+            <span className="md:hidden inline">Real Leads.</span>
+            <br className="hidden md:block" />
             <span
-              className="text-black text-[42px] leading-[48px]
+              className="block text-black text-[42px] leading-[48px]
               md:text-[50px] md:leading-[55px]
               xl:text-[81px] lg:leading-[75px]"
             >
@@ -257,7 +259,7 @@ export default function HeroSectionMainLeadBuyer() {
         <div className="flex-1 relative hidden pr-10 lg:pr-0 md:flex justify-start">
           <div className="absolute w-[200px]  lg:w-[400px]  lg:h-[535px] bg-[#0A6EBE] rounded-full blur-2xl opacity-40"></div>
           <Image
-            src="/mainLeadBuyer/hero/leadbuyerhero.webp"
+            src="/mainLeadBuyer/hero/leadbuyerhero1.webp"
             alt="Hero"
             width={400}
             height={535}

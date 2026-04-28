@@ -8,7 +8,7 @@ import Image from "next/image";
 function HowItWorksleadBuyer({
   stepOneImage = "/mainLeadBuyer/howWeWork/laptop.webp",
   stepTwoImage = "/mainLeadBuyer/howWeWork/service.webp",
-  stepThreeImage = "/mainLeadBuyer/howWeWork/mobile.webp",
+  stepThreeImage = "/mainLeadBuyer/howWeWork/mobile1.webp",
 }) {
   return (
     <WrapperBGWidth>

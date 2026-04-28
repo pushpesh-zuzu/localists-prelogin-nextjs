@@ -29,7 +29,7 @@ function RealNumbers({ image='/mainLeadBuyer/realNumber.webp' }) {
         <div className="flex-1 w-full max-w-[542px]">
           <HeadingWrapperMainLeadBuyer
             headdingblue="Real Numbers."
-            headingblack="Guaranteed"
+            headingblack="Guaranteed."
           />
 
           <Paragraph variant="primarySmall" bold="font-normal" className="text-[#253238] max-w-[467px]">

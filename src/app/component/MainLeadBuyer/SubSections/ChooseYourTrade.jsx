@@ -22,7 +22,7 @@ const visibleTradesMobile = trades.slice(0, visibleCountMobile);
   const hasMoreMobile = visibleCountMobile < trades.length;
   return (
     <WrapperBGWidth className="">
-      <div className="px-7.5 sm:px-10 md:px-16 xl:px-[120px]">
+      <div className="px-7.5 sm:px-10 md:px-16 xl:px-[120px] pb-12 md:pb-15 xl:pb-[72px]">
         <HeadingWrapperMainLeadBuyer
           headdingblue="Choose Your"
           headingblack="Trade"
@@ -56,7 +56,7 @@ const visibleTradesMobile = trades.slice(0, visibleCountMobile);
               />
 
               {/* Label */}
-              <H4 className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 translate-y-[0%] text-white">
+              <H4 className="absolute bottom-[10%] w-[90%] text-center left-1/2 transform -translate-x-1/2 translate-y-[0%] text-white">
                 {trade.label}
               </H4>
             </div>
@@ -88,7 +88,7 @@ const visibleTradesMobile = trades.slice(0, visibleCountMobile);
               />
 
               {/* Label */}
-              <H4 className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 translate-y-[0%] text-white">
+              <H4 className="absolute w-[90%] text-center bottom-[10%] left-1/2 transform -translate-x-1/2 translate-y-[0%] text-white">
                 {trade.label}
               </H4>
             </div>
