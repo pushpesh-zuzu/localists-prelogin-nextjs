@@ -14,7 +14,7 @@ import { getBarkToken } from "@/utils/CookiesHelper";
 import { useRouter } from "next/navigation";
 import AuthenticatedHeader from "./AthenticatedHeader";
 import MobileSlideInSearch from "./MobileSlideInSearch";
-import LoaderIndicator from "../common/Loader/LoaderIndicatore";
+// import LoaderIndicator from "../common/Loader/LoaderIndicatore";
 import Link from "next/link";
 import Logo from "../../../../public/ReactIcons/Logo";
 const adviceMenu = [

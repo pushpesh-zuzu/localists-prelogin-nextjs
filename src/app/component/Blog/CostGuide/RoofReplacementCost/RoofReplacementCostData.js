@@ -38,7 +38,7 @@ export const ROOFREPLACEMENTCOST_QUESTION_AND_ABOUT_SERVICE = [
 },
   {
     type: "image",
-    src: "/blog/waterRoofPaint.webp",
+    src: "/blog/roofReplacement/breakdown.webp",
     alt: "a roofer dressed in protective clothing painting waterproof paint onto the flat roof deck",
     marginBottom: true,
     marginTop: true,
@@ -70,7 +70,7 @@ export const ROOFREPLACEMENTCOST_QUESTION_AND_ABOUT_SERVICE = [
 },
  {
     type: "image",
-    src: "/blog/waterRoofPaint.webp",
+    src: "/blog/roofReplacement/costOfRoof.webp",
     alt: "a roofer dressed in protective clothing painting waterproof paint onto the flat roof deck",
     marginBottom: true,
     marginTop: true,
@@ -187,7 +187,7 @@ export const ROOFREPLACEMENTCOST_QUESTION_AND_ABOUT_SERVICE = [
 },
 {
     type: "image",
-    src: "/blog/waterRoofPaint.webp",
+    src: "/blog/roofReplacement/newRoof.webp",
     alt: "a roofer dressed in protective clothing painting waterproof paint onto the flat roof deck",
     marginBottom: true,
     marginTop: true,

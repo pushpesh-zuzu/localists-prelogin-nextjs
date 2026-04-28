@@ -29,8 +29,8 @@ function RoofRepairCost() {
         category="Roofing"
         title="Roof Repair Cost UK"
         altText="a roofer wearing protective leak roofing a roof with safety harness"
-        bannerImage="/blog/costGuid/roofRepairHero.webp"
-        bannerImageMobile="/blog/costGuid/roofRepairHero.webp"
+        bannerImage="/blog/roofRepair/roofRepairHero.webp"
+        bannerImageMobile="/blog/roofRepair/roof-repair-mobile-banner.webp"
         publishedDate="21.04.26"
         updatedDate="21.04.26"
       />

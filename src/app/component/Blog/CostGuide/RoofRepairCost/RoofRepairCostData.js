@@ -41,7 +41,7 @@ export const ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE = [
   },
   {
     type: "image",
-    src: "/blog/costGuid/roofRepair1.webp",
+    src: "/blog/roofRepair/roof-waterproof.webp",
     alt: "a roofer dressed in protective clothing painting waterproof paint onto the flat roof deck",
     marginBottom: true,
     marginTop: true,
@@ -181,7 +181,7 @@ export const ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE = [
   },
   {
     type: "image",
-    src: "/blog/waterRoofPaint.webp",
+    src: "/blog/roofRepair/affect-roof.webp",
     alt: "a roofer dressed in protective clothing painting waterproof paint onto the flat roof deck",
     marginBottom: true,
     marginTop: true,
@@ -233,7 +233,7 @@ export const ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE = [
   },
   {
     type: "image",
-    src: "/blog/waterRoofPaint.webp",
+    src: "/blog/roofRepair/common-repair.webp",
     alt: "a roofer dressed in protective clothing painting waterproof paint onto the flat roof deck",
     marginBottom: true,
     marginTop: true,
@@ -249,7 +249,7 @@ export const ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "liNumber",
     className: "mb-0",
-        headingNormal:true,
+    headingNormal: true,
 
     items: [
       {
