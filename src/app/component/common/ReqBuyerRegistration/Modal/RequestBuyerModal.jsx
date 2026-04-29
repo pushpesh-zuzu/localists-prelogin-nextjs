@@ -63,7 +63,7 @@ const RequestBuyerModal = ({
               <div className="mr-4">
                 <h4
                   className={`font-Inter font-black tracking-[-0.03em] text-[24px] leading-[25px]
-                    md:text-[24px] md:leading-[25px] lg:text-[30px] lg:leading-[30px] ${titleClassName}`}
+                    md:text-[24px] md:leading-[25px] lg:text-[30px] lg:leading-[30px] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.1)] ${titleClassName}`}
                 >
                   {title}
                 </h4>
