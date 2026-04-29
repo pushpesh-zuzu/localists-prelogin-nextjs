@@ -1,154 +1,151 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useSearchParams } from "next/navigation";
 import {
   setbuyerRequestData,
   clearSetbuyerRequestData,
-  questionAnswerData,
+  registerQuoteCustomer,
 } from "@/lib/store/buyerslice/buyerSlice";
+import useUserInfo from "@/utils/getUserIp";
 import { clearBuyerRegisterFormData } from "@/lib/store/findjobslice";
 import { getBarkToken } from "@/utils/CookiesHelper";
-import LoaderIndicator from "../../../common/Loader/LoaderIndicatore";
-import RequestBuyerModal from "../Modal/RequestBuyerModal";
-import NewBuyerRequestQuestionOptionsBox from "./NewBuyerRequestQuestionOptionsBox";
+import { extractAllParams } from "@/utils/decodeURLParams";
+import RequestBuyerModal from "../../ReqBuyerRegistration/Modal/RequestBuyerModal";
+import LoaderIndicator from "../../Loader/LoaderIndicatore";
+import NewBuyerRequestQuestionOptionsBox from "../../ReqBuyerRegistration/NewRequestModalSteps/NewBuyerRequestQuestionOptionsBox";
 
-const NewBuyerRequestQuestionModal = ({
+const NewBuyerRegistrationQuestionsModal = ({
   questions = [],
   serviceName,
-  serviceId,
   onClose,
   nextStep,
   previousStep,
   loading = false,
   setShowConfirmModal,
   isStartWithQuestionModal = false,
-  onQuestionChange,
-  initialQuestionIndex = 0,
-  progressPercent,
 }) => {
   const dispatch = useDispatch();
-  const { buyerStep, buyerRequest, citySerach, questionanswerData } =
+  const { buyerRequest, requestLoader, citySerach, questionanswerData } =
     useSelector((state) => state.buyer);
-  const { service } = useSelector((state) => state.findJobs);
+  const { service, registerData } = useSelector((state) => state.findJobs);
 
-  const hasFetchedQuestions = useRef(false);
+  const { ip, url } = useUserInfo();
 
-  const formattedQuestions = useMemo(
-    () =>
-      questions.map((q) => ({
-        ...q,
-        parsedAnswers: Array.isArray(q.answer)
-          ? q.answer
-          : (() => {
-              try {
-                return JSON.parse(q.answer);
-              } catch (e) {
-                return [];
-              }
-            })(),
-      })),
-    [questions],
-  );
-
-  const getQuestionHistoryFromAnswers = () => {
-    const savedQuestions = buyerRequest?.questions || [];
-    const savedHistory = savedQuestions
-      .map((answer) =>
-        formattedQuestions.findIndex(
-          (question) => question?.questions === answer?.ques,
-        ),
-      )
-      .filter((index) => index !== -1);
-
-    if (savedHistory.length > 0) {
-      return savedHistory;
-    }
-
-    return [initialQuestionIndex];
-  };
-
-  const initialHistory = getQuestionHistoryFromAnswers();
-  const [currentQuestion, setCurrentQuestion] = useState(
-    initialHistory[initialHistory.length - 1] ?? initialQuestionIndex,
-  );
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState([]);
   const [otherText, setOtherText] = useState("");
   const [error, setError] = useState("");
-  const [questionHistory, setQuestionHistory] = useState(initialHistory);
+  const [questionHistory, setQuestionHistory] = useState([0]);
+
+  // Get URL params
+  const { search } = useSearchParams();
+  const allParams =
+    typeof window !== "undefined" &&
+    extractAllParams(search || window.location.search);
+  const campaignid = allParams.campaign_id || "";
+  const keyword = allParams.keyword || "";
+  const gclid = allParams.gclid || "";
+  const msclkid = allParams.msclkid || "";
+  const adgroup_id = allParams.adgroup_id;
+  const platform_source = allParams.source || "";
+  const campaign = allParams.campaign || "";
+  const adgroup = allParams.adgroup || "";
+  const matchtype = allParams.matchtype || "";
+  const device = allParams.device || "";
+  const loc_physical_ms = allParams.loc_physical_ms || "";
+  const utm_search_term = allParams.utm_search_term || "";
 
   useEffect(() => {
-    if (onQuestionChange) {
-      onQuestionChange(currentQuestion);
+    if (questions.length > 0 && currentQuestion === -1) {
+      setCurrentQuestion(0);
     }
-  }, [currentQuestion, onQuestionChange]);
+  }, [questions, currentQuestion]);
 
   useEffect(() => {
-    if (questions.length > 0) {
-      const questionText = formattedQuestions[currentQuestion]?.questions;
-      const savedAnswerData = buyerRequest?.questions?.find(
-        (question) => question?.ques === questionText,
-      );
-      const savedAnswer = savedAnswerData?.ans || [];
+    if (questions.length > 0 && buyerRequest?.questions?.length > 0) {
+      const savedAnswer = buyerRequest.questions[currentQuestion]?.ans || [];
 
       const savedArray =
         typeof savedAnswer === "string"
           ? savedAnswer.split(",").map((a) => a.trim())
           : savedAnswer;
 
-      const options = formattedQuestions[currentQuestion]?.parsedAnswers || [];
-
-      const isOnlyOther =
-        options.length === 1 &&
-        options[0].option === "Something else (please describe)";
-
-      // 🔥 CASE 1: No saved answer
-      if (savedArray.length === 0) {
-        const timer = setTimeout(() => {
-          if (isOnlyOther) {
-            setSelectedOption(["Something else (please describe)"]);
-          } else {
-            setSelectedOption([]);
-          }
-          setOtherText("");
-        }, 0);
-
-        return () => clearTimeout(timer);
-      }
-
-      // 🔥 CASE 2: Saved answer exists (BACK case fix)
+      setSelectedOption(savedArray);
       const otherVal = savedArray.find(
         (ans) =>
           ans.toLowerCase() !== "yes" &&
           ans.toLowerCase() !== "no" &&
           ans.toLowerCase() !== "maybe",
       );
-
-      const timer = setTimeout(() => {
-        if (isOnlyOther) {
-          // force select "Something else"
-          setSelectedOption(["Something else (please describe)"]);
-          setOtherText(otherVal || "");
-        } else {
-          setSelectedOption(savedArray);
-          setOtherText(
-            savedArray.includes("Something else (please describe)")
-              ? otherVal || ""
-              : "",
-          );
-        }
-      }, 0);
-
-      return () => clearTimeout(timer);
+      setOtherText(
+        savedArray.includes("Something else (please describe)")
+          ? otherVal || ""
+          : "",
+      );
     }
-  }, [currentQuestion, buyerRequest, formattedQuestions, questions]);
+  }, [currentQuestion, buyerRequest, questions]);
+
+  // useEffect(() => {
+  //   setSelectedOption([]);
+  //   setOtherText("");
+  // }, [currentQuestion]);
+  useEffect(() => {
+    const currentQ = formattedQuestions[currentQuestion];
+
+    if (!currentQ) return;
+
+    const options = currentQ.parsedAnswers || [];
+
+    // Check if only one option and it's "Something else"
+    if (
+      options.length === 1 &&
+      options[0].option === "Something else (please describe)"
+    ) {
+      setSelectedOption(["Something else (please describe)"]);
+    } else {
+      setSelectedOption([]);
+    }
+
+    setOtherText("");
+  }, [currentQuestion]);
 
   const totalQuestions = questions?.length;
+  const progressPercent = ((currentQuestion + 1) / totalQuestions) * 100;
+
+  const formattedQuestions = questions.map((q) => ({
+    ...q,
+    parsedAnswers: Array.isArray(q.answer)
+      ? q.answer
+      : (() => {
+          try {
+            return JSON.parse(q.answer);
+          } catch (e) {
+            return [];
+          }
+        })(),
+  }));
 
   const questionIndexMap = {};
   formattedQuestions.forEach((q, index) => {
     questionIndexMap[q.question_no] = index;
   });
+
+  const handleOptionChange = (e) => {
+    const { value, checked } = e.target;
+    const isSingle = questions[currentQuestion]?.option_type === "single";
+
+    if (isSingle) {
+      setSelectedOption([value]);
+      setError("");
+    } else {
+      setSelectedOption((prev) =>
+        checked ? [...prev, value] : prev.filter((opt) => opt !== value),
+      );
+      setError("");
+    }
+  };
 
   const handleNext = (directValue = null) => {
     const finalSelection = directValue ? [directValue] : selectedOption;
@@ -204,7 +201,7 @@ const NewBuyerRequestQuestionModal = ({
       if (isStartWithQuestionModal) {
         dispatch(
           setbuyerRequestData({
-            service_id: serviceId || service?.id || buyerRequest?.service_id,
+            service_id: service?.id || buyerRequest?.service_id,
             serviceName: serviceName || buyerRequest?.serviceName,
             postcode: buyerRequest?.postcode,
             city: citySerach,
@@ -215,7 +212,36 @@ const NewBuyerRequestQuestionModal = ({
       } else if (getBarkToken()) {
         nextStep();
       } else {
-        nextStep();
+        const formData = new FormData();
+        formData.append("name", buyerRequest?.name);
+        formData.append("email", buyerRequest?.email);
+        formData.append("phone", buyerRequest?.phone);
+        formData.append("questions", JSON.stringify(updatedAnswers));
+        formData.append("service_id", buyerRequest?.service_id);
+        formData?.append("city", citySerach);
+        formData.append("postcode", buyerRequest?.postcode);
+        formData.append("form_status", "1");
+        formData.append("campaignid", campaignid || "");
+        formData.append("gclid", gclid || "");
+        formData.append("campaign", campaign || "");
+        formData.append("adgroup", adgroup || "");
+        formData.append("msclickid", msclkid || "");
+        formData.append("adgroup_id", adgroup_id || "");
+        formData.append("matchtype", matchtype || "");
+        formData.append("device", device || "");
+        formData.append("loc_physical_ms", loc_physical_ms || "");
+        formData.append("utm_search_term", utm_search_term || "");
+        formData.append("platform_source", platform_source);
+        formData.append("keyword", keyword || "");
+
+        formData.append("entry_url", url);
+        formData.append("user_ip_address", ip);
+
+        dispatch(registerQuoteCustomer(formData)).then((result) => {
+          if (result) {
+            nextStep();
+          }
+        });
       }
     } else if (nextQ && questionIndexMap[nextQ] !== undefined) {
       setQuestionHistory((prev) => [...prev, questionIndexMap[nextQ]]);
@@ -241,7 +267,7 @@ const NewBuyerRequestQuestionModal = ({
       const prevIndex = newHistory[newHistory.length - 1];
 
       // const trimmedAnswers =
-      //     buyerRequest?.questions?.slice(0, prevIndex) || [];
+      //   buyerRequest?.questions?.slice(0, prevIndex) || [];
 
       // dispatch(setbuyerRequestData({ questions: trimmedAnswers }));
 
@@ -252,10 +278,7 @@ const NewBuyerRequestQuestionModal = ({
       );
 
       if (indexInAnswers !== -1) {
-        const updatedAnswers = buyerRequest.questions.slice(
-          0,
-          indexInAnswers + 1,
-        );
+        const updatedAnswers = buyerRequest.questions.slice(0, indexInAnswers);
 
         dispatch(setbuyerRequestData({ questions: updatedAnswers }));
       }
@@ -269,29 +292,19 @@ const NewBuyerRequestQuestionModal = ({
 
   const handleCloseClick = () => {
     if (questionanswerData?.length === 0) {
-      onClose?.();
+      onClose();
       dispatch(clearSetbuyerRequestData());
       dispatch(clearBuyerRegisterFormData());
     } else {
       if (!getBarkToken()) {
         setShowConfirmModal(true);
       } else {
-        onClose?.();
+        onClose();
         dispatch(clearSetbuyerRequestData());
         dispatch(clearBuyerRegisterFormData());
       }
     }
   };
-
-  useEffect(() => {
-    if (hasFetchedQuestions.current) return;
-    if (questionanswerData?.length > 0) return;
-
-    if (serviceId) {
-      dispatch(questionAnswerData({ service_id: serviceId }));
-      hasFetchedQuestions.current = true;
-    }
-  }, [dispatch, questionanswerData?.length, serviceId]);
 
   const currentOptions =
     formattedQuestions[currentQuestion]?.parsedAnswers || [];
@@ -299,10 +312,10 @@ const NewBuyerRequestQuestionModal = ({
   const isOnlyOther =
     currentOptions.length === 1 &&
     currentOptions[0].option === "Something else (please describe)";
-    
-useEffect(() => {
-  setError("");
-}, [selectedOption, currentQuestion]);
+  console.log(error, "error");
+  useEffect(() => {
+    setError("");
+  }, [selectedOption, currentQuestion]);
   return (
     <RequestBuyerModal
       onClose={() => {
@@ -312,9 +325,8 @@ useEffect(() => {
       title={formattedQuestions[currentQuestion]?.questions}
       onNext={() => handleNext()}
       onBack={handleBack}
-      buyerStep={buyerStep}
       fixedHeight={true}
-      showProgressBar={true}
+      showProgressBar={false}
       titleClassName="text-left"
       showButtons={true}
       progressPercent={progressPercent}
@@ -322,7 +334,9 @@ useEffect(() => {
       minHeight="min-h-[300px]  md:min-h-[460px]"
       errorMessage={error}
     >
-      <div className={`${isOnlyOther ? "" : ""} rounded-[30px] max-h-[300px] md:max-h-[286px] overflow-auto py-2 `}>
+      <div
+        className={`${isOnlyOther ? "" : ""} rounded-[30px] max-h-[300px] md:max-h-[286px] overflow-auto py-2 `}
+      >
         {loading ? (
           <div className="flex-1 flex items-center justify-center py-4">
             <LoaderIndicator size="large" />
@@ -386,10 +400,10 @@ useEffect(() => {
               !isOnlyOther && (
                 <div className="mt-4 mb-5 md:mb-10">
                   {/* <InputField
-                                        placeholder="Please Enter..."
-                                        value={otherText}
-                                        onChange={(e) => {setOtherText(e.target.value);setError(""); }}
-                                    /> */}
+                                            placeholder="Please Enter..."
+                                            value={otherText}
+                                            onChange={(e) => {setOtherText(e.target.value);setError(""); }}
+                                        /> */}
                   <textarea
                     rows={3}
                     type="textarea"
@@ -401,21 +415,21 @@ useEffect(() => {
                     value={otherText}
                     style={{ boxShadow: "0 0 7px .5px #0000001a" }}
                     className={`
-                                            relative w-full px-3 py-3 rounded-[16px]
-                                            text-gray-900 text-base
-                                            border border-[#00aef3]
-                                            transition-all duration-200
-                                          placeholder:text-[#959595]
-                                            focus:ring-0 focus:outline-0
-                                            disabled:bg-gray-100 
-                                            custom-placeholder
-                                            ${
-                                              error
-                                                ? "border-red-500 focus:ring-red-500 focus:border-red-500"
-                                                : ""
-                                            }
-    
-                                        `}
+                                                relative w-full px-3 py-3 rounded-[16px]
+                                                text-gray-900 text-base
+                                                border border-[#00aef3]
+                                                transition-all duration-200
+                                              placeholder:text-[#959595]
+                                                focus:ring-0 focus:outline-0
+                                                disabled:bg-gray-100 
+                                                custom-placeholder
+                                                ${
+                                                  error
+                                                    ? "border-red-500 focus:ring-red-500 focus:border-red-500"
+                                                    : ""
+                                                }
+        
+                                            `}
                   />
 
                   {/* {error && (
@@ -428,12 +442,12 @@ useEffect(() => {
             ) &&
               selectedOption.includes("Something else (please describe)") &&
               isOnlyOther && (
-                <div className="my-5 md:my-10">
+                <div className=" my-5 md:my-10">
                   {/* <InputField
-                                        placeholder="Please Enter..."
-                                        value={otherText}
-                                        onChange={(e) => {setOtherText(e.target.value);setError(""); }}
-                                    /> */}
+                                            placeholder="Please Enter..."
+                                            value={otherText}
+                                            onChange={(e) => {setOtherText(e.target.value);setError(""); }}
+                                        /> */}
                   <textarea
                     rows={3}
                     type="textarea"
@@ -445,21 +459,21 @@ useEffect(() => {
                     value={otherText}
                     style={{ boxShadow: "0 0 8px .5px #0000001a" }}
                     className={`
-                                            relative w-full px-3 py-2 rounded-[16px]
-                                            text-gray-900 text-base
-                                            border border-[#00aef3]
-                                            transition-all duration-200
-                                        placeholder:text-[#959595]
-                                            focus:outline-1 outline-[#00aef3] focus:ring-1
-                                            disabled:bg-gray-100 
-                                            custom-placeholder
-                                            ${
-                                              error
-                                                ? "border-red-500 focus:ring-red-500 focus:border-red-500"
-                                                : "focus:ring-black"
-                                            }
-    
-                                        `}
+                                                relative w-full px-3 py-2 rounded-[16px]
+                                                text-gray-900 text-base
+                                                border border-[#00aef3]
+                                                transition-all duration-200
+                                            placeholder:text-[#959595]
+                                                focus:outline-0 outline-[#fff] focus:ring-0
+                                                disabled:bg-gray-100 
+                                                custom-placeholder
+                                                ${
+                                                  error
+                                                    ? "border-red-500 focus:ring-red-500 focus:border-red-500"
+                                                    : "focus:ring-black"
+                                                }
+        
+                                            `}
                   />
                   {/* {error && (
                     <p className="text-sm text-red-600  pt-2">{error}</p>
@@ -479,4 +493,4 @@ useEffect(() => {
   );
 };
 
-export default NewBuyerRequestQuestionModal;
+export default NewBuyerRegistrationQuestionsModal;

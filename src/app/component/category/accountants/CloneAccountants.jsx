@@ -22,6 +22,7 @@ import BuyerRegistration from "../../common/BuyerRegistration/BuyerRegistration"
 import { showToast } from "@/utils/toaster";
 import { getBarkToken, getBarkUserData } from "@/utils/CookiesHelper";
 import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+import NewBuyerRegistrationForm from "../../common/BuyerRegistration/NewBuyerRegistrationDesign/NewBuyerRegistrationForm";
 
 
 const CloneAccountants = ({
@@ -329,9 +330,19 @@ const CloneAccountants = ({
                     </div>
                 </div>
             </WrapperBGWidth>
-            {showModal &&
+            {/* {showModal &&
                 (getBarkUserData()?.active_status === 2 || !getBarkToken()) && (
                     <BuyerRegistration
+                        closeModal={handleClose}
+                        service_Id={selectedService?.id}
+                        service_Name={selectedService?.name}
+                        postcode={pincode}
+                        postalCodeValidate={postalCodeValidate}
+                    />
+                )} */}
+                 {showModal &&
+                (getBarkUserData()?.active_status === 2 || !getBarkToken()) && (
+                    <NewBuyerRegistrationForm
                         closeModal={handleClose}
                         service_Id={selectedService?.id}
                         service_Name={selectedService?.name}

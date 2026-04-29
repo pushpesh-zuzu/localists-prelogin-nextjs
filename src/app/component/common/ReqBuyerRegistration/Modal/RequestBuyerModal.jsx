@@ -9,6 +9,7 @@ import Link from "next/link";
 import MenCircle from "../../../../../../public/ReactIcons/MenCircle";
 import BackButtonOTP from "../../icons/Registration/BackButtonOTP";
 import NewBuyerRequestProgressBarQuotesRequest from "../NewRequestModalSteps/NewBuyerRequestProgressBarQuotesRequest";
+import Paragraph from "@/app/component/UI/Typography/Paragraph";
 
 const RequestBuyerModal = ({
   isOpen,
@@ -19,7 +20,7 @@ const RequestBuyerModal = ({
   BackButtonText = "Back",
   onNext,
   onBack,
-  onBackDisable=false,
+  onBackDisable = false,
   titleClassName = "",
   showButtons = true,
   padding = "",
@@ -38,21 +39,25 @@ const RequestBuyerModal = ({
   progressPercent,
   viewMatchesIcon,
   marginTop = "",
-  minHeight='min-h-[300px]  md:min-h-[572px]'
+  minHeight = "min-h-[300px]  md:min-h-[572px]",
+  subHeading = "",
+  description = "",
+  errorMessage = "",
+  childrenMaxHeight="max-h-[350px] md:max-h-[450px]"
 }) => {
   if (!isOpen) return null;
 
   const modalContent = (
     <div
-      className={`fixed inset-0 ${zIndex} ${marginTop} flex items-center justify-center ${insetBG}`}
+      className={`fixed inset-0 ${zIndex}  flex items-center justify-center ${insetBG}`}
     >
       <div
-        className={`relative min-w-[300px] w-[90%]  md:max-w-[700px] md:w-[700px] ${minHeight} bg-white shadow-2xl flex flex-col ${radius} overflow-hidden`}
+        className={`relative min-w-[300px] w-[90%] ${marginTop} md:max-w-[700px] md:w-[700px] ${minHeight} bg-white shadow-2xl flex flex-col ${radius} overflow-hidden`}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex flex-col flex-1 overflow-hidden px-5 py-7.5 md:px-12 md:py-7.5">
           {/* Title */}
-          <div className="flex items-center justify-between  mb-7.5 md:mb-10">
+          <div className="flex items-start md:items-start justify-between  mb-7.5 md:mb-10">
             {title && (
               <div className="mr-4">
                 <h4
@@ -63,29 +68,48 @@ const RequestBuyerModal = ({
                 </h4>
               </div>
             )}
-          
-              <button
-                onClick={onClose}
-                className={`${showClosIcon? "" :"hidden"} ml-auto text-[white] bg-[#00afe3] max-h-9 min-h-9 min-w-9 rounded-full cursor-pointer p-1.5 transition-all`}
-                aria-label="Close modal"
-              >
-                <X size={20} className="m-auto" />
-              </button>
-            
+
+            <button
+              onClick={onClose}
+              className={`${showClosIcon ? "" : "hidden"} ml-auto text-[white] bg-[#00afe3] max-h-9 min-h-9 min-w-9 rounded-full cursor-pointer p-1.5 transition-all`}
+              aria-label="Close modal"
+            >
+              <X size={20} className="m-auto" />
+            </button>
           </div>
 
           {/* Progress Bar */}
           {showProgressBar && (
-            <div className={`${fixedHeight ? "flex-shrink-0" : ""} mb-7.5 md:mb-10`}>
+            <div
+              className={`${fixedHeight ? "flex-shrink-0" : ""} mb-7.5 md:mb-10`}
+            >
               <NewBuyerRequestProgressBarQuotesRequest
                 value={progressPercent}
                 buyerStep={buyerStep}
               />
             </div>
           )}
+          {subHeading && (
+            <Paragraph className="text-center">{subHeading}</Paragraph>
+          )}
+          {description && (
+            <Paragraph
+              bold={"font-medium"}
+              className="text-center mt-1 sm:mt-0 mb-4"
+            >
+              {description}
+            </Paragraph>
+          )}
 
           {/* Content */}
-          <div className={`flex-1 pb-[10px] overflow-y-auto`}>{children}</div>
+          <div
+            className={`flex-1 pb-[10px] ${childrenMaxHeight} overflow-y-auto`}
+          >
+            {children}
+          </div>
+          {errorMessage && (
+            <p className="text-sm text-red-600  py-2">{errorMessage}</p>
+          )}
 
           {/* Buttons */}
           {showButtons && (onBack || onNext) && (

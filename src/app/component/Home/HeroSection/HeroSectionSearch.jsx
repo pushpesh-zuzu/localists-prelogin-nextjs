@@ -12,6 +12,7 @@ import {
 import { setSelectedServiceId } from "@/lib/store/findjobslice";
 import { showToast } from "@/utils/toaster";
 import usePendingBuyerRedirect from "@/hooks/usePendingBuyerRedirect";
+import NewBuyerRegistrationForm from "../../common/BuyerRegistration/NewBuyerRegistrationDesign/NewBuyerRegistrationForm";
 const SearchResults = dynamic(() => import("../../common/SearchResult"), {
   ssr: false,
   loading: () => <div className="hidden">Loading...</div>,
@@ -26,8 +27,8 @@ const BuyerRegistration = dynamic(
 function HeroSectionSearch() {
   const dispatch = useDispatch();
   const inputRef = useRef(null);
-  usePendingBuyerRedirect()
-  const [selectedService, setSelectedService] = useState('')
+  usePendingBuyerRedirect();
+  const [selectedService, setSelectedService] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [show, setShow] = useState(false);
   const handleClose = () => {
@@ -49,23 +50,22 @@ function HeroSectionSearch() {
     }
   }, [dispatch]);
 
- const handleSubmit = () => {
-  if (!selectedService) {
-    showToast("error", "Please select a service from the suggestions.");
-    return;
-  }
-  setShow(true);
-  setSearchQuery("");
-  setSelectedService("");
-};
+  const handleSubmit = () => {
+    if (!selectedService) {
+      showToast("error", "Please select a service from the suggestions.");
+      return;
+    }
+    setShow(true);
+    setSearchQuery("");
+    setSelectedService("");
+  };
 
-useEffect(() => {
-  const timer = setTimeout(() => {
-    inputRef.current?.focus();
-  }, 50);
-  return () => clearTimeout(timer);
-}, []);
-
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      inputRef.current?.focus();
+    }, 50);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
@@ -105,8 +105,19 @@ useEffect(() => {
           <SearchIcon className="cursor-pointer w-6 h-6 md:w-5 md:h-5 lg:w-8 lg:h-8 mt-5 xl:mt-16" />
         </div>
       </div>
-      {show && (
+      {/* {show && (
         <BuyerRegistration
+          closeModal={handleClose}
+          service_Id={selectedSearchService?.id}
+          serviceName={selectedSearchService?.service || ""}
+          service_Name={selectedSearchService?.service || ""}
+          // postcode={pincode}
+          // postalCodeValidate={postalCodeValidate}
+        />
+      )} */}
+
+      {show && (
+        <NewBuyerRegistrationForm
           closeModal={handleClose}
           service_Id={selectedSearchService?.id}
           serviceName={selectedSearchService?.service || ""}

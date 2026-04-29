@@ -1,0 +1,287 @@
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter, useSearchParams } from "next/navigation";
+import {
+  checkEmailIdApi,
+  setbuyerRequestData,
+} from "@/lib/store/buyerslice/buyerSlice";
+import { validateEmail } from "@/utils/validateEmail";
+import { validateUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
+import { useEmailCheck } from "@/hooks/emailExist";
+import useUserInfo from "@/utils/getUserIp";
+import { getBarkToken } from "@/utils/CookiesHelper";
+import { extractAllParams } from "@/utils/decodeURLParams";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
+import RequestBuyerModal from "../../ReqBuyerRegistration/Modal/RequestBuyerModal";
+import RequestInputField from "../../ReqBuyerRegistration/UI/RequestInputField";
+
+function NewBuyerRegistrationNameEmailPhoneModal({
+  onClose,
+  nextStep,
+  setEmails,
+  setShowConfirmModal,
+  resetTrigger,
+  isStartWithQuestionModal = false,
+  isPPCPages = false,
+  hideCloseButton = false,
+}) {
+  const router = useRouter();
+  const dispatch = useDispatch();
+  const { buyerRequest, citySerach, requestLoader } = useSelector(
+    (state) => state.buyer,
+  );
+  const { ip, url } = useUserInfo();
+  const { search } = useSearchParams();
+  const allParams =
+    typeof window !== "undefined" &&
+    extractAllParams(search || window.location.search);
+  const campaignid = allParams.campaign_id || "";
+  const keyword = allParams.keyword || "";
+  const gclid = allParams.gclid || "";
+  const msclkid = allParams.msclkid || "";
+  const adgroup_id = allParams.adgroup_id;
+  const platform_source = allParams.source || "";
+  const campaign = allParams.campaign || "";
+  const adgroup = allParams.adgroup || "";
+  const matchtype = allParams.matchtype || "";
+  const device = allParams.device || "";
+  const loc_physical_ms = allParams.loc_physical_ms || "";
+  const utm_search_term = allParams.utm_search_term || "";
+  const emailCooldownRef = useRef(false);
+  const [name, setName] = useState(buyerRequest?.name || "");
+  const [email, setEmail] = useState(buyerRequest?.email || "");
+  const [phone, setPhone] = useState(buyerRequest?.phone || "");
+  const [isEmailValid, setIsEmailValid] = useState(true);
+  const [emailErrorMessage, setEmailErrorMessage] = useState("");
+  const { isEmailAvailable, isChecking } = useEmailCheck(email);
+  const [inputType, setInputType] = useState("text");
+
+  const [errors, setErrors] = useState({
+    email: false,
+    name: false,
+    phone: false,
+  });
+  useEffect(() => {
+    if (!isEmailAvailable) {
+      setEmail("");
+      dispatch(setbuyerRequestData({ ...buyerRequest, email: "" }));
+    }
+  }, [isEmailAvailable]);
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+    setErrors((prev) => ({ ...prev, name: "" }));
+    dispatch(
+      setbuyerRequestData({
+        ...buyerRequest,
+        name: e.target.value,
+        email,
+        phone,
+      }),
+    );
+  };
+
+  const handleEmailChange = (e) => {
+    if (emailCooldownRef.current) return;
+
+    const canContinue = checkAuthenticatedUser(router);
+
+    if (!canContinue) {
+      emailCooldownRef.current = true;
+      setTimeout(() => {
+        emailCooldownRef.current = false;
+      }, 2000);
+      return;
+    }
+
+    setEmail(e.target.value);
+    setErrors((prev) => ({ ...prev, email: "" }));
+    dispatch(
+      setbuyerRequestData({
+        ...buyerRequest,
+        name,
+        email: e.target.value,
+        phone,
+      }),
+    );
+  };
+
+  const handlePhoneChange = (e) => {
+    const value = e.target.value.replace(/\D/g, "");
+    if (value.length <= 11) {
+      setPhone(value);
+      setErrors((prev) => ({ ...prev, phone: "" }));
+      dispatch(
+        setbuyerRequestData({ ...buyerRequest, name, email, phone: value }),
+      );
+    }
+  };
+
+  const handleEmailBlur = async () => {
+    if (!email) {
+      setInputType("text");
+    }
+
+    if (!email) return;
+
+    try {
+      const res = await dispatch(checkEmailIdApi({ email }));
+      if (res?.success) {
+        setErrors((prev) => ({ ...prev, email: false }));
+        setIsEmailValid(true);
+        setEmailErrorMessage("");
+      } else {
+        setEmail("");
+        if (setEmails) setEmails("");
+        setIsEmailValid(false);
+        setEmailErrorMessage("Email is already registered.");
+      }
+    } catch (err) {
+      console.error("Error checking email:", err);
+      setErrors((prev) => ({ ...prev, email: false }));
+      setIsEmailValid(false);
+      setEmailErrorMessage("Something went wrong. Please try again.");
+    }
+  };
+
+  const handleSubmit = () => {
+    const canContinue = checkAuthenticatedUser(router);
+    if (!canContinue) return;
+    const newErrors = {
+      email: !isPPCPages && (!email || !validateEmail(email)),
+      name: !name.trim(),
+      phone: !phone || !/^\d{11}$/.test(phone),
+    };
+
+    if (!isPPCPages && newErrors.email && !emailErrorMessage) {
+      setEmailErrorMessage("Please enter a valid email address.");
+    }
+
+    setErrors(newErrors);
+
+    const hasError = Object.values(newErrors).some((e) => e);
+    if (hasError || (!isPPCPages && !isEmailValid)) return;
+
+    if (!isPPCPages && setEmails) {
+      setEmails(email);
+    }
+    if (!validateUKPhoneNumber(phone)) {
+      return;
+    }
+    const finalEmail = isPPCPages ? buyerRequest?.email || "" : email;
+
+    dispatch(setbuyerRequestData({ name, email: finalEmail, phone }));
+    const updatedAnswers = buyerRequest?.questions || [];
+
+    if (isStartWithQuestionModal) {
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("email", finalEmail);
+      formData.append("phone", phone);
+      formData.append("questions", JSON.stringify(updatedAnswers));
+      formData.append("service_id", buyerRequest?.service_id || "");
+      formData.append("city", citySerach || "");
+      formData.append("postcode", buyerRequest?.postcode || "");
+      formData.append("campaignid", campaignid || "");
+      formData.append("gclid", gclid || "");
+      formData.append("campaign", campaign || "");
+      formData.append("adgroup", adgroup || "");
+      formData.append("msclickid", msclkid || "");
+      formData.append("adgroup_id", adgroup_id || "");
+      formData.append("matchtype", matchtype || "");
+      formData.append("device", device || "");
+      formData.append("loc_physical_ms", loc_physical_ms || "");
+      formData.append("utm_search_term", utm_search_term || "");
+      formData.append("platform_source", platform_source);
+      formData.append("keyword", keyword || "");
+      formData.append("form_status", 1);
+      formData.append("entry_url", url);
+      formData.append("user_ip_address ", ip);
+
+      dispatch(registerQuoteCustomer(formData)).then((result) => {
+        if (result) {
+          nextStep();
+        }
+      });
+    } else {
+      nextStep();
+      setbuyerRequestData({
+        ...buyerRequest,
+        name: name,
+        city: email,
+        phone: phone,
+      });
+    }
+  };
+  const handleCloseClick = () => {
+    console.log("calling");
+    if (!getBarkToken()) {
+      dispatch(setbuyerRequestData({ name, email, phone }));
+      setShowConfirmModal(true);
+    } else {
+      onClose();
+    }
+  };
+
+  useEffect(() => {
+    dispatch(setbuyerRequestData({ name, email, phone }));
+  }, []);
+  return (
+    <div>
+      <RequestBuyerModal
+        onClose={() => {
+          handleCloseClick();
+        }}
+        isOpen={true}
+        title="Your Details"
+        onNext={handleSubmit}
+        disabled={isChecking}
+        radius="rounded-[20px]"
+        minHeight="min-h-[300px] md:min-h-[400px]"
+        // subHeading="Your phone number and email are safe with us."
+        // description="We'll only use them to help you connect with trusted, verified professionals."
+        marginTop="lg:mt-[10vh] mt-[5vh]"
+        onBackDisable
+      >
+        {/* <Paragraph className="text-center">
+          Your phone number and email are safe with us.
+        </Paragraph> */}
+        {/* <Paragraph bold={"font-medium"} className="text-center mt-1 sm:mt-0">
+          We'll only use them to help you connect with trusted, verified
+          professionals.
+        </Paragraph> */}
+        <RequestInputField
+          label="Name"
+          value={name}
+          onChange={handleNameChange}
+          error={errors.name && "Name is required"}
+          placeholder="Your Name"
+          type={inputType}
+        />
+        {!isPPCPages && (
+          <RequestInputField
+            label="Email"
+            type={inputType}
+            value={email}
+            onChange={handleEmailChange}
+            // onBlur={handleEmailBlur}
+            error={errors.email && "Please enter a valid email address."}
+            placeholder="Your Email"
+          />
+        )}
+        <RequestInputField
+          label="Phone"
+          type={inputType}
+          value={phone}
+          onChange={handlePhoneChange}
+          error={errors.phone && "Please enter a valid 11-digit phone number."}
+          placeholder="Phone Number"
+        />
+      </RequestBuyerModal>
+    </div>
+  );
+}
+
+export default NewBuyerRegistrationNameEmailPhoneModal;
