@@ -1,5 +1,4 @@
-import BlogGridSection from "@/app/component/BlogArchive/BlogSection/BlogGridSection";
-import HeroSection from "../../../../component/BlogArchive/HeroSection/HeroSection";
+import BlogArchiveContent from "@/app/component/BlogArchive/BlogArchiveContent";
 import IndustryInsights from "@/app/component/BlogArchive/IndustryInsights";
 import CloseBrowserAbandon from "@/app/component/common/CloseBrowserAbandon/CloseBrowserAbandon";
 // import DiscoverServices from "@/app/component/BlogArchive/DiscoverServices";
@@ -32,8 +31,7 @@ export default function Page() {
                     { title: "Blog", path: "en/gb/blog" },
                 ]} />
             <CloseBrowserAbandon />
-            <HeroSection />
-            <BlogGridSection />
+            <BlogArchiveContent />
             <IndustryInsights />
             <DiscoverNearMe homeData={BLOG_DATA} />
             <WrapperBGWidth>

@@ -1,7 +1,7 @@
 "use client";
 
 import BlogCards from "./Blogcards";
-import BlogHeroCard from "./BlogHeroCard";
+// import BlogHeroCard from "./BlogHeroCard";
 // import Button from "../../UI/Typography/Button";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import GetQuote from "../../common/GetQuotes/GetQuote";
@@ -18,18 +18,21 @@ const blogs = [
     // },
     {
         title: "How long does a flat roof last",
-        image: "/images/BlogPage/Howlong.webp",
-        path: "/en/gb/blog/advice/how-long-does-a-flat-roof-last"
+        image: "/blog/flat-roof.webp",
+        path: "/en/gb/blog/advice/how-long-does-a-flat-roof-last",
+        category: "Expert Advice"
     },
     {
         title: "Roof Replacement Cost in 2026: The full Breakdown",
-        image: "/images/BlogPage/view.webp",
-        path: "/en/gb/blog/cost-guides/roof-replacement-cost"
+        image: "/blog/roof-replacement.webp",
+        path: "/en/gb/blog/cost-guides/roof-replacement-cost",
+        category: "Cost Guides"
     },
     {
-        title: "Roof repair cost in 2026: The full Breakdown",
-        image: "/images/BlogPage/capMan.webp",
-        path: "/en/gb/blog/cost-guides/roof-repair-cost"
+        title: "Roof repair cost UK",
+        image: "/blog/roof-repair.webp",
+        path: "/en/gb/blog/cost-guides/roof-repair-cost",
+        category: "Cost Guides"
     },
     // {
     //     title: "Roof cleaning cost in 2026: The full Breakdown",
@@ -53,7 +56,11 @@ const blogs = [
     // },
 ];
 
-export default function BlogGridSection() {
+export default function BlogGridSection({ selectedCategory = "All" }) {
+    const filteredBlogs = selectedCategory === "All"
+        ? blogs
+        : blogs.filter((blog) => blog.category === selectedCategory);
+
     return (
         <WrapperBGWidth>
             <section className="max-w-[1320px] mx-auto px-4 md:px-8 xl:px-0 py-14">
@@ -64,7 +71,7 @@ export default function BlogGridSection() {
                         image="/images/BlogPage/Eco4.webp"
                     /> */}
 
-                    {blogs.map((item, index) => (
+                    {filteredBlogs.map((item, index) => (
                         <BlogCards
                             key={index}
                             title={item.title}
@@ -80,8 +87,6 @@ export default function BlogGridSection() {
                         classGetQuote="py-[7px] xl:py-4 xl:px-[30px] hover:!bg-[#1b2326]"
                     />
                 </div>
-
-
             </section>
         </WrapperBGWidth>
     );

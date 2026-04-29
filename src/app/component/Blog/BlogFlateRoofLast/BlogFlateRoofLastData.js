@@ -292,13 +292,13 @@ export const FLAT_ROOF_LAST_ADVICEINSIGHT = [
   {
     id: 1,
     title: "Roof Replacement Cost in 2026: The full Breakdown",
-    image: "/blog/roofReplacement/newRoof.webp",
+    image: "/blog/roof-replacement.webp",
     url: "/en/gb/blog/cost-guides/roof-replacement-cost"
   },
   {
     id: 2,
     title: "Roof repair cost UK",
-    image: "/blog/roofRepair/common-repair.webp",
+    image: "/blog/roof-repair.webp",
     url: "/en/gb/blog/cost-guides/roof-repair-cost"
   },
 ];
