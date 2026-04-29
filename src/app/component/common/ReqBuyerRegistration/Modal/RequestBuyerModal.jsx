@@ -47,7 +47,7 @@ const RequestBuyerModal = ({
       className={`fixed inset-0 ${zIndex} ${marginTop} flex items-center justify-center ${insetBG}`}
     >
       <div
-        className={`relative min-w-[300px] max-w-[300px] md:max-w-[700px] ${minHeight} bg-white shadow-2xl flex flex-col ${radius} overflow-hidden`}
+        className={`relative min-w-[300px] w-[90%]  md:max-w-[700px] md:w-[700px] ${minHeight} bg-white shadow-2xl flex flex-col ${radius} overflow-hidden`}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex flex-col flex-1 overflow-hidden px-5 py-7.5 md:px-12 md:py-7.5">
