@@ -146,7 +146,9 @@ const ServiceLocationStep = ({
     }
 
     // All good
-    nextStep();
+    setTimeout(() => {
+      nextStep();
+    }, 500);
   };
 
   return (
