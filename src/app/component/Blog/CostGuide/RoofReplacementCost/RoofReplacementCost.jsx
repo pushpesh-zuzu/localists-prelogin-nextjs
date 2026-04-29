@@ -31,8 +31,8 @@ function RoofReplacementCost() {
         altText="a roofer wearing protective leak roofing a roof with safety harness"
         bannerImage="/blog/roofReplacement/banner.webp"
         bannerImageMobile="/blog/roofReplacement/mobile-banner.webp"
-        publishedDate="21.04.26"
-        updatedDate="21.04.26"
+        publishedDate="28.04.26"
+        updatedDate="28.04.26"
       />
       {/* <BlogShareSection/> */}
       <AboutServiceAndQuestionBlog
