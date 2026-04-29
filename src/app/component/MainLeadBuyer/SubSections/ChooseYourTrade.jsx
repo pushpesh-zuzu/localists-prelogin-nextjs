@@ -227,13 +227,13 @@ function ChooseYourTrade({ trades = [], onTradeClick }) {
         </div>
 
         {/* ✅ Static grid — no filtering, as-is */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 px-1 max-h-[300px] md:max-h-[357px] overflow-y-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 px-1 max-h-[300px] md:max-h-[357px] overflow-y-auto">
           {remainingTrades.map((trade, index) => (
             <Link
               key={`modal-${trade.label}-${index}`}
               href={`/${currentLang}/${currentCountry}/sellers/create-account/${generateSlug(trade.label)}`}
               onClick={(e) => handleModalTradeClick(e, trade)}
-              className="flex items-center px-5 py-4.25 md:py-6.5 min-w-[248px] md:min-w-[288px] rounded-[20px] border border-[#D9D9D9] text-sm md:text-[18px] font-normal text-[#253238] hover:border-[#00AFE3] hover:text-[#00AFE3] transition-colors duration-200 cursor-pointer"
+              className="flex items-center px-5 md:3.5 py-4.25 md:py-[22px] min-w-[248px] md:min-w-[280px] rounded-[20px] border border-[#D9D9D9] text-sm md:text-[18px] font-normal text-[#253238] hover:border-[#00AFE3] hover:text-[#00AFE3] transition-colors duration-200 cursor-pointer"
             >
               {trade.label}
             </Link>
