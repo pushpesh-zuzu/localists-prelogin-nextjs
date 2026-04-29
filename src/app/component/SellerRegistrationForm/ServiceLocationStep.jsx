@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import {
-  setCity,
+  // setCity,
   setCountry,
   setPostalCode,
   setSelectedServiceFormData,
@@ -12,10 +12,10 @@ import { showToast } from "@/utils/toaster";
 import { getCityName } from "@/lib/store/buyerslice/buyerSlice";
 import { CheckIcon, Map, MapPin } from "lucide-react";
 import Button1 from "../UI/Typography/Button1";
-import H2 from "../UI/Typography/H2";
-import H4 from "../UI/Typography/H4";
-import H3 from "../UI/Typography/H3";
-import Paragraph from "../UI/Typography/Paragraph";
+// import H2 from "../UI/Typography/H2";
+// import H4 from "../UI/Typography/H4";
+// import H3 from "../UI/Typography/H3";
+// import Paragraph from "../UI/Typography/Paragraph";
 import SellerFormCardWrappper from "./SellerFormCardWrappper";
 import InputLabel from "../UI/InputLabel/InputLabel";
 import LocationMapIcon from "../common/icons/SellerRegistration/LocationMapIcon";
@@ -31,7 +31,7 @@ const ServiceLocationStep = ({
 }) => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
-  const debounceTimer = useRef(null);
+  // const debounceTimer = useRef(null);
   const [isValidPostCode, setIsValidPostCode] = useState(false);
 
   const normalizePostcode = (postcode) => {
@@ -51,40 +51,19 @@ const ServiceLocationStep = ({
   const handlePostcodeChange = (e) => {
     const { name, value } = e.target;
 
+    const upperValue = value.toUpperCase();
+
     dispatch(
       setSelectedServiceFormData({
-        [name]: value,
+        [name]: upperValue,
       })
     );
 
-    if (!value || value.trim() === "") {
-      setIsValidPostCode(false);
-    }
-
-    if (debounceTimer.current) {
-      clearTimeout(debounceTimer.current);
-    }
-
-    debounceTimer.current = setTimeout(() => {
-      const cleaned = normalizePostcode(value);
-
-      // Only proceed if FULL postcode
-      if (!isFullPostcode(cleaned)) return;
-
-      // If full but INVALID → show error
-      if (!isValidUKPostcode(value)) {
-        setIsValidPostCode(false);
-        showToast("error", "Invalid postcode. Please try again.");
-        return;
-      }
-
-      // Valid FULL postcode → call API
-      fetchCityFromPostcode(cleaned);
-    }, 800);
+    setIsValidPostCode(false);
   };
 
   const fetchCityFromPostcode = async (postcode) => {
-    if (!postcode || postcode.length < 3) return;
+    if (!postcode) return false;
 
     setIsLoading(true);
 
@@ -109,31 +88,34 @@ const ServiceLocationStep = ({
             country_old: "UK",
             coordinates: {},
             validPostCode: true,
-            validPostCode2: isValidPostCode,
+            validPostCode2: true,
             postcode2: postcodeFromApi,
           })
         );
 
         dispatch(setPostalCode({ postalcode: postcodeFromApi }));
         dispatch(setCountry({ country: newResponse.data?.country }));
+        return true;
       }
+      return false;
     } catch (error) {
       console.error("Error fetching city:", error);
-      // 🔥 setCity function call fix किया
+      // setCity function call fix किया
       dispatch(
         setFormData({
           city: "",
           validPostCode: false,
+          validPostCode2: false,
         })
       );
       setIsValidPostCode(false);
-      showToast("error", "No Postcode found! Please try again.");
+      return false;
     } finally {
       setIsLoading(false);
     }
   };
 
-  const validateAndProceed = () => {
+  const validateAndProceed = async () => {
     const postcode = formData?.postcode || "";
     const cleaned = normalizePostcode(postcode);
 
@@ -145,7 +127,7 @@ const ServiceLocationStep = ({
 
     // Partial
     if (!isFullPostcode(cleaned)) {
-      showToast("error", "Please enter full postcode");
+      showToast("error", "Please enter a valid postcode");
       return;
     }
 
@@ -155,8 +137,10 @@ const ServiceLocationStep = ({
       return;
     }
 
+    const isValid = await fetchCityFromPostcode(cleaned);
+
     // API validation failed
-    if (!isValidPostCode) {
+    if (!isValid) {
       showToast("error", "Please enter a valid postcode");
       return;
     }
@@ -164,13 +148,6 @@ const ServiceLocationStep = ({
     // All good
     nextStep();
   };
-  useEffect(() => {
-    return () => {
-      if (debounceTimer.current) {
-        clearTimeout(debounceTimer.current);
-      }
-    };
-  }, []);
 
   return (
     <SellerFormCardWrappper
