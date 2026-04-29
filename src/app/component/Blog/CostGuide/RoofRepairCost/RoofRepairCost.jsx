@@ -5,10 +5,10 @@ import BlogHeroSection from "../../BlogHeroSection";
 import {
   ROOFREPAIRCOST_QUESTION_AND_ABOUT_SERVICE,
   FREQUENTLY_DATA_ROOFREPAIRCOST_ROOF,
+  ROOF_REPAIR_ADVICEINSIGHT
 } from "./RoofRepairCostData";
 import AboutServiceAndQuestionBlog from "../../AboutServiceAndQuestionBlog";
 import AdviceAndInsightBlog from "../../AdviceAndInsightBlog";
-import { TREE_SRUGEON_ADVICEINSIGHT } from "../../../Nearme/TreeSurgeon/TreeSurgeonData";
 import Footer from "../../../Footer/Footer";
 import FAQScript from "../../../common/seo/FAQScript";
 import { FAQ } from "../../../Nearme/FAQ";
@@ -52,7 +52,7 @@ function RoofRepairCost() {
           classNamePostCode="mb-[30px] mt-[30px] lg:mt-[48px] lg:mb-[48px]"
         />
       </div>
-      <AdviceAndInsightBlog articles={TREE_SRUGEON_ADVICEINSIGHT} />
+      <AdviceAndInsightBlog articles={ROOF_REPAIR_ADVICEINSIGHT} />
       <Footer />
     </>
   );

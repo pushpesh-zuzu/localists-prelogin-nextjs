@@ -353,3 +353,18 @@ export const FREQUENTLY_DATA_ROOFREPAIRCOST_ROOF = [
       `,
   },
 ];
+
+export const ROOF_REPAIR_ADVICEINSIGHT = [
+  {
+    id: 1,
+    title: "How long does a flat roof last",
+    image: "/blog/waterRoofPaint.webp",
+    url: "/en/gb/blog/advice/how-long-does-a-flat-roof-last"
+  },
+  {
+    id: 2,
+    title: "Roof Replacement Cost in 2026: The full Breakdown",
+    image: "/blog/roofReplacement/newRoof.webp",
+    url: "/en/gb/blog/cost-guides/roof-replacement-cost"
+  },
+];

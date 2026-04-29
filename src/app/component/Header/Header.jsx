@@ -23,6 +23,14 @@ const adviceMenu = [
     path: "blog/advice/how-long-does-a-flat-roof-last",
     // icon: "/MegaMenu/flatRoof.svg",
   },
+  {
+    name: "Roof Replacement Cost",
+    path: "blog/cost-guides/roof-replacement-cost",
+  },
+  {
+    name: "Roof Repair Cost",
+    path: "blog/cost-guides/roof-repair-cost",
+  },
 ];
 export const MobileMegaMenu = [
   {
@@ -62,7 +70,7 @@ export const MobileMegaMenu = [
       },
     ],
   },
-  
+
   {
     name: "Transport",
     path: "transportation-services",
@@ -177,7 +185,7 @@ export default function Header() {
                     <ArrowDownBlue />
                   </button>
                 </MegaMenu>
-                <div style={{display:'none'}}>
+                <div style={{ display: 'none' }}>
                   {adviceMenu.map((item, i) => (
                     <div key={i}>
                       <a href={`/en/gb/${item.path}`}>{item.name}</a>

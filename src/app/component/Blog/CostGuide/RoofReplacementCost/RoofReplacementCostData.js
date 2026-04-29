@@ -264,3 +264,18 @@ export const FREQUENTLY_DATA_ROOFREPLACEMENTCOST_ROOF = [
       `,
   }
 ];
+
+export const ROOF_REPLACEMENT_ADVICEINSIGHT = [
+  {
+    id: 1,
+    title: "How long does a flat roof last",
+    image: "/blog/waterRoofPaint.webp",
+    url: "/en/gb/blog/advice/how-long-does-a-flat-roof-last"
+  },
+  {
+    id: 2,
+    title: "Roof repair cost UK",
+    image: "/blog/roofRepair/common-repair.webp",
+    url: "/en/gb/blog/cost-guides/roof-repair-cost"
+  },
+];
