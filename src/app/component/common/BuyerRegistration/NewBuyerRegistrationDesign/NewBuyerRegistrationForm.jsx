@@ -13,6 +13,7 @@ import NewBuyerRegistrationOtpVerification from "../NewBuyerRegistrationDesign/N
 import NewBuyerRegistrationDescribeYourRequest from "../NewBuyerRegistrationDesign/NewBuyerRegistrationDescribeYourRequest";
 import ConfirmationModal from "../ConfirmationModal";
 import ViewYourMatches from "../ViewYourMatches";
+import NewBuyerRegistrationConfirmModal from "./NewBuyerRegistrationConfirmModal";
 
 function NewBuyerRegistrationForm({
   closeModal,
@@ -189,7 +190,7 @@ function NewBuyerRegistrationForm({
       )}
 
       {showConfirmModal && (
-        <ConfirmationModal
+        <NewBuyerRegistrationConfirmModal
           isOpen={showConfirmModal}
           cancelHeading={cancelHeading}
           cancelPara={cancelPara}

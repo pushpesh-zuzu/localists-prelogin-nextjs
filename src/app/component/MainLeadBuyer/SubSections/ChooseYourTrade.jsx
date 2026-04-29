@@ -188,6 +188,7 @@ function ChooseYourTrade({ trades = [], onTradeClick }) {
         showProgressBar={false}
         showClosIcon={true}
         minHeight="min-h-[400px] md:min-h-[560px]"
+        childrenMaxHeight=""
       >
         {/* ✅ Search with API dropdown */}
         <div className="relative mb-7.5" ref={dropdownRef}>
@@ -200,7 +201,7 @@ function ChooseYourTrade({ trades = [], onTradeClick }) {
               if (!search.trim()) dispatch(searchService({ search: "" }));
             }}
             placeholder="Search Service here"
-            className="w-full border border-[#D9D9D9] rounded-2xl px-3 py-[15px] text-sm text-[#555] placeholder:text-[#BDBDBD] outline-none focus:border-[#00AFE3] transition-colors"
+            className="w-full border border-[#D9D9D9] rounded-2xl px-3 py-[12px] text-sm text-[#555] placeholder:text-[#BDBDBD] outline-none focus:border-[#00AFE3] transition-colors"
           />
 
           {/* ✅ API Dropdown — search results */}

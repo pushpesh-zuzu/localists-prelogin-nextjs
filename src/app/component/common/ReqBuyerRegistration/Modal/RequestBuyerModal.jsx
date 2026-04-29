@@ -43,7 +43,8 @@ const RequestBuyerModal = ({
   subHeading = "",
   description = "",
   errorMessage = "",
-  childrenMaxHeight="max-h-[350px] md:max-h-[450px]"
+  childrenMaxHeight="max-h-[350px] md:max-h-[450px]",
+  showBackIcon=true
 }) => {
   if (!isOpen) return null;
 
@@ -145,9 +146,10 @@ const RequestBuyerModal = ({
                     max-[768px]:h-[52px]
                     max-[480px]:w-[70px]
                     max-[480px]:h-[48px]
+                    hover:bg-[#0096C4]
                   `}
                 >
-                  <BackButtonOTP color="white" className="h-3.5 w-4.5" />
+                  {showBackIcon && <BackButtonOTP color="white" className="h-3.5 w-4.5" />}
                   <span className="text-[14px] font-medium">
                     {BackButtonText}
                   </span>

@@ -96,11 +96,11 @@ export default function HeroSectionMainLeadBuyer() {
       className="w-full bg-[linear-gradient(180deg,#0191D8_0%,#00CCFF_100%)] 
       md:bg-[linear-gradient(90deg,#00CCFF_0%,#0191D8_100%)]"
     >
-      <div className="mx-auto max-w-[1536px] flex flex-col md:flex-row items-center pb-6 md:gap-8 xl:gap-[70px] pt-[30px]">
+      <div className="mx-auto max-w-[1536px] py-[22px] md:py-0 flex flex-col md:flex-row items-center md:gap-8 xl:gap-[70px] ">
         {/* LEFT */}
         <div className="md:w-1/2 md:w-[55%] xl:w-[55%] text-white px-[30px] md:px-0 md:pl-16 xl:pl-[120px] md:pt-[29px] md:pb-3 xl:pt-[42px] xl:pb-12">
-          <TrustPoiletLeadBuyerMobile className="md:hidden mb-3" />
-          <TrustPoiletLeadBuyer className="hidden md:block mb-6" />
+          <TrustPoiletLeadBuyerMobile className="md:hidden mb-5" />
+          <TrustPoiletLeadBuyer className="hidden md:block mb-4" />
 
           {/* Heading */}
           <h1
@@ -126,15 +126,15 @@ export default function HeroSectionMainLeadBuyer() {
             sm:text-base sm:leading-[20px]
             lg:text-[20px] lg:leading-[24px]
             w-full max-w-full sm:max-w-[60%] md:max-w-[450px] lg:max-w-[722px]
-            text-white pt-[11px] md:pt-4 lg:pt-[20px]
+            text-white pt-[19px] md:pt-4 lg:pt-[20px]
             drop-shadow-[0_0_4px_rgba(0,0,0,0.25)]"
           >
            Get access to 100's of leads in your area, with verified numbers, job details, and your own personal account manager.
           </p>
 
           {/* INPUT */}
-          <div className="w-full max-w-[512px] mt-5 mt-8 lg:mt-12">
-            <Paragraph className="mb-2.5">
+          <div className="w-full max-w-[512px] mt-8 mt-5 lg:mt-8">
+            <Paragraph className="mb-2">
               What service do you provide?
             </Paragraph>
 
@@ -236,7 +236,7 @@ export default function HeroSectionMainLeadBuyer() {
             </div>
 
             {/* Bottom Info */}
-            <div className="flex items-center justify-center mt-5 gap-[6px] text-sm font-medium text-white text-center">
+            <div className="flex items-center justify-center mt-5 md:mt-2.5 gap-[6px] text-sm font-medium text-white text-center">
               <div className="flex items-center gap-1">
                 <span>
                   <ChargingIcon />
@@ -254,14 +254,14 @@ export default function HeroSectionMainLeadBuyer() {
 
         {/* RIGHT */}
         <div className="flex-1 relative hidden pr-10 lg:pr-0 md:flex justify-start">
-          <div className="absolute w-[200px]  lg:w-[400px]  lg:h-[535px] bg-[#0A6EBE] rounded-full blur-2xl opacity-40"></div>
+          <div className="absolute w-[200px]  lg:w-[338px]  lg:h-[454px] bg-[#0A6EBE] rounded-full blur-2xl opacity-40"></div>
           <Image
-            src="/mainLeadBuyer/hero/leadbuyerhero1.webp"
+            src="/mainLeadBuyer/hero/leadbuyerhero.webp"
             alt="Hero"
-            width={400}
-            height={535}
+            width={338}
+            height={454}
             quality={90}
-            className="relative z-10"
+            className="relative z-10 lg:h-[454px] "
           />
         </div>
       </div>

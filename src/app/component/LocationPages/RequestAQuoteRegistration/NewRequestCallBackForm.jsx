@@ -14,6 +14,7 @@ import NewRequestBuyerReEnterMobileNumberModal from "../../common/ReqBuyerRegist
 import NewBuyerRequestDescribeYourRequestModal from "../../common/ReqBuyerRegistration/NewRequestModalSteps/NewBuyerRequestDescribeYourRequestModal";
 import NewBuyerRequestSeeMyMatchesModal from "../../common/ReqBuyerRegistration/NewRequestModalSteps/NewBuyerRequestSeeMyMatchesModal";
 import NewBuyerRequestPostCodeFieldModal from "../../common/ReqBuyerRegistration/NewRequestModalSteps/NewBuyerRequestPostCodeFieldModal";
+import NewBuyerRegistrationConfirmModal from "../../common/BuyerRegistration/NewBuyerRegistrationDesign/NewBuyerRegistrationConfirmModal";
 
 function NewRequestCallBackForm({
     onClose,
@@ -288,7 +289,7 @@ function NewRequestCallBackForm({
 
 
             {showConfirmModal && (
-                <ConfirmationModal
+                <NewBuyerRegistrationConfirmModal
                     isOpen={showConfirmModal}
                     cancelHeading={cancelHeading}
                     cancelPara={cancelPara}

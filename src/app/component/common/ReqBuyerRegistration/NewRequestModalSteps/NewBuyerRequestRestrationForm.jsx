@@ -14,6 +14,7 @@ import NewBuyerRequestSeeMyMatchesModal from "./NewBuyerRequestSeeMyMatchesModal
 import NewRequestBuyerReEnterMobileNumberModal from "./NewRequestBuyerReEnterMobileNumberModal";
 import NewRequestBuyerPhoneNumber from "./NewRequestBuyerPhoneNumber";
 import ConfirmationModal from "../ConfirmationModal";
+import NewBuyerRegistrationConfirmModal from "../../BuyerRegistration/NewBuyerRegistrationDesign/NewBuyerRegistrationConfirmModal";
 
 function NewBuyerRequestRestrationForm({
     onClose,
@@ -293,7 +294,15 @@ function NewBuyerRequestRestrationForm({
             )}
 
             {showConfirmModal && (
-                <ConfirmationModal
+                // <ConfirmationModal
+                //     isOpen={showConfirmModal}
+                //     cancelHeading={cancelHeading}
+                //     cancelPara={cancelPara}
+                //     onConfirm={confirmClose}
+                //     serviceId={service_Id}
+                //     onClose={() => setShowConfirmModal(false)}
+                // />
+                <NewBuyerRegistrationConfirmModal 
                     isOpen={showConfirmModal}
                     cancelHeading={cancelHeading}
                     cancelPara={cancelPara}
