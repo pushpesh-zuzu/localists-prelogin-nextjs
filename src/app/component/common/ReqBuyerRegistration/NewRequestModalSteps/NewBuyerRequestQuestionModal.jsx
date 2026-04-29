@@ -319,6 +319,7 @@ useEffect(() => {
       showButtons={true}
       progressPercent={progressPercent}
       marginTop="lg:mt-[12vh] mt-[5vh]"
+      minHeight="min-h-[300px]  md:min-h-[460px]"
     >
       <div className={`${isOnlyOther ? "" : ""} rounded-[30px] max-h-[300px] md:max-h-[286px] overflow-auto py-2 `}>
         {loading ? (
