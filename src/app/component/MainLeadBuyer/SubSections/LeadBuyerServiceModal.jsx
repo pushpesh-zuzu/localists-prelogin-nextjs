@@ -63,7 +63,7 @@ export default function LeadBuyerServiceModal({ isOpen, onClose }) {
 
   // Select → redirect
   const handleSelect = (item) => {
-    const slug = generateSlug(item.name);
+    const slug = generateSlug(item.seo_title);
     router.push(
       `/${currentLang}/${currentCountry}/sellers/create-account/${slug}`,
     );
@@ -127,7 +127,7 @@ export default function LeadBuyerServiceModal({ isOpen, onClose }) {
               {service?.length > 0 ? (
                 service.map((item) => (
                   <div
-                    key={item.id}
+                    key={item.uuid}
                     onClick={() => handleSelect(item)}
                     className="flex items-center justify-between py-5 px-[18px]  border rounded-lg  
                      border-[#D9D9D9] text-sm md:text-[18px] font-normal text-[#253238] hover:border-[#00AFE3] 
