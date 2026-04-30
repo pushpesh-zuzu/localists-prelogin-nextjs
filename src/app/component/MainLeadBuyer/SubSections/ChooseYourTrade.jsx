@@ -18,6 +18,7 @@ import {
 } from "@/lib/store/findjobslice";
 import { generateSlug } from "@/utils";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
+import LeadBuyerServiceModal from "./LeadBuyerServiceModal";
 
 const INITIAL_VISIBLE = 4;
 
@@ -37,7 +38,7 @@ function ChooseYourTrade({ trades = [], onTradeClick }) {
   const dropdownRef = useRef(null);
 
   const { service: searchResults, searchServiceLoader } = useSelector(
-    (state) => state.findJobs
+    (state) => state.findJobs,
   );
 
   const visibleTrades = trades.slice(0, INITIAL_VISIBLE);
@@ -89,10 +90,10 @@ function ChooseYourTrade({ trades = [], onTradeClick }) {
 
       const slug = generateSlug(item.name);
       router.push(
-        `/${currentLang}/${currentCountry}/sellers/create-account/${slug}`
+        `/${currentLang}/${currentCountry}/sellers/create-account/${slug}`,
       );
     },
-    [dispatch, router, currentLang, currentCountry]
+    [dispatch, router, currentLang, currentCountry],
   );
 
   // ✅ Static grid card click → dispatch + redirect
@@ -106,7 +107,7 @@ function ChooseYourTrade({ trades = [], onTradeClick }) {
 
     const slug = generateSlug(trade.label);
     router.push(
-      `/${currentLang}/${currentCountry}/sellers/create-account/${slug}`
+      `/${currentLang}/${currentCountry}/sellers/create-account/${slug}`,
     );
   };
 
@@ -122,7 +123,7 @@ function ChooseYourTrade({ trades = [], onTradeClick }) {
 
     const slug = generateSlug(trade.label);
     router.push(
-      `/${currentLang}/${currentCountry}/sellers/create-account/${slug}`
+      `/${currentLang}/${currentCountry}/sellers/create-account/${slug}`,
     );
   };
 
@@ -180,7 +181,7 @@ function ChooseYourTrade({ trades = [], onTradeClick }) {
       </div>
 
       {/* Modal */}
-      <RequestBuyerModal
+      {/* <RequestBuyerModal
         isOpen={modalOpen}
         onClose={handleCloseModal}
         title="What type of work do you do?"
@@ -190,7 +191,6 @@ function ChooseYourTrade({ trades = [], onTradeClick }) {
         minHeight="min-h-[400px] md:min-h-[560px]"
         childrenMaxHeight=""
       >
-        {/* ✅ Search with API dropdown */}
         <div className="relative mb-7.5" ref={dropdownRef}>
           <input
             type="text"
@@ -204,7 +204,6 @@ function ChooseYourTrade({ trades = [], onTradeClick }) {
             className="w-full border border-[#D9D9D9] rounded-2xl px-3 py-[12px] text-sm text-[#555] placeholder:text-[#BDBDBD] outline-none focus:border-[#00AFE3] transition-colors"
           />
 
-          {/* ✅ API Dropdown — search results */}
           {isDropdownOpen && searchResults?.length > 0 && (
             <div className="absolute top-full left-0 w-full bg-white shadow-[0px_0px_4px_0px_#00000033] z-20 rounded-xl mt-1 max-h-[200px] overflow-y-auto">
               {searchServiceLoader ? (
@@ -226,7 +225,6 @@ function ChooseYourTrade({ trades = [], onTradeClick }) {
           )}
         </div>
 
-        {/* ✅ Static grid — no filtering, as-is */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 px-1 max-h-[300px] md:max-h-[357px] overflow-y-auto">
           {remainingTrades.map((trade, index) => (
             <Link
@@ -239,7 +237,12 @@ function ChooseYourTrade({ trades = [], onTradeClick }) {
             </Link>
           ))}
         </div>
-      </RequestBuyerModal>
+      </RequestBuyerModal> */}
+
+      <LeadBuyerServiceModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
     </WrapperBGWidth>
   );
 }

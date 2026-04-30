@@ -141,7 +141,7 @@ const NewBuyerRequestBuyerOtpVerificationModal = ({
             if (isThankuPageOnlyShow) {
               const modalData = {
                 shouldOpen: true,
-                step: 7,
+                step: 6,
                 buyerRequest: buyerRequest,
                 city: citySerach,
                 serviceId: serviceId || buyerRequest?.service_id,
@@ -154,10 +154,10 @@ const NewBuyerRequestBuyerOtpVerificationModal = ({
               if (typeof window !== "undefined") {
                 localStorage.setItem(
                   "pendingBuyerModal",
-                  JSON.stringify(modalData),
+                  JSON.stringify(modalData)
                 );
               }
-              nextStep();
+              router.push(`/thank-you`);
             } else {
               nextStep();
             }

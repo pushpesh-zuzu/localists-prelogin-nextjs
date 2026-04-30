@@ -101,14 +101,13 @@ function NewBuyerRequestRestrationForm({
         if (typeof window === "undefined") return;
 
         const pendingModal = JSON.parse(localStorage.getItem("pendingBuyerModal"));
-        if (pendingModal?.shouldOpen) {
-            localStorage.removeItem("pendingBuyerModal");
-        } else {
-            // const initialStep = isAdminOrRemembered ? 2 : 1;
-            // const initialStep = 1;
-
-            // dispatch(setBuyerStep(initialStep));
+      if (pendingModal?.step) {
+            dispatch(setBuyerStep(pendingModal.step));
         }
+        if (pendingModal?.buyerRequest) {
+            dispatch(setbuyerRequestData(pendingModal.buyerRequest));
+        }
+        localStorage.removeItem("pendingBuyerModal");
     }, [dispatch]);
 
     useEffect(() => {
