@@ -112,7 +112,8 @@ export default function LeadBuyerServiceModal({ isOpen, onClose }) {
         />
 
         {/* 🔥 Scrollable Content */}
-        <div className="flex-1 overflow-y-auto pr-1">
+        <div className="flex-1 overflow-hidden">
+            <div className="h-full overflow-y-auto pr-3">
           {/* Loader */}
           {searchServiceLoader && (
             <div className="flex justify-center py-6">
@@ -173,6 +174,7 @@ export default function LeadBuyerServiceModal({ isOpen, onClose }) {
               </div>
             </div>
           )}
+          </div>
         </div>
       </div>
     </div>
