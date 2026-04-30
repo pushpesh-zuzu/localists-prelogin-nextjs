@@ -16,7 +16,8 @@ const ALLOWED_SERVICES = [
   "physics-and-maths",
   "architects",
   "painter-and-decorator",
-  "tutoring"
+  "tutoring",
+  "gutter-cleaning",
 
 ];
 
