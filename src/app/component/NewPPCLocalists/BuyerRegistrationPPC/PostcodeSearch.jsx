@@ -33,7 +33,7 @@ const PostcodeSearch = ({
     const [isCheckingPostcode, setIsCheckingPostcode] = useState(false);
     const [error, setError] = useState("");
 
-    const showToast = (type, content) => message[type](content);
+    // const showToast = (type, content) => message[type](content);
 
     const normalizePostcode = (postcode) => {
         return postcode.replace(/\s+/g, "").toUpperCase();
@@ -53,35 +53,33 @@ const PostcodeSearch = ({
         const value = e.target.value.toUpperCase().slice(0, 10);
         setPincode(value);
         setError("");
-        // setPostalCodeValidate(false);
+        setCity("");
+        setPostalCodeValidate(false);
+    };
 
-        const cleaned = normalizePostcode(value);
+    const handleNext = async () => {
+        const cleaned = normalizePostcode(pincode);
 
-        if (!value.trim()) {
-            setError("");
+        if (!pincode.trim()) {
+            setError("Please enter postcode!");
             setCity("");
             setPostalCodeValidate(false);
             return;
         }
 
-        // Don't validate partial
         if (!isFullPostcode(cleaned)) {
+            setError("Please enter full postcode!");
             setCity("");
             setPostalCodeValidate(false);
             return;
         }
 
         // Full but invalid
-        if (!isValidUKPostcode(value)) {
-            setPostalCodeValidate(false);
+        if (!isValidUKPostcode(pincode)) {
             setError("Please enter a valid postcode!");
+            setPostalCodeValidate(false);
             return;
         }
-
-        // if (value.length < 3) {
-        //     setPostalCodeValidate(false);
-        //     return;
-        // }
 
         setIsCheckingPostcode(true);
 
@@ -97,8 +95,9 @@ const PostcodeSearch = ({
                 dispatch(setbuyerRequestData({ postal_code: validPostcode }));
                 setError("");
 
-                // handleNext(true);
-                // setPercetangForPost(5);
+                setTimeout(() => {
+                    onNext?.();
+                }, 500);
             } else {
                 setPostalCodeValidate(false);
                 setError("Please enter a valid postcode!");
@@ -108,18 +107,6 @@ const PostcodeSearch = ({
             setError("Please enter a valid postcode!");
         } finally {
             setIsCheckingPostcode(false);
-        }
-    };
-
-    const handleNext = (isValid = postalCodeValidate) => {
-        if (!isValid) {
-            showToast("error", "Please enter a valid postcode.");
-            return;
-        }
-
-        if (onNext) {
-            onNext();
-            setPercetangForPost(5);
         }
     };
 
@@ -144,7 +131,7 @@ const PostcodeSearch = ({
                         title={title}
                         onButtonClick={handleNext}
                         buttonText="Next"
-                        disableNextButton={!postalCodeValidate}
+                        disableNextButton={false}
                         showBackButton
                         onBackClick={handleBack}
                         titlePrimary={true}
