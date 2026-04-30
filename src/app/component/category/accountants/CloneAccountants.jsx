@@ -134,7 +134,7 @@ const CloneAccountants = ({
     }, [dispatch]);
 
     const handlePincodeChange = async (e) => {
-        const value = e.target.value.trim().slice(0, 10);
+        const value = e.target.value.toUpperCase().slice(0, 10);
         setPincode(value);
         setPostalCodeValidate(false);
         setPostcodeError("")
@@ -142,12 +142,25 @@ const CloneAccountants = ({
         // setIsPostcodeSelected(false);
         // setIsPincodeFromDropdown(false);
         // setCity("");
+    };
 
-        if (value.length < 3) return;
+    const handleContinue = async () => {
+        if (!selectedService)
+            return showToast("error", "Please select a service from the suggestions.");
+
+        const cleaned = pincode.replace(/\s+/g, "").toUpperCase();
+
+        if (!pincode.trim())
+            return showToast("error", "Please enter postcode.");
+
+        if (cleaned.length < 5)
+            return showToast("error", "Please enter full postcode.");
 
         setIsCheckingPostcode(true);
+
+
         try {
-            const response = await dispatch(getCityName({ postcode: value }));
+            const response = await dispatch(getCityName({ postcode: cleaned }));
             const res = response?.unwrap ? await response.unwrap() : response;
 
             if (res?.data?.city) {
@@ -160,45 +173,33 @@ const CloneAccountants = ({
                 dispatch(setcitySerach(res.data.city));
                 dispatch(
                     setbuyerRequestData({
-                        postcode: value.toUpperCase(),
+                        postcode: cleaned,
                         city: res.data.city,
+                        service_id: selectedService.id,
                     })
                 );
+
+                if (getBarkUserData()?.active_status === 1) {
+                    showToast("error", "You are not a buyer.");
+                    return;
+                }
+
+                dispatch(questionAnswerData({ service_id: selectedService.id }));
+                setTimeout(() => {
+                    setShowModal(true);
+                }, 500);
             } else {
                 setPostalCodeValidate(false);
                 // showToast("error", "Please enter a valid postcode!");
                 setPostcodeError("Please enter a valid postcode!")
             }
-
         } catch {
             setPostalCodeValidate(false);
             setPostcodeError("Please enter a valid postcode!")
         } finally {
             setIsCheckingPostcode(false);
         }
-    };
 
-    const handleContinue = () => {
-        if (!selectedService)
-            return showToast("error", "Please select a service from the suggestions.");
-
-        if (!postalCodeValidate)
-            return showToast("error", "Please enter a valid postcode.");
-
-        if (getBarkUserData()?.active_status === 1) {
-            showToast("error", "You are not a buyer.");
-            return;
-        }
-
-
-        dispatch(questionAnswerData({ service_id: selectedService.id }));
-        dispatch(
-            setbuyerRequestData({
-                postcode: pincode,
-                service_id: selectedService.id,
-            })
-        );
-        setShowModal(true);
     };
 
 
@@ -335,7 +336,7 @@ const CloneAccountants = ({
                         closeModal={handleClose}
                         service_Id={selectedService?.id}
                         service_Name={selectedService?.name}
-                        postcode={pincode}
+                        postcode={pincode.replace(/\s+/g, "").toUpperCase()}
                         postalCodeValidate={postalCodeValidate}
                     />
                 )}

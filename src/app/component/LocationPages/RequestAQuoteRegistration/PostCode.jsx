@@ -57,12 +57,19 @@ function PostCode({
         const value = e.target.value.toUpperCase().slice(0, 10);
         setPostcode(value);
         setPostalCodeValidate(false);
+        setCity("");
+        setErrors((prev) => ({ ...prev, postcode: false }));
+    };
 
-        const cleaned = normalizePostcode(value);
+    const handleSubmit = async () => {
+        const canContinue = checkAuthenticatedUser(router);
+        if (!canContinue) return;
 
-        if (!value) {
+        const cleaned = normalizePostcode(postcode);
+
+        if (!postcode.trim()) {
             setCity("");
-            setErrors((prev) => ({ ...prev, postcode: "" }));
+            setErrors((prev) => ({ ...prev, postcode: true }));
             dispatch(setbuyerRequestData({ ...buyerRequest, postcode: "" }));
             return;
         }
@@ -70,12 +77,12 @@ function PostCode({
         // Don't validate partial
         if (!isFullPostcode(cleaned)) {
             setCity("");
-            setErrors((prev) => ({ ...prev, postcode: "" }));
+            setErrors((prev) => ({ ...prev, postcode: true }));
             return;
         }
 
         // Full but invalid → show error
-        if (!isValidUKPostcode(value)) {
+        if (!isValidUKPostcode(postcode)) {
             setPostalCodeValidate(false);
             setCity("");
             setErrors((prev) => ({ ...prev, postcode: true }));
@@ -99,8 +106,14 @@ function PostCode({
                     setbuyerRequestData({
                         ...buyerRequest,
                         postcode: result.data.postcode,
+                        service_id: serviceId || buyerRequest?.service_id,
                     }),
                 );
+
+                setTimeout(() => {
+                    nextStep();
+                }, 500);
+
             } else {
                 setPostalCodeValidate(false);
                 setErrors((prev) => ({ ...prev, postcode: true }));
@@ -113,28 +126,6 @@ function PostCode({
         } finally {
             setCheckingPostcode(false);
         }
-    };
-
-    const handleSubmit = () => {
-        const canContinue = checkAuthenticatedUser(router);
-        if (!canContinue) return;
-
-        const newErrors = {
-            postcode: !postalCodeValidate,
-        };
-
-        setErrors(newErrors);
-
-        if (newErrors.postcode) return;
-
-        dispatch(
-            setbuyerRequestData({
-                ...buyerRequest,
-                postcode,
-                service_id: serviceId || buyerRequest?.service_id,
-            }),
-        );
-        nextStep();
     };
 
     const handleCloseClick = () => {

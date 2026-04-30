@@ -15,7 +15,7 @@ const insights = [
     "Gutter Cleaning",
     "Airport Transfers",
     "Driveway Installation",
-    "Patio Services",
+    "Patio Laying",
     "Fence & Gate Installation",
     "Artificial Grass Installation",
 ];

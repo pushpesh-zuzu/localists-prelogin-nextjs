@@ -2,14 +2,6 @@
 import dynamic from "next/dynamic";
 import React from "react";
 import LogoWhiteIcon from "../../../../public/ReactIcons/LogoWhiteIcon";
-// import PostCodeSearchContentLocation from "./PostCodeSearchContentLocation";
-// const PostCodeSearchFieldLocation = dynamic(
-//   () => import("./PostCodeSearchFieldLocation"),
-//   {
-//     ssr: false,
-//     loading: () => <div className="hidden">Loading...</div>,
-//   },
-// );
 
 const PostCodeSearchContentLocation = dynamic(
   () => import("./PostCodeSearchContentLocation"),

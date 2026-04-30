@@ -67,9 +67,9 @@ export default function MegaMenu({
   children,
   menuData = megaMenu,
   menuHeading = "",
-   menuId,          
-  activeMenu,       
-  setActiveMenu,  
+  menuId,
+  activeMenu,
+  setActiveMenu,
 }) {
   const [localIsOpen, setLocalIsOpen] = useState(false);
   const isOpen = menuId ? activeMenu === menuId : localIsOpen;
@@ -117,9 +117,9 @@ export default function MegaMenu({
   const handleOpen = useCallback(() => {
     if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
     if (scrollCloseTimeoutRef.current) clearTimeout(scrollCloseTimeoutRef.current);
-    
+
     if (menuId && setActiveMenu) {
-      setActiveMenu(menuId); 
+      setActiveMenu(menuId);
     } else {
       setLocalIsOpen(true);
     }
@@ -215,13 +215,13 @@ export default function MegaMenu({
       onMouseLeave={handleMouseLeave}
     >
       <div
-          onClick={() => {
-            if (isMobile) {
-              isOpen ? handleClose() : handleOpen();
-            }
-          }}
-          style={{ display: "inline-block" }}
-        >
+        onClick={() => {
+          if (isMobile) {
+            isOpen ? handleClose() : handleOpen();
+          }
+        }}
+        style={{ display: "inline-block" }}
+      >
         {children}
       </div>
 
@@ -248,7 +248,7 @@ export default function MegaMenu({
                 </button>
               )}
 
-               {menuHeading && <div className={`flex items-center justify-between mb-4 pb-3 ${menuHeading ? "border-b":""}`}>
+              {menuHeading && <div className={`flex items-center justify-between mb-4 pb-3 ${menuHeading ? "border-b" : ""}`}>
                 {menuHeading && <h3 className="text-lg font-bold text-gray-900">Services</h3>}
               </div>}
 
@@ -275,34 +275,34 @@ export default function MegaMenu({
                     }}
                   >
                     <div className="flex items-center gap-3 flex-1">
-                     {item.path ? (
-                      <a
-                        href={`/${currentLang}/${currentCountry}/${item.path}`}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleClose();
-                        }}
-                        className="flex items-center gap-3"
-                      >
-                        {item.icon && (
-                          <Image src={item.icon} alt="" width={20} height={20} aria-hidden="true" />
-                        )}
-                        {!item.icon && <div className="h-5 w-5 md:hidden" />}
-                        <span className="text-sm font-bold text-gray-700 group-hover:text-gray-900">
-                          {item.name}
-                        </span>
-                      </a>
-                    ) : (
-                      <div className="flex items-center gap-3 cursor-default">
-                        {item.icon && (
-                          <Image src={item.icon} alt="" width={20} height={20} aria-hidden="true" />
-                        )}
-                        {!item.icon && <div className="h-5 w-5 md:hidden" />}
-                        <span className="text-sm font-bold text-gray-700">
-                          {item.name}
-                        </span>
-                      </div>
-                    )}
+                      {item.path ? (
+                        <a
+                          href={`/${currentLang}/${currentCountry}/${item.path}`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleClose();
+                          }}
+                          className="flex items-center gap-3"
+                        >
+                          {item.icon && (
+                            <Image src={item.icon} alt="" width={20} height={20} aria-hidden="true" />
+                          )}
+                          {!item.icon && <div className="h-5 w-5 md:hidden" />}
+                          <span className="text-sm font-bold text-gray-700 group-hover:text-gray-900">
+                            {item.name}
+                          </span>
+                        </a>
+                      ) : (
+                        <div className="flex items-center gap-3 cursor-default">
+                          {item.icon && (
+                            <Image src={item.icon} alt="" width={20} height={20} aria-hidden="true" />
+                          )}
+                          {!item.icon && <div className="h-5 w-5 md:hidden" />}
+                          <span className="text-sm font-bold text-gray-700">
+                            {item.name}
+                          </span>
+                        </div>
+                      )}
                     </div>
 
                     {item?.subcategory?.length > 0 && (
