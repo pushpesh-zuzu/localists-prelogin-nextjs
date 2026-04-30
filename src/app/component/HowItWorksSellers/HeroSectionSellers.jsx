@@ -161,7 +161,7 @@ const HeroSectionSellers = ({ onCustomContinue = null,
                                                     ) : (
                                                         services.map((item) => (
                                                             <p
-                                                                key={item.id}
+                                                                key={item.uuid}
                                                                 className="text-black font-bold text-center px-2 py-2 text-[16px] cursor-pointer border-b border-[#eee] hover:bg-[#f0f0f0] text-left lg:text-center"
                                                                 onClick={() => handleSelectService(item)}
                                                             >
