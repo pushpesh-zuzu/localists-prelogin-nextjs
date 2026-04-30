@@ -51,18 +51,23 @@ const PostCodeNewPPC = ({
         setPincode(value);
         setError("");
         setPostalCodeValidate(false);
+    };
 
-        const cleaned = normalizePostcode(value);
+    const handleNext = async () => {
+        const cleaned = normalizePostcode(pincode);
 
-        if (!value) return;
-        // if (value.length < 3) return;
+        if (!pincode.trim()) {
+            setError("Please enter postcode!");
+            return;
+        }
 
-        // ❌ Don't validate partial
-        if (!isFullPostcode(cleaned)) return;
+        if (!isFullPostcode(cleaned)) {
+            setError("Please enter a valid postcode!");
+            return;
+        }
 
-        // ❌ Full but invalid
-        if (!isValidUKPostcode(value)) {
-            setPostalCodeValidate(false);
+        // Invalid format
+        if (!isValidUKPostcode(pincode)) {
             setError("Please enter a valid postcode!");
             return;
         }
@@ -82,7 +87,10 @@ const PostCodeNewPPC = ({
                     setbuyerRequestData({ postal_code: data.data.postcode })
                 );
                 setError("");
-                handleNext(true);
+                setTimeout(() => {
+                    onNext?.();
+                    setBackButtonTriggered && setBackButtonTriggered(false);
+                }, 500);
             } else {
                 setPostalCodeValidate(false);
                 setError("Please enter a valid postcode!");
@@ -92,23 +100,6 @@ const PostCodeNewPPC = ({
             setError("Please enter a valid postcode!");
         } finally {
             setIsCheckingPostcode(false);
-        }
-    };
-
-    const handleNext = (isValid = postalCodeValidate) => {
-        if (!pincode.trim()) {
-            setError("Please enter a postcode!");
-            return;
-        }
-
-        if (!isValid) {
-            setError("Please enter a valid postcode!");
-            return;
-        }
-
-        if (onNext) {
-            onNext();
-            setBackButtonTriggered && setBackButtonTriggered(false);
         }
     };
 
@@ -123,7 +114,7 @@ const PostCodeNewPPC = ({
                 title={title}
                 onButtonClick={handleNext}
                 buttonText="Next"
-                disableNextButton={!postalCodeValidate}
+                disableNextButton={false}
                 showBackButton
                 onBackClick={prevStep}
                 titlePrimary

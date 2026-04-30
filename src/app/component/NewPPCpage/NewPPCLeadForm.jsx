@@ -15,7 +15,6 @@ import {
 import { searchService } from "@/lib/store/findjobslice";
 import { validateUKPhoneNumber } from "@/utils/formatUKPhoneNumber";
 import { useEmailCheck } from "@/hooks/emailExist";
-// import { handleScrollToBottom } from "@/utils/handleScrollToBottom"
 import LoaderIndicator from "../common/Loader/LoaderIndicatore";
 import H4 from "../UI/Typography/H4";
 import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
@@ -25,10 +24,6 @@ import { validateEmail } from "@/utils/validateEmail"
 import LocationPinIcon from "../../../../public/ReactIcons/LocationPinIcon";
 import GreenCheckIcon from "../common/icons/GreenCheckIcon";
 import Select from "react-select";
-// const AsyncSelect = dynamic(
-//     () => import("react-select/async"),
-//     { ssr: false }
-// );
 
 function NewPPCLeadForm({ nextStep, serviceId, }) {
     const dispatch = useDispatch();
@@ -54,10 +49,21 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
     const [postcodeValid, setPostcodeValid] = useState(false);
     const [postcodeError, setPostcodeError] = useState("");
 
-    // const [inputValue, setInputValue] = useState("");
-    // const [menuKey, setMenuKey] = useState(0);
-
     const { isEmailAvailable } = useEmailCheck(formData.email);
+
+    const normalizePostcode = (postcode) => {
+        return postcode.replace(/\s+/g, "").toUpperCase();
+    };
+
+    const isValidUKPostcode = (postcode) => {
+        const regex = /^([A-Z]{1,2}\d[A-Z\d]?)(\s?\d[A-Z]{2})$/i;
+        return regex.test(postcode.trim());
+    };
+
+    const isFullPostcode = (postcode) => {
+        const cleaned = normalizePostcode(postcode);
+        return cleaned.length >= 5 && cleaned.length <= 7;
+    };
 
     useEffect(() => {
         dispatch(searchService({ search: "" }));
@@ -90,26 +96,6 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
             }
         }
     }, [service, serviceId, initialServiceLoaded]);
-
-    // const loadOptions = useCallback(
-    //     (value, callback) => {
-
-    //         if (!value) {
-    //             dispatch(searchService({ search: "" }));
-    //             callback(serviceOptions); // show all services
-    //             return;
-    //         }
-
-    //         dispatch(searchService({ search: value }));
-    //         callback(serviceOptions);
-    //     },
-    //     [dispatch, serviceOptions]
-    // );
-
-    // const loadOptions = (_, callback) => {
-    //     callback(serviceOptions);
-    // };
-
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -148,6 +134,8 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
     };
 
     const validateForm = () => {
+        const cleaned = normalizePostcode(formData.postcode);
+
         const newErrors = {};
 
         if (!formData.name.trim()) {
@@ -170,7 +158,9 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
 
         if (!formData.postcode.trim()) {
             newErrors.postcode = "Postcode is required";
-        } else if (!postcodeValid) {
+        } else if (!isFullPostcode(cleaned)) {
+            newErrors.postcode = "Please enter a valid postcode";
+        } else if (!isValidUKPostcode(formData.postcode)) {
             newErrors.postcode = "Please enter a valid postcode";
         }
 
@@ -185,82 +175,12 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
         e.preventDefault();
         const canContinue = checkAuthenticatedUser(router);
         if (!canContinue) return;
+
+        const cleaned = normalizePostcode(formData.postcode);
+
         const formErrors = validateForm();
         if (Object.keys(formErrors).length > 0) {
             setErrors(formErrors);
-            return;
-        }
-
-        if (!validateUKPhoneNumber(formData.phone)) return;
-
-        const email = formData.email;
-
-        const res = await dispatch(checkEmailIdApi({ email }));
-        if (!res?.success) return;
-
-        dispatch(
-            setbuyerRequestData({
-                name: formData.name,
-                phone: formData.phone,
-                email: email,
-                postcode: formData.postcode,
-                service_id: formData.service_id,
-                service_name: formData.service_name?.label,
-                additional_note: formData.notes
-            })
-        );
-        nextStep();
-    };
-
-    useEffect(() => {
-        if (formData.email && !isEmailAvailable) {
-            setErrors((prev) => ({
-                ...prev,
-                email: "Email already exists",
-            }));
-        }
-    }, [isEmailAvailable]);
-
-    const normalizePostcode = (postcode) => {
-        return postcode.replace(/\s+/g, "").toUpperCase();
-    };
-
-    const isValidUKPostcode = (postcode) => {
-        const regex = /^([A-Z]{1,2}\d[A-Z\d]?)(\s?\d[A-Z]{2})$/i;
-        return regex.test(postcode.trim());
-    };
-
-    const isFullPostcode = (postcode) => {
-        const cleaned = normalizePostcode(postcode);
-        return cleaned.length >= 5 && cleaned.length <= 7;
-    };
-
-    const handlePostcodeChange = async (e) => {
-        const value = e.target.value.toUpperCase().slice(0, 10);
-
-        setFormData((p) => ({ ...p, postcode: value }));
-        setPostcodeError("");
-        setPostcodeValid(false);
-
-        const cleaned = normalizePostcode(value);
-
-        // if (!value.trim() || value.length < 3) return;
-
-        // Empty
-        if (!value) {
-            dispatch(setbuyerRequestData({ postcode: "" }));
-            return;
-        }
-
-        // Don't validate partial
-        if (!isFullPostcode(cleaned)) {
-            return;
-        }
-
-        // Full but invalid → show error
-        if (!isValidUKPostcode(value)) {
-            setPostcodeValid(false);
-            setPostcodeError("Please enter a valid postcode!");
             return;
         }
 
@@ -293,6 +213,47 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
         } finally {
             setIsCheckingPostcode(false);
         }
+
+        if (!validateUKPhoneNumber(formData.phone)) return;
+
+        const email = formData.email;
+
+        const res = await dispatch(checkEmailIdApi({ email }));
+        if (!res?.success) return;
+
+        dispatch(
+            setbuyerRequestData({
+                name: formData.name,
+                phone: formData.phone,
+                email: email,
+                postcode: normalizePostcode(formData.postcode),
+                service_id: formData.service_id,
+                service_name: formData.service_name?.label,
+                additional_note: formData.notes
+            })
+        );
+
+        setTimeout(() => {
+            nextStep();
+        }, 500);
+    };
+
+    useEffect(() => {
+        if (formData.email && !isEmailAvailable) {
+            setErrors((prev) => ({
+                ...prev,
+                email: "Email already exists",
+            }));
+        }
+    }, [isEmailAvailable]);
+
+    const handlePostcodeChange = async (e) => {
+        const value = e.target.value.toUpperCase().slice(0, 10);
+
+        setFormData((p) => ({ ...p, postcode: value }));
+        setErrors((prev) => ({ ...prev, postcode: "" }));
+        setPostcodeError("");
+        setPostcodeValid(false);
     };
 
     return (
@@ -394,42 +355,6 @@ function NewPPCLeadForm({ nextStep, serviceId, }) {
 
                 {/* SERVICE */}
                 <Label>What Service Do You Need? *</Label>
-                {/* <AsyncSelect
-                    key={menuKey}
-                    instanceId="service-select"
-                    // inputId="service-select-input"
-
-                    cacheOptions={false}
-                    loadOptions={loadOptions}
-                    defaultOptions={serviceOptions}
-                    // options={serviceOptions}
-                    // onChange={handleServiceChange}
-                    value={formData.service_name}
-                    // inputValue=""
-                    isSearchable={false}
-                    placeholder="Select a service"
-                    isLoading={searchServiceLoader}
-                    styles={customStyles(errors.service)}
-                    // onInputChange={(value, action) => {
-                    //     if (action.action === "input-change") setInputValue(value);
-                    // }}
-                    onChange={(option, action) => {
-                        // if (action.action === "clear") {
-                        //     setInputValue("");
-                        //     handleServiceChange(null);
-
-                        //     dispatch(searchService({ search: "" }));
-                        //     setMenuKey((k) => k + 1);
-
-                        //     return;
-                        // }
-                        handleServiceChange(option);
-                    }}
-                    isClearable={false}
-                    menuPortalTarget={typeof window !== "undefined" ? document.body : null}
-                    menuPosition="fixed"
-                    menuShouldScrollIntoView={false}
-                /> */}
                 <Select
                     options={serviceOptions}
                     value={formData.service_name}
