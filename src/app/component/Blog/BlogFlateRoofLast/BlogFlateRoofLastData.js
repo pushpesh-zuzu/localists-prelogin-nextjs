@@ -5,7 +5,7 @@ export const BLOG_FLATE_QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "h3",
     text: "Flat Roofs last at least 10 years - depending on the material and how well they are looked after. EPDM Roofs can last anywhere from 30-50 years and require minimal maintenance. Whereas Modified bitumen roofs (torch on felt) and built up roofs can last between 10 and 25 years",
-      className:"mb-[15px] md:mb-[20px] md:mt-[5px]"
+    className: "mb-[15px] md:mb-[20px] md:mt-[5px]"
 
   },
 
@@ -72,7 +72,7 @@ export const BLOG_FLATE_QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "pbold",
     text: "Need local roof installers near you who can help with quality roof installations built to last? Get started now at Localists",
-    className:"italic! mb-6 md:mb-[54px]"
+    className: "italic! mb-6 md:mb-[54px]"
   },
   {
     type: "h2",
@@ -249,7 +249,7 @@ export const BLOG_FLATE_QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "Any problems found during an inspection should be addressed as soon as possible. Prompt maintenance and repair are key to ensuring your flat roof lasts as long as it can.",
-      notMarginBottom: true,
+    notMarginBottom: true,
 
   },
 ];
@@ -285,5 +285,20 @@ export const FREQUENTLY_DATA_BLOG_FLATE_ROOF = [
     title: "How can I make my flat roof last longer?",
     description: `
       Keep it clean and free of debris, inspect it regularly, check for cracks or damage after storms, and make repairs promptly. Proper ventilation and insulation also help prevent moisture buildup that can weaken the roof.`,
+  },
+];
+
+export const FLAT_ROOF_LAST_ADVICEINSIGHT = [
+  {
+    id: 1,
+    title: "Roof Replacement Cost in 2026: The full Breakdown",
+    image: "/blog/roof-replacement.webp",
+    url: "/en/gb/blog/cost-guides/roof-replacement-cost"
+  },
+  {
+    id: 2,
+    title: "Roof repair cost UK",
+    image: "/blog/roof-repair.webp",
+    url: "/en/gb/blog/cost-guides/roof-repair-cost"
   },
 ];

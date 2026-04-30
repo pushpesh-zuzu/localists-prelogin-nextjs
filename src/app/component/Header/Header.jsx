@@ -14,7 +14,7 @@ import { getBarkToken } from "@/utils/CookiesHelper";
 import { useRouter } from "next/navigation";
 import AuthenticatedHeader from "./AthenticatedHeader";
 import MobileSlideInSearch from "./MobileSlideInSearch";
-import LoaderIndicator from "../common/Loader/LoaderIndicatore";
+// import LoaderIndicator from "../common/Loader/LoaderIndicatore";
 import Link from "next/link";
 import Logo from "../../../../public/ReactIcons/Logo";
 const adviceMenu = [
@@ -22,6 +22,14 @@ const adviceMenu = [
     name: "How Long Does a Flat Roof Last",
     path: "blog/advice/how-long-does-a-flat-roof-last",
     // icon: "/MegaMenu/flatRoof.svg",
+  },
+  {
+    name: "Roof Replacement Cost",
+    path: "blog/cost-guides/roof-replacement-cost",
+  },
+  {
+    name: "Roof Repair Cost",
+    path: "blog/cost-guides/roof-repair-cost",
   },
 ];
 export const MobileMegaMenu = [
@@ -62,7 +70,7 @@ export const MobileMegaMenu = [
       },
     ],
   },
-  
+
   {
     name: "Transport",
     path: "transportation-services",
@@ -89,6 +97,14 @@ export const MobileMegaMenu = [
       {
         name: "How Long Does a Flat Roof Last",
         path: "blog/advice/how-long-does-a-flat-roof-last",
+      },
+      {
+        name: "Roof Replacement Cost",
+        path: "blog/cost-guides/roof-replacement-cost",
+      },
+      {
+        name: "Roof Repair Cost",
+        path: "blog/cost-guides/roof-repair-cost",
       },
     ],
   },
@@ -177,7 +193,7 @@ export default function Header() {
                     <ArrowDownBlue />
                   </button>
                 </MegaMenu>
-                <div style={{display:'none'}}>
+                <div style={{ display: 'none' }}>
                   {adviceMenu.map((item, i) => (
                     <div key={i}>
                       <a href={`/en/gb/${item.path}`}>{item.name}</a>

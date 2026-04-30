@@ -1,68 +1,77 @@
 "use client";
 
 import BlogCards from "./Blogcards";
-import BlogHeroCard from "./BlogHeroCard";
+// import BlogHeroCard from "./BlogHeroCard";
 // import Button from "../../UI/Typography/Button";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import GetQuote from "../../common/GetQuotes/GetQuote";
 
 
 const blogs = [
-    {
-        title: "Tree Removal Cost UK",
-        image: "/images/BlogPage/garden_shrubs.webp",
-    },
-    {
-        title: "New Roof Grants in 2026",
-        image: "/images/BlogPage/shrub1.webp",
-    },
+    // {
+    //     title: "Tree Removal Cost UK",
+    //     image: "/images/BlogPage/garden_shrubs.webp",
+    // },
+    // {
+    //     title: "New Roof Grants in 2026",
+    //     image: "/images/BlogPage/shrub1.webp",
+    // },
     {
         title: "How long does a flat roof last",
-        image: "/images/BlogPage/Howlong.webp",
-        path:"/en/gb/blog/advice/how-long-does-a-flat-roof-last"
+        image: "/blog/flat-roof.webp",
+        path: "/en/gb/blog/advice/how-long-does-a-flat-roof-last",
+        category: "Expert Advice"
     },
     {
         title: "Roof Replacement Cost in 2026: The full Breakdown",
-        image: "/images/BlogPage/view.webp",
+        image: "/blog/roof-replacement.webp",
+        path: "/en/gb/blog/cost-guides/roof-replacement-cost",
+        category: "Cost Guides"
     },
     {
-        title: "Roof repair cost in 2026: The full Breakdown",
-        image: "/images/BlogPage/capMan.webp",
+        title: "Roof repair cost UK",
+        image: "/blog/roof-repair.webp",
+        path: "/en/gb/blog/cost-guides/roof-repair-cost",
+        category: "Cost Guides"
     },
-    {
-        title: "Roof cleaning cost in 2026: The full Breakdown",
-        image: "/images/BlogPage/waterMan.webp",
-    },
-    {
-        title: "Roof tile Replacement Costs in 2026: The full Breakdown",
-        image: "/images/BlogPage/DrillMan.webp",
-    },
-    {
-        title: "Roof inspection cost in 2026: The full Breakdown",
-        image: "/images/BlogPage/planPeoples.webp",
-    },
-    {
-        title: "Rubber roofing cost in 2026: The full Breakdown",
-        image: "/images/BlogPage/plates.webp",
-    },
-    {
-        title: "State vs tile roof: Which one is best for your home?",
-        image: "/images/BlogPage/frame.webp",
-    },
+    // {
+    //     title: "Roof cleaning cost in 2026: The full Breakdown",
+    //     image: "/images/BlogPage/waterMan.webp",
+    // },
+    // {
+    //     title: "Roof tile Replacement Costs in 2026: The full Breakdown",
+    //     image: "/images/BlogPage/DrillMan.webp",
+    // },
+    // {
+    //     title: "Roof inspection cost in 2026: The full Breakdown",
+    //     image: "/images/BlogPage/planPeoples.webp",
+    // },
+    // {
+    //     title: "Rubber roofing cost in 2026: The full Breakdown",
+    //     image: "/images/BlogPage/plates.webp",
+    // },
+    // {
+    //     title: "State vs tile roof: Which one is best for your home?",
+    //     image: "/images/BlogPage/frame.webp",
+    // },
 ];
 
-export default function BlogGridSection() {
+export default function BlogGridSection({ selectedCategory = "All" }) {
+    const filteredBlogs = selectedCategory === "All"
+        ? blogs
+        : blogs.filter((blog) => blog.category === selectedCategory);
+
     return (
         <WrapperBGWidth>
             <section className="max-w-[1320px] mx-auto px-4 md:px-8 xl:px-0 py-14">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-                    <BlogHeroCard
+                    {/* <BlogHeroCard
                         title="ECO4 Axe Will Trigger a Wave of Business Collapse and Job Carnage, Expert Warns"
                         image="/images/BlogPage/Eco4.webp"
-                    />
+                    /> */}
 
-                    {blogs.map((item, index) => (
+                    {filteredBlogs.map((item, index) => (
                         <BlogCards
                             key={index}
                             title={item.title}
@@ -78,8 +87,6 @@ export default function BlogGridSection() {
                         classGetQuote="py-[7px] xl:py-4 xl:px-[30px] hover:!bg-[#1b2326]"
                     />
                 </div>
-
-
             </section>
         </WrapperBGWidth>
     );

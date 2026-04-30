@@ -49,14 +49,30 @@ const PostcodeSearchDriveways = ({
 
   const showToast = (type, content) => message[type](content);
 
+  const normalizePostcode = (postcode) => {
+    return postcode.replace(/\s+/g, "").toUpperCase();
+  };
+
+  const isValidUKPostcode = (postcode) => {
+    const regex = /^([A-Z]{1,2}\d[A-Z\d]?)(\s?\d[A-Z]{2})$/i;
+    return regex.test(postcode.trim());
+  };
+
+  const isFullPostcode = (postcode) => {
+    const cleaned = normalizePostcode(postcode);
+    return cleaned.length >= 5 && cleaned.length <= 7;
+  };
+
   useEffect(() => {
     setProgressPercentage(75);
   }, [setProgressPercentage]);
 
   const handlePincodeChange = async (e) => {
-    const value = e.target.value.slice(0, 10);
+    const value = e.target.value.toUpperCase().slice(0, 10);
     setPincode(value);
     setPostalCodeValidate(false);
+
+    const cleaned = normalizePostcode(value);
 
     if (!value.trim()) {
       setError("");
@@ -80,15 +96,27 @@ const PostcodeSearchDriveways = ({
       return;
     }
 
-    if (value.length < 3) {
+    // if (value.length < 3) {
+    //   setPostalCodeValidate(false);
+    //   return;
+    // }
+
+    if (!isFullPostcode(cleaned)) {
       setPostalCodeValidate(false);
+      return;
+    }
+
+    // Full but invalid
+    if (!isValidUKPostcode(value)) {
+      setPostalCodeValidate(false);
+      setError("Please enter a valid postcode!");
       return;
     }
 
     setIsCheckingPostcode(true);
 
     try {
-      const response = await dispatch(getCityName({ postcode: value }));
+      const response = await dispatch(getCityName({ postcode: cleaned }));
       const newResponse = response?.unwrap ? await response.unwrap() : response;
       if (newResponse?.data?.valid) {
         const validPostcode = newResponse.data.postcode;
@@ -96,7 +124,7 @@ const PostcodeSearchDriveways = ({
         setCity(newResponse.data.city);
         dispatch(setcitySerach(newResponse.data.city));
         dispatch(setbuyerRequestData({ postal_code: validPostcode }));
-        dispatch(getAddressListFromPostcode({ postcode: value }));
+        dispatch(getAddressListFromPostcode({ postcode: cleaned }));
         setError("");
 
       } else {

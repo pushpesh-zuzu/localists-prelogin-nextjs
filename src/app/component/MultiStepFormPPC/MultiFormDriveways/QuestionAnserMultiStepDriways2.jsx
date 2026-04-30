@@ -62,12 +62,32 @@ const QuestionAnserMultiStepDriways2 = ({
     questionIndexMap[q?.question_no] = index;
   });
 
+  // useEffect(() => {
+  //   if (isComingFromStep3 && buyerRequest?.questions?.length > 0) {
+  //     setCurrentQuestion(4);
+  //     setTotalQuestionsAnswered(5);
+  //   }
+  // }, [isComingFromStep3]);
+
   useEffect(() => {
-    if (isComingFromStep3 && buyerRequest?.questions?.length > 0) {
-      setCurrentQuestion(4);
-      setTotalQuestionsAnswered(5);
+    if (!isComingFromStep3 || buyerRequest?.questions?.length === 0) return;
+
+    const lastQuestionIndex = questionHistory?.[questionHistory.length - 1];
+
+    if (
+      Number.isInteger(lastQuestionIndex) &&
+      formattedQuestions[lastQuestionIndex]
+    ) {
+      setCurrentQuestion(lastQuestionIndex);
+      setTotalQuestionsAnswered(Math.max(1, questionHistory.length));
     }
-  }, [isComingFromStep3]);
+  }, [
+    isComingFromStep3,
+    buyerRequest?.questions?.length,
+    questionHistory,
+    formattedQuestions,
+  ]);
+
   useEffect(() => {
     if (questions.length > 0 && buyerRequest?.questions?.length > 0) {
       const currentQuestionText = questions[currentQuestion]?.questions;
@@ -204,7 +224,7 @@ const QuestionAnserMultiStepDriways2 = ({
       setProgressPercentage(75);
       onNext();
       return;
-    } else if (nextQ && questionIndexMap[nextQ]) {
+    } else if (nextQ && questionIndexMap[nextQ] !== undefined) {
       setQuestionHistory((prev) => [...prev, questionIndexMap[nextQ]]);
       setCurrentQuestion(questionIndexMap[nextQ]);
     } else {

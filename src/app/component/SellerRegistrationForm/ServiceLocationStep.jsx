@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import {
-  setCity,
+  // setCity,
   setCountry,
   setPostalCode,
   setSelectedServiceFormData,
@@ -12,10 +12,10 @@ import { showToast } from "@/utils/toaster";
 import { getCityName } from "@/lib/store/buyerslice/buyerSlice";
 import { CheckIcon, Map, MapPin } from "lucide-react";
 import Button1 from "../UI/Typography/Button1";
-import H2 from "../UI/Typography/H2";
-import H4 from "../UI/Typography/H4";
-import H3 from "../UI/Typography/H3";
-import Paragraph from "../UI/Typography/Paragraph";
+// import H2 from "../UI/Typography/H2";
+// import H4 from "../UI/Typography/H4";
+// import H3 from "../UI/Typography/H3";
+// import Paragraph from "../UI/Typography/Paragraph";
 import SellerFormCardWrappper from "./SellerFormCardWrappper";
 import InputLabel from "../UI/InputLabel/InputLabel";
 import LocationMapIcon from "../common/icons/SellerRegistration/LocationMapIcon";
@@ -31,31 +31,39 @@ const ServiceLocationStep = ({
 }) => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
-  const debounceTimer = useRef(null);
+  // const debounceTimer = useRef(null);
   const [isValidPostCode, setIsValidPostCode] = useState(false);
+
+  const normalizePostcode = (postcode) => {
+    return postcode.replace(/\s+/g, "").toUpperCase();
+  };
+
+  const isValidUKPostcode = (postcode) => {
+    const regex = /^([A-Z]{1,2}\d[A-Z\d]?)(\s?\d[A-Z]{2})$/i;
+    return regex.test(postcode.trim());
+  };
+
+  const isFullPostcode = (postcode) => {
+    const cleaned = normalizePostcode(postcode);
+    return cleaned.length >= 5 && cleaned.length <= 7;
+  };
 
   const handlePostcodeChange = (e) => {
     const { name, value } = e.target;
 
+    const upperValue = value.toUpperCase();
+
     dispatch(
       setSelectedServiceFormData({
-        [name]: value,
+        [name]: upperValue,
       })
     );
 
-    if (debounceTimer.current) {
-      clearTimeout(debounceTimer.current);
-    }
-
-    debounceTimer.current = setTimeout(() => {
-      if (value && value.length >= 3) {
-        fetchCityFromPostcode(value);
-      }
-    }, 800);
+    setIsValidPostCode(false);
   };
 
   const fetchCityFromPostcode = async (postcode) => {
-    if (!postcode || postcode.length < 3) return;
+    if (!postcode) return false;
 
     setIsLoading(true);
 
@@ -80,52 +88,68 @@ const ServiceLocationStep = ({
             country_old: "UK",
             coordinates: {},
             validPostCode: true,
-            validPostCode2: isValidPostCode,
+            validPostCode2: true,
             postcode2: postcodeFromApi,
           })
         );
 
         dispatch(setPostalCode({ postalcode: postcodeFromApi }));
         dispatch(setCountry({ country: newResponse.data?.country }));
+        return true;
       }
+      return false;
     } catch (error) {
       console.error("Error fetching city:", error);
-      // 🔥 setCity function call fix किया
+      // setCity function call fix किया
       dispatch(
         setFormData({
           city: "",
           validPostCode: false,
+          validPostCode2: false,
         })
       );
       setIsValidPostCode(false);
-      showToast("error", "No PIN code found! Please try again.");
+      return false;
     } finally {
       setIsLoading(false);
     }
   };
 
-  const validateAndProceed = () => {
-    if (
-      !formData?.postcode ||
-      (formData.postcode.length < 3 && formData.city)
-    ) {
+  const validateAndProceed = async () => {
+    const postcode = formData?.postcode || "";
+    const cleaned = normalizePostcode(postcode);
+
+    // Empty
+    if (!postcode) {
+      showToast("error", "Please enter postcode");
+      return;
+    }
+
+    // Partial
+    if (!isFullPostcode(cleaned)) {
       showToast("error", "Please enter a valid postcode");
       return;
     }
-    if (!formData?.validPostCode) {
+
+    // Invalid format
+    if (!isValidUKPostcode(postcode)) {
       showToast("error", "Please enter a valid postcode");
       return;
-    } else {
+    }
+
+    const isValid = await fetchCityFromPostcode(cleaned);
+
+    // API validation failed
+    if (!isValid) {
+      showToast("error", "Please enter a valid postcode");
+      return;
+    }
+
+    // All good
+    setTimeout(() => {
       nextStep();
-    }
+    }, 500);
   };
-  useEffect(() => {
-    return () => {
-      if (debounceTimer.current) {
-        clearTimeout(debounceTimer.current);
-      }
-    };
-  }, []);
 
   return (
     <SellerFormCardWrappper
@@ -141,11 +165,10 @@ const ServiceLocationStep = ({
             <div className="relative">
               <select
                 className={`w-full px-4 py-2 border rounded-sm appearance-none bg-white 
-                    ${
-                      errors?.miles1
-                        ? "border-red-500 ring-1 ring-red-500"
-                        : "border-gray-300"
-                    } 
+                    ${errors?.miles1
+                    ? "border-red-500 ring-1 ring-red-500"
+                    : "border-gray-300"
+                  } 
                     focus:outline-1 focus:ring-1
                     text-gray-700 cursor-pointer`}
                 name="miles1"
@@ -198,11 +221,10 @@ const ServiceLocationStep = ({
             placeholder:text-gray-400
             focus:outline-1 focus:ring-1
             disabled:bg-gray-100 
-            ${
-              errors.postcode
-                ? "border-red-500 focus:ring-red-500 focus:border-red-500"
-                : "focus:ring-black"
-            }
+            ${errors.postcode
+                    ? "border-red-500 focus:ring-red-500 focus:border-red-500"
+                    : "focus:ring-black"
+                  }
           `}
                 name="postcode"
                 value={formData?.postcode || ""}

@@ -5,10 +5,10 @@ import BlogHeroSection from "../BlogHeroSection";
 import {
   BLOG_FLATE_QUESTION_AND_ABOUT_SERVICE,
   FREQUENTLY_DATA_BLOG_FLATE_ROOF,
+  FLAT_ROOF_LAST_ADVICEINSIGHT
 } from "./BlogFlateRoofLastData";
 import AboutServiceAndQuestionBlog from "../AboutServiceAndQuestionBlog";
 import AdviceAndInsightBlog from "../AdviceAndInsightBlog";
-import { TREE_SRUGEON_ADVICEINSIGHT } from "../../Nearme/TreeSurgeon/TreeSurgeonData";
 import Footer from "../../Footer/Footer";
 import FAQScript from "../../common/seo/FAQScript";
 import { FAQ } from "../../Nearme/FAQ";
@@ -52,7 +52,7 @@ function BlogFlateRoofLast() {
           classNamePostCode="mb-[30px] mt-[30px] lg:mt-[48px] lg:mb-[48px]"
         />
       </div>
-      <AdviceAndInsightBlog articles={TREE_SRUGEON_ADVICEINSIGHT} />
+      <AdviceAndInsightBlog articles={FLAT_ROOF_LAST_ADVICEINSIGHT} />
       <Footer />
     </>
   );

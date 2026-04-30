@@ -261,7 +261,6 @@ export const NEARBY_PLACES_ROOFER_ELLESMEREPORT = [
     { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
     { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
     { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
-
     {
       title: "Roofers Macclesfield",
       url: "/en/gb/roofers-near-me/macclesfield",

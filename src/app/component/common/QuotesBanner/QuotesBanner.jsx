@@ -43,79 +43,54 @@ export default function QuotesBanner({
   const dispatch = useDispatch();
   const router = useRouter();
 
-  useEffect(() => {
-    if (!postcode.trim() || postcode.length < 3) {
+  // Helpers
+  const normalizePostcode = (postcode) => {
+    return postcode.replace(/\s+/g, "").toUpperCase();
+  };
+
+  const isValidUKPostcode = (postcode) => {
+    const regex = /^([A-Z]{1,2}\d[A-Z\d]?)(\s?\d[A-Z]{2})$/i;
+    return regex.test(postcode.trim());
+  };
+
+  const isFullPostcode = (postcode) => {
+    const cleaned = normalizePostcode(postcode);
+    return cleaned.length >= 5 && cleaned.length <= 7;
+  };
+
+  const handleChange = (e) => {
+    const value = e.target.value.toUpperCase().slice(0, 10);
+    setPostcode(value);
+    setError("");
+    setIsValid(false);
+  };
+
+  const handleSubmit = async () => {
+    const canContinue = checkAuthenticatedUser(router);
+    if (!canContinue) return;
+
+    const cleaned = normalizePostcode(postcode);
+
+    if (!postcode.trim()) {
+      setError("Please enter a valid postcode!");
       setIsValid(false);
       setCity("");
-      setError("");
       if (onValidationError) onValidationError();
       return;
     }
 
-    const timer = setTimeout(async () => {
-      setIsValidating(true);
-      try {
-        const response = await dispatch(getCityName({ postcode: postcode }));
-        const newResponse = response?.payload || response;
-
-        if (newResponse?.data?.valid) {
-          setIsValid(true);
-          setCity(newResponse.data.city);
-          dispatch(setcitySerach(newResponse.data.city));
-          dispatch(setbuyerRequestData({ postcode: newResponse?.data?.postcode }))
-          setError("");
-
-          // Notify parent component - validation success
-          if (onValidationSuccess) {
-            onValidationSuccess({
-              postcode: postcode,
-              city: newResponse.data.city,
-              isValid: true,
-            });
-          }
-        } else {
-          setIsValid(false);
-          setCity("");
-          setError("Please enter a valid postcode!");
-
-          // Notify parent component - validation failed
-          if (onValidationError) {
-            onValidationError();
-          }
-        }
-      } catch (err) {
-        setIsValid(false);
-        setCity("");
-        setError("Please enter a valid postcode!");
-
-        // Notify parent component - validation error
-        if (onValidationError) {
-          onValidationError();
-        }
-      } finally {
-        setIsValidating(false);
-      }
-    }, debounceMs);
-
-    return () => clearTimeout(timer);
-  }, [postcode, dispatch, debounceMs, onValidationSuccess, onValidationError]);
-
-  const handleChange = (e) => {
-    const value = e.target.value.trim().toUpperCase().slice(0, 10);
-    setPostcode(value);
-    setError("");
-  };
-
-  const handleSubmit = () => {
-    const canContinue = checkAuthenticatedUser(router);
-    if (!canContinue) return;
-
-    if (!postcode.trim()) {
+    // Don't call API for partial postcode
+    if (!isFullPostcode(cleaned)) {
       setError("Please enter a valid postcode!");
+      setIsValid(false);
+      setCity("");
       return;
     }
 
-    if (!isValid) {
+    // Full but invalid → show error
+    if (!isValidUKPostcode(postcode)) {
+      setIsValid(false);
+      setCity("");
       setError("Please enter a valid postcode!");
       return;
     }
@@ -125,16 +100,59 @@ export default function QuotesBanner({
       return;
     }
 
-    // Call submit callback with postcode and city data
-    if (onSubmit) {
-      onSubmit({
-        postcode,
-        city,
-        isValid,
-      });
+    setIsValidating(true);
+    try {
+      const response = await dispatch(getCityName({ postcode: cleaned }));
+      const newResponse = response?.payload || response;
+
+      if (newResponse?.data?.valid) {
+        setIsValid(true);
+        setCity(newResponse.data.city);
+        dispatch(setcitySerach(newResponse.data.city));
+        dispatch(setbuyerRequestData({ postcode: newResponse?.data?.postcode }))
+        setError("");
+
+        // Notify parent component - validation success
+        if (onValidationSuccess) {
+          onValidationSuccess({
+            postcode: cleaned,
+            city: newResponse.data.city,
+            isValid: true,
+          });
+        }
+
+        if (onSubmit) {
+          onSubmit({
+            postcode: cleaned,
+            city: newResponse.data.city,
+            isValid: true,
+          });
+        }
+        setTimeout(() => {
+          setShow(true);
+        }, 500);
+      } else {
+        setIsValid(false);
+        setCity("");
+        setError("Please enter a valid postcode!");
+
+        // Notify parent component - validation failed
+        if (onValidationError) {
+          onValidationError();
+        }
+      }
+    } catch (err) {
+      setIsValid(false);
+      setCity("");
+      setError("Please enter a valid postcode!");
+
+      // Notify parent component - validation error
+      if (onValidationError) {
+        onValidationError();
+      }
+    } finally {
+      setIsValidating(false);
     }
-    setError("");
-    setShow(true);
   };
 
   const handleKeyPress = (e) => {
@@ -283,7 +301,7 @@ relative overflow-hidden">
         <ReqBuyerRegistration
           onClose={handleClose}
           service_Id={serviceId}
-          postcode={postcode}
+          postcode={postcode.replace(/\s+/g, "").toUpperCase()}
           serviceName={serviceName}
           service_Name={serviceName}
         />

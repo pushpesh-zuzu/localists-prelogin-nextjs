@@ -1,153 +1,183 @@
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import React, { useMemo } from "react";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import H2 from "../UI/Typography/H2";
 import Button from "../UI/Typography/Button";
 
 function AdviceAndInsightBlog({ articles = [], maxWidth = false }) {
+  if (!articles || articles.length === 0) return null;
+
+  // Dynamic row logic
+  const getRows = (articles) => {
+    const rows = [];
+    let i = 0;
+
+    while (i < articles.length) {
+      const remaining = articles.length - i;
+
+      if (remaining === 4) {
+        rows.push(articles.slice(i, i + 2));
+        rows.push(articles.slice(i + 2, i + 4));
+        break;
+      }
+
+      if (remaining === 5) {
+        rows.push(articles.slice(i, i + 3));
+        rows.push(articles.slice(i + 3, i + 5));
+        break;
+      }
+
+      if (remaining >= 3) {
+        rows.push(articles.slice(i, i + 3));
+        i += 3;
+      } else {
+        rows.push(articles.slice(i, i + 2));
+        break;
+      }
+    }
+
+    return rows;
+  };
+
+  // Memoized rows (performance)
+  const rows = useMemo(() => getRows(articles), [articles]);
+
   return (
     <WrapperBGWidth>
       <section
-        className={`${
-          maxWidth ? "max-w-[95%]" : ""
-        } mx-auto h-auto min-h-[336px] lg:min-h-[687px] px-7.5 pb-12 sm:px-10 md:px-16 md:pb-10 xl:px-[120px] lg:pt-0 lg:pb-[86px]`}
+        className={`${maxWidth ? "max-w-[95%]" : ""
+          } mx-auto h-auto min-h-[336px] lg:min-h-[635px] px-7.5 pb-12 sm:px-10 md:px-16 md:pb-10 xl:px-[120px] lg:pt-0 lg:pb-[86px]`}
       >
+        {/* Heading */}
         <H2 className="text-[#00afe3] pb-7.5 xl:pb-[53px]">
           Read <span className="text-[#253238]">More.</span>
         </H2>
 
+        {/* ================= DESKTOP ================= */}
         <div className="hidden md:block space-y-2 xl:space-y-6 xl:mb-8">
-          <div className="grid grid-cols-3 sm:gap-2 lg:gap-[17px]">
-            <article className="col-span-1 relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group ">
-              <Image
-                src={articles[0].image}
-                alt={articles[0].title}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                quality={85}
-                // priority={false}
-              />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
-              <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base sm:leading-4 xl:leading-7 font-black xl:text-[25px] -tracking-[3%]">
-                {articles[0].title}
-              </h3>
-            </article>
+          {rows.map((row, rowIndex) => (
+            <div
+              key={rowIndex}
+              className={`grid ${row.length === 3 ? "grid-cols-3" : "grid-cols-2"
+                } sm:gap-2 lg:gap-[17px]`}
+            >
+              {row.map((article, index) =>
+                article.url ? (
+                  <Link
+                    href={article.url}
+                    key={article.id}
+                    aria-label={article.title || "blog link"}
+                  >
+                    <article className="relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group cursor-pointer">
+                      <Image
+                        src={article.image}
+                        alt={article.title || "blog image"}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        quality={85}
+                        priority={rowIndex === 0 && index === 0}
+                      />
 
-            <article className="col-span-2 relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group ">
-              <Image
-                src={articles[1].image}
-                alt={articles[1].title}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 66vw, 50vw"
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                quality={85}
-                // priority
-              />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
-              <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base sm:leading-4 xl:leading-7 font-black xl:text-[25px] -tracking-[3%] xl:max-w-[79%]">
-                {articles[1].title}
-              </h3>
-            </article>
-          </div>
+                      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
 
-          <div className="grid grid-cols-3 sm:gap-2 lg:gap-[17px]">
-            {articles.slice(2).map((article, index) => (
+                      {article.title && (
+                        <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base xl:text-[25px] font-black">
+                          {article.title}
+                        </h3>
+                      )}
+                    </article>
+                  </Link>
+                ) : (
+                  <article
+                    key={article.id}
+                    className="relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group"
+                  >
+                    <Image
+                      src={article.image}
+                      alt={article.title || "blog image"}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      quality={85}
+                    />
+
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
+
+                    {article.title && (
+                      <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm md:text-base xl:text-[25px] font-black">
+                        {article.title}
+                      </h3>
+                    )}
+                  </article>
+                )
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* ================= MOBILE ================= */}
+        <div className="md:hidden grid grid-cols-1 gap-3">
+          {articles.map((article, index) =>
+            article.url ? (
+              <Link
+                href={article.url}
+                key={article.id}
+                aria-label={article.title || "blog link"}
+              >
+                <article className="relative rounded-2xl overflow-hidden h-[200px] group cursor-pointer">
+                  <Image
+                    src={article.image}
+                    alt={article.title || "blog image"}
+                    fill
+                    sizes="100vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    quality={85}
+                    priority={index === 0}
+                  />
+
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
+
+                  {article.title && (
+                    <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm font-black">
+                      {article.title}
+                    </h3>
+                  )}
+                </article>
+              </Link>
+            ) : (
               <article
                 key={article.id}
-                className="relative rounded-3xl overflow-hidden h-[170px] lg:h-[336px] group "
+                className="relative rounded-2xl overflow-hidden h-[200px] group"
               >
                 <Image
                   src={article.image}
-                  alt={article.title}
+                  alt={article.title || "blog image"}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw"
+                  sizes="100vw"
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   quality={85}
-                  // priority={false}
-                  // loading="lazy"
                 />
+
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
-                <h3
-                  className={`absolute bottom-4 left-4 right-4 text-white text-sm md:text-base sm:leading-4 xl:leading-7 font-black xl:text-[25px] -tracking-[3%] xl:max-w-[80%]`}
-                >
-                  {article.title}
-                </h3>
+
+                {article.title && (
+                  <h3 className="absolute bottom-4 left-4 right-4 text-white text-sm font-black">
+                    {article.title}
+                  </h3>
+                )}
               </article>
-            ))}
-          </div>
+            )
+          )}
         </div>
 
-        {/* Mobile Layout */}
-        <div className="md:hidden space-y-1.5">
-          <article className="relative rounded-3xl overflow-hidden h-[297px] group ">
-            <Image
-              src={articles[1].image}
-              alt={articles[1].title}
-              fill
-              sizes="100vw"
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              quality={85}
-              // priority
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
-            <h3
-              className="absolute bottom-4 left-4 right-4 text-white leading-4 text-[12px]
-              [@media(min-width:360px)]:text-[15px] font-black xl:text-[25px] -tracking-[3%]"
-            >
-              {articles[1].title}
-            </h3>
-          </article>
-
-          {/* Second Row - 2 Small Cards */}
-          <div className="grid grid-cols-2 gap-1.5">
-            <article className="relative rounded-2xl overflow-hidden h-[120px] group ">
-              <Image
-                src={articles[0].image}
-                alt={articles[0].title}
-                fill
-                sizes="50vw"
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                quality={85}
-                // priority={false}
-                // loading="lazy"
-              />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.3)_100%)]"></div>
-              <h3
-                className="absolute bottom-4 leading-4 left-4 right-4 text-white text-[12px]
-                            [@media(min-width:360px)]:text-[15px] font-black xl:text-[25px] -tracking-[3%] "
-              >
-                {articles[0].title}
-              </h3>
-            </article>
-
-            <article className="relative rounded-2xl overflow-hidden h-[120px] group ">
-              <Image
-                src={articles[2].image}
-                alt={articles[2].title}
-                fill
-                sizes="50vw"
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                quality={85}
-                // priority={false}
-                // loading="lazy"
-              />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.7)_100%)]"></div>
-              <h3
-                className="absolute bottom-4 left-4 right-4 text-white leading-4 text-[12px]
-                [@media(min-width:360px)]:text-[15px] font-black xl:text-[25px] -tracking-[3%] xl:max-w-[70%]"
-              >
-                {articles[2].title}
-              </h3>
-            </article>
-          </div>
-        </div>
-
+        {/* ================= BUTTON ================= */}
         <div className="flex justify-center mt-6 xl:mt-12">
           <a href="/en/gb/blog" aria-label="Read roofing blog">
-          <Button className="bg-[#253238] cursor-pointer hover:bg-[#00aef3] px-4.5 py-2 xl:py-[15px] md:px-9 xl:px-[66px] rounded-full text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
-            Read More
-          </Button>
+            <Button className="bg-[#253238] cursor-pointer hover:bg-[#00aef3] px-4.5 py-2 xl:py-[15px] md:px-9 xl:px-[66px] rounded-full text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+              Read More
+            </Button>
           </a>
         </div>
       </section>

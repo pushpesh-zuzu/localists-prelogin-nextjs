@@ -5,10 +5,10 @@ import BlogHeroSection from "..//../BlogHeroSection";
 import {
   ROOFREPLACEMENTCOST_QUESTION_AND_ABOUT_SERVICE,
   FREQUENTLY_DATA_ROOFREPLACEMENTCOST_ROOF,
+  ROOF_REPLACEMENT_ADVICEINSIGHT
 } from "./RoofReplacementCostData";
 import AboutServiceAndQuestionBlog from "../../AboutServiceAndQuestionBlog";
 import AdviceAndInsightBlog from "../../AdviceAndInsightBlog";
-import { TREE_SRUGEON_ADVICEINSIGHT } from "../../../Nearme/TreeSurgeon/TreeSurgeonData";
 import Footer from "../../../Footer/Footer";
 import FAQScript from "../../../common/seo/FAQScript";
 import { FAQ } from "../../../Nearme/FAQ";
@@ -29,10 +29,10 @@ function RoofReplacementCost() {
         category="Roofing"
         title="Roof Replacement Cost in 2026: The full Breakdown"
         altText="a roofer wearing protective leak roofing a roof with safety harness"
-        bannerImage="/blog/blogflatroofbanner3.webp"
-        bannerImageMobile="/blog/blogflatroofbannerMobile.webp"
-        publishedDate="21.04.26"
-        updatedDate="21.04.26"
+        bannerImage="/blog/roofReplacement/banner.webp"
+        bannerImageMobile="/blog/roofReplacement/mobile-banner.webp"
+        publishedDate="28.04.26"
+        updatedDate="28.04.26"
       />
       {/* <BlogShareSection/> */}
       <AboutServiceAndQuestionBlog
@@ -52,7 +52,7 @@ function RoofReplacementCost() {
           classNamePostCode="mb-[30px] mt-[30px] lg:mt-[48px] lg:mb-[48px]"
         />
       </div>
-      <AdviceAndInsightBlog articles={TREE_SRUGEON_ADVICEINSIGHT} />
+      <AdviceAndInsightBlog articles={ROOF_REPLACEMENT_ADVICEINSIGHT} />
       <Footer />
     </>
   );

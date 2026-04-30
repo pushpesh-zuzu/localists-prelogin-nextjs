@@ -13,7 +13,7 @@ function page() {
     <>
       <SEO
         canonicalPath="/en/gb/blog/advice/roof-repair-cost"
-        bannerImage="/blog/blogRoofRepairCost.webp"
+        bannerImage="/blog/roofRepair/roofRepairHero.webp"
         
         conversion={true} /><Suspense
           fallback={<div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">

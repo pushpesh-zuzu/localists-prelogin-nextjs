@@ -72,6 +72,20 @@ const ServiceAndPostCodeModal = ({
     [slug]
   );
 
+  const normalizePostcode = (postcode) => {
+    return postcode.replace(/\s+/g, "").toUpperCase();
+  };
+
+  const isValidUKPostcode = (postcode) => {
+    const regex = /^([A-Z]{1,2}\d[A-Z\d]?)(\s?\d[A-Z]{2})$/i;
+    return regex.test(postcode.trim());
+  };
+
+  const isFullPostcode = (postcode) => {
+    const cleaned = normalizePostcode(postcode);
+    return cleaned.length >= 5 && cleaned.length <= 7;
+  };
+
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -160,15 +174,36 @@ const ServiceAndPostCodeModal = ({
 
   const validatePostcode = useCallback(
     async (value) => {
+      const cleaned = normalizePostcode(value);
+
       if (!value) {
         setPostalCodeValidate(false);
         setCity("");
         return;
       }
 
+      // Partial → no API
+      if (!isFullPostcode(cleaned)) {
+        setPostalCodeValidate(false);
+        setCity("");
+        return;
+      }
+
+      // Full but invalid
+      if (!isValidUKPostcode(value)) {
+        setPostalCodeValidate(false);
+        setCity("");
+        setErrors((prev) => ({
+          ...prev,
+          pincode: "Please enter a valid postcode!",
+        }));
+        return;
+      }
+
       setCheckingPostcode(true);
       try {
-        const response = await dispatch(getCityName({ postcode: value }));
+
+        const response = await dispatch(getCityName({ postcode: cleaned }));
         const newResponse = response?.payload || response;
 
         if (newResponse?.data?.valid) {
@@ -200,18 +235,37 @@ const ServiceAndPostCodeModal = ({
 
   // Validate postcode while typing (debounced)
   useEffect(() => {
-    if (pincode.trim().length >= 3) {
-      const delay = setTimeout(() => validatePostcode(pincode), 600);
-      return () => clearTimeout(delay);
-    } else {
+    const cleaned = normalizePostcode(pincode);
+
+    // Empty
+    if (!pincode) {
       setPostalCodeValidate(false);
       setCity("");
+      return;
     }
+
+    // Partial → no API
+    if (!isFullPostcode(cleaned)) {
+      setPostalCodeValidate(false);
+      setCity("");
+      return;
+    }
+
+    // Only full postcode → call API
+    const delay = setTimeout(() => {
+      validatePostcode(pincode);
+    }, 500);
+
+    return () => clearTimeout(delay);
   }, [pincode, validatePostcode]);
 
   const handlePincodeChange = (e) => {
-    const value = e.target.value.trim().slice(0, 10);
+    const value = e.target.value.toUpperCase().slice(0, 10);
     setPincode(value);
+    setErrors((prev) => ({
+      ...prev,
+      pincode: "",
+    }));
   };
 
 
@@ -256,7 +310,8 @@ const ServiceAndPostCodeModal = ({
 
     setLoading(true);
     try {
-      const response = await dispatch(getCityName({ postcode: pincode }));
+      const cleaned = normalizePostcode(pincode);
+      const response = await dispatch(getCityName({ postcode: cleaned }));
       const newResponse = response?.payload || response;
 
       if (newResponse?.data?.valid) {
@@ -348,8 +403,12 @@ const ServiceAndPostCodeModal = ({
   };
 
   useEffect(() => {
-    if (postalCodeValidate && pincode) {
-      dispatch(getAddressListFromPostcode({ postcode: pincode }))
+    const cleaned = normalizePostcode(pincode);
+
+    if (postalCodeValidate &&
+      isFullPostcode(cleaned) &&
+      isValidUKPostcode(pincode)) {
+      dispatch(getAddressListFromPostcode({ postcode: cleaned }))
         .then(() => setHasFetchedAddress(true));
     }
   }, [postalCodeValidate, pincode, dispatch]);

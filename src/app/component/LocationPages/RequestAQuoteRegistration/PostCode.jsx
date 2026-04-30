@@ -39,27 +39,61 @@ function PostCode({
 
     const inputType = "text";
 
+    const normalizePostcode = (postcode) => {
+        return postcode.replace(/\s+/g, "").toUpperCase();
+    };
+
+    const isValidUKPostcode = (postcode) => {
+        const regex = /^([A-Z]{1,2}\d[A-Z\d]?)(\s?\d[A-Z]{2})$/i;
+        return regex.test(postcode.trim());
+    };
+
+    const isFullPostcode = (postcode) => {
+        const cleaned = normalizePostcode(postcode);
+        return cleaned.length >= 5 && cleaned.length <= 7;
+    };
+
     const handlePostcodeChange = async (e) => {
-        const value = e.target.value.trim().toUpperCase().slice(0, 10);
+        const value = e.target.value.toUpperCase().slice(0, 10);
         setPostcode(value);
         setPostalCodeValidate(false);
+        setCity("");
+        setErrors((prev) => ({ ...prev, postcode: false }));
+    };
 
-        if (!value) {
+    const handleSubmit = async () => {
+        const canContinue = checkAuthenticatedUser(router);
+        if (!canContinue) return;
+
+        const cleaned = normalizePostcode(postcode);
+
+        if (!postcode.trim()) {
             setCity("");
-            setErrors((prev) => ({ ...prev, postcode: "" }));
+            setErrors((prev) => ({ ...prev, postcode: true }));
             dispatch(setbuyerRequestData({ ...buyerRequest, postcode: "" }));
             return;
         }
 
-        if (value.length < 3) {
-            setErrors((prev) => ({ ...prev, postcode: "" }));
+        // Don't validate partial
+        if (!isFullPostcode(cleaned)) {
+            setCity("");
+            setErrors((prev) => ({ ...prev, postcode: true }));
+            return;
+        }
+
+        // Full but invalid → show error
+        if (!isValidUKPostcode(postcode)) {
+            setPostalCodeValidate(false);
+            setCity("");
+            setErrors((prev) => ({ ...prev, postcode: true }));
+            dispatch(setbuyerRequestData({ ...buyerRequest, postcode: "" }));
             return;
         }
 
         setCheckingPostcode(true);
 
         try {
-            const response = await dispatch(getCityName({ postcode: value }));
+            const response = await dispatch(getCityName({ postcode: cleaned }));
             const result = response?.unwrap ? await response.unwrap() : response;
 
             if (result?.data?.valid) {
@@ -72,8 +106,14 @@ function PostCode({
                     setbuyerRequestData({
                         ...buyerRequest,
                         postcode: result.data.postcode,
+                        service_id: serviceId || buyerRequest?.service_id,
                     }),
                 );
+
+                setTimeout(() => {
+                    nextStep();
+                }, 500);
+
             } else {
                 setPostalCodeValidate(false);
                 setErrors((prev) => ({ ...prev, postcode: true }));
@@ -86,28 +126,6 @@ function PostCode({
         } finally {
             setCheckingPostcode(false);
         }
-    };
-
-    const handleSubmit = () => {
-        const canContinue = checkAuthenticatedUser(router);
-        if (!canContinue) return;
-
-        const newErrors = {
-            postcode: !postalCodeValidate,
-        };
-
-        setErrors(newErrors);
-
-        if (newErrors.postcode) return;
-
-        dispatch(
-            setbuyerRequestData({
-                ...buyerRequest,
-                postcode,
-                service_id: serviceId || buyerRequest?.service_id,
-            }),
-        );
-        nextStep();
     };
 
     const handleCloseClick = () => {

@@ -1,6 +1,6 @@
 "use client";
 import { memo, useState } from "react";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import H1 from "../../UI/Typography/H1";
 import Paragraph from "../../UI/Typography/Paragraph";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
@@ -8,12 +8,15 @@ import ChevroliteDoubleDownIcon from "../../common/icons/HomePageIcons/Chevrolit
 import Paragraph1 from "../../UI/Typography/Paragraph1";
 import HeroSectionSearch from "./HeroSectionSearch";
 
-const SearchResults = dynamic(() => import("../../common/SearchResult"), {
-  ssr: false,
-  loading: () => <div className="hidden">Loading...</div>,
-});
+// const SearchResults = dynamic(() => import("../../common/SearchResult"), {
+//   ssr: false,
+//   loading: () => <div className="hidden">Loading...</div>,
+// });
 
-const HeroSection = memo(function HeroSection() {
+const HeroSection = memo(function HeroSection({
+  selectedCategory = "All",
+  onCategoryChange,
+}) {
   const services = [
     "All",
     "News",
@@ -23,6 +26,7 @@ const HeroSection = memo(function HeroSection() {
     "Ideas",
     "How to guides",
   ];
+  const clickableServices = ["All", "Cost Guides", "Expert Advice"];
 
   const [showAllServices, setShowAllServices] = useState(false);
   const displayedServices = showAllServices ? services : services.slice(0, 5);
@@ -74,31 +78,57 @@ const HeroSection = memo(function HeroSection() {
 
           {/* DESKTOP */}
           <div className="hidden lg:flex flex-wrap gap-2 xl:gap-3">
-            {services.map((service) => (
-              <button
-                key={service}
-                className="border xl:border-2 border-white hover:border-[#B4EEFF] family-55 px-1.5 py-[5px] xl:px-3.5 xl:py-[7px] rounded-full text-white hover:bg-[#B4EEFF] hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none cursor-pointer"
-                aria-label={`Search for ${service}`}
-              >
-                <Paragraph>{service}</Paragraph>
-              </button>
-            ))}
+            {services.map((service) => {
+              const isClickable = clickableServices.includes(service);
+              const isActive = selectedCategory === service;
+
+              return (
+                <button
+                  key={service}
+                  type="button"
+                  onClick={isClickable ? () => onCategoryChange?.(service) : undefined}
+                  disabled={!isClickable}
+                  className={`border xl:border-2 family-55 px-1.5 py-[5px] xl:px-3.5 xl:py-[7px] rounded-full transition-all duration-200 whitespace-nowrap focus:outline-none ${
+                    isActive
+                      ? "border-[#B4EEFF] bg-[#B4EEFF] text-[#00AEEF]"
+                      : `border-white text-white ${isClickable ? "hover:border-[#B4EEFF] hover:bg-[#B4EEFF] hover:text-[#00AEEF]" : ""}`
+                  } ${isClickable ? "cursor-pointer" : "cursor-default"}`}
+                  aria-label={`Search for ${service}`}
+                  aria-disabled={!isClickable}
+                >
+                  <Paragraph>{service}</Paragraph>
+                </button>
+              );
+            })}
           </div>
 
           {/* MOBILE */}
           <div className="md:hidden w-full">
             <div className="flex flex-wrap gap-2">
-              {displayedServices.map((service) => (
-                <button
-                  key={service}
-                  className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none"
-                  aria-label={`Search for ${service}`}
-                >
-                  <p className="text-base sm:text-[18px] font-bold tracking-[-0.03em]">
-                    {service}
-                  </p>
-                </button>
-              ))}
+              {displayedServices.map((service) => {
+                const isClickable = clickableServices.includes(service);
+                const isActive = selectedCategory === service;
+
+                return (
+                  <button
+                    key={service}
+                    type="button"
+                    onClick={isClickable ? () => onCategoryChange?.(service) : undefined}
+                    disabled={!isClickable}
+                    className={`border-2 px-3 py-0.5 rounded-full transition-all duration-200 whitespace-nowrap focus:outline-none ${
+                      isActive
+                        ? "border-white bg-white text-[#00AEEF]"
+                        : `border-white text-white ${isClickable ? "hover:bg-white hover:text-[#00AEEF]" : ""}`
+                    } ${isClickable ? "cursor-pointer" : "cursor-default"}`}
+                    aria-label={`Search for ${service}`}
+                    aria-disabled={!isClickable}
+                  >
+                    <p className="text-base sm:text-[18px] font-bold tracking-[-0.03em]">
+                      {service}
+                    </p>
+                  </button>
+                );
+              })}
             </div>
 
             {services.length > 5 && (
@@ -116,17 +146,30 @@ const HeroSection = memo(function HeroSection() {
           {/* TABLET */}
           <div className="hidden md:block lg:hidden w-full">
             <div className="flex flex-wrap gap-2">
-              {displayedServicesMediusScreen.map((service) => (
-                <button
-                  key={service}
-                  className="border-2 border-white px-3 py-0.5 rounded-full text-white hover:bg-white hover:text-[#00AEEF] transition-all duration-200 whitespace-nowrap focus:outline-none"
-                  aria-label={`Search for ${service}`}
-                >
-                  <p className="text-base sm:text-[18px] font-bold tracking-[-0.03em]">
-                    {service}
-                  </p>
-                </button>
-              ))}
+              {displayedServicesMediusScreen.map((service) => {
+                const isClickable = clickableServices.includes(service);
+                const isActive = selectedCategory === service;
+
+                return (
+                  <button
+                    key={service}
+                    type="button"
+                    onClick={isClickable ? () => onCategoryChange?.(service) : undefined}
+                    disabled={!isClickable}
+                    className={`border-2 px-3 py-0.5 rounded-full transition-all duration-200 whitespace-nowrap focus:outline-none ${
+                      isActive
+                        ? "border-white bg-white text-[#00AEEF]"
+                        : `border-white text-white ${isClickable ? "hover:bg-white hover:text-[#00AEEF]" : ""}`
+                    } ${isClickable ? "cursor-pointer" : "cursor-default"}`}
+                    aria-label={`Search for ${service}`}
+                    aria-disabled={!isClickable}
+                  >
+                    <p className="text-base sm:text-[18px] font-bold tracking-[-0.03em]">
+                      {service}
+                    </p>
+                  </button>
+                );
+              })}
             </div>
 
             {services.length > 5 && (
