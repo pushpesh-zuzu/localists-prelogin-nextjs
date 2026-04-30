@@ -98,6 +98,14 @@ export const MobileMegaMenu = [
         name: "How Long Does a Flat Roof Last",
         path: "blog/advice/how-long-does-a-flat-roof-last",
       },
+      {
+        name: "Roof Replacement Cost",
+        path: "blog/cost-guides/roof-replacement-cost",
+      },
+      {
+        name: "Roof Repair Cost",
+        path: "blog/cost-guides/roof-repair-cost",
+      },
     ],
   },
 ];
