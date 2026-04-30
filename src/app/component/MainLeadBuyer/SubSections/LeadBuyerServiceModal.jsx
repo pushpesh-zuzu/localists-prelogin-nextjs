@@ -63,7 +63,7 @@ export default function LeadBuyerServiceModal({ isOpen, onClose }) {
 
   // Select → redirect
   const handleSelect = (item) => {
-    const slug = generateSlug(item.seo_title);
+    const slug = generateSlug(item.breadcrumb_title);
     router.push(
       `/${currentLang}/${currentCountry}/sellers/create-account/${slug}`,
     );
