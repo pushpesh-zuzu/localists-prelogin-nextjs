@@ -182,6 +182,7 @@ const NewMultiPPCPhoneNumberMultiStepForm = ({
       loader={requestLoader || isSubmitting}
       titleWidth='max-w-full'
       progressPercentage={progressPercentage}
+      subtitle='We only use this to match you with trusted professionals.'
     >
       <div className="mb-2">
         <div
@@ -224,7 +225,7 @@ const NewMultiPPCPhoneNumberMultiStepForm = ({
           <strong className="font-extrabold">LANDLINE</strong>
         </p> */}
 
-        <p
+        {/* <p
           className="
           bg-[#e9f8ff]
           max-w-fit
@@ -238,7 +239,7 @@ const NewMultiPPCPhoneNumberMultiStepForm = ({
         "
         >
           We only use this to match you with trusted professionals.
-        </p>
+        </p> */}
       </div>
     </NewMultiPPCCardLayoutWrapper>
   );
