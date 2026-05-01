@@ -8,6 +8,7 @@ import Loader from "../../common/Loader/Loader";
 import NewMultiPPCCardLayoutWrapper from "../../common/MultiStepFormPPC/NewMultiStepFormDesingPPC/NewMultiPPCCardLayoutWrapper";
 import NewBuyerRequestProgressBarQuotesRequest from "../../common/ReqBuyerRegistration/NewRequestModalSteps/NewBuyerRequestProgressBarQuotesRequest";
 import NewBuyerRequestQuestionOptionsBox from "../../common/ReqBuyerRegistration/NewRequestModalSteps/NewBuyerRequestQuestionOptionsBox";
+import useQuestionOptionScrollTop from "@/hooks/useQuestionOptionScrollTop";
 
 const NewRoofingQA2MultiPPC = ({
   questions = [],
@@ -45,6 +46,7 @@ const NewRoofingQA2MultiPPC = ({
         }
       })(),
   }));
+      const gridRef = useQuestionOptionScrollTop(currentQuestion);
 
   const questionIndexMap = {};
   formattedQuestions.forEach((q, index) => {
@@ -412,7 +414,8 @@ const NewRoofingQA2MultiPPC = ({
           </div>
         )}
   
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto">
+              <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto pr-2">
+
           {formattedQuestions[currentQuestion]?.parsedAnswers.map(
             (opt, index, arr) => {
               const optionType = formattedQuestions[currentQuestion]?.option_type;

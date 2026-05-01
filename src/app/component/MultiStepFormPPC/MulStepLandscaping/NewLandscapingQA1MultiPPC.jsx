@@ -6,6 +6,7 @@ import { setbuyerRequestData } from "@/lib/store/buyerslice/buyerSlice";
 import CardLayoutWrapper from "../../common/MultiStepFormPPC/CardLayoutWrappper";
 import NewBuyerRequestQuestionOptionsBox from "../../common/ReqBuyerRegistration/NewRequestModalSteps/NewBuyerRequestQuestionOptionsBox";
 import NewMultiPPCCardLayoutWrapper from "../../common/MultiStepFormPPC/NewMultiStepFormDesingPPC/NewMultiPPCCardLayoutWrapper";
+import useQuestionOptionScrollTop from "@/hooks/useQuestionOptionScrollTop";
 
 const NewLandscapingQA1MultiPPC = ({
   questions = [],
@@ -24,6 +25,8 @@ const NewLandscapingQA1MultiPPC = ({
   const [error, setError] = useState("");
   const [questionHistory, setQuestionHistory] = useState([0]);
   const totalQuestions = questions?.length;
+    const gridRef = useQuestionOptionScrollTop(currentQuestion);
+
   const formattedQuestions = questions.map((q) => ({
     ...q,
     parsedAnswers: Array.isArray(q.answer)
@@ -294,7 +297,8 @@ const NewLandscapingQA1MultiPPC = ({
       progressPercentage={progressPercentage}
       
     >
-       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto">
+             <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto pr-2">
+
               {formattedQuestions[currentQuestion]?.parsedAnswers.map(
                 (opt, index, arr) => {
                   const optionType = formattedQuestions[currentQuestion]?.option_type;

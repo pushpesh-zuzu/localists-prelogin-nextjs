@@ -8,6 +8,7 @@ import Loader from "../../common/Loader/Loader";
 import NewMultiPPCCardLayoutWrapper from "../../common/MultiStepFormPPC/NewMultiStepFormDesingPPC/NewMultiPPCCardLayoutWrapper";
 import NewBuyerRequestProgressBarQuotesRequest from "../../common/ReqBuyerRegistration/NewRequestModalSteps/NewBuyerRequestProgressBarQuotesRequest";
 import NewBuyerRequestQuestionOptionsBox from "../../common/ReqBuyerRegistration/NewRequestModalSteps/NewBuyerRequestQuestionOptionsBox";
+import useQuestionOptionScrollTop from "@/hooks/useQuestionOptionScrollTop";
 
 const NewFencingQA2MultiPPC = ({
   questions = [],
@@ -34,6 +35,7 @@ const NewFencingQA2MultiPPC = ({
   const [selectedOption, setSelectedOption] = useState([]);
   const [otherText, setOtherText] = useState("");
   const [error, setError] = useState("");
+  const gridRef = useQuestionOptionScrollTop(currentQuestion);
 
   const totalQuestions = questions?.length || 1;
   const formattedQuestions = questions.map((q) => ({
@@ -320,7 +322,8 @@ const NewFencingQA2MultiPPC = ({
         </div>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto">
+            <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto pr-2">
+
         {formattedQuestions[currentQuestion]?.parsedAnswers.map(
           (opt, index, arr) => {
             const optionType = formattedQuestions[currentQuestion]?.option_type;

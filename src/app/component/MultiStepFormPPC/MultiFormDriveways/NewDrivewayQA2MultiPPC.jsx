@@ -9,6 +9,7 @@ import NewBuyerRequestQuestionOptionsBox from "../../common/ReqBuyerRegistration
 import H4 from "../../UI/Typography/H4";
 import NewBuyerRequestProgressBarQuotesRequest from "../../common/ReqBuyerRegistration/NewRequestModalSteps/NewBuyerRequestProgressBarQuotesRequest";
 import NewMultiPPCCardLayoutWrapper from "../../common/MultiStepFormPPC/NewMultiStepFormDesingPPC/NewMultiPPCCardLayoutWrapper";
+import useQuestionOptionScrollTop from "@/hooks/useQuestionOptionScrollTop";
 
 const NewDrivewayQA2MultiPPC = ({
   questions = [],
@@ -35,6 +36,7 @@ const NewDrivewayQA2MultiPPC = ({
   const [otherText, setOtherText] = useState("");
   const [error, setError] = useState("");
   const [totalQuestionsAnswered, setTotalQuestionsAnswered] = useState(1);
+  const gridRef = useQuestionOptionScrollTop(currentQuestion);
 
   const totalQuestions = questions?.length || 1;
 
@@ -399,7 +401,8 @@ const NewDrivewayQA2MultiPPC = ({
         </div>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto pr-2">
+            <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto pr-2">
+
         {formattedQuestions[currentQuestion]?.parsedAnswers.map(
           (opt, index, arr) => {
             const optionType = formattedQuestions[currentQuestion]?.option_type;

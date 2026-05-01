@@ -6,6 +6,7 @@ import { getProgressPercentageAPI, setbuyerRequestData } from "@/lib/store/buyer
 import CardLayoutWrapper from "../../common/MultiStepFormPPC/CardLayoutWrappper";
 import NewMultiPPCCardLayoutWrapper from "../../common/MultiStepFormPPC/NewMultiStepFormDesingPPC/NewMultiPPCCardLayoutWrapper";
 import NewBuyerRequestQuestionOptionsBox from "../../common/ReqBuyerRegistration/NewRequestModalSteps/NewBuyerRequestQuestionOptionsBox";
+import useQuestionOptionScrollTop from "@/hooks/useQuestionOptionScrollTop";
 
 const NewTreeSurgeonQA1MultiPPC = ({
   questions = [],
@@ -33,6 +34,7 @@ const NewTreeSurgeonQA1MultiPPC = ({
   const [error, setError] = useState("");
   const [questionHistory, setQuestionHistory] = useState([0]);
   const [isFirstQuestionAnswered, setIsFirstQuestionAnswered] = useState(false);
+    const gridRef = useQuestionOptionScrollTop(currentQuestion);
 
   const showToast = (type, content) => message[type](content);
 
@@ -504,7 +506,8 @@ const NewTreeSurgeonQA1MultiPPC = ({
       progressPercentage={progressPercentage}
       
     >
-       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto">
+             <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto pr-2">
+
               {formattedQuestions[currentQuestion]?.parsedAnswers.map(
                 (opt, index, arr) => {
                   const optionType = formattedQuestions[currentQuestion]?.option_type;
