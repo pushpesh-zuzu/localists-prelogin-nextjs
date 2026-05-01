@@ -1,5 +1,6 @@
 import SEO from "@/app/component/common/seo/SEO";
 import MultiStepFormFencing from "@/app/component/MultiStepFormPPC/MultiStepFormFencing/MultiStepFormFencing";
+import NewMultiStepFormFencing from "@/app/component/MultiStepFormPPC/MultiStepFormFencing/NewMultiStepFormFencing";
 import React from "react";
 export const metadata = {
   title: "Compare Free Quotes from Local Fencing Companies | Localists",
@@ -17,7 +18,9 @@ function page() {
         canonicalPath="/en/gb/fence-multi-form-ppc-banner"
         conversion={false}
       />
-      <MultiStepFormFencing isQuestionWithImage />
+      {/* <MultiStepFormFencing isQuestionWithImage /> */}
+      <NewMultiStepFormFencing isQuestionWithImage />
+
     </>
   );
 }
