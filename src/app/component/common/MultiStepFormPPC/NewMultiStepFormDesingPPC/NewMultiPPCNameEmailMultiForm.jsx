@@ -10,7 +10,7 @@ import BackgroundWrapperNameEmailMultiForm from "../BackgroundWrapperNameEmailMu
 import RequestInputField from "../../ReqBuyerRegistration/UI/RequestInputField";
 import NewMultiPPCCardLayoutWrapper from "./NewMultiPPCCardLayoutWrapper";
 
-const NewMultiPPCNameEmailMultiForm = ({ nextStep, isPPCPages = false, onBack,progressPercentage }) => {
+const NewMultiPPCNameEmailMultiForm = ({ nextStep, isPPCPages = false, onBack ,progressPercentage,setIsStepFrom4 }) => {
   const dispatch = useDispatch();
   const { searchServiceLoader } = useSelector((state) => state.findJobs);
   const { buyerRequest } = useSelector((state) => state.buyer);
@@ -86,6 +86,7 @@ const NewMultiPPCNameEmailMultiForm = ({ nextStep, isPPCPages = false, onBack,pr
 
   const handleBackClick = () => {
     onBack();
+    setIsStepFrom4 && setIsStepFrom4(true);
   };
 
   const handleBannerText = () => {
