@@ -253,7 +253,7 @@ const NewPostSearchMultiStepFence = ({
 
         {postalCodeValidate && (
           <div className="text-start">
-            <label className="block text-[20px] font-bold mb-[10px] font-[Arial] text-[#253238]">
+            <label className="block text-left text-base md:text-[20px] font-bold leading-[100%] tracking-[-0.03em] font-[Arial] text-[#253238] mb-[10px]">
               Select an address
             </label>
             <Select

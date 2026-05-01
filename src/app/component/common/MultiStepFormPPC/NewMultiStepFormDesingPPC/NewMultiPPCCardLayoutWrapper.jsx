@@ -23,9 +23,9 @@ const NewMultiPPCCardLayoutWrapper = ({
   return (
     <div
       className={`flex justify-center items-center bg-white rounded-[36px] w-full ${
-        NameEmailContainer ? "max-w-[85%] mx-auto h-fit" : ""
+        NameEmailContainer ? "md:max-w-[85%] mx-auto h-fit" : ""
       } max-[480px]:items-start ${
-        NameEmailContainer ? "max-[480px]:w-[82%]" : ""
+        NameEmailContainer ? "max-[480px]:w-[100%]" : ""
       }`}
     >
       <div className="bg-white  rounded-[36px] px-5 py-7.5 md:px-12 md:py-7.5 text-center w-full">
@@ -130,6 +130,7 @@ const NewMultiPPCCardLayoutWrapper = ({
                     font-bold
                     transition-colors duration-300
                     cursor-pointer
+                    disabled:opacity-70
                     active:translate-y-[1px]
                     font-[Arial]
                     tracking-[-0.03em]

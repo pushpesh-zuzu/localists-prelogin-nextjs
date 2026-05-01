@@ -226,7 +226,7 @@ function NewBuyerRequestAddressField({
         : null} >
       <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
         {/* Select Address Dropdown */}
-        <label className="block text-[20px] font-bold mb-[10px] font-[Arial] text-[#253238]">
+        <label className="block text-left text-base md:text-[20px] font-bold leading-[100%] tracking-[-0.03em] font-[Arial] text-[#253238] mb-[10px]">
         Select an address
       </label>
 

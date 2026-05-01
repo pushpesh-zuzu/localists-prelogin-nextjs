@@ -442,7 +442,7 @@ const NewBuyerRegistrationServiceAndPostCodeModal = ({
         </div>
 
         <div className="mt-4">
-          <label className="text-[20px] leading-[100%] tracking-[-0.03em] font-bold font-[Arial] text-[#253238] mb-3 block">
+          <label className="block text-left text-base md:text-[20px] font-bold leading-[100%] tracking-[-0.03em] font-[Arial] text-[#253238] mb-[10px] mb-3">
             Select an address
           </label>
 

@@ -115,6 +115,7 @@ const NewMultiPPCNameEmailMultiForm = ({ nextStep, isPPCPages = false, onBack ,p
             ? ""
             : `You're nearly done! Just enter a few details to get your custom quotes.`
         }
+        subtitle={isBannerText && !isInitialLoading ? "" : 'We only use this to match you with trusted professionals.'}
         onButtonClick={isBannerText ? handleBannerText : handleSubmit}
         onBackClick={handleBackClick}
         buttonText="Next"
@@ -189,6 +190,7 @@ const NewMultiPPCNameEmailMultiForm = ({ nextStep, isPPCPages = false, onBack ,p
              error={errors?.name? "Full name is required.":""}
               style={{ marginTop: "5px" }}
               type="text"
+
               placeholder="Full Name"
               // className={`flex justify-start shadow-[0px_0px_2px_0.5px_#0000001a] border border-[#d9d9d9] w-full p-3 text-[#828282] rounded-[5px] focus:outline-none focus:border-[var(--primary-color)] focus:shadow-[0_0_0_3px_rgba(0,150,196,0.1)] max-[768px]:text-sm max-[768px]:p-[10px] max-[480px]:text-sm max-[480px]:p-[10px] [&:-webkit-autofill]:[-webkit-box-shadow:0_0_0_1000px_white_inset] [&:-webkit-autofill]:[-webkit-text-fill-color:#000] [&:-webkit-autofill]:[transition:background-color_9999s_ease-in-out_0s] [&:-webkit-autofill]:[caret-color:#000] ${
               //   errors?.name ? "!border-red-500" : ""
@@ -205,9 +207,9 @@ const NewMultiPPCNameEmailMultiForm = ({ nextStep, isPPCPages = false, onBack ,p
               </span>
             )} */}
 
-            <p className="bg-[rgba(233,248,255,1)] max-w-fit font-normal rounded-[5px] text-base px-[10px] py-[5px] mx-auto mt-[33px]">
+            {/* <p className="bg-[rgba(233,248,255,1)] max-w-fit font-normal rounded-[5px] text-base px-[10px] py-[5px] mx-auto mt-[33px]">
               We only use this to match you with trusted professionals.
-            </p>
+            </p> */}
           </div>
         )}
       </NewMultiPPCCardLayoutWrapper>
