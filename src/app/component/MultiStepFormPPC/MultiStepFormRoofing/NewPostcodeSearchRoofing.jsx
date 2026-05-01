@@ -14,30 +14,27 @@ import LocationMapIcon from "../../common/icons/SellerRegistration/LocationMapIc
 import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
 import Select from "react-select";
 import { CheckIcon } from "lucide-react";
-import RequestInputField from "../../common/ReqBuyerRegistration/UI/RequestInputField";
 import NewMultiPPCCardLayoutWrapper from "../../common/MultiStepFormPPC/NewMultiStepFormDesingPPC/NewMultiPPCCardLayoutWrapper";
+import RequestInputField from "../../common/ReqBuyerRegistration/UI/RequestInputField";
 
-const NewPostcodeSearchDriveways = ({
+
+const NewPostcodeSearchRoofing = ({
   onNext,
   title = "What is your postcode",
   prevStep,
-  getProgressPercentage,
-  backButtonTriggered,
-  setBackButtonTriggered,
-  setProgressPercentage,
+  setPercetangForPost,
   titleHeading = "landscaping specialists",
-  progressPercentage = 0,
+  progressPercentage
 }) => {
   const dispatch = useDispatch();
   const inputRef = useRef(null);
-  const { buyerRequest, citySerach, addressList, addressLoader } = useSelector(
-    (state) => state.buyer,
-  );
+  const { buyerRequest, citySerach, addressList, addressLoader } = useSelector((state) => state.buyer);
   const [pincode, setPincode] = useState(buyerRequest?.postal_code || "");
   const [city, setCity] = useState(citySerach || "");
   const [postalCodeValidate, setPostalCodeValidate] = useState(
     !!buyerRequest?.postal_code,
   );
+
   const [isCheckingPostcode, setIsCheckingPostcode] = useState(false);
 
   const [selectedAddress, setSelectedAddress] = useState(null);
@@ -67,16 +64,13 @@ const NewPostcodeSearchDriveways = ({
     return cleaned.length >= 5 && cleaned.length <= 7;
   };
 
-  useEffect(() => {
-    setProgressPercentage(75);
-  }, [setProgressPercentage]);
-
   const handlePincodeChange = async (e) => {
     const value = e.target.value.toUpperCase().slice(0, 10);
     setPincode(value);
     setPostalCodeValidate(false);
 
     const cleaned = normalizePostcode(value);
+
 
     if (!value.trim()) {
       setError("");
@@ -94,7 +88,7 @@ const NewPostcodeSearchDriveways = ({
           house: "",
           street: "",
           address: "",
-        }),
+        })
       );
       setPostalCodeValidate(false);
       return;
@@ -105,7 +99,9 @@ const NewPostcodeSearchDriveways = ({
     //   return;
     // }
 
+    // Partial → no API
     if (!isFullPostcode(cleaned)) {
+      setCity("");
       setPostalCodeValidate(false);
       return;
     }
@@ -122,6 +118,7 @@ const NewPostcodeSearchDriveways = ({
     try {
       const response = await dispatch(getCityName({ postcode: cleaned }));
       const newResponse = response?.unwrap ? await response.unwrap() : response;
+
       if (newResponse?.data?.valid) {
         const validPostcode = newResponse.data.postcode;
         setPostalCodeValidate(true);
@@ -130,6 +127,7 @@ const NewPostcodeSearchDriveways = ({
         dispatch(setbuyerRequestData({ postal_code: validPostcode }));
         dispatch(getAddressListFromPostcode({ postcode: cleaned }));
         setError("");
+
       } else {
         setPostalCodeValidate(false);
         setError("Please enter a valid postcode!");
@@ -141,7 +139,7 @@ const NewPostcodeSearchDriveways = ({
       setIsCheckingPostcode(false);
     }
   };
-  // console.log(postalCodeValidate, "postalCodeValidatepostalCodeValidate");
+
   const handleNext = () => {
     let errors = {};
 
@@ -171,10 +169,9 @@ const NewPostcodeSearchDriveways = ({
       }),
     );
 
-    setProgressPercentage(85);
     if (onNext) {
       onNext();
-      setBackButtonTriggered(false);
+      setPercetangForPost(5);
     }
   };
 
@@ -218,7 +215,7 @@ const NewPostcodeSearchDriveways = ({
   }, [addressList, buyerRequest?.address, postalCodeValidate]);
 
   return (
-   <div style={{ maxWidth: "592px", margin: "auto" }}>
+    <div style={{ maxWidth: "592px", margin: "auto" }}>
       <NewMultiPPCCardLayoutWrapper
         title={`Get quotes from verified ${titleHeading} you can trust`}
         onButtonClick={handleNext}
@@ -347,11 +344,11 @@ const NewPostcodeSearchDriveways = ({
           />
         </div>
       </NewMultiPPCCardLayoutWrapper>
-    </div> 
+    </div>
   );
 };
 
-export default NewPostcodeSearchDriveways;
+export default NewPostcodeSearchRoofing;
 
 const selectStyles = {
   control: (base, state) => ({

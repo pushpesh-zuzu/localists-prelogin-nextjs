@@ -1,5 +1,6 @@
 import SEO from "@/app/component/common/seo/SEO";
 import MultiStepRoofing from "@/app/component/MultiStepFormPPC/MultiStepFormRoofing/MultiStepRoofing";
+import NewMultiStepRoofing from "@/app/component/MultiStepFormPPC/MultiStepFormRoofing/NewMultiStepRoofing";
 import React from "react";
 export const metadata = {
   title: " Compare Free Quotes from Local Roofing Companies | Localists",
@@ -18,6 +19,10 @@ function page() {
         conversion={false}
       />
       <MultiStepRoofing serviceId={113} />
+      <NewMultiStepRoofing
+        serviceName="Roofing"
+        serviceId={113}
+      />
     </>
   )
 }
