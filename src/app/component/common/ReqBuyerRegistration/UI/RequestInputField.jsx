@@ -16,6 +16,7 @@ const RequestInputField = ({
   onBlur,
   labelGap = "10px",    // space between label & input
   inputGap = "20px",    // space below input (before error or next element)
+  ...props
 }) => {
   const inputId = id || name || label?.toLowerCase().replace(/\s+/g, "-");
 
@@ -27,7 +28,7 @@ const RequestInputField = ({
         <label
           htmlFor={inputId}
           style={{ marginBottom: labelGap }}
-          className="block text-base md:text-[20px] font-bold leading-[100%] tracking-[-0.03em] font-[Arial] text-[#253238]"
+          className="block text-left text-base md:text-[20px] font-bold leading-[100%] tracking-[-0.03em] font-[Arial] text-[#253238]"
         >
           {label}
           {required && <span className="text-red-500 ml-1">*</span>}
@@ -35,7 +36,7 @@ const RequestInputField = ({
       )}
 
       {/* Input */}
-      <div style={{ marginBottom: error ? "0px" : inputGap }}>
+      <div style={{ marginBottom: error ? "0px" : label ? inputGap :"0px" }}>
         <input
           id={inputId}
           name={name}
@@ -45,6 +46,7 @@ const RequestInputField = ({
           placeholder={placeholder}
           disabled={disabled}
           onBlur={onBlur}
+          {...props}
           className={`
             w-full
             px-0 pt-[14px] pb-[13px]
@@ -69,8 +71,8 @@ const RequestInputField = ({
 
       {/* Error Message */}
       {error && (
-        <div style={{ marginBottom: inputGap }} className="mt-1.5 min-h-5">
-          <p className="text-xs text-red-600 flex items-start">
+        <div style={{ marginBottom: label ===""?  "20px" :"0px"}} className="mt-1.5 ">
+          <p className="text-xs text-red-500 flex items-start">
             <span>{error}</span>
           </p>
         </div>

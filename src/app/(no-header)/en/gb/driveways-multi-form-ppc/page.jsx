@@ -1,5 +1,6 @@
 import SEO from "@/app/component/common/seo/SEO";
 import MultiStepFormDriveways from "@/app/component/MultiStepFormPPC/MultiFormDriveways/MultiStepFormDriveways";
+import NewMultStepFormDriveways from "@/app/component/MultiStepFormPPC/MultiFormDriveways/NewMultStepFormDriveways";
 import React from "react";
 export const metadata = {
   title: "Compare Free Quotes from Local Driveway Companies | Localists",
@@ -17,7 +18,8 @@ function page() {
         canonicalPath="/en/gb/driveways-multi-form-ppc"
         conversion={false}
       />
-      <MultiStepFormDriveways />
+      {/* <MultiStepFormDriveways /> */}
+      <NewMultStepFormDriveways/>
     </>
   )
 
