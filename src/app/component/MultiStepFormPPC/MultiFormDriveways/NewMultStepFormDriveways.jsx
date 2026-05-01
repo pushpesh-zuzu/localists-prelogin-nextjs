@@ -192,10 +192,10 @@ const NewMultStepFormDriveways = ({ isQuestionWithImage = false }) => {
         </span>
       </div>
 
-      <ProgressBarLandingPage
+      {/* <ProgressBarLandingPage
         value={progressPercentage}
         buyerStep={buyerStep}
-      />
+      /> */}
 
       <FloatingButtonWrapper>
         {(heroRef, sectionsStartRef) => (
@@ -232,7 +232,6 @@ const NewMultStepFormDriveways = ({ isQuestionWithImage = false }) => {
                   )}
 
                   {buyerStep === 2 && (
-                    <div className="" style={{ margin: "auto" }}>
                       <NewPostcodeSearchDriveways
                         getProgressPercentage={getProgressPercentage}
                         prevStep={prevStep}
@@ -243,7 +242,6 @@ const NewMultStepFormDriveways = ({ isQuestionWithImage = false }) => {
                         titleHeading="driveway installers"
                         progressPercentage={progressPercentage}
                       />
-                    </div>
                   )}
 
                   {buyerStep === 3 && (

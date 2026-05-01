@@ -158,10 +158,10 @@ const NewMultiStepLandscaping = ({ isQuestionWithImage = false }) => {
         </span>
       </div>
 
-      <ProgressBarLandingPage
+      {/* <ProgressBarLandingPage
         value={progressPercentage}
         buyerStep={buyerStep}
-      />
+      /> */}
 
       <FloatingButtonWrapper>
         {(heroRef, sectionsStartRef) => (
@@ -198,7 +198,6 @@ const NewMultiStepLandscaping = ({ isQuestionWithImage = false }) => {
                   )}
 
                   {buyerStep === 2 && (
-                    <div className="" style={{ margin: "auto" }}>
                       <NewPostcodeSearchLandscapingMultiform
                         getProgressPercentage={getProgressPercentage}
                         prevStep={prevStep}
@@ -210,7 +209,6 @@ const NewMultiStepLandscaping = ({ isQuestionWithImage = false }) => {
                         }
                         progressPercentage={progressPercentage}
                       />
-                    </div>
                   )}
 
                   {buyerStep === 3 && (

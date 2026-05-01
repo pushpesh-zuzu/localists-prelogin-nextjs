@@ -172,10 +172,10 @@ const NewMultiStepFormFencing = ({ isQuestionWithImage = false }) => {
         </span>
       </div>
 
-      <ProgressBarLandingPage
+      {/* <ProgressBarLandingPage
         value={progressPercentage}
         buyerStep={buyerStep}
-      />
+      /> */}
 
       <FloatingButtonWrapper>
         {(heroRef, sectionsStartRef) => (
@@ -214,7 +214,6 @@ const NewMultiStepFormFencing = ({ isQuestionWithImage = false }) => {
                   )}
 
                   {buyerStep === 2 && (
-                    <div className="" style={{ margin: "auto" }}>
                       <NewPostSearchMultiStepFence
                         getProgressPercentage={getProgressPercentage}
                         prevStep={prevStep}
@@ -226,7 +225,6 @@ const NewMultiStepFormFencing = ({ isQuestionWithImage = false }) => {
                         }
                         progressPercentage={progressPercentage}
                       />
-                    </div>
                   )}
 
                   {buyerStep === 3 && (

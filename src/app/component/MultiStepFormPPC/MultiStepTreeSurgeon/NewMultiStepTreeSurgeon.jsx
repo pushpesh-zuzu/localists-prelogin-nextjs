@@ -178,10 +178,10 @@ const NewMultiStepTreeSurgeon = ({
         </span>
       </div>
 
-      <ProgressBarLandingPage
+      {/* <ProgressBarLandingPage
         value={5 + progressPercentage}
         buyerStep={buyerStep}
-      />
+      /> */}
 
       <FloatingButtonWrapper>
         {(heroRef, sectionsStartRef) => (
@@ -222,7 +222,6 @@ const NewMultiStepTreeSurgeon = ({
                   )}
 
                   {buyerStep === 2 && (
-                    <div className="" style={{ margin: "auto" }}>
                       <NewPostCodeSearchTreeSurgeon
                         prevStep={prevStep}
                         onNext={nextStep}
@@ -232,7 +231,6 @@ const NewMultiStepTreeSurgeon = ({
                         setSelectedOption={setSelectedOption}
                         progressPercentage={progressPercentage}
                       />
-                    </div>
                   )}
 
                   {buyerStep === 3 && (

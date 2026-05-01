@@ -14,8 +14,8 @@ const NewBuyerRequestQuestionOptionsBox = ({
             className={`
         relative
         w-full
-        md:px-4 px-3
-        md:h-[80px] h-[54px] flex
+        md:px-4 px-3 py-2
+        md:min-h-[80px] md:h-full md:max-h-[100px] h-[54px] flex
         items-center
         justify-center
         text-center

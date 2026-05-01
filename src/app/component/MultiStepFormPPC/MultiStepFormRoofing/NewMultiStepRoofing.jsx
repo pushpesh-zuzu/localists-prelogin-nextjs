@@ -167,10 +167,10 @@ const NewMultiStepRoofing = ({
         </span>
       </div>
 
-      <ProgressBarLandingPage
+      {/* <ProgressBarLandingPage
         value={progressPercentage + 5 + percetangForPost}
         buyerStep={buyerStep}
-      />
+      /> */}
 
       <FloatingButtonWrapper>
         {(heroRef, sectionsStartRef) => (
@@ -201,21 +201,19 @@ const NewMultiStepRoofing = ({
                         isQuestionWithImage={isQuestionWithImage}
                         serviceName={serviceName}
                         removeQuestionByNumber={removeQuestionByNumber}
-                        progressPercentage={progressPercentage}
+                        progressPercentage={progressPercentage + percetangForPost}
                       />
                     </div>
                   )}
 
                   {buyerStep === 2 && (
-                    <div className="" style={{ margin: "auto" }}>
                       <NewPostcodeSearchRoofing
                         prevStep={prevStep}
                         onNext={nextStep}
                         titleHeading="roofing companies"
                         setPercetangForPost={setPercetangForPost}
-                        progressPercentage={progressPercentage}
+                        progressPercentage={progressPercentage + percetangForPost}
                       />
-                    </div>
                   )}
 
                   {buyerStep === 3 && (
@@ -227,7 +225,7 @@ const NewMultiStepRoofing = ({
                         setIsComingFromStep4={setIsComingFromStep4}
                         isComingFromStep4={isComingFromStep4}
                         setPercetangForPost={setPercetangForPost}
-                        progressPercentage={progressPercentage}
+                        progressPercentage={progressPercentage + percetangForPost}
                       />
                     </div>
                   )}
