@@ -200,7 +200,7 @@ const NewMultStepFormDriveways = ({ isQuestionWithImage = false }) => {
       <FloatingButtonWrapper>
         {(heroRef, sectionsStartRef) => (
           <>
-            <div className="h-9 w-48 mt-6 ml-[2%] lg:h-7 lg:w-32 md:h-5 md:w-[120px] xl:w-[195px] xl:h-[38px] md:mt-6">
+            <div className="h-6 w-48 mt-6 ml-[2%] lg:h-7 lg:w-32 md:h-5 md:w-[120px] xl:w-[195px] xl:h-[38px] md:mt-6">
               <Logo className="w-[120px] h-[20px]  md:w-[125px] md:h-[28px] lg:w-[195px] lg:h-[38px]" />
             </div>
 

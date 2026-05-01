@@ -27,7 +27,7 @@ const BannerImagesQuestion = ({ serviceName = "Landscaping" }) => {
       <Image
         src={bannerMap[serviceName] || landscapingBanner}
         alt={`${altTag[serviceName]}`}
-        className="w-full object-contain sm:object-cover  h-auto md:object-cover rounded-none min-h-[158px] block sm:mb-4  sm:mb-0"
+        className="w-full object-contain sm:object-cover  h-auto md:object-cover rounded-none min-140px md:min-h-[158px] block sm:mb-4  sm:mb-0"
         width={1200}
         height={158}
         priority

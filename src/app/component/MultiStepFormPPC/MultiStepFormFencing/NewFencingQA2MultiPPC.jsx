@@ -313,7 +313,7 @@ const NewFencingQA2MultiPPC = ({
             style={{
               textAlign: isQuestionWithImage ? "left" : "left",
             }}
-            className={`mt-7.5 md:mt-10 mb-7.5 md:mb-10 text-left font-Inter font-black tracking-[-0.03em] text-[24px] leading-[25px]
+            className={` ${isQuestionWithImage ? "mt-7.5 md:mt-10" :""} mb-7.5 md:mb-10 text-left font-Inter font-black tracking-[-0.03em] text-[24px] leading-[25px]
                     md:text-[24px] md:leading-[25px] lg:text-[30px] lg:leading-[30px]`}
           >
             {formattedQuestions[currentQuestion]?.questions}
