@@ -349,7 +349,9 @@ const NewRoofingQA1MultiPPC = ({
                     if (isSingle) {
                       setSelectedOption([opt.option]);
                       setError("");
-                      handleNext([opt.option]);
+                      if (opt.option !== "Something else (please describe)") {
+                  handleNext([opt.option]);
+                }
                     } else {
                       // Multi toggle
                       setSelectedOption((prev) =>
