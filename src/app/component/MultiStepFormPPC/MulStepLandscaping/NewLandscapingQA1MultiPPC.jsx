@@ -297,7 +297,7 @@ const NewLandscapingQA1MultiPPC = ({
       progressPercentage={progressPercentage}
       
     >
-             <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto pr-2">
+             <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto pr-2 pb-2">
 
               {formattedQuestions[currentQuestion]?.parsedAnswers.map(
                 (opt, index, arr) => {
