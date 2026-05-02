@@ -376,6 +376,8 @@ const NewTreeSurgeonQA1MultiPPC = ({
       // }
     } else {
       onBack();
+          setProgressPercentage((pre) => pre - 10);
+
       setIsStepFrom4(false);
       // const updatedBuyerRequest = {
       //   ...buyerRequest,

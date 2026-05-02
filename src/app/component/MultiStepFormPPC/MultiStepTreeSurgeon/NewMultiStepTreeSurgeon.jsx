@@ -216,7 +216,7 @@ const NewMultiStepTreeSurgeon = ({
                         question2History={question2History}
                         setSelectedOption={setSelectedOption}
                         selectedOption={selectedOption}
-                        progressPercentage={progressPercentage}
+                        progressPercentage={progressPercentage + 5}
                       />
                     </div>
                   )}

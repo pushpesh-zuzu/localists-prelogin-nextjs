@@ -201,7 +201,7 @@ const NewMultiStepRoofing = ({
                         isQuestionWithImage={isQuestionWithImage}
                         serviceName={serviceName}
                         removeQuestionByNumber={removeQuestionByNumber}
-                        progressPercentage={progressPercentage + percetangForPost}
+                        progressPercentage={progressPercentage + 5 + percetangForPost}
                       />
                     </div>
                   )}
@@ -212,7 +212,7 @@ const NewMultiStepRoofing = ({
                         onNext={nextStep}
                         titleHeading="roofing companies"
                         setPercetangForPost={setPercetangForPost}
-                        progressPercentage={progressPercentage + percetangForPost}
+                        progressPercentage={progressPercentage + 5 + percetangForPost}
                       />
                   )}
 
@@ -225,7 +225,7 @@ const NewMultiStepRoofing = ({
                         setIsComingFromStep4={setIsComingFromStep4}
                         isComingFromStep4={isComingFromStep4}
                         setPercetangForPost={setPercetangForPost}
-                        progressPercentage={progressPercentage + percetangForPost}
+                        progressPercentage={progressPercentage + 5 + percetangForPost}
                       />
                     </div>
                   )}
