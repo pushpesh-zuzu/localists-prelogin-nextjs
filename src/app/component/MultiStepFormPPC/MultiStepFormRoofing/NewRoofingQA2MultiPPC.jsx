@@ -378,121 +378,121 @@ const NewRoofingQA2MultiPPC = ({
   return loading ? (
       <Loader />
     ) : (
-      <CardLayoutWrapper
-        title={
-          currentQuestion === 0
-            ? !isQuestionWithImage
-              ? ""
-              : ""
-            : formattedQuestions[currentQuestion]?.questions
-        }
-        onButtonClick={handleNextCheckBox}
-        onBackClick={handleBack}
-        showBackButton={true}
-        disabledBack={currentQuestion === 0 ? true : false}
-        buttonText="Next"
-        headingCenter={currentQuestion === 0 ? false : true}
-        subtitle={currentQuestion === 0 ? (!isQuestionWithImage ? "" : "") : ""}
-        progressPercentage={currentQuestion !== 0 ? progressPercentage : 0}
-      >
-        {currentQuestion === 0 && isQuestionWithImage && (
-          <BannerImagesQuestion serviceName={serviceName} />
-        )}
-  
-        {currentQuestion === 0 && (
-          <div className="mb-7.5 md:mb-10">
-            <h4
-              style={{
-                textAlign: isQuestionWithImage ? "left" : "left",
-              }}
-              className={`${isQuestionWithImage ? "mt-7.5 md:mt-10" :""} mb-7.5 md:mb-10 text-left font-Inter font-black tracking-[-0.03em] text-[24px] leading-[25px]
-                      md:text-[24px] md:leading-[25px] lg:text-[30px] lg:leading-[30px]`}
-            >
-              {formattedQuestions[currentQuestion]?.questions}
-            </h4>
-            <NewBuyerRequestProgressBarQuotesRequest value={progressPercentage} />
-          </div>
-        )}
-  
-              <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto pr-2 pb-2">
+      <NewMultiPPCCardLayoutWrapper
+      title={
+        currentQuestion === 0
+          ? !isQuestionWithImage
+            ? ""
+            : ""
+          : formattedQuestions[currentQuestion]?.questions
+      }
+      onButtonClick={handleNextCheckBox}
+      onBackClick={handleBack}
+      showBackButton={true}
+      disabledBack={currentQuestion === 0 ? true : false}
+      buttonText="Next"
+      headingCenter={currentQuestion === 0 ? false : true}
+      subtitle={currentQuestion === 0 ? (!isQuestionWithImage ? "" : "") : ""}
+      progressPercentage={currentQuestion !== 0 ? progressPercentage : 0}
+    >
+      {currentQuestion === 0 && isQuestionWithImage && (
+        <BannerImagesQuestion serviceName={serviceName} />
+      )}
 
-          {formattedQuestions[currentQuestion]?.parsedAnswers.map(
-            (opt, index, arr) => {
-              const optionType = formattedQuestions[currentQuestion]?.option_type;
-  
-              const isSingle = optionType === "single";
-  
-              const isSelected = selectedOption.includes(opt.option);
-  
-              const handleSelect = () => {
-                if (isSingle) {
-                  setSelectedOption([opt.option]);
-                  setError("");
-                  if (opt.option !== "Something else (please describe)") {
+      {currentQuestion === 0 && (
+        <div className="mb-7.5 md:mb-10">
+          <h4
+            style={{
+              textAlign: isQuestionWithImage ? "left" : "left",
+            }}
+            className={`${isQuestionWithImage ? "mt-7.5 md:mt-10" :""}  mb-7.5 md:mb-10 text-left font-Inter font-black tracking-[-0.03em] text-[24px] leading-[25px]
+                    md:text-[24px] md:leading-[25px] lg:text-[30px] lg:leading-[30px]`}
+          >
+            {formattedQuestions[currentQuestion]?.questions}
+          </h4>
+          <NewBuyerRequestProgressBarQuotesRequest value={progressPercentage} />
+        </div>
+      )}
+
+            <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[45vh] overflow-auto pr-2 pb-2">
+
+        {formattedQuestions[currentQuestion]?.parsedAnswers.map(
+          (opt, index, arr) => {
+            const optionType = formattedQuestions[currentQuestion]?.option_type;
+
+            const isSingle = optionType === "single";
+
+            const isSelected = selectedOption.includes(opt.option);
+
+            const handleSelect = () => {
+              if (isSingle) {
+                setSelectedOption([opt.option]);
+                setError("");
+                if (opt.option !== "Something else (please describe)") {
                   handleNext([opt.option]);
                 }
-                } else {
-                  // Multi toggle
-                  setSelectedOption((prev) =>
-                    prev.includes(opt.option)
-                      ? prev.filter((o) => o !== opt.option)
-                      : [...prev, opt.option],
-                  );
-                  setError("");
-                }
-              };
-              // const isLastSingle =
-              //     arr.length % 2 !== 0 && index === arr.length - 1;
-  
-              return (
-                <div key={index}>
-                  <NewBuyerRequestQuestionOptionsBox
-                    label={opt.option}
-                    isSelected={isSelected}
-                    onSelect={handleSelect}
-                  />
-                  {/* </div> */}
-                </div>
-              );
-            },
-          )}
-        </div>
-        {formattedQuestions[currentQuestion]?.answer?.includes(
-          "Something else (please describe)",
-        ) &&
-          selectedOption.includes("Something else (please describe)") && (
-            <textarea
-              rows={3}
-              placeholder="Please enter...."
-              style={{ boxShadow: "0 0 7px .5px #0000001a" }}
-              className={`
-                                              relative w-full px-3 py-3 rounded-[16px] my-4
-                                              text-gray-900 text-base
-                                              border border-[#00aef3]
-                                              transition-all duration-200
-                                            placeholder:text-[#959595]
-                                              focus:ring-0 focus:outline-0
-                                              disabled:bg-gray-100 
-                                              custom-placeholder
-                                              ${
-                                                error
-                                                  ? "border-red-500 focus:ring-red-500 focus:border-red-500"
-                                                  : ""
-                                              }
-      
-                                          `}
-              value={otherText}
-              onChange={(e) => {
-                setOtherText(e.target.value);
+              } else {
+                // Multi toggle
+                setSelectedOption((prev) =>
+                  prev.includes(opt.option)
+                    ? prev.filter((o) => o !== opt.option)
+                    : [...prev, opt.option],
+                );
                 setError("");
-              }}
-            />
-          )}
-  
-        {error && (
-          <p className="text-[#ff4d4f] text-[14px] text-left mt-2">{error}</p>
+              }
+            };
+            // const isLastSingle =
+            //     arr.length % 2 !== 0 && index === arr.length - 1;
+
+            return (
+              <div key={index}>
+                <NewBuyerRequestQuestionOptionsBox
+                  label={opt.option}
+                  isSelected={isSelected}
+                  onSelect={handleSelect}
+                />
+                {/* </div> */}
+              </div>
+            );
+          },
         )}
-      </CardLayoutWrapper>
+      </div>
+      {formattedQuestions[currentQuestion]?.answer?.includes(
+        "Something else (please describe)",
+      ) &&
+        selectedOption.includes("Something else (please describe)") && (
+          <textarea
+            rows={3}
+            placeholder="Please enter...."
+            style={{ boxShadow: "0 0 7px .5px #0000001a" }}
+            className={`
+                                            relative w-full px-3 py-3 rounded-[16px] my-4
+                                            text-gray-900 text-base
+                                            border border-[#00aef3]
+                                            transition-all duration-200
+                                          placeholder:text-[#959595]
+                                            focus:ring-0 focus:outline-0
+                                            disabled:bg-gray-100 
+                                            custom-placeholder
+                                            ${
+                                              error
+                                                ? "border-red-500 focus:ring-red-500 focus:border-red-500"
+                                                : ""
+                                            }
+    
+                                        `}
+            value={otherText}
+            onChange={(e) => {
+              setOtherText(e.target.value);
+              setError("");
+            }}
+          />
+        )}
+
+      {error && (
+        <p className="text-[#ff4d4f] text-[14px] text-left mt-2">{error}</p>
+      )}
+    </NewMultiPPCCardLayoutWrapper>
     );
 };
 
