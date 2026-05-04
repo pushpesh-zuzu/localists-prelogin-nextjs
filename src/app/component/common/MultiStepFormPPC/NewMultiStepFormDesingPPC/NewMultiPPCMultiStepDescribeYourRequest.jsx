@@ -104,7 +104,7 @@ const NewMultiPPCMultiStepDescribeYourRequest = ({
         title="Tell us more about what you need for better responses"
         onButtonClick={handleSubmit}
         disabledBack
-        buttonText="Compare quotes now"
+        buttonText="See My Matches"
         showBackButton={true}
         disableNextButton={addDetailLoader}
         loader={addDetailLoader}

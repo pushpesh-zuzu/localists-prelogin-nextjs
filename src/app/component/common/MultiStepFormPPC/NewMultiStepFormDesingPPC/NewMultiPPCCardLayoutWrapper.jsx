@@ -96,7 +96,7 @@ const NewMultiPPCCardLayoutWrapper = ({
                     hover:bg-[#0096C4]
                     flex items-center justify-center gap-[5px]
                     transition-all duration-300
-                    active:translate-y-[1px] min-w-[95px]  md:min-w-[214px]
+                    active:translate-y-[1px] min-w-[95px]  lg:min-w-[214px]
                    
                     max-[768px]:w-[52px]
                     max-[768px]:h-[52px]
