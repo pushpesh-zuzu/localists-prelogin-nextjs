@@ -465,7 +465,7 @@ const WhatServiceYouNeed = ({
               ) : (
                 service.map((item) => (
                   <div
-                    key={item.id}
+                    key={item.uuid || item.id}
                     className="p-2 cursor-pointer hover:bg-blue-50 border-b border-gray-100 last:border-b-0"
                     onClick={() => handleSelectService(item)}
                   >

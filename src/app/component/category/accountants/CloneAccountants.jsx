@@ -203,7 +203,7 @@ const CloneAccountants = ({
 
     };
 
-
+console.log(service,'sss')
     return (
         <div
             className="relative
@@ -277,7 +277,7 @@ const CloneAccountants = ({
                                                 ) : (
                                                     service.map((item) => (
                                                         <p
-                                                            key={item.id}
+                                                            key={item.uuid || item.id}
                                                             onClick={() => handleSelectService(item)}
                                                             className="text-black font-bold text-center px-2 py-2 text-[16px] cursor-pointer border-b border-[#eee] hover:bg-[#f0f0f0]"
                                                         >

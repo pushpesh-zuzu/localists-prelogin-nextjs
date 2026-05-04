@@ -127,7 +127,7 @@ export default function LeadBuyerServiceModal({ isOpen, onClose }) {
               {service?.length > 0 ? (
                 service.map((item) => (
                   <div
-                    key={item.uuid}
+                    key={item.uuid || item.id}
                     onClick={() => handleSelect(item)}
                     className="flex items-center justify-between py-5 px-[18px]  border rounded-lg  
                      border-[#D9D9D9] text-sm md:text-[18px] font-normal text-[#253238] hover:border-[#00AFE3] 
