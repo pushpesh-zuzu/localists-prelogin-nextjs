@@ -203,7 +203,7 @@ const CloneAccountants = ({
 
     };
 
-console.log(service,'sss')
+
     return (
         <div
             className="relative
