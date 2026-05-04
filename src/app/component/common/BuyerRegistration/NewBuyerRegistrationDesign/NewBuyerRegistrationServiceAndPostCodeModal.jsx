@@ -217,7 +217,12 @@ const NewBuyerRegistrationServiceAndPostCodeModal = ({
 
   const handleContinue = useCallback(async () => {
     let newErrors = { service: "", pincode: "", house: "", street: "" };
+    if(isDropdownOpen){
 
+      setIsDropdownOpen(true)
+    } else {
+      setIsDropdownOpen(false)
+    }
 
     let houseValue = house;
     let streetValue = street;
@@ -394,7 +399,7 @@ const NewBuyerRegistrationServiceAndPostCodeModal = ({
           />
 
           {isDropdownOpen && service?.length > 0 && (
-            <div className="absolute z-10 w-full bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto mt-1">
+            <div className="absolute top-[100%] z-10 w-full bg-white border border-gray-200 rounded-md shadow-lg max-h-48 overflow-y-auto mt-1">
               {searchServiceLoader ? (
                 <div className="p-2 text-center text-gray-500">
                   <div className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-blue-500"></div>
@@ -408,7 +413,7 @@ const NewBuyerRegistrationServiceAndPostCodeModal = ({
                     onClick={() => handleSelectService(item)}
                   >
                     <div className="flex items-center">
-                      <span className="text-sm text-gray-700">{item.name}</span>
+                      <span className="text-base font-bold text-253238">{item.name}</span>
                       {selectedService?.id === item.id && (
                         <CheckIcon className="ml-auto w-4 h-4 text-[green]" />
                       )}

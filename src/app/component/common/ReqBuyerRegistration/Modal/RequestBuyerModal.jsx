@@ -124,7 +124,6 @@ const RequestBuyerModal = ({
                 max-[768px]:gap-[10px]
                 max-[480px]:pt-[20px]
                 max-[480px]:gap-[8px]
-                cursor-pointer
               `}
             >
               {/* Back Button */}
