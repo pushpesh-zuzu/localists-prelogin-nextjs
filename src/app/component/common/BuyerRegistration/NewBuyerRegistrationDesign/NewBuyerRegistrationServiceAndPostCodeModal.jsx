@@ -390,6 +390,7 @@ const NewBuyerRegistrationServiceAndPostCodeModal = ({
             error={errors.service}
             icon={<Search className="w-4 h-4 text-gray-400" />}
             disabled
+            errorGap="20px"
           />
 
           {isDropdownOpen && service?.length > 0 && (
@@ -427,6 +428,7 @@ const NewBuyerRegistrationServiceAndPostCodeModal = ({
             value={pincode}
             onChange={handlePincodeChange}
             error={errors.pincode}
+            errorGap="20px"
           />
           {checkingPostcode ? (
             <div className="absolute top-[60%] right-2 h-5 w-5 animate-spin rounded-full border-2 border-gray-300 border-t-[#00aeef]"></div>
@@ -510,6 +512,7 @@ const NewBuyerRegistrationServiceAndPostCodeModal = ({
               setSelectedAddressId("");
               setErrors((prev) => ({ ...prev, house: "" }));
             }} error={errors.house}
+            errorGap="20px"
           />
         </div>
 
@@ -523,6 +526,7 @@ const NewBuyerRegistrationServiceAndPostCodeModal = ({
               setSelectedAddressId("");
               setErrors((prev) => ({ ...prev, street: "" }));
             }} error={errors.street}
+             errorGap="20px"
           />
         </div>
       </RequestBuyerModal>

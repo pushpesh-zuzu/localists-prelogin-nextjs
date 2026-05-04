@@ -295,6 +295,7 @@ function NewBuyerRequestAddressField({
           }}
           error={errors.house}
           labelClass="text-base text-[20px] mb-3 md:mt-6 mt-3"
+          errorGap="20px"
         />
 
         {/* Street Address */}
@@ -308,6 +309,7 @@ function NewBuyerRequestAddressField({
             setErrors((prev) => ({ ...prev, street: "" }));
           }}
           error={errors.street}
+          errorGap="20px"
         />
       </div>
     </RequestBuyerModal>

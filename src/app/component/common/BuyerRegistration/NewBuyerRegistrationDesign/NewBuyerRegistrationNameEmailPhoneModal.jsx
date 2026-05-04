@@ -259,6 +259,7 @@ function NewBuyerRegistrationNameEmailPhoneModal({
           error={errors.name && "Name is required"}
           placeholder="Your Name"
           type={inputType}
+          errorGap="20px"
         />
         {!isPPCPages && (
           <RequestInputField
@@ -269,6 +270,7 @@ function NewBuyerRegistrationNameEmailPhoneModal({
             // onBlur={handleEmailBlur}
             error={errors.email && "Please enter a valid email address."}
             placeholder="Your Email"
+            errorGap="20px"
           />
         )}
         <RequestInputField
@@ -278,6 +280,7 @@ function NewBuyerRegistrationNameEmailPhoneModal({
           onChange={handlePhoneChange}
           error={errors.phone && "Please enter a valid 11-digit phone number."}
           placeholder="Phone Number"
+          errorGap="20px"
         />
       </RequestBuyerModal>
     </div>

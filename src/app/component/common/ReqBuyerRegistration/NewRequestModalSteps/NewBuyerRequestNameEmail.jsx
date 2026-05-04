@@ -164,7 +164,7 @@ function NewBuyerRequestNameEmail({
       marginTop="lg:mt-[10vh] mt-[5vh]"
       // onBack={previousStep}
       minHeight="min-h-[300px]  md:min-h-[300px]"
-      onBackDisable
+      onBackDisable   
     >
       <div className="mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[608px]">
         <RequestInputField
@@ -175,6 +175,7 @@ function NewBuyerRequestNameEmail({
           placeholder="Your Name"
           type={inputType}
           labelClass="text-base text-[20px] mb-3"
+          errorGap="20px"
         />
         {!isPPCPages && (
           <RequestInputField
@@ -184,6 +185,7 @@ function NewBuyerRequestNameEmail({
             onChange={handleEmailChange}
             error={errors.email && "Please enter a valid email address"}
             placeholder="Your Email"
+            errorGap="20px"
           />
         )}
       </div>

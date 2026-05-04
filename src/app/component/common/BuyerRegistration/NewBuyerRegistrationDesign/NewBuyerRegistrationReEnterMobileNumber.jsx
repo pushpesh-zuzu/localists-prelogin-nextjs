@@ -162,6 +162,7 @@ function NewBuyerRegistrationReEnterMobileNumber({ onClose, setReEnterMobile }) 
         placeholder="Your Name"
         type={inputType}
         disabled={true}
+        errorGap="20px"
       />
 
       <RequestInputField
@@ -172,6 +173,7 @@ function NewBuyerRegistrationReEnterMobileNumber({ onClose, setReEnterMobile }) 
         error={errors.email && "Please enter a valid email address."}
         placeholder="Your Email"
         disabled={true}
+        errorGap="20px"
       />
 
       <RequestInputField
@@ -181,6 +183,7 @@ function NewBuyerRegistrationReEnterMobileNumber({ onClose, setReEnterMobile }) 
         onChange={handlePhoneChange}
         error={errors.phone && "Please enter a valid 11-digit phone number."}
         placeholder="Phone Number"
+        errorGap="20px"
       />
 
       {/* NO EXTRA CONTENT - Exactly like NameEmailPhoneModal */}

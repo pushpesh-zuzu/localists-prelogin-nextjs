@@ -166,6 +166,7 @@ function NewRequestBuyerReEnterMobileNumberModal({ onClose, setReEnterMobile, pr
           placeholder="Your Name"
           disabled={true}
           labelClass="text-base text-[20px] mb-3"
+          errorGap="20px"
         />
 
         {/* Email */}
@@ -176,6 +177,7 @@ function NewRequestBuyerReEnterMobileNumberModal({ onClose, setReEnterMobile, pr
           error={errors.email && "Please enter a valid email address"}
           placeholder="Your Email"
           disabled={true}
+          errorGap="20px"
         />
 
         {/* Phone */}
@@ -185,6 +187,7 @@ function NewRequestBuyerReEnterMobileNumberModal({ onClose, setReEnterMobile, pr
           onChange={handlePhoneChange}
           error={errors.phone && "Please enter a valid 11-digit phone number"}
           placeholder="Phone Number"
+          errorGap="20px"
         />
       </div>
     </RequestBuyerModal>

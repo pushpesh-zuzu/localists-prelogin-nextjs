@@ -107,6 +107,7 @@ function NewRequestBuyerPhoneNumber({
                     error={errors.phone && "Please enter a valid 11-digit phone number"}
                     placeholder="Phone Number"
                     labelClass="text-base text-[20px] mb-3"
+                    errorGap="20px"
                 />
             </div>
         </RequestBuyerModal>

@@ -154,6 +154,7 @@ function NewBuyerRequestPostCodeFieldModal({
                         onChange={handlePostcodeChange}
                         error={errors.postcode && "Please enter a valid postcode"}
                         labelClass="text-base text-[20px] mb-3"
+                        errorGap="20px"
                     />
                     {checkingPostcode ? (
                         <div className="absolute top-10.5 right-3">
