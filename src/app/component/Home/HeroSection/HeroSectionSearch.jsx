@@ -87,7 +87,7 @@ function HeroSectionSearch() {
           placeholder="Search for a service"
           id="search Attribute"
           rows={1} // default 1 row
-          className="text-[#B3B3B3] font-bold pl-4 pr-12 py-3.5 shadow-[0px_20px_40px_0px_rgba(0,0,0,0.5)] md:pl-6 md:pr-12 md:py-3.5 lg:pl-[43px] lg:pr-[72px] lg:py-[20px] mt-7.5 md:mt-6 xl:mt-[46px] text-base xl:text-[20px]! placeholder:text-base xl:placeholder:text-[20px]! bg-white rounded-[100px] w-full focus:outline-none resize-none overflow-hidden leading-snug"
+          className="text-[#B3B3B3] font-bold pl-4 pr-12 py-3.5 shadow-[0px_20px_40px_0px_rgba(0,0,0,0.5)] md:pl-6 md:pr-12 md:py-3.5 lg:pl-[43px] lg:pr-[72px] lg:py-[20px] mt-7.5 md:mt-6 xl:mt-[46px] text-base xl:text-[18px]! placeholder:text-base xl:placeholder:text-[18px]! bg-white rounded-[100px] w-full focus:outline-none resize-none overflow-hidden leading-snug"
           aria-label="Search for a service"
           value={searchQuery || ""}
           onChange={(e) => {
