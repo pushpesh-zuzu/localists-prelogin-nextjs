@@ -432,7 +432,7 @@ const NewBuyerRegistrationServiceAndPostCodeModal = ({
           />
           {checkingPostcode ? (
             <div className="absolute top-[60%] right-2 h-5 w-5 animate-spin rounded-full border-2 border-gray-300 border-t-[#00aeef]"></div>
-          ) : postalCodeValidate && city ? (
+          ) : postalCodeValidate ? (
             <CheckIcon
               size={24}
               color="white"
