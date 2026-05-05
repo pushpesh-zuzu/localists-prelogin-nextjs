@@ -1,5 +1,6 @@
 import SEO from '@/app/component/common/seo/SEO';
 import MultiStepLandscaping from '@/app/component/MultiStepFormPPC/MulStepLandscaping/MultiStepLandscaping'
+import NewMultiStepLandscaping from '@/app/component/MultiStepFormPPC/MulStepLandscaping/NewMultiStepLandscaping';
 import React from 'react'
 export const metadata = {
   title: "Compare Free Quotes from Local Landscapers | Localists",
@@ -17,7 +18,8 @@ function page() {
         canonicalPath="/en/gb/landscaping-multi-form-ppc"
         conversion={false}
       />
-      <MultiStepLandscaping />
+      {/* <MultiStepLandscaping /> */}
+      <NewMultiStepLandscaping/>
     </>
   )
 }

@@ -22,6 +22,7 @@ import BuyerRegistration from "../../common/BuyerRegistration/BuyerRegistration"
 import { showToast } from "@/utils/toaster";
 import { getBarkToken, getBarkUserData } from "@/utils/CookiesHelper";
 import CloseBrowserAbandon from "../../common/CloseBrowserAbandon/CloseBrowserAbandon";
+import NewBuyerRegistrationForm from "../../common/BuyerRegistration/NewBuyerRegistrationDesign/NewBuyerRegistrationForm";
 
 
 const CloneAccountants = ({
@@ -276,7 +277,7 @@ const CloneAccountants = ({
                                                 ) : (
                                                     service.map((item) => (
                                                         <p
-                                                            key={item.id}
+                                                            key={item.uuid || item.id}
                                                             onClick={() => handleSelectService(item)}
                                                             className="text-black font-bold text-center px-2 py-2 text-[16px] cursor-pointer border-b border-[#eee] hover:bg-[#f0f0f0]"
                                                         >
@@ -330,13 +331,23 @@ const CloneAccountants = ({
                     </div>
                 </div>
             </WrapperBGWidth>
-            {showModal &&
+            {/* {showModal &&
                 (getBarkUserData()?.active_status === 2 || !getBarkToken()) && (
                     <BuyerRegistration
                         closeModal={handleClose}
                         service_Id={selectedService?.id}
                         service_Name={selectedService?.name}
                         postcode={pincode.replace(/\s+/g, "").toUpperCase()}
+                        postalCodeValidate={postalCodeValidate}
+                    />
+                )} */}
+                 {showModal &&
+                (getBarkUserData()?.active_status === 2 || !getBarkToken()) && (
+                    <NewBuyerRegistrationForm
+                        closeModal={handleClose}
+                        service_Id={selectedService?.id}
+                        service_Name={selectedService?.name}
+                        postcode={pincode}
                         postalCodeValidate={postalCodeValidate}
                     />
                 )}

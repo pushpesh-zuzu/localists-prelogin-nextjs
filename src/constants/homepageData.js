@@ -5,7 +5,7 @@ export const carouselData = [
     image: "/homepage/image6.webp",
     isSpecial: true,
     bgColor: "bg-cyan-400",
-    slug: "/en/gb/home"
+    slug: "/en/gb/home",
   },
   {
     id: 2,
@@ -62,7 +62,7 @@ export const carouselData = [
     image: "/roofing.webp", // Aapki image path
     isSpecial: false,
     slug: "/en/gb/roofers-near-me",
-  }
+  },
 ];
 const servicesImages = [
   { id: 1, path: "/fenceandgate.webp", title: "Fence & Gate Installation" },
@@ -84,10 +84,10 @@ const servicesImages = [
 export const carouselData1 = [
   {
     id: 1,
-    title: "Business Services",   // Special Card Title Updated
+    title: "Business Services", // Special Card Title Updated
     image: "/homepage/image6.webp",
     isSpecial: true,
-    bgColor: "bg-cyan-400"
+    bgColor: "bg-cyan-400",
   },
 
   // Below data from your new list (converted to same format)
@@ -95,26 +95,26 @@ export const carouselData1 = [
     id: 2,
     title: "Web Design",
     image: "/homepage/image5.webp",
-    isSpecial: false
+    isSpecial: false,
   },
   {
     id: 3,
     title: "Business Consultant",
     image: "/homepage/image6.webp",
-    isSpecial: false
+    isSpecial: false,
   },
   {
     id: 4,
     title: "Accounting",
     image: "/homepage/image7.webp",
-    isSpecial: false
+    isSpecial: false,
   },
   {
     id: 5,
     title: "Bookkeeping",
     image: "/homepage/image6.webp",
-    isSpecial: false
-  }
+    isSpecial: false,
+  },
 ];
 
 export const carouselData3 = [
@@ -123,7 +123,7 @@ export const carouselData3 = [
     title: "Weddings & Events",
     image: "/homepage/image8.webp",
     isSpecial: true,
-    bgColor: "bg-cyan-400"
+    bgColor: "bg-cyan-400",
   },
 
   // Normal Cards
@@ -131,13 +131,13 @@ export const carouselData3 = [
     id: 2,
     title: "Wedding Photography",
     image: "/homepage/image8.webp",
-    isSpecial: false
+    isSpecial: false,
   },
   {
     id: 3,
     title: "DJ",
     image: "/homepage/image9.webp",
-    isSpecial: false
+    isSpecial: false,
   },
   // {
   //   id: 4,
@@ -149,8 +149,8 @@ export const carouselData3 = [
     id: 5,
     title: "Wedding Decorations",
     image: "/homepage/image13.webp",
-    isSpecial: false
-  }
+    isSpecial: false,
+  },
 ];
 export const articles = [
   {
@@ -181,29 +181,47 @@ export const articles = [
 ];
 export const tabData = {
   professionals: [
-    { title: "Electricians in London", url: "" },
-    { title: "Roofers in Edinburgh", url: "" },
-    { title: "Roofers in Norwich", url: "/en/gb/roofers-near-me/northwich" },
-    { title: "Plumbers in Birmingham", url: "" },
     { title: "Roofers in Chester", url: "/en/gb/roofers-near-me/chester" },
-    { title: "Roofers in Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
-    { title: "Garden Designers in Cardiff", url: "" },
-    { title: "Maths Tutor in Manchester", url: "" },
-    { title: "Patio Layers in Manchester", url: "" },
-    { title: "Gardeners in Wolverhampton", url: "" },
+    {
+      title: "Landscapers in Llandudno",
+      url: "/en/gb/landscape-gardeners-near-me/llandudno",
+    },
+    {
+      title: "Roofers in Colwyn Bay",
+      url: "/en/gb/roofers-near-me/colwyn-bay",
+    },
+    {
+      title: "Roofers in Ashton Under Lyne",
+      url: "/en/gb/roofers-near-me/ashton-under-lyne",
+    },
+    { title: "Roofers in Leeds", url: "/en/gb/roofers-near-me/leeds" },
+    {
+      title: "Landscapers Belfast",
+      url: "/en/gb/landscape-gardeners-near-me/belfast",
+    },
+    { title: "Roofers in Oldham", url: "/en/gb/roofers-near-me/oldham" },
+    {
+      title: "Landscapers Northwich",
+      url: "/en/gb/landscape-gardeners-near-me/northwich",
+    },
+    { title: "Roofers in Chester", url: "/en/gb/roofers-near-me/chester" },
+    {
+      title: "Landscapers Wakefield",
+      url: "/en/gb/landscape-gardeners-near-me/wakefield",
+    },
   ],
-    popular: [
-      {
-        title: "Landscapers Near Me",
-        url: "/en/gb/landscape-gardeners-near-me",
+  popular: [
+    {
+      title: "Landscapers Near Me",
+      url: "/en/gb/landscape-gardeners-near-me",
     },
-     {
-        title: "Patio Layers near me",
-        url: "/en/gb/patio-layers-near-me",
+    {
+      title: "Patio Layers near me",
+      url: "/en/gb/patio-layers-near-me",
     },
-      {
-        title: "Private Tutors near me",
-        url: "/en/gb/tutors-near-me",
+    {
+      title: "Private Tutors near me",
+      url: "/en/gb/tutors-near-me",
     },
     {
       title: "Roofers near me",
@@ -213,9 +231,9 @@ export const tabData = {
       title: "Architects Near Me",
       url: "/en/gb/architects-near-me",
     },
-     {
-        title: "Gutter Cleaners near me",
-        url: "/en/gb/gutter-cleaning-near-me",
+    {
+      title: "Gutter Cleaners near me",
+      url: "/en/gb/gutter-cleaning-near-me",
     },
     {
       title: "Tree Surgeons Near Me ",
@@ -230,29 +248,28 @@ export const tabData = {
       url: "/en/gb/fencing-contractors-near-me",
     },
     {
-           title: "Painters and Decorators Near Me ",
-           url: "/en/gb/painter-and-decorator-near-me",
-       },
-     {
-        title: "Artificial Grass Installers near me",
-        url: "/en/gb/artificial-grass-installers-near-me",
+      title: "Painters and Decorators Near Me ",
+      url: "/en/gb/painter-and-decorator-near-me",
     },
-          ],
-    insight: [
-     
-      "Hiring Tips",
-      "Interior Design",
-      "Roofing Safety",
-      "Garden Design",
-      "Math Tutoring",
-      "Top Carpenters",
-      "Electrician Rates",
-      "Best Patio Materials",
-      "Home Renovation",
-      "Painting Techniques",
-      "DIY Gardening Hacks",
-    ],
-  };
+    {
+      title: "Artificial Grass Installers near me",
+      url: "/en/gb/artificial-grass-installers-near-me",
+    },
+  ],
+  insight: [
+    "Hiring Tips",
+    "Interior Design",
+    "Roofing Safety",
+    "Garden Design",
+    "Math Tutoring",
+    "Top Carpenters",
+    "Electrician Rates",
+    "Best Patio Materials",
+    "Home Renovation",
+    "Painting Techniques",
+    "DIY Gardening Hacks",
+  ],
+};
 export const feedbackData = [
   {
     id: 1,

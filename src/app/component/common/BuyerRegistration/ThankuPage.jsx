@@ -2,10 +2,12 @@
 
 import { useRouter } from "next/navigation";
 // import Script from "next/script";
-import { CheckCircle, CheckIcon } from "lucide-react"; 
+import { CheckCircle, CheckIcon } from "lucide-react";
 import H4 from "../../UI/Typography/H4";
 import { useSelector } from "react-redux";
 import { setCookie } from "@/utils/CookiesHelper";
+import ZigzagCheckIcon from "../../../../../public/mainLeadBuyer/ZigzagCheckIcon";
+import H2 from "../../UI/Typography/H2";
 
 const ThankuPage = () => {
   const router = useRouter();
@@ -104,8 +106,52 @@ const ThankuPage = () => {
           `,
         }}
       /> */}
+      <div className="flex flex-col max-w-[600px] m-auto items-center justify-center text-center px-5 py-7.5 md:px-12 md:py-7.5">
+        {/* Green Circle Check Icon */}
+        <div className="">
+          <ZigzagCheckIcon className="w-16 h-16 md:w-24 md:h-24 mb-5 md:mb-[43px]" />
+        </div>
 
-      <div className="min-h-screen bg-gray-50 flex items-start justify-center p-5 md:p-10">
+        {/* Thank You */}
+        <H2 className="mb-2.5 md:mb-5">Thank You!</H2>
+
+        {/* Subtitle */}
+        <H4 className="text-[18px]! lg:text-[30px]! mb-2.5">
+          Your number has been verified.
+        </H4>
+
+        {/* Description */}
+        <div className="p-4 md:p-8">
+          <div className="flex justify-center mb-0">
+            <button
+              onClick={handleSubmit}
+              className="cursor-pointer rounded-full bg-[#00afe3]  text-white px-8 py-3 flex items-center gap-2.5 font-medium text-sm md:text-base transition-colors duration-200"
+            >
+              <div className="w-4 h-4 bg-[#00afe3]  flex items-center justify-center ">
+                <CheckIcon
+                  color="white"
+                  className="w-4 h-4 border border-white  text-white"
+                />
+              </div>
+              <span className="font-[Arial]">View your matches now.</span>
+            </button>
+          </div>
+        </div>
+        <p
+          className="
+                font-[Arial] font-normal
+                text-[13px] leading-[20px]
+                md:text-[14px] md:leading-[24px]
+                max-w-[100%]
+                tracking-[0em]!
+              "
+        >
+          By continuing, you agree that up to 5 service providers may contact
+          you by phone, text or email regarding your request. Consent is not
+          required to purchase services. See our Privacy Policy.
+        </p>
+      </div>
+      {/* <div className="min-h-screen bg-gray-50 flex items-start justify-center p-5 md:p-10">
         <div className="w-full max-w-[500px] bg-white shadow-xl rounded-lg overflow-hidden">
           <div className="bg-[#e3f6fc] p-4 md:p-8 text-center">
             <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-[#00afe3] rounded-full flex items-center justify-center">
@@ -123,7 +169,6 @@ const ThankuPage = () => {
                 onClick={handleSubmit}
                 className="cursor-pointer rounded-full bg-[#00afe3]  text-white px-8 py-3 flex items-center gap-2.5 font-medium text-sm md:text-base transition-colors duration-200"
               >
-                {/* Checkbox icon image */}
                 <div className="w-4 h-4 bg-[#00afe3]  flex items-center justify-center ">
                   <CheckIcon
                     color="white"
@@ -147,7 +192,7 @@ const ThankuPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>  */}
     </>
   );
 };

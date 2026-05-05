@@ -7,7 +7,7 @@ import Image from "next/image";
 
 function HowItWorksleadBuyer({
   stepOneImage = "/mainLeadBuyer/howWeWork/laptop.webp",
-  stepTwoImage = "/mainLeadBuyer/howWeWork/service.webp",
+  stepTwoImage = "/mainLeadBuyer/howWeWork/services.webp",
   stepThreeImage = "/mainLeadBuyer/howWeWork/mobile1.webp",
 }) {
   return (
@@ -60,11 +60,12 @@ function HowItWorksleadBuyer({
                 giving them the option to request you personally.
               </Paragraph>
             </div>
-            <div className="flex-1 h-[178px] md:h-64 md:lg:h-72 w-full rounded-2xl overflow-hidden">
-              <img
+            <div className="relative flex-1 h-[178px] md:h-64 lg:h-[370px] w-full min-h-[178px] rounded-2xl overflow-hidden">
+              <Image
+                fill
                 src={stepTwoImage}
                 alt="We match them with you"
-                className=" w-full h-[178px] md:h-64 md:lg:h-72 object-contain lg:object-cover rounded-2xl "
+                className="object-contain rounded-2xl"
               />
             </div>
           </div>

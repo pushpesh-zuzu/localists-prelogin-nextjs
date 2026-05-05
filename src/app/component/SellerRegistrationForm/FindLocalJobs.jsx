@@ -189,7 +189,7 @@ const FindLocalJobs = () => {
               ) : (
                 service.map((item) => (
                   <p
-                    key={item.id}
+                    key={item.uuid || item.id}
                     onClick={() => handleSelectService(item)}
                     className="px-[18px] py-[12px] text-[16px] font-[Arial] tracking-[-0.03em] text-[#848484] cursor-pointer hover:bg-gray-100"
                   >

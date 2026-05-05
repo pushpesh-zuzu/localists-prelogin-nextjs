@@ -7,7 +7,8 @@ import StarIconFeature from "../../../../../public/ReactIcons/StarIconFeature";
 import HalfStarIconFeature from "../../../../../public/ReactIcons/HalfStarIconFeature";
 import Image from "next/image";
 import { BASE_IMAGE } from "@/utils";
-import RequestARegistration from "../RequestAQuoteRegistration/RequestARegistration";
+// import RequestARegistration from "../RequestAQuoteRegistration/RequestARegistration";
+import NewRequestCallBackForm from "../RequestAQuoteRegistration/NewRequestCallBackForm";
 
 export default function FeatureCard({
   index,
@@ -177,8 +178,16 @@ const emptyStars = 5 - fullStars - (showHalf ? 1 : 0);
         />
       )} */}
 
-      {showModal && (
+      {/* {showModal && (
         <RequestARegistration
+          onClose={() => setShowModal(false)}
+          serviceId={serviceId}
+          serviceName={serviceName}
+        />
+      )} */}
+      
+      {showModal && (
+        <NewRequestCallBackForm
           onClose={() => setShowModal(false)}
           serviceId={serviceId}
           serviceName={serviceName}

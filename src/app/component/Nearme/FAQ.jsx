@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import NearmeH2Heading from "./NearmeH2Heading";
 import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import PlusIconFaq from "../common/icons/NearMe/PlusIconFaq";
@@ -13,10 +13,25 @@ export const FAQ = ({
   containerClass = "w-full px-[30px] sm:px-10 md:px-16 xl:px-[0px] lg:max-w-[1200px] mx-auto pb-10 xl:pb-[72px]",
 }) => {
   const [openItem, setOpenItem] = useState(defaultOpen || null);
+  const itemRefs = useRef({});
 
-  const toggleItem = (key) => {
-    setOpenItem(openItem === key ? null : key);
-  };
+  //  const toggleItem = (key) => {
+  //   setOpenItem(openItem === key ? null : key);
+  // };
+  
+ const toggleItem = (key) => {
+  const isOpening = openItem !== key;
+  setOpenItem(isOpening ? key : null);
+
+  if (isOpening) {
+    setTimeout(() => {
+      itemRefs.current[key]?.scrollIntoView({
+        behavior: "smooth",
+        block: "center", 
+      });
+    }, 320);
+  }
+};
 
   return (
     <WrapperBGWidth>
@@ -32,6 +47,7 @@ export const FAQ = ({
           {data.map((item, index) => (
             <div
               key={item.key}
+              ref={(el) => (itemRefs.current[item.key] = el)} // ref assign
               className={`${index !== 0 ? "border-t-2 lg:border-t-4 border-[#DBDFE4]" : ""}`}
             >
               <button

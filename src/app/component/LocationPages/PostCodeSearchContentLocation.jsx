@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 // import BuyerRegistrationLocationPage from "./BuyerRegistrationLocationPage/BuyerRegistrationLocationPage";
 // import BuyerRegistration from "../common/BuyerRegistration/BuyerRegistration";
 import ReqBuyerRegistration from "../common/ReqBuyerRegistration/ReqBuyerRegistration";
+import NewBuyerRequestRestrationForm from "../common/ReqBuyerRegistration/NewRequestModalSteps/NewBuyerRequestRestrationForm";
 
 
 
@@ -241,7 +242,7 @@ function PostCodeSearchContentLocation({
         />
       )} */}
 
-      {show && (
+      {/* {show && (
         <ReqBuyerRegistration
           onClose={handleClose}
           service_Id={serviceId}
@@ -249,7 +250,16 @@ function PostCodeSearchContentLocation({
           serviceName={serviceName}
           service_Name={serviceName}
         />
-      )}
+      )} */}
+       {show && (
+              <NewBuyerRequestRestrationForm
+                onClose={handleClose}
+                service_Id={serviceId}
+                postcode={postcode}
+                serviceName={serviceName}
+                service_Name={serviceName}
+              />
+            )}
 
     </>
   );
