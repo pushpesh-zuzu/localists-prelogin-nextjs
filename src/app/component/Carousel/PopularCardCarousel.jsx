@@ -17,14 +17,6 @@ export default function PopularCardCarousel({
   const scrollableCards = data.filter((card) => !card.isSpecial);
   const MIN_SLIDES_FOR_LOOP = 6;
 
-  // const loopableCards =
-  //   scrollableCards.length === 0
-  //     ? []
-  //     : scrollableCards.length >= MIN_SLIDES_FOR_LOOP
-  //       ? scrollableCards
-  //       : Array.from({
-  //           length: Math.ceil(MIN_SLIDES_FOR_LOOP / scrollableCards.length),
-  //         }).flatMap(() => scrollableCards);
   const loopableCards =
   scrollableCards.length === 0
     ? []
@@ -282,7 +274,7 @@ export default function PopularCardCarousel({
                   }
                   className={`${
                     index === activeIndex
-                      ? "w-3 md:w-[47px] xl:w-[89px]"
+                      ? "w-3 md:w-12 xl:w-22"
                       : "w-3 md:w-3 xl:w-6"
                   } h-3 md:h-3 xl:h-6 rounded-full transition-all duration-700 ease-in-out bg-black`}
                   aria-label={`Go to slide ${index + 1}`}

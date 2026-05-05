@@ -7,34 +7,6 @@ import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import PopularCardCarousel from "../../Carousel/PopularCardCarousel";
 import PopularJobsCarousel from "../../Carousel/PopularJobsCarousel";
 import { popularData, mobileCarouselData } from "./PopularData";
-// import dynamic from "next/dynamic";
-// import LoaderIndicator from "../../common/Loader/LoaderIndicatore";
-
-
-// const PopularJobsCarousel = dynamic(
-//   () => import("../../Carousel/PopularJobsCarousel"),
-//   {
-//     loading: () => (
-//       <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
-//         <LoaderIndicator size="large" />
-//       </div>
-//     ),
-//     ssr: false
-//   }
-// );
-
-// const PopularCardCarousel = dynamic(
-//   () => import("../../Carousel/PopularCardCarousel"),
-//   {
-//     loading: () => (
-//       <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
-//         <LoaderIndicator size="large" />
-//       </div>
-//     ),
-//     ssr: false
-//   }
-// );
-
 
 function PopularCard() {
 

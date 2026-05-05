@@ -8,63 +8,13 @@ import Footer from '@/app/component/Footer/Footer'
 import AdviceInsight from '@/app/component/Home/AdviceInsight/AdviceInsight'
 import DiscoverServices from '@/app/component/Home/DiscoverServices/DiscoverServices'
 import HeroSection from '@/app/component/Home/HeroSection/HeroSection'
-import HireRelatedToService from '@/app/component/Home/HireRelatedToService/HireRelatedToService'
+// import HireRelatedToService from '@/app/component/Home/HireRelatedToService/HireRelatedToService'
 import HowItWork from '@/app/component/Home/HowItWork'
 import Member from '@/app/component/Home/Member/Member'
 import PopularCard from '@/app/component/Home/PopularCard/PopularCard'
 import UserFeedback from '@/app/component/Home/UserFeedback/UserFeedback'
 import { articles, feedbackData, tabData } from '@/constants/homepageData'
 import HireRelatedToServiceNearMe from "@/app/component/Nearme/HireRelatedToServiceNearMe";
-// import LoaderIndicator from "@/app/component/common/Loader/LoaderIndicatore";
-
-
-// const UserFeedback = dynamic(
-//   () => import("@/app/component/Home/UserFeedback/UserFeedback"),
-//   {
-//     loading: () => (
-//       <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
-//         <LoaderIndicator size="large" />
-//       </div>
-//     ),
-//     ssr: true,
-//   }
-// );
-
-// const AdviceInsight = dynamic(
-//   () => import("@/app/component/Home/AdviceInsight/AdviceInsight"),
-//   {
-//     loading: () => (
-//       <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
-//         <LoaderIndicator size="large" />
-//       </div>
-//     ),
-//     ssr: true,
-//   }
-// );
-
-// const HireRelatedToService = dynamic(
-//   () => import("@/app/component/Home/HireRelatedToService/HireRelatedToService"),
-//   {
-//     loading: () => (
-//       <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
-//         <LoaderIndicator size="large" />
-//       </div>
-//     ),
-//     ssr: true,
-//   }
-// );
-
-// const HowItWork = dynamic(
-//   () => import("@/app/component/Home/HowItWork"),
-//   {
-//     loading: () => (
-//       <div className="flex justify-center items-center min-h-[473px] md:min-h-[560px] py-16">
-//         <LoaderIndicator size="large" />
-//       </div>
-//     ),
-//     ssr: true,
-//   }
-// );
 
 function page() {
   return (
