@@ -8,6 +8,11 @@ export function middleware(request) {
     url.pathname = "/en/gb/";
     return NextResponse.redirect(url, { status: 301 });
   }
+   if (pathname === "/en/gb/sellers/create") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/en/gb/join";
+    return NextResponse.redirect(url, { status: 301 });
+  }
 
   return NextResponse.next();
 }

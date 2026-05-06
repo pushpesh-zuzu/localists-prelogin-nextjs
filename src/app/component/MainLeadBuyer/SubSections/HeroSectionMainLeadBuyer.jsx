@@ -49,9 +49,9 @@ export default function HeroSectionMainLeadBuyer() {
       className="w-full bg-[linear-gradient(180deg,#0191D8_0%,#00CCFF_100%)] 
       md:bg-[linear-gradient(90deg,#00CCFF_0%,#0191D8_100%)]"
     >
-      <div className="mx-auto max-w-[1536px] py-[22px] md:py-0 flex flex-col md:flex-row items-center md:gap-8 xl:gap-[70px] ">
+      <div className="mx-auto max-w-[1536px] px-[30px] md:px-16 xl:px-[120px] md:py-15 xl:py-[72px] flex flex-col md:flex-row items-center md:gap-8 xl:gap-[70px] ">
         {/* LEFT */}
-        <div className="md:w-1/2 md:w-[55%] xl:w-[55%] text-white px-[30px] md:px-0 md:pl-16 xl:pl-[120px] md:pt-[29px] md:pb-3 xl:pt-[42px] xl:pb-12">
+        <div className="md:w-1/2 md:w-[55%] xl:w-[55%] text-white ">
           <TrustPoiletLeadBuyerMobile className="md:hidden mb-5" />
           <TrustPoiletLeadBuyer className="hidden md:block mb-4" />
 
@@ -87,7 +87,7 @@ export default function HeroSectionMainLeadBuyer() {
           </p>
 
           {/* INPUT */}
-          <div className="w-full max-w-[512px] mt-8 mt-5 lg:mt-8">
+          <div className="w-full max-w-[512px] mt-8 mt-7 lg:mt-10">
             <Paragraph className="mb-2">What service do you provide?</Paragraph>
 
             {/* 🔥 CLICK → OPEN MODAL */}
@@ -157,7 +157,7 @@ export default function HeroSectionMainLeadBuyer() {
         </div>
 
         {/* RIGHT */}
-        <div className="flex-1 relative hidden pr-10 lg:pr-0 md:flex justify-start">
+        <div className="flex-1 relative hidden pr-10 lg:pr-0 md:flex justify-end">
           <div className="absolute w-[200px] lg:w-[338px] lg:h-[454px] bg-[#0A6EBE] rounded-full blur-2xl opacity-40"></div>
           <Image
             src="/mainLeadBuyer/hero/leadbuyerhero.webp"

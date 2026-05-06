@@ -9,7 +9,7 @@ const PricingSection = () => {
     const router = useRouter();
 
     // const onSubmitPageChange = () => {
-    //     router.push("/en/gb/sellers/create");
+    //     router.push("/en/gb/join");
     // };
 
     return (
@@ -49,7 +49,7 @@ const PricingSection = () => {
                 </Paragraph2>
 
                 <Link
-                    href="/en/gb/sellers/create" className="
+                    href="/en/gb/join" className="
             bg-[#00AFE3]
             text-white
             font-bold

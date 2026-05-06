@@ -248,7 +248,7 @@ export default function Header() {
                   Login
                 </a>
                 <a
-                  href="/en/gb/sellers/create"
+                  href="/en/gb/join"
                   className="flex items-center cursor-pointer font-bold gap-2 px-2.5 py-1.5 lg:px-5 lg:py-3 text-[14px] lg:text-[16px] text-white bg-[#00AEEF] rounded-full whitespace-nowrap"
                   aria-label="Sign up for new account"
                 >

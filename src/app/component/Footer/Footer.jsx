@@ -136,7 +136,7 @@ const Footer = () => {
                 <li>
                   <Link
                     target="_blank"
-                    href="/en/gb/sellers/create"
+                    href="/en/gb/join"
                     className="text-[rgba(37, 50, 56, 1)] font-normal text-sm md:text-[10px] xl:text-[18px]  hover:text-[#00afe3]  transition-colors duration-200 block "
                     onClick={(e) => {
                       if (getBarkToken()) {
@@ -328,7 +328,7 @@ const Footer = () => {
                     </Link>
                     <Link
                       target="_blank"
-                      href="/en/gb/sellers/create"
+                      href="/en/gb/join"
                       className="text-[rgba(37, 50, 56, 1)] hover:text-[#00afe3] block py-1"
                       onClick={(e) => {
                         if (getBarkToken()) {

@@ -9,7 +9,7 @@ const StartWinning = () => {
   const router = useRouter();
 
   const onSubmitPageChange = () => {
-    router.push("/en/gb/sellers/create");
+    router.push("/en/gb/join");
   };
 
   return (
@@ -26,7 +26,7 @@ const StartWinning = () => {
       </H3>
 
       <Link
-        href="/en/gb/sellers/create"
+        href="/en/gb/join"
         className="
           rounded-[10px]
           bg-[#00AFE3]

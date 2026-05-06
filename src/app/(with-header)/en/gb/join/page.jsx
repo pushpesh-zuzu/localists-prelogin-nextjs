@@ -30,10 +30,10 @@ function page() {
   return (
     <main>
       <SEO
-        canonicalPath="/en/gb/sellers/create"
+        canonicalPath="/en/gb/join"
         breadcrumb={[
           { title: "Home", path: "en/gb" },
-          { title: "Join as professional", path: "en/gb/sellers/create" },
+          { title: "Join as professional", path: "en/gb/join" },
         ]}
         conversion={true}
       />

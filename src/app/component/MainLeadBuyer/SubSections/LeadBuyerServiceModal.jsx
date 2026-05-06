@@ -73,6 +73,28 @@ export default function LeadBuyerServiceModal({ isOpen, onClose }) {
 
   if (!isOpen) return null;
 
+  const priorityOrder = [
+  "Landscaping",
+  "Roofing",
+  "Driveway Installation",
+  "Fence & Gate Installation",
+  "Tree Surgery",
+  "Artificial Grass Installation",
+  "Patio Laying",
+  "Gutter Cleaning",
+  "Painter and Decorator"
+];
+
+const sortedServices = [...(service || [])].sort((a, b) => {
+  const aIndex = priorityOrder.indexOf(a.name);
+  const bIndex = priorityOrder.indexOf(b.name);
+
+  if (aIndex === -1 && bIndex === -1) return 0;
+  if (aIndex === -1) return 1;
+  if (bIndex === -1) return -1;
+
+  return aIndex - bIndex;
+});
   return (
     <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center px-4">
       {/* ✅ Modal Box */}
@@ -125,7 +147,7 @@ export default function LeadBuyerServiceModal({ isOpen, onClose }) {
           {input && !searchServiceLoader && (
             <div className="space-y-2">
               {service?.length > 0 ? (
-                service.map((item) => (
+                sortedServices.map((item) => (
                   <div
                     key={item.uuid || item.id}
                     onClick={() => handleSelect(item)}
@@ -156,7 +178,7 @@ export default function LeadBuyerServiceModal({ isOpen, onClose }) {
               </Paragraph>
 
               <div className="space-y-2">
-                {service?.map((item) => (
+                {sortedServices?.map((item) => (
                   <div
                     key={item.id}
                     onClick={() => handleSelect(item)}

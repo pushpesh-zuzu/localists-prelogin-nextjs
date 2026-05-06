@@ -120,37 +120,38 @@ function MainLeadBuyer() {
       <ConnectWithClients
         trades={[
           {
-            label: "Fence & Gate Installation",
-            image: "/homepage/fenceandgate.webp",
-            serviceId: 49,
+            label: "Landscaping",
+            image: "/homepage/landscapingservice.webp",
+            serviceId: 43,
           },
+          { label: "Roofing", image: "/roofing.webp", serviceId: 113 },
           {
             label: "Driveway Installation",
             image: "/homepage/driveway.webp",
             serviceId: 51,
           },
-          {
-            label: "Patio Laying",
-            image: "/homepage/patiolayer.webp",
-            serviceId: 52,
-          },
-          {
-            label: "Artificial Grass Installation",
-            image: "/homepage/artificialgrassinstallation.webp",
-            serviceId: 54,
-          },
 
           {
-            label: "Landscaping",
-            image: "/homepage/landscapingservice.webp",
-            serviceId: 43,
+            label: "Fence & Gate Installation",
+            image: "/homepage/fenceandgate.webp",
+            serviceId: 49,
           },
           {
             label: "Tree Surgery",
             image: "/homepage/treesurgery.webp",
             serviceId: 112,
           },
-          { label: "Roofing", image: "/roofing.webp", serviceId: 113 },
+
+          {
+            label: "Artificial Grass Installation",
+            image: "/homepage/artificialgrassinstallation.webp",
+            serviceId: 54,
+          },
+          {
+            label: "Patio Laying",
+            image: "/homepage/patiolayer.webp",
+            serviceId: 52,
+          },
 
           {
             label: "Painter and Decorator",

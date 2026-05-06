@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import NearmeH2Heading from "../../Nearme/NearmeH2Heading";
 import Paragraph from "../../UI/Typography/Paragraph";
@@ -11,6 +11,9 @@ import HeadingWrapperMainLeadBuyer from "../HeadingWrapperMainLeadBuyer";
 import ProfileCircleWhiteBGIcon from "../../../../../public/ReactIcons/ProfileCircleWhiteBGIcon";
 import MaterailMeasurement from "../../../../../public/ReactIcons/MaterailMeasurement";
 import CallCircleWhiteBGIcon from "../../../../../public/ReactIcons/CallCircleWhiteBGIcon";
+import LeadBuyerServiceModal from "./LeadBuyerServiceModal";
+import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
+import { useRouter } from "next/navigation";
 
 const steps = [
   {
@@ -36,6 +39,15 @@ const steps = [
 ];
 
 function LeadGenerationSection() {
+const [isModalOpen, setIsModalOpen] = useState(false);
+  const router = useRouter();
+
+   const handleOpenModal = () => {
+      const canContinue = checkAuthenticatedUser(router);
+      if (!canContinue) return;
+  
+      setIsModalOpen(true);
+    };
   return (
     <WrapperBGWidth className="">
       
@@ -87,7 +99,7 @@ function LeadGenerationSection() {
           <Button
             variant="primary"
             onClick={() => {
-              handleScrollToBottom();
+              handleOpenModal();
             }}
             className="cursor-pointer min-w-[171px] md:min-w-[189px] rounded-full max-w-fit bg-[#10C87B] hover:bg-[#00aef3] text-white mt-[30px] lg:mt-12 px-[15px] py-2 xl:py-[15px] xl:px-7 leading-normal!"
           >
@@ -95,6 +107,10 @@ function LeadGenerationSection() {
           </Button>
         </div>
       </div>
+        <LeadBuyerServiceModal
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+            />
     </WrapperBGWidth>
   );
 }
