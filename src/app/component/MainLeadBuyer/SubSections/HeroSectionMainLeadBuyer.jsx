@@ -49,7 +49,7 @@ export default function HeroSectionMainLeadBuyer() {
       className="w-full bg-[linear-gradient(180deg,#0191D8_0%,#00CCFF_100%)] 
       md:bg-[linear-gradient(90deg,#00CCFF_0%,#0191D8_100%)]"
     >
-      <div className="mx-auto max-w-[1536px] px-[30px] md:px-16 xl:px-[120px] md:py-15 xl:py-[72px] flex flex-col md:flex-row items-center md:gap-8 xl:gap-[70px] ">
+      <div className="mx-auto max-w-[1536px] px-[30px] md:px-16 xl:px-[120px] py-[22px] md:py-15 xl:py-[72px] flex flex-col md:flex-row items-center md:gap-8 xl:gap-[70px] ">
         {/* LEFT */}
         <div className="md:w-1/2 md:w-[55%] xl:w-[55%] text-white ">
           <TrustPoiletLeadBuyerMobile className="md:hidden mb-5" />
