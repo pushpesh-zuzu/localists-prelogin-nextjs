@@ -176,11 +176,11 @@ const NewBuyerRegistrationDescribeYourRequest = ({
                 </span>
               </h6>
             </div>
-            <div className="max-[480px]:text-lg">
+            {/* <div className="max-[480px]:text-lg">
               <Paragraph className="mb-6 md:mb-7.5 text-center">
                 Tell us more about what you need for better responses
               </Paragraph>
-            </div>
+            </div> */}
 
             <textarea
               className={`w-full custom-textarea rounded-[20px] border-2 border-[#00aef3] custom-placeholder shadow-[0px_0px_2px_0.5px_rgba(0,0,0,0.1)] p-3.5 resize-none md:text-sm font-['Arial'] font-bold ${
