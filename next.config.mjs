@@ -27,7 +27,6 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true, // improved caching validation ---> previous have false i changed to true for performance
-  swcMinify: true, // faster minification ---> newly added
 
   experimental: {
     optimizeCss: true,
