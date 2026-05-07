@@ -165,7 +165,7 @@ export default function HeroSection() {
         alt="Local service search form on localists.com"
         fill
         priority
-        quality={95}
+        quality={90}
         sizes="100vw"
         className="object-cover object-[80%_center] sm:object-center"
       />

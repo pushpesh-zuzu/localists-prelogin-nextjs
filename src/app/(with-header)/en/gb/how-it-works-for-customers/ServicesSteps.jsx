@@ -48,7 +48,7 @@ export default function ServicesSteps() {
                                     width={step.width}
                                     height={step.height}
                                     loading="lazy"
-                                    quality={95}
+                                    quality={90}
                                     className="w-full h-full object-cover rounded-[20px]"
                                 />
 
@@ -92,7 +92,7 @@ export default function ServicesSteps() {
                                     width={step.width}
                                     height={step.height}
                                     loading="lazy"
-                                    quality={95}
+                                    quality={90}
                                     className="w-full h-full object-cover rounded-[20px]"
                                 />
                             </div>

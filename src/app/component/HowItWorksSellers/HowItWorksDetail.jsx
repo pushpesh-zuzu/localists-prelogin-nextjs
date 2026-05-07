@@ -146,7 +146,7 @@ const StepImages = ({ images, grow = false }) => {
                             width={images[0].width}
                             height={images[0].height}
                             loading="lazy"
-                            quality={95}
+                            quality={90}
                             sizes="(max-width: 768px) 50vw, 50vw"
                             className={`${images[0].className}`}
                         />
@@ -161,7 +161,7 @@ const StepImages = ({ images, grow = false }) => {
                                     width={img.width}
                                     height={img.height}
                                     loading="lazy"
-                                    quality={95}
+                                    quality={90}
                                     sizes="(max-width: 768px) 50vw, 50vw"
                                     className={`${img.className}`}
                                 />

@@ -109,7 +109,7 @@ const HeroSectionSellers = ({ onCustomContinue = null,
                 alt="How it works for sellers"
                 fill
                 priority
-                quality={95}
+                quality={90}
                 sizes="100vw"
                 className="object-cover object-[80%_center] sm:object-center"
             />
