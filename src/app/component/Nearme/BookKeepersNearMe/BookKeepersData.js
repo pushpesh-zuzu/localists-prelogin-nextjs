@@ -1,41 +1,11 @@
 export const QUESTION_AND_ABOUT_SERVICE = [
     {
         type: "h2",
-        text: "How Localists Works",
-    },
-    {
-        type: "h3",
-        text: "1. Start your search for bookkeepers",
-    },
-    {
-        type: "p",
-        text: "We will help you find the most experienced and reliable bookkeepers in your local area. Just provide us with some small details of the kind of service you require and we’ll match you with qualified professionals who fit the bill.",
-    },
-    {
-        type: "h3",
-        text: "2. Request free quotes from bookkeepers",
-    },
-    {
-        type: "p",
-        text: "Once we know your requirements, we will send you free, no-obligation quotes from the best quality local bookkeepers near you. You don’t need to scroll through endless listings. Simply compare profiles, service offerings, and read reviews to find the right fit  - all at no cost.",
-    },
-    {
-        type: "h3",
-        text: "3. Hire a local bookkeeper",
-    },
-    {
-        type: "p",
-        text: "After reviewing your options, choose the bookkeeper that best fits your needs. Get started on your terms - no pressure, no commitment until you're ready. Once you are confident in your choice, hire your bookkeeper and kick off your project.",
-        notMarginBottom: true,
-    },
-    {
-        type: "h2",
         text: "Find quality local bookkeepers",
-        className: "mt-6 md:mt-9 lg:mt-[70px]"
     },
     {
         type: "p",
-        text: "At Localists, our reliable and qualified bookkeeping professionals can keep your financial affairs in perfect order. Whether you’re a business owner or an individual, there are huge benefits to using <span style=\"background-color:#00FFFF;\">accountancy and bookkeeping services</span>. You don’t have to stress over tax returns, payroll, invoices, or bills. The best part? Our service is completely free.",
+        text: "At Localists, our reliable and qualified bookkeeping professionals can keep your financial affairs in perfect order. Whether you’re a business owner or an individual, there are huge benefits to using accountancy and bookkeeping services. You don’t have to stress over tax returns, payroll, invoices, or bills. The best part? Our service is completely free.",
     },
     {
         type: "p",
@@ -171,7 +141,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     },
     {
         type: "p",
-        text: "However, several factors can influence the cost, including how complex your finances are, how often you require support, and whether you are employing <span style=\"background-color:#00FFFF;\">online bookkeeping services</span>. For instance, sole trader bookkeeping is generally more straightforward and cost-effective, as it typically involves fewer transactions and simpler reporting, compared to larger businesses with payroll, VAT, or inventory to manage.",
+        text: "However, several factors can influence the cost, including how complex your finances are, how often you require support, and whether you are employing online bookkeeping services. For instance, sole trader bookkeeping is generally more straightforward and cost-effective, as it typically involves fewer transactions and simpler reporting, compared to larger businesses with payroll, VAT, or inventory to manage.",
     },
     {
         type: "p",
@@ -209,7 +179,7 @@ export const FREQUENTLY_DATA_BOOKKEEPERS = [
         description: `
       Simple answer - yes, especially for business or personal finances. Whether you want to track income, manage accounts, or handle accurate financial records, you will need expert help. Professional bookkeepers ensure accurate financial records, help with cash flow monitoring, and keep you compliant with HMRC regulations. This accuracy helps prevent costly errors, avoid tax penalties, and allows you to focus on other core growth activities.
       <br/><br/>
-      If you are a business owner, hiring <span style="background-color:#00FFFF;">a bookkeeper</span> is an investment in your business’s future, especially given the complexity of managing accounts and financial data. Many sole traders make the mistake of trying to do everything themselves, and end up having a mountain of paperwork and minimal time away from the business. A bookkeeper will relieve you of this excess paperwork, and allow you to fully commit to growing your business.
+      If you are a business owner, hiring a bookkeeper is an investment in your business’s future, especially given the complexity of managing accounts and financial data. Many sole traders make the mistake of trying to do everything themselves, and end up having a mountain of paperwork and minimal time away from the business. A bookkeeper will relieve you of this excess paperwork, and allow you to fully commit to growing your business.
       `,
     },
     {
@@ -394,7 +364,7 @@ export const BOOKKEEPERS_FEEDBACK = [
     },
     {
         id: 3,
-        text: "I’ve been working with Priya, a professional freelance bookkeeper, for over 4 months now, and all I can say is amazing! She’s organised, efficient, and genuinely cares about keeping my finances in order. Her attention to detail and clear communication have made a huge difference in how I manage my business accounts.",
+        text: "I’ve been working with James, a professional freelance bookkeeper, for over 4 months now, and all I can say is amazing! She’s organised, efficient, and genuinely cares about keeping my finances in order. Her attention to detail and clear communication have made a huge difference in how I manage my business accounts.",
         name: "Anita N",
     },
     {
