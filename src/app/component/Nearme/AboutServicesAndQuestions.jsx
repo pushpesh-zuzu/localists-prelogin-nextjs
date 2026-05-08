@@ -62,6 +62,28 @@ const AboutServicesAndQuestions = ({
             />
           </div>
         );
+        case "liNumber":
+          return (
+            <ol
+              key={index}
+              className={`
+                ${block?.className ? block?.className : "mb-2.5 md:mb-[15px]"}
+                list-decimal pl-8 md:pl-16
+              `}
+            >
+              {block.items?.map((item, i) => (
+                <li key={i} className={`${textBase} ${block?.classNameLi ? block?.classNameLi : "mb-2.5 md:mb-[15px]"}`}>
+                  <span className={`mr-0.5 ${block?.headingNormal? "font-normal":"font-bold"}`}>{item.heading}</span>
+                  {block?.breakLine && <br/>}
+                  {item.text && (
+                    <span
+                      dangerouslySetInnerHTML={{ __html: item.text }}
+                    />
+                  )}
+                </li>
+              ))}
+            </ol>
+          );
       case "AveratePriceSection":
         return <AveragePrice key={index} />;
       case "GutterPriceSection":
