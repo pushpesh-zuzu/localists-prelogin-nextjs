@@ -92,8 +92,8 @@ function BookKeepersNearMe() {
 
             <NearmeMember
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
-                desktopImage="/nearme/Roofing/roofingmember.webp"
-                mobileImage="/nearme/Roofing/roofingmembermobile.webp"
+                desktopImage="/nearme/BookKeeping/bookkeeping-member.webp"
+                mobileImage="/nearme/BookKeeping/bookkeeping-member.webp"
             />
             <Footer />
         </>
