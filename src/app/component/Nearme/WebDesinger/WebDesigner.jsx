@@ -43,7 +43,7 @@ const CloseBrowserAbandon = dynamic(
     { ssr: false }
 );
 
-function WebDesigner() {
+function    WebDesigner() {
     usePendingBuyerRedirect();
     useScrollToTop()
 
@@ -61,6 +61,7 @@ function WebDesigner() {
                 altText="designer-working-on-laptop-"
                 serviceId=""
                 serviceName="Driveway Installation"
+                blackHeadinginline="inline md:block"
             />
             <VettedSection
                 paragraph={VETTED_DATA_WEB_DESIGNER_INSTALLER}
