@@ -53,7 +53,7 @@ function WebDesigner() {
             <FAQScript FAQ={FREQUENTLY_DATA_WEB_DESIGNER_INSTALLERS["driveway-installers-near-me"]} />
             <HeroSectionNearMe
                 heading1="Expert Web Design "
-                headingMiddle="Agency"
+                headingMiddle="Agency "
                 heading2="Near You"
                 description=""
                 bannerImage="/nearme/WebsiteDesingner/webDesingDesktop.webp"
