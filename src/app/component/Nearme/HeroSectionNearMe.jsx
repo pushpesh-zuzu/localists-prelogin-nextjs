@@ -19,7 +19,9 @@ function HeroSectionNearMe({
   altText = "Tree Surgeon",
   serviceId=112,
   serviceName="Tree Surgery",
-  blackHeadinginline="block"
+  blackHeadinginline="block",
+  descriptionMaxWidth='lg:max-w-[590px] md:max-w-[80%] sm:max-w-[60%] md:max-w-[450px]'
+
   
 }) {
   return (
@@ -68,9 +70,9 @@ function HeroSectionNearMe({
                   <span className={`text-[#253238] ${blackHeadinginline}`}>{headingMiddle && <span className="text-white"> {headingMiddle}</span>} {heading2}</span>
                 </span>
               </H1>
-              <p className="font-[Arial] font-bold  text-[18px] leading-[18px]
+              <p className={`${descriptionMaxWidth} font-[Arial] font-bold  text-[18px] leading-[18px]
                       sm:text-base sm:leading-[18px]
-                      lg:text-[20px] lg:leading-[22px] tracking-[0em]! text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026] md:max-w-[80%] sm:max-w-[60%] md:max-w-[450px] lg:max-w-[590px] text-white pt-[11px] md:pt-4 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]">
+                      lg:text-[20px] lg:leading-[22px] tracking-[0em]! text-shadow-[0px 0px 4px 0px #00000040] md:text-shadow-[0px 4px 4px 0px #00000026]   text-white pt-[11px] md:pt-4 lg:pt-[20px] text-shadow-[0_0_4px_rgba(0,0,0,0.25)]`}>
                 {description}
               </p>
               <PostCodeSearchField serviceId={serviceId} serviceName={serviceName} />
