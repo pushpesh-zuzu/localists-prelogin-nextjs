@@ -97,6 +97,7 @@ function    WebDesigner() {
             <DiscoverNearMe background="#f7f7f7f7" homeData={WEB_DESIGNER_INSTALLERS_DATA} />
 
             <NearmeMember
+            userName="Marie"
             desktopImage="/nearme/WebsiteDesingner/webDesingMebmerDesktop.webp"
             mobileImage="/nearme/WebsiteDesingner/webDesingMebmerMobile.webp"
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}

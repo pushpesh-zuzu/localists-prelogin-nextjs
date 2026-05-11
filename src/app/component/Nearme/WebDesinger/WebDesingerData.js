@@ -102,7 +102,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   },
 
   {
-    type: "liNumber",
+    type: "liNumberSequence",
     breakLine: true,
     items: [
       {
@@ -323,6 +323,10 @@ export const WEB_DESIGNER_INSTALLERS_TABDATA = {
         {
             title: "Fence and Gate Installers Near Me",
             url: "/en/gb/fencing-contractors-near-me",
+        },
+        {
+            title: "Bookkeepers Near Me",
+            url: "/en/gb/bookkeepers-near-me",
         },
     ],
   insight: [],

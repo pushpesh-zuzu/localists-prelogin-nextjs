@@ -5,7 +5,7 @@ import React from "react";
 import H3 from "../UI/Typography/H3";
 import Button from "../UI/Typography/Button";
 
-function NearmeMember({ description = "",mobileImage="/nearme/treeSurgeonMemberMobile.webp",desktopImage="/nearme/treeSurgeonMember.webp" }) {
+function NearmeMember({userName="Chris", description = "",mobileImage="/nearme/treeSurgeonMemberMobile.webp",desktopImage="/nearme/treeSurgeonMember.webp" }) {
   return (
     <div className="w-full max-w-[303px] sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-[1200px] mx-auto pt-10 pb-10  md:py-[0px] md:pb-10 md:pt-10 lg:pt-[72px] lg:pb-0 lg:px-16 xl:px-0 xl:pt-[100px] xl:pb-[100px]">
       <div className="hidden md:flex w-fit rounded-[15px] md:rounded-[33px] overflow-hidden mx-auto ">
@@ -24,7 +24,7 @@ function NearmeMember({ description = "",mobileImage="/nearme/treeSurgeonMemberM
 
             <div className="hidden md:block mt-0 lg:mt-3">
               <p className="  text-white font-bold text-xs md:text-base lg:text-[20px] mt-[9px] lg:mt-[18px]" >
-                Localists Professional, Chris
+                Localists Professional, {userName}
               </p>
               {/* <p className=" text-white text-xs lg:text-[16px] font-normal">
                 CH Joinery
@@ -77,7 +77,7 @@ function NearmeMember({ description = "",mobileImage="/nearme/treeSurgeonMemberM
 
             <div className="mt-2">
               <p className="  text-white font-bold text-[12px] leading-4">
-                Localists Professional, Chris
+                Localists Professional, {userName}
               </p>
               {/* <p className="text-white text-[12px] leading-[15px]">
                 CH Joinery

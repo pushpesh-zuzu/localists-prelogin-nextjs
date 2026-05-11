@@ -62,7 +62,7 @@ const AboutServicesAndQuestions = ({
             />
           </div>
         );
-        case "liNumber":
+        case "liNumberSequence":
           return (
             <ol
               key={index}
@@ -76,7 +76,7 @@ const AboutServicesAndQuestions = ({
                   <span className={`mr-0.5 ${block?.headingNormal? "font-normal":"font-bold"}`}>{item.heading}</span>
                   {block?.breakLine && <br/>}
                   {item.text && (
-                    <span
+                    <span className={block?.breakLine ? "block mt-2.5 md:mt-[15px]" : ""}
                       dangerouslySetInnerHTML={{ __html: item.text }}
                     />
                   )}
