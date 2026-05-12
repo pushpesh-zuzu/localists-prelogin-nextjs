@@ -16,7 +16,7 @@ export default function Page() {
       {/* <StructuredData /> */}
       <SEO
         canonicalPath="/en/gb/accountants-near-me"
-        bannerImage="/nearme/AccountantHero.webp"
+        bannerImage="/nearme/Accountants/AccountantHero.webp"
         breadcrumb={[
           { title: "Home", path: "en/gb" },
           { title: "Business",  },
