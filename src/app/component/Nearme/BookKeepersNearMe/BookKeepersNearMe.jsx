@@ -55,8 +55,8 @@ function BookKeepersNearMe() {
                 bannerImage="/nearme/BookKeeping/bookkeeping_banner1.webp"
                 bannerImageMobile="/nearme/BookKeeping/bookKeeping_mobile.webp"
                 altText="Professional roofers roofing a new build with ceramic roof tiles"
-                serviceId=""
-                serviceName=""
+                serviceId="18"
+                serviceName="Bookkeeping Services"
             />
             <VettedSection
                 paragraph={VETTED_DATA_BOOKKEEPERS}
@@ -80,8 +80,8 @@ function BookKeepersNearMe() {
             />
             <UserFeedbackNearMe2 feedbackData={BOOKKEEPERS_FEEDBACK} />
             <AboutServicesAndQuestions
-                serviceId=""
-                serviceName=""
+                serviceId="18"
+                serviceName="Bookkeeping Services"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
             <FAQ

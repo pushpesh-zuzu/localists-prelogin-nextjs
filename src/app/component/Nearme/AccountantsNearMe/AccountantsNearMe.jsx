@@ -59,8 +59,8 @@ function AccountantsNearMe() {
         bannerImage="/nearme/Accountants/AccountantHero.webp"
         bannerImageMobile="/nearme/Accountants/AccountantHeroMobile1.webp"
         altText="Tree Surgeon Hanging From a Tree trimming branches with a chainsaw"
-        serviceName="Accountants"
-        serviceId=""
+        serviceName="Accounting"
+        serviceId="46"
       />
       <VettedSection
         paragraph={VETTED_DATA_ACCOUNTANTS}
@@ -86,8 +86,8 @@ function AccountantsNearMe() {
       <UserFeedbackNearMe2 feedbackData={ACCOUNTANTS_FEEDBACK} />
       {/* <PaddingWrapper> */}
       <AboutServicesAndQuestions
-        serviceName="Accountants"
-        serviceId=""
+        serviceName="Accounting"
+        serviceId="46"
         contentBlocks={QUESTION_AND_ABOUT_SERVICE}
       />
       {/* </PaddingWrapper> */}
