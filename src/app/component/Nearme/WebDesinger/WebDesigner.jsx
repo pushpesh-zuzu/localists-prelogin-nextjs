@@ -43,7 +43,7 @@ const CloseBrowserAbandon = dynamic(
     { ssr: false }
 );
 
-function    WebDesigner() {
+function WebDesigner() {
     usePendingBuyerRedirect();
     useScrollToTop()
 
@@ -73,7 +73,7 @@ function    WebDesigner() {
                 services={POPULAR_SERVICES}
                 popularImage="/nearme/WebsiteDesingner/WebPopularJobs.webp"
                 altText="installer creating cement mix for website desinger"
-                // ctaLink="/en/gb/driveways-multi-form-ppc"
+            // ctaLink="/en/gb/driveways-multi-form-ppc"
             />
             <HowItWorkNearMe />
             <HireRelatedToServiceNearMe
@@ -81,13 +81,13 @@ function    WebDesigner() {
                 heading1="Web Desinger Agency"
                 heading2="in your area"
                 tabData={WEB_DESIGNER_INSTALLERS_TABDATA}
-                heightClass = "min-h-[400px] h-auto md:h-auto lg:h-auto]"
+                heightClass="min-h-[400px] h-auto md:h-auto lg:h-auto]"
 
             />
             <UserFeedbackNearMe2 feedbackData={WEB_DESIGNER_INSTALLERS_FEEDBACK} />
             <AboutServicesAndQuestions
-                serviceId=""
-                serviceName="Driveway Installation"
+                serviceId="19"
+                serviceName="Web Design"
                 contentBlocks={QUESTION_AND_ABOUT_SERVICE} />
 
             <FAQ
@@ -97,9 +97,9 @@ function    WebDesigner() {
             <DiscoverNearMe background="#f7f7f7f7" homeData={WEB_DESIGNER_INSTALLERS_DATA} />
 
             <NearmeMember
-            userName="Marie"
-            desktopImage="/nearme/WebsiteDesingner/webDesingMebmerDesktop.webp"
-            mobileImage="/nearme/WebsiteDesingner/webDesingMebmerMobile.webp"
+                userName="Marie"
+                desktopImage="/nearme/WebsiteDesingner/webDesingMebmerDesktop.webp"
+                mobileImage="/nearme/WebsiteDesingner/webDesingMebmerMobile.webp"
                 description={`“The thing I like about Localists is they don’t tie you down to any monthly contracts and the leads are generally better.  When I’m quiet, I just hop on the website and get a few leads to tie me over.”`}
             />
             <Footer />
