@@ -6,6 +6,7 @@ import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import { handleScrollToBottom } from "@/utils/scroll";
 import UserFeedBackCardFullHeight from "../Home/UserFeedback/UserFeedBackCardFullHeight";
 import FeedbackCardCarouselNearme from "./FeedbackCardCarousel";
+import HowItWorkCTA from "../Home/HowItWorkCTA";
 
 function UserFeedback({ feedbackData = [] }) {
 
@@ -23,9 +24,10 @@ function UserFeedback({ feedbackData = [] }) {
                     />
                 </div>
                 <div className="flex justify-center">
-                    <Button onClick={() => { handleScrollToBottom() }} className="hover:bg-[#00afe3] cursor-pointer px-[15px] py-2 xl:py-[15px] xl:px-7 mt-8 xl:mt-[47.47px] rounded-full bg-[#253238] text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                    {/* <Button onClick={() => { handleScrollToBottom() }} className="hover:bg-[#00afe3] cursor-pointer px-[15px] py-2 xl:py-[15px] xl:px-7 mt-8 xl:mt-[47.47px] rounded-full bg-[#253238] text-white shadow-[0_0_4px_rgba(0,0,0,0.1)]">
                         Get your Quote
-                    </Button>
+                    </Button> */}
+                    <HowItWorkCTA text={'Get your Quote'}/>
                 </div>
             </div>
         </WrapperBGWidth>
