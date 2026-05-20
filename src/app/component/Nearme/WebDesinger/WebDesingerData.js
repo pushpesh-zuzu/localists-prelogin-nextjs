@@ -63,6 +63,11 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "Basically, a web designer turns your ideas into a website that works as hard as you do.",
+    notMarginBottom: true,
+  },
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
   },
   {
     type: "image",
@@ -283,52 +288,52 @@ export const WEB_DESIGNER_INSTALLERS_TABDATA = {
     "Web Designers Agency Manchester",
     "Web Designers Agency North Yorkshire",
   ],
- popular: [
-        {
-            title: "Landscapers Near Me",
-            url: "/en/gb/landscape-gardeners-near-me",
-        },
-        {
-            title: "Gardeners Near Me",
-            url: "",
-        },
-        {
-            title: "Patio Installers Near Me ",
-            url: "/en/gb/patio-layers-near-me",
-        },
-        {
-            title: "Architects Near Me",
-            url: "/en/gb/architects-near-me",
-        },
-        {
-            title: "Tree Surgeons Near Me ",
-            url: "/en/gb/tree-surgeon-near-me",
-        },
-        {
-            title: "Gutter Cleaners Near Me",
-            url: "/en/gb/gutter-cleaning-near-me",
-        },
-        {
-            title: "Driveway Installers Near Me",
-            url: "/en/gb/driveway-installers-near-me",
-        },
-        {
-            title: "Painters and Decorators Near Me",
-            url: "/en/gb/painter-and-decorator-near-me",
-        },
-        {
-            title: "Artificial Grass Installers Near Me",
-            url: "/en/gb/artificial-grass-installers-near-me",
-        },
-        {
-            title: "Fence and Gate Installers Near Me",
-            url: "/en/gb/fencing-contractors-near-me",
-        },
-        {
-            title: "Bookkeepers Near Me",
-            url: "/en/gb/bookkeepers-near-me",
-        },
-    ],
+  popular: [
+    {
+      title: "Landscapers Near Me",
+      url: "/en/gb/landscape-gardeners-near-me",
+    },
+    {
+      title: "Gardeners Near Me",
+      url: "",
+    },
+    {
+      title: "Patio Installers Near Me ",
+      url: "/en/gb/patio-layers-near-me",
+    },
+    {
+      title: "Architects Near Me",
+      url: "/en/gb/architects-near-me",
+    },
+    {
+      title: "Tree Surgeons Near Me ",
+      url: "/en/gb/tree-surgeon-near-me",
+    },
+    {
+      title: "Gutter Cleaners Near Me",
+      url: "/en/gb/gutter-cleaning-near-me",
+    },
+    {
+      title: "Driveway Installers Near Me",
+      url: "/en/gb/driveway-installers-near-me",
+    },
+    {
+      title: "Painters and Decorators Near Me",
+      url: "/en/gb/painter-and-decorator-near-me",
+    },
+    {
+      title: "Artificial Grass Installers Near Me",
+      url: "/en/gb/artificial-grass-installers-near-me",
+    },
+    {
+      title: "Fence and Gate Installers Near Me",
+      url: "/en/gb/fencing-contractors-near-me",
+    },
+    {
+      title: "Bookkeepers Near Me",
+      url: "/en/gb/bookkeepers-near-me",
+    },
+  ],
   insight: [],
 };
 

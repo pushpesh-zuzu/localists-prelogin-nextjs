@@ -52,8 +52,7 @@ function WebDesigner() {
             <CloseBrowserAbandon />
             <FAQScript FAQ={FREQUENTLY_DATA_WEB_DESIGNER_INSTALLERS["driveway-installers-near-me"]} />
             <HeroSectionNearMe
-                heading1="Expert Web Design "
-                headingMiddle="Agency "
+                heading1="Find Web Designers"
                 heading2="Near You"
                 description="Find the expert website desiner agency near you! Just input your postcode and a few details to get 5 tailored quotes. No cost. No obligation. No fuss."
                 bannerImage="/nearme/WebsiteDesingner/webDesingDesktop.webp"

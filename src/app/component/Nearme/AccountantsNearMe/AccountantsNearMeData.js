@@ -27,6 +27,10 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     notMarginBottom: true,
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Accountants/ManIsAccounting.webp",
     alt: "A Man is Accounting",

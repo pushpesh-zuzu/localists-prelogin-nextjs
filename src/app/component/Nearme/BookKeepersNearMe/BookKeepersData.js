@@ -17,6 +17,10 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         notMarginBottom: true,
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    },
+    {
         type: "h2",
         text: "Key qualities to look for in a professional bookkeeper",
         className: "mt-6 md:mt-9 lg:mt-[70px]"
