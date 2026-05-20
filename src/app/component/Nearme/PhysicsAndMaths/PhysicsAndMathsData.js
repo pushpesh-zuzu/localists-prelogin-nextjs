@@ -49,7 +49,11 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         text: "The right physics and maths tutor will feel less like an instructor and more like a guide. Someone who adapts to your needs and helps you steadily build the skills to succeed in your academic journey.",
         notMarginBottom: true,
     },
-    { type: "h2", text: "How much should I pay for a maths tutor?",className: "mt-6 md:mt-9 lg:mt-[70px]", },
+    {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    },
+    { type: "h2", text: "How much should I pay for a maths tutor?", className: "mt-6 md:mt-9 lg:mt-[70px]", },
     {
         type: "p",
         text: "On average, school-level Maths tutoring (KS3 or GCSE) tends to range between £25 - £30 per hour, while A-Level or university-level sessions usually cost £30 - £40 per hour.",

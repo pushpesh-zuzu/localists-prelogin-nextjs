@@ -29,6 +29,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_KEIGHLEY = [
     className: "mb-0",
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
@@ -211,19 +215,19 @@ export const ROOFERS_TABDATA_KEIGHLEY = {
   // ],
   findMore: [],
 };
-export  const NEARBY_PLACES_ROOFER_KEIGHLEY = [
-    { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
-    { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
-    { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
-    { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
-    { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
-    { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
+export const NEARBY_PLACES_ROOFER_KEIGHLEY = [
+  { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+  { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
+  { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+  { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
+  { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
+  { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
 
-    {
-      title: "Roofers Huddersfield",
-      url: "/en/gb/roofers-near-me/huddersfield",
-    },
-  ]
+  {
+    title: "Roofers Huddersfield",
+    url: "/en/gb/roofers-near-me/huddersfield",
+  },
+]
 export const VETTED_DATA_ROOFERS_KEIGHLEY = [
   `With roofs, small problems don’t stay small for long. It can go from manageable to urgent faster than you’d expect. If something does not look right, it is worth having it checked.  
   <br/><br/> 

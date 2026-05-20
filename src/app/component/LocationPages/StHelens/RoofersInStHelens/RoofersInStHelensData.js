@@ -66,6 +66,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ST_HELENS = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "p",
     text: "These figures are meant as a guide rather than a guarantee. Every roof is slightly different, so it’s always worth getting a proper quote before making a decision.",
     notMarginBottom: true,
@@ -226,19 +230,19 @@ export const ROOFERS_TABDATA_ST_HELENS = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_ST_HELENS = [
-    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
-    { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
-    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
-    { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
-    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
-    { title: "Roofers warrington", url: "/en/gb/roofers-near-me/warrington" },
-    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-    {
-      title: "Roofers Ellesmere Port",
-      url: "/en/gb/roofers-near-me/ellesmere-port",
-    },
-  ]
+  { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
+  { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+  { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+  { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+  { title: "Roofers warrington", url: "/en/gb/roofers-near-me/warrington" },
+  { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  {
+    title: "Roofers Ellesmere Port",
+    url: "/en/gb/roofers-near-me/ellesmere-port",
+  },
+]
 export const VETTED_DATA_ROOFERS_ST_HELENS = [
   `With roofs, reality hits when you hear that persistent rattling sound and start noticing leaks in different parts of the house.
   <br/><br/> 

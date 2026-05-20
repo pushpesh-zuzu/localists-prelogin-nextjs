@@ -22,12 +22,17 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SANDBACH = [
   {
     type: "p",
     text: "That's the gap Localists fills. Before a roofer appears in your results, we've already checked their qualifications, insurance, and track record. You tell us about the job, and we match you with vetted local professionals who are right for your specific property. Free quotes arrive without the chasing; you compare them at your own pace, and you hire whoever feels right. No pressure, no awkward callbacks, and no obligation until you're completely comfortable with your choice.",
-    className: "mb-6 md:mb-9 lg:mb-[70px]",
+    // className: "mb-6 md:mb-9 lg:mb-[70px]",
     notMarginBottom: true,
+  },
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
   },
   {
     type: "h2",
     text: " What does roofing work cost in Sandbach?",
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
   },
   {
     type: "p",
@@ -192,26 +197,26 @@ export const ROOFERS_TABDATA_SANDBACH = {
   // ],
   findMore: [],
 };
-export const NEARBY_PLACES_ROOFER_SANDBACH =  [
-    { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
-    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
-    { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
-    { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
-    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
-    { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
-    { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
-    { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
-    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-    {
-      title: "Roofers Macclesfield",
-      url: "/en/gb/roofers-near-me/macclesfield",
-    },
-    {
-      title: "Roofers Ellesmere Port",
-      url: "/en/gb/roofers-near-me/ellesmere-port",
-    },
-  ]
+export const NEARBY_PLACES_ROOFER_SANDBACH = [
+  { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+  { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  {
+    title: "Roofers Macclesfield",
+    url: "/en/gb/roofers-near-me/macclesfield",
+  },
+  {
+    title: "Roofers Ellesmere Port",
+    url: "/en/gb/roofers-near-me/ellesmere-port",
+  },
+]
 export const VETTED_DATA_ROOFERS_SANDBACH = [
   `We love a good moan about the weather. Rain, wind, the lot. But we rarely think about the one thing that takes the worst of it - the roof. Most of the time, we only remember it exists when a tile lands on the driveway after a rough night. 
   <br/><br/> 

@@ -63,6 +63,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BLACKPOOL = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "h2",
     text: "What’s usually included in a roofing quote?",
   },
@@ -79,8 +83,8 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BLACKPOOL = [
   {
     type: "p",
     text: "Some roofers also provide guarantees on their workmanship. It’s worth asking what’s covered and for how long.",
-    className:"mb-6 md:mb-9 lg:mb-[70px]",
-    notMarginBottom:true
+    className: "mb-6 md:mb-9 lg:mb-[70px]",
+    notMarginBottom: true
   },
   {
     type: "h2",
@@ -224,13 +228,13 @@ export const ROOFERS_TABDATA_BLACKPOOL = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_BLACKPOOL = [
-    { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
-    { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
-    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-    { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
-    { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
-    { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
-  ]
+  { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
+  { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+  { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
+  { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
+]
 
 export const VETTED_DATA_ROOFERS_BLACKPOOL = [
   `Planning a major home improvement? Maybe you’ve spotted wear and tear, or you just want your roof checked before winter. Whatever the reason, it helps to speak to someone who actually knows what they’re doing.

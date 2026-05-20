@@ -17,6 +17,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CROSBY = [
         notMarginBottom: true,
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    },
+    {
         type: "image",
         src: "/nearme/Roofing/roofinstalling.webp",
         alt: "two roofers installing slate tiles onto a brand new roof ",
@@ -184,18 +188,18 @@ export const ROOFERS_TABDATA_CROSBY = {
 };
 
 export const NEARBY_PLACES_ROOFER_CROSBY = [
-        { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
-        { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-        { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-        { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
-        { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
-        { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
-        { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
-        {
-            title: "Roofers Ellesmere Port",
-            url: "/en/gb/roofers-near-me/ellesmere-port",
-        },
-    ]
+    { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
+    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+    { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+    {
+        title: "Roofers Ellesmere Port",
+        url: "/en/gb/roofers-near-me/ellesmere-port",
+    },
+]
 export const VETTED_DATA_ROOFERS_CROSBY = [
     `With the blistering winds of the Crosby coastline, getting your roof checked out on the regular is a must. But sometimes it can seem easier to get a roofing quote from the iron men on Crosby beach than it can with a local roofer. That's where we come in. 
  <br/><br/> 

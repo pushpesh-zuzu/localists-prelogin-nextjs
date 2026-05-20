@@ -38,10 +38,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_GLOSSOP = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[0px] lg:mt-[0px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
     marginBottom: true,
+    marginTop: true,
   },
   {
     type: "h2",
@@ -197,16 +202,16 @@ export const ROOFERS_TABDATA_GLOSSOP = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_GLOSSOP = [
-    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
-    { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
-    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
-    { title: "Roofers Cheadle Hulme", url: "/en/gb/roofers-near-me/cheadle-hulme" },
-    { title: "Roofers Ashton-under-Lyne", url: "/en/gb/roofers-near-me/ashton-under-lyne" },
-  ]
+  { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+  { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+  { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+  { title: "Roofers Cheadle Hulme", url: "/en/gb/roofers-near-me/cheadle-hulme" },
+  { title: "Roofers Ashton-under-Lyne", url: "/en/gb/roofers-near-me/ashton-under-lyne" },
+]
 export const VETTED_DATA_ROOFERS_GLOSSOP = [
   `If there is any part of your home where you need to put the DIY manual down and call in a professional ASAP, it is definitely your roof. Small issues like a slipped tile or a minor drip have a way of spiralling into massive, expensive headaches if they aren't caught early. 
   <br/><br/> 

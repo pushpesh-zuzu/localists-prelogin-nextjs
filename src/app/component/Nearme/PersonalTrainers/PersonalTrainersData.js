@@ -50,7 +50,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         type: "p",
         text: `At Localist, you can easily compare trainer profiles, read reviews, and get free quotes from local trainers. That way, you’re not just finding “a personal trainer near me”, you’re finding a personal trainer that’s “just right for <i>you</i>”.`,
         className: "mt-[15px] xl:mt-[25px]",
-        notMarginBottom:true
+        notMarginBottom: true
     },
     {
         type: "h2",
@@ -90,6 +90,10 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         heading: "Personalised expertise.\u00A0",
         text: "Some trainers don’t just hand you a workout, they can also give advice on nutrition, recovery, and lifestyle habits to support your progress.",
         noMarginBottom: true
+    },
+    {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
     },
     {
         type: "image",

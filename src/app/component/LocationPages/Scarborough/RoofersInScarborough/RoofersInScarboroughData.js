@@ -66,6 +66,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SCARBOROUGH = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "p",
     text: "These figures are guide prices only. The final cost will depend on the complexity of the work, the materials chosen, and the existing condition of your roof. For accurate pricing, it’s always best to show us what is wrong with your roof and you request tailored quotes from local Roofers in Scarborough before making a decision.",
     className: "mb-6 md:mb-9 lg:mb-[70px]",
@@ -256,12 +260,12 @@ export const ROOFERS_TABDATA_SCARBOROUGH = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_SCARBOROUGH = [
-    { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
-    { title: "Roofers Driffield", url: "/en/gb/roofers-near-me/driffield" },
-    { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
-    { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
-    { title: "Roofers Middlesbrough", url: "/en/gb/roofers-near-me/middlesbrough" },
-  ]
+  { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
+  { title: "Roofers Driffield", url: "/en/gb/roofers-near-me/driffield" },
+  { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
+  { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
+  { title: "Roofers Middlesbrough", url: "/en/gb/roofers-near-me/middlesbrough" },
+]
 export const VETTED_DATA_ROOFERS_SCARBOROUGH = [
   `Perched between sea spray and stubborn Yorkshire winds, roofs in Scarborough have a bit more to deal with than most. One minute it’s sunshine on the bay, the next it’s a full-on coastal gust testing every tile like it’s got something to prove.
   <br/><br/> 

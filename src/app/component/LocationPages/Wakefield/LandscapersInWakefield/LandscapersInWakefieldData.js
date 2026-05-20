@@ -14,6 +14,11 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_WAKEFIELD = [
   {
     type: "p",
     text: "We’ve already done the legwork by vetting the landscapers on our platform. We pull in real feedback from Facebook, Trustpilot and Google so you can see their track record without having twenty tabs open. You can compare quotes, look at actual photos of past local projects, and just pick the person you trust to get your garden sorted.",
+    notMarginBottom: true,
+  },
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
   },
   {
     type: "h2",

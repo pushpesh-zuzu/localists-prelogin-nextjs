@@ -40,7 +40,11 @@ export const QUESTION_AND_ABOUT_SERVICE_AIRPORT_TRANSPORT = [
     type: "li",
     heading:
       "Pet friendly options, for those travelling with their furry friends.",
-       className:"mb-0"
+    className: "mb-0"
+  },
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
   },
   {
     type: "h2",
@@ -91,7 +95,7 @@ export const QUESTION_AND_ABOUT_SERVICE_AIRPORT_TRANSPORT = [
   {
     type: "p",
     text: "Options for luxury vehicles, mobility-friendly vans, or extra luggage capacity. Customised to fit your needs.",
-    notMarginBottom:true
+    notMarginBottom: true
   },
 
   {

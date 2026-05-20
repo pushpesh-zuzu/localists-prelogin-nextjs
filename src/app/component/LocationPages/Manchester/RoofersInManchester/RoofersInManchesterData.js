@@ -34,6 +34,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MANCHESTER = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "h2",
     text: "Hiring a roofer in Manchester? Here’s what really happens",
   },
@@ -246,23 +250,23 @@ export const ROOFERS_TABDATA_MANCHESTER = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_MANCHESTER = [
-    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
-    { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
-    { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
-    { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
-    {
-      title: "Roofers Cheadle Hulme",
-      url: "/en/gb/roofers-near-me/cheadle-hulme",
-    },
-    {
-      title: "Roofers Ashton-Under-Lyne",
-      url: "/en/gb/roofers-near-me/ashton-under-lyne",
-    },
-  ]
+  { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+  { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+  { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+  {
+    title: "Roofers Cheadle Hulme",
+    url: "/en/gb/roofers-near-me/cheadle-hulme",
+  },
+  {
+    title: "Roofers Ashton-Under-Lyne",
+    url: "/en/gb/roofers-near-me/ashton-under-lyne",
+  },
+]
 export const VETTED_DATA_ROOFERS_MANCHESTER = [
   `Manchester's weather has a reputation: rain, wind, occasional hail, and the rare sun that just shows up to remind you it exists. If your roof is showing signs of wear, leaks, missing tiles, or just looking a bit tired after years of weathering the city’s unpredictable skies, it’s time to call in the experts.
   <br/><br/> 

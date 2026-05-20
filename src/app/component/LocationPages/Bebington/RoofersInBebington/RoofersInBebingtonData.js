@@ -27,6 +27,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BEBINGTON = [
     notMarginBottom: true,
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "h2",
     text: "What does roofing work cost in Bebington?",
     className: "mt-6 md:mt-9 lg:mt-[70px]",
@@ -191,18 +195,18 @@ export const ROOFERS_TABDATA_BEBINGTON = {
 };
 
 export const NEARBY_PLACES_ROOFER_BEBINGTON = [
-    { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
-    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
-    { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
-    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
-    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
-    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
-    {
-      title: "Roofers Ellesmere Port",
-      url: "/en/gb/roofers-near-me/ellesmere-port",
-    },
-  ]
+  { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
+  { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+  { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+  { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+  { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+  {
+    title: "Roofers Ellesmere Port",
+    url: "/en/gb/roofers-near-me/ellesmere-port",
+  },
+]
 
 export const VETTED_DATA_ROOFERS_BEBINGTON = [
   `Are you at the point where you’re Googling things you’ve never Googled before, or even asking that one neighbour you barely speak to - just trying to find a roofer? Only to then wonder whether the person on the other end of the phone actually knows what they’re talking about. It’s a stressful spot to be when all you want is someone you can trust.

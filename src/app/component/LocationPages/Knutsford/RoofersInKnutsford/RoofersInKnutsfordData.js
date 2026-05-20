@@ -43,6 +43,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_KNUTSFORD = [
     noMarginBottom: true,
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof",
@@ -225,27 +229,27 @@ export const ROOFERS_TABDATA_KNUTSFORD = {
 };
 
 export const NEARBY_PLACES_ROOFER_KNUTSFORD = [
-    { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
-    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
-    { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
-    { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
-    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
-    { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
-    { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
-    { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
-    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    {
-      title: "Roofers Cheadle Hulme",
-      url: "/en/gb/roofers-near-me/cheadle-hulme",
-    },
-    { title: "Roofers Macclesfield", url: "/en/gb/roofers-near-me/macclesfield", },
-    { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
-    { title: "Roofers Ellesmere Port", url: "/en/gb/roofers-near-me/ellesmere-port" },
+  { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+  { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  { title: "Roofers Runcorn", url: "/en/gb/roofers-near-me/runcorn" },
+  { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  {
+    title: "Roofers Cheadle Hulme",
+    url: "/en/gb/roofers-near-me/cheadle-hulme",
+  },
+  { title: "Roofers Macclesfield", url: "/en/gb/roofers-near-me/macclesfield", },
+  { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
+  { title: "Roofers Ellesmere Port", url: "/en/gb/roofers-near-me/ellesmere-port" },
 
-  ]
+]
 
 export const VETTED_DATA_ROOFERS_KNUTSFORD = [
   `Everything is going well on a rainy Saturday morning. Brew in hand, favourite show on, and life is good. Then you feel a drip on your shoulder. You look up. Another one lands. You don't need a survey or a second opinion; you already know exactly what's happening. Your roof is leaking.

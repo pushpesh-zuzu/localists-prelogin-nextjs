@@ -65,6 +65,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BURNLEY = [
     className: "mb-0"
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof",
@@ -262,14 +266,14 @@ export const ROOFERS_TABDATA_BURNLEY = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_BURNLEY = [
-    { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
-    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-    { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
-    { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
-    { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
-    { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
-    { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
-  ]
+  { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+  { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
+  { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
+  { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
+  { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
+]
 
 export const VETTED_DATA_ROOFERS_BURNLEY = [
   `Picking the right roofer isn’t always easy. There are plenty of “experts” out there, but how do you know who’s legit and who’s just a bloke with a ladder and a van or someone whose five-star reviews come from their mum and mates?

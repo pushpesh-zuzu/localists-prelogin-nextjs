@@ -42,10 +42,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ROSSENDALE = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[0px] lg:mt-[0px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
     marginBottom: true,
+    marginTop: true,
   },
   {
     type: "h2",
@@ -195,13 +200,13 @@ export const ROOFERS_TABDATA_ROSSENDALE = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_ROSSENDALE = [
-    { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
-    { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
-    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-    { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
-    { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
-    { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
-  ]
+  { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
+  { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+  { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
+  { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
+  { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+]
 export const VETTED_DATA_ROOFERS_ROSSENDALE = [
   `Are your roof tiles starting to shift every time the wind picks up?  Or are your roof improvements taking longer than the Rawtenstall Gyratory? - Well it doesn't need to take that long. 
   <br/><br/> 

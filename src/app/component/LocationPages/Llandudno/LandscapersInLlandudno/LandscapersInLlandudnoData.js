@@ -41,6 +41,10 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_LLANDUDNO = [
         className: "mb-0",
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    },
+    {
         type: "h2",
         text: "How much does landscaping cost in Llandundo",
         className: "mt-6 md:mt-9 lg:mt-[70px]",
@@ -201,20 +205,20 @@ export const LANDSCAPING_TABDATA_LLANDUDNO = {
     findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_LLANDUDNO = [
-        // { title: "Landscapers Mold", url: "" },
-        // { title: "Landscapers Rhyl", url: "" },
-        // { title: "Landscapers Conwy", url: "" },
-        // { title: "Landscapers Bangor", url: "" },
-        // { title: "Landscapers Buckley", url: "" },
-        // { title: "Landscapers Deeside", url: "" },
-        { title: "Landscapers Wrexham", url: "/en/gb/landscape-gardeners-near-me/wrexham" },
-        // { title: "Landscapers Holywell", url: "" },
-        // { title: "Landscapers Oswestry", url: "" },
-        // { title: "Landscapers Anglesey ", url: "" },
-        // { title: "Landscapers Caernarfon", url: "" },
-        // { title: "Landscapers Colwyn Bay ", url: "" },
-        // { title: "Landscapers North Wales", url: "" },
-    ]
+    // { title: "Landscapers Mold", url: "" },
+    // { title: "Landscapers Rhyl", url: "" },
+    // { title: "Landscapers Conwy", url: "" },
+    // { title: "Landscapers Bangor", url: "" },
+    // { title: "Landscapers Buckley", url: "" },
+    // { title: "Landscapers Deeside", url: "" },
+    { title: "Landscapers Wrexham", url: "/en/gb/landscape-gardeners-near-me/wrexham" },
+    // { title: "Landscapers Holywell", url: "" },
+    // { title: "Landscapers Oswestry", url: "" },
+    // { title: "Landscapers Anglesey ", url: "" },
+    // { title: "Landscapers Caernarfon", url: "" },
+    // { title: "Landscapers Colwyn Bay ", url: "" },
+    // { title: "Landscapers North Wales", url: "" },
+]
 export const VETTED_DATA_LANDSCAPING_LLANDUDNO = [
     `With the Great Orme in eyeshot and the world famous Llandudno Pier on your doorstep - there is plenty of beauty around Llandudno to give you the inspiration to make your little green space into a little green paradise.
   <br/><br/> 
@@ -238,12 +242,12 @@ export const BREADCRUM_DATA_LANDSCAPING_LLANDUDNO = [
 ];
 
 export const POPULAR_SERVICES_LANDSCAPING_LLANDUDNO = [
-"Sleepers",
-"Garden brickwork",
-"Paving",
-  "Shed building",
-  "Turfing",
-  "Irrigation systems",
+    "Sleepers",
+    "Garden brickwork",
+    "Paving",
+    "Shed building",
+    "Turfing",
+    "Irrigation systems",
 ];
 export const LANDSCAPING_FEEDBACK_LLANDUDNO = [
     {

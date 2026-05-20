@@ -18,6 +18,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_FLEETWOOD = [
     notMarginBottom: true,
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof",
@@ -184,15 +188,15 @@ export const ROOFERS_TABDATA_FLEETWOOD = {
   // ],
   findMore: [],
 };
-export const NEARBY_PLACES_ROOFER_FLEETWOOD =[
-    { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
-    { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
-    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-    { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
-    { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
-    { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
-    { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
-  ]
+export const NEARBY_PLACES_ROOFER_FLEETWOOD = [
+  { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+  { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
+  { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
+  { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
+  { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
+]
 export const VETTED_DATA_ROOFERS_FLEETWOOD = [
   `Having to hire someone to work on your roof could feel like rolling a die - you never know which side it will land on. You might get lucky, or you might just hire a 'self-proclaimed expert' who leaves things in a worse state than when they started.
   <br/><br/> 
@@ -201,7 +205,7 @@ export const VETTED_DATA_ROOFERS_FLEETWOOD = [
 Localists is here to ensure you don’t guess. No matter how simple or complicated you think the work might be, we’ll match you with roofers in Fleetwood who can handle it. Let us know your postcode, a few details and receive free quotes in minutes. 
  <br/><br/> 
 `,
-``
+  ``
 ];
 
 export const BREADCRUM_DATA_ROOFERS_FLEETWOOD = [

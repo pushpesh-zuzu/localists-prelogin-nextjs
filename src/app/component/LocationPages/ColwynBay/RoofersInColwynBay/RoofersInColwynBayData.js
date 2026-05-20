@@ -37,6 +37,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_COLWNYBAY = [
     className: "mb-0",
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
@@ -206,20 +210,20 @@ export const ROOFERS_TABDATA_COLWNYBAY = {
 };
 
 export const NEARBY_PLACES_ROOFER_COLWYN_BAY = [
-    { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
-    { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
-    { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
-    { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
-    { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
-    { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
-    { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
-    { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
-    { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
-    { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
-    { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
-    { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
-    { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
-  ]
+  { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+  { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+  { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+  { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+  { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
+  { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+  { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+  { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
+  { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+  { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
+  { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+  { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
+  { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+]
 export const VETTED_DATA_ROOFERS_COLWNYBAY = [
   `Living on the North Wales coast has its perks. The views are great. The beach is right there. The wind, though? That's a different story, and your roof knows it better than anyone. 
   <br/><br/> 

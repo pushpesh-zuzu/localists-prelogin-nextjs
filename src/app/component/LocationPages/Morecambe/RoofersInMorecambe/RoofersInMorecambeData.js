@@ -34,6 +34,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MORECAMBE = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "p",
     text: "These figures are not firm quotes. They are simply there to help you understand what people in the area typically pay. The only way to get a clear answer for your own home is to have the roof looked at and see what different roofers suggest.",
     notMarginBottom: true,
@@ -237,15 +241,15 @@ export const ROOFERS_TABDATA_MORECAMBE = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_MORECAMBE = [
-    { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
-    { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
-    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-    { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
-    { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
-    { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
-    { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
-    { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
-  ]
+  { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
+  { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+  { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
+  { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
+  { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
+  { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
+  { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
+]
 
 export const VETTED_DATA_ROOFERS_MORECAMBE = [
   `

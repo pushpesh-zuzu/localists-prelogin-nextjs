@@ -73,6 +73,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ROTHERHAM = [
         notMarginBottom: true,
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    },
+    {
         type: "image",
         src: "/nearme/Roofing/roofinstalling.webp",
         alt: "two roofers installing slate tiles onto a brand new roof ",
@@ -230,9 +234,9 @@ export const ROOFERS_TABDATA_ROTHERHAM = {
     findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_ROTHERHAM = [
-        { title: "Roofers Barnsley", url: "barnsley" },
-        { title: "Roofers Doncaster", url: "doncaster" },
-    ]
+    { title: "Roofers Barnsley", url: "barnsley" },
+    { title: "Roofers Doncaster", url: "doncaster" },
+]
 
 export const VETTED_DATA_ROOFERS_ROTHERHAM = [
     `When things go wrong with roofs, it doesn’t take long before it slips into full SOS mode. One minute everything seems fine; the next, you’re scrambling for buckets or searching for a roofer at 12 am.

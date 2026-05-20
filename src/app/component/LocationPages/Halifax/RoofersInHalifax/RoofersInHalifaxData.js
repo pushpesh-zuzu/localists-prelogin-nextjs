@@ -37,11 +37,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_HALIFAX = [
         ]
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[0px] lg:mt-[0px] lg:mb-[0px]",
+    },
+    {
         type: "image",
         src: "/nearme/Roofing/roofinstalling.webp",
         alt: "two roofers installing slate tiles onto a brand new roof",
         marginBottom: true,
-        // marginTop: true
+        marginTop: true
     },
     {
         type: "h2",
@@ -223,15 +227,15 @@ export const ROOFERS_TABDATA_HALIFAX = {
 };
 
 export const NEARBY_PLACES_ROOFER_HALIFAX = [
-        { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
-        { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
-        { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
-        { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
-        { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
-        { title: "Roofers Huddersfield", url: "/en/gb/roofers-near-me/huddersfield" },
-        { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
+    { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+    { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
+    { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
+    { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+    { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
+    { title: "Roofers Huddersfield", url: "/en/gb/roofers-near-me/huddersfield" },
+    { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
 
-    ]
+]
 
 export const VETTED_DATA_ROOFERS_HALIFAX = [
     `If you’ve spent the last few rainstorms getting more and more creative with buckets and rags, it’s probably time to call in the experts.

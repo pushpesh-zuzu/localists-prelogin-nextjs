@@ -37,6 +37,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ALDERLEY_EDGE = [
         noMarginBottom: true,
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    },
+    {
         type: "image",
         src: "/nearme/Roofing/roofinstalling.webp",
         alt: "two roofers installing slate tiles onto a brand new roof",
@@ -203,18 +207,18 @@ export const ROOFERS_TABDATA_ALDERLEY_EDGE = {
     // ],
     findMore: [],
 };
-export const NEARBY_PLACES_ROOFER_ALDERLEY_EDGE =[ { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
-        { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
-        { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
-        { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-        {
-            title: "Roofers Macclesfield",
-            url: "/en/gb/roofers-near-me/macclesfield",
-        },
-        {
-            title: "Roofers Cheadle Hulme",
-            url: "/en/gb/roofers-near-me/cheadle-hulme",
-        },]
+export const NEARBY_PLACES_ROOFER_ALDERLEY_EDGE = [{ title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+{ title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+{ title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+{ title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+{
+    title: "Roofers Macclesfield",
+    url: "/en/gb/roofers-near-me/macclesfield",
+},
+{
+    title: "Roofers Cheadle Hulme",
+    url: "/en/gb/roofers-near-me/cheadle-hulme",
+},]
 export const VETTED_DATA_ROOFERS_ALDERLEY_EDGE = [
     `Have you noticed dripping where it shouldn't be? Roof tile debris in the gutter? Or is this small scale roofing job starting to look like a job that's even too much for the Alderley Edge Wizard? Well no need to fret. We've got you covered. 
   <br/><br/>

@@ -62,6 +62,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RUNCORN = [
     notMarginBottom: true,
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
@@ -253,30 +257,30 @@ export const ROOFERS_TABDATA_RUNCORN = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_RUNCORN = [
-    { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
-    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
-    { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
-    { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
-    { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
-    { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
-    { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
-    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
-    { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
-    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
-    { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },    
-    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
-    {
-      title: "Roofers Macclesfield",
-      url: "/en/gb/roofers-near-me/macclesfield",
-    },
-    {
-      title: "Roofers Ellesmere Port",
-      url: "/en/gb/roofers-near-me/ellesmere-port",
-    },
-  ]
+  { title: "Roofers Crewe", url: "/en/gb/roofers-near-me/crewe" },
+  { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+  { title: "Roofers Cheshire", url: "/en/gb/roofers-near-me/cheshire" },
+  { title: "Roofers Nantwich", url: "/en/gb/roofers-near-me/nantwich" },
+  { title: "Roofers Sandbach", url: "/en/gb/roofers-near-me/sandbach" },
+  { title: "Roofers Congleton", url: "/en/gb/roofers-near-me/congleton" },
+  { title: "Roofers Northwich", url: "/en/gb/roofers-near-me/northwich" },
+  { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+  { title: "Roofers Knutsford", url: "/en/gb/roofers-near-me/knutsford" },
+  { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+  { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+  { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+  {
+    title: "Roofers Macclesfield",
+    url: "/en/gb/roofers-near-me/macclesfield",
+  },
+  {
+    title: "Roofers Ellesmere Port",
+    url: "/en/gb/roofers-near-me/ellesmere-port",
+  },
+]
 export const VETTED_DATA_ROOFERS_RUNCORN = [
   `It’s easy to play the ‘let’s wait and see’ game with a roof problem, until that damp patch starts spreading or a bucket becomes a permanent fixture in the hallway. When you reach that point, the last thing you need is the stress of chasing people for a callback.
   <br/><br/> 

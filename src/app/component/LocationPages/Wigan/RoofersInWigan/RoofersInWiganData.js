@@ -35,6 +35,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WIGAN = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "pbold",
     text: "See other cost averages below:",
     className: "mb-[15px] md:mb-[25px]",
@@ -228,27 +232,27 @@ export const ROOFERS_TABDATA_WIGAN = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_WIGAN = [
-    { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
-    { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
-    { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
-    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
-    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
-    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+  { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+  { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+  { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+  { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+  { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
 
-    {
-      title: "Roofers Cheadle Hulme",
-      url: "/en/gb/roofers-near-me/cheadle-hulme",
-    },
-    {
-      title: "Roofers Ashton-Under-Lyne",
-      url: "/en/gb/roofers-near-me/ashton-under-lyne",
-    },
-  ]
+  {
+    title: "Roofers Cheadle Hulme",
+    url: "/en/gb/roofers-near-me/cheadle-hulme",
+  },
+  {
+    title: "Roofers Ashton-Under-Lyne",
+    url: "/en/gb/roofers-near-me/ashton-under-lyne",
+  },
+]
 
 export const VETTED_DATA_ROOFERS_WIGAN = [
   `We know the weather in Wigan can be less than optimal at the best of times. But if you've add this with a roof that makes suspicious noises during a storm, - thats a recipe for diasaster. Luckily, we have the best roofers in Wigan right here on our database, so you can keep Wigans less than tropical weather at bay.  

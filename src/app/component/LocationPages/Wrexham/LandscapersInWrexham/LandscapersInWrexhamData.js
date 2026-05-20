@@ -39,8 +39,12 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_WREXHAM = [
   {
     type: "li",
     text: "Ongoing maintenance: Some of our Wrexham landscapers offer regular maintenance packages too, so keeping things looking good after the main work is done does not have to be a second project in itself.",
+    className: "mb-0"
   },
-
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
   {
     type: "h2",
     text: "How much does landscaping cost in Wrexham?",
@@ -227,14 +231,14 @@ export const LANDSCAPING_TABDATA_WREXHAM = {
   // ],
   findMore: [],
 };
-export const NEARBY_PLACES_ROOFER_WREXHAM =  [{
-      title: "Landscapers Llandudno",
-      url: "/en/gb/landscape-gardeners-near-me/llandudno",
- }, {
-    title: "Landscapers Prestatyn",
-    url: "/en/gb/landscape-gardeners-near-me/prestatyn",
-  },
-    ]
+export const NEARBY_PLACES_ROOFER_WREXHAM = [{
+  title: "Landscapers Llandudno",
+  url: "/en/gb/landscape-gardeners-near-me/llandudno",
+}, {
+  title: "Landscapers Prestatyn",
+  url: "/en/gb/landscape-gardeners-near-me/prestatyn",
+},
+]
 export const VETTED_DATA_LANDSCAPING_WREXHAM = [
   `With the Clwydian Range and Alyn Waters Country Park on your doorstep, theres plenty of inspiration around you to dust off those green fingers and get to work on the garden of your dreams.  <br/><br/> 
   `,

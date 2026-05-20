@@ -78,7 +78,10 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_WIGAN = [
       },
     ],
   },
-
+  {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
   { type: "h2", text: "What does a landscaper actually do?" },
   {
     type: "p",
@@ -243,24 +246,24 @@ export const LANDSCAPING_TABDATA_WIGAN = {
   // ],
   findMore: [],
 };
-export const NEARBY_PLACES_ROOFER_WIGAN =  [
-    {
-      title: "Landscapers Stockport",
-      url: "/en/gb/landscape-gardeners-near-me/stockport",
-    },
-    // { title: "Landscapers Oldham", url: "" },
-    // { title: "Landscapers Glossop", url: "" },
-    // { title: "Landscapers Tameside", url: "" },
-    // { title: "Landscapers Manchester", url: "" },
-    // { title: "Landscapers Altrincham", url: "" },
-    // { title: "Landscapers Stalybridge", url: "" },
-    // { title: "Landscapers Ashton Under Lyne", url: "" },
-    // { title: "Landscapers Cheadle Hulme", url: "" },
-    // { title: "Landscapers St Helens", url: "" },
-    // { title: "Landscapers Chorley", url: "" },
-    // { title: "Landscapers Ormskirk", url: "" },
-    // { title: "Landscapers Warrington", url: "" },
-  ]
+export const NEARBY_PLACES_ROOFER_WIGAN = [
+  {
+    title: "Landscapers Stockport",
+    url: "/en/gb/landscape-gardeners-near-me/stockport",
+  },
+  // { title: "Landscapers Oldham", url: "" },
+  // { title: "Landscapers Glossop", url: "" },
+  // { title: "Landscapers Tameside", url: "" },
+  // { title: "Landscapers Manchester", url: "" },
+  // { title: "Landscapers Altrincham", url: "" },
+  // { title: "Landscapers Stalybridge", url: "" },
+  // { title: "Landscapers Ashton Under Lyne", url: "" },
+  // { title: "Landscapers Cheadle Hulme", url: "" },
+  // { title: "Landscapers St Helens", url: "" },
+  // { title: "Landscapers Chorley", url: "" },
+  // { title: "Landscapers Ormskirk", url: "" },
+  // { title: "Landscapers Warrington", url: "" },
+]
 export const VETTED_DATA_LANDSCAPING_WIGAN = [
   `Ever gone for a walk at Mesnes Park or Haigh Woodland Park, looked at the lush greenery and thought, “Hmm… my garden could really do with some TLC”? Well, here’s the thing - your garden does have potential. It might not be showing it right now, but you just need the right touch from the right professional to bring it out.  <br/><br/> 
   `,

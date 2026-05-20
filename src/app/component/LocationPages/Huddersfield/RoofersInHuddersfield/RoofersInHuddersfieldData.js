@@ -81,6 +81,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_HUDDERSFIELD = [
     notMarginBottom: true,
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
@@ -264,18 +268,18 @@ export const ROOFERS_TABDATA_HUDDERSFIELD = {
   // ],
   findMore: [],
 };
-export const  NEARBY_PLACES_ROOFER_HUDDERSFIELD =  [
-    { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
-    { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
-    { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
-    { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
-    { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
-    { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
-    { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
-    { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
+export const NEARBY_PLACES_ROOFER_HUDDERSFIELD = [
+  { title: "Roofers Leeds", url: "/en/gb/roofers-near-me/leeds" },
+  { title: "Roofers Halifax", url: "/en/gb/roofers-near-me/halifax" },
+  { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  { title: "Roofers Bradford", url: "/en/gb/roofers-near-me/bradford" },
+  { title: "Roofers Keighley", url: "/en/gb/roofers-near-me/keighley" },
+  { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+  { title: "Roofers Brighouse", url: "/en/gb/roofers-near-me/brighouse" },
+  { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
 
-  ]
-  
+]
+
 export const VETTED_DATA_ROOFERS_HUDDERSFIELD = [
   `Roofs have a way of picking the worst possible moment to misbehave. One minute everything’s fine; the next, there’s a mysterious drip, a tile waving goodbye, or water making itself far too comfortable inside your home.
   <br/><br/> 

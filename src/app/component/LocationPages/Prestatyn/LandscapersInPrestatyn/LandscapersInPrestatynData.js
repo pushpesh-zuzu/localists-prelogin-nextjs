@@ -16,8 +16,13 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_PRESTATYN = [
     text: "And that’s what we bring to you. Landscapers who know the area better than the mailman. They know plants that can thrive on local soil, not just the ones that will look nice in the garden. Plus, our local Prestatyn-based landscapers have all gone through a rigorous vetting process - so you can trust whoever you pick to get the job done. Compare several free quotes from landscapers in your area and read real reviews that we’ve pulled together from Facebook, Google and Trustpilot. Get started now.",
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "h2",
     text: "How much will a landscaping job cost in Prestatyn?",
+    className: "mt-6 md:mt-9 lg:mt-[70px]",
   },
   {
     type: "p",
@@ -195,7 +200,7 @@ export const LANDSCAPING_TABDATA_PRESTATYN = {
 };
 
 export const NEARBY_PLACES_ROOFER_PRESTATYN = [
-   {
+  {
     title: "Landscapers Wrexham",
     url: "/en/gb/landscape-gardeners-near-me/wrexham",
   },

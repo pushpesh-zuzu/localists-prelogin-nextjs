@@ -38,6 +38,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WARRINGTON = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "pbold",
     text: "Flat roof repairs",
   },

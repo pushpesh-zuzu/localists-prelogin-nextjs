@@ -69,6 +69,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BARNSLEY = [
     notMarginBottom: true,
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "h2",
     text: "What affects the cost of roofing in Barnsley?",
     className: "mt-6 md:mt-9 lg:mt-[70px]",
@@ -204,7 +208,7 @@ export const ROOFERS_ADVICEINSIGHT_BARNSLEY = [
   },
 ];
 export const ROOFERS_TABDATA_BARNSLEY = {
- popular: [
+  popular: [
     {
       title: "Landscapers Near Me",
       url: "/en/gb/landscape-gardeners-near-me",
@@ -256,12 +260,12 @@ export const ROOFERS_TABDATA_BARNSLEY = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_BARNSLEY = [
-    { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
-    { title: "Roofers Rotherham", url: "/en/gb/roofers-near-me/rotherham" },
-    { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
-    { title: "Roofers CastlefordBarnsley", url: "/en/gb/roofers-near-me/castleford" },
+  { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
+  { title: "Roofers Rotherham", url: "/en/gb/roofers-near-me/rotherham" },
+  { title: "Roofers Wakefield", url: "/en/gb/roofers-near-me/wakefield" },
+  { title: "Roofers CastlefordBarnsley", url: "/en/gb/roofers-near-me/castleford" },
 
-  ]
+]
 export const VETTED_DATA_ROOFERS_BARNSLEY = [
   `Roof issues have a habit of appearing like that one friend who only calls when something’s gone wrong. No warning, no timing, just suddenly there. When that happens, you need a roofer who’s reliable, efficient, and won’t take advantage of the situation.
   <br/><br/> 
@@ -310,9 +314,9 @@ export const ROOFERS_FEEDBACK_BARNSLEY = [
     name: "Gary T.",
   },
   {
-      id: 4,
-      text: "Was struggling to get a roofer to fix an urgent issue on one of my properties in Barugh Green, but had Si from Localists come out same day and sort the issue for my tenant. I'll be using him again for sure. Thanks again mate!",
-      name: "Rachel S.",
+    id: 4,
+    text: "Was struggling to get a roofer to fix an urgent issue on one of my properties in Barugh Green, but had Si from Localists come out same day and sort the issue for my tenant. I'll be using him again for sure. Thanks again mate!",
+    name: "Rachel S.",
   },
 ];
 

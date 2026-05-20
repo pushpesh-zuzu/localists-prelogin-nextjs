@@ -20,47 +20,46 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_NORTHWICH = [
     text: "Here’s what you get when you use Localists:",
   },
   {
-  type: "li",
-  text: "<p style='display:flex; gap:8px; align-items:flex-start;'><span>-</span><span>We match you with local experts who understand Northwich and the surrounding areas (everything from climate to soil type, kinds of plants that survive best in the area, etc.)</span></p>",
-  listNone: true,
-  className: "pl-2.5 md:pl-4 mb-2.5 md:mb-[15px]",
-},
-{
-  type: "li",
-  text: "<p style='display:flex; gap:8px; align-items:flex-start;'><span>-</span><span>Every landscaper on our platform has gone through a rigorous vetting process, so you know they’re up to the job</span></p>",
-  listNone: true,
-  className: "pl-2.5 md:pl-4 mb-2.5 md:mb-[15px]",
-},
-{
-  type: "li",
-  text: "<p style='display:flex; gap:8px; align-items:flex-start;'><span>-</span><span>You can receive up to 5 free quotes, giving you real options to compare</span></p>",
-  listNone: true,
-  className: "pl-2.5 md:pl-4 mb-2.5 md:mb-[15px]",
-},
-{
-  type: "li",
-  text: "<p style='display:flex; gap:8px; align-items:flex-start;'><span>-</span><span>Each quote is tailored to your job, no generic pricing</span></p>",
-  listNone: true,
-  className: "pl-2.5 md:pl-4 mb-2.5 md:mb-[15px]",
-},
-{
-  type: "li",
-  text: "<p style='display:flex; gap:8px; align-items:flex-start;'><span>-</span><span>There’s no pressure to hire, there’s no chasing - you decide when and who to hire</span></p>",
-  listNone: true,
-  className: "pl-2.5 md:pl-4 mb-2.5 md:mb-[15px]",
-},
-{
-  type: "li",
-  text: "<p style='display:flex; gap:8px; align-items:flex-start;'><span>-</span><span>Reviews are pulled in from Google, Yelp, Trustpilot, and Facebook, so you can see real feedback from real people</span></p>",
-  listNone: true,
-  className: "pl-2.5 md:pl-4 mb-0",
-},
+    type: "li",
+    text: "<p style='display:flex; gap:8px; align-items:flex-start;'><span>-</span><span>We match you with local experts who understand Northwich and the surrounding areas (everything from climate to soil type, kinds of plants that survive best in the area, etc.)</span></p>",
+    listNone: true,
+    className: "pl-2.5 md:pl-4 mb-2.5 md:mb-[15px]",
+  },
+  {
+    type: "li",
+    text: "<p style='display:flex; gap:8px; align-items:flex-start;'><span>-</span><span>Every landscaper on our platform has gone through a rigorous vetting process, so you know they’re up to the job</span></p>",
+    listNone: true,
+    className: "pl-2.5 md:pl-4 mb-2.5 md:mb-[15px]",
+  },
+  {
+    type: "li",
+    text: "<p style='display:flex; gap:8px; align-items:flex-start;'><span>-</span><span>You can receive up to 5 free quotes, giving you real options to compare</span></p>",
+    listNone: true,
+    className: "pl-2.5 md:pl-4 mb-2.5 md:mb-[15px]",
+  },
+  {
+    type: "li",
+    text: "<p style='display:flex; gap:8px; align-items:flex-start;'><span>-</span><span>Each quote is tailored to your job, no generic pricing</span></p>",
+    listNone: true,
+    className: "pl-2.5 md:pl-4 mb-2.5 md:mb-[15px]",
+  },
+  {
+    type: "li",
+    text: "<p style='display:flex; gap:8px; align-items:flex-start;'><span>-</span><span>There’s no pressure to hire, there’s no chasing - you decide when and who to hire</span></p>",
+    listNone: true,
+    className: "pl-2.5 md:pl-4 mb-2.5 md:mb-[15px]",
+  },
+  {
+    type: "li",
+    text: "<p style='display:flex; gap:8px; align-items:flex-start;'><span>-</span><span>Reviews are pulled in from Google, Yelp, Trustpilot, and Facebook, so you can see real feedback from real people</span></p>",
+    listNone: true,
+    className: "pl-2.5 md:pl-4 mb-0",
+  },
 
   {
     type: "h2",
     text: "How much will a landscaping job cost me in Northwich ?",
     className: "mt-6 md:mt-9 lg:mt-[70px]",
-
   },
   {
     type: "p",
@@ -99,6 +98,10 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_NORTHWICH = [
         price: "£2,140",
       },
     ],
+  },
+  {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
   },
   {
     type: "h2",

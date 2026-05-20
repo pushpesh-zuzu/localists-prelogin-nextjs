@@ -43,6 +43,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_KENDAL = [
     notMarginBottom: true,
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof",
@@ -233,14 +237,14 @@ export const ROOFERS_TABDATA_KENDAL = {
   // ],
   findMore: [],
 };
-export const NEARBY_PLACES_ROOFER_KENDAL =[
-    { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
-    { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
-    { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
-    { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
-    { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
+export const NEARBY_PLACES_ROOFER_KENDAL = [
+  { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
+  { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
+  { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
+  { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
 
-  ]
+]
 
 export const VETTED_DATA_ROOFERS_KENDAL = [
   `Are your roof tiles starting to grow wings every time it gets windy? If you’re noticing loose edges, rattling, or an odd tile out of place, it’s usually a sign your roof needs attention.

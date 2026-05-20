@@ -78,7 +78,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BARNSLEY = [
       },
     ],
   },
-
+  {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
   {
     type: "p",
     text: "If you already know what needs doing, pop in your postcode, a few details, and you’ll receive free, no-obligation quotes from specialist roofers in Oldham.",
@@ -271,22 +274,22 @@ export const ROOFERS_TABDATA_BARNSLEY = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_OLDHAM = [
-    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
-    { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
-    { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
-    {
-      title: "Roofers Cheadle Hulme",
-      url: "/en/gb/roofers-near-me/cheadle-hulme",
-    },
-    {
-      title: "Roofers Ashton-Under-Lyne",
-      url: "/en/gb/roofers-near-me/ashton-under-lyne",
-    },
-  ]
+  { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+  { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+  {
+    title: "Roofers Cheadle Hulme",
+    url: "/en/gb/roofers-near-me/cheadle-hulme",
+  },
+  {
+    title: "Roofers Ashton-Under-Lyne",
+    url: "/en/gb/roofers-near-me/ashton-under-lyne",
+  },
+]
 export const VETTED_DATA_ROOFERS_BARNSLEY = [
   `Oldham's weather isn’t exactly gentle on roofs. Plenty of rain, strong winds attempting to remodel your roof, cold winters, it all adds up. One loose tile might not look like much, but leave it, and you could end up with a leak.
   <br/><br/> 

@@ -34,6 +34,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WHITEHAVEN = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "p",
     text: "These numbers aren’t guarantees, just a rough idea, so you’re not going in blind. The only way to know what your roof will actually cost is to have someone take a proper look and price it based on your home or property's needs.",
     notMarginBottom: true,
@@ -222,11 +226,11 @@ export const ROOFERS_TABDATA_WHITEHAVEN = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_WHITEHAVEN = [
-    { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
-    { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
-    { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
-    { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
-  ]
+  { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
+  { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
+  { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
+  { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
+]
 
 export const VETTED_DATA_ROOFERS_WHITEHAVEN = [
   `Has mopping become your full-time job every time it rains? Or are you just sick of constantly moving buckets around to catch the water before it hits your carpets?

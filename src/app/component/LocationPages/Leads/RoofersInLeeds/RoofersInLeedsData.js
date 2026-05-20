@@ -34,6 +34,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LEEDS = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "p",
     text: "<Strong>Flat roof installation -</Strong> installing a new flat roof? Expect to pay anywhere from £1,200  to £2,500. Ideal for garages, extensions, or smaller modern homes.",
   },

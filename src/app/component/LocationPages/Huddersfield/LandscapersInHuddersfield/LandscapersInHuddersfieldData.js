@@ -74,6 +74,10 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_HUDDERSFIELD = [
       },
     ],
   },
+  {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
   { type: "h2", text: "Popular jobs landscapers get called out for" },
   {
     type: "p",
@@ -262,23 +266,23 @@ export const LANDSCAPING_TABDATA_HUDDERSFIELD = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_HUDDERSFIELD = [
-    // { title: "Landscapers Leeds", url: "" },
-    // { title: "Landscapers Halifax", url: "" },
-    // { title: "Landscapers Keighley", url: "" },
-    {
-      title: "Landscapers Wakefield",
-      url: "/en/gb/landscape-gardeners-near-me/wakefield",
-    },
-    //  {
-    //   title: "Landscapers Barnsley",
-    //   url: "/en/gb/landscapers-near-me/barnsley",
-    // },
-    // {
-    //   title: "Landscapers Bradford",
-    //   url: "/en/gb/landscapers-near-me/bradford",
-    // },
-    // { title: "Landscapers Castleford", url: "" },
-  ]
+  // { title: "Landscapers Leeds", url: "" },
+  // { title: "Landscapers Halifax", url: "" },
+  // { title: "Landscapers Keighley", url: "" },
+  {
+    title: "Landscapers Wakefield",
+    url: "/en/gb/landscape-gardeners-near-me/wakefield",
+  },
+  //  {
+  //   title: "Landscapers Barnsley",
+  //   url: "/en/gb/landscapers-near-me/barnsley",
+  // },
+  // {
+  //   title: "Landscapers Bradford",
+  //   url: "/en/gb/landscapers-near-me/bradford",
+  // },
+  // { title: "Landscapers Castleford", url: "" },
+]
 export const VETTED_DATA_LANDSCAPING_HUDDERSFIELD = [
   `Huddersfield isn’t just like any regular town in the North. Honestly, it's a proper hidden gem when it comes to nature. With the Pennines on one side, the Colne and Holme valleys threading through the town. Everywhere you look, you can see classic stone-built houses literally climbing up the hillsides. It's the kind of place where outdoors is part of your everyday life really, yet despite all this green inspiration, for most homes, the garden is that one thing that never quite gets sorted.
   <br/><br/> 

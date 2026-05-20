@@ -34,10 +34,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_RHYL = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[0px] lg:mt-[0px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof",
     marginBottom: true,
+    marginTop: true,
   },
   {
     type: "h2",
@@ -182,20 +187,20 @@ export const ROOFERS_TABDATA_RHYL = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_RHYL = [
-    { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
-    { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
-    { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
-    { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
-    { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
-    { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
-    { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
-    { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
-    { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
-    { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
-    { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
-    { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
-    { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
-  ]
+  { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+  { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+  { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+  { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
+  { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+  { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+  { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+  { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
+  { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
+  { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+  { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
+  { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
+  { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+]
 export const VETTED_DATA_ROOFERS_RHYL = [
   `We all have that one neighbour who thinks a YouTube video and a ladder makes them an expert, only for them to get on your roof and leave you with more problems than you started with.  When it comes to your home, you need a professional who knows what they’re doing.
   <br/><br/> 

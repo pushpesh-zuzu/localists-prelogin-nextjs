@@ -45,6 +45,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DRIFFIELD = [
         notMarginBottom: true,
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    },
+    {
         type: "image",
         src: "/nearme/Roofing/roofinstalling.webp",
         alt: "two roofers installing slate tiles onto a brand new roof ",
@@ -202,10 +206,10 @@ export const ROOFERS_TABDATA_DRIFFIELD = {
     // ],
     findMore: [],
 };
-export const NEARBY_PLACES_ROOFER_DRIFFIELD =  [
-        { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
-        { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
-    ]
+export const NEARBY_PLACES_ROOFER_DRIFFIELD = [
+    { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
+    { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
+]
 export const VETTED_DATA_ROOFERS_DRIFFIELD = [
     `Most of us wait for the weather to force our hand before we finally deal with the roof. If the last rainstorm was the final straw, you’re likely looking for a specialist who can come in and fix the damage before things get any worse. We can help.
   <br/><br/> 

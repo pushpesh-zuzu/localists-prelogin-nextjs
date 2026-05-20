@@ -33,10 +33,15 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WORKINGTON = [
         ]
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[0px] lg:mt-[0px] lg:mb-[0px]",
+    },
+    {
         type: "image",
         src: "/nearme/Roofing/roofinstalling.webp",
         alt: "two roofers installing slate tiles onto a brand new roof ",
         marginBottom: true,
+        marginTop: true,
     },
     {
         type: "h2",
@@ -202,11 +207,11 @@ export const ROOFERS_TABDATA_WORKINGTON = {
     findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_WORKINGTON = [
-        { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
-        { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
-        { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
-        { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
-    ]
+    { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
+    { title: "Roofers Penrith", url: "/en/gb/roofers-near-me/penrith" },
+    { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
+    { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
+]
 
 export const VETTED_DATA_ROOFERS_WORKINGTON = [
     `Maybe it’s a drip you hear late at night, or you spot daylight in the loft where it shouldn’t be. When you start looking for Roofers in Workington, you need someone reliable and trustworthy.

@@ -54,6 +54,10 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         notMarginBottom: true,
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    },
+    {
         type: "image",
         src: "/nearme/wooden-fence.webp",
         alt: "A brand new wooden fence with ivy",

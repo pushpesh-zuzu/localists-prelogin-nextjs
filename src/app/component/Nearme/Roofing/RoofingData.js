@@ -51,7 +51,11 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     type: "uili",
     heading: "Proof of qualifications:\u00A0",
     text: "Always ask for certificates or proof of training - they should be able to show they know what they’re doing.",
-    // noMarginBottom: true,
+    noMarginBottom: true,
+  },
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
   },
   {
     type: "image",

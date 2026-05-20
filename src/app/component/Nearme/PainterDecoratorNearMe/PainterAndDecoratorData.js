@@ -115,6 +115,10 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         notMarginBottom: true
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    },
+    {
         type: "image",
         src: "/nearme/painter/paintroller.webp",
         alt: "Paint roller, rolling on bright orange paint on the wall",
@@ -248,7 +252,7 @@ export const PAINTER_DECORATOR_TABDATA = {
         "Painters and Decorators North Yorkshire",
     ],
     popular: [
-         {
+        {
             title: "Landscapers Near Me",
             url: "/en/gb/landscape-gardeners-near-me",
         },
@@ -257,10 +261,10 @@ export const PAINTER_DECORATOR_TABDATA = {
             url: "",
         },
         {
-             title: "Roofers Near Me ",
-             url: "/en/gb/patio-layers-near-me",
-         },
-          {
+            title: "Roofers Near Me ",
+            url: "/en/gb/patio-layers-near-me",
+        },
+        {
             title: "Gutter Cleaners Near Me",
             url: "/en/gb/gutter-cleaning-near-me",
         },
@@ -268,12 +272,12 @@ export const PAINTER_DECORATOR_TABDATA = {
             title: "Patio Installers Near Me ",
             url: "/en/gb/patio-layers-near-me",
         },
-      
-         {
+
+        {
             title: "Architects Near Me",
             url: "/en/gb/architects-near-me",
         },
-        
+
         {
             title: "Tree Surgeons Near Me ",
             url: "/en/gb/tree-surgeon-near-me",
@@ -336,7 +340,7 @@ export const PAINTER_DECORATOR_FEEDBACK = [
         text: "Localists made finding a reliable painter near me so simple. No chasing quotes, no confusing prices - just professional decorators who did exactly what they promised.",
         name: "Amira T.",
     },
-     {
+    {
         id: 4,
         text: "I needed some external painting done on my garage. Already had some quotes but went on Localists and got a far better price. Very pleased with the results!",
         name: "Jane S.",

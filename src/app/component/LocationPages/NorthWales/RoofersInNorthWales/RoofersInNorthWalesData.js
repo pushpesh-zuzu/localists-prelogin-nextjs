@@ -48,6 +48,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_NORTH_WALES = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "h3",
     text: "What should a roofing quote include?",
   },
@@ -239,20 +243,20 @@ export const ROOFERS_TABDATA_NORTH_WALES = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_NORTH_WALES = [
-    { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
-    { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
-    { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
-    { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
-    { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
-    { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
-    { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
-    { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
-    { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
-    { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
-    { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
-    { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
-    { title: "Roofers Colwyn Bay", url: "/en/gb/roofers-near-me/colwyn-bay" },
-  ]
+  { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+  { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+  { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+  { title: "Roofers Bangor", url: "/en/gb/roofers-near-me/bangor" },
+  { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
+  { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+  { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+  { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
+  { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+  { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
+  { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+  { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
+  { title: "Roofers Colwyn Bay", url: "/en/gb/roofers-near-me/colwyn-bay" },
+]
 export const VETTED_DATA_ROOFERS_NORTH_WALES = [
   `Is your roof trying to retire without telling you? If your old Welsh slates have finally had enough or your tiles are starting to ‘drift’ out of place, you don't want to wait for the first indoor puddle to take action. 
   <br/><br/> 

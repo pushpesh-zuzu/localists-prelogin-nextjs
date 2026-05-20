@@ -25,6 +25,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ASHTON_UNDER_LYNE = [
     className: "mb-0",
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
@@ -188,19 +192,19 @@ export const ROOFERS_TABDATA_ASHTON_UNDER_LYNE = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_ASHTON_UNDER_LYNE = [
-    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
-    { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
-    { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
-    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
-    {
-      title: "Roofers Cheadle Hulme",
-      url: "/en/gb/roofers-near-me/cheadle-hulme",
-    },
-  ]
+  { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+  { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+  { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+  {
+    title: "Roofers Cheadle Hulme",
+    url: "/en/gb/roofers-near-me/cheadle-hulme",
+  },
+]
 export const VETTED_DATA_ROOFERS_ASHTON_UNDER_LYNE = [
   `Roof trouble, but not sure what you actually need? Whether it’s those ‘new’ noises your roof is making or a ceiling that’s starting to look like a watercolour painting - don’t panic. We’ll get you the right help.
   <br/><br/> 

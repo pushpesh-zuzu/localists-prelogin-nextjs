@@ -44,6 +44,10 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         className: "mb-0",
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    },
+    {
         type: "image",
         src: "/nearme/gutter-washer.webp",
         alt: "professional gutter cleaning using a high-pressure washer to dislodge clogs",
@@ -245,20 +249,20 @@ export const GUTTER_CLEANING_TABDATA = {
             url: "",
         },
         {
-             title: "Roofers Near Me ",
-             url: "/en/gb/patio-layers-near-me",
-         },
-         
-         {
-             title: "Patio Installers Near Me ",
+            title: "Roofers Near Me ",
             url: "/en/gb/patio-layers-near-me",
         },
-      
-         {
+
+        {
+            title: "Patio Installers Near Me ",
+            url: "/en/gb/patio-layers-near-me",
+        },
+
+        {
             title: "Architects Near Me",
             url: "/en/gb/architects-near-me",
         },
-        
+
         {
             title: "Tree Surgeons Near Me ",
             url: "/en/gb/tree-surgeon-near-me",
@@ -268,9 +272,9 @@ export const GUTTER_CLEANING_TABDATA = {
             url: "/en/gb/driveway-installers-near-me",
         },
         {
-       title: "Painters and Decorators Near Me ",
-       url: "/en/gb/painter-and-decorator-near-me",
-   },
+            title: "Painters and Decorators Near Me ",
+            url: "/en/gb/painter-and-decorator-near-me",
+        },
         {
             title: "Artificial Grass Installers Near Me",
             url: "/en/gb/artificial-grass-installers-near-me",

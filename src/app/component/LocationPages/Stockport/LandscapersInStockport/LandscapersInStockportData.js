@@ -75,6 +75,10 @@ export const QUESTION_AND_ABOUT_SERVICE_LANDSCAPING_STOCKPORT = [
         ],
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+    },
+    {
         type: "h2",
         text: "What’s usually included in a quote?",
     },
@@ -243,26 +247,26 @@ export const LANDSCAPING_TABDATA_STOCKPORT = {
     findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_STOCKPORT = [
-        // { title: "Landscapers Oldham", url: "" },
-        // { title: "Landscapers Glossop", url: "" },
-        // { title: "Landscapers Tameside", url: "" },
-        // { title: "Landscapers Knutsford", url: "" },
-        // { title: "Landscapers Manchester", url: "" },
-        // { title: "Landscapers Altrincham", url: "" },
-        // { title: "Landscapers Stalybridge", url: "" },
-        // {
-        //     title: "Landscapers Macclesfield",
-        //     url: "",
-        // },
-        // { title: "Landscapers Alderley Edge", url: "" },
-        // { title: "Landscapers Cheadle Hulme", url: "" },
-        // {
-        //     title: "Landscapers Ashton Under Lyne", url: "",
-        // },
-        {
-            title: "Landscapers Wigan", url: "/en/gb/landscape-gardeners-near-me/wigan",
-        },
-    ]
+    // { title: "Landscapers Oldham", url: "" },
+    // { title: "Landscapers Glossop", url: "" },
+    // { title: "Landscapers Tameside", url: "" },
+    // { title: "Landscapers Knutsford", url: "" },
+    // { title: "Landscapers Manchester", url: "" },
+    // { title: "Landscapers Altrincham", url: "" },
+    // { title: "Landscapers Stalybridge", url: "" },
+    // {
+    //     title: "Landscapers Macclesfield",
+    //     url: "",
+    // },
+    // { title: "Landscapers Alderley Edge", url: "" },
+    // { title: "Landscapers Cheadle Hulme", url: "" },
+    // {
+    //     title: "Landscapers Ashton Under Lyne", url: "",
+    // },
+    {
+        title: "Landscapers Wigan", url: "/en/gb/landscape-gardeners-near-me/wigan",
+    },
+]
 export const VETTED_DATA_LANDSCAPING_STOCKPORT = [
     `If your garden is currently doing its own thing and looks like nobody has touched it since the Hat Works was an actual factory in Stockport or since the Strawberry Gardens were in bloom, we’ve got you covered.
   <br/><br/> 
@@ -283,7 +287,7 @@ export const BREADCRUM_DATA_LANDSCAPING_STOCKPORT = [
 ];
 
 export const POPULAR_SERVICES_LANDSCAPING_STOCKPORT = [
-     "Sleepers",
+    "Sleepers",
     "Garden brickwork",
     "Paving",
     "Shed building",

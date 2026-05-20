@@ -29,6 +29,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ORMSKIRK = [
     notMarginBottom: true,
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
@@ -196,18 +200,18 @@ export const ROOFERS_TABDATA_ORMSKIRK = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_ORMSKIRK = [
-    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
-    { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
-    { title: "Roofers Crosby", url: "/en/gb/roofers-near-me/crosby" },
-    { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
-    { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
-    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
-    { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
-    { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
-    { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
-    { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
-    { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
-  ]
+  { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
+  { title: "Roofers Crosby", url: "/en/gb/roofers-near-me/crosby" },
+  { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
+  { title: "Roofers Chorley", url: "/en/gb/roofers-near-me/chorley" },
+  { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+  { title: "Roofers Liverpool", url: "/en/gb/roofers-near-me/liverpool" },
+  { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
+  { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
+  { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
+]
 export const VETTED_DATA_ROOFERS_ORMSKIRK = [
   `If you’ve spent the last rainstorm getting an unwanted workout with buckets and rags, you’ve probably reached the point where that roof repair just can't be ignored any longer. And we know the best roofers near you in Ormskirk that can help.
   <br/><br/> 

@@ -42,6 +42,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_LIVERPOOL = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "p",
     text: "As you can see, there’s a big difference between fixing a slipped tile and installing a brand-new roof.",
   },
@@ -333,21 +337,21 @@ export const ROOFERS_TABDATA_LIVERPOOL = {
   // ],
   findMore: [],
 };
-export const NEARBY_PLACES_ROOFER_LIVERPOOL =  [
-    { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
-    { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
-    { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
-    { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
-    { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
-    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-    { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
+export const NEARBY_PLACES_ROOFER_LIVERPOOL = [
+  { title: "Roofers Formby", url: "/en/gb/roofers-near-me/formby" },
+  { title: "Roofers St Helens", url: "/en/gb/roofers-near-me/st-helens" },
+  { title: "Roofers Bebington", url: "/en/gb/roofers-near-me/bebington" },
+  { title: "Roofers Birkenhead", url: "/en/gb/roofers-near-me/birkenhead" },
+  { title: "Roofers Warrington", url: "/en/gb/roofers-near-me/warrington" },
+  { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  { title: "Roofers Chester", url: "/en/gb/roofers-near-me/chester" },
 
-    { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
-    {
-      title: "Roofers Ellesmere Port",
-      url: "/en/gb/roofers-near-me/ellesmere-port",
-    },
-  ]
+  { title: "Roofers Widnes", url: "/en/gb/roofers-near-me/widnes" },
+  {
+    title: "Roofers Ellesmere Port",
+    url: "/en/gb/roofers-near-me/ellesmere-port",
+  },
+]
 export const VETTED_DATA_ROOFERS_LIVERPOOL = [
   `You only really notice your roof when something goes wrong. And suddenly, finding reliable roofers in Liverpool shoots straight to the top of your to-do list. But who do you call? How much should it cost? How do you know you’re choosing someone trustworthy and not just a bloke with a ladder and a van? Take a breath, you’re in the right place.
   <br/><br/> 

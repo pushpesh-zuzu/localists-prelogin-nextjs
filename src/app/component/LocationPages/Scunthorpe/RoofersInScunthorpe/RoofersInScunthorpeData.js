@@ -48,6 +48,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_SCUNTHORPE = [
         notMarginBottom: true,
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    },
+    {
         type: "image",
         src: "/nearme/Roofing/roofinstalling.webp",
         alt: "two roofers installing slate tiles onto a brand new roof",
@@ -221,11 +225,11 @@ export const ROOFERS_TABDATA_SCUNTHORPE = {
     findMore: [],
 };
 
-export const NEARBY_PLACES_ROOFER_SCUNTHORPE =[
-        { title: "Roofers Grantham", url: "/en/gb/roofers-near-me/grantham" },
-        { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
+export const NEARBY_PLACES_ROOFER_SCUNTHORPE = [
+    { title: "Roofers Grantham", url: "/en/gb/roofers-near-me/grantham" },
+    { title: "Roofers Doncaster", url: "/en/gb/roofers-near-me/doncaster" },
 
-    ]
+]
 export const VETTED_DATA_ROOFERS_SCUNTHORPE = [
     `When you’re spending more time mopping up indoor puddles any time it rains, your roof is definitely trying to tell you something. And it’s best to look at it as soon as possible.
   <br/><br/> 

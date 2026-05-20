@@ -34,6 +34,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHESTER = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "p",
     text: "Good to know: Final prices depend on factors like roof size, materials, access, and whether extras such as scaffolding or insulation are needed. Always ask for a detailed quote before booking so there are no surprises.",
   },

@@ -17,7 +17,7 @@ export const QUESTION_AND_ABOUT_SERVICE_ARCHITECTS = [
     type: "p",
     text: "Having a professional to guide you through each step (design, planning, tendering, and construction) is essential. A local architect ensures your project stays compliant with local council rules, planning requirements, and building regulations, saving you time, stress, and preventing any costly mistakes.",
     className: "mb-6 md:mb-9 lg:mb-[70px]",
-    notMarginBottom:true
+    notMarginBottom: true
   },
   {
     type: "h2",
@@ -55,6 +55,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ARCHITECTS = [
     type: "p",
     text: "Once you have a clear vision, it’s time to find your professional match. With Localists, you can easily compare architects in your local area, who specialise in projects similar to yours. When reviewing potential architects we send to you, ask to see examples of their past remodelling work - it’s the best way to understand their creativity, experience, and approach to challenges.",
     notMarginBottom: true,
+  },
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
   },
   {
     type: "image",

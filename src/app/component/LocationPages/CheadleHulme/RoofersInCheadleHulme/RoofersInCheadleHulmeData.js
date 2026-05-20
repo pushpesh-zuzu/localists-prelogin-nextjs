@@ -33,6 +33,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHEADLE_HULME = [
     className: "mb-0",
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
@@ -202,20 +206,20 @@ export const ROOFERS_TABDATA_CHEADLE_HULME = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_CHEADLE_HULME = [
-    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
-    { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
-    { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
-    { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
-    { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
-    { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
-    { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
-    { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
-    { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
-    {
-      title: "Roofers Ashton-Under-Lyne",
-      url: "/en/gb/roofers-near-me/ashton-under-lyne",
-    },
-  ]
+  { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  { title: "Roofers Oldham", url: "/en/gb/roofers-near-me/oldham" },
+  { title: "Roofers Glossop", url: "/en/gb/roofers-near-me/glossop" },
+  { title: "Roofers Tameside", url: "/en/gb/roofers-near-me/tameside" },
+  { title: "Roofers Stockport", url: "/en/gb/roofers-near-me/stockport" },
+  { title: "Roofers Altrincham", url: "/en/gb/roofers-near-me/altrincham" },
+  { title: "Roofers Manchester", url: "/en/gb/roofers-near-me/manchester" },
+  { title: "Roofers Stalybridge", url: "/en/gb/roofers-near-me/stalybridge" },
+  { title: "Roofers Alderley Edge", url: "/en/gb/roofers-near-me/alderley-edge" },
+  {
+    title: "Roofers Ashton-Under-Lyne",
+    url: "/en/gb/roofers-near-me/ashton-under-lyne",
+  },
+]
 export const VETTED_DATA_ROOFERS_CHEADLE_HULME = [
   `We spend half our lives complaining about the British weather, yet we always forget the one thing that takes the biggest beating - our roofs. Yeah we’re all guilty of that.
   <br/><br/> 

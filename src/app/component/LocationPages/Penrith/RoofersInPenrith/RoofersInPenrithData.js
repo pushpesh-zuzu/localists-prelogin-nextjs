@@ -36,6 +36,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_PENRITH = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "p",
     text: "These figures aren’t fixed prices; they’re there to help you understand what’s normal in the area. The only way to know where your own roof falls within that range is to have it looked at properly and compare quotes from local roofers who can assess the situation firsthand.",
     notMarginBottom: true,
@@ -196,11 +200,11 @@ export const ROOFERS_TABDATA_PENRITH = {
 };
 
 export const NEARBY_PLACES_ROOFER_PENRITH = [
-    { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
-    { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
-    { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
-    { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
-  ]
+  { title: "Roofers Kendal", url: "/en/gb/roofers-near-me/kendal" },
+  { title: "Roofers Ulverston", url: "/en/gb/roofers-near-me/ulverston" },
+  { title: "Roofers Whitehaven", url: "/en/gb/roofers-near-me/whitehaven" },
+  { title: "Roofers Workington", url: "/en/gb/roofers-near-me/workington" },
+]
 export const VETTED_DATA_ROOFERS_PENRITH = [
   `If it feels like it’s raining inside your home as much as it is outside, don't just reach for another bucket - call in the experts.
   <br/><br/> 

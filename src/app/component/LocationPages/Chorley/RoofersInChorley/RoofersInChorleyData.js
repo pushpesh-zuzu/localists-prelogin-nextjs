@@ -25,7 +25,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_CHORLEY = [
     text: "It’s not about chasing the cheapest quote. It’s about understanding what feels reasonable before you let anyone start pulling tiles off your roof.",
     notMarginBottom: true,
   },
-
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
   {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
@@ -183,15 +186,15 @@ export const ROOFERS_TABDATA_CHORLEY = {
   findMore: [],
 };
 
-export const NEARBY_PLACES_ROOFER_CHORLEY =  [
-    { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
-    { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
-    { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
-    { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
-    { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
-    { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
-    { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
-  ]
+export const NEARBY_PLACES_ROOFER_CHORLEY = [
+  { title: "Roofers Wigan", url: "/en/gb/roofers-near-me/wigan" },
+  { title: "Roofers Burnley", url: "/en/gb/roofers-near-me/burnley" },
+  { title: "Roofers Ormskirk", url: "/en/gb/roofers-near-me/ormskirk" },
+  { title: "Roofers Blackpool", url: "/en/gb/roofers-near-me/blackpool" },
+  { title: "Roofers Fleetwood", url: "/en/gb/roofers-near-me/fleetwood" },
+  { title: "Roofers Morecambe", url: "/en/gb/roofers-near-me/morecambe" },
+  { title: "Roofers Rossendale", url: "/en/gb/roofers-near-me/rossendale" },
+]
 export const VETTED_DATA_ROOFERS_CHORLEY = [
   `Unless you specifically asked for a 'damp art' mural on your wallpaper, those wet spots you see in your home are a major red flag. They usually mean something much bigger is happening on your roof. It’s best to get a set of expert eyes on it now, before things get worse. 
   <br/><br/> 

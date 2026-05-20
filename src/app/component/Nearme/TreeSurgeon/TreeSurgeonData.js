@@ -158,6 +158,10 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     // className: "mr-5",
     className: "mb-0",
   },
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
 ];
 export const FREQUENTLY_DATA_TREE_SURGEON = {
   "tree-surgeons-near-me": [

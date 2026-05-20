@@ -61,6 +61,10 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         className: "mb-0",
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    },
+    {
         type: "image",
         src: "/nearme/tamping-machine.webp",
         alt: "expert using tamping machine while laying a concrete driveway",

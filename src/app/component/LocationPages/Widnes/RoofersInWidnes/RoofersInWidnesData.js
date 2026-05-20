@@ -32,6 +32,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_WIDNES = [
     text: "<strong>You decide on your terms</strong>: take your time, ask questions, and hire whoever feels right. Nobody is pushing you for a decision.",
     className: "mb-0",
   },
+   {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  },
   {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",

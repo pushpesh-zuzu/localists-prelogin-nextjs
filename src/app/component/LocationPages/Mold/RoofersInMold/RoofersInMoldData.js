@@ -38,6 +38,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MOLD = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "p",
     text: "These figures are just to give you a ballpark. The only way to know what your roof will actually cost is to have a local roofer take a proper look and give you a written quote.",
     notMarginBottom: true,

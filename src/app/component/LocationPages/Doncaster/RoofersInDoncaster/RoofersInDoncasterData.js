@@ -54,6 +54,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_DONCASTER = [
       },
     ],
   },
+  {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
   { type: "pbold", text: "See other cost averages below:" },
   {
     type: "p",
@@ -239,12 +243,12 @@ export const ROOFERS_TABDATA_DONCASTER = {
   // ],
   findMore: [],
 };
-export const NEARBY_PLACES_ROOFER_DONCASTER =[
-    { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
-    { title: "Roofers Rotherham", url: "/en/gb/roofers-near-me/rotherham" },
-    { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
-    { title: "Roofers Scunthorpe", url: "/en/gb/roofers-near-me/scunthorpe" },
-  ]
+export const NEARBY_PLACES_ROOFER_DONCASTER = [
+  { title: "Roofers Barnsley", url: "/en/gb/roofers-near-me/barnsley" },
+  { title: "Roofers Rotherham", url: "/en/gb/roofers-near-me/rotherham" },
+  { title: "Roofers Castleford", url: "/en/gb/roofers-near-me/castleford" },
+  { title: "Roofers Scunthorpe", url: "/en/gb/roofers-near-me/scunthorpe" },
+]
 export const VETTED_DATA_ROOFERS_DONCASTER = [
   `When tiles start slipping, water begins dripping where it shouldn’t, or gutters clog overnight, that’s your roof’s way of waving a red flag. And when that happens, you need a roofer - fast.
   <br/><br/> 

@@ -13,7 +13,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         text: "With Localists, you can connect with fully vetted, qualified tutors who come highly reviewed, giving you peace of mind. From a physics and maths tutor to support in English, science, languages, or specialist subjects, we’ll match you with a tutor nearby who’s ready to help you reach your goals.",
         notMarginBottom: true
     },
-    { type: "h2", text: "How to choose the right tutor", className: "mt-6 md:mt-9 lg:mt-[70px]",},
+    { type: "h2", text: "How to choose the right tutor", className: "mt-6 md:mt-9 lg:mt-[70px]", },
     {
         type: "p",
         text: "It’s easy to assume that the most expensive tutor must be the best, or that the cheapest option will save you money. But the truth is, there’s no one-size-fits-all guide. The right tutor is really the one who fits your needs and helps you or your child make “real progress”.",
@@ -76,6 +76,10 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         heading: "Safety checks (DBS):\u00A0",
         text: "For tutors working with children, ensure they hold a valid DBS certificate for peace of mind.",
         noMarginBottom: true,
+    },
+    {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
     },
     {
         type: "h2",

@@ -63,6 +63,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BRIGHOUSE = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "image",
     src: "/nearme/Roofing/roofinstalling.webp",
     alt: "two roofers installing slate tiles onto a brand new roof ",
@@ -267,7 +271,7 @@ export const ROOFERS_TABDATA_BRIGHOUSE = {
   findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_BRIGHOUSE = [
- 
+
   {
     "title": "Roofers Leeds",
     "url": "/en/gb/roofers-near-me/leeds"

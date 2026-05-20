@@ -56,6 +56,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_BANGOR = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "h2",
     text: "What to consider before hiring a roofer in Bangor",
   },
@@ -197,21 +201,21 @@ export const ROOFERS_TABDATA_BANGOR = {
   // ],
   findMore: [],
 };
-export const NEARBY_PLACES_ROOFER_BANGOR =[
-    { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
-    { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
-    { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
-    { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
-    { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
-    { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
-    { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
-    { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
-    { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
-    { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
-    { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
-    { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
-    { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
-  ]
+export const NEARBY_PLACES_ROOFER_BANGOR = [
+  { title: "Roofers Mold", url: "/en/gb/roofers-near-me/mold" },
+  { title: "Roofers Rhyl", url: "/en/gb/roofers-near-me/rhyl" },
+  { title: "Roofers Conwy", url: "/en/gb/roofers-near-me/conwy" },
+  { title: "Roofers Buckley", url: "/en/gb/roofers-near-me/buckley" },
+  { title: "Roofers Deeside", url: "/en/gb/roofers-near-me/deeside" },
+  { title: "Roofers Wrexham", url: "/en/gb/roofers-near-me/wrexham" },
+  { title: "Roofers Holywell", url: "/en/gb/roofers-near-me/holywell" },
+  { title: "Roofers Oswestry", url: "/en/gb/roofers-near-me/oswestry" },
+  { title: "Roofers Anglesey ", url: "/en/gb/roofers-near-me/anglesey" },
+  { title: "Roofers Llandudno", url: "/en/gb/roofers-near-me/llandudno" },
+  { title: "Roofers Caernarfon", url: "/en/gb/roofers-near-me/caernarfon" },
+  { title: "Roofers Colwyn Bay ", url: "/en/gb/roofers-near-me/colwyn-bay" },
+  { title: "Roofers North Wales", url: "/en/gb/roofers-near-me/north-wales" },
+]
 export const VETTED_DATA_ROOFERS_BANGOR = [
   `Terrified the next storm will leave you with an accidental skylight? We’ve all been there - staring at the ceiling and hoping the next big gust doesn't turn your roof into a frisbee.
   <br/><br/> 

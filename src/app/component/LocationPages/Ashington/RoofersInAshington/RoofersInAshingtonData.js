@@ -42,6 +42,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_ASHINGTON = [
         ],
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+    },
+    {
         type: "p",
         text: "<Strong>See other cost averages below:</Strong>",
     },
@@ -263,9 +267,9 @@ export const ROOFERS_TABDATA_ASHINGTON = {
     // ],
     findMore: [],
 };
-export const NEARBY_PLACES_ROOFER_ASHINGTON=[
-        { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
-    ]
+export const NEARBY_PLACES_ROOFER_ASHINGTON = [
+    { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
+]
 export const VETTED_DATA_ROOFERS_ASHINGTON = [
     `Choosing the right roofer matters - and it’s not always obvious who that is. With so many options out there, the truth is - it’s hard to tell who you can really trust. How do you know you’re choosing a professional - not just <i>a bloke with a ladder and a van, or someone whose five-star reviews are all from family and friends?</i>
   <br/><br/> 

@@ -39,6 +39,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_GRANTHAM = [
     ],
   },
   {
+    type: "PostCodeSection",
+    className: "mb-[30px] mt-[0px] lg:mt-[0px] lg:mb-[60px]",
+  },
+  {
     type: "p",
     text: "These numbers are just there to give you a feel for it. The real cost depends on what’s actually going on up there. The only way to know for sure is to have it looked at properly and get a clear quote based on your specific roof.",
     notMarginBottom: true,
@@ -177,9 +181,9 @@ export const ROOFERS_TABDATA_GRANTHAM = {
   findMore: [],
 };
 
-export const NEARBY_PLACES_ROOFER_GRANTHAM =  [
-    { title: "Roofers Scunthorpe", url: "/en/gb/roofers-near-me/scunthorpe" },
-  ]
+export const NEARBY_PLACES_ROOFER_GRANTHAM = [
+  { title: "Roofers Scunthorpe", url: "/en/gb/roofers-near-me/scunthorpe" },
+]
 
 export const VETTED_DATA_ROOFERS_GRANTHAM = [
   `

@@ -99,6 +99,10 @@ export const QUESTION_AND_ABOUT_SERVICE_ROOFERS_MIDDLESBROUGH = [
         notMarginBottom: true,
     },
     {
+        type: "PostCodeSection",
+        className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+    },
+    {
         type: "image",
         src: "/nearme/Roofing/roofinstalling.webp",
         alt: "two roofers installing slate tiles onto a brand new roof",
@@ -283,11 +287,11 @@ export const ROOFERS_TABDATA_MIDDLESBROUGH = {
     findMore: [],
 };
 export const NEARBY_PLACES_ROOFER_MIDDLESBROUGH = [
-        { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
-        { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
-        { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
-        { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
-    ]
+    { title: "Roofers York", url: "/en/gb/roofers-near-me/york" },
+    { title: "Roofers Scarborough", url: "/en/gb/roofers-near-me/scarborough" },
+    { title: "Roofers Northallerton", url: "/en/gb/roofers-near-me/northallerton" },
+    { title: "Roofers North Shields", url: "/en/gb/roofers-near-me/north-shields" },
+]
 export const VETTED_DATA_ROOFERS_MIDDLESBROUGH = [
     `Has bad weather sent your roof tiles flying into next week? Or are you starting to see an unwanted skylight due to the lack of tiles? Then it might be time to get fixed in with your local Middlesborough roofer. And we know just the people!
   <br/><br/> 
