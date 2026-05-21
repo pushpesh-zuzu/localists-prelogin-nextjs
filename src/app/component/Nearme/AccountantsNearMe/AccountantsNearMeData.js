@@ -26,10 +26,10 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     text: "Start your search today and receive free quotes from experienced accountants in your local area within minutes.",
     notMarginBottom: true,
   },
-  {
-    type: "PostCodeSection",
-    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
-  },
+  // {
+  //   type: "PostCodeSection",
+  //   className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
+  // },
   {
     type: "image",
     src: "/nearme/Accountants/ManIsAccounting.webp",
