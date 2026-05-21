@@ -6,6 +6,8 @@ import WrapperBGWidth from "../common/WrapperBGWidth/WrapperBGWidth";
 import Breadcrumb from "../common/BreadCrum/BreadCrum";
 import Button from "../UI/Typography/Button";
 import UserIcon from "../common/icons/LocationIcons/UserIcon";
+import HowItWork from "../Home/HowItWork";
+import HowItWorkCTA from "../Home/HowItWorkCTA";
 
 function VettedSection({
   isSingular = false,
@@ -48,7 +50,8 @@ function VettedSection({
               </Paragraph>
             ))}
             <div className="flex flex-wrap justify-center md:justify-start gap-[7px] gap-2.5 lg:gap-6 mb-2.5 mt-[30px] md:mt-[30px] lg:mt-12">
-              <GetQuote variant="primary" text={getQuoteText} />
+              {/* <GetQuote variant="primary" text={getQuoteText} /> */}
+              <HowItWorkCTA marginTop="mt-0" text={getQuoteText}/>
               {extraButton && <Button onClick={handleViewRoofers}  variant="primary" className="cursor-pointer py-[7px] xl:py-4 xl:px-[30px] max-w-fit px-[13px]  hover:bg-[#00afe3]  rounded-full border-1 flex flex-row justify-center items-center gap-1 md:gap-[13px]"><UserIcon className="h-[18px] w-[18px] md:h-6 md:w-6" />{featureButtonText}</Button>}
             </div>
           </div>

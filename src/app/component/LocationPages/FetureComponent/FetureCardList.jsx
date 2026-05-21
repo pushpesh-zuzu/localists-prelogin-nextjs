@@ -213,9 +213,7 @@ export default function FetureCardList({
       {sellers.length > STEP && visibleCount < sellers.length && (
         <div className="flex justify-center pt-10 md:pt-[50px]">
           <button
-            className="hover:bg-[#00afe3] bg-black text-white
-                        text-base md:text-[16px] lg:text-[18px]
-                        px-[15px] py-2 xl:py-[15px] xl:px-7 h-fit
+            className="text-sm md:text-[18px] lg:text-[20px] bg-[#10C87B] hover:bg-[#00aef3] text-white px-[15px] md:px-[18px] py-2 xl:py-[16px] xl:px-8 h-fit
                         shadow-[0_0_4px_rgba(0,0,0,0.1)]
                         cursor-pointer disabled:opacity-70
                         inline-flex items-center justify-center

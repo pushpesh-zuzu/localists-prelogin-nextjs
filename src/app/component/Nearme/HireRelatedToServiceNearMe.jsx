@@ -201,11 +201,13 @@ export default function HireRelatedToServiceNearMe({
         {hasMore && (
           <div className="flex justify-center pt-[20px] lg:pt-12 md:pt-[30px]">
             <Button
-              variant="primary"
+              variant="terciary"
               onClick={() => setVisibleChunks((c) => c + 1)}
-              className="py-[7px] xl:py-4 xl:px-[30px] cursor-pointer max-w-fit px-[13px]
-                     hover:bg-[#253238] rounded-full bg-[#253238] text-white
-                     shadow-[0_0_4px_rgba(0,0,0,0.1)]"
+              // className="py-[7px] xl:py-4 xl:px-[30px] cursor-pointer max-w-fit px-[13px]
+              //        hover:bg-[#253238] rounded-full bg-[#253238] text-white
+              //        shadow-[0_0_4px_rgba(0,0,0,0.1)]"
+              className="cursor-pointer rounded-full max-w-fit bg-[#10C87B] hover:bg-[#00aef3] text-white px-[15px] md:px-[18px] py-2 xl:py-[16px] xl:px-8 leading-normal!"
+
             >
               Show More
             </Button>

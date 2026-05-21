@@ -5,6 +5,7 @@ import BlogHeroCard from "./BlogHeroCard";
 // import Button from "../../UI/Typography/Button";
 import WrapperBGWidth from "../../common/WrapperBGWidth/WrapperBGWidth";
 import GetQuote from "../../common/GetQuotes/GetQuote";
+import HowItWorkCTA from "../../Home/HowItWorkCTA";
 
 
 const blogs = [
@@ -73,10 +74,11 @@ export default function BlogGridSection() {
                 </div>
 
                 <div className="flex justify-center mt-6 xl:mt-12">
-                    <GetQuote
+                    {/* <GetQuote
                         text="Show More"
                         classGetQuote="py-[7px] xl:py-4 xl:px-[30px] hover:!bg-[#1b2326]"
-                    />
+                    /> */}
+                    <HowItWorkCTA marginTop="mt-0" text="Show More"/>
                 </div>
 
 
