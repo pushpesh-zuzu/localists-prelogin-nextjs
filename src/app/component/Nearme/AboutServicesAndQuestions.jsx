@@ -9,11 +9,12 @@ import AveragePrice from "./AveragePrice";
 import GutterPriceSection from "./GutterPriceSection";
 // import PatioPricingTable from "./PatioServicesNearMe/PatioPricingTable";
 import AveragePriceDynamic from "./AveragePriceDynamic";
-import GetQuote from "../common/GetQuotes/GetQuote";
+// import GetQuote from "../common/GetQuotes/GetQuote";
 import PostCodeSectionLocation from "../LocationPages/PostCodeSectionLocation";
 import QuotesBanner from "../common/QuotesBanner/QuotesBanner";
 import AveragePriceLocation from "../LocationPages/AveragePriceLocation";
 import DynamicPricingTable from "./DynamicPricingTable";
+import HowItWorkCTA from "../Home/HowItWorkCTA";
 
 const textBase =
   "font-[Arial] text-[16px] leading-[20px] md:text-[16px] md:leading-[22px] lg:text-[20px] lg:leading-[24px] text-[#253238] tracking-[0em]!"
@@ -62,28 +63,28 @@ const AboutServicesAndQuestions = ({
             />
           </div>
         );
-        case "liNumberSequence":
-          return (
-            <ol
-              key={index}
-              className={`
+      case "liNumberSequence":
+        return (
+          <ol
+            key={index}
+            className={`
                 ${block?.className ? block?.className : "mb-2.5 md:mb-[15px]"}
                 list-decimal pl-8 md:pl-16
               `}
-            >
-              {block.items?.map((item, i) => (
-                <li key={i} className={`${textBase} ${block?.classNameLi ? block?.classNameLi : "mb-2.5 md:mb-[15px]"}`}>
-                  <span className={`mr-0.5 ${block?.headingNormal? "font-normal":"font-bold"}`}>{item.heading}</span>
-                  {block?.breakLine && <br/>}
-                  {item.text && (
-                    <span className={block?.breakLine ? "block mt-2.5 md:mt-[15px]" : ""}
-                      dangerouslySetInnerHTML={{ __html: item.text }}
-                    />
-                  )}
-                </li>
-              ))}
-            </ol>
-          );
+          >
+            {block.items?.map((item, i) => (
+              <li key={i} className={`${textBase} ${block?.classNameLi ? block?.classNameLi : "mb-2.5 md:mb-[15px]"}`}>
+                <span className={`mr-0.5 ${block?.headingNormal ? "font-normal" : "font-bold"}`}>{item.heading}</span>
+                {block?.breakLine && <br />}
+                {item.text && (
+                  <span className={block?.breakLine ? "block mt-2.5 md:mt-[15px]" : ""}
+                    dangerouslySetInnerHTML={{ __html: item.text }}
+                  />
+                )}
+              </li>
+            ))}
+          </ol>
+        );
       case "AveratePriceSection":
         return <AveragePrice key={index} />;
       case "GutterPriceSection":
@@ -116,7 +117,7 @@ const AboutServicesAndQuestions = ({
       case "getQuotesButton":
         return (
           <div className={`flex justify-center ${block.className ? block.className : 'mt-[15px] xl:mt-[25px]'} `}>
-            <GetQuote variant="primary" text={block?.text} />
+            <HowItWorkCTA variant="primary" text={block?.text} marginTop="mt-0" />
           </div>
         )
       case "patioPricingTable":
@@ -175,7 +176,7 @@ const AboutServicesAndQuestions = ({
         return (
           <ul key={index} className={`${block?.className ? block?.className : 'mb-2.5 md:mb-[15px]'} ${block?.listNone ? "list-none" : "list-disc pl-5 md:pl-8"}`}>
             <li className={textBase}>
-              <span className="" dangerouslySetInnerHTML={{ __html: block.heading}} />
+              <span className="" dangerouslySetInnerHTML={{ __html: block.heading }} />
               {block.text && (
                 <span className="" dangerouslySetInnerHTML={{ __html: block.text }} />
               )}

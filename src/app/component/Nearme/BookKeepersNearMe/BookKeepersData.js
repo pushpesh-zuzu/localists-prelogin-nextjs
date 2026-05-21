@@ -84,7 +84,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
         text: ":\u00A0Finance tasks often run on strict deadlines. A dependable bookkeeper can manage their workload effectively and meet critical deadlines without compromising quality.",
         noMarginBottom: true,
     },
-    { type: "getQuotesButton", text: "Get your Quote", className: 'mt-[15px] xl:mt-[25px]' },
+    { type: "getQuotesButton", text: "Get Quotes Now", className: 'mt-[15px] xl:mt-[25px]' },
     {
         type: "h2",
         text: "What does bookkeeping service typically include?",

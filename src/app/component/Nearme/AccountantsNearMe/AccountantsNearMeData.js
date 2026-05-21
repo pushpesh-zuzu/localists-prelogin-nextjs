@@ -26,10 +26,7 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     text: "Start your search today and receive free quotes from experienced accountants in your local area within minutes.",
     notMarginBottom: true,
   },
-  // {
-  //   type: "PostCodeSection",
-  //   className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
-  // },
+  { type: "getQuotesButton", text: "Get Quotes Now", className: 'mt-[15px] xl:mt-[25px]' },
   {
     type: "image",
     src: "/nearme/Accountants/ManIsAccounting.webp",
@@ -85,6 +82,10 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     type: "uili",
     text: "Communication skills: A great accountant should explain complex financial matters clearly and help you make informed decisions.",
     noMarginBottom: true,
+  },
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
   },
   {
     type: "h2",

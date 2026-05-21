@@ -25,6 +25,11 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "Hiring a freelance designer or local agency means you get a polished, fully functional website in a fraction of the time. You’ll save stress, headaches, and precious hours while knowing the final product is professional, reliable, and ready to impress.",
+    notMarginBottom: true,
+  },
+  {
+    type: "PostCodeSection",
+    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
   },
   {
     type: "h2",
@@ -66,10 +71,6 @@ export const QUESTION_AND_ABOUT_SERVICE = [
     notMarginBottom: true,
   },
   {
-    type: "PostCodeSection",
-    className: "mb-[0px] mt-[30px] lg:mt-[60px] lg:mb-[0px]",
-  },
-  {
     type: "image",
     src: "/nearme/WebsiteDesingner/discussingDevelopment6.webp",
     alt: "ux-designers-discussing-developing-mobile-app",
@@ -95,7 +96,9 @@ export const QUESTION_AND_ABOUT_SERVICE = [
   {
     type: "p",
     text: "The good news? With Localists, you can compare quotes from multiple local web designers and agencies. That means you’ll get a clearer picture of pricing, find a designer who suits your budget, and avoid any nasty surprises along the way.",
+    notMarginBottom: true,
   },
+  { type: "getQuotesButton", text: "Get Quotes Now", className: 'mt-[15px] xl:mt-[25px]' },
   {
     type: "h2",
     text: "Questions to ask web designers near me",
