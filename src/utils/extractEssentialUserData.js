@@ -20,6 +20,7 @@ export const extractEssentialUserData = (userData) => {
     profile_image: userData?.profile_image || null ,
     phone_verified: userData?.phone_verified || null,
     status: userData?.status || null,
+    services: userData?.services || null,
     user_details: userData?.user_details
       ? {
           id: userData?.user_details.id,

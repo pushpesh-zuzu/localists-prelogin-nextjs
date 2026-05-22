@@ -22,12 +22,12 @@ import { checkAuthenticatedUser } from "@/utils/CheckAthenticatedUser";
 
 export default function LoginForm({ passwordless }) {
     const router = useRouter();
-    
+
     useEffect(() => {
-       const canContinue = typeof window !=="undefined" && checkAuthenticatedUser(router);
-          if (!canContinue) return;
+        const canContinue = typeof window !== "undefined" && checkAuthenticatedUser(router);
+        if (!canContinue) return;
     }, [])
-    
+
     const searchParams = useSearchParams();
     const dispatch = useDispatch();
     const { lang, country } = useParams();
@@ -62,9 +62,20 @@ export default function LoginForm({ passwordless }) {
                     if (res?.success) {
                         document.cookie = "token=logged-in; path=/";
 
-                        if (res.profileData.active_status === 1) {
-                            router.replace("/sellers/leads");
-                        } else if (res.profileData.active_status === 2) {
+                        const notLeadServiceIds = [18, 19, 46];
+                        const services = res?.profileData?.services || [];
+
+                        const hasNotLeadService = services.some((service) =>
+                            notLeadServiceIds.includes(service.service_id)
+                        );
+
+                        if (res?.profileData?.active_status === 1) {
+                            router.replace(
+                                hasNotLeadService
+                                    ? "/sellers/dashboard"
+                                    : "/sellers/leads"
+                            );
+                        } else if (res?.profileData?.active_status === 2) {
                             router.replace("/buyers/create");
                         }
                     }
@@ -81,8 +92,8 @@ export default function LoginForm({ passwordless }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-       const canContinue = checkAuthenticatedUser(router);
-          if (!canContinue) return;
+        const canContinue = checkAuthenticatedUser(router);
+        if (!canContinue) return;
         const { email, password } = formData;
         const newErrors = {};
 
@@ -119,13 +130,25 @@ export default function LoginForm({ passwordless }) {
         dispatch(userLogin({ email, password }))
             .then((res) => {
                 if (res?.success) {
+                    const notLeadServiceIds = [18, 19, 46];
+                    const services = res?.data?.services || [];
+                    const hasNotLeadService = services.some((service) =>
+                        notLeadServiceIds.includes(service.service_id)
+                    );
 
                     showToast("success", "Login successful!");
 
-                    res?.data?.active_status === 1
-                        ? router.replace("/sellers/leads")
-                        : router.replace("/buyers/create");
-                    ;
+                    // console.log("Loginresponse", hasNotLeadService);
+
+                    if (res?.data?.active_status === 1) {
+                        router.replace(
+                            hasNotLeadService
+                                ? "/sellers/dashboard"
+                                : "/sellers/leads"
+                        );
+                    } else {
+                        router.replace("/buyers/create");
+                    }
                 } else {
                     showToast("error", res?.message || "Login failed. Please try again.");
                 }
@@ -142,8 +165,8 @@ export default function LoginForm({ passwordless }) {
     return (
         <>
             <div className={`flex flex-col items-center justify-center pt-[60px] pb-[50px] gap-[51px] max-md:gap-[35px] max-sm:gap-[20px] ${passwordless
-                    ? ""
-                    : "min-h-screen"
+                ? ""
+                : "min-h-screen"
                 }`}>
                 <SEO conversion />
                 {/* LOGIN BOX */}
@@ -211,7 +234,7 @@ export default function LoginForm({ passwordless }) {
     max-sm:h-[40px] max-sm:text-[12px]
             " >
                             {(loginLoader || passwordlessLoader) ? (
-                                <LoaderIndicator background="white" size="small"/>
+                                <LoaderIndicator background="white" size="small" />
                             ) : passwordless ? (
                                 "Send"
                             ) : (
