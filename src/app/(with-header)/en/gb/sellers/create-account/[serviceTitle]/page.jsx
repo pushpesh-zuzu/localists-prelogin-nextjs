@@ -11,11 +11,17 @@ const ALLOWED_SERVICES = [
   "patio-laying",
   "roofing",
   "tree-surgery",
+  "accounting",
+  "web-design",
+  "bookkeeping-services",
+  "gutter-cleaning",
+  "architects",
+  "painter-and-decorator",
 ];
 
 export async function generateMetadata({ params }) {
   const { serviceTitle } = await params;
-  
+
   const formattedTitle = serviceTitle
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
