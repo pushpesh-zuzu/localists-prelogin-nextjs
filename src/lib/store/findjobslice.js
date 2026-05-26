@@ -20,6 +20,7 @@ const initialState = {
   popularLoader: false,
   hasPopulatedFromCompany: false,
   searchServiceLoader: false,
+  searchServiceQuery: "",
   service: [],
   registerData: getBarkUserData() || null,
   registerLoader: false,
@@ -117,7 +118,9 @@ export const getPopularServiceListUser = (ServiceData) => {
 };
 
 export const searchService = (ServiceData) => {
-  return async (dispatch) => {
+  return async (dispatch, getState) => {
+    const currentSearch = (ServiceData?.search || "").trim();
+    dispatch(setSearchServiceQuery(currentSearch));
     dispatch(setsearchServiceLoader(true));
     try {
       const response = await axiosInstance.post(
@@ -125,13 +128,18 @@ export const searchService = (ServiceData) => {
         ServiceData
       );
 
-      if (response) {
+      if (
+        response &&
+        getState().findJobs.searchServiceQuery === currentSearch
+      ) {
         dispatch(setService(response?.data?.data));
       }
     } catch (error) {
       console.error("Error searching services:", error);
     } finally {
-      dispatch(setsearchServiceLoader(false));
+      if (getState().findJobs.searchServiceQuery === currentSearch) {
+        dispatch(setsearchServiceLoader(false));
+      }
     }
   };
 };
@@ -170,7 +178,7 @@ export const registerUserData = (registerData) => {
         dispatch(setAuthToken(response?.data?.data?.remember_tokens));
         setCookie("barkToken", response?.data?.data?.remember_tokens);
         setCookie("barkUserToken", extractEssentialUserData(response?.data?.data));
-        setCookie('isRegistrationComplete',true)
+        setCookie('isRegistrationComplete', true)
 
         return response.data;
       } else {
@@ -448,6 +456,9 @@ const findJobSlice = createSlice({
     setsearchServiceLoader(state, action) {
       state.searchServiceLoader = action.payload;
     },
+    setSearchServiceQuery(state, action) {
+      state.searchServiceQuery = action.payload;
+    },
     setRegisterLoader(state, action) {
       state.registerLoader = action.payload;
     },
@@ -477,7 +488,7 @@ const findJobSlice = createSlice({
       state.registerData = action.payload;
       // localStorage will be used later
       // safeLocalStorage.setItem("registerDataToken", JSON.stringify(action.payload));
-      setCookie("barkUserToken", extractEssentialUserData(action.payload));  
+      setCookie("barkUserToken", extractEssentialUserData(action.payload));
     },
     setErrorMessage(state, action) {
       state.errorMessage = action.payload;
@@ -576,6 +587,7 @@ export const {
   setPopularServiceListLoader,
   setPopularList,
   setsearchServiceLoader,
+  setSearchServiceQuery,
   setService,
   setAvailableService,
   setRegisterLoader,
