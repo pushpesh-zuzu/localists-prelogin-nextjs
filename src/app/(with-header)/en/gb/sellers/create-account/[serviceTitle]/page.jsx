@@ -17,6 +17,10 @@ const ALLOWED_SERVICES = [
   "gutter-cleaning",
   "architects",
   "painter-and-decorator",
+  "airport-transfers",
+  "physics-and-maths",
+  "tutoring",
+  "personal-trainers"
 ];
 
 export async function generateMetadata({ params }) {
