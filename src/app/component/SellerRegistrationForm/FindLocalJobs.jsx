@@ -39,6 +39,7 @@ const CATEGORY_ICON_MAP = {
   52: PatioIcon,
 };
 
+const getPrimaryServiceName = (name = "") => name.split(":")[0].trim();
 
 const FindLocalJobs = () => {
   const dispatch = useDispatch();
@@ -104,7 +105,7 @@ const FindLocalJobs = () => {
     const canContinue = checkAuthenticatedUser(router);
                 if (!canContinue) return;
     if (!selectedService) return;
-    const slug = generateSlug(selectedService.name);
+    const slug = generateSlug(getPrimaryServiceName(selectedService.name));
 
     if (!slug) {
       alert("Service route not defined!");

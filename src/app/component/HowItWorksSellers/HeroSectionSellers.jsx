@@ -16,6 +16,8 @@ import {
     setSelectedServiceId,
 } from "@/lib/store/findjobslice";
 
+const getPrimaryServiceName = (name = "") => name.split(":")[0].trim();
+
 const HeroSectionSellers = ({ onCustomContinue = null,
 }) => {
     const [selectedService, setSelectedService] = useState(null)
@@ -62,7 +64,7 @@ const HeroSectionSellers = ({ onCustomContinue = null,
             if (shouldProceed === false) return;
         }
 
-        const slug = generateSlug(selectedService.name);
+        const slug = generateSlug(getPrimaryServiceName(selectedService.name));
         dispatch(setSelectedServiceId(selectedService.id));
 
         router.push(
