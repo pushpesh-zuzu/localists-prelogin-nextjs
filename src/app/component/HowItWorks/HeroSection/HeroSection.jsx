@@ -141,10 +141,18 @@ export default function HeroSection() {
   );
 
   const handleClose = () => {
+    if (debounceTimer.current) {
+      clearTimeout(debounceTimer.current);
+      debounceTimer.current = null;
+    }
+
     setShowModal(false);
     setInput("");
     setPostcode("");
+    setPostalCodeValidate(false);
+    setIsCheckingPostcode(false);
     setSelectedService(null);
+    lastInvalidPinRef.current = "";
   };
 
   useEffect(() => {
